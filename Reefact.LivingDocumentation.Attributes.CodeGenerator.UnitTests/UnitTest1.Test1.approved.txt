@@ -1,0 +1,102 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Cacib.Grichka.Shared {
+
+    /// <summary>
+    ///     Base class for attributes used to decorate classes, interfaces or members participating
+    ///     in the Visitor design pattern.
+    /// </summary>
+    public class VisitorPatternAttribute : LivingDocumentationAttribute { }
+
+    /// <summary>
+    ///     Use this attribute to label the role played by the class or interface in the Visitor design pattern.
+    /// </summary>
+    /// <seealso cref="VisitorMemberAttribute" />
+    [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class)]
+    public sealed class VisitorParticipantAttribute : VisitorPatternAttribute { 
+
+        /// <summary>
+        ///     Initializes a new instance of the <see cref="VisitorParticipantAttribute" /> class.
+        /// </summary>
+        /// <param name="participant">The role the class or interface plays within the Visitor design pattern.</param>
+        public VisitorParticipantAttribute(VisitorParticipant participant) {
+            Participant = participant;
+        }
+        
+        /// <summary>
+        ///     The role the class or interface plays within the Visitor design pattern.
+        /// </summary>
+        public VisitorParticipant Participant { get; }
+
+    }
+
+    /// <summary>
+    ///     Use this attribute to label the role played by the member in the Visitor design pattern.
+    /// </summary>
+    /// <seealso cref="VisitorParticipantAttribute" />
+    [AttributeUsage(AttributeTargets.Method)]
+    public class VisitorMemberAttribute : VisitorPatternAttribute { 
+
+        /// <summary>
+        ///     Initializes a new instance of the <see cref="VisitorMemberAttribute" /> class.
+        /// </summary>
+        /// <param name="member">The role the member plays within the Visitor design pattern.</param>
+        public VisitorMemberAttribute(VisitorMember member) {
+                Member = member;
+        }
+
+        /// <summary>
+        ///     The role the member plays within the Visitor design pattern.
+        /// </summary>
+        public VisitorMember Member { get; }
+    }
+
+    /// <summary>
+    ///     Use these values as parameters for the <see cref="VisitorMemberAttribute" /> to indicate
+    ///     the specific role a class or interface plays within the Visitor pattern.
+    /// </summary>
+    public enum VisitorMember {
+
+    /// <summary>
+    /// Visit Method are a crucial part of a Visitor's implementation. They defines a specific operation that a Visitor performs on a Concrete Element during its visit. These methods allows Visitors to interact with various elements differently, adding flexibility to the behavior of the Visitor pattern.
+    /// </summary>
+    VisitMethod,
+  
+    /// <summary>
+    /// Accept Method are typically defined in Elements and are used to accept a Visitor's visitation. It allows an Element to invoke the appropriate Visit Method of the Visitor, passing itself as an argument. These methods help maintain the separation of concerns in the Visitor pattern by allowing elements to control how they are visited by different Visitors.
+    /// </summary>
+    AcceptMethod
+    }
+
+    /// <summary>
+    ///     Use these values as parameters for the <see cref="VisitorParticipantAttribute" /> to indicate
+    ///     the specific role a class or interface plays within the Visitor pattern.
+    /// </summary>
+    public enum VisitorParticipant {
+
+    /// <summary>
+    /// Visitors are entities that allow adding specific functionality to an existing object structure without needing to modify the concrete classes of that structure. They are used to separate operations from elements, promoting code modularity.
+    /// </summary>
+    Visitor,
+
+    /// <summary>
+    /// Concrete Visitors are concrete implementations of Visitors. Each Concrete Visitor defines a set of specific operations to be applied to the concrete elements of the structure. They enable the introduction of new features or behaviors within the structure without altering the classes of the elements.
+    /// </summary>
+    ConcreteVisitor,
+
+    /// <summary>
+    /// Elements are the elements of the object structure that Visitors will visit. They typically define an Accept method that allows Visitors to process them. Using Elements and the Visitor pattern helps maintain a clear separation between structure and operations, promoting code flexibility and maintainability.
+    /// </summary>
+    Element,
+  
+    /// <summary>
+    /// Concrete Elements are concrete implementations of Elements. Each ConcreteElement represents a specific type of element within the object structure. They typically implement the Accept method, allowing Visitors to process them appropriately. The use of ConcreteElements makes it easier to extend the structure without altering existing classes.
+    /// </summary>
+    ConcreteElement
+    }
+
+}

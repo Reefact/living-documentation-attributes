@@ -1,0 +1,11 @@
+C:\Users\sylva\source\repos\Reefact.LivingDocumentation.Attributes\Reefact.LivingDocumentation.Attributes\bin\Debug\net7.0\Reefact.LivingDocumentation.Attributes.deps.json
+C:\Users\sylva\source\repos\Reefact.LivingDocumentation.Attributes\Reefact.LivingDocumentation.Attributes\bin\Debug\net7.0\Reefact.LivingDocumentation.Attributes.dll
+C:\Users\sylva\source\repos\Reefact.LivingDocumentation.Attributes\Reefact.LivingDocumentation.Attributes\bin\Debug\net7.0\Reefact.LivingDocumentation.Attributes.pdb
+C:\Users\sylva\source\repos\Reefact.LivingDocumentation.Attributes\Reefact.LivingDocumentation.Attributes\obj\Debug\net7.0\Reefact.LivingDocumentation.Attributes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sylva\source\repos\Reefact.LivingDocumentation.Attributes\Reefact.LivingDocumentation.Attributes\obj\Debug\net7.0\Reefact.LivingDocumentation.Attributes.AssemblyInfoInputs.cache
+C:\Users\sylva\source\repos\Reefact.LivingDocumentation.Attributes\Reefact.LivingDocumentation.Attributes\obj\Debug\net7.0\Reefact.LivingDocumentation.Attributes.AssemblyInfo.cs
+C:\Users\sylva\source\repos\Reefact.LivingDocumentation.Attributes\Reefact.LivingDocumentation.Attributes\obj\Debug\net7.0\Reefact.LivingDocumentation.Attributes.csproj.CoreCompileInputs.cache
+C:\Users\sylva\source\repos\Reefact.LivingDocumentation.Attributes\Reefact.LivingDocumentation.Attributes\obj\Debug\net7.0\Reefact.LivingDocumentation.Attributes.dll
+C:\Users\sylva\source\repos\Reefact.LivingDocumentation.Attributes\Reefact.LivingDocumentation.Attributes\obj\Debug\net7.0\refint\Reefact.LivingDocumentation.Attributes.dll
+C:\Users\sylva\source\repos\Reefact.LivingDocumentation.Attributes\Reefact.LivingDocumentation.Attributes\obj\Debug\net7.0\Reefact.LivingDocumentation.Attributes.pdb
+C:\Users\sylva\source\repos\Reefact.LivingDocumentation.Attributes\Reefact.LivingDocumentation.Attributes\obj\Debug\net7.0\ref\Reefact.LivingDocumentation.Attributes.dll

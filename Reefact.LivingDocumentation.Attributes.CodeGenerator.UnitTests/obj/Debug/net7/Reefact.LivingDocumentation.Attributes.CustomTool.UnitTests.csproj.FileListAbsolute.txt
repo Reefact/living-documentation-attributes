@@ -1,0 +1,6 @@
+C:\Users\sylva\source\repos\Reefact.LivingDocumentation.Attributes\Reefact.LivingDocumentation.Attributes.CustomTool.UnitTests\bin\Debug\net7\CoverletSourceRootsMapping
+C:\Users\sylva\source\repos\Reefact.LivingDocumentation.Attributes\Reefact.LivingDocumentation.Attributes.CustomTool.UnitTests\obj\Debug\net7\Reefact.LivingDocumentation.Attributes.CustomTool.UnitTests.csproj.AssemblyReference.cache
+C:\Users\sylva\source\repos\Reefact.LivingDocumentation.Attributes\Reefact.LivingDocumentation.Attributes.CustomTool.UnitTests\obj\Debug\net7\Reefact.LivingDocumentation.Attributes.CustomTool.UnitTests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sylva\source\repos\Reefact.LivingDocumentation.Attributes\Reefact.LivingDocumentation.Attributes.CustomTool.UnitTests\obj\Debug\net7\Reefact.LivingDocumentation.Attributes.CustomTool.UnitTests.AssemblyInfoInputs.cache
+C:\Users\sylva\source\repos\Reefact.LivingDocumentation.Attributes\Reefact.LivingDocumentation.Attributes.CustomTool.UnitTests\obj\Debug\net7\Reefact.LivingDocumentation.Attributes.CustomTool.UnitTests.AssemblyInfo.cs
+C:\Users\sylva\source\repos\Reefact.LivingDocumentation.Attributes\Reefact.LivingDocumentation.Attributes.CustomTool.UnitTests\obj\Debug\net7\Reefact.LivingDocumentation.Attributes.CustomTool.UnitTests.csproj.CoreCompileInputs.cache

@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "N+8RM39ZhBKzGtRiU8lpZRi9U4tXCIE46n030vAODMlMw+icT+qbom82aW0KEEfnNmwod9AvQPa1pHvxf20nlQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\sylva\\source\\repos\\Reefact.LivingDocumentation.Attributes\\Reefact.LivingDocumentation.Attributes.CodeGenerator\\Reefact.LivingDocumentation.Attributes.CodeGenerator.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sylva\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\sylva\\.nuget\\packages\\smartformat\\3.3.0\\smartformat.3.3.0.nupkg.sha512",
+    "C:\\Users\\sylva\\.nuget\\packages\\smartformat.extensions.newtonsoft.json\\3.3.0\\smartformat.extensions.newtonsoft.json.3.3.0.nupkg.sha512",
+    "C:\\Users\\sylva\\.nuget\\packages\\smartformat.extensions.system.text.json\\3.3.0\\smartformat.extensions.system.text.json.3.3.0.nupkg.sha512",
+    "C:\\Users\\sylva\\.nuget\\packages\\smartformat.extensions.time\\3.3.0\\smartformat.extensions.time.3.3.0.nupkg.sha512",
+    "C:\\Users\\sylva\\.nuget\\packages\\smartformat.extensions.xml\\3.3.0\\smartformat.extensions.xml.3.3.0.nupkg.sha512",
+    "C:\\Users\\sylva\\.nuget\\packages\\smartformat.net\\3.3.0\\smartformat.net.3.3.0.nupkg.sha512",
+    "C:\\Users\\sylva\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\sylva\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\sylva\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
+    "C:\\Users\\sylva\\.nuget\\packages\\system.text.json\\6.0.2\\system.text.json.6.0.2.nupkg.sha512",
+    "C:\\Users\\sylva\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,4 @@
+C:\Users\sylva\source\repos\Reefact.LivingDocumentation.Attributes\Reefact.LivingDocumentation.Attributes.CodeGenerator\obj\Debug\net7.0\Reefact.LivingDocumentation.Attributes.CodeGenerator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sylva\source\repos\Reefact.LivingDocumentation.Attributes\Reefact.LivingDocumentation.Attributes.CodeGenerator\obj\Debug\net7.0\Reefact.LivingDocumentation.Attributes.CodeGenerator.AssemblyInfoInputs.cache
+C:\Users\sylva\source\repos\Reefact.LivingDocumentation.Attributes\Reefact.LivingDocumentation.Attributes.CodeGenerator\obj\Debug\net7.0\Reefact.LivingDocumentation.Attributes.CodeGenerator.AssemblyInfo.cs
+C:\Users\sylva\source\repos\Reefact.LivingDocumentation.Attributes\Reefact.LivingDocumentation.Attributes.CodeGenerator\obj\Debug\net7.0\Reefact.LivingDocumentation.Attributes.CodeGenerator.csproj.CoreCompileInputs.cache

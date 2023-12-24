@@ -1,0 +1,31 @@
+{
+  "name": "Visitor",
+  "participants": [
+    {
+      "name": "Visitor",
+      "description": "Visitors are entities that allow adding specific functionality to an existing object structure without needing to modify the concrete classes of that structure. They are used to separate operations from elements, promoting code modularity."
+    },
+    {
+      "name": "Concrete Visitor",
+      "description": "Concrete Visitors are concrete implementations of Visitors. Each Concrete Visitor defines a set of specific operations to be applied to the concrete elements of the structure. They enable the introduction of new features or behaviors within the structure without altering the classes of the elements."
+    },
+    {
+      "name": "Element",
+      "description": "Elements are the elements of the object structure that Visitors will visit. They typically define an Accept method that allows Visitors to process them. Using Elements and the Visitor pattern helps maintain a clear separation between structure and operations, promoting code flexibility and maintainability."
+    },
+    {
+      "name": "Concrete Element",
+      "description": "Concrete Elements are concrete implementations of Elements. Each ConcreteElement represents a specific type of element within the object structure. They typically implement the Accept method, allowing Visitors to process them appropriately. The use of ConcreteElements makes it easier to extend the structure without altering existing classes."
+    }
+  ],
+  "members": [
+    {
+      "name": "Visit Method",
+      "description": "Visit Method are a crucial part of a Visitor's implementation. They defines a specific operation that a Visitor performs on a Concrete Element during its visit. These methods allows Visitors to interact with various elements differently, adding flexibility to the behavior of the Visitor pattern."
+    },
+    {
+      "name": "Accept Method",
+      "description": "Accept Method are typically defined in Elements and are used to accept a Visitor's visitation. It allows an Element to invoke the appropriate Visit Method of the Visitor, passing itself as an argument. These methods help maintain the separation of concerns in the Visitor pattern by allowing elements to control how they are visited by different Visitors."
+    }
+  ]
+}

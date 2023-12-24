@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reefact.LivingDocumentation.Attributes", "Reefact.LivingDocumentation.Attributes\Reefact.LivingDocumentation.Attributes.csproj", "{EC3E1159-6B16-4E96-B779-686ABF0BB925}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sources", "Sources", "{75B7F571-5305-40A1-9851-2742CC519E7B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{0530F8A9-3E51-4381-BA04-5B3B507414EA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reefact.LivingDocumentation.Attributes.UnitTests", "Reefact.LivingDocumentation.Attributes.UnitTests\Reefact.LivingDocumentation.Attributes.UnitTests.csproj", "{63867ECD-99D6-4883-8CF6-BB91EE81854B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{707D4933-2524-45E6-8332-FFD2AC9CA59B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reefact.LivingDocumentation.Attributes.CodeGenerator.UnitTests", "Reefact.LivingDocumentation.Attributes.CodeGenerator.UnitTests\Reefact.LivingDocumentation.Attributes.CodeGenerator.UnitTests.csproj", "{103A756C-7D90-47D6-9FAB-1767921E8E42}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reefact.LivingDocumentation.Attributes.CodeGenerator", "Reefact.LivingDocumentation.Attributes.CodeGenerator\Reefact.LivingDocumentation.Attributes.CodeGenerator.csproj", "{734EE52C-AD67-4E6C-A3BD-897870172464}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC3E1159-6B16-4E96-B779-686ABF0BB925}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC3E1159-6B16-4E96-B779-686ABF0BB925}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC3E1159-6B16-4E96-B779-686ABF0BB925}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC3E1159-6B16-4E96-B779-686ABF0BB925}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63867ECD-99D6-4883-8CF6-BB91EE81854B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63867ECD-99D6-4883-8CF6-BB91EE81854B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63867ECD-99D6-4883-8CF6-BB91EE81854B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63867ECD-99D6-4883-8CF6-BB91EE81854B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{103A756C-7D90-47D6-9FAB-1767921E8E42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{103A756C-7D90-47D6-9FAB-1767921E8E42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{103A756C-7D90-47D6-9FAB-1767921E8E42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{103A756C-7D90-47D6-9FAB-1767921E8E42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{734EE52C-AD67-4E6C-A3BD-897870172464}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{734EE52C-AD67-4E6C-A3BD-897870172464}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{734EE52C-AD67-4E6C-A3BD-897870172464}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{734EE52C-AD67-4E6C-A3BD-897870172464}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EC3E1159-6B16-4E96-B779-686ABF0BB925} = {75B7F571-5305-40A1-9851-2742CC519E7B}
+		{63867ECD-99D6-4883-8CF6-BB91EE81854B} = {0530F8A9-3E51-4381-BA04-5B3B507414EA}
+		{103A756C-7D90-47D6-9FAB-1767921E8E42} = {0530F8A9-3E51-4381-BA04-5B3B507414EA}
+		{734EE52C-AD67-4E6C-A3BD-897870172464} = {707D4933-2524-45E6-8332-FFD2AC9CA59B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {48E0D505-4A96-475A-8EDD-756EDAF06FCF}
+	EndGlobalSection
+EndGlobal
