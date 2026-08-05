@@ -2,8 +2,9 @@
 
 🌍 🇬🇧 [English](0008-bind-participants-with-typed-links.md) · 🇫🇷 Français (ce fichier)
 
-**Statut :** Proposé
+**Statut :** Accepté
 **Proposé :** 2026-08-05
+**Accepté :** 2026-08-05
 **Décideurs :** Reefact
 
 ## Contexte

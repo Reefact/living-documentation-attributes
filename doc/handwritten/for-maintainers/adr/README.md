@@ -8,16 +8,17 @@ successor.
 
 ## This base was written as one set
 
-Records 0001 to 0013 carry the same proposal date. They were written together,
-after the decisions they describe had been taken together, and they describe one
-coherent position rather than a sequence of revisions. **None of them amends,
-refines or supersedes another**, and the numbering is an index, not a chronology.
+Every record carries the same proposal date, and every one was accepted on that
+same day. They were written together, after the decisions they describe had been
+taken together, and they describe one coherent position rather than a sequence of
+revisions. **None of them amends, refines or supersedes another**, and the
+numbering is an index, not a chronology.
 
 Where one of them argues against a shape this repository briefly held, that shape
 appears under *Alternatives Considered*, which is where an option weighed and set
 aside belongs. A superseding record is a different instrument, reserved for a
-decision that replaces one already **accepted** — and no record here has been
-accepted yet.
+decision that replaces one of these. From here on every record is accepted, so
+revisiting one means writing its successor rather than editing it.
 
 ## When is an ADR written?
 
@@ -116,21 +117,21 @@ Related ADRs, sources, catalog entries, code.
 
 | ADR | Title | Status |
 |---|---|---|
-| [ADR-0001](0001-check-every-pull-request-against-the-adr-base.md) | Check every pull request against the ADR base | Proposed |
-| [ADR-0002](0002-keep-the-pattern-catalog-as-data-and-generate-the-attributes.md) | Keep the pattern catalog as data and generate the attributes from it | Proposed |
-| [ADR-0003](0003-give-each-role-its-own-attribute-nested-in-its-pattern.md) | Give each role its own attribute, nested in the pattern it belongs to | Proposed |
-| [ADR-0004](0004-keep-the-attribute-base-a-pure-marker.md) | Keep the attribute base a pure marker | Proposed |
-| [ADR-0005](0005-relate-patterns-by-inheritance-and-read-identity-from-it.md) | Relate patterns by inheritance, and read a pattern's identity from it | Proposed |
-| [ADR-0006](0006-catalogue-a-pattern-where-the-work-that-named-it-put-it.md) | Catalogue a pattern where the work that named it put it | Proposed |
-| [ADR-0007](0007-decide-sameness-by-the-assertions-a-pattern-carries.md) | Decide that two patterns are the same by the assertions they carry | Proposed |
-| [ADR-0008](0008-bind-participants-with-typed-links.md) | Bind participants of one pattern occurrence with typed links | Proposed |
-| [ADR-0009](0009-let-each-role-declare-what-it-applies-to.md) | Let each role declare what it can be applied to | Proposed |
-| [ADR-0010](0010-annotate-the-declaration-that-introduces-a-role.md) | Annotate the declaration that introduces a role | Proposed |
-| [ADR-0011](0011-leave-out-what-cannot-be-annotated.md) | Leave out of the catalog what cannot be annotated | Proposed |
-| [ADR-0012](0012-show-every-pattern-at-work-in-a-business-example.md) | Show every pattern at work in a business example | Proposed |
-| [ADR-0013](0013-shelve-a-pattern-without-a-body-of-work-under-idioms.md) | Shelve a pattern without a body of work of its own under Idioms | Proposed |
-| [ADR-0014](0014-write-commit-messages-to-a-checkable-convention.md) | Write commit messages to a convention a script can check | Proposed |
-| [ADR-0015](0015-turn-a-warning-into-an-error-in-ci.md) | Turn a warning into an error in CI | Proposed |
-| [ADR-0016](0016-prove-the-sources-are-what-the-catalog-generates.md) | Prove on every pull request that the sources are what the catalog generates | Proposed |
-| [ADR-0017](0017-pin-every-action-to-a-commit.md) | Pin every GitHub action to a commit | Proposed |
-| [ADR-0018](0018-hold-the-public-surface-to-a-committed-baseline.md) | Hold the public surface to a committed baseline | Proposed |
+| [ADR-0001](0001-check-every-pull-request-against-the-adr-base.md) | Check every pull request against the ADR base | Accepted |
+| [ADR-0002](0002-keep-the-pattern-catalog-as-data-and-generate-the-attributes.md) | Keep the pattern catalog as data and generate the attributes from it | Accepted |
+| [ADR-0003](0003-give-each-role-its-own-attribute-nested-in-its-pattern.md) | Give each role its own attribute, nested in the pattern it belongs to | Accepted |
+| [ADR-0004](0004-keep-the-attribute-base-a-pure-marker.md) | Keep the attribute base a pure marker | Accepted |
+| [ADR-0005](0005-relate-patterns-by-inheritance-and-read-identity-from-it.md) | Relate patterns by inheritance, and read a pattern's identity from it | Accepted |
+| [ADR-0006](0006-catalogue-a-pattern-where-the-work-that-named-it-put-it.md) | Catalogue a pattern where the work that named it put it | Accepted |
+| [ADR-0007](0007-decide-sameness-by-the-assertions-a-pattern-carries.md) | Decide that two patterns are the same by the assertions they carry | Accepted |
+| [ADR-0008](0008-bind-participants-with-typed-links.md) | Bind participants of one pattern occurrence with typed links | Accepted |
+| [ADR-0009](0009-let-each-role-declare-what-it-applies-to.md) | Let each role declare what it can be applied to | Accepted |
+| [ADR-0010](0010-annotate-the-declaration-that-introduces-a-role.md) | Annotate the declaration that introduces a role | Accepted |
+| [ADR-0011](0011-leave-out-what-cannot-be-annotated.md) | Leave out of the catalog what cannot be annotated | Accepted |
+| [ADR-0012](0012-show-every-pattern-at-work-in-a-business-example.md) | Show every pattern at work in a business example | Accepted |
+| [ADR-0013](0013-shelve-a-pattern-without-a-body-of-work-under-idioms.md) | Shelve a pattern without a body of work of its own under Idioms | Accepted |
+| [ADR-0014](0014-write-commit-messages-to-a-checkable-convention.md) | Write commit messages to a convention a script can check | Accepted |
+| [ADR-0015](0015-turn-a-warning-into-an-error-in-ci.md) | Turn a warning into an error in CI | Accepted |
+| [ADR-0016](0016-prove-the-sources-are-what-the-catalog-generates.md) | Prove on every pull request that the sources are what the catalog generates | Accepted |
+| [ADR-0017](0017-pin-every-action-to-a-commit.md) | Pin every GitHub action to a commit | Accepted |
+| [ADR-0018](0018-hold-the-public-surface-to-a-committed-baseline.md) | Hold the public surface to a committed baseline | Accepted |

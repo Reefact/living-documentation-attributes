@@ -2,8 +2,9 @@
 
 🌍 🇬🇧 [English](0004-keep-the-attribute-base-a-pure-marker.md) · 🇫🇷 Français (ce fichier)
 
-**Statut :** Proposé
+**Statut :** Accepté
 **Proposé :** 2026-08-05
+**Accepté :** 2026-08-05
 **Décideurs :** Reefact
 
 ## Contexte
