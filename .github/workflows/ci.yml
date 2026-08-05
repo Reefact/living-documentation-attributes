@@ -4,9 +4,11 @@ on:
   push:
     branches:
       - main
+  # Every pull request, whatever it targets — not only those into main. A change
+  # is often proposed onto another branch first, and the checks below are exactly
+  # as meaningful there; restricting them to main would also mean this workflow
+  # first runs on the merge that makes it protected.
   pull_request:
-    branches:
-      - main
   workflow_dispatch:
 
 # Cancel superseded runs on the same branch / pull request.
