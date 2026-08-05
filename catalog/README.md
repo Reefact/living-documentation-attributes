@@ -104,3 +104,25 @@ than *this belongs to pattern X*:
 A role targeting `Method` is a member role. Nothing else distinguishes it: it is
 generated exactly like the others, and consumers tell them apart by reading
 `AttributeUsage`.
+
+## What is deliberately not here
+
+A pattern that cannot be attached to a type, a member or an assembly does not
+enter the catalog (ADR-0011): an entry nothing can carry is an entry nothing can
+check, and inventing a marker type to hold it would put an artefact of the
+documentation system into the code being documented.
+
+The strategic patterns of Domain-Driven Design are where that bites hardest, so
+the exclusions are listed rather than left to look like oversights.
+
+| Left out | Why |
+|---|---|
+| Conformist · Customer/Supplier · Partnership · Separate Ways | Each qualifies the **relationship** between two bounded contexts. A relationship is not a type, a member or an assembly — there is nothing to annotate, and a property naming "the other end" would be a link to an assembly that no compiler checks. |
+| Context Map | A description of the whole landscape, not a participant in it. It is what you draw *from* the annotations — one of the outputs this catalog exists to make possible. |
+| Ubiquitous Language | A practice, carried by conversation and by the names already in the code. Annotating it would mean annotating everything. |
+| Segregated Core · Abstract Core · Highlighted Core · Distillation Document | Refactorings and documents. What they produce is already expressible — a distilled core is an assembly annotated `CoreDomain` — so the pattern names an act rather than a participant. |
+| Responsibility Layers · Evolving Order · Knowledge Level · Pluggable Component Framework | Large-scale structures. Each could plausibly be attached to something, and none has been settled: they are absent because the assertions each would license have not been written down (ADR-0007), not because they were judged unannotable. |
+
+The last row is the one to revisit. The others are closed by ADR-0011; those are
+open, and the criterion for opening them is the same as for any entry — write the
+rule the annotation would license, and see whether anything could check it.

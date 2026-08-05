@@ -1,0 +1,22 @@
+{
+  "catalog": "DomainDrivenDesign",
+  "name": "GenericSubdomain",
+  "summary": "A cohesive part of the model that is necessary and in no way distinctive — every organisation in the field needs it, and none competes on it.",
+  "reference": {
+    "author": "Eric Evans",
+    "work": "Domain-Driven Design",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "GenericSubdomain",
+      "targets": [
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "A part of the model that could be bought, outsourced or replaced by a published solution without weakening what the organisation is good at. Saying so is what keeps modelling effort away from it.",
+      "links": []
+    }
+  ]
+}

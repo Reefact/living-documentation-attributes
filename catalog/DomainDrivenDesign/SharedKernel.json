@@ -1,0 +1,22 @@
+{
+  "catalog": "DomainDrivenDesign",
+  "name": "SharedKernel",
+  "summary": "A subset of the model that two teams agree to share, and to change only by agreement — a deliberate exception to the rule that models stop at a boundary.",
+  "reference": {
+    "author": "Eric Evans",
+    "work": "Domain-Driven Design",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "SharedKernel",
+      "targets": [
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "The shared subset itself. A change to anything here affects every context that depends on it, so it is kept small on purpose and altered only with the consent of the teams that share it.",
+      "links": []
+    }
+  ]
+}

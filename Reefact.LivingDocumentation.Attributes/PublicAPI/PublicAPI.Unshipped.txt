@@ -10,20 +10,45 @@ Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.Aggregate.Role
 Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.Aggregate.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.Aggregate.RootAttribute
 Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.Aggregate.RootAttribute.RootAttribute() -> void
+Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.AnticorruptionLayer
+Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.AnticorruptionLayer.AdapterAttribute
+Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.AnticorruptionLayer.AdapterAttribute.AdapterAttribute() -> void
+Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.AnticorruptionLayer.AdapterAttribute.Facade.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.AnticorruptionLayer.AdapterAttribute.Facade.init -> void
+Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.AnticorruptionLayer.AdapterAttribute.Translator.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.AnticorruptionLayer.AdapterAttribute.Translator.init -> void
+Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.AnticorruptionLayer.FacadeAttribute
+Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.AnticorruptionLayer.FacadeAttribute.FacadeAttribute() -> void
+Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.AnticorruptionLayer.Role
+Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.AnticorruptionLayer.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.AnticorruptionLayer.TranslatorAttribute
+Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.AnticorruptionLayer.TranslatorAttribute.TranslatorAttribute() -> void
 Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.AssertionAttribute
 Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.AssertionAttribute.AssertionAttribute() -> void
+Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.BoundedContextAttribute
+Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.BoundedContextAttribute.BoundedContextAttribute() -> void
 Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.ClosureOfOperationAttribute
 Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.ClosureOfOperationAttribute.ClosureOfOperationAttribute() -> void
+Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.CoreDomainAttribute
+Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.CoreDomainAttribute.CoreDomainAttribute() -> void
 Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.DomainEventAttribute
 Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.DomainEventAttribute.DomainEventAttribute() -> void
 Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.EntityAttribute
 Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.EntityAttribute.EntityAttribute() -> void
 Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.FactoryAttribute
 Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.FactoryAttribute.FactoryAttribute() -> void
+Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.GenericSubdomainAttribute
+Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.GenericSubdomainAttribute.GenericSubdomainAttribute() -> void
+Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.OpenHostServiceAttribute
+Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.OpenHostServiceAttribute.OpenHostServiceAttribute() -> void
+Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.PublishedLanguageAttribute
+Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.PublishedLanguageAttribute.PublishedLanguageAttribute() -> void
 Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.RepositoryAttribute
 Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.RepositoryAttribute.RepositoryAttribute() -> void
 Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.ServiceAttribute
 Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.ServiceAttribute.ServiceAttribute() -> void
+Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.SharedKernelAttribute
+Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.SharedKernelAttribute.SharedKernelAttribute() -> void
 Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.SideEffectFreeFunctionAttribute
 Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.SideEffectFreeFunctionAttribute.SideEffectFreeFunctionAttribute() -> void
 Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.SpecificationAttribute
