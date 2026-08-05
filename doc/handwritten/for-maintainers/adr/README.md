@@ -6,6 +6,19 @@ place; a decision is revisited by writing a **new** ADR that supersedes the old
 one, and the old one's status changes to *Superseded* with a link to its
 successor.
 
+## This base was written as one set
+
+Records 0001 to 0014 carry the same proposal date. They were written together,
+after the decisions they describe had been taken together, and they describe one
+coherent position rather than a sequence of revisions. **None of them amends,
+refines or supersedes another**, and the numbering is an index, not a chronology.
+
+Where one of them argues against a shape this repository briefly held, that shape
+appears under *Alternatives Considered*, which is where an option weighed and set
+aside belongs. A superseding record is a different instrument, reserved for a
+decision that replaces one already **accepted** — and no record here has been
+accepted yet.
+
 ## When is an ADR written?
 
 Every pull request is checked against this base — the moment new decisions enter

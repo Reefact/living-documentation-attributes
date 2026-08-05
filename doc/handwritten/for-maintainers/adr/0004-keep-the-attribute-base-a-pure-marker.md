@@ -17,12 +17,12 @@ the role — are already said by the declaration itself. The catalog is the
 namespace, the pattern is the containing type, the role is the attribute's own
 name. Nothing about them is a separate fact.
 
-Two ways of exposing them were built and measured. Stating them as constants on
-every generated attribute meant writing each name twice: once as the declaration,
-once as a literal that had to agree with it. Scaled to a catalog of one hundred
-and ninety patterns and seven hundred and sixty roles, that doubled the assembly,
+Two ways of exposing them were measured. Stating them as constants on every
+generated attribute means writing each name twice: once as the declaration, once
+as a literal that has to agree with it. Scaled to a catalog of one hundred and
+ninety patterns and seven hundred and sixty roles, that doubles the assembly,
 from 51.5 KB to 104 KB — a figure small in absolute terms, and entirely
-redundant. Reading them back inside property getters removed the duplication, at
+redundant. Reading them back inside property getters removes the duplication, at
 the price of putting reflection and a convention about the library's own layout
 inside a marker.
 

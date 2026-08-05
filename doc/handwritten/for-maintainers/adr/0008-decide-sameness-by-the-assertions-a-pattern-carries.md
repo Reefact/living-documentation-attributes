@@ -27,7 +27,7 @@ The library exists so that an annotation can be checked. The value of a role is
 the assertion it lets someone state and a tool verify; a role nothing can be
 asserted about carries no information a reader did not already have.
 
-Value Object was catalogued as one pattern held by two works. Fowler's is about
+Value Object reads as one pattern held by two works. Fowler's is about
 comparison — equality not based on identity — and tolerates a mutable date range.
 Evans' adds immutability and, above all, is a modelling decision: it exists
 because it says something about the domain. A rule written for one does not hold
@@ -61,10 +61,11 @@ familiarity does not survive Enterprise Integration Patterns or the concurrency
 literature; asking what rule each entry would license is a question a contributor
 can answer from the source text without being steeped in the field.
 
-It failed safe when applied to what had already been decided. Value Object had
-been recorded as one pattern in two catalogs, and applying the criterion
-reclassified it as two patterns in an inclusion — which also removed a question
-about publication order that had never needed asking.
+It also settles which of the two relations of ADR-0006 applies, and does so
+before publication order is consulted. Value Object reads as one pattern held by
+two works until the assertions are written down; once they are, it is two
+patterns in an inclusion, and the question of which work published first never
+arises — inclusion orders itself.
 
 ## Alternatives Considered
 

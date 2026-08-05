@@ -22,9 +22,10 @@ written for the broader one applies to the narrower one as well.
 
 Both were generated as plain inheritance, which made them indistinguishable in
 the code: only the prose of the remarks said which was which, and prose is not
-structure. It also made the identity of ADR-0005 wrong half the time, because a
-climb to the top of the chain merges a specialisation into the pattern that
-contains it — right for a declension, wrong for a specialisation.
+structure. It also leaves the identity a consumer groups by undecidable: a climb
+to the top of an inheritance chain merges a specialisation into the pattern that
+contains it, which is right for a declension and wrong for a specialisation, and
+nothing in the chain says which one is being climbed.
 
 C# offers one construct for both, and it already means one of them: `class B : A`
 says *B is an A*, which is exactly what a specialisation says. What it cannot say
@@ -71,9 +72,8 @@ distinction to be correct.
 
 ### Duplicate the pattern in both catalogs, identically
 
-Considered first, and adopted for a time: since the code is generated, a reader
-of either catalog would find a complete pattern where they looked, at no
-maintenance cost.
+Considered because the code is generated: a reader of either catalog would find a
+complete pattern where they looked, at no maintenance cost.
 
 Rejected because the two copies would be unrelated types, so nothing would tie
 them together for a consumer, and a rule written for one would not reach the
@@ -111,7 +111,7 @@ answer, and prose cannot be consulted at run time.
 ### Positive
 
 * The two relations are distinguishable in the code, not only in prose.
-* The identity of ADR-0005 is correct for both.
+* The identity a consumer groups by is decidable, and correct for both relations.
 * Rules compose along the same hierarchy as the patterns, so a rule for a broader
   pattern is written once.
 * Either spelling of a declined pattern is found where a reader looks for it.

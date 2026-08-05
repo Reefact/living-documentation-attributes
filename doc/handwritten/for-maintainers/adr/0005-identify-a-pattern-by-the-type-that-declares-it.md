@@ -78,8 +78,8 @@ by inheritance, which is a stronger coupling than a type reference.
 
 ### Take the type immediately below the base, whatever it is
 
-Considered because it is a single rule with no exceptions, and it was the first
-shape built.
+Considered because it is a single rule with no exceptions, and it needs nothing
+declared anywhere.
 
 Rejected because it climbs past a specialisation, so a Null Object stops being
 countable and is reported as a Special Case. Merging is right for a declension
