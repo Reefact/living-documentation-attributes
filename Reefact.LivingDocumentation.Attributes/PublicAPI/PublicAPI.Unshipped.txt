@@ -1,6 +1,19 @@
 #nullable enable
 Reefact.LivingDocumentation.Attributes.DeclensionAttribute
 Reefact.LivingDocumentation.Attributes.DeclensionAttribute.DeclensionAttribute() -> void
+Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.Aggregate
+Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.Aggregate.MemberAttribute
+Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.Aggregate.MemberAttribute.MemberAttribute() -> void
+Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.Aggregate.MemberAttribute.Root.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.Aggregate.MemberAttribute.Root.init -> void
+Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.Aggregate.Role
+Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.Aggregate.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.Aggregate.RootAttribute
+Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.Aggregate.RootAttribute.RootAttribute() -> void
+Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.AssertionAttribute
+Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.AssertionAttribute.AssertionAttribute() -> void
+Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.ClosureOfOperationAttribute
+Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.ClosureOfOperationAttribute.ClosureOfOperationAttribute() -> void
 Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.DomainEventAttribute
 Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.DomainEventAttribute.DomainEventAttribute() -> void
 Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.EntityAttribute
@@ -11,8 +24,12 @@ Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.RepositoryAttribute
 Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.RepositoryAttribute.RepositoryAttribute() -> void
 Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.ServiceAttribute
 Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.ServiceAttribute.ServiceAttribute() -> void
+Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.SideEffectFreeFunctionAttribute
+Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.SideEffectFreeFunctionAttribute.SideEffectFreeFunctionAttribute() -> void
 Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.SpecificationAttribute
 Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.SpecificationAttribute.SpecificationAttribute() -> void
+Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.StandaloneClassAttribute
+Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.StandaloneClassAttribute.StandaloneClassAttribute() -> void
 Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.ValueObjectAttribute
 Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.ValueObjectAttribute.ValueObjectAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture.UnitOfWorkAttribute

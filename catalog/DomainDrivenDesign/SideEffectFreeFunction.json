@@ -1,0 +1,21 @@
+{
+  "catalog": "DomainDrivenDesign",
+  "name": "SideEffectFreeFunction",
+  "summary": "An operation that computes and returns a result while leaving the state of the system untouched, so that it can be called freely, repeated, and combined without reasoning about order.",
+  "reference": {
+    "author": "Eric Evans",
+    "work": "Domain-Driven Design",
+    "year": 2003
+  },
+  "inherited": true,
+  "roles": [
+    {
+      "name": "SideEffectFreeFunction",
+      "targets": [
+        "Method"
+      ],
+      "summary": "A method that returns a result and modifies no observable state, neither of its own object nor of anything it reaches.",
+      "links": []
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "catalog": "DomainDrivenDesign",
+  "name": "Assertion",
+  "summary": "A post-condition of an operation or an invariant of a type, stated explicitly so that the meaning of the code is defined by its promised effect rather than recovered by reading its implementation.",
+  "reference": {
+    "author": "Eric Evans",
+    "work": "Domain-Driven Design",
+    "year": 2003
+  },
+  "inherited": true,
+  "roles": [
+    {
+      "name": "Assertion",
+      "targets": [
+        "Method",
+        "Class",
+        "Struct"
+      ],
+      "summary": "An operation whose post-condition is stated, or a type whose invariant is stated and checked rather than assumed.",
+      "links": []
+    }
+  ]
+}
