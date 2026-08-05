@@ -60,12 +60,22 @@ jobs:
       - name: Build
         run: dotnet build Reefact.LivingDocumentation.Attributes.sln -c Release --no-restore
 
-      # The attributes carry no behaviour, so there is nothing to unit test. What
-      # can be proven is that the whole catalog reads back through the base
-      # attribute alone — the contract of ADR-0004 — which is exactly what the
-      # sample project's inventory does. A role that cannot be applied to a
-      # plausible participant already failed to compile above; this shows the
-      # annotations are also readable.
+      # The attributes carry no behaviour, so nothing here tests what code does.
+      # What these assert is what every generated attribute must LOOK like — it
+      # derives from the base, it declares what it applies to, every role of one
+      # pattern answers one identity — plus what the reading rules answer for each
+      # shape the generator emits, over fixtures rather than catalog entries. A
+      # defect written into the template is emitted uniformly, survives the round
+      # trip and is invisible in a diff spanning the whole catalog; this is where
+      # it shows. Deferred by ADR-0016 and ADR-0018, required by ADR-0019.
+      - name: Convention tests
+        run: dotnet test Reefact.LivingDocumentation.Attributes.sln -c Release --no-build
+
+      # The whole catalog reads back through the base attribute alone — the
+      # contract of ADR-0004 — which is exactly what the sample project's
+      # inventory does. A role that cannot be applied to a plausible participant
+      # already failed to compile above; this shows the annotations are also
+      # readable, on a body of code written to be read rather than to be asserted.
       - name: Read the catalog back through the sample project
         shell: bash
         run: |

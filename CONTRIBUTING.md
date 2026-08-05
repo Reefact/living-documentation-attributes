@@ -8,6 +8,7 @@ covers the rest — how the repository is built, and how commits are written.
 
 ```
 dotnet build Reefact.LivingDocumentation.Attributes.sln
+dotnet test Reefact.LivingDocumentation.Attributes.sln
 dotnet run --project Reefact.LivingDocumentation.Attributes.Usage
 ```
 
@@ -17,10 +18,17 @@ solution rather than one framework. The sample project prints the whole catalog
 read back through the base attribute alone — that inventory is the check that a
 catalog change landed.
 
-The attributes carry no behaviour, so there is no unit test suite to run. What CI
-proves instead is that every role compiles onto a plausible participant, that the
-catalog is valid, that the whole of it reads back, and that regenerating an
-unchanged catalog leaves the working tree clean.
+The attributes carry no behaviour, so nothing tests what code does. The suite
+asserts what every generated attribute must *look* like — it derives from the
+base, it declares what it applies to, every role of one pattern answers one
+identity, a link names a role of the same pattern — and what the reading rules
+answer for each shape the generator emits. A defect written into the template is
+emitted uniformly across the catalog and survives the round trip; these are what
+catch it.
+
+Alongside them, CI proves that every role compiles onto a plausible participant,
+that the catalog is valid, that the whole of it reads back, and that regenerating
+an unchanged catalog leaves the working tree clean.
 
 ## Changing the catalog
 

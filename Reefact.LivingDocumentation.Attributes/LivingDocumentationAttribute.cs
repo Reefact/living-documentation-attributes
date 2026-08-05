@@ -42,11 +42,14 @@ namespace Reefact.LivingDocumentation.Attributes {
     ///         <item>
     ///             <term>Pattern identity</term>
     ///             <description>
-    ///                 the type immediately below <see cref="LivingDocumentationAttribute" />. Group by it, and never by
-    ///                 the pattern name, which two unrelated patterns can share — <c>Adapter</c> names one pattern in
-    ///                 Gang of Four and another in ports and adapters. Every role of one pattern resolves to the same
-    ///                 type, and a declension resolves to the definition it derives from, so two spellings of one
-    ///                 pattern group together while two homonyms stay apart.
+    ///                 the type reached by climbing up through an abstract base <b>declared in the same pattern</b>,
+    ///                 and through a <see cref="DeclensionAttribute">declension</see>, stopping at anything else.
+    ///                 Group by it, and never by the pattern name, which two unrelated patterns can share —
+    ///                 <c>Adapter</c> names one pattern in Gang of Four and another in ports and adapters. Every role
+    ///                 of one pattern resolves to the same type, and a declension resolves to the definition it
+    ///                 spells, so two spellings of one pattern group together while two homonyms stay apart. It is
+    ///                 <b>not</b> the type immediately below this one: a specialisation derives from the broader
+    ///                 pattern it narrows, and climbing past it would report the two as one.
     ///             </description>
     ///         </item>
     ///     </list>

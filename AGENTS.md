@@ -81,8 +81,9 @@ it, rather than rediscovering them:
    was edited by hand.
 3. Add or update the sample in
    `Reefact.LivingDocumentation.Attributes.Usage/<Catalog>/<Pattern>Usage.cs`.
-4. Build the solution and run the sample project; its inventory is the check that
-   the catalog reads back.
+4. Build the solution, run `dotnet test`, and run the sample project. The tests
+   assert what a generated attribute must look like; the inventory is the check
+   that the catalog reads back.
 5. Update the public API baseline, which the build will demand — see
    `CONTRIBUTING.md`. Read the entries it appends: on a catalog change they are
    the whole of what a consumer gains, stated in a few readable lines rather than
