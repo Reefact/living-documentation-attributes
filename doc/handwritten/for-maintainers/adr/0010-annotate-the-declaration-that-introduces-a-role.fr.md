@@ -2,8 +2,9 @@
 
 🌍 🇬🇧 [English](0010-annotate-the-declaration-that-introduces-a-role.md) · 🇫🇷 Français (ce fichier)
 
-**Statut :** Proposé
+**Statut :** Accepté
 **Proposé :** 2026-08-05
+**Accepté :** 2026-08-05
 **Décideurs :** Reefact
 
 ## Contexte

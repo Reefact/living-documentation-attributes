@@ -2,8 +2,9 @@
 
 🌍 🇬🇧 English (this file) · 🇫🇷 [Français](0005-relate-patterns-by-inheritance-and-read-identity-from-it.fr.md)
 
-**Status:** Proposed
+**Status:** Accepted
 **Proposed:** 2026-08-05
+**Accepted:** 2026-08-05
 **Decision Makers:** Reefact
 
 ## Context
