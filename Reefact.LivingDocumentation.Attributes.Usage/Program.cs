@@ -50,11 +50,11 @@ namespace Reefact.LivingDocumentation.Attributes.Usage {
         }
 
         private static void PrintInventory(IEnumerable<Annotation> annotations) {
-            foreach (IGrouping<string, Annotation> catalog in annotations.GroupBy(a => a.Attribute.Catalog).OrderBy(g => g.Key)) {
+            foreach (IGrouping<string, Annotation> catalog in annotations.GroupBy(a => PatternInfo.CatalogOf(a.Attribute)).OrderBy(g => g.Key)) {
                 Console.WriteLine();
                 Console.WriteLine($"══ {catalog.Key} ".PadRight(96, '═'));
 
-                foreach (IGrouping<string, Annotation> pattern in catalog.GroupBy(a => a.Attribute.PatternName).OrderBy(g => g.Key)) {
+                foreach (IGrouping<string, Annotation> pattern in catalog.GroupBy(a => PatternInfo.PatternNameOf(a.Attribute)).OrderBy(g => g.Key)) {
                     Console.WriteLine();
                     Console.WriteLine($"  {pattern.Key}");
                     foreach (Annotation annotation in pattern) {
@@ -65,8 +65,8 @@ namespace Reefact.LivingDocumentation.Attributes.Usage {
         }
 
         private static void PrintCatalogUsage(IReadOnlyCollection<Annotation> annotations) {
-            int patterns = annotations.Select(a => a.Attribute.PatternName).Distinct().Count();
-            int roles    = annotations.Select(a => a.Attribute.PatternName + "." + a.Attribute.RoleName).Distinct().Count();
+            int patterns = annotations.Select(a => PatternInfo.PatternNameOf(a.Attribute)).Distinct().Count();
+            int roles    = annotations.Select(a => PatternInfo.PatternNameOf(a.Attribute) + "." + PatternInfo.RoleNameOf(a.Attribute)).Distinct().Count();
 
             Console.WriteLine();
             Console.WriteLine("".PadRight(96, '═'));
@@ -90,13 +90,13 @@ namespace Reefact.LivingDocumentation.Attributes.Usage {
                 string target = Member is null ? Owner.Name : $"{Owner.Name}.{Member.Name}()";
                 string links  = string.Join(", ", Links());
 
-                return $"{Attribute.RoleName,-26}{target}{(links.Length == 0 ? "" : "  →  " + links)}";
+                return $"{PatternInfo.RoleNameOf(Attribute),-26}{target}{(links.Length == 0 ? "" : "  →  " + links)}";
             }
 
             private IEnumerable<string> Links() {
-                // A link is a Type-valued property the role adds on top of the base ones. CanonicalPattern is
-                // Type-valued too, so it has to be excluded explicitly: it is the identity of the pattern, not a
-                // link to another role. Declaring the base members here keeps the rule honest as the base evolves.
+                // A link is a Type-valued property a role declares, such as Composite.Leaf.Component. The base
+                // carries none, so every one of them is a link — the check on the declaring type only keeps that
+                // true should the base ever gain one.
                 foreach (PropertyInfo property in Attribute.GetType().GetProperties()) {
                     if (property.PropertyType != typeof(Type)) { continue; }
                     if (property.DeclaringType == typeof(LivingDocumentationAttribute)) { continue; }
