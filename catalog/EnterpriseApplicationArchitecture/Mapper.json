@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "Mapper",
+  "summary": "An object that sets up communication between two independent things, so that neither knows the other.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Mapper",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The go-between. What makes it the pattern is the direction of ignorance: neither side depends on the mapper, and neither knows the other exists — which is what separates it from a gateway, whose caller knows it perfectly well.",
+      "links": []
+    }
+  ]
+}

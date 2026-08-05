@@ -1,0 +1,27 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "TableDataGateway",
+  "summary": "One object that carries all the SQL for one table, and hands back results without holding any state about them.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "specialisationOf": {
+    "catalog": "EnterpriseApplicationArchitecture",
+    "name": "Gateway"
+  },
+  "roles": [
+    {
+      "name": "TableDataGateway",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The single home of every statement touching one table. It is stateless and instance-free of the rows it returns: find, insert, update and delete take and return plain data, which is what distinguishes it from a gateway that wraps a single row.",
+      "links": []
+    }
+  ]
+}

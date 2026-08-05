@@ -1,0 +1,27 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "DataMapper",
+  "summary": "A layer that moves data between objects and a database while keeping them independent of each other, and of it.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "specialisationOf": {
+    "catalog": "EnterpriseApplicationArchitecture",
+    "name": "Mapper"
+  },
+  "roles": [
+    {
+      "name": "DataMapper",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The layer that maps a domain model to a schema neither has to resemble. The domain objects hold no persistence code and no reference to it, which is the whole point and the reason it costs more than an active record.",
+      "links": []
+    }
+  ]
+}

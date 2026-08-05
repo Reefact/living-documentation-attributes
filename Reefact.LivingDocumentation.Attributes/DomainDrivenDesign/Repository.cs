@@ -15,10 +15,14 @@ namespace Reefact.LivingDocumentation.Attributes.DomainDrivenDesign {
     ///         This pattern has a single role, so there is nothing to choose: the attribute is applied on its own.
     ///     </para>
     ///     <para>
+    ///         A narrower case of Repository, in Patterns of Enterprise Application Architecture: every participant
+    ///         annotated here is one of those too, and a consumer asking for the broader pattern gets these as well.
+    ///     </para>
+    ///     <para>
     ///         Eric Evans, <i>Domain-Driven Design</i>, 2003.
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class, AllowMultiple = false, Inherited = true)]
-    public sealed class RepositoryAttribute : LivingDocumentationAttribute { }
+    public sealed class RepositoryAttribute : EnterpriseApplicationArchitecture.RepositoryAttribute { }
 
 }

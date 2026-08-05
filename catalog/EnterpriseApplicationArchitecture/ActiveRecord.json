@@ -1,0 +1,22 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "ActiveRecord",
+  "summary": "An object that carries a row of data, the access to that row, and the domain logic that acts on it.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "ActiveRecord",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "A domain object that knows how to persist itself. It suits a model whose shape follows the database's; it stops suiting one the moment the two diverge, which is the trade the pattern is chosen for rather than a flaw in it.",
+      "links": []
+    }
+  ]
+}

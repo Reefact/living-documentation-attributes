@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "Repository",
+  "summary": "A collection-like interface onto domain objects, behind which the mapping to storage disappears.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Repository",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "What client code asks for objects. It reads as an in-memory collection — add, remove, and queries phrased in the domain's own language — so that no caller is written in terms of storage. Criteria are passed as objects rather than as a query language, which is what keeps the illusion intact.",
+      "links": []
+    }
+  ]
+}

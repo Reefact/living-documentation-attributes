@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "DataTransferObject",
+  "summary": "An object that carries data across a boundary in one call, to avoid paying for many.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "DataTransferObject",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "repeatable": false,
+      "summary": "A shape that exists for a call, not for a model: no behaviour, no invariants, and fields chosen by what one remote consumer needs in one round trip. Serialising a domain object instead is the mistake it exists to prevent, because the model then cannot change without breaking a consumer.",
+      "links": []
+    }
+  ]
+}
