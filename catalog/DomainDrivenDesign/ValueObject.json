@@ -1,0 +1,26 @@
+{
+  "catalog": "DomainDrivenDesign",
+  "name": "ValueObject",
+  "summary": "An object of the domain described only by its values. It carries no identity, it is immutable, and it exists because it says something about the domain — not merely because comparing it by value is convenient.",
+  "reference": {
+    "author": "Eric Evans",
+    "work": "Domain-Driven Design",
+    "year": 2003
+  },
+  "specialisationOf": {
+    "catalog": "EnterpriseApplicationArchitecture",
+    "name": "ValueObject"
+  },
+  "inherited": true,
+  "roles": [
+    {
+      "name": "ValueObject",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "summary": "An immutable object of the domain, without identity, defined only by its values.",
+      "links": []
+    }
+  ]
+}

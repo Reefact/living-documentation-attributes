@@ -1,0 +1,4 @@
+# The only dependency of tools/catalog/validate.py. Pinned so that a schema
+# accepted locally is the schema CI applies: a draft-2020-12 validator that
+# changed its strictness between versions would otherwise make the two disagree.
+jsonschema==4.26.0

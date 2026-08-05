@@ -1,0 +1,42 @@
+{
+  "catalog": "GangOfFour",
+  "name": "Memento",
+  "summary": "Captures and externalizes an object's internal state, without violating encapsulation, so that the object can be restored to that state later.",
+  "reference": {
+    "author": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+    "work": "Design Patterns",
+    "year": 1994
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Originator",
+      "targets": [
+        "Class"
+      ],
+      "summary": "Creates a memento of its own state, and uses one to restore itself.",
+      "links": [
+        "Memento"
+      ]
+    },
+    {
+      "name": "Memento",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "summary": "Holds the captured state, and exposes it only to its originator.",
+      "links": []
+    },
+    {
+      "name": "Caretaker",
+      "targets": [
+        "Class"
+      ],
+      "summary": "Keeps mementos safe, and never inspects or alters their content.",
+      "links": [
+        "Memento"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "catalog": "GangOfFour",
+  "name": "Command",
+  "summary": "Encapsulates a request as an object, letting callers be parameterized with different requests, and letting requests be queued, logged or undone.",
+  "reference": {
+    "author": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+    "work": "Design Patterns",
+    "year": 1994
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Command",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "summary": "Declares the operation that carries out the request.",
+      "links": []
+    },
+    {
+      "name": "ConcreteCommand",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "summary": "Binds a receiver to an action, and implements the request by invoking it.",
+      "links": [
+        "Command",
+        "Receiver"
+      ]
+    },
+    {
+      "name": "Receiver",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "summary": "Knows how to perform the work associated with the request.",
+      "links": []
+    },
+    {
+      "name": "Invoker",
+      "targets": [
+        "Class"
+      ],
+      "summary": "Holds commands and asks them to carry out the request.",
+      "links": [
+        "Command"
+      ]
+    },
+    {
+      "name": "ExecuteMethod",
+      "targets": [
+        "Method"
+      ],
+      "summary": "The operation that carries out the request.",
+      "links": []
+    }
+  ]
+}

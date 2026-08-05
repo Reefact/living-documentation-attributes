@@ -1,0 +1,53 @@
+{
+  "catalog": "GangOfFour",
+  "name": "Iterator",
+  "summary": "Provides a way to access the elements of an aggregate object sequentially, without exposing its underlying representation.",
+  "reference": {
+    "author": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+    "work": "Design Patterns",
+    "year": 1994
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Iterator",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "summary": "Declares the operations for traversing the elements.",
+      "links": []
+    },
+    {
+      "name": "ConcreteIterator",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "summary": "Implements the traversal, and keeps track of the current position.",
+      "links": [
+        "Iterator",
+        "ConcreteAggregate"
+      ]
+    },
+    {
+      "name": "Aggregate",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "summary": "Declares the operation that creates an iterator over its elements.",
+      "links": []
+    },
+    {
+      "name": "ConcreteAggregate",
+      "targets": [
+        "Class"
+      ],
+      "summary": "Returns an iterator suited to its own representation.",
+      "links": [
+        "Aggregate"
+      ]
+    }
+  ]
+}

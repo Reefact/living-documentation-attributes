@@ -1,0 +1,32 @@
+{
+  "catalog": "GangOfFour",
+  "name": "ChainOfResponsibility",
+  "summary": "Avoids coupling the sender of a request to its receiver by giving several objects a chance to handle it, passing the request along the chain until one handles it.",
+  "reference": {
+    "author": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+    "work": "Design Patterns",
+    "year": 1994
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Handler",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "summary": "Declares the handling operation and, usually, the link to the successor.",
+      "links": []
+    },
+    {
+      "name": "ConcreteHandler",
+      "targets": [
+        "Class"
+      ],
+      "summary": "Handles the requests it is responsible for, and forwards the others to its successor.",
+      "links": [
+        "Handler"
+      ]
+    }
+  ]
+}

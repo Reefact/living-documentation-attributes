@@ -1,0 +1,22 @@
+{
+  "catalog": "DomainDrivenDesign",
+  "name": "Repository",
+  "summary": "Gives access to aggregates as though they were an in-memory collection, and hides the storage mechanism from the domain.",
+  "reference": {
+    "author": "Eric Evans",
+    "work": "Domain-Driven Design",
+    "year": 2003
+  },
+  "inherited": true,
+  "roles": [
+    {
+      "name": "Repository",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "summary": "Gives collection-like access to aggregates, and hides the storage mechanism.",
+      "links": []
+    }
+  ]
+}

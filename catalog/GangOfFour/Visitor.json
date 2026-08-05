@@ -1,0 +1,80 @@
+{
+  "catalog": "GangOfFour",
+  "name": "Visitor",
+  "summary": "Represents an operation to be performed on the elements of an object structure, and lets a new operation be defined without changing the classes of those elements.",
+  "reference": {
+    "author": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+    "work": "Design Patterns",
+    "year": 1994
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Visitor",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "summary": "Declares one visit operation per concrete element of the structure.",
+      "links": []
+    },
+    {
+      "name": "ConcreteVisitor",
+      "targets": [
+        "Class"
+      ],
+      "summary": "Implements the visit operations: this is where the added algorithm lives.",
+      "links": [
+        "Visitor"
+      ]
+    },
+    {
+      "name": "Element",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "summary": "Declares the entry point of the double dispatch.",
+      "links": []
+    },
+    {
+      "name": "ConcreteElement",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "summary": "Dispatches to the visit operation that corresponds to its own type.",
+      "links": [
+        "Element"
+      ]
+    },
+    {
+      "name": "ObjectStructure",
+      "targets": [
+        "Class"
+      ],
+      "summary": "Holds the elements, and offers a way to walk them.",
+      "links": [
+        "Element"
+      ]
+    },
+    {
+      "name": "VisitMethod",
+      "targets": [
+        "Method"
+      ],
+      "summary": "The operation applied to one given concrete element.",
+      "links": [
+        "ConcreteElement"
+      ]
+    },
+    {
+      "name": "AcceptMethod",
+      "targets": [
+        "Method"
+      ],
+      "summary": "The entry point of the double dispatch: it calls back the matching visit operation.",
+      "links": []
+    }
+  ]
+}

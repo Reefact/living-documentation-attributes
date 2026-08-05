@@ -1,0 +1,21 @@
+{
+  "catalog": "GangOfFour",
+  "name": "Singleton",
+  "summary": "Ensures a type has only one instance, and provides a global point of access to it.",
+  "reference": {
+    "author": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+    "work": "Design Patterns",
+    "year": 1994
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Singleton",
+      "targets": [
+        "Class"
+      ],
+      "summary": "Ensures a type has only one instance, and provides a global point of access to it.",
+      "links": []
+    }
+  ]
+}

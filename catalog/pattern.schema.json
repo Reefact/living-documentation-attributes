@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Reefact/living-documentation-attributes/catalog/pattern.schema.json",
+  "title": "Pattern catalog entry",
+  "description": "One design pattern and the roles its participants can hold. A pattern whose single role carries the pattern's own name is emitted as a flat attribute; every other pattern is emitted as a static container holding one attribute per role.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "catalog",
+    "name",
+    "summary",
+    "reference",
+    "inherited",
+    "roles"
+  ],
+  "properties": {
+    "catalog": {
+      "description": "The body of work the pattern comes from. Becomes both the namespace and the Catalog property.",
+      "enum": [
+        "GangOfFour",
+        "DomainDrivenDesign",
+        "EnterpriseApplicationArchitecture",
+        "Idioms"
+      ]
+    },
+    "name": {
+      "description": "The pattern name, in PascalCase. Also names the file and the generated container.",
+      "type": "string",
+      "pattern": "^[A-Z][A-Za-z0-9]*$"
+    },
+    "summary": {
+      "description": "What the pattern is for, in one sentence. Becomes the XML documentation of the container.",
+      "type": "string",
+      "minLength": 20
+    },
+    "inherited": {
+      "description": "Whether a derived type still holds the role. A semantic property of the pattern: true for the DDD markers, since a subtype of an Entity is an Entity; false for the GoF roles, since a subtype of a Component is not necessarily a Leaf.",
+      "type": "boolean"
+    },
+    "roles": {
+      "description": "The roles a participant can hold. Order is preserved in the generated source.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/role"
+      }
+    },
+    "reference": {
+      "description": "The work the pattern comes from. Load-bearing, not editorial: when two catalogs name the same pattern, the earlier publication holds the definition and the other declines from it.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "author",
+        "work",
+        "year"
+      ],
+      "properties": {
+        "author": {
+          "type": "string",
+          "minLength": 3
+        },
+        "work": {
+          "type": "string",
+          "minLength": 3
+        },
+        "year": {
+          "type": "integer",
+          "minimum": 1970,
+          "maximum": 2100
+        }
+      }
+    },
+    "declensionOf": {
+      "description": "Set when this entry is the same pattern as another, named or catalogued differently. The attribute is generated deriving from it, so both spellings resolve to one identity. Which side holds the definition is decided by anteriority of publication.",
+      "$ref": "#/$defs/patternRef"
+    },
+    "specialisationOf": {
+      "description": "Set when this pattern is a narrower case of another, as Null Object is of Special Case. The attribute is generated deriving from it, so a consumer asking for the broader pattern gets this one too. Decided by the taxonomy, never by publication dates.",
+      "$ref": "#/$defs/patternRef"
+    }
+  },
+  "$defs": {
+    "role": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "targets",
+        "summary",
+        "links"
+      ],
+      "properties": {
+        "name": {
+          "description": "The role name, in PascalCase. Becomes both the attribute name and the RoleName value.",
+          "type": "string",
+          "pattern": "^[A-Z][A-Za-z0-9]*$"
+        },
+        "targets": {
+          "description": "What the role can be applied to. A role targeting Method is a member role; it is generated exactly like the others, only its target differs. Declare Struct wherever a record struct would be a legitimate participant.",
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "Interface",
+              "Class",
+              "Struct",
+              "Method",
+              "Assembly"
+            ]
+          }
+        },
+        "summary": {
+          "description": "What this participant does within the pattern, in one sentence. Becomes the XML documentation of the attribute, and is what a reader sees in IntelliSense when choosing a role.",
+          "type": "string",
+          "minLength": 20
+        },
+        "links": {
+          "description": "Names of other roles of the same pattern this one can point at, each generated as an optional typed property. Use them only where the type hierarchy alone cannot tell which occurrence of the pattern is meant.",
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Z][A-Za-z0-9]*$"
+          }
+        }
+      }
+    },
+    "patternRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "catalog",
+        "name"
+      ],
+      "properties": {
+        "catalog": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

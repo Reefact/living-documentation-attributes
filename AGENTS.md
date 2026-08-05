@@ -83,7 +83,11 @@ it, rather than rediscovering them:
    `Reefact.LivingDocumentation.Attributes.Usage/<Catalog>/<Pattern>Usage.cs`.
 4. Build the solution and run the sample project; its inventory is the check that
    the catalog reads back.
-5. Review the generated diff. On a template change it spans the whole catalog —
+5. Update the public API baseline, which the build will demand — see
+   `CONTRIBUTING.md`. Read the entries it appends: on a catalog change they are
+   the whole of what a consumer gains, stated in a few readable lines rather than
+   buried in the generated diff.
+6. Review the generated diff. On a template change it spans the whole catalog —
    read it as one change, not two hundred.
 
 ## Language
@@ -102,6 +106,9 @@ it, rather than rediscovering them:
   implementations ([ADR-0010](doc/handwritten/for-maintainers/adr/0010-annotate-the-declaration-that-introduces-a-role.md)).
 - A link between participants is a `Type`, never a string
   ([ADR-0008](doc/handwritten/for-maintainers/adr/0008-bind-participants-with-typed-links.md)).
+- The generator never writes the public API baseline; a human does, and that act
+  is the review
+  ([ADR-0018](doc/handwritten/for-maintainers/adr/0018-hold-the-public-surface-to-a-committed-baseline.md)).
 - Samples use realistic business domains, varied across the catalog, and the
   domain is chosen to fit the pattern rather than the reverse
   ([ADR-0012](doc/handwritten/for-maintainers/adr/0012-show-every-pattern-at-work-in-a-business-example.md)).

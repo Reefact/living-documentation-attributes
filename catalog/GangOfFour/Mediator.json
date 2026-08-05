@@ -1,0 +1,53 @@
+{
+  "catalog": "GangOfFour",
+  "name": "Mediator",
+  "summary": "Defines an object that encapsulates how a set of objects interact, keeping them from referring to each other explicitly.",
+  "reference": {
+    "author": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+    "work": "Design Patterns",
+    "year": 1994
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Mediator",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "summary": "Declares the interface through which colleagues communicate.",
+      "links": []
+    },
+    {
+      "name": "ConcreteMediator",
+      "targets": [
+        "Class"
+      ],
+      "summary": "Knows the colleagues and coordinates their interactions.",
+      "links": [
+        "Mediator"
+      ]
+    },
+    {
+      "name": "Colleague",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "summary": "Communicates with the other participants only through the mediator.",
+      "links": [
+        "Mediator"
+      ]
+    },
+    {
+      "name": "ConcreteColleague",
+      "targets": [
+        "Class"
+      ],
+      "summary": "One participant of the interaction.",
+      "links": [
+        "Colleague"
+      ]
+    }
+  ]
+}

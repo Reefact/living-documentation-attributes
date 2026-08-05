@@ -1,0 +1,43 @@
+{
+  "catalog": "GangOfFour",
+  "name": "Adapter",
+  "summary": "Converts the interface of a type into the interface a client expects, letting types collaborate that could not otherwise because of incompatible interfaces.",
+  "reference": {
+    "author": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+    "work": "Design Patterns",
+    "year": 1994
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Target",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "summary": "Declares the interface the client actually uses.",
+      "links": []
+    },
+    {
+      "name": "Adapter",
+      "targets": [
+        "Class"
+      ],
+      "summary": "Implements the target interface by delegating to the adaptee and translating the calls.",
+      "links": [
+        "Target",
+        "Adaptee"
+      ]
+    },
+    {
+      "name": "Adaptee",
+      "targets": [
+        "Interface",
+        "Class",
+        "Struct"
+      ],
+      "summary": "Holds the behaviour worth reusing, but exposes it through an incompatible interface.",
+      "links": []
+    }
+  ]
+}

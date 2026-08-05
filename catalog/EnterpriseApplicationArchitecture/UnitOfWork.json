@@ -1,0 +1,22 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "UnitOfWork",
+  "summary": "Keeps track of everything done during a business transaction that affects the store, and coordinates the writing out of the changes.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": true,
+  "roles": [
+    {
+      "name": "UnitOfWork",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "summary": "Tracks the changes made during a business transaction, and coordinates writing them out.",
+      "links": []
+    }
+  ]
+}

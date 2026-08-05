@@ -1,0 +1,52 @@
+{
+  "catalog": "GangOfFour",
+  "name": "Decorator",
+  "summary": "Attaches additional responsibilities to an object dynamically, as a flexible alternative to subclassing for extending behaviour.",
+  "reference": {
+    "author": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+    "work": "Design Patterns",
+    "year": 1994
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Component",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "summary": "Declares the interface shared by the decorated objects and their decorators.",
+      "links": []
+    },
+    {
+      "name": "ConcreteComponent",
+      "targets": [
+        "Class"
+      ],
+      "summary": "The object to which responsibilities can be attached.",
+      "links": [
+        "Component"
+      ]
+    },
+    {
+      "name": "Decorator",
+      "targets": [
+        "Class"
+      ],
+      "summary": "Holds a component and forwards to it, providing the base for concrete decorators.",
+      "links": [
+        "Component"
+      ]
+    },
+    {
+      "name": "ConcreteDecorator",
+      "targets": [
+        "Class"
+      ],
+      "summary": "Adds one responsibility around the component it wraps.",
+      "links": [
+        "Decorator"
+      ]
+    }
+  ]
+}

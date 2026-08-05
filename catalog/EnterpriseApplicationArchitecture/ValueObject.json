@@ -1,0 +1,22 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "ValueObject",
+  "summary": "A small object, such as an amount of money or a date range, whose equality is not based on identity but on the values it holds, and which is therefore safe to copy and to share.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": true,
+  "roles": [
+    {
+      "name": "ValueObject",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "summary": "An object without identity, compared by the values it holds rather than by which instance it is.",
+      "links": []
+    }
+  ]
+}
