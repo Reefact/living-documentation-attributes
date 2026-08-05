@@ -1,0 +1,22 @@
+{
+  "catalog": "DomainDrivenDesign",
+  "name": "CoreDomain",
+  "summary": "The part of the model that makes the product worth writing: what the organisation does better than its competitors, and would not buy from anyone.",
+  "reference": {
+    "author": "Eric Evans",
+    "work": "Domain-Driven Design",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "CoreDomain",
+      "targets": [
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "Where the distinctive part of the model lives. It earns the best people and the most modelling effort, and it is the part that must not be allowed to depend on what merely supports it.",
+      "links": []
+    }
+  ]
+}

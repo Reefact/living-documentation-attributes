@@ -1,0 +1,46 @@
+{
+  "catalog": "DomainDrivenDesign",
+  "name": "AnticorruptionLayer",
+  "summary": "An isolating layer through which a downstream context talks to an upstream one, so that the upstream model never reaches the downstream one.",
+  "reference": {
+    "author": "Eric Evans",
+    "work": "Domain-Driven Design",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Facade",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": true,
+      "summary": "A simplified face over the upstream system, written in terms of the UPSTREAM model. It exists to make the upstream system easier to talk to without pretending to be anything else, so it translates nothing.",
+      "links": []
+    },
+    {
+      "name": "Adapter",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": true,
+      "summary": "What the downstream context actually calls. It exposes the protocol the downstream model expects and delegates to the facade, so that no upstream type ever appears in a downstream signature.",
+      "links": [
+        "Facade",
+        "Translator"
+      ]
+    },
+    {
+      "name": "Translator",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": true,
+      "summary": "Converts between the two models, in both directions. It is the only place that knows both, which is what keeps the corruption to a single reviewable file rather than spread through the downstream model.",
+      "links": []
+    }
+  ]
+}

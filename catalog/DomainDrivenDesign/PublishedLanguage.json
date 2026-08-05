@@ -1,0 +1,22 @@
+{
+  "catalog": "DomainDrivenDesign",
+  "name": "PublishedLanguage",
+  "summary": "A well-documented shared language, used as the medium of translation between contexts rather than as anyone's internal model.",
+  "reference": {
+    "author": "Eric Evans",
+    "work": "Domain-Driven Design",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "PublishedLanguage",
+      "targets": [
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "The published vocabulary two or more contexts translate through. It is a contract with the outside, not a model of the domain: it changes on the schedule of its consumers, and the contexts that speak it keep their own models behind it.",
+      "links": []
+    }
+  ]
+}

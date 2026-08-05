@@ -1,0 +1,22 @@
+{
+  "catalog": "DomainDrivenDesign",
+  "name": "BoundedContext",
+  "summary": "Delimits where one model applies. Inside it every term has exactly one meaning; outside it the model makes no claim at all, and the same word may name something else entirely.",
+  "reference": {
+    "author": "Eric Evans",
+    "work": "Domain-Driven Design",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "BoundedContext",
+      "targets": [
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "The boundary of one model. Everything the assembly declares belongs to that model, and a term used here means what this model says it means — which is why a second model in the same assembly is not a boundary but a collision.",
+      "links": []
+    }
+  ]
+}

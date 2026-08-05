@@ -21,7 +21,20 @@ namespace Reefact.LivingDocumentation.Attributes.Usage {
         #region Statics members declarations
 
         public static void Main() {
-            Annotation[] annotations = Read(typeof(Program).Assembly);
+            // Named by a type from each, rather than discovered: a referenced assembly is not loaded until
+            // something in it is touched, and an assembly nobody touches is exactly what these are — they
+            // exist to be annotated. The strategic patterns need several of them because an assembly makes
+            // ONE set of claims: a bounded context is not two bounded contexts, and a sample that said
+            // otherwise would teach the opposite of the pattern.
+            Assembly[] samples = [
+                typeof(Program).Assembly,
+                typeof(TrainOperations.BoundedContextSample.Operator).Assembly,
+                typeof(Invoicing.GenericSubdomainSample.TrackAccessInvoice).Assembly,
+                typeof(RailNetwork.SharedKernelSample.SectionId).Assembly,
+                typeof(TrainOperations.Contracts.PublishedLanguageSample.PublishedService).Assembly
+            ];
+
+            Annotation[] annotations = samples.SelectMany(Read).ToArray();
 
             PrintInventory(annotations);
             PrintCatalogUsage(annotations);
@@ -30,14 +43,21 @@ namespace Reefact.LivingDocumentation.Attributes.Usage {
         private static Annotation[] Read(Assembly assembly) {
             List<Annotation> annotations = new();
 
+            // The assembly itself is a participant. A bounded context, a core domain and a shared kernel are
+            // held by an assembly rather than by anything inside it, so a reader that walks only types and
+            // members is blind to every strategic pattern there is.
+            foreach (LivingDocumentationAttribute attribute in Annotations(assembly)) {
+                annotations.Add(new Annotation(assembly, null, null, attribute));
+            }
+
             foreach (Type type in assembly.GetTypes().Where(IsSample).OrderBy(type => type.FullName)) {
                 foreach (LivingDocumentationAttribute attribute in Annotations(type)) {
-                    annotations.Add(new Annotation(type, null, attribute));
+                    annotations.Add(new Annotation(assembly, type, null, attribute));
                 }
 
                 foreach (MemberInfo member in type.GetMembers(DeclaredMembers)) {
                     foreach (LivingDocumentationAttribute attribute in Annotations(member)) {
-                        annotations.Add(new Annotation(type, member, attribute));
+                        annotations.Add(new Annotation(assembly, type, member, attribute));
                     }
                 }
             }
@@ -46,6 +66,10 @@ namespace Reefact.LivingDocumentation.Attributes.Usage {
         }
 
         private static IEnumerable<LivingDocumentationAttribute> Annotations(MemberInfo target) {
+            return target.GetCustomAttributes(false).OfType<LivingDocumentationAttribute>();
+        }
+
+        private static IEnumerable<LivingDocumentationAttribute> Annotations(Assembly target) {
             return target.GetCustomAttributes(false).OfType<LivingDocumentationAttribute>();
         }
 
@@ -88,11 +112,13 @@ namespace Reefact.LivingDocumentation.Attributes.Usage {
 
         #region Nested types declarations
 
-        private sealed record Annotation(Type Owner, MemberInfo? Member, LivingDocumentationAttribute Attribute) {
+        private sealed record Annotation(Assembly Assembly, Type? Owner, MemberInfo? Member, LivingDocumentationAttribute Attribute) {
 
             public string Describe() {
-                string target = Member is null ? Owner.Name : $"{Owner.Name}.{Member.Name}()";
-                string links  = string.Join(", ", Links());
+                string target = Owner is null   ? $"{Assembly.GetName().Name} (assembly)"
+                                : Member is null ? Owner.Name
+                                                 : $"{Owner.Name}.{Member.Name}()";
+                string links = string.Join(", ", Links());
 
                 return $"{PatternInfo.RoleNameOf(Attribute),-26}{target}{(links.Length == 0 ? "" : "  →  " + links)}";
             }

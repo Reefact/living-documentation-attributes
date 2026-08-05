@@ -219,6 +219,26 @@ def nested_container(pattern):
     return "\n".join(out) + "\n"
 
 
+def find_samples():
+    """Where each pattern's sample actually lives, rather than where a rule would put it.
+
+    Most samples sit in the one sample project, one file per pattern. A pattern whose roles are held by an
+    assembly cannot: an assembly makes one set of claims, so showing several of them needs several sample
+    assemblies, and no rule over the catalog derives their names. Looking the file up keeps the index
+    truthful whatever the layout — and makes a pattern with no sample at all say so, in the one document a
+    reader browses.
+    """
+    found = {}
+    for path in sorted(glob.glob(os.path.join(REPO, "*Usage*", "**", "*Usage.cs"), recursive=True)):
+        name = os.path.basename(path)[: -len("Usage.cs")]
+        found.setdefault(name, os.path.relpath(path, REPO).replace(os.sep, "/"))
+
+    return found
+
+
+SAMPLES = {}
+
+
 def is_single_role(pattern):
     return len(pattern["roles"]) == 1 and pattern["roles"][0]["name"] == pattern["name"]
 
@@ -268,10 +288,11 @@ def index_entry(pattern):
         out += ["", f"**{role['name']}** — {role['summary']}"]
 
     source = f"../../Reefact.LivingDocumentation.Attributes/{pattern['catalog']}/{name}.cs"
-    sample = f"../../Reefact.LivingDocumentation.Attributes.Usage/{pattern['catalog']}/{name}Usage.cs"
+    sample = SAMPLES.get(name)
+    where = f"[Sample](../../{sample})" if sample else "**no sample**"
     out += ["",
             f"Held by a subtype: {'yes' if pattern['inherited'] else 'no'} · "
-            f"[Source]({source}) · [Sample]({sample})"]
+            f"[Source]({source}) · {where}"]
 
     return "\n".join(out)
 
@@ -363,6 +384,7 @@ def main():
     # Several hundred patterns are not navigable through a directory listing, and the generated sources are
     # the wrong place to browse: they are read by a compiler, one file at a time. The index is the catalog
     # as a reader meets it — what exists, under which name, with which roles, and where to see it at work.
+    SAMPLES.update(find_samples())
     os.makedirs(INDEX_DIR, exist_ok=True)
     with open(os.path.join(INDEX_DIR, "catalog-index.md"), "w", encoding="utf-8", newline="\n") as handle:
         handle.write(index_document(patterns))

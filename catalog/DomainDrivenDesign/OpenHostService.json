@@ -1,0 +1,23 @@
+{
+  "catalog": "DomainDrivenDesign",
+  "name": "OpenHostService",
+  "summary": "A protocol offering the services of a subsystem to any number of consumers, rather than a translation negotiated with each one in turn.",
+  "reference": {
+    "author": "Eric Evans",
+    "work": "Domain-Driven Design",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "OpenHostService",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": true,
+      "summary": "The protocol a subsystem offers to all comers. It is designed once for many consumers, which is what distinguishes it from an integration built for one — and enhanced for a particular consumer only through an extension that does not disturb the others.",
+      "links": []
+    }
+  ]
+}
