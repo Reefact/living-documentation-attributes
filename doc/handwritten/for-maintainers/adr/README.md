@@ -6,19 +6,22 @@ place; a decision is revisited by writing a **new** ADR that supersedes the old
 one, and the old one's status changes to *Superseded* with a link to its
 successor.
 
-## This base was written as one set
+## Records 0001 to 0018 were written as one set
 
-Every record carries the same proposal date, and every one was accepted on that
-same day. They were written together, after the decisions they describe had been
-taken together, and they describe one coherent position rather than a sequence of
-revisions. **None of them amends,
-refines or supersedes another**, and the numbering is an index, not a chronology.
+Those eighteen carry the same proposal date, and were accepted on that same day.
+They were written together, after the decisions they describe had been taken
+together, and they describe one coherent position rather than a sequence of
+revisions. **None of them amends, refines or supersedes another**, and their
+numbering is an index, not a chronology.
 
 Where one of them argues against a shape this repository briefly held, that shape
 appears under *Alternatives Considered*, which is where an option weighed and set
-aside belongs. A superseding record is a different instrument, reserved for a
-decision that replaces one of these. From here on every record is accepted, so
-revisiting one means writing its successor rather than editing it.
+aside belongs — not under a superseding record, which is a different instrument.
+
+From ADR-0019 onwards the base grows one decision at a time, and every record
+before it is accepted. Revisiting one therefore means writing its successor, never
+editing it in place: the successor is drafted as *Proposed*, and only the
+maintainer moves the record it replaces to *Superseded*.
 
 ## When is an ADR written?
 
@@ -135,3 +138,4 @@ Related ADRs, sources, catalog entries, code.
 | [ADR-0016](0016-prove-the-sources-are-what-the-catalog-generates.md) | Prove on every pull request that the sources are what the catalog generates | Accepted |
 | [ADR-0017](0017-pin-every-action-to-a-commit.md) | Pin every GitHub action to a commit | Accepted |
 | [ADR-0018](0018-hold-the-public-surface-to-a-committed-baseline.md) | Hold the public surface to a committed baseline | Accepted |
+| [ADR-0019](0019-stop-the-identity-climb-at-the-pattern-boundary.md) | Stop the identity climb at the pattern boundary | Proposed |

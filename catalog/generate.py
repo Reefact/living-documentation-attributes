@@ -38,12 +38,22 @@ def relation(pattern):
     return None, None
 
 
+def key(pattern):
+    return pattern["catalog"], pattern["name"]
+
+
+def role_names(pattern):
+    return [role["name"] for role in pattern["roles"]]
+
+
 def base_of(pattern):
-    """What the generated attribute inherits from."""
-    target, _ = relation(pattern)
-    if target is None:
-        return "LivingDocumentationAttribute"
-    return f"{target['catalog']}.{target['name']}Attribute"
+    """What the generated construct inherits from.
+
+    A pattern with one role inherits attribute-to-attribute; a pattern with several inherits through the
+    abstract role base its container declares, which is what every one of its roles answers. Resolved in
+    main(), where the whole catalog is known, since only the target's own entry says which of the two it is.
+    """
+    return pattern["_base"]
 
 
 def relation_doc(pattern):
@@ -105,7 +115,28 @@ def header(catalog):
     ]
 
 
+def declined_role_class(pattern, role, indent):
+    """A role of a declension: the same role, spelled by another catalog.
+
+    It derives from its counterpart rather than from a role base of its own, so it inherits that role's
+    targets, its multiplicity and its links instead of restating them — the declension is the same pattern,
+    and two spellings that each declared their own could drift apart. Only the marker is added, which is the
+    one thing inheritance cannot say.
+    """
+    pad = " " * indent
+    target = relation(pattern)[0]
+
+    out = [doc(role["summary"], indent)]
+    out.append(f"{pad}[Declension]")
+    out.append(f"{pad}public {role['_modifier']}class {role['name']}Attribute : "
+               f"{target['catalog']}.{target['name']}.{role['name']}Attribute {{ }}")
+    return "\n".join(out)
+
+
 def role_class(pattern, role, indent):
+    if relation(pattern)[1] == "declension":
+        return declined_role_class(pattern, role, indent)
+
     pad = " " * indent
     is_member = role["targets"] == ["Method"]
     allow_multiple = "false" if is_member else "true"
@@ -115,10 +146,10 @@ def role_class(pattern, role, indent):
     out.append(f"{pad}[AttributeUsage({targets(role['targets'])}, "
                f"AllowMultiple = {allow_multiple}, Inherited = {inherited})]")
     if not role["links"]:
-        out.append(f"{pad}public sealed class {role['name']}Attribute : Role {{ }}")
+        out.append(f"{pad}public {role['_modifier']}class {role['name']}Attribute : Role {{ }}")
         return "\n".join(out)
 
-    out.append(f"{pad}public sealed class {role['name']}Attribute : Role {{")
+    out.append(f"{pad}public {role['_modifier']}class {role['name']}Attribute : Role {{")
     for link in role["links"]:
         out.append("")
         out.append(doc(f'The <see cref="{link}Attribute" /> this role is bound to. Optional: it is only needed '
@@ -165,11 +196,16 @@ def nested_container(pattern):
     out.append(doc(f"{name} ({CATALOG_LABEL[pattern['catalog']]}) — {pattern['summary']}", 4))
     out.append(remarks(["Annotate the declaration that introduces the role. When a role is introduced by an "
                         "interface, annotate that interface rather than each of its implementations.",
+                        relation_doc(pattern),
                         reference_doc(pattern)], 4))
     out.append(f"    public static class {name} {{")
-    out.append("")
-    out.append(doc(f"Role played by a type or a member in the {name} design pattern.", 8))
-    out.append("        public abstract class Role : LivingDocumentationAttribute { }")
+    # A declension declares no role base: each of its roles derives from its counterpart, so the container is
+    # a spelling and nothing more. Every other pattern gathers its roles under one abstract base — the type
+    # every role of the pattern answers, and what a specialisation inherits from to answer the broader one.
+    if relation(pattern)[1] != "declension":
+        out.append("")
+        out.append(doc(f"Role played by a type or a member in the {name} design pattern.", 8))
+        out.append(f"        public abstract class Role : {base_of(pattern)} {{ }}")
     for role in pattern["roles"]:
         out.append("")
         out.append(role_class(pattern, role, 8))
@@ -190,16 +226,41 @@ def main():
         with open(path, encoding="utf-8") as handle:
             patterns.append(json.load(handle))
 
-    derived_from = set()
+    index = {key(pattern): pattern for pattern in patterns}
+
+    # Nothing is unsealed that is not actually derived from, so the exceptions in the generated sources are
+    # explained by the catalog rather than by the template. A declension is inherited role by role, a
+    # specialisation pattern by pattern, so the two unseal different things.
+    unsealed_patterns = set()
+    unsealed_roles = set()
+    for pattern in patterns:
+        target, nature = relation(pattern)
+        if target is None:
+            continue
+        base = index.get((target["catalog"], target["name"]))
+        if base is None:
+            raise SystemExit(f"{pattern['name']}: derives from {target['catalog']}.{target['name']}, "
+                             f"which is not in the catalog")
+        if nature == "declension" and (is_single_role(pattern) != is_single_role(base)
+                                       or role_names(pattern) != role_names(base)):
+            raise SystemExit(f"{pattern['name']}: a declension is the same pattern spelled again, so it holds "
+                             f"the same roles, in the same order, as {base['name']}")
+        if is_single_role(base):
+            unsealed_patterns.add(key(base))
+        elif nature == "declension":
+            unsealed_roles |= {(*key(base), name) for name in role_names(base)}
+
     for pattern in patterns:
         target, _ = relation(pattern)
-        if target is not None:
-            derived_from.add((target["catalog"], target["name"]))
-    for pattern in patterns:
-        pattern["_modifier"] = "" if (pattern["catalog"], pattern["name"]) in derived_from else "sealed "
-        if relation(pattern)[0] is not None and not is_single_role(pattern):
-            raise SystemExit(f"{pattern['name']}: a declension or specialisation of a multi-role pattern "
-                             f"is not generated yet")
+        if target is None:
+            pattern["_base"] = "LivingDocumentationAttribute"
+        else:
+            base = index[(target["catalog"], target["name"])]
+            pattern["_base"] = (f"{base['catalog']}.{base['name']}Attribute" if is_single_role(base)
+                                else f"{base['catalog']}.{base['name']}.Role")
+        pattern["_modifier"] = "" if key(pattern) in unsealed_patterns else "sealed "
+        for role in pattern["roles"]:
+            role["_modifier"] = "" if (*key(pattern), role["name"]) in unsealed_roles else "sealed "
 
     for pattern in patterns:
         folder = os.path.join(ROOT, pattern["catalog"])
