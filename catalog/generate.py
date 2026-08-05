@@ -182,9 +182,12 @@ def flat_attribute(pattern):
         out.append("    [Declension]")
     else:
         # A specialisation is a pattern of its own, and may legitimately accept fewer targets than the
-        # pattern that contains it.
-        out.append(f"    [AttributeUsage({targets(pattern['roles'][0]['targets'])}, "
-                   f"AllowMultiple = false, Inherited = {inherited})]")
+        # pattern that contains it. Multiplicity comes from the catalog here too: this branch hardcoded
+        # `false` while role_class read the field, so a flat pattern's declared multiplicity was written
+        # down and then ignored — the catalog said one thing and the shipped attribute another.
+        role = pattern["roles"][0]
+        out.append(f"    [AttributeUsage({targets(role['targets'])}, "
+                   f"AllowMultiple = {'true' if role['repeatable'] else 'false'}, Inherited = {inherited})]")
     out.append(f"    public {pattern['_modifier']}class {name}Attribute : {base_of(pattern)} {{ }}")
     out.append("")
     out.append("}")

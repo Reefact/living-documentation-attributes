@@ -1,0 +1,22 @@
+{
+  "catalog": "Idioms",
+  "name": "ObjectMother",
+  "summary": "A class that builds fully formed objects for tests, so that a test states what matters about its data and nothing else.",
+  "reference": {
+    "author": "Peter Schuh and Stephanie Punke",
+    "work": "ObjectMother: Easing Test Object Creation in XP (XP Universe)",
+    "year": 2001
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "ObjectMother",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The source of test objects. Each of its methods returns an object already valid and already meaningful — a lapsed subscription, an overdrawn account — named for the SITUATION rather than for the shape, which is what keeps the intent of a test in the test rather than in twenty lines of construction.",
+      "links": []
+    }
+  ]
+}

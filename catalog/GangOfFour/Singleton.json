@@ -14,7 +14,7 @@
       "targets": [
         "Class"
       ],
-      "repeatable": true,
+      "repeatable": false,
       "summary": "Ensures a type has only one instance, and provides a global point of access to it.",
       "links": []
     }

@@ -15,7 +15,7 @@
         "Class",
         "Interface"
       ],
-      "repeatable": true,
+      "repeatable": false,
       "summary": "An object of the domain defined by its identity rather than by its attributes.",
       "links": []
     }

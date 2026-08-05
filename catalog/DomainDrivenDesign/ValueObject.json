@@ -19,7 +19,7 @@
         "Class",
         "Struct"
       ],
-      "repeatable": true,
+      "repeatable": false,
       "summary": "An immutable object of the domain, without identity, defined only by its values.",
       "links": []
     }

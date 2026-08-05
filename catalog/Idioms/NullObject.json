@@ -1,0 +1,27 @@
+{
+  "catalog": "Idioms",
+  "name": "NullObject",
+  "summary": "A special case whose behaviour is to do nothing, so that the absence of a collaborator needs no null check.",
+  "reference": {
+    "author": "Bobby Woolf",
+    "work": "Pattern Languages of Program Design 3",
+    "year": 1997
+  },
+  "inherited": true,
+  "specialisationOf": {
+    "catalog": "EnterpriseApplicationArchitecture",
+    "name": "SpecialCase"
+  },
+  "roles": [
+    {
+      "name": "NullObject",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "repeatable": false,
+      "summary": "The do-nothing member of a protocol. It is a special case narrowed to one behaviour — neutral: its queries answer the identity of whatever the caller does with them, and its commands are accepted and ignored. A special case that answers something meaningful, such as an unknown customer with a default rate, is not one of these.",
+      "links": []
+    }
+  ]
+}

@@ -141,3 +141,4 @@ Related ADRs, sources, catalog entries, code.
 | [ADR-0019](0019-stop-the-identity-climb-at-the-pattern-boundary.md) | Stop the identity climb at the pattern boundary | Proposed |
 | [ADR-0020](0020-cover-a-generated-shape-with-fixtures-not-a-catalog-entry.md) | Cover a generated shape with fixtures, not with a catalog entry | Proposed |
 | [ADR-0021](0021-version-what-a-consumer-reads-and-not-only-what-it-compiles.md) | Version what a consumer reads, and not only what it compiles | Proposed |
+| [ADR-0022](0022-admit-a-pattern-of-test-design-to-the-catalog.md) | Admit a pattern of test design to the catalog | Proposed |

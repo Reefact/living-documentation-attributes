@@ -15,7 +15,7 @@
         "Class",
         "Struct"
       ],
-      "repeatable": true,
+      "repeatable": false,
       "summary": "States, in the past tense, that something meaningful to the domain has happened.",
       "links": []
     }

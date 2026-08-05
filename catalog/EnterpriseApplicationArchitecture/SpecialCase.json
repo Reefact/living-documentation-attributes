@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "SpecialCase",
+  "summary": "A subclass that stands for a particular case, and behaves so that callers need no test for it.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": true,
+  "roles": [
+    {
+      "name": "SpecialCase",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "repeatable": false,
+      "summary": "A case given a type of its own — an unknown customer, a missing rate, a job with no operator — so that the condition is handled by the type system instead of by a test at every call site. What makes it the pattern rather than a subclass is that callers do not distinguish it: it answers the same protocol, with answers appropriate to its case.",
+      "links": []
+    }
+  ]
+}
