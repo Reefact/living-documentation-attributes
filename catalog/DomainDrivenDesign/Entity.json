@@ -1,0 +1,17 @@
+{
+  "catalog": "DomainDrivenDesign",
+  "name": "Entity",
+  "summary": "An object of the domain defined by a thread of continuity and identity, rather than by its attributes: two entities with equal attributes remain distinct.",
+  "inherited": true,
+  "roles": [
+    {
+      "name": "Entity",
+      "targets": [
+        "Class",
+        "Interface"
+      ],
+      "summary": "An object of the domain defined by its identity rather than by its attributes.",
+      "links": []
+    }
+  ]
+}

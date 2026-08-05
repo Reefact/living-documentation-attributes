@@ -1,0 +1,38 @@
+{
+  "catalog": "GangOfFour",
+  "name": "Proxy",
+  "summary": "Provides a surrogate or placeholder for another object in order to control access to it.",
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Subject",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "summary": "Declares the interface shared by the real object and its proxy, so that they are interchangeable.",
+      "links": []
+    },
+    {
+      "name": "RealSubject",
+      "targets": [
+        "Class"
+      ],
+      "summary": "The object the proxy stands for, and which does the real work.",
+      "links": [
+        "Subject"
+      ]
+    },
+    {
+      "name": "Proxy",
+      "targets": [
+        "Class"
+      ],
+      "summary": "Controls access to the real subject, and may be responsible for creating it.",
+      "links": [
+        "Subject",
+        "RealSubject"
+      ]
+    }
+  ]
+}

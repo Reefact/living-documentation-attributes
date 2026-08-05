@@ -1,0 +1,16 @@
+{
+  "catalog": "GangOfFour",
+  "name": "Singleton",
+  "summary": "Ensures a type has only one instance, and provides a global point of access to it.",
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Singleton",
+      "targets": [
+        "Class"
+      ],
+      "summary": "Ensures a type has only one instance, and provides a global point of access to it.",
+      "links": []
+    }
+  ]
+}

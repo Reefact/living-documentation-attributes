@@ -1,0 +1,38 @@
+{
+  "catalog": "GangOfFour",
+  "name": "Strategy",
+  "summary": "Defines a family of interchangeable algorithms, encapsulates each one, and lets the algorithm vary independently from the clients that use it.",
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Context",
+      "targets": [
+        "Class"
+      ],
+      "summary": "Is configured with a strategy, and delegates the algorithm to it.",
+      "links": [
+        "Strategy"
+      ]
+    },
+    {
+      "name": "Strategy",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "summary": "Declares the interface common to every supported algorithm.",
+      "links": []
+    },
+    {
+      "name": "ConcreteStrategy",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "summary": "Implements one algorithm behind the strategy interface.",
+      "links": [
+        "Strategy"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "catalog": "GangOfFour",
+  "name": "TemplateMethod",
+  "summary": "Defines the skeleton of an algorithm in an operation, deferring some steps to subclasses so they can redefine them without changing the algorithm's structure.",
+  "inherited": false,
+  "roles": [
+    {
+      "name": "AbstractClass",
+      "targets": [
+        "Class"
+      ],
+      "summary": "Defines the skeleton of the algorithm, and declares the steps subclasses must supply.",
+      "links": []
+    },
+    {
+      "name": "ConcreteClass",
+      "targets": [
+        "Class"
+      ],
+      "summary": "Supplies the steps the algorithm defers to subclasses.",
+      "links": [
+        "AbstractClass"
+      ]
+    },
+    {
+      "name": "TemplateMethod",
+      "targets": [
+        "Method"
+      ],
+      "summary": "The operation that holds the skeleton of the algorithm, and calls the deferred steps.",
+      "links": []
+    },
+    {
+      "name": "PrimitiveOperation",
+      "targets": [
+        "Method"
+      ],
+      "summary": "A step the algorithm defers, and which subclasses must supply.",
+      "links": []
+    },
+    {
+      "name": "HookOperation",
+      "targets": [
+        "Method"
+      ],
+      "summary": "A step the algorithm defers, and which subclasses may override, but need not.",
+      "links": []
+    }
+  ]
+}

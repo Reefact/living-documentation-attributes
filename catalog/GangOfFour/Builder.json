@@ -1,0 +1,47 @@
+{
+  "catalog": "GangOfFour",
+  "name": "Builder",
+  "summary": "Separates the construction of a complex object from its representation, so that the same construction process can produce different representations.",
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Builder",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "summary": "Declares the step by step construction operations.",
+      "links": []
+    },
+    {
+      "name": "ConcreteBuilder",
+      "targets": [
+        "Class"
+      ],
+      "summary": "Implements the construction steps and keeps track of the representation it builds.",
+      "links": [
+        "Builder",
+        "Product"
+      ]
+    },
+    {
+      "name": "Director",
+      "targets": [
+        "Class"
+      ],
+      "summary": "Drives the construction sequence through the builder interface.",
+      "links": [
+        "Builder"
+      ]
+    },
+    {
+      "name": "Product",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "summary": "The complex object under construction.",
+      "links": []
+    }
+  ]
+}

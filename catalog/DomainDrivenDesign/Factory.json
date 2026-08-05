@@ -1,0 +1,17 @@
+{
+  "catalog": "DomainDrivenDesign",
+  "name": "Factory",
+  "summary": "Encapsulates the creation of a complex object or of a whole aggregate, so that the created object is valid from the outset.",
+  "inherited": true,
+  "roles": [
+    {
+      "name": "Factory",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "summary": "Encapsulates the creation of a complex object or of a whole aggregate.",
+      "links": []
+    }
+  ]
+}

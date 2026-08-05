@@ -1,0 +1,38 @@
+{
+  "catalog": "GangOfFour",
+  "name": "State",
+  "summary": "Lets an object alter its behaviour when its internal state changes, so that it appears to change its class.",
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Context",
+      "targets": [
+        "Class"
+      ],
+      "summary": "Holds the current state, and delegates the state dependent behaviour to it.",
+      "links": [
+        "State"
+      ]
+    },
+    {
+      "name": "State",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "summary": "Declares the behaviour that varies with the state of the context.",
+      "links": []
+    },
+    {
+      "name": "ConcreteState",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "summary": "Implements the behaviour associated with one state of the context.",
+      "links": [
+        "State"
+      ]
+    }
+  ]
+}

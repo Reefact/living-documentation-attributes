@@ -1,0 +1,17 @@
+{
+  "catalog": "DomainDrivenDesign",
+  "name": "ValueObject",
+  "summary": "An object of the domain described only by its values. It carries no identity, it is immutable, and two instances holding the same values are interchangeable.",
+  "inherited": true,
+  "roles": [
+    {
+      "name": "ValueObject",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "summary": "An immutable object of the domain, without identity, defined only by its values.",
+      "links": []
+    }
+  ]
+}

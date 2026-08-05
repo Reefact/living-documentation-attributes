@@ -1,0 +1,56 @@
+{
+  "catalog": "GangOfFour",
+  "name": "FactoryMethod",
+  "summary": "Defines an interface for creating an object, but lets subclasses decide which class to instantiate, deferring instantiation to them.",
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Creator",
+      "targets": [
+        "Class",
+        "Interface"
+      ],
+      "summary": "Declares the factory method and, usually, calls it to obtain a product.",
+      "links": []
+    },
+    {
+      "name": "ConcreteCreator",
+      "targets": [
+        "Class"
+      ],
+      "summary": "Overrides the factory method to return an instance of a concrete product.",
+      "links": [
+        "Creator",
+        "ConcreteProduct"
+      ]
+    },
+    {
+      "name": "Product",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "summary": "Declares the interface of the objects the factory method creates.",
+      "links": []
+    },
+    {
+      "name": "ConcreteProduct",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "summary": "Implements the product interface.",
+      "links": [
+        "Product"
+      ]
+    },
+    {
+      "name": "FactoryMethod",
+      "targets": [
+        "Method"
+      ],
+      "summary": "The operation that creates the product, and which subclasses override.",
+      "links": []
+    }
+  ]
+}

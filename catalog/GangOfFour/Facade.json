@@ -1,0 +1,26 @@
+{
+  "catalog": "GangOfFour",
+  "name": "Facade",
+  "summary": "Provides a single, higher level interface to a set of interfaces in a subsystem, making that subsystem easier to use.",
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Facade",
+      "targets": [
+        "Class"
+      ],
+      "summary": "Offers the simplified entry point, and knows which subsystem type handles each request.",
+      "links": []
+    },
+    {
+      "name": "Subsystem",
+      "targets": [
+        "Interface",
+        "Class",
+        "Struct"
+      ],
+      "summary": "Does the real work, and knows nothing about the facade.",
+      "links": []
+    }
+  ]
+}

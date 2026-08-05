@@ -1,0 +1,38 @@
+{
+  "catalog": "GangOfFour",
+  "name": "Composite",
+  "summary": "Composes objects into tree structures to represent part-whole hierarchies, and lets clients treat individual objects and compositions uniformly.",
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Component",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "summary": "Declares the interface shared by the leaves and the composites of the tree.",
+      "links": []
+    },
+    {
+      "name": "Leaf",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "summary": "A terminal element of the tree: it has no children.",
+      "links": [
+        "Component"
+      ]
+    },
+    {
+      "name": "Composite",
+      "targets": [
+        "Class"
+      ],
+      "summary": "An element that holds other components and delegates the work to them.",
+      "links": [
+        "Component"
+      ]
+    }
+  ]
+}

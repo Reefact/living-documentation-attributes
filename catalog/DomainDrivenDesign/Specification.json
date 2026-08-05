@@ -1,0 +1,17 @@
+{
+  "catalog": "DomainDrivenDesign",
+  "name": "Specification",
+  "summary": "States a predicate of the domain as an explicit object, so that a business rule can be named, combined and reused.",
+  "inherited": true,
+  "roles": [
+    {
+      "name": "Specification",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "summary": "States a business predicate as an explicit, combinable object.",
+      "links": []
+    }
+  ]
+}

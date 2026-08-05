@@ -1,0 +1,47 @@
+{
+  "catalog": "GangOfFour",
+  "name": "AbstractFactory",
+  "summary": "Provides an interface for creating families of related or dependent objects without specifying their concrete classes.",
+  "inherited": false,
+  "roles": [
+    {
+      "name": "AbstractFactory",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "summary": "Declares the set of operations that create the abstract products of the family.",
+      "links": []
+    },
+    {
+      "name": "ConcreteFactory",
+      "targets": [
+        "Class"
+      ],
+      "summary": "Implements the creation operations for one coherent family of concrete products.",
+      "links": [
+        "AbstractFactory"
+      ]
+    },
+    {
+      "name": "AbstractProduct",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "summary": "Declares the interface of one kind of product the family produces.",
+      "links": []
+    },
+    {
+      "name": "ConcreteProduct",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "summary": "Implements one abstract product, and is created by exactly one concrete factory.",
+      "links": [
+        "AbstractProduct"
+      ]
+    }
+  ]
+}

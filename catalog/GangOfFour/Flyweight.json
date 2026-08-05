@@ -1,0 +1,49 @@
+{
+  "catalog": "GangOfFour",
+  "name": "Flyweight",
+  "summary": "Uses sharing to support large numbers of fine grained objects efficiently, by separating the state that can be shared from the state that cannot.",
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Flyweight",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "summary": "Declares the operations through which flyweights receive the state that is not shared.",
+      "links": []
+    },
+    {
+      "name": "ConcreteFlyweight",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "summary": "A shareable flyweight: it holds only state that is independent of its context.",
+      "links": [
+        "Flyweight"
+      ]
+    },
+    {
+      "name": "UnsharedConcreteFlyweight",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "summary": "A flyweight that is deliberately not shared, although the interface allows sharing.",
+      "links": [
+        "Flyweight"
+      ]
+    },
+    {
+      "name": "FlyweightFactory",
+      "targets": [
+        "Class"
+      ],
+      "summary": "Creates and manages flyweights, and guarantees that shared ones are reused.",
+      "links": [
+        "Flyweight"
+      ]
+    }
+  ]
+}

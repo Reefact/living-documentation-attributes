@@ -1,0 +1,36 @@
+{
+  "catalog": "GangOfFour",
+  "name": "Prototype",
+  "summary": "Specifies the kinds of objects to create using a prototypical instance, and creates new objects by copying that prototype.",
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Prototype",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "summary": "Declares the operation that clones itself.",
+      "links": []
+    },
+    {
+      "name": "ConcretePrototype",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "summary": "Implements the cloning operation for its own representation.",
+      "links": [
+        "Prototype"
+      ]
+    },
+    {
+      "name": "CloneMethod",
+      "targets": [
+        "Method"
+      ],
+      "summary": "The operation that returns a copy of the prototype.",
+      "links": []
+    }
+  ]
+}

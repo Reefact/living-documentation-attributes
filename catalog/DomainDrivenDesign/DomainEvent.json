@@ -1,0 +1,17 @@
+{
+  "catalog": "DomainDrivenDesign",
+  "name": "DomainEvent",
+  "summary": "States that something meaningful to the domain has happened. It is named in the past tense, and it is immutable once raised.",
+  "inherited": true,
+  "roles": [
+    {
+      "name": "DomainEvent",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "summary": "States, in the past tense, that something meaningful to the domain has happened.",
+      "links": []
+    }
+  ]
+}
