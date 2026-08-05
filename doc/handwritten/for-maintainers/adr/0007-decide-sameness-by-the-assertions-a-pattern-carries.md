@@ -130,8 +130,7 @@ practitioners.
 ## References
 
 * [ADR-0005](0005-relate-patterns-by-inheritance-and-read-identity-from-it.md) — what
-  sameness decides for a consumer.
-* [ADR-0005](0005-relate-patterns-by-inheritance-and-read-identity-from-it.md) — the two
-  relations this criterion chooses between.
+  sameness decides for a consumer, and the two relations this criterion chooses
+  between.
 * [ADR-0011](0011-leave-out-what-cannot-be-annotated.md) — the same criterion,
   applied to whether a pattern belongs here at all.
