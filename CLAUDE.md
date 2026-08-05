@@ -24,7 +24,8 @@ incidental one. If it is not in the ADR base, it is lost.
 ## Never hand-edit a generated attribute
 
 Everything under `Reefact.LivingDocumentation.Attributes/<Catalog>/` is generated
-from `catalog/<Catalog>/<Pattern>.json`. Edit the catalog, then:
+from `catalog/<Catalog>/<Pattern>.json`, and so is
+`doc/generated/catalog-index.md`. Edit the catalog, then:
 
 ```
 python3 catalog/generate.py

@@ -5,7 +5,13 @@ The data behind the attributes. One file per pattern, mirroring the layout of
 
 ```
 catalog/GangOfFour/Composite.json  ──generate.py──▶  Reefact.LivingDocumentation.Attributes/GangOfFour/Composite.cs
+                                                 └─▶  doc/generated/catalog-index.md
 ```
+
+Browsing the catalog is what [`doc/generated/catalog-index.md`](../doc/generated/catalog-index.md)
+is for: every pattern, what to type to annotate each of its roles, what each role
+may be applied to, and a link to its source and its sample. A directory listing
+stops being navigable long before the catalog stops growing.
 
 The generated `.cs` files are committed and are what ships. This folder is a
 development-time tool: it exists so that the structure of an attribute — base
