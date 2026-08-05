@@ -42,6 +42,10 @@ magnitude. A pattern is catalogued where the work that named it put it, under th
 name that work gave it — so a reader of a book finds its patterns spelled as it
 spelled them.
 
+**[Browse the catalog](doc/generated/catalog-index.md)** — every pattern, the
+annotation to type for each of its roles, what each role may be applied to, and a
+link to its source and to a worked example.
+
 ## Installing
 
 ```
