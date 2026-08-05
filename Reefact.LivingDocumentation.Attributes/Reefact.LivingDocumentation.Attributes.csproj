@@ -1,11 +1,51 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <!-- Build -->
     <TargetFrameworks>netstandard2.0;netcoreapp3.1;net5.0;net6.0;net7.0;net8.0</TargetFrameworks>
     <Nullable>enable</Nullable>
     <LangVersion>latest</LangVersion>
+
+    <!-- XML documentation. Not a nicety here: the library publishes no reader, so the reading rules and
+         what every role means reach a consumer through this file and nowhere else. -->
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+    <!-- Version. A development placeholder: nothing is published yet, and what a version number MEANS for a
+         vocabulary is not settled — adding a role is additive (ADR-0003) while a pattern moving catalog is
+         breaking (ADR-0013). That policy has to be decided before the first release, together with promoting
+         the API baseline to PublicAPI.Shipped.txt (ADR-0018). -->
+    <Version>0.1.0-dev</Version>
+
+    <!-- NuGet identity -->
+    <PackageId>Reefact.LivingDocumentation.Attributes</PackageId>
+    <Authors>Sylvain AURAT</Authors>
+    <Company>Reefact</Company>
+
+    <Description>
+      A vocabulary of .NET attributes that lets code state which design pattern a type or a member participates in — the Gang of Four catalog, the tactical patterns of Domain-Driven Design, and Patterns of Enterprise Application Architecture. The attributes carry no behaviour and no dependency: they are declarative data, read back by reflection, so a team can build its own inventory, diagram or architecture rules on a shared vocabulary instead of a naming convention.
+    </Description>
+
+    <!-- Metadata -->
+    <PackageTags>design-patterns;living-documentation;architecture;attributes;annotations;ddd;gang-of-four;documentation;archunit</PackageTags>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+
+    <!-- Links -->
+    <PackageProjectUrl>https://github.com/Reefact/living-documentation-attributes</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Reefact/living-documentation-attributes.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+
+    <!-- One README serves the repository and the package. FCE keeps a separate README.nuget.md per package
+         because it ships six of them from one repository; here there is one package, and a second file would
+         be one more thing to keep in step for no reader's benefit. -->
+    <PackageReadmeFile>readme.md</PackageReadmeFile>
   </PropertyGroup>
+
+  <!-- The licence travels as an SPDX expression, which is what nuget.org renders and what a consumer's
+       licence scanner reads; packing the text as well would only duplicate it. -->
+  <ItemGroup>
+    <None Include="..\README.md" Pack="true" PackagePath="readme.md" Visible="false" />
+  </ItemGroup>
 
   <!--
     The public surface is the product here: this library ships types and nothing else. The analyzer holds

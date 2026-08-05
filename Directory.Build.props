@@ -1,6 +1,29 @@
 <Project>
 
   <!--
+    Packaging hardening. These properties only take effect during `pack`, so they are inert for the sample
+    and test projects that also import this file — both of which set IsPackable to false anyway.
+
+    SourceLink lets a debugger step from the published symbols into the exact commit's sources. Since .NET 8
+    the SDK carries Source Link and detects the GitHub remote on its own, so these two properties are the
+    whole of it: no PackageReference, nothing to pin.
+
+    Symbols ship as a separate .snupkg so the package a consumer restores stays small while remaining
+    debuggable. That matters more here than for most libraries: there is no implementation to step through,
+    so what the symbols carry a reader into is the generated declaration and its documentation.
+
+    ContinuousIntegrationBuild normalises source paths and makes the build deterministic. Scoped to CI, where
+    packages are produced; a no-op locally.
+  -->
+  <PropertyGroup>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+
+  <!--
     Warning ratchet. The repository currently builds with ZERO warnings, and CI locks that state in by
     turning every warning into an error — a new warning can never merge, so the count can never creep up.
 
