@@ -20,7 +20,13 @@ namespace Reefact.LivingDocumentation.Attributes.Tests {
     ///     <para>
     ///         That is also their weakness, and it is worth stating plainly: they are a hand copy of the template, so
     ///         they prove that the reading rules hold over these shapes, not that the generator still emits them. The
-    ///         round trip proves the second, and the two together are what cover the pair.
+    ///         round trip proves the second, and the two together are what cover the pair — for a shape the catalog
+    ///         actually uses. For one it does not, only the first half holds, which is the gap ADR-0020 accepts and
+    ///         says how to close.
+    ///     </para>
+    ///     <para>
+    ///         Delete a fixture once a catalog entry covers its shape through the ordinary machinery, so that this
+    ///         file stays the set of shapes nothing else reaches.
     ///     </para>
     /// </remarks>
     internal static class Shapes {

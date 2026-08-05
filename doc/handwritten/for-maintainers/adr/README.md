@@ -139,3 +139,4 @@ Related ADRs, sources, catalog entries, code.
 | [ADR-0017](0017-pin-every-action-to-a-commit.md) | Pin every GitHub action to a commit | Accepted |
 | [ADR-0018](0018-hold-the-public-surface-to-a-committed-baseline.md) | Hold the public surface to a committed baseline | Accepted |
 | [ADR-0019](0019-stop-the-identity-climb-at-the-pattern-boundary.md) | Stop the identity climb at the pattern boundary | Proposed |
+| [ADR-0020](0020-cover-a-generated-shape-with-fixtures-not-a-catalog-entry.md) | Cover a generated shape with fixtures, not with a catalog entry | Proposed |
