@@ -19,35 +19,19 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         /// <summary>
         ///     Role played by a type or a member in the Interpreter design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute {
-
-            /// <inheritdoc />
-            public sealed override string Catalog => "GangOfFour";
-
-            /// <inheritdoc />
-            public sealed override string PatternName => "Interpreter";
-
-        }
+        public abstract class Role : LivingDocumentationAttribute { }
 
         /// <summary>
         ///     Declares the interpretation operation shared by every node of the syntax tree.
         /// </summary>
         [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
-        public sealed class AbstractExpressionAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "AbstractExpression";
-
-        }
+        public sealed class AbstractExpressionAttribute : Role { }
 
         /// <summary>
         ///     Interprets a terminal symbol of the grammar: it has no sub expression.
         /// </summary>
         [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct, AllowMultiple = true, Inherited = false)]
         public sealed class TerminalExpressionAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "TerminalExpression";
 
             /// <summary>
             ///     The <see cref="AbstractExpressionAttribute" /> this role is bound to. Optional: it is only needed
@@ -63,9 +47,6 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         [AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
         public sealed class NonterminalExpressionAttribute : Role {
 
-            /// <inheritdoc />
-            public override string RoleName => "NonterminalExpression";
-
             /// <summary>
             ///     The <see cref="AbstractExpressionAttribute" /> this role is bound to. Optional: it is only needed
             ///     when the type hierarchy alone does not tell which occurrence of the pattern is meant.
@@ -78,12 +59,7 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         ///     Carries the information global to the interpretation.
         /// </summary>
         [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct, AllowMultiple = true, Inherited = false)]
-        public sealed class ContextAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "Context";
-
-        }
+        public sealed class ContextAttribute : Role { }
 
     }
 

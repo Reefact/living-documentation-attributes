@@ -19,35 +19,19 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         /// <summary>
         ///     Role played by a type or a member in the Flyweight design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute {
-
-            /// <inheritdoc />
-            public sealed override string Catalog => "GangOfFour";
-
-            /// <inheritdoc />
-            public sealed override string PatternName => "Flyweight";
-
-        }
+        public abstract class Role : LivingDocumentationAttribute { }
 
         /// <summary>
         ///     Declares the operations through which flyweights receive the state that is not shared.
         /// </summary>
         [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
-        public sealed class FlyweightAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "Flyweight";
-
-        }
+        public sealed class FlyweightAttribute : Role { }
 
         /// <summary>
         ///     A shareable flyweight: it holds only state that is independent of its context.
         /// </summary>
         [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct, AllowMultiple = true, Inherited = false)]
         public sealed class ConcreteFlyweightAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "ConcreteFlyweight";
 
             /// <summary>
             ///     The <see cref="FlyweightAttribute" /> this role is bound to. Optional: it is only needed when the
@@ -63,9 +47,6 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct, AllowMultiple = true, Inherited = false)]
         public sealed class UnsharedConcreteFlyweightAttribute : Role {
 
-            /// <inheritdoc />
-            public override string RoleName => "UnsharedConcreteFlyweight";
-
             /// <summary>
             ///     The <see cref="FlyweightAttribute" /> this role is bound to. Optional: it is only needed when the
             ///     type hierarchy alone does not tell which occurrence of the pattern is meant.
@@ -79,9 +60,6 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         /// </summary>
         [AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
         public sealed class FlyweightFactoryAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "FlyweightFactory";
 
             /// <summary>
             ///     The <see cref="FlyweightAttribute" /> this role is bound to. Optional: it is only needed when the

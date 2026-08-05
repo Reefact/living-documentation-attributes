@@ -19,35 +19,19 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         /// <summary>
         ///     Role played by a type or a member in the Builder design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute {
-
-            /// <inheritdoc />
-            public sealed override string Catalog => "GangOfFour";
-
-            /// <inheritdoc />
-            public sealed override string PatternName => "Builder";
-
-        }
+        public abstract class Role : LivingDocumentationAttribute { }
 
         /// <summary>
         ///     Declares the step by step construction operations.
         /// </summary>
         [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
-        public sealed class BuilderAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "Builder";
-
-        }
+        public sealed class BuilderAttribute : Role { }
 
         /// <summary>
         ///     Implements the construction steps and keeps track of the representation it builds.
         /// </summary>
         [AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
         public sealed class ConcreteBuilderAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "ConcreteBuilder";
 
             /// <summary>
             ///     The <see cref="BuilderAttribute" /> this role is bound to. Optional: it is only needed when the type
@@ -69,9 +53,6 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         [AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
         public sealed class DirectorAttribute : Role {
 
-            /// <inheritdoc />
-            public override string RoleName => "Director";
-
             /// <summary>
             ///     The <see cref="BuilderAttribute" /> this role is bound to. Optional: it is only needed when the type
             ///     hierarchy alone does not tell which occurrence of the pattern is meant.
@@ -84,12 +65,7 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         ///     The complex object under construction.
         /// </summary>
         [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct, AllowMultiple = true, Inherited = false)]
-        public sealed class ProductAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "Product";
-
-        }
+        public sealed class ProductAttribute : Role { }
 
     }
 

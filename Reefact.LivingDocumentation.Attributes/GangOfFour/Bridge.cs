@@ -19,24 +19,13 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         /// <summary>
         ///     Role played by a type or a member in the Bridge design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute {
-
-            /// <inheritdoc />
-            public sealed override string Catalog => "GangOfFour";
-
-            /// <inheritdoc />
-            public sealed override string PatternName => "Bridge";
-
-        }
+        public abstract class Role : LivingDocumentationAttribute { }
 
         /// <summary>
         ///     Defines the abstraction's interface and holds a reference to an implementor.
         /// </summary>
         [AttributeUsage(AttributeTargets.Class | AttributeTargets.Interface, AllowMultiple = true, Inherited = false)]
         public sealed class AbstractionAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "Abstraction";
 
             /// <summary>
             ///     The <see cref="ImplementorAttribute" /> this role is bound to. Optional: it is only needed when the
@@ -52,9 +41,6 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         [AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
         public sealed class RefinedAbstractionAttribute : Role {
 
-            /// <inheritdoc />
-            public override string RoleName => "RefinedAbstraction";
-
             /// <summary>
             ///     The <see cref="AbstractionAttribute" /> this role is bound to. Optional: it is only needed when the
             ///     type hierarchy alone does not tell which occurrence of the pattern is meant.
@@ -67,21 +53,13 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         ///     Declares the primitive operations the abstraction is built upon.
         /// </summary>
         [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
-        public sealed class ImplementorAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "Implementor";
-
-        }
+        public sealed class ImplementorAttribute : Role { }
 
         /// <summary>
         ///     Provides one concrete implementation of the primitive operations.
         /// </summary>
         [AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
         public sealed class ConcreteImplementorAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "ConcreteImplementor";
 
             /// <summary>
             ///     The <see cref="ImplementorAttribute" /> this role is bound to. Optional: it is only needed when the

@@ -19,24 +19,13 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         /// <summary>
         ///     Role played by a type or a member in the Memento design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute {
-
-            /// <inheritdoc />
-            public sealed override string Catalog => "GangOfFour";
-
-            /// <inheritdoc />
-            public sealed override string PatternName => "Memento";
-
-        }
+        public abstract class Role : LivingDocumentationAttribute { }
 
         /// <summary>
         ///     Creates a memento of its own state, and uses one to restore itself.
         /// </summary>
         [AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
         public sealed class OriginatorAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "Originator";
 
             /// <summary>
             ///     The <see cref="MementoAttribute" /> this role is bound to. Optional: it is only needed when the type
@@ -50,21 +39,13 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         ///     Holds the captured state, and exposes it only to its originator.
         /// </summary>
         [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct, AllowMultiple = true, Inherited = false)]
-        public sealed class MementoAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "Memento";
-
-        }
+        public sealed class MementoAttribute : Role { }
 
         /// <summary>
         ///     Keeps mementos safe, and never inspects or alters their content.
         /// </summary>
         [AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
         public sealed class CaretakerAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "Caretaker";
 
             /// <summary>
             ///     The <see cref="MementoAttribute" /> this role is bound to. Optional: it is only needed when the type

@@ -94,9 +94,12 @@ namespace Reefact.LivingDocumentation.Attributes.Usage {
             }
 
             private IEnumerable<string> Links() {
-                // A link is any Type-valued property the role adds on top of the three base ones.
+                // A link is a Type-valued property the role adds on top of the base ones. CanonicalPattern is
+                // Type-valued too, so it has to be excluded explicitly: it is the identity of the pattern, not a
+                // link to another role. Declaring the base members here keeps the rule honest as the base evolves.
                 foreach (PropertyInfo property in Attribute.GetType().GetProperties()) {
                     if (property.PropertyType != typeof(Type)) { continue; }
+                    if (property.DeclaringType == typeof(LivingDocumentationAttribute)) { continue; }
                     if (property.GetValue(Attribute) is not Type linked) { continue; }
 
                     yield return $"{property.Name} = {linked.Name}";

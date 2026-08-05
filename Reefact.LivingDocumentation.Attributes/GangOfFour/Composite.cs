@@ -19,35 +19,19 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         /// <summary>
         ///     Role played by a type or a member in the Composite design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute {
-
-            /// <inheritdoc />
-            public sealed override string Catalog => "GangOfFour";
-
-            /// <inheritdoc />
-            public sealed override string PatternName => "Composite";
-
-        }
+        public abstract class Role : LivingDocumentationAttribute { }
 
         /// <summary>
         ///     Declares the interface shared by the leaves and the composites of the tree.
         /// </summary>
         [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
-        public sealed class ComponentAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "Component";
-
-        }
+        public sealed class ComponentAttribute : Role { }
 
         /// <summary>
         ///     A terminal element of the tree: it has no children.
         /// </summary>
         [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct, AllowMultiple = true, Inherited = false)]
         public sealed class LeafAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "Leaf";
 
             /// <summary>
             ///     The <see cref="ComponentAttribute" /> this role is bound to. Optional: it is only needed when the
@@ -62,9 +46,6 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         /// </summary>
         [AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
         public sealed class CompositeAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "Composite";
 
             /// <summary>
             ///     The <see cref="ComponentAttribute" /> this role is bound to. Optional: it is only needed when the

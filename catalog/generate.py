@@ -63,10 +63,11 @@ def role_class(pattern, role, indent):
     out = [doc(role["summary"], indent)]
     out.append(f"{pad}[AttributeUsage({targets(role['targets'])}, "
                f"AllowMultiple = {allow_multiple}, Inherited = {inherited})]")
+    if not role["links"]:
+        out.append(f"{pad}public sealed class {role['name']}Attribute : Role {{ }}")
+        return "\n".join(out)
+
     out.append(f"{pad}public sealed class {role['name']}Attribute : Role {{")
-    out.append("")
-    out.append(f"{pad}    /// <inheritdoc />")
-    out.append(f'{pad}    public override string RoleName => "{role["name"]}";')
     for link in role["links"]:
         out.append("")
         out.append(doc(f'The <see cref="{link}Attribute" /> this role is bound to. Optional: it is only needed '
@@ -89,18 +90,7 @@ def flat_attribute(pattern):
                    "on its own.", 4, tag="remarks"))
     out.append(f"    [AttributeUsage({targets(pattern['roles'][0]['targets'])}, "
                f"AllowMultiple = false, Inherited = {inherited})]")
-    out.append(f"    public sealed class {name}Attribute : LivingDocumentationAttribute {{")
-    out.append("")
-    out.append("        /// <inheritdoc />")
-    out.append(f'        public override string Catalog => "{pattern["catalog"]}";')
-    out.append("")
-    out.append("        /// <inheritdoc />")
-    out.append(f'        public override string PatternName => "{name}";')
-    out.append("")
-    out.append("        /// <inheritdoc />")
-    out.append(f'        public override string RoleName => "{name}";')
-    out.append("")
-    out.append("    }")
+    out.append(f"    public sealed class {name}Attribute : LivingDocumentationAttribute {{ }}")
     out.append("")
     out.append("}")
     return "\n".join(out) + "\n"
@@ -117,15 +107,7 @@ def nested_container(pattern):
     out.append(f"    public static class {name} {{")
     out.append("")
     out.append(doc(f"Role played by a type or a member in the {name} design pattern.", 8))
-    out.append("        public abstract class Role : LivingDocumentationAttribute {")
-    out.append("")
-    out.append("            /// <inheritdoc />")
-    out.append(f'            public sealed override string Catalog => "{pattern["catalog"]}";')
-    out.append("")
-    out.append("            /// <inheritdoc />")
-    out.append(f'            public sealed override string PatternName => "{name}";')
-    out.append("")
-    out.append("        }")
+    out.append("        public abstract class Role : LivingDocumentationAttribute { }")
     for role in pattern["roles"]:
         out.append("")
         out.append(role_class(pattern, role, 8))

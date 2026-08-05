@@ -19,35 +19,19 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         /// <summary>
         ///     Role played by a type or a member in the Visitor design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute {
-
-            /// <inheritdoc />
-            public sealed override string Catalog => "GangOfFour";
-
-            /// <inheritdoc />
-            public sealed override string PatternName => "Visitor";
-
-        }
+        public abstract class Role : LivingDocumentationAttribute { }
 
         /// <summary>
         ///     Declares one visit operation per concrete element of the structure.
         /// </summary>
         [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
-        public sealed class VisitorAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "Visitor";
-
-        }
+        public sealed class VisitorAttribute : Role { }
 
         /// <summary>
         ///     Implements the visit operations: this is where the added algorithm lives.
         /// </summary>
         [AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
         public sealed class ConcreteVisitorAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "ConcreteVisitor";
 
             /// <summary>
             ///     The <see cref="VisitorAttribute" /> this role is bound to. Optional: it is only needed when the type
@@ -61,21 +45,13 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         ///     Declares the entry point of the double dispatch.
         /// </summary>
         [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
-        public sealed class ElementAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "Element";
-
-        }
+        public sealed class ElementAttribute : Role { }
 
         /// <summary>
         ///     Dispatches to the visit operation that corresponds to its own type.
         /// </summary>
         [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct, AllowMultiple = true, Inherited = false)]
         public sealed class ConcreteElementAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "ConcreteElement";
 
             /// <summary>
             ///     The <see cref="ElementAttribute" /> this role is bound to. Optional: it is only needed when the type
@@ -91,9 +67,6 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         [AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
         public sealed class ObjectStructureAttribute : Role {
 
-            /// <inheritdoc />
-            public override string RoleName => "ObjectStructure";
-
             /// <summary>
             ///     The <see cref="ElementAttribute" /> this role is bound to. Optional: it is only needed when the type
             ///     hierarchy alone does not tell which occurrence of the pattern is meant.
@@ -108,9 +81,6 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         [AttributeUsage(AttributeTargets.Method, AllowMultiple = false, Inherited = false)]
         public sealed class VisitMethodAttribute : Role {
 
-            /// <inheritdoc />
-            public override string RoleName => "VisitMethod";
-
             /// <summary>
             ///     The <see cref="ConcreteElementAttribute" /> this role is bound to. Optional: it is only needed when
             ///     the type hierarchy alone does not tell which occurrence of the pattern is meant.
@@ -123,12 +93,7 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         ///     The entry point of the double dispatch: it calls back the matching visit operation.
         /// </summary>
         [AttributeUsage(AttributeTargets.Method, AllowMultiple = false, Inherited = false)]
-        public sealed class AcceptMethodAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "AcceptMethod";
-
-        }
+        public sealed class AcceptMethodAttribute : Role { }
 
     }
 

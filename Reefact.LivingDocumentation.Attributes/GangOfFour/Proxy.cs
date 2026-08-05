@@ -19,35 +19,19 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         /// <summary>
         ///     Role played by a type or a member in the Proxy design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute {
-
-            /// <inheritdoc />
-            public sealed override string Catalog => "GangOfFour";
-
-            /// <inheritdoc />
-            public sealed override string PatternName => "Proxy";
-
-        }
+        public abstract class Role : LivingDocumentationAttribute { }
 
         /// <summary>
         ///     Declares the interface shared by the real object and its proxy, so that they are interchangeable.
         /// </summary>
         [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
-        public sealed class SubjectAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "Subject";
-
-        }
+        public sealed class SubjectAttribute : Role { }
 
         /// <summary>
         ///     The object the proxy stands for, and which does the real work.
         /// </summary>
         [AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
         public sealed class RealSubjectAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "RealSubject";
 
             /// <summary>
             ///     The <see cref="SubjectAttribute" /> this role is bound to. Optional: it is only needed when the type
@@ -62,9 +46,6 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         /// </summary>
         [AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
         public sealed class ProxyAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "Proxy";
 
             /// <summary>
             ///     The <see cref="SubjectAttribute" /> this role is bound to. Optional: it is only needed when the type

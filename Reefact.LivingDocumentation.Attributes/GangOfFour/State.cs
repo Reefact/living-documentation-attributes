@@ -19,24 +19,13 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         /// <summary>
         ///     Role played by a type or a member in the State design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute {
-
-            /// <inheritdoc />
-            public sealed override string Catalog => "GangOfFour";
-
-            /// <inheritdoc />
-            public sealed override string PatternName => "State";
-
-        }
+        public abstract class Role : LivingDocumentationAttribute { }
 
         /// <summary>
         ///     Holds the current state, and delegates the state dependent behaviour to it.
         /// </summary>
         [AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
         public sealed class ContextAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "Context";
 
             /// <summary>
             ///     The <see cref="StateAttribute" /> this role is bound to. Optional: it is only needed when the type
@@ -50,21 +39,13 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         ///     Declares the behaviour that varies with the state of the context.
         /// </summary>
         [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
-        public sealed class StateAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "State";
-
-        }
+        public sealed class StateAttribute : Role { }
 
         /// <summary>
         ///     Implements the behaviour associated with one state of the context.
         /// </summary>
         [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct, AllowMultiple = true, Inherited = false)]
         public sealed class ConcreteStateAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "ConcreteState";
 
             /// <summary>
             ///     The <see cref="StateAttribute" /> this role is bound to. Optional: it is only needed when the type

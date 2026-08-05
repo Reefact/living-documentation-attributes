@@ -19,35 +19,19 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         /// <summary>
         ///     Role played by a type or a member in the Command design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute {
-
-            /// <inheritdoc />
-            public sealed override string Catalog => "GangOfFour";
-
-            /// <inheritdoc />
-            public sealed override string PatternName => "Command";
-
-        }
+        public abstract class Role : LivingDocumentationAttribute { }
 
         /// <summary>
         ///     Declares the operation that carries out the request.
         /// </summary>
         [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
-        public sealed class CommandAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "Command";
-
-        }
+        public sealed class CommandAttribute : Role { }
 
         /// <summary>
         ///     Binds a receiver to an action, and implements the request by invoking it.
         /// </summary>
         [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct, AllowMultiple = true, Inherited = false)]
         public sealed class ConcreteCommandAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "ConcreteCommand";
 
             /// <summary>
             ///     The <see cref="CommandAttribute" /> this role is bound to. Optional: it is only needed when the type
@@ -67,21 +51,13 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         ///     Knows how to perform the work associated with the request.
         /// </summary>
         [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
-        public sealed class ReceiverAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "Receiver";
-
-        }
+        public sealed class ReceiverAttribute : Role { }
 
         /// <summary>
         ///     Holds commands and asks them to carry out the request.
         /// </summary>
         [AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
         public sealed class InvokerAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "Invoker";
 
             /// <summary>
             ///     The <see cref="CommandAttribute" /> this role is bound to. Optional: it is only needed when the type
@@ -95,12 +71,7 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         ///     The operation that carries out the request.
         /// </summary>
         [AttributeUsage(AttributeTargets.Method, AllowMultiple = false, Inherited = false)]
-        public sealed class ExecuteMethodAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "ExecuteMethod";
-
-        }
+        public sealed class ExecuteMethodAttribute : Role { }
 
     }
 

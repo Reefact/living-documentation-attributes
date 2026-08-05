@@ -19,37 +19,19 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         /// <summary>
         ///     Role played by a type or a member in the Facade design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute {
-
-            /// <inheritdoc />
-            public sealed override string Catalog => "GangOfFour";
-
-            /// <inheritdoc />
-            public sealed override string PatternName => "Facade";
-
-        }
+        public abstract class Role : LivingDocumentationAttribute { }
 
         /// <summary>
         ///     Offers the simplified entry point, and knows which subsystem type handles each request.
         /// </summary>
         [AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
-        public sealed class FacadeAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "Facade";
-
-        }
+        public sealed class FacadeAttribute : Role { }
 
         /// <summary>
         ///     Does the real work, and knows nothing about the facade.
         /// </summary>
         [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class | AttributeTargets.Struct, AllowMultiple = true, Inherited = false)]
-        public sealed class SubsystemAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "Subsystem";
-
-        }
+        public sealed class SubsystemAttribute : Role { }
 
     }
 

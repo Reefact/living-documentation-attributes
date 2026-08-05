@@ -19,35 +19,19 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         /// <summary>
         ///     Role played by a type or a member in the AbstractFactory design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute {
-
-            /// <inheritdoc />
-            public sealed override string Catalog => "GangOfFour";
-
-            /// <inheritdoc />
-            public sealed override string PatternName => "AbstractFactory";
-
-        }
+        public abstract class Role : LivingDocumentationAttribute { }
 
         /// <summary>
         ///     Declares the set of operations that create the abstract products of the family.
         /// </summary>
         [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
-        public sealed class AbstractFactoryAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "AbstractFactory";
-
-        }
+        public sealed class AbstractFactoryAttribute : Role { }
 
         /// <summary>
         ///     Implements the creation operations for one coherent family of concrete products.
         /// </summary>
         [AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
         public sealed class ConcreteFactoryAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "ConcreteFactory";
 
             /// <summary>
             ///     The <see cref="AbstractFactoryAttribute" /> this role is bound to. Optional: it is only needed when
@@ -61,21 +45,13 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         ///     Declares the interface of one kind of product the family produces.
         /// </summary>
         [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
-        public sealed class AbstractProductAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "AbstractProduct";
-
-        }
+        public sealed class AbstractProductAttribute : Role { }
 
         /// <summary>
         ///     Implements one abstract product, and is created by exactly one concrete factory.
         /// </summary>
         [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct, AllowMultiple = true, Inherited = false)]
         public sealed class ConcreteProductAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "ConcreteProduct";
 
             /// <summary>
             ///     The <see cref="AbstractProductAttribute" /> this role is bound to. Optional: it is only needed when

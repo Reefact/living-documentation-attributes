@@ -19,35 +19,19 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         /// <summary>
         ///     Role played by a type or a member in the Prototype design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute {
-
-            /// <inheritdoc />
-            public sealed override string Catalog => "GangOfFour";
-
-            /// <inheritdoc />
-            public sealed override string PatternName => "Prototype";
-
-        }
+        public abstract class Role : LivingDocumentationAttribute { }
 
         /// <summary>
         ///     Declares the operation that clones itself.
         /// </summary>
         [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
-        public sealed class PrototypeAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "Prototype";
-
-        }
+        public sealed class PrototypeAttribute : Role { }
 
         /// <summary>
         ///     Implements the cloning operation for its own representation.
         /// </summary>
         [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct, AllowMultiple = true, Inherited = false)]
         public sealed class ConcretePrototypeAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "ConcretePrototype";
 
             /// <summary>
             ///     The <see cref="PrototypeAttribute" /> this role is bound to. Optional: it is only needed when the
@@ -61,12 +45,7 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         ///     The operation that returns a copy of the prototype.
         /// </summary>
         [AttributeUsage(AttributeTargets.Method, AllowMultiple = false, Inherited = false)]
-        public sealed class CloneMethodAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "CloneMethod";
-
-        }
+        public sealed class CloneMethodAttribute : Role { }
 
     }
 

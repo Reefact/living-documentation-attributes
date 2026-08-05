@@ -19,35 +19,19 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         /// <summary>
         ///     Role played by a type or a member in the ChainOfResponsibility design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute {
-
-            /// <inheritdoc />
-            public sealed override string Catalog => "GangOfFour";
-
-            /// <inheritdoc />
-            public sealed override string PatternName => "ChainOfResponsibility";
-
-        }
+        public abstract class Role : LivingDocumentationAttribute { }
 
         /// <summary>
         ///     Declares the handling operation and, usually, the link to the successor.
         /// </summary>
         [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
-        public sealed class HandlerAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "Handler";
-
-        }
+        public sealed class HandlerAttribute : Role { }
 
         /// <summary>
         ///     Handles the requests it is responsible for, and forwards the others to its successor.
         /// </summary>
         [AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
         public sealed class ConcreteHandlerAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "ConcreteHandler";
 
             /// <summary>
             ///     The <see cref="HandlerAttribute" /> this role is bound to. Optional: it is only needed when the type

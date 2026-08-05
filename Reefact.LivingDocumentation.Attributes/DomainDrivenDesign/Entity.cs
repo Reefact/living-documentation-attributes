@@ -14,17 +14,6 @@ namespace Reefact.LivingDocumentation.Attributes.DomainDrivenDesign {
     ///     This pattern has a single role, so there is nothing to choose: the attribute is applied on its own.
     /// </remarks>
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Interface, AllowMultiple = false, Inherited = true)]
-    public sealed class EntityAttribute : LivingDocumentationAttribute {
-
-        /// <inheritdoc />
-        public override string Catalog => "DomainDrivenDesign";
-
-        /// <inheritdoc />
-        public override string PatternName => "Entity";
-
-        /// <inheritdoc />
-        public override string RoleName => "Entity";
-
-    }
+    public sealed class EntityAttribute : LivingDocumentationAttribute { }
 
 }

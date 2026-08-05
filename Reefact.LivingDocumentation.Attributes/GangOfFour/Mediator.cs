@@ -19,35 +19,19 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         /// <summary>
         ///     Role played by a type or a member in the Mediator design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute {
-
-            /// <inheritdoc />
-            public sealed override string Catalog => "GangOfFour";
-
-            /// <inheritdoc />
-            public sealed override string PatternName => "Mediator";
-
-        }
+        public abstract class Role : LivingDocumentationAttribute { }
 
         /// <summary>
         ///     Declares the interface through which colleagues communicate.
         /// </summary>
         [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
-        public sealed class MediatorAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "Mediator";
-
-        }
+        public sealed class MediatorAttribute : Role { }
 
         /// <summary>
         ///     Knows the colleagues and coordinates their interactions.
         /// </summary>
         [AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
         public sealed class ConcreteMediatorAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "ConcreteMediator";
 
             /// <summary>
             ///     The <see cref="MediatorAttribute" /> this role is bound to. Optional: it is only needed when the
@@ -63,9 +47,6 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
         public sealed class ColleagueAttribute : Role {
 
-            /// <inheritdoc />
-            public override string RoleName => "Colleague";
-
             /// <summary>
             ///     The <see cref="MediatorAttribute" /> this role is bound to. Optional: it is only needed when the
             ///     type hierarchy alone does not tell which occurrence of the pattern is meant.
@@ -79,9 +60,6 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         /// </summary>
         [AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
         public sealed class ConcreteColleagueAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "ConcreteColleague";
 
             /// <summary>
             ///     The <see cref="ColleagueAttribute" /> this role is bound to. Optional: it is only needed when the

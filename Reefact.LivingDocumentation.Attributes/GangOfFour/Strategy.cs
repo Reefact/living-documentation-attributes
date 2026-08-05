@@ -19,24 +19,13 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         /// <summary>
         ///     Role played by a type or a member in the Strategy design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute {
-
-            /// <inheritdoc />
-            public sealed override string Catalog => "GangOfFour";
-
-            /// <inheritdoc />
-            public sealed override string PatternName => "Strategy";
-
-        }
+        public abstract class Role : LivingDocumentationAttribute { }
 
         /// <summary>
         ///     Is configured with a strategy, and delegates the algorithm to it.
         /// </summary>
         [AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
         public sealed class ContextAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "Context";
 
             /// <summary>
             ///     The <see cref="StrategyAttribute" /> this role is bound to. Optional: it is only needed when the
@@ -50,21 +39,13 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         ///     Declares the interface common to every supported algorithm.
         /// </summary>
         [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
-        public sealed class StrategyAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "Strategy";
-
-        }
+        public sealed class StrategyAttribute : Role { }
 
         /// <summary>
         ///     Implements one algorithm behind the strategy interface.
         /// </summary>
         [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct, AllowMultiple = true, Inherited = false)]
         public sealed class ConcreteStrategyAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "ConcreteStrategy";
 
             /// <summary>
             ///     The <see cref="StrategyAttribute" /> this role is bound to. Optional: it is only needed when the

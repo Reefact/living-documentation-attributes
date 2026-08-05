@@ -14,17 +14,6 @@ namespace Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitectu
     ///     This pattern has a single role, so there is nothing to choose: the attribute is applied on its own.
     /// </remarks>
     [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class, AllowMultiple = false, Inherited = true)]
-    public sealed class UnitOfWorkAttribute : LivingDocumentationAttribute {
-
-        /// <inheritdoc />
-        public override string Catalog => "EnterpriseApplicationArchitecture";
-
-        /// <inheritdoc />
-        public override string PatternName => "UnitOfWork";
-
-        /// <inheritdoc />
-        public override string RoleName => "UnitOfWork";
-
-    }
+    public sealed class UnitOfWorkAttribute : LivingDocumentationAttribute { }
 
 }

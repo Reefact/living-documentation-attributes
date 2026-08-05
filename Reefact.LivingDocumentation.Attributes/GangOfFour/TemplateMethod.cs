@@ -19,35 +19,19 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         /// <summary>
         ///     Role played by a type or a member in the TemplateMethod design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute {
-
-            /// <inheritdoc />
-            public sealed override string Catalog => "GangOfFour";
-
-            /// <inheritdoc />
-            public sealed override string PatternName => "TemplateMethod";
-
-        }
+        public abstract class Role : LivingDocumentationAttribute { }
 
         /// <summary>
         ///     Defines the skeleton of the algorithm, and declares the steps subclasses must supply.
         /// </summary>
         [AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
-        public sealed class AbstractClassAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "AbstractClass";
-
-        }
+        public sealed class AbstractClassAttribute : Role { }
 
         /// <summary>
         ///     Supplies the steps the algorithm defers to subclasses.
         /// </summary>
         [AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
         public sealed class ConcreteClassAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "ConcreteClass";
 
             /// <summary>
             ///     The <see cref="AbstractClassAttribute" /> this role is bound to. Optional: it is only needed when
@@ -61,34 +45,19 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         ///     The operation that holds the skeleton of the algorithm, and calls the deferred steps.
         /// </summary>
         [AttributeUsage(AttributeTargets.Method, AllowMultiple = false, Inherited = false)]
-        public sealed class TemplateMethodAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "TemplateMethod";
-
-        }
+        public sealed class TemplateMethodAttribute : Role { }
 
         /// <summary>
         ///     A step the algorithm defers, and which subclasses must supply.
         /// </summary>
         [AttributeUsage(AttributeTargets.Method, AllowMultiple = false, Inherited = false)]
-        public sealed class PrimitiveOperationAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "PrimitiveOperation";
-
-        }
+        public sealed class PrimitiveOperationAttribute : Role { }
 
         /// <summary>
         ///     A step the algorithm defers, and which subclasses may override, but need not.
         /// </summary>
         [AttributeUsage(AttributeTargets.Method, AllowMultiple = false, Inherited = false)]
-        public sealed class HookOperationAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "HookOperation";
-
-        }
+        public sealed class HookOperationAttribute : Role { }
 
     }
 

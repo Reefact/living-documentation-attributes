@@ -19,35 +19,19 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         /// <summary>
         ///     Role played by a type or a member in the FactoryMethod design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute {
-
-            /// <inheritdoc />
-            public sealed override string Catalog => "GangOfFour";
-
-            /// <inheritdoc />
-            public sealed override string PatternName => "FactoryMethod";
-
-        }
+        public abstract class Role : LivingDocumentationAttribute { }
 
         /// <summary>
         ///     Declares the factory method and, usually, calls it to obtain a product.
         /// </summary>
         [AttributeUsage(AttributeTargets.Class | AttributeTargets.Interface, AllowMultiple = true, Inherited = false)]
-        public sealed class CreatorAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "Creator";
-
-        }
+        public sealed class CreatorAttribute : Role { }
 
         /// <summary>
         ///     Overrides the factory method to return an instance of a concrete product.
         /// </summary>
         [AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
         public sealed class ConcreteCreatorAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "ConcreteCreator";
 
             /// <summary>
             ///     The <see cref="CreatorAttribute" /> this role is bound to. Optional: it is only needed when the type
@@ -67,21 +51,13 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         ///     Declares the interface of the objects the factory method creates.
         /// </summary>
         [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
-        public sealed class ProductAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "Product";
-
-        }
+        public sealed class ProductAttribute : Role { }
 
         /// <summary>
         ///     Implements the product interface.
         /// </summary>
         [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct, AllowMultiple = true, Inherited = false)]
         public sealed class ConcreteProductAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "ConcreteProduct";
 
             /// <summary>
             ///     The <see cref="ProductAttribute" /> this role is bound to. Optional: it is only needed when the type
@@ -95,12 +71,7 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         ///     The operation that creates the product, and which subclasses override.
         /// </summary>
         [AttributeUsage(AttributeTargets.Method, AllowMultiple = false, Inherited = false)]
-        public sealed class FactoryMethodAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "FactoryMethod";
-
-        }
+        public sealed class FactoryMethodAttribute : Role { }
 
     }
 

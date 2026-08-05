@@ -19,35 +19,19 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         /// <summary>
         ///     Role played by a type or a member in the Adapter design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute {
-
-            /// <inheritdoc />
-            public sealed override string Catalog => "GangOfFour";
-
-            /// <inheritdoc />
-            public sealed override string PatternName => "Adapter";
-
-        }
+        public abstract class Role : LivingDocumentationAttribute { }
 
         /// <summary>
         ///     Declares the interface the client actually uses.
         /// </summary>
         [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
-        public sealed class TargetAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "Target";
-
-        }
+        public sealed class TargetAttribute : Role { }
 
         /// <summary>
         ///     Implements the target interface by delegating to the adaptee and translating the calls.
         /// </summary>
         [AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
         public sealed class AdapterAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "Adapter";
 
             /// <summary>
             ///     The <see cref="TargetAttribute" /> this role is bound to. Optional: it is only needed when the type
@@ -67,12 +51,7 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
         ///     Holds the behaviour worth reusing, but exposes it through an incompatible interface.
         /// </summary>
         [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class | AttributeTargets.Struct, AllowMultiple = true, Inherited = false)]
-        public sealed class AdapteeAttribute : Role {
-
-            /// <inheritdoc />
-            public override string RoleName => "Adaptee";
-
-        }
+        public sealed class AdapteeAttribute : Role { }
 
     }
 

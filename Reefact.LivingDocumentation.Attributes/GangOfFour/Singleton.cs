@@ -14,17 +14,6 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
     ///     This pattern has a single role, so there is nothing to choose: the attribute is applied on its own.
     /// </remarks>
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
-    public sealed class SingletonAttribute : LivingDocumentationAttribute {
-
-        /// <inheritdoc />
-        public override string Catalog => "GangOfFour";
-
-        /// <inheritdoc />
-        public override string PatternName => "Singleton";
-
-        /// <inheritdoc />
-        public override string RoleName => "Singleton";
-
-    }
+    public sealed class SingletonAttribute : LivingDocumentationAttribute { }
 
 }
