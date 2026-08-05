@@ -1,6 +1,6 @@
-# ADR-0012 | Leave out of the catalog what cannot be annotated
+# ADR-0011 | Leave out of the catalog what cannot be annotated
 
-🌍 🇬🇧 English (this file) · 🇫🇷 [Français](0012-leave-out-what-cannot-be-annotated.fr.md)
+🌍 🇬🇧 English (this file) · 🇫🇷 [Français](0011-leave-out-what-cannot-be-annotated.fr.md)
 
 **Status:** Proposed
 **Proposed:** 2026-08-05
@@ -23,7 +23,7 @@ The catalog is also meant to be a reference work, and the temptation is to make
 it complete: a pattern the literature names, absent from a catalog that claims to
 cover its source, reads as an oversight.
 
-The vocabulary is judged by what can be asserted through it (ADR-0008). A role
+The vocabulary is judged by what can be asserted through it (ADR-0007). A role
 nothing can hold licenses no assertion, since there is nothing for a rule to
 range over.
 
@@ -111,7 +111,7 @@ why the pattern is not annotable.
 
 ## References
 
-* [ADR-0008](0008-decide-sameness-by-the-assertions-a-pattern-carries.md) — the
+* [ADR-0007](0007-decide-sameness-by-the-assertions-a-pattern-carries.md) — the
   criterion this applies.
-* [ADR-0010](0010-let-each-role-declare-what-it-applies-to.md) — what a role can
+* [ADR-0009](0009-let-each-role-declare-what-it-applies-to.md) — what a role can
   be attached to.

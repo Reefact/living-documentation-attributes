@@ -1,6 +1,6 @@
-# ADR-0014 | Shelve a pattern without a body of work of its own under Idioms
+# ADR-0013 | Shelve a pattern without a body of work of its own under Idioms
 
-🌍 🇬🇧 English (this file) · 🇫🇷 [Français](0014-shelve-a-pattern-without-a-body-of-work-under-idioms.fr.md)
+🌍 🇬🇧 English (this file) · 🇫🇷 [Français](0013-shelve-a-pattern-without-a-body-of-work-under-idioms.fr.md)
 
 **Status:** Proposed
 **Proposed:** 2026-08-05
@@ -9,7 +9,7 @@
 ## Context
 
 The catalog is organised by body of work, and a pattern is placed in the one that
-named it (ADR-0007). Some patterns have no such body of work. Null Object has a
+named it (ADR-0006). Some patterns have no such body of work. Null Object has a
 source — Woolf, in the third volume of *Pattern Languages of Program Design* — but
 no catalog of its own; Result and a number of everyday practices have a lineage
 and no single publication at all.
@@ -49,14 +49,14 @@ from `Idioms`.
 
 It names the absence of a catalog, not the absence of a source. That distinction
 is what lets an entry here still be placed by provenance and still be ordered
-against another catalog by publication date, so the rules of ADR-0007 apply to it
+against another catalog by publication date, so the rules of ADR-0006 apply to it
 unchanged.
 
 ## Alternatives Considered
 
 ### Give each source its own namespace
 
-Considered because it applies ADR-0007 without exception and keeps provenance
+Considered because it applies ADR-0006 without exception and keeps provenance
 visible in the namespace itself.
 
 Rejected because it produces catalogs of one entry, and a list of namespaces that
@@ -79,7 +79,7 @@ relatives.
 
 Rejected because it asserts a provenance that is false. Null Object under
 Patterns of Enterprise Application Architecture would say Fowler named it, which
-is the claim ADR-0007 exists to prevent.
+is the claim ADR-0006 exists to prevent.
 
 ## Consequences
 
@@ -106,7 +106,7 @@ is the claim ADR-0007 exists to prevent.
 
 ## References
 
-* [ADR-0007](0007-catalogue-a-pattern-where-the-work-that-named-it-put-it.md) —
+* [ADR-0006](0006-catalogue-a-pattern-where-the-work-that-named-it-put-it.md) —
   the placement rule this completes.
-* [ADR-0006](0006-distinguish-a-declension-from-a-specialisation.md) — Null
+* [ADR-0005](0005-relate-patterns-by-inheritance-and-read-identity-from-it.md) — Null
   Object's relation to Special Case, which lives in a catalog of its own.

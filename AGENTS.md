@@ -56,13 +56,13 @@ it, rather than rediscovering them:
   committed ([ADR-0002](doc/handwritten/for-maintainers/adr/0002-keep-the-pattern-catalog-as-data-and-generate-the-attributes.md)).
   **Never hand-edit a generated attribute** — edit the catalog and regenerate.
 - Whether two patterns are the same is decided by the assertions they carry, not
-  by their names ([ADR-0008](doc/handwritten/for-maintainers/adr/0008-decide-sameness-by-the-assertions-a-pattern-carries.md)).
+  by their names ([ADR-0007](doc/handwritten/for-maintainers/adr/0007-decide-sameness-by-the-assertions-a-pattern-carries.md)).
 - A pattern is catalogued where the work that named it put it, and anteriority
-  orders a declension ([ADR-0007](doc/handwritten/for-maintainers/adr/0007-catalogue-a-pattern-where-the-work-that-named-it-put-it.md)).
-- A declension is marked, a specialisation is not ([ADR-0006](doc/handwritten/for-maintainers/adr/0006-distinguish-a-declension-from-a-specialisation.md)).
+  orders a declension ([ADR-0006](doc/handwritten/for-maintainers/adr/0006-catalogue-a-pattern-where-the-work-that-named-it-put-it.md)).
+- A declension is marked, a specialisation is not ([ADR-0005](doc/handwritten/for-maintainers/adr/0005-relate-patterns-by-inheritance-and-read-identity-from-it.md)).
 - What cannot be attached to a type, a member or an assembly does not enter the
-  catalog ([ADR-0012](doc/handwritten/for-maintainers/adr/0012-leave-out-what-cannot-be-annotated.md)).
-- Every pattern gets one sample file ([ADR-0013](doc/handwritten/for-maintainers/adr/0013-show-every-pattern-at-work-in-a-business-example.md)).
+  catalog ([ADR-0011](doc/handwritten/for-maintainers/adr/0011-leave-out-what-cannot-be-annotated.md)).
+- Every pattern gets one sample file ([ADR-0012](doc/handwritten/for-maintainers/adr/0012-show-every-pattern-at-work-in-a-business-example.md)).
 
 ## Adding or changing a pattern
 
@@ -91,9 +91,9 @@ it, rather than rediscovering them:
 - An attribute is inert. It declares no member, holds no behaviour, and performs
   no reflection ([ADR-0004](doc/handwritten/for-maintainers/adr/0004-keep-the-attribute-base-a-pure-marker.md)).
 - A role is annotated on the declaration that introduces it, never on the
-  implementations ([ADR-0011](doc/handwritten/for-maintainers/adr/0011-annotate-the-declaration-that-introduces-a-role.md)).
+  implementations ([ADR-0010](doc/handwritten/for-maintainers/adr/0010-annotate-the-declaration-that-introduces-a-role.md)).
 - A link between participants is a `Type`, never a string
-  ([ADR-0009](doc/handwritten/for-maintainers/adr/0009-bind-participants-with-typed-links.md)).
+  ([ADR-0008](doc/handwritten/for-maintainers/adr/0008-bind-participants-with-typed-links.md)).
 - Samples use realistic business domains, varied across the catalog, and the
   domain is chosen to fit the pattern rather than the reverse
-  ([ADR-0013](doc/handwritten/for-maintainers/adr/0013-show-every-pattern-at-work-in-a-business-example.md)).
+  ([ADR-0012](doc/handwritten/for-maintainers/adr/0012-show-every-pattern-at-work-in-a-business-example.md)).

@@ -8,7 +8,7 @@ successor.
 
 ## This base was written as one set
 
-Records 0001 to 0014 carry the same proposal date. They were written together,
+Records 0001 to 0013 carry the same proposal date. They were written together,
 after the decisions they describe had been taken together, and they describe one
 coherent position rather than a sequence of revisions. **None of them amends,
 refines or supersedes another**, and the numbering is an index, not a chronology.
@@ -120,13 +120,12 @@ Related ADRs, sources, catalog entries, code.
 | [ADR-0002](0002-keep-the-pattern-catalog-as-data-and-generate-the-attributes.md) | Keep the pattern catalog as data and generate the attributes from it | Proposed |
 | [ADR-0003](0003-give-each-role-its-own-attribute-nested-in-its-pattern.md) | Give each role its own attribute, nested in the pattern it belongs to | Proposed |
 | [ADR-0004](0004-keep-the-attribute-base-a-pure-marker.md) | Keep the attribute base a pure marker | Proposed |
-| [ADR-0005](0005-identify-a-pattern-by-the-type-that-declares-it.md) | Identify a pattern by the type that declares it | Proposed |
-| [ADR-0006](0006-distinguish-a-declension-from-a-specialisation.md) | Distinguish a declension from a specialisation | Proposed |
-| [ADR-0007](0007-catalogue-a-pattern-where-the-work-that-named-it-put-it.md) | Catalogue a pattern where the work that named it put it | Proposed |
-| [ADR-0008](0008-decide-sameness-by-the-assertions-a-pattern-carries.md) | Decide that two patterns are the same by the assertions they carry | Proposed |
-| [ADR-0009](0009-bind-participants-with-typed-links.md) | Bind participants of one pattern occurrence with typed links | Proposed |
-| [ADR-0010](0010-let-each-role-declare-what-it-applies-to.md) | Let each role declare what it can be applied to | Proposed |
-| [ADR-0011](0011-annotate-the-declaration-that-introduces-a-role.md) | Annotate the declaration that introduces a role | Proposed |
-| [ADR-0012](0012-leave-out-what-cannot-be-annotated.md) | Leave out of the catalog what cannot be annotated | Proposed |
-| [ADR-0013](0013-show-every-pattern-at-work-in-a-business-example.md) | Show every pattern at work in a business example | Proposed |
-| [ADR-0014](0014-shelve-a-pattern-without-a-body-of-work-under-idioms.md) | Shelve a pattern without a body of work of its own under Idioms | Proposed |
+| [ADR-0005](0005-relate-patterns-by-inheritance-and-read-identity-from-it.md) | Relate patterns by inheritance, and read a pattern's identity from it | Proposed |
+| [ADR-0006](0006-catalogue-a-pattern-where-the-work-that-named-it-put-it.md) | Catalogue a pattern where the work that named it put it | Proposed |
+| [ADR-0007](0007-decide-sameness-by-the-assertions-a-pattern-carries.md) | Decide that two patterns are the same by the assertions they carry | Proposed |
+| [ADR-0008](0008-bind-participants-with-typed-links.md) | Bind participants of one pattern occurrence with typed links | Proposed |
+| [ADR-0009](0009-let-each-role-declare-what-it-applies-to.md) | Let each role declare what it can be applied to | Proposed |
+| [ADR-0010](0010-annotate-the-declaration-that-introduces-a-role.md) | Annotate the declaration that introduces a role | Proposed |
+| [ADR-0011](0011-leave-out-what-cannot-be-annotated.md) | Leave out of the catalog what cannot be annotated | Proposed |
+| [ADR-0012](0012-show-every-pattern-at-work-in-a-business-example.md) | Show every pattern at work in a business example | Proposed |
+| [ADR-0013](0013-shelve-a-pattern-without-a-body-of-work-under-idioms.md) | Shelve a pattern without a body of work of its own under Idioms | Proposed |

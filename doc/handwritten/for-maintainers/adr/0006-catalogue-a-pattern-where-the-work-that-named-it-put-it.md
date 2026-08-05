@@ -1,6 +1,6 @@
-# ADR-0007 | Catalogue a pattern where the work that named it put it
+# ADR-0006 | Catalogue a pattern where the work that named it put it
 
-🌍 🇬🇧 English (this file) · 🇫🇷 [Français](0007-catalogue-a-pattern-where-the-work-that-named-it-put-it.fr.md)
+🌍 🇬🇧 English (this file) · 🇫🇷 [Français](0006-catalogue-a-pattern-where-the-work-that-named-it-put-it.fr.md)
 
 **Status:** Proposed
 **Proposed:** 2026-08-05
@@ -22,8 +22,8 @@ naming it as the industry does rather than as its source does — putting
 wrote `SpecialCase`.
 
 Two patterns being the same is settled separately, by the assertions they carry
-(ADR-0008). When they are the same and are catalogued twice, one of the two has
-to hold the definition and the other to derive from it (ADR-0006), and nothing in
+(ADR-0007). When they are the same and are catalogued twice, one of the two has
+to hold the definition and the other to derive from it (ADR-0005), and nothing in
 their meaning orders them: they say the same thing.
 
 The catalog is expected to span many more works, so the placement question is not
@@ -129,9 +129,9 @@ arithmetic.
 
 ## References
 
-* [ADR-0006](0006-distinguish-a-declension-from-a-specialisation.md) — the
+* [ADR-0005](0005-relate-patterns-by-inheritance-and-read-identity-from-it.md) — the
   relation this orders.
-* [ADR-0008](0008-decide-sameness-by-the-assertions-a-pattern-carries.md) — what
+* [ADR-0007](0007-decide-sameness-by-the-assertions-a-pattern-carries.md) — what
   must be settled before this rule applies.
-* [ADR-0014](0014-shelve-a-pattern-without-a-body-of-work-under-idioms.md) —
+* [ADR-0013](0013-shelve-a-pattern-without-a-body-of-work-under-idioms.md) —
   where a pattern goes when no work claims it.

@@ -144,7 +144,7 @@ because a rule engine needs a closed role vocabulary to be reliable.
 
 * [ADR-0004](0004-keep-the-attribute-base-a-pure-marker.md) — what the generated
   attributes do not carry.
-* [ADR-0010](0010-let-each-role-declare-what-it-applies-to.md) — the target
+* [ADR-0009](0009-let-each-role-declare-what-it-applies-to.md) — the target
   declaration this shape makes possible.
 * [ADR-0002](0002-keep-the-pattern-catalog-as-data-and-generate-the-attributes.md) —
   the generation that emits it.

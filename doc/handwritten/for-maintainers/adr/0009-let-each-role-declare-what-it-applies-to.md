@@ -1,6 +1,6 @@
-# ADR-0010 | Let each role declare what it can be applied to
+# ADR-0009 | Let each role declare what it can be applied to
 
-🌍 🇬🇧 English (this file) · 🇫🇷 [Français](0010-let-each-role-declare-what-it-applies-to.fr.md)
+🌍 🇬🇧 English (this file) · 🇫🇷 [Français](0009-let-each-role-declare-what-it-applies-to.fr.md)
 
 **Status:** Proposed
 **Proposed:** 2026-08-05

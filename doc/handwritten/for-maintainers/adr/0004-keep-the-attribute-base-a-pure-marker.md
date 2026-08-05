@@ -130,9 +130,9 @@ computes, where a consumer outside our layout needs to be able to disagree.
 
 ## References
 
-* [ADR-0005](0005-identify-a-pattern-by-the-type-that-declares-it.md) — the
+* [ADR-0005](0005-relate-patterns-by-inheritance-and-read-identity-from-it.md) — the
   fourth reading rule, and the one that cannot be guessed.
-* [ADR-0013](0013-show-every-pattern-at-work-in-a-business-example.md) — the
+* [ADR-0012](0012-show-every-pattern-at-work-in-a-business-example.md) — the
   project that carries the reader.
 * [ADR-0003](0003-give-each-role-its-own-attribute-nested-in-its-pattern.md) —
   the declaration the rules read from.

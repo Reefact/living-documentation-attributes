@@ -1,6 +1,6 @@
-# ADR-0011 | Annotate the declaration that introduces a role
+# ADR-0010 | Annotate the declaration that introduces a role
 
-🌍 🇬🇧 English (this file) · 🇫🇷 [Français](0011-annotate-the-declaration-that-introduces-a-role.fr.md)
+🌍 🇬🇧 English (this file) · 🇫🇷 [Français](0010-annotate-the-declaration-that-introduces-a-role.fr.md)
 
 **Status:** Proposed
 **Proposed:** 2026-08-05
@@ -114,7 +114,7 @@ most of the value of having a shared vocabulary at all.
 
 ## References
 
-* [ADR-0009](0009-bind-participants-with-typed-links.md) — the other half of
+* [ADR-0008](0008-bind-participants-with-typed-links.md) — the other half of
   keeping annotations from restating the code.
-* [ADR-0013](0013-show-every-pattern-at-work-in-a-business-example.md) — where
+* [ADR-0012](0012-show-every-pattern-at-work-in-a-business-example.md) — where
   the convention is demonstrated.

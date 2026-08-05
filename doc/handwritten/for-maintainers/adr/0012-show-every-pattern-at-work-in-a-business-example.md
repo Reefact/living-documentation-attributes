@@ -1,6 +1,6 @@
-# ADR-0013 | Show every pattern at work in a business example
+# ADR-0012 | Show every pattern at work in a business example
 
-🌍 🇬🇧 English (this file) · 🇫🇷 [Français](0013-show-every-pattern-at-work-in-a-business-example.fr.md)
+🌍 🇬🇧 English (this file) · 🇫🇷 [Français](0012-show-every-pattern-at-work-in-a-business-example.fr.md)
 
 **Status:** Proposed
 **Proposed:** 2026-08-05
@@ -38,7 +38,7 @@ example, documented so that the example explains the pattern.
 
 Compiling the samples is the only check available. A role that cannot be applied
 to anything sensible fails to compile in the sample, which turns the target sets
-of ADR-0010 from declarations into something exercised — and it is the sample
+of ADR-0009 from declarations into something exercised — and it is the sample
 suite, not a test suite, that caught the absence of `Struct` as a target.
 
 A generic reader running over the samples verifies the claim of ADR-0004 end to
@@ -126,7 +126,7 @@ it applies where it does not.
 
 * [ADR-0004](0004-keep-the-attribute-base-a-pure-marker.md) — the reading
   contract the sample reader verifies.
-* [ADR-0010](0010-let-each-role-declare-what-it-applies-to.md) — the target sets
+* [ADR-0009](0009-let-each-role-declare-what-it-applies-to.md) — the target sets
   the samples exercise.
-* [ADR-0011](0011-annotate-the-declaration-that-introduces-a-role.md) — the
+* [ADR-0010](0010-annotate-the-declaration-that-introduces-a-role.md) — the
   convention the samples demonstrate.

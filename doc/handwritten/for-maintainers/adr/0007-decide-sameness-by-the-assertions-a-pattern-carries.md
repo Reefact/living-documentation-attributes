@@ -1,6 +1,6 @@
-# ADR-0008 | Decide that two patterns are the same by the assertions they carry
+# ADR-0007 | Decide that two patterns are the same by the assertions they carry
 
-🌍 🇬🇧 English (this file) · 🇫🇷 [Français](0008-decide-sameness-by-the-assertions-a-pattern-carries.fr.md)
+🌍 🇬🇧 English (this file) · 🇫🇷 [Français](0007-decide-sameness-by-the-assertions-a-pattern-carries.fr.md)
 
 **Status:** Proposed
 **Proposed:** 2026-08-05
@@ -9,8 +9,8 @@
 ## Context
 
 Whether two entries are one pattern, two related patterns, or two unrelated
-patterns that share a name decides how they are catalogued (ADR-0007), how they
-are related in the code (ADR-0006), and whether a consumer counts them once or
+patterns that share a name decides how they are catalogued (ADR-0006), how they
+are related in the code (ADR-0005), and whether a consumer counts them once or
 twice (ADR-0005). It is the question everything else depends on, and it is asked
 again for every catalog added.
 
@@ -61,7 +61,7 @@ familiarity does not survive Enterprise Integration Patterns or the concurrency
 literature; asking what rule each entry would license is a question a contributor
 can answer from the source text without being steeped in the field.
 
-It also settles which of the two relations of ADR-0006 applies, and does so
+It also settles which of the two relations of ADR-0005 applies, and does so
 before publication order is consulted. Value Object reads as one pattern held by
 two works until the assertions are written down; once they are, it is two
 patterns in an inclusion, and the question of which work published first never
@@ -129,9 +129,9 @@ practitioners.
 
 ## References
 
-* [ADR-0005](0005-identify-a-pattern-by-the-type-that-declares-it.md) — what
+* [ADR-0005](0005-relate-patterns-by-inheritance-and-read-identity-from-it.md) — what
   sameness decides for a consumer.
-* [ADR-0006](0006-distinguish-a-declension-from-a-specialisation.md) — the two
+* [ADR-0005](0005-relate-patterns-by-inheritance-and-read-identity-from-it.md) — the two
   relations this criterion chooses between.
-* [ADR-0012](0012-leave-out-what-cannot-be-annotated.md) — the same criterion,
+* [ADR-0011](0011-leave-out-what-cannot-be-annotated.md) — the same criterion,
   applied to whether a pattern belongs here at all.

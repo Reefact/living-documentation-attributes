@@ -1,6 +1,6 @@
-# ADR-0009 | Bind participants of one pattern occurrence with typed links
+# ADR-0008 | Bind participants of one pattern occurrence with typed links
 
-🌍 🇬🇧 English (this file) · 🇫🇷 [Français](0009-bind-participants-with-typed-links.fr.md)
+🌍 🇬🇧 English (this file) · 🇫🇷 [Français](0008-bind-participants-with-typed-links.fr.md)
 
 **Status:** Proposed
 **Proposed:** 2026-08-05
@@ -106,5 +106,5 @@ make no sense, and a shape that can express nonsense will eventually be used to.
 
 * [ADR-0003](0003-give-each-role-its-own-attribute-nested-in-its-pattern.md) —
   the shape the links are declared on.
-* [ADR-0011](0011-annotate-the-declaration-that-introduces-a-role.md) — the other
+* [ADR-0010](0010-annotate-the-declaration-that-introduces-a-role.md) — the other
   half of keeping annotations from restating the code.
