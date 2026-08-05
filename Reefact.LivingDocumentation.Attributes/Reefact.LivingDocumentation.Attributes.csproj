@@ -7,4 +7,27 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
+  <!--
+    The public surface is the product here: this library ships types and nothing else. The analyzer holds
+    it to a committed baseline, so every change to it is a reviewed diff — an undeclared public symbol
+    raises RS0016, and a declared symbol that no longer exists raises RS0017. Both are warnings locally
+    and errors in CI, where the warning ratchet promotes them. Decision: ADR-0018.
+
+    Build-time only: PrivateAssets keeps the analyzer out of any package this project produces.
+  -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.PublicApiAnalyzers" Version="3.3.4" PrivateAssets="all" />
+  </ItemGroup>
+
+  <!--
+    ONE baseline shared by all six target frameworks, rather than one per framework. The attributes do not
+    vary by target — the surface is the same everywhere — so a single file states that intent and makes a
+    divergence between two targets a failure rather than something each baseline would quietly absorb.
+    The condition guards the outer, framework-less evaluation of a multi-targeting project.
+  -->
+  <ItemGroup Condition="'$(TargetFramework)' != ''">
+    <AdditionalFiles Include="$(MSBuildProjectDirectory)\PublicAPI\PublicAPI.Shipped.txt" />
+    <AdditionalFiles Include="$(MSBuildProjectDirectory)\PublicAPI\PublicAPI.Unshipped.txt" />
+  </ItemGroup>
+
 </Project>

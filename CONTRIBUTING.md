@@ -32,6 +32,38 @@ python3 catalog/generate.py
 python3 tools/catalog/validate.py     # needs: pip install -r tools/catalog/requirements.txt
 ```
 
+## The public API baseline
+
+This library ships public types and nothing else, so its public surface is the
+whole of the product. It is declared in
+`Reefact.LivingDocumentation.Attributes/PublicAPI/`, one baseline shared by all
+six target frameworks — the attributes are the same on every one of them, and a
+shared file makes a divergence between two targets a failure rather than
+something two baselines would absorb.
+
+An undeclared public symbol raises `RS0016`; a declared symbol that no longer
+exists raises `RS0017`. Both are warnings locally and errors in CI, so a surface
+change cannot merge until the same change updates the baseline.
+
+**Accepting an intended surface change.** Update the baseline in the same commit:
+
+```
+dotnet format analyzers Reefact.LivingDocumentation.Attributes/Reefact.LivingDocumentation.Attributes.csproj \
+  --diagnostics RS0016 --severity warn
+```
+
+That appends the new entries to `PublicAPI.Unshipped.txt`. A **removal** is
+deleted by hand — deliberately, since a removal is a breaking change and deleting
+the line is the moment to notice it.
+
+The generator does not write the baseline, and must not: a baseline written by
+the thing it checks would always agree with itself, and would rewrite itself to
+match exactly the template change it exists to catch (ADR-0018).
+
+Everything sits in `PublicAPI.Unshipped.txt` today because nothing has been
+published. At the first release the accumulated entries are promoted to
+`PublicAPI.Shipped.txt`.
+
 ## Enabling the commit-message hook
 
 A `commit-msg` hook checks every message against the convention below before it

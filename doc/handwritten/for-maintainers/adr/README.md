@@ -133,3 +133,4 @@ Related ADRs, sources, catalog entries, code.
 | [ADR-0015](0015-turn-a-warning-into-an-error-in-ci.md) | Turn a warning into an error in CI | Proposed |
 | [ADR-0016](0016-prove-the-sources-are-what-the-catalog-generates.md) | Prove on every pull request that the sources are what the catalog generates | Proposed |
 | [ADR-0017](0017-pin-every-action-to-a-commit.md) | Pin every GitHub action to a commit | Proposed |
+| [ADR-0018](0018-hold-the-public-surface-to-a-committed-baseline.md) | Hold the public surface to a committed baseline | Proposed |
