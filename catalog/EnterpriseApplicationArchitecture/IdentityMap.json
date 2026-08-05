@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "IdentityMap",
+  "summary": "A map of the objects already loaded in a session, so that one row never becomes two objects.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "IdentityMap",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The registry consulted before any load. Its purpose is correctness before performance: two objects for one row means two sets of changes, and the second write silently discards the first.",
+      "links": []
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "Gateway",
+  "summary": "An object that encapsulates access to an external system or resource, in terms of the caller's own model.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Gateway",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The face an external resource is reached through. Its interface is designed for the code that calls it rather than for the system behind it, so that the awkwardness of a protocol, a file format or a wire API stops at this type.",
+      "links": []
+    }
+  ]
+}

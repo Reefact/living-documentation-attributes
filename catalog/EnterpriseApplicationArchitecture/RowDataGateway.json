@@ -1,0 +1,26 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "RowDataGateway",
+  "summary": "An object that looks exactly like one record, holding its data and the statements that read and write it.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "specialisationOf": {
+    "catalog": "EnterpriseApplicationArchitecture",
+    "name": "Gateway"
+  },
+  "roles": [
+    {
+      "name": "RowDataGateway",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "One instance per row, with a field per column and no domain logic at all. Any behaviour beyond loading and saving belongs elsewhere — the moment business rules appear on it, it has become an active record instead.",
+      "links": []
+    }
+  ]
+}

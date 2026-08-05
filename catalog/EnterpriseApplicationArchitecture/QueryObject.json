@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "QueryObject",
+  "summary": "An object that represents a query, so that criteria can be built, passed and combined without writing SQL.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "QueryObject",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "A query as a value. Because it is an object rather than a string, it can be built up in steps, handed across a boundary and combined with another — and it lets a repository take criteria without exposing a query language to its callers.",
+      "links": []
+    }
+  ]
+}

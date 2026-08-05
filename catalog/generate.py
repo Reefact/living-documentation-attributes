@@ -234,7 +234,13 @@ def find_samples():
     found = {}
     for path in sorted(glob.glob(os.path.join(REPO, "*Usage*", "**", "*Usage.cs"), recursive=True)):
         name = os.path.basename(path)[: -len("Usage.cs")]
-        found.setdefault(name, os.path.relpath(path, REPO).replace(os.sep, "/"))
+        relative = os.path.relpath(path, REPO).replace(os.sep, "/")
+        # Keyed by catalog AND name, because a name is not unique: ValueObject is held by two catalogs and
+        # Repository by two, and keying on the file name alone linked Fowler's entries to Evans' samples.
+        # The bare name stays as a fallback for a pattern whose sample lives in a sample assembly of its
+        # own, where there is no catalog directory to match on.
+        for key in ((relative.split("/")[1] if relative.count("/") > 1 else None, name), (None, name)):
+            found.setdefault(key, relative)
 
     return found
 
@@ -291,7 +297,7 @@ def index_entry(pattern):
         out += ["", f"**{role['name']}** — {role['summary']}"]
 
     source = f"../../Reefact.LivingDocumentation.Attributes/{pattern['catalog']}/{name}.cs"
-    sample = SAMPLES.get(name)
+    sample = SAMPLES.get((pattern["catalog"], name)) or SAMPLES.get((None, name))
     where = f"[Sample](../../{sample})" if sample else "**no sample**"
     out += ["",
             f"Held by a subtype: {'yes' if pattern['inherited'] else 'no'} · "

@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "Money",
+  "summary": "An amount with a currency, and arithmetic that refuses to mix the two or to lose a penny in a division.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": true,
+  "roles": [
+    {
+      "name": "Money",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "repeatable": false,
+      "summary": "A quantity of money as a value, never a bare decimal. It carries its currency, refuses arithmetic across currencies, and allocates a remainder rather than rounding it away — which is what makes it the pattern rather than a wrapper.",
+      "links": []
+    }
+  ]
+}
