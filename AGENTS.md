@@ -42,6 +42,14 @@ The check has three outcomes — state the result in the pull request descriptio
   silently: flag it in the description — `⚠️ Conflicts with ADR-NNNN (<title>)` —
   with the precise conflict, and let the maintainer decide.
 
+The description is written against
+[`.github/pull_request_template.md`](.github/pull_request_template.md), which
+carries the outcome alongside what changed, what the catalog gained and how it
+was verified. **Read it and fill it in.** GitHub inserts it into the web form
+only: a pull request opened through the API carries whatever body it was given,
+so an agent that does not open the template ships a description that answers
+none of it.
+
 An agent **drafts and proposes**; it never accepts, supersedes or deprecates an
 ADR on its own authority — that is the maintainer's call, exactly as no agent
 merges a pull request. When it is genuinely unclear whether a change is
