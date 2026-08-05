@@ -1,0 +1,124 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+# Cancel superseded runs on the same branch / pull request.
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+# Least privilege: this workflow only checks out and builds, so the token needs
+# nothing beyond read access to the repository contents.
+permissions:
+  contents: read
+
+env:
+  DOTNET_NOLOGO: 'true'
+  DOTNET_CLI_TELEMETRY_OPTOUT: 'true'
+  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 'true'
+
+jobs:
+  build:
+    name: Build & read back (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    # Build plus one sample run finishes in well under a minute; cap a hung runner.
+    timeout-minutes: 15
+    strategy:
+      # Run both legs to completion so a platform-specific failure is always visible.
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+
+      # Two versions on purpose: the 10 SDK builds (LangVersion is latest), and the
+      # 8 runtime runs the sample project, which targets the newest framework the
+      # library supports.
+      - name: Setup .NET
+        uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0
+        with:
+          dotnet-version: |
+            8.0.x
+            10.0.x
+
+      - name: Restore
+        run: dotnet restore Reefact.LivingDocumentation.Attributes.sln
+
+      # The library multi-targets netstandard2.0 through net8.0, so a change that
+      # compiles on the newest target may not compile on the oldest. Building the
+      # solution exercises every one of them.
+      - name: Build
+        run: dotnet build Reefact.LivingDocumentation.Attributes.sln -c Release --no-restore
+
+      # The attributes carry no behaviour, so there is nothing to unit test. What
+      # can be proven is that the whole catalog reads back through the base
+      # attribute alone — the contract of ADR-0004 — which is exactly what the
+      # sample project's inventory does. A role that cannot be applied to a
+      # plausible participant already failed to compile above; this shows the
+      # annotations are also readable.
+      - name: Read the catalog back through the sample project
+        shell: bash
+        run: |
+          set -euo pipefail
+          dotnet run --project Reefact.LivingDocumentation.Attributes.Usage -c Release --no-build > inventory.txt
+          cat inventory.txt
+          # Positive proof, not just exit 0.
+          if ! grep -Eq '^[0-9]+ annotations, covering [0-9]+ patterns and [0-9]+ distinct roles\.$' inventory.txt; then
+            echo "::error::the sample project did not report an inventory"
+            exit 1
+          fi
+          if grep -q '^0 annotations' inventory.txt; then
+            echo "::error::the sample project reported an empty inventory"
+            exit 1
+          fi
+
+  catalog:
+    name: Catalog
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+
+      # No setup-python action: the runner image already carries python3, and the
+      # validator needs nothing beyond it and one pinned package. One fewer action
+      # to pin, review and keep current.
+      - name: Install the validator's dependency
+        run: |
+          python3 --version
+          python3 -m pip install --disable-pip-version-check -r tools/catalog/requirements.txt
+
+      # A schema error is what makes a catalog written in bulk reviewable: a missing
+      # role, an unknown target or a link to a role that does not exist becomes a
+      # failure rather than something to notice by reading (ADR-0002).
+      - name: Validate the catalog
+        run: python3 tools/catalog/validate.py
+
+      # ADR-0002 states that regenerating an unchanged catalog leaves the working
+      # tree clean. That invariant is what keeps the data and the sources from
+      # diverging, and it is the only thing standing between the repository and a
+      # generated attribute quietly edited by hand.
+      - name: Regenerate and prove the sources match the catalog
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 catalog/generate.py
+          if ! git diff --quiet; then
+            echo "::error::regenerating the catalog changed the committed sources"
+            echo
+            echo "Either a generated attribute was edited by hand, or the catalog was"
+            echo "changed without running 'python3 catalog/generate.py'."
+            echo
+            git diff --stat
+            git diff
+            exit 1
+          fi
+          echo "ok: the committed sources are exactly what the catalog generates"

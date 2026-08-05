@@ -129,3 +129,7 @@ Related ADRs, sources, catalog entries, code.
 | [ADR-0011](0011-leave-out-what-cannot-be-annotated.md) | Leave out of the catalog what cannot be annotated | Proposed |
 | [ADR-0012](0012-show-every-pattern-at-work-in-a-business-example.md) | Show every pattern at work in a business example | Proposed |
 | [ADR-0013](0013-shelve-a-pattern-without-a-body-of-work-under-idioms.md) | Shelve a pattern without a body of work of its own under Idioms | Proposed |
+| [ADR-0014](0014-write-commit-messages-to-a-checkable-convention.md) | Write commit messages to a convention a script can check | Proposed |
+| [ADR-0015](0015-turn-a-warning-into-an-error-in-ci.md) | Turn a warning into an error in CI | Proposed |
+| [ADR-0016](0016-prove-the-sources-are-what-the-catalog-generates.md) | Prove on every pull request that the sources are what the catalog generates | Proposed |
+| [ADR-0017](0017-pin-every-action-to-a-commit.md) | Pin every GitHub action to a commit | Proposed |
