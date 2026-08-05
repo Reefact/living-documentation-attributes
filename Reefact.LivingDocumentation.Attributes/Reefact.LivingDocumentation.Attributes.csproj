@@ -10,10 +10,11 @@
          what every role means reach a consumer through this file and nowhere else. -->
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
 
-    <!-- Version. A development placeholder: nothing is published yet, and what a version number MEANS for a
-         vocabulary is not settled — adding a role is additive (ADR-0003) while a pattern moving catalog is
-         breaking (ADR-0013). That policy has to be decided before the first release, together with promoting
-         the API baseline to PublicAPI.Shipped.txt (ADR-0018). -->
+    <!-- Version. A development placeholder until a release tag carries it. Semantic Versioning over TWO
+         contracts — what a consumer compiles against and what it reads back — so a relation between two
+         patterns, or a change to a reading rule, is major even though the public surface is byte-identical.
+         Below 1.0.0 until no catalogued pattern is expected to move catalog, and there the table applies one
+         step down: breaking moves the minor. Policy: ADR-0021; the table: CONTRIBUTING.md. -->
     <Version>0.1.0-dev</Version>
 
     <!-- NuGet identity -->

@@ -72,6 +72,31 @@ Everything sits in `PublicAPI.Unshipped.txt` today because nothing has been
 published. At the first release the accumulated entries are promoted to
 `PublicAPI.Shipped.txt`.
 
+## Versioning
+
+The package follows Semantic Versioning over **two** contracts, not one: what a
+consumer compiles against, and what it reads back. The attributes carry no
+behaviour and the library ships no reader, so a change can leave the public
+surface byte-identical and still change every consumer's answers.
+
+| | |
+|---|---|
+| **Major** | a role or pattern removed or renamed · a target set narrowed · `AllowMultiple` or `Inherited` changed · a pattern moved between catalogs · a relation added, removed or changed in nature · a reading rule changed |
+| **Minor** | a pattern added · a role added to a published pattern · a target set widened · a link added to a role |
+| **Patch** | documentation, samples, the catalog index, anything that reaches no consumer |
+
+The two rows worth reading twice are in the major line. **A relation** — declaring
+that one pattern declines or narrows another — reads as an editorial statement
+about two books and is in fact a change to what `IdentityOf` answers for
+annotations already written. **A reading rule** reads as documentation and is what
+consumers copy.
+
+The version is below `1.0.0` and stays there until no catalogued pattern is
+expected to move catalog: a pattern sits in `Idioms` because no body of work
+claims it yet, and the day one does it moves namespace. Below `1.0.0` the table
+applies one step down — a breaking change moves the minor, everything else the
+patch. Reasoning: ADR-0021.
+
 ## Enabling the commit-message hook
 
 A `commit-msg` hook checks every message against the convention below before it
