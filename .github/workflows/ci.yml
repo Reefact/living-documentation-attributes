@@ -60,6 +60,12 @@ jobs:
       - name: Build
         run: dotnet build Reefact.LivingDocumentation.Attributes.sln -c Release --no-restore
 
+      # Packing is where NuGet checks the package's own metadata — a missing licence, a readme declared and
+      # not packed, an empty lib folder are all NU5xxx warnings, which the ratchet promotes to errors here.
+      # The package is not published by this workflow; producing it is what proves it can be produced.
+      - name: Pack
+        run: dotnet pack Reefact.LivingDocumentation.Attributes/Reefact.LivingDocumentation.Attributes.csproj -c Release --no-build
+
       # The attributes carry no behaviour, so nothing here tests what code does.
       # What these assert is what every generated attribute must LOOK like — it
       # derives from the base, it declares what it applies to, every role of one
