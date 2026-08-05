@@ -15,6 +15,7 @@
         "Interface",
         "Class"
       ],
+      "repeatable": true,
       "summary": "Declares the interface shared by the decorated objects and their decorators.",
       "links": []
     },
@@ -23,6 +24,7 @@
       "targets": [
         "Class"
       ],
+      "repeatable": true,
       "summary": "The object to which responsibilities can be attached.",
       "links": [
         "Component"
@@ -33,6 +35,7 @@
       "targets": [
         "Class"
       ],
+      "repeatable": true,
       "summary": "Holds a component and forwards to it, providing the base for concrete decorators.",
       "links": [
         "Component"
@@ -43,6 +46,7 @@
       "targets": [
         "Class"
       ],
+      "repeatable": true,
       "summary": "Adds one responsibility around the component it wraps.",
       "links": [
         "Decorator"

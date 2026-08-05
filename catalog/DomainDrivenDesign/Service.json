@@ -15,6 +15,7 @@
         "Interface",
         "Class"
       ],
+      "repeatable": true,
       "summary": "A stateless operation of the domain that belongs to no entity nor value object.",
       "links": []
     }

@@ -15,6 +15,7 @@
         "Interface",
         "Class"
       ],
+      "repeatable": true,
       "summary": "Declares the operations for traversing the elements.",
       "links": []
     },
@@ -24,6 +25,7 @@
         "Class",
         "Struct"
       ],
+      "repeatable": true,
       "summary": "Implements the traversal, and keeps track of the current position.",
       "links": [
         "Iterator",
@@ -36,6 +38,7 @@
         "Interface",
         "Class"
       ],
+      "repeatable": true,
       "summary": "Declares the operation that creates an iterator over its elements.",
       "links": []
     },
@@ -44,6 +47,7 @@
       "targets": [
         "Class"
       ],
+      "repeatable": true,
       "summary": "Returns an iterator suited to its own representation.",
       "links": [
         "Aggregate"

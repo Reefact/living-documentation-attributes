@@ -15,6 +15,7 @@
         "Interface",
         "Class"
       ],
+      "repeatable": true,
       "summary": "Declares the interface the client actually uses.",
       "links": []
     },
@@ -23,6 +24,7 @@
       "targets": [
         "Class"
       ],
+      "repeatable": true,
       "summary": "Implements the target interface by delegating to the adaptee and translating the calls.",
       "links": [
         "Target",
@@ -36,6 +38,7 @@
         "Class",
         "Struct"
       ],
+      "repeatable": true,
       "summary": "Holds the behaviour worth reusing, but exposes it through an incompatible interface.",
       "links": []
     }

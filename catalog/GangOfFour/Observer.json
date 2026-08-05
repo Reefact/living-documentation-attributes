@@ -15,6 +15,7 @@
         "Interface",
         "Class"
       ],
+      "repeatable": true,
       "summary": "Knows its observers, and declares the operations to attach and detach them.",
       "links": [
         "Observer"
@@ -25,6 +26,7 @@
       "targets": [
         "Class"
       ],
+      "repeatable": true,
       "summary": "Holds the state of interest, and notifies its observers when it changes.",
       "links": [
         "Subject"
@@ -36,6 +38,7 @@
         "Interface",
         "Class"
       ],
+      "repeatable": true,
       "summary": "Declares the update operation invoked when the observed subject changes.",
       "links": []
     },
@@ -44,6 +47,7 @@
       "targets": [
         "Class"
       ],
+      "repeatable": true,
       "summary": "Reacts to the notification, and keeps itself consistent with the subject.",
       "links": [
         "Observer",
@@ -55,6 +59,7 @@
       "targets": [
         "Method"
       ],
+      "repeatable": false,
       "summary": "The operation that informs every registered observer of a change.",
       "links": []
     },
@@ -63,6 +68,7 @@
       "targets": [
         "Method"
       ],
+      "repeatable": false,
       "summary": "The operation invoked on an observer when the subject has changed.",
       "links": []
     }

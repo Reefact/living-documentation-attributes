@@ -14,6 +14,7 @@
       "targets": [
         "Class"
       ],
+      "repeatable": true,
       "summary": "Holds the current state, and delegates the state dependent behaviour to it.",
       "links": [
         "State"
@@ -25,6 +26,7 @@
         "Interface",
         "Class"
       ],
+      "repeatable": true,
       "summary": "Declares the behaviour that varies with the state of the context.",
       "links": []
     },
@@ -34,6 +36,7 @@
         "Class",
         "Struct"
       ],
+      "repeatable": true,
       "summary": "Implements the behaviour associated with one state of the context.",
       "links": [
         "State"

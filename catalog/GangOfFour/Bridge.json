@@ -15,6 +15,7 @@
         "Class",
         "Interface"
       ],
+      "repeatable": true,
       "summary": "Defines the abstraction's interface and holds a reference to an implementor.",
       "links": [
         "Implementor"
@@ -25,6 +26,7 @@
       "targets": [
         "Class"
       ],
+      "repeatable": true,
       "summary": "Extends the interface defined by the abstraction, without touching the implementation side.",
       "links": [
         "Abstraction"
@@ -36,6 +38,7 @@
         "Interface",
         "Class"
       ],
+      "repeatable": true,
       "summary": "Declares the primitive operations the abstraction is built upon.",
       "links": []
     },
@@ -44,6 +47,7 @@
       "targets": [
         "Class"
       ],
+      "repeatable": true,
       "summary": "Provides one concrete implementation of the primitive operations.",
       "links": [
         "Implementor"

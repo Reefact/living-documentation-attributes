@@ -15,6 +15,7 @@
         "Class",
         "Struct"
       ],
+      "repeatable": true,
       "summary": "A type declaring no dependency on another module, so that reading it requires holding nothing else in mind.",
       "links": []
     }

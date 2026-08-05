@@ -139,8 +139,10 @@ def role_class(pattern, role, indent):
         return declined_role_class(pattern, role, indent)
 
     pad = " " * indent
-    is_member = role["targets"] == ["Method"]
-    allow_multiple = "false" if is_member else "true"
+    # Multiplicity comes from the catalog, not from the targets. Deriving it worked only for as long as the
+    # rule "a member holds its role once, anything else may repeat" happened to hold; an assembly is one
+    # bounded context rather than several, and no rule over target kinds recovers that (ADR-0009).
+    allow_multiple = "true" if role["repeatable"] else "false"
     inherited = "true" if pattern["inherited"] else "false"
 
     out = [doc(role["summary"], indent)]

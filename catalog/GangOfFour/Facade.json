@@ -14,6 +14,7 @@
       "targets": [
         "Class"
       ],
+      "repeatable": true,
       "summary": "Offers the simplified entry point, and knows which subsystem type handles each request.",
       "links": []
     },
@@ -24,6 +25,7 @@
         "Class",
         "Struct"
       ],
+      "repeatable": true,
       "summary": "Does the real work, and knows nothing about the facade.",
       "links": []
     }

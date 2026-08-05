@@ -15,6 +15,7 @@
         "Interface",
         "Class"
       ],
+      "repeatable": true,
       "summary": "Gives collection-like access to aggregates, and hides the storage mechanism.",
       "links": []
     }

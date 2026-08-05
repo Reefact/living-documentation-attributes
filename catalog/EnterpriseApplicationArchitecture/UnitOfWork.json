@@ -15,6 +15,7 @@
         "Interface",
         "Class"
       ],
+      "repeatable": true,
       "summary": "Tracks the changes made during a business transaction, and coordinates writing them out.",
       "links": []
     }

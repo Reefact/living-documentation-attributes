@@ -15,6 +15,7 @@
         "Interface",
         "Class"
       ],
+      "repeatable": true,
       "summary": "Declares the handling operation and, usually, the link to the successor.",
       "links": []
     },
@@ -23,6 +24,7 @@
       "targets": [
         "Class"
       ],
+      "repeatable": true,
       "summary": "Handles the requests it is responsible for, and forwards the others to its successor.",
       "links": [
         "Handler"

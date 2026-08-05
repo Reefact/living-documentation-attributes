@@ -14,6 +14,7 @@
       "targets": [
         "Method"
       ],
+      "repeatable": false,
       "summary": "A method that takes and returns the type it is declared on, so that its results can be fed back into it without leaving the abstraction.",
       "links": []
     }

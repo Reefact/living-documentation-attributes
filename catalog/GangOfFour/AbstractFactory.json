@@ -15,6 +15,7 @@
         "Interface",
         "Class"
       ],
+      "repeatable": true,
       "summary": "Declares the set of operations that create the abstract products of the family.",
       "links": []
     },
@@ -23,6 +24,7 @@
       "targets": [
         "Class"
       ],
+      "repeatable": true,
       "summary": "Implements the creation operations for one coherent family of concrete products.",
       "links": [
         "AbstractFactory"
@@ -34,6 +36,7 @@
         "Interface",
         "Class"
       ],
+      "repeatable": true,
       "summary": "Declares the interface of one kind of product the family produces.",
       "links": []
     },
@@ -43,6 +46,7 @@
         "Class",
         "Struct"
       ],
+      "repeatable": true,
       "summary": "Implements one abstract product, and is created by exactly one concrete factory.",
       "links": [
         "AbstractProduct"

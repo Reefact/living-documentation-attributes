@@ -16,6 +16,7 @@
         "Class",
         "Struct"
       ],
+      "repeatable": true,
       "summary": "An operation whose post-condition is stated, or a type whose invariant is stated and checked rather than assumed.",
       "links": []
     }
