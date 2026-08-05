@@ -50,6 +50,33 @@ Two rules the schema cannot state on its own, and which are worth checking too:
 every name in `links` must be a role of the same pattern, and role names must be
 unique within a pattern.
 
+## Patterns deliberately left out
+
+A pattern named by a body of work and absent from its catalog here reads as an
+oversight. These are decisions, taken for one of two reasons, and recorded so
+that the absence can be told apart from a gap
+([ADR-0011](../doc/handwritten/for-maintainers/adr/0011-leave-out-what-cannot-be-annotated.md)).
+
+**Nothing to attach it to.** C# offers no attribute below the assembly and above
+the type, and a marker type invented to carry one would put an artefact of this
+system into the code it documents.
+
+| Pattern | Work | What it qualifies |
+|---|---|---|
+| Module | Domain-Driven Design | a namespace |
+| Conformist, Customer/Supplier, Partnership, Separate Ways | Domain-Driven Design | the relationship *between* two bounded contexts |
+
+**Nothing a tool could check.** A role licenses no verifiable assertion, so an
+attribute would name it without letting anything range over it — the criterion of
+[ADR-0007](../doc/handwritten/for-maintainers/adr/0007-decide-sameness-by-the-assertions-a-pattern-carries.md),
+applied to whether a pattern belongs here at all.
+
+| Pattern | Work | Why |
+|---|---|---|
+| Intention-Revealing Interfaces | Domain-Driven Design | asks that names come from the ubiquitous language; nothing mechanical distinguishes a good name from a bad one |
+| Conceptual Contours | Domain-Driven Design | a judgement about where a model's seams fall, not a property of a declaration |
+| Ubiquitous Language, Continuous Integration, Evolving Order | Domain-Driven Design | practices of a team, not participants in code |
+
 ## Shape of the generated attribute
 
 A pattern whose single role carries the pattern's own name is emitted flat, so

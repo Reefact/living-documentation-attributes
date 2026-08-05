@@ -1,0 +1,22 @@
+{
+  "catalog": "DomainDrivenDesign",
+  "name": "StandaloneClass",
+  "summary": "A type that can be understood, tested and reasoned about entirely on its own, because it depends on nothing beyond primitives and the values it is given.",
+  "reference": {
+    "author": "Eric Evans",
+    "work": "Domain-Driven Design",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "StandaloneClass",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "summary": "A type declaring no dependency on another module, so that reading it requires holding nothing else in mind.",
+      "links": []
+    }
+  ]
+}

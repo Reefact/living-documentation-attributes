@@ -1,0 +1,32 @@
+{
+  "catalog": "DomainDrivenDesign",
+  "name": "Aggregate",
+  "summary": "A cluster of entities and value objects treated as one unit for the purpose of data changes, with a single root that everything outside the boundary must go through.",
+  "reference": {
+    "author": "Eric Evans",
+    "work": "Domain-Driven Design",
+    "year": 2003
+  },
+  "inherited": true,
+  "roles": [
+    {
+      "name": "Root",
+      "targets": [
+        "Class"
+      ],
+      "summary": "The single entity by which the aggregate is referenced from outside, and the only participant allowed to enforce the invariants that span the boundary.",
+      "links": []
+    },
+    {
+      "name": "Member",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "summary": "A participant living inside the boundary, reachable only through the root and never referenced by anything outside it.",
+      "links": [
+        "Root"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "catalog": "DomainDrivenDesign",
+  "name": "ClosureOfOperation",
+  "summary": "An operation whose argument and return type are the type it is defined on, so that it stays inside its own set of values and introduces no dependency on anything else.",
+  "reference": {
+    "author": "Eric Evans",
+    "work": "Domain-Driven Design",
+    "year": 2003
+  },
+  "inherited": true,
+  "roles": [
+    {
+      "name": "ClosureOfOperation",
+      "targets": [
+        "Method"
+      ],
+      "summary": "A method that takes and returns the type it is declared on, so that its results can be fed back into it without leaving the abstraction.",
+      "links": []
+    }
+  ]
+}
