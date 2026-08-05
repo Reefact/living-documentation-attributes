@@ -2,6 +2,11 @@
   "catalog": "GangOfFour",
   "name": "AbstractFactory",
   "summary": "Provides an interface for creating families of related or dependent objects without specifying their concrete classes.",
+  "reference": {
+    "author": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+    "work": "Design Patterns",
+    "year": 1994
+  },
   "inherited": false,
   "roles": [
     {

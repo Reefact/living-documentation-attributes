@@ -2,6 +2,15 @@
   "catalog": "DomainDrivenDesign",
   "name": "ValueObject",
   "summary": "An object of the domain described only by its values. It carries no identity, it is immutable, and two instances holding the same values are interchangeable.",
+  "reference": {
+    "author": "Eric Evans",
+    "work": "Domain-Driven Design",
+    "year": 2003
+  },
+  "declensionOf": {
+    "catalog": "EnterpriseApplicationArchitecture",
+    "name": "ValueObject"
+  },
   "inherited": true,
   "roles": [
     {

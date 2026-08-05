@@ -2,6 +2,11 @@
   "catalog": "GangOfFour",
   "name": "Composite",
   "summary": "Composes objects into tree structures to represent part-whole hierarchies, and lets clients treat individual objects and compositions uniformly.",
+  "reference": {
+    "author": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+    "work": "Design Patterns",
+    "year": 1994
+  },
   "inherited": false,
   "roles": [
     {

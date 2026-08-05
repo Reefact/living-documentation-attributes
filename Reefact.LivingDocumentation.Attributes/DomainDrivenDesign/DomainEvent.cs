@@ -11,7 +11,12 @@ namespace Reefact.LivingDocumentation.Attributes.DomainDrivenDesign {
     ///     named in the past tense, and it is immutable once raised.
     /// </summary>
     /// <remarks>
-    ///     This pattern has a single role, so there is nothing to choose: the attribute is applied on its own.
+    ///     <para>
+    ///         This pattern has a single role, so there is nothing to choose: the attribute is applied on its own.
+    ///     </para>
+    ///     <para>
+    ///         Eric Evans, <i>Domain-Driven Design</i>, 2003.
+    ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct, AllowMultiple = false, Inherited = true)]
     public sealed class DomainEventAttribute : LivingDocumentationAttribute { }

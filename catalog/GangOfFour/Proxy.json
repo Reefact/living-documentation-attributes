@@ -2,6 +2,11 @@
   "catalog": "GangOfFour",
   "name": "Proxy",
   "summary": "Provides a surrogate or placeholder for another object in order to control access to it.",
+  "reference": {
+    "author": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+    "work": "Design Patterns",
+    "year": 1994
+  },
   "inherited": false,
   "roles": [
     {

@@ -2,6 +2,11 @@
   "catalog": "GangOfFour",
   "name": "Prototype",
   "summary": "Specifies the kinds of objects to create using a prototypical instance, and creates new objects by copying that prototype.",
+  "reference": {
+    "author": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+    "work": "Design Patterns",
+    "year": 1994
+  },
   "inherited": false,
   "roles": [
     {

@@ -11,8 +11,13 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
     ///     separating the state that can be shared from the state that cannot.
     /// </summary>
     /// <remarks>
-    ///     Annotate the declaration that introduces the role. When a role is introduced by an interface, annotate that
-    ///     interface rather than each of its implementations.
+    ///     <para>
+    ///         Annotate the declaration that introduces the role. When a role is introduced by an interface, annotate
+    ///         that interface rather than each of its implementations.
+    ///     </para>
+    ///     <para>
+    ///         Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides, <i>Design Patterns</i>, 1994.
+    ///     </para>
     /// </remarks>
     public static class Flyweight {
 

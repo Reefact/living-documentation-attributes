@@ -2,6 +2,11 @@
   "catalog": "GangOfFour",
   "name": "FactoryMethod",
   "summary": "Defines an interface for creating an object, but lets subclasses decide which class to instantiate, deferring instantiation to them.",
+  "reference": {
+    "author": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+    "work": "Design Patterns",
+    "year": 1994
+  },
   "inherited": false,
   "roles": [
     {

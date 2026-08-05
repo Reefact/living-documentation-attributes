@@ -2,6 +2,11 @@
   "catalog": "DomainDrivenDesign",
   "name": "Entity",
   "summary": "An object of the domain defined by a thread of continuity and identity, rather than by its attributes: two entities with equal attributes remain distinct.",
+  "reference": {
+    "author": "Eric Evans",
+    "work": "Domain-Driven Design",
+    "year": 2003
+  },
   "inherited": true,
   "roles": [
     {

@@ -2,6 +2,11 @@
   "catalog": "GangOfFour",
   "name": "Iterator",
   "summary": "Provides a way to access the elements of an aggregate object sequentially, without exposing its underlying representation.",
+  "reference": {
+    "author": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+    "work": "Design Patterns",
+    "year": 1994
+  },
   "inherited": false,
   "roles": [
     {

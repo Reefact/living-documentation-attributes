@@ -2,6 +2,11 @@
   "catalog": "GangOfFour",
   "name": "Interpreter",
   "summary": "Given a language, defines a representation for its grammar together with an interpreter that uses that representation to interpret sentences of the language.",
+  "reference": {
+    "author": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+    "work": "Design Patterns",
+    "year": 1994
+  },
   "inherited": false,
   "roles": [
     {

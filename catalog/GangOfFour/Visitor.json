@@ -2,6 +2,11 @@
   "catalog": "GangOfFour",
   "name": "Visitor",
   "summary": "Represents an operation to be performed on the elements of an object structure, and lets a new operation be defined without changing the classes of those elements.",
+  "reference": {
+    "author": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+    "work": "Design Patterns",
+    "year": 1994
+  },
   "inherited": false,
   "roles": [
     {

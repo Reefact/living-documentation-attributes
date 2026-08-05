@@ -2,6 +2,11 @@
   "catalog": "GangOfFour",
   "name": "TemplateMethod",
   "summary": "Defines the skeleton of an algorithm in an operation, deferring some steps to subclasses so they can redefine them without changing the algorithm's structure.",
+  "reference": {
+    "author": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+    "work": "Design Patterns",
+    "year": 1994
+  },
   "inherited": false,
   "roles": [
     {

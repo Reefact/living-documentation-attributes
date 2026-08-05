@@ -2,6 +2,11 @@
   "catalog": "GangOfFour",
   "name": "State",
   "summary": "Lets an object alter its behaviour when its internal state changes, so that it appears to change its class.",
+  "reference": {
+    "author": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+    "work": "Design Patterns",
+    "year": 1994
+  },
   "inherited": false,
   "roles": [
     {

@@ -2,6 +2,11 @@
   "catalog": "GangOfFour",
   "name": "Command",
   "summary": "Encapsulates a request as an object, letting callers be parameterized with different requests, and letting requests be queued, logged or undone.",
+  "reference": {
+    "author": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+    "work": "Design Patterns",
+    "year": 1994
+  },
   "inherited": false,
   "roles": [
     {

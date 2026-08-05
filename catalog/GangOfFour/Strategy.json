@@ -2,6 +2,11 @@
   "catalog": "GangOfFour",
   "name": "Strategy",
   "summary": "Defines a family of interchangeable algorithms, encapsulates each one, and lets the algorithm vary independently from the clients that use it.",
+  "reference": {
+    "author": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+    "work": "Design Patterns",
+    "year": 1994
+  },
   "inherited": false,
   "roles": [
     {

@@ -11,7 +11,12 @@ namespace Reefact.LivingDocumentation.Attributes.GangOfFour {
     ///     it.
     /// </summary>
     /// <remarks>
-    ///     This pattern has a single role, so there is nothing to choose: the attribute is applied on its own.
+    ///     <para>
+    ///         This pattern has a single role, so there is nothing to choose: the attribute is applied on its own.
+    ///     </para>
+    ///     <para>
+    ///         Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides, <i>Design Patterns</i>, 1994.
+    ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
     public sealed class SingletonAttribute : LivingDocumentationAttribute { }

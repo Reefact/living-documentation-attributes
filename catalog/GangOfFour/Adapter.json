@@ -2,6 +2,11 @@
   "catalog": "GangOfFour",
   "name": "Adapter",
   "summary": "Converts the interface of a type into the interface a client expects, letting types collaborate that could not otherwise because of incompatible interfaces.",
+  "reference": {
+    "author": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+    "work": "Design Patterns",
+    "year": 1994
+  },
   "inherited": false,
   "roles": [
     {

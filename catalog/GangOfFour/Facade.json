@@ -2,6 +2,11 @@
   "catalog": "GangOfFour",
   "name": "Facade",
   "summary": "Provides a single, higher level interface to a set of interfaces in a subsystem, making that subsystem easier to use.",
+  "reference": {
+    "author": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+    "work": "Design Patterns",
+    "year": 1994
+  },
   "inherited": false,
   "roles": [
     {

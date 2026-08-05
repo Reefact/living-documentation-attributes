@@ -2,6 +2,11 @@
   "catalog": "DomainDrivenDesign",
   "name": "Service",
   "summary": "An operation of the domain that does not naturally belong to an entity or to a value object, exposed as a standalone, stateless interface.",
+  "reference": {
+    "author": "Eric Evans",
+    "work": "Domain-Driven Design",
+    "year": 2003
+  },
   "inherited": true,
   "roles": [
     {

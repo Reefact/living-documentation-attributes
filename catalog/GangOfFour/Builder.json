@@ -2,6 +2,11 @@
   "catalog": "GangOfFour",
   "name": "Builder",
   "summary": "Separates the construction of a complex object from its representation, so that the same construction process can produce different representations.",
+  "reference": {
+    "author": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+    "work": "Design Patterns",
+    "year": 1994
+  },
   "inherited": false,
   "roles": [
     {

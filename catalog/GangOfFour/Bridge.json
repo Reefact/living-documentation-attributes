@@ -2,6 +2,11 @@
   "catalog": "GangOfFour",
   "name": "Bridge",
   "summary": "Decouples an abstraction from its implementation so that the two can vary independently.",
+  "reference": {
+    "author": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+    "work": "Design Patterns",
+    "year": 1994
+  },
   "inherited": false,
   "roles": [
     {

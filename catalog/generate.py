@@ -25,7 +25,58 @@ CATALOG_LABEL = {
     "GangOfFour": "Gang of Four",
     "DomainDrivenDesign": "Domain-Driven Design",
     "EnterpriseApplicationArchitecture": "Patterns of Enterprise Application Architecture",
+    "Idioms": "no catalog of its own",
 }
+
+
+def relation(pattern):
+    """The pattern this one derives from, if any, with the nature of the relation."""
+    if "declensionOf" in pattern:
+        return pattern["declensionOf"], "declension"
+    if "specialisationOf" in pattern:
+        return pattern["specialisationOf"], "specialisation"
+    return None, None
+
+
+def base_of(pattern):
+    """What the generated attribute inherits from."""
+    target, _ = relation(pattern)
+    if target is None:
+        return "LivingDocumentationAttribute"
+    return f"{target['catalog']}.{target['name']}Attribute"
+
+
+def relation_doc(pattern):
+    target, nature = relation(pattern)
+    if target is None:
+        return None
+    label = CATALOG_LABEL[target["catalog"]]
+    if nature == "declension":
+        return (f"The same pattern as {target['name']}, in {label}, which published it first and holds its "
+                f"definition. Written from either catalog, an annotation resolves to that one identity — so a "
+                f"reader of this catalog finds the pattern where it looks for it, without the two spellings "
+                f"drifting apart.")
+    return (f"A narrower case of {target['name']}, in {label}: every participant annotated here is one of those "
+            f"too, and a consumer asking for the broader pattern gets these as well.")
+
+
+def reference_doc(pattern):
+    ref = pattern["reference"]
+    return f"{ref['author']}, <i>{ref['work']}</i>, {ref['year']}."
+
+
+def remarks(paragraphs, indent):
+    """A single <remarks> block, one <para> per paragraph."""
+    pad = " " * indent
+    lines = [f"{pad}/// <remarks>"]
+    for paragraph in paragraphs:
+        if paragraph is None:
+            continue
+        lines.append(f"{pad}///     <para>")
+        lines += [f"{pad}///         {line}" for line in textwrap.wrap(paragraph, width=108 - indent)]
+        lines.append(f"{pad}///     </para>")
+    lines.append(f"{pad}/// </remarks>")
+    return "\n".join(lines)
 
 
 def doc(text, indent, tag="summary"):
@@ -86,11 +137,17 @@ def flat_attribute(pattern):
 
     out = header(pattern["catalog"])
     out.append(doc(f"{name} ({CATALOG_LABEL[pattern['catalog']]}) — {pattern['summary']}", 4))
-    out.append(doc("This pattern has a single role, so there is nothing to choose: the attribute is applied "
-                   "on its own.", 4, tag="remarks"))
-    out.append(f"    [AttributeUsage({targets(pattern['roles'][0]['targets'])}, "
-               f"AllowMultiple = false, Inherited = {inherited})]")
-    out.append(f"    public sealed class {name}Attribute : LivingDocumentationAttribute {{ }}")
+    out.append(remarks(["This pattern has a single role, so there is nothing to choose: the attribute is "
+                        "applied on its own.",
+                        relation_doc(pattern),
+                        reference_doc(pattern)], 4))
+    if relation(pattern)[0] is None:
+        out.append(f"    [AttributeUsage({targets(pattern['roles'][0]['targets'])}, "
+                   f"AllowMultiple = false, Inherited = {inherited})]")
+    else:
+        out.append("    // AttributeUsage is inherited from the pattern this one derives from, on purpose: the two "
+                   "spellings cannot end up accepting different targets.")
+    out.append(f"    public {pattern['_modifier']}class {name}Attribute : {base_of(pattern)} {{ }}")
     out.append("")
     out.append("}")
     return "\n".join(out) + "\n"
@@ -102,8 +159,9 @@ def nested_container(pattern):
 
     out = header(pattern["catalog"])
     out.append(doc(f"{name} ({CATALOG_LABEL[pattern['catalog']]}) — {pattern['summary']}", 4))
-    out.append(doc("Annotate the declaration that introduces the role. When a role is introduced by an interface, "
-                   "annotate that interface rather than each of its implementations.", 4, tag="remarks"))
+    out.append(remarks(["Annotate the declaration that introduces the role. When a role is introduced by an "
+                        "interface, annotate that interface rather than each of its implementations.",
+                        reference_doc(pattern)], 4))
     out.append(f"    public static class {name} {{")
     out.append("")
     out.append(doc(f"Role played by a type or a member in the {name} design pattern.", 8))
@@ -127,6 +185,17 @@ def main():
     for path in sorted(glob.glob(os.path.join(HERE, "*", "*.json"))):
         with open(path, encoding="utf-8") as handle:
             patterns.append(json.load(handle))
+
+    derived_from = set()
+    for pattern in patterns:
+        target, _ = relation(pattern)
+        if target is not None:
+            derived_from.add((target["catalog"], target["name"]))
+    for pattern in patterns:
+        pattern["_modifier"] = "" if (pattern["catalog"], pattern["name"]) in derived_from else "sealed "
+        if relation(pattern)[0] is not None and not is_single_role(pattern):
+            raise SystemExit(f"{pattern['name']}: a declension or specialisation of a multi-role pattern "
+                             f"is not generated yet")
 
     for pattern in patterns:
         folder = os.path.join(ROOT, pattern["catalog"])

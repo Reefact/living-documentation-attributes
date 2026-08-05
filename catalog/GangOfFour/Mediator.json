@@ -2,6 +2,11 @@
   "catalog": "GangOfFour",
   "name": "Mediator",
   "summary": "Defines an object that encapsulates how a set of objects interact, keeping them from referring to each other explicitly.",
+  "reference": {
+    "author": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+    "work": "Design Patterns",
+    "year": 1994
+  },
   "inherited": false,
   "roles": [
     {
