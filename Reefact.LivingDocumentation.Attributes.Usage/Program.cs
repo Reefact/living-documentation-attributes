@@ -65,8 +65,12 @@ namespace Reefact.LivingDocumentation.Attributes.Usage {
         }
 
         private static void PrintCatalogUsage(IReadOnlyCollection<Annotation> annotations) {
-            int patterns = annotations.Select(a => PatternInfo.PatternNameOf(a.Attribute)).Distinct().Count();
-            int roles    = annotations.Select(a => PatternInfo.PatternNameOf(a.Attribute) + "." + PatternInfo.RoleNameOf(a.Attribute)).Distinct().Count();
+            // Counted by identity, never by name. Two catalogs may spell one name over two unrelated
+            // patterns — ValueObject is held by both Domain-Driven Design and Enterprise Application
+            // Architecture, Adapter and Command by two catalogs each — and counting names reports
+            // them as one, which is the failure PatternInfo.IdentityOf exists to prevent.
+            int patterns = annotations.Select(a => PatternInfo.IdentityOf(a.Attribute)).Distinct().Count();
+            int roles    = annotations.Select(a => (PatternInfo.IdentityOf(a.Attribute), PatternInfo.RoleNameOf(a.Attribute))).Distinct().Count();
 
             Console.WriteLine();
             Console.WriteLine("".PadRight(96, '═'));
