@@ -71,6 +71,9 @@ system into the code it documents.
 |---|---|---|
 | Module | Domain-Driven Design | a namespace |
 | Conformist, Customer/Supplier, Partnership, Separate Ways | Domain-Driven Design | the relationship *between* two bounded contexts |
+| Context Map | Domain-Driven Design | the whole landscape — it is what you draw *from* the annotations |
+| Segregated Core, Abstract Core, Highlighted Core, Distillation Document | Domain-Driven Design | an act of refactoring, or a document; what they produce is already expressible, a distilled core being an assembly annotated `CoreDomain` |
+| Guard Clause | — | a shape a method body takes; nothing holds a role in it |
 
 **Nothing a tool could check.** A role licenses no verifiable assertion, so an
 attribute would name it without letting anything range over it — the criterion of
@@ -82,6 +85,12 @@ applied to whether a pattern belongs here at all.
 | Intention-Revealing Interfaces | Domain-Driven Design | asks that names come from the ubiquitous language; nothing mechanical distinguishes a good name from a bad one |
 | Conceptual Contours | Domain-Driven Design | a judgement about where a model's seams fall, not a property of a declaration |
 | Ubiquitous Language, Continuous Integration, Evolving Order | Domain-Driven Design | practices of a team, not participants in code |
+
+**Not settled either way.** Responsibility Layers, Knowledge Level and Pluggable
+Component Framework could each plausibly be attached to something. They are absent
+because nobody has written down the assertions they would license, not because they
+were judged unannotable — the criterion for opening them is the one above, applied
+honestly.
 
 ## Shape of the generated attribute
 
@@ -105,24 +114,27 @@ A role targeting `Method` is a member role. Nothing else distinguishes it: it is
 generated exactly like the others, and consumers tell them apart by reading
 `AttributeUsage`.
 
-## What is deliberately not here
+## Held back for want of a source
 
-A pattern that cannot be attached to a type, a member or an assembly does not
-enter the catalog (ADR-0011): an entry nothing can carry is an entry nothing can
-check, and inventing a marker type to hold it would put an artefact of the
-documentation system into the code being documented.
+`Idioms` is for a pattern that has a **source** but no body of work of its own
+(ADR-0013) — it names the absence of a catalog, not the absence of a source, and
+every entry must record a reference with a year, because that reference is what
+orders a declension (ADR-0006).
 
-The strategic patterns of Domain-Driven Design are where that bites hardest, so
-the exclusions are listed rather than left to look like oversights.
+Two everyday practices fail that, and one of them is named in ADR-0013 itself as
+the example of an Idioms candidate:
 
-| Left out | Why |
+| Held back | What was looked for, and found |
 |---|---|
-| Conformist · Customer/Supplier · Partnership · Separate Ways | Each qualifies the **relationship** between two bounded contexts. A relationship is not a type, a member or an assembly — there is nothing to annotate, and a property naming "the other end" would be a link to an assembly that no compiler checks. |
-| Context Map | A description of the whole landscape, not a participant in it. It is what you draw *from* the annotations — one of the outputs this catalog exists to make possible. |
-| Ubiquitous Language | A practice, carried by conversation and by the names already in the code. Annotating it would mean annotating everything. |
-| Segregated Core · Abstract Core · Highlighted Core · Distillation Document | Refactorings and documents. What they produce is already expressible — a distilled core is an assembly annotated `CoreDomain` — so the pattern names an act rather than a participant. |
-| Responsibility Layers · Evolving Order · Knowledge Level · Pluggable Component Framework | Large-scale structures. Each could plausibly be attached to something, and none has been settled: they are absent because the assertions each would license have not been written down (ADR-0007), not because they were judged unannotable. |
+| `Result` | No publication names it as a pattern. Its lineage runs through Haskell's `Either` — a general sum type, not error handling — and Rust's `Result`, a standard-library type rather than a named pattern. Recording either as *the work that named it* would be false. |
+| `Option` / `Maybe` | Same shape of problem, with a better-looking answer that does not survive inspection: `option` is defined in *The Definition of Standard ML* and `Maybe` in the Haskell report, but those works define a **type**, not a pattern, and neither is a body of work about patterns. |
 
-The last row is the one to revisit. The others are closed by ADR-0011; those are
-open, and the criterion for opening them is the same as for any entry — write the
-rule the annotation would license, and see whether anything could check it.
+Both would be useful entries. Admitting them means one of two things, and neither
+is a detail: find a publication that genuinely named the practice, or decide that
+`Idioms` may hold a pattern whose provenance is a lineage rather than a work —
+which is a change to ADR-0013 and to the schema's required reference, and belongs
+in a record of its own rather than in a catalog entry written quietly.
+
+`GuardClause` was looked at with them and is closed rather than held back: it is a
+shape a method body takes, so nothing holds a role and nothing can be asserted
+about a participant (ADR-0011).

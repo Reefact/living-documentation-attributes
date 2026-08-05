@@ -15,7 +15,7 @@
         "Interface",
         "Class"
       ],
-      "repeatable": true,
+      "repeatable": false,
       "summary": "The protocol a subsystem offers to all comers. It is designed once for many consumers, which is what distinguishes it from an integration built for one — and enhanced for a particular consumer only through an extension that does not disturb the others.",
       "links": []
     }

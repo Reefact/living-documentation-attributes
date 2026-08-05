@@ -57,6 +57,8 @@ Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.StandaloneClassAttribu
 Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.StandaloneClassAttribute.StandaloneClassAttribute() -> void
 Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.ValueObjectAttribute
 Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.ValueObjectAttribute.ValueObjectAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture.SpecialCaseAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture.SpecialCaseAttribute.SpecialCaseAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture.UnitOfWorkAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture.UnitOfWorkAttribute.UnitOfWorkAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture.ValueObjectAttribute
@@ -403,5 +405,9 @@ Reefact.LivingDocumentation.Attributes.GangOfFour.Visitor.VisitMethodAttribute.C
 Reefact.LivingDocumentation.Attributes.GangOfFour.Visitor.VisitMethodAttribute.VisitMethodAttribute() -> void
 Reefact.LivingDocumentation.Attributes.GangOfFour.Visitor.VisitorAttribute
 Reefact.LivingDocumentation.Attributes.GangOfFour.Visitor.VisitorAttribute.VisitorAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Idioms.NullObjectAttribute
+Reefact.LivingDocumentation.Attributes.Idioms.NullObjectAttribute.NullObjectAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Idioms.ObjectMotherAttribute
+Reefact.LivingDocumentation.Attributes.Idioms.ObjectMotherAttribute.ObjectMotherAttribute() -> void
 Reefact.LivingDocumentation.Attributes.LivingDocumentationAttribute
 Reefact.LivingDocumentation.Attributes.LivingDocumentationAttribute.LivingDocumentationAttribute() -> void

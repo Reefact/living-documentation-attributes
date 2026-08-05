@@ -35,9 +35,10 @@ architecture" from a claim into something a build can check.
 |---|---|---|
 | `GangOfFour` | 23 | Gamma, Helm, Johnson, Vlissides — *Design Patterns*, 1994 |
 | `DomainDrivenDesign` | 19 | Evans — *Domain-Driven Design*, 2003 |
-| `EnterpriseApplicationArchitecture` | 2 | Fowler — *Patterns of Enterprise Application Architecture*, 2002 |
+| `EnterpriseApplicationArchitecture` | 3 | Fowler — *Patterns of Enterprise Application Architecture*, 2002 |
+| `Idioms` | 2 | patterns with a source but no catalog of their own — each entry names its own |
 
-**44 patterns, 110 roles** today, and the catalog is meant to grow by an order of
+**47 patterns, 113 roles** today, and the catalog is meant to grow by an order of
 magnitude. A pattern is catalogued where the work that named it put it, under the
 name that work gave it — so a reader of a book finds its patterns spelled as it
 spelled them.
@@ -139,7 +140,7 @@ never by their names.
 Almost nothing this library decides is defended by the compiler, and the
 attributes are generated from a catalog, so a reader of the output cannot tell a
 decided trait from an incidental one. The reasoning is kept in the
-[ADR base](doc/handwritten/for-maintainers/adr/) — 21 records, English
+[ADR base](doc/handwritten/for-maintainers/adr/) — 22 records, English
 canonical with a French translation alongside — and that is where to look when a
 shape seems arbitrary.
 
