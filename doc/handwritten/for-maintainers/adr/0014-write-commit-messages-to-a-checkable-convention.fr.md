@@ -2,8 +2,9 @@
 
 🌍 🇬🇧 [English](0014-write-commit-messages-to-a-checkable-convention.md) · 🇫🇷 Français (ce fichier)
 
-**Statut :** Proposé
+**Statut :** Accepté
 **Proposé :** 2026-08-05
+**Accepté :** 2026-08-05
 **Décideurs :** Reefact
 
 ## Contexte

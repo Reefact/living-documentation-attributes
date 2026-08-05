@@ -2,8 +2,9 @@
 
 🌍 🇬🇧 [English](0009-let-each-role-declare-what-it-applies-to.md) · 🇫🇷 Français (ce fichier)
 
-**Statut :** Proposé
+**Statut :** Accepté
 **Proposé :** 2026-08-05
+**Accepté :** 2026-08-05
 **Décideurs :** Reefact
 
 ## Contexte

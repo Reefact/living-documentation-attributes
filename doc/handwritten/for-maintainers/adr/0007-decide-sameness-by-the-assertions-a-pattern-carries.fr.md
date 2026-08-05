@@ -2,8 +2,9 @@
 
 🌍 🇬🇧 [English](0007-decide-sameness-by-the-assertions-a-pattern-carries.md) · 🇫🇷 Français (ce fichier)
 
-**Statut :** Proposé
+**Statut :** Accepté
 **Proposé :** 2026-08-05
+**Accepté :** 2026-08-05
 **Décideurs :** Reefact
 
 ## Contexte

@@ -2,8 +2,9 @@
 
 🌍 🇬🇧 [English](0003-give-each-role-its-own-attribute-nested-in-its-pattern.md) · 🇫🇷 Français (ce fichier)
 
-**Statut :** Proposé
+**Statut :** Accepté
 **Proposé :** 2026-08-05
+**Accepté :** 2026-08-05
 **Décideurs :** Reefact
 
 ## Contexte
