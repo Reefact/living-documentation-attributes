@@ -32,8 +32,8 @@ an unchanged catalog leaves the working tree clean.
 
 ## Changing the catalog
 
-Never hand-edit a generated attribute. Edit `catalog/<Catalog>/<Pattern>.json`,
-then:
+Never hand-edit a generated attribute, nor the catalog index. Edit
+`catalog/<Catalog>/<Pattern>.json`, then:
 
 ```
 python3 catalog/generate.py

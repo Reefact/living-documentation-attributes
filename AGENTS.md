@@ -76,7 +76,8 @@ it, rather than rediscovering them:
 
 1. Edit or add the entry under `catalog/<Catalog>/<Pattern>.json`. It must satisfy
    `catalog/pattern.schema.json`, including its `reference` with a year.
-2. Regenerate: `python3 catalog/generate.py`. Regenerating an **unchanged**
+2. Regenerate: `python3 catalog/generate.py`. It rewrites the attribute sources
+   **and** `doc/generated/catalog-index.md`. Regenerating an **unchanged**
    catalog must leave the working tree clean — if it does not, a generated file
    was edited by hand.
 3. Add or update the sample in
