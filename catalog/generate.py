@@ -141,12 +141,16 @@ def flat_attribute(pattern):
                         "applied on its own.",
                         relation_doc(pattern),
                         reference_doc(pattern)], 4))
-    if relation(pattern)[0] is None:
+    _, nature = relation(pattern)
+    if nature == "declension":
+        # One pattern, two spellings: they must not end up accepting different targets, so the declension
+        # inherits AttributeUsage instead of restating it, and says what it is.
+        out.append("    [Declension]")
+    else:
+        # A specialisation is a pattern of its own, and may legitimately accept fewer targets than the
+        # pattern that contains it.
         out.append(f"    [AttributeUsage({targets(pattern['roles'][0]['targets'])}, "
                    f"AllowMultiple = false, Inherited = {inherited})]")
-    else:
-        out.append("    // AttributeUsage is inherited from the pattern this one derives from, on purpose: the two "
-                   "spellings cannot end up accepting different targets.")
     out.append(f"    public {pattern['_modifier']}class {name}Attribute : {base_of(pattern)} {{ }}")
     out.append("")
     out.append("}")

@@ -1,5 +1,7 @@
 #region Usings declarations
 
+using System.Reflection;
+
 using Reefact.LivingDocumentation.Attributes;
 
 #endregion
@@ -70,17 +72,34 @@ namespace Reefact.LivingDocumentation.Attributes.Usage {
         }
 
         /// <summary>
-        ///     The type that defines the pattern an annotation belongs to. Group by this.
+        ///     The pattern an annotation belongs to. Group by this.
         /// </summary>
         /// <remarks>
-        ///     Never group by the pattern name: <c>Adapter</c> names one pattern in Gang of Four and another in ports
-        ///     and adapters, and grouping by name would silently merge them. Every role of one pattern resolves to the
-        ///     same type here, and a declension resolves to the definition it derives from.
+        ///     <para>
+        ///         Never group by the pattern name: <c>Adapter</c> names one pattern in Gang of Four and another in
+        ///         ports and adapters, and grouping by name would silently merge two unrelated things.
+        ///     </para>
+        ///     <para>
+        ///         The walk climbs through what belongs to one pattern and stops where a new one begins. It goes up
+        ///         through an abstract base, which is the container a multi-role pattern is written in, so every role
+        ///         of a pattern answers the same type. It goes up through a
+        ///         <see cref="DeclensionAttribute">declension</see>, since that is the same pattern spelled by another
+        ///         catalog. It stops at anything else, because a specialisation derives from a broader pattern without
+        ///         being it: a value object of Evans is a value object of Fowler, and is still a pattern of its own.
+        ///     </para>
         /// </remarks>
-        public static Type IdentityOf(LivingDocumentationAttribute annotation) {
-            Type current = annotation.GetType();
-            while (current.BaseType is not null && current.BaseType != typeof(LivingDocumentationAttribute)) {
-                current = current.BaseType;
+        public static Type IdentityOf(LivingDocumentationAttribute annotation) => IdentityOf(annotation.GetType());
+
+        /// <inheritdoc cref="IdentityOf(LivingDocumentationAttribute)" />
+        public static Type IdentityOf(Type attributeType) {
+            Type current = attributeType;
+
+            while (current.BaseType is { } parent && parent != typeof(LivingDocumentationAttribute)) {
+                bool sameParentPattern = parent.IsAbstract;
+                bool sameSpelledPattern = current.GetCustomAttribute<DeclensionAttribute>(false) is not null;
+                if (!sameParentPattern && !sameSpelledPattern) { break; }
+
+                current = parent;
             }
 
             return current;
