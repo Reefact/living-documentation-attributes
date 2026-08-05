@@ -15,6 +15,7 @@
         "Interface",
         "Class"
       ],
+      "repeatable": true,
       "summary": "Encapsulates the creation of a complex object or of a whole aggregate.",
       "links": []
     }

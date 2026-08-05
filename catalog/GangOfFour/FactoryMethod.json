@@ -15,6 +15,7 @@
         "Class",
         "Interface"
       ],
+      "repeatable": true,
       "summary": "Declares the factory method and, usually, calls it to obtain a product.",
       "links": []
     },
@@ -23,6 +24,7 @@
       "targets": [
         "Class"
       ],
+      "repeatable": true,
       "summary": "Overrides the factory method to return an instance of a concrete product.",
       "links": [
         "Creator",
@@ -35,6 +37,7 @@
         "Interface",
         "Class"
       ],
+      "repeatable": true,
       "summary": "Declares the interface of the objects the factory method creates.",
       "links": []
     },
@@ -44,6 +47,7 @@
         "Class",
         "Struct"
       ],
+      "repeatable": true,
       "summary": "Implements the product interface.",
       "links": [
         "Product"
@@ -54,6 +58,7 @@
       "targets": [
         "Method"
       ],
+      "repeatable": false,
       "summary": "The operation that creates the product, and which subclasses override.",
       "links": []
     }

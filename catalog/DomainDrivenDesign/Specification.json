@@ -15,6 +15,7 @@
         "Interface",
         "Class"
       ],
+      "repeatable": true,
       "summary": "States a business predicate as an explicit, combinable object.",
       "links": []
     }

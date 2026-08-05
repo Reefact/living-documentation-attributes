@@ -15,6 +15,7 @@
         "Interface",
         "Class"
       ],
+      "repeatable": true,
       "summary": "Declares the step by step construction operations.",
       "links": []
     },
@@ -23,6 +24,7 @@
       "targets": [
         "Class"
       ],
+      "repeatable": true,
       "summary": "Implements the construction steps and keeps track of the representation it builds.",
       "links": [
         "Builder",
@@ -34,6 +36,7 @@
       "targets": [
         "Class"
       ],
+      "repeatable": true,
       "summary": "Drives the construction sequence through the builder interface.",
       "links": [
         "Builder"
@@ -45,6 +48,7 @@
         "Class",
         "Struct"
       ],
+      "repeatable": true,
       "summary": "The complex object under construction.",
       "links": []
     }

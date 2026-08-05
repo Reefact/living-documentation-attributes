@@ -86,6 +86,7 @@
       "required": [
         "name",
         "targets",
+        "repeatable",
         "summary",
         "links"
       ],
@@ -109,6 +110,10 @@
               "Assembly"
             ]
           }
+        },
+        "repeatable": {
+          "description": "Whether one declaration can hold the role more than once. A type can play one role in two occurrences of a pattern, so a type role is usually repeatable; a member holds a member role once, and an assembly is one bounded context rather than several. Stated per role rather than derived from the targets, because it is a fact about the pattern (ADR-0009).",
+          "type": "boolean"
         },
         "summary": {
           "description": "What this participant does within the pattern, in one sentence. Becomes the XML documentation of the attribute, and is what a reader sees in IntelliSense when choosing a role.",

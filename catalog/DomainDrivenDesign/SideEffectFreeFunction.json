@@ -14,6 +14,7 @@
       "targets": [
         "Method"
       ],
+      "repeatable": false,
       "summary": "A method that returns a result and modifies no observable state, neither of its own object nor of anything it reaches.",
       "links": []
     }

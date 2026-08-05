@@ -14,6 +14,7 @@
       "targets": [
         "Class"
       ],
+      "repeatable": true,
       "summary": "The single entity by which the aggregate is referenced from outside, and the only participant allowed to enforce the invariants that span the boundary.",
       "links": []
     },
@@ -23,6 +24,7 @@
         "Class",
         "Struct"
       ],
+      "repeatable": true,
       "summary": "A participant living inside the boundary, reachable only through the root and never referenced by anything outside it.",
       "links": [
         "Root"

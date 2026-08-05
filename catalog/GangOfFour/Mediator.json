@@ -15,6 +15,7 @@
         "Interface",
         "Class"
       ],
+      "repeatable": true,
       "summary": "Declares the interface through which colleagues communicate.",
       "links": []
     },
@@ -23,6 +24,7 @@
       "targets": [
         "Class"
       ],
+      "repeatable": true,
       "summary": "Knows the colleagues and coordinates their interactions.",
       "links": [
         "Mediator"
@@ -34,6 +36,7 @@
         "Interface",
         "Class"
       ],
+      "repeatable": true,
       "summary": "Communicates with the other participants only through the mediator.",
       "links": [
         "Mediator"
@@ -44,6 +47,7 @@
       "targets": [
         "Class"
       ],
+      "repeatable": true,
       "summary": "One participant of the interaction.",
       "links": [
         "Colleague"

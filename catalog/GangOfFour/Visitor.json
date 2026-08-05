@@ -15,6 +15,7 @@
         "Interface",
         "Class"
       ],
+      "repeatable": true,
       "summary": "Declares one visit operation per concrete element of the structure.",
       "links": []
     },
@@ -23,6 +24,7 @@
       "targets": [
         "Class"
       ],
+      "repeatable": true,
       "summary": "Implements the visit operations: this is where the added algorithm lives.",
       "links": [
         "Visitor"
@@ -34,6 +36,7 @@
         "Interface",
         "Class"
       ],
+      "repeatable": true,
       "summary": "Declares the entry point of the double dispatch.",
       "links": []
     },
@@ -43,6 +46,7 @@
         "Class",
         "Struct"
       ],
+      "repeatable": true,
       "summary": "Dispatches to the visit operation that corresponds to its own type.",
       "links": [
         "Element"
@@ -53,6 +57,7 @@
       "targets": [
         "Class"
       ],
+      "repeatable": true,
       "summary": "Holds the elements, and offers a way to walk them.",
       "links": [
         "Element"
@@ -63,6 +68,7 @@
       "targets": [
         "Method"
       ],
+      "repeatable": false,
       "summary": "The operation applied to one given concrete element.",
       "links": [
         "ConcreteElement"
@@ -73,6 +79,7 @@
       "targets": [
         "Method"
       ],
+      "repeatable": false,
       "summary": "The entry point of the double dispatch: it calls back the matching visit operation.",
       "links": []
     }

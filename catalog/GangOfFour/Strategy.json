@@ -14,6 +14,7 @@
       "targets": [
         "Class"
       ],
+      "repeatable": true,
       "summary": "Is configured with a strategy, and delegates the algorithm to it.",
       "links": [
         "Strategy"
@@ -25,6 +26,7 @@
         "Interface",
         "Class"
       ],
+      "repeatable": true,
       "summary": "Declares the interface common to every supported algorithm.",
       "links": []
     },
@@ -34,6 +36,7 @@
         "Class",
         "Struct"
       ],
+      "repeatable": true,
       "summary": "Implements one algorithm behind the strategy interface.",
       "links": [
         "Strategy"

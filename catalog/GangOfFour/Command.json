@@ -15,6 +15,7 @@
         "Interface",
         "Class"
       ],
+      "repeatable": true,
       "summary": "Declares the operation that carries out the request.",
       "links": []
     },
@@ -24,6 +25,7 @@
         "Class",
         "Struct"
       ],
+      "repeatable": true,
       "summary": "Binds a receiver to an action, and implements the request by invoking it.",
       "links": [
         "Command",
@@ -36,6 +38,7 @@
         "Interface",
         "Class"
       ],
+      "repeatable": true,
       "summary": "Knows how to perform the work associated with the request.",
       "links": []
     },
@@ -44,6 +47,7 @@
       "targets": [
         "Class"
       ],
+      "repeatable": true,
       "summary": "Holds commands and asks them to carry out the request.",
       "links": [
         "Command"
@@ -54,6 +58,7 @@
       "targets": [
         "Method"
       ],
+      "repeatable": false,
       "summary": "The operation that carries out the request.",
       "links": []
     }
