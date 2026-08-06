@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "LayerSupertype",
+  "summary": "A type that is the supertype of every type in one layer, holding what they all share.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "LayerSupertype",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The common parent of a layer. It exists to hold what is genuinely shared — an identity field, an equality rule, an event list — and it earns its place only while that is a short list: a layer supertype that grows behaviour becomes the place where anything with no home is put.",
+      "links": []
+    }
+  ]
+}

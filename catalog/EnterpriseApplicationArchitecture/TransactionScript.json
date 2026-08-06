@@ -1,0 +1,22 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "TransactionScript",
+  "summary": "One procedure that handles one request from the presentation, from start to finish.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "TransactionScript",
+      "targets": [
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "A single procedure carrying the whole of one business transaction — validate, compute, persist, return. It is chosen when the logic is simple and stays simple: it scales badly with complexity, because two scripts that share a rule share it by copying, and that is the trade rather than an oversight.",
+      "links": []
+    }
+  ]
+}

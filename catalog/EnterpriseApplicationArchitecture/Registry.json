@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "Registry",
+  "summary": "A well-known object that other objects use to find common objects and services.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Registry",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The agreed place to look something up when passing it in is impractical. It is global by nature, which is the whole of its cost: what it holds must be scoped deliberately — per process, per request, per thread — and a registry whose scope is left unstated is where a test starts depending on the test that ran before it.",
+      "links": []
+    }
+  ]
+}

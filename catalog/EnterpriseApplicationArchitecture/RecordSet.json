@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "RecordSet",
+  "summary": "An in-memory representation of tabular data, as rows and columns rather than as objects.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "RecordSet",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "Tabular data carried as tabular data. It earns its place where the code, the tools and the platform all already speak rows and columns — a report, a grid, an import — and it is the wrong shape the moment behaviour needs to attach to a row rather than to the set.",
+      "links": []
+    }
+  ]
+}

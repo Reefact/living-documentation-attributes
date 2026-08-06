@@ -31,7 +31,8 @@ namespace Reefact.LivingDocumentation.Attributes.Usage {
                 typeof(TrainOperations.BoundedContextSample.Operator).Assembly,
                 typeof(Invoicing.GenericSubdomainSample.TrackAccessInvoice).Assembly,
                 typeof(RailNetwork.SharedKernelSample.SectionId).Assembly,
-                typeof(TrainOperations.Contracts.PublishedLanguageSample.PublishedService).Assembly
+                typeof(TrainOperations.Contracts.PublishedLanguageSample.PublishedService).Assembly,
+                typeof(ParkingPermits.DomainModelSample.ControlledZone).Assembly
             ];
 
             Annotation[] annotations = samples.SelectMany(Read).ToArray();

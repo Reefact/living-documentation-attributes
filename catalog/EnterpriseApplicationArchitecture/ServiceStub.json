@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "ServiceStub",
+  "summary": "A stand-in for a service that is slow, costly or unavailable, so that tests can run without it.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "ServiceStub",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "A working replacement for a real service, written to be predictable rather than faithful. It differs from a mock in what it is for: it is not there to assert how it was called, it is there so the thing under test can run at all — which is why it usually implements the same separated interface the real one does.",
+      "links": []
+    }
+  ]
+}

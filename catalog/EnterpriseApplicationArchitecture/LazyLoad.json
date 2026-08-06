@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "LazyLoad",
+  "summary": "An object that does not hold all its data yet, but knows how to fetch the rest when asked.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "LazyLoad",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "A participant that defers part of its own loading until something asks for it. The cost it trades away is a load nobody needed; the cost it can introduce is worse and is the reason to annotate it — a lazy load inside a loop is the ripple effect that turns one query into a thousand, and it is invisible at the call site.",
+      "links": []
+    }
+  ]
+}

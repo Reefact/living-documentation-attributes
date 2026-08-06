@@ -15,6 +15,7 @@
     <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.Usage.Invoicing\Reefact.LivingDocumentation.Attributes.Usage.Invoicing.csproj" />
     <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.Usage.RailNetwork\Reefact.LivingDocumentation.Attributes.Usage.RailNetwork.csproj" />
     <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.Usage.TrainOperations.Contracts\Reefact.LivingDocumentation.Attributes.Usage.TrainOperations.Contracts.csproj" />
+    <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.Usage.ParkingPermits\Reefact.LivingDocumentation.Attributes.Usage.ParkingPermits.csproj" />
   </ItemGroup>
 
 </Project>
