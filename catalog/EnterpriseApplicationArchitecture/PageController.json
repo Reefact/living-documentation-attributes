@@ -1,0 +1,22 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "PageController",
+  "summary": "One object per page or action, handling the requests that page receives.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "PageController",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The controller for one page. It suits a site whose pages differ more than they share: each is independent, and a new page adds a class rather than a branch. The cost arrives as duplication — authentication, navigation and layout decisions repeat per page until something is extracted.",
+      "links": []
+    }
+  ]
+}

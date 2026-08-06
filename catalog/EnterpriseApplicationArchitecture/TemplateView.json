@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "TemplateView",
+  "summary": "A page written as its own markup with the dynamic parts marked in it.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "TemplateView",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "A view that is written as the page it produces, so a designer can read it. The discipline it needs is stated in its own risk: logic in a template is logic nothing can test, which is why the pattern comes with the rule that a template calls a helper rather than deciding anything itself.",
+      "links": []
+    }
+  ]
+}

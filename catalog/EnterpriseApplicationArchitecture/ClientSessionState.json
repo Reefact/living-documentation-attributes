@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "ClientSessionState",
+  "summary": "Session state kept on the client and returned with each request.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "ClientSessionState",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "State the server keeps nowhere. It makes a server cluster trivial — any node can serve any request — and it puts two problems in their place: everything held this way travels on every request, and none of it can be trusted without being signed or re-checked.",
+      "links": []
+    }
+  ]
+}

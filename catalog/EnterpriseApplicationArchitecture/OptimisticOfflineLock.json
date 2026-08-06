@@ -1,0 +1,32 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "OptimisticOfflineLock",
+  "summary": "A conflict between two long transactions is detected at commit, by checking that nothing changed underneath.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "OptimisticOfflineLock",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "A record whose update is refused if it changed since it was read. It suits a system where conflicts are rare: nobody waits, and the cost is paid only by the loser — who must be told something useful, because a conflict discovered at save is work already done.",
+      "links": []
+    },
+    {
+      "name": "VersionField",
+      "targets": [
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "summary": "The member the check is made against — a version, a timestamp, a hash. Naming it matters because everything rests on it: an update that forgets to include it in its WHERE clause silently turns the whole pattern off, and nothing fails.",
+      "links": []
+    }
+  ]
+}

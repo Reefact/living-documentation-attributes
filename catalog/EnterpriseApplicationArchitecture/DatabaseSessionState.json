@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "DatabaseSessionState",
+  "summary": "Session state kept in the database, so that any process can serve any request.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "DatabaseSessionState",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "Session state stored where every node can read it. It removes the affinity that server session state imposes, at the price of a read and a write per request — and of session data that now needs the same care as the rest of the schema, including a way to be cleaned up.",
+      "links": []
+    }
+  ]
+}

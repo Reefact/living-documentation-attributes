@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "ApplicationController",
+  "summary": "An object holding the flow of an application — which screen comes next, and what may be done now.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "ApplicationController",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "Where the order of a process lives, taken out of the individual pages. It earns its place where the flow is the difficult part — a wizard, a claim, an application with states — and it is dead weight where each page simply follows a link.",
+      "links": []
+    }
+  ]
+}

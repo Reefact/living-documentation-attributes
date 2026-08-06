@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "TwoStepView",
+  "summary": "A rendering in two stages: the data becomes a logical page, and the logical page becomes the output.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "TwoStepView",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "A view that produces an intermediate, presentation-neutral structure before any markup exists. The whole of its value is the second step being written once: a global change to the look is one change, not one per screen — and the price is a layer that must express everything every screen needs.",
+      "links": []
+    }
+  ]
+}

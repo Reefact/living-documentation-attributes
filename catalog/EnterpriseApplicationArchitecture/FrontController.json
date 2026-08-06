@@ -1,0 +1,35 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "FrontController",
+  "summary": "One handler for every request, which then dispatches to the command that serves it.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Handler",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The single entry point every request passes through. Because there is exactly one, what is common to all requests — authentication, locale, logging, routing — is written once and cannot be forgotten on the page added last.",
+      "links": []
+    },
+    {
+      "name": "Command",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": true,
+      "summary": "What one request actually does, chosen by the handler. It is created per request rather than looked up on a shared object, which is what keeps a front controller free of the state a page controller can afford.",
+      "links": [
+        "Handler"
+      ]
+    }
+  ]
+}
