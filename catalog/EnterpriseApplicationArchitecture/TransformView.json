@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "TransformView",
+  "summary": "A view that walks the data and transforms each element into the output.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "TransformView",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "A view written as a transformation, element by element, rather than as the page. Harder to picture than a template and easier to test and to compose — and the natural choice when one model must be rendered into several formats.",
+      "links": []
+    }
+  ]
+}

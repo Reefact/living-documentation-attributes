@@ -1,0 +1,22 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "CoarseGrainedLock",
+  "summary": "One lock covering a group of objects that change together, so that they are locked as one.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "CoarseGrainedLock",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The object whose lock stands for a whole group — usually the root of one. It exists because locking members individually is both slower and wrong: a set of objects with one invariant between them must be taken as one, or the invariant can be broken between two locks.",
+      "links": []
+    }
+  ]
+}

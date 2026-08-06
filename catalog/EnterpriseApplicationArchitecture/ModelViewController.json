@@ -1,0 +1,48 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "ModelViewController",
+  "summary": "Splits presentation into three: what is true, how it is shown, and what a request does about it.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Model",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": true,
+      "summary": "What the presentation is about, and the only one of the three that knows nothing of the other two. A model that references its view has lost the separation the pattern exists for — it is the direction of that ignorance, not the number of classes, that makes this the pattern.",
+      "links": []
+    },
+    {
+      "name": "View",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": true,
+      "summary": "One rendering of the model. Several may show one model at once, which is why the model may not know them: the day a second view appears, anything the model knew about the first is wrong.",
+      "links": [
+        "Model"
+      ]
+    },
+    {
+      "name": "Controller",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": true,
+      "summary": "What a request does. It interprets the input, asks the model to change, and chooses the view — and holds no domain rule of its own, because a rule that lives here cannot be reached by anything that is not a request.",
+      "links": [
+        "Model",
+        "View"
+      ]
+    }
+  ]
+}

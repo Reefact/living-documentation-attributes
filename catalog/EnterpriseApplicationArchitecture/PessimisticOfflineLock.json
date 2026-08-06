@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "PessimisticOfflineLock",
+  "summary": "A conflict between two long transactions is prevented, by letting only one of them hold the data.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "PessimisticOfflineLock",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "A lock taken before the work begins and held across requests. It suits a system where a conflict is expensive to discover late, and it brings the problems a database transaction was hiding: a lock held by a user who went home, and therefore a timeout, an owner and a way to break it.",
+      "links": []
+    }
+  ]
+}

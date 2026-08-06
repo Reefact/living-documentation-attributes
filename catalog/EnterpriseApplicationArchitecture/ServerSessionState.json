@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "ServerSessionState",
+  "summary": "Session state kept on the server, keyed by a token the client returns.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "ServerSessionState",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "State held between requests by the server. It is the simplest to write and the one that constrains deployment: state in one process means a request must reach that process, or the state must be moved somewhere every process can see — which is the next pattern.",
+      "links": []
+    }
+  ]
+}

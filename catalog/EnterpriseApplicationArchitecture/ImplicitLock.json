@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "ImplicitLock",
+  "summary": "The locking is done by the framework, so that no piece of application code can forget it.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "ImplicitLock",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "Where the acquisition of a lock is taken out of application code and put into a layer everything passes through. The reasoning is that one forgotten lock is enough to lose data, and reviewing every path forever is not a control — the same argument any repository makes for centralising a rule that must never be skipped.",
+      "links": []
+    }
+  ]
+}
