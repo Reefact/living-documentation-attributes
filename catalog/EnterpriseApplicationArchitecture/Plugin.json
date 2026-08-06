@@ -1,0 +1,22 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "Plugin",
+  "summary": "A point at which an implementation is chosen by configuration rather than by compilation.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Plugin",
+      "targets": [
+        "Interface"
+      ],
+      "repeatable": false,
+      "summary": "The contract a swappable implementation satisfies, chosen at configuration time. It is worth the indirection where the choice genuinely varies between deployments — a device driver, a storage backend — and not where a single implementation has been given an interface out of habit.",
+      "links": []
+    }
+  ]
+}

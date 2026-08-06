@@ -1,0 +1,22 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "TableModule",
+  "summary": "One instance that carries the business logic for all the rows of one table.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "TableModule",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "A single object per table, holding the rules for every row rather than one object per row. It sits between a transaction script and a domain model: the logic has somewhere to live and is organised by table, which suits a codebase built around a record set the platform already gives it.",
+      "links": []
+    }
+  ]
+}

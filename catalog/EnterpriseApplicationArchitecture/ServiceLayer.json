@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "ServiceLayer",
+  "summary": "A layer of services defining an application's boundary and the set of operations it offers.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "ServiceLayer",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The boundary an application is called through. Each operation is one use case, and the layer carries the orchestration — transactions, security, calls to other systems — that no single domain object owns. What it must not carry is domain logic: a service layer that starts deciding things has hollowed out the model behind it.",
+      "links": []
+    }
+  ]
+}

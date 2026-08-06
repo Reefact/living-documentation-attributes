@@ -1,0 +1,22 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "DomainModel",
+  "summary": "An object model of the domain carrying both behaviour and data, rather than procedures over records.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "DomainModel",
+      "targets": [
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "An assembly whose objects hold the rules as well as the data. Declaring it says what the code is NOT: not a set of transaction scripts, not a table module — so a class here that turns out to be a bag of properties acted on from elsewhere is a defect against a stated intent rather than a matter of taste.",
+      "links": []
+    }
+  ]
+}

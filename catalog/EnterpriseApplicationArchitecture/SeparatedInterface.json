@@ -1,0 +1,22 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "SeparatedInterface",
+  "summary": "An interface declared apart from its implementation, so that a client depends on the first without the second.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "SeparatedInterface",
+      "targets": [
+        "Interface"
+      ],
+      "repeatable": false,
+      "summary": "An interface deliberately placed away from what implements it — in the package of its CLIENT, or in one of its own. The dependency then points from the implementation to the interface rather than from the client to the implementation, which is exactly the inversion that lets a layer be compiled, tested and replaced without the thing below it.",
+      "links": []
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "RemoteFacade",
+  "summary": "A coarse-grained face over fine-grained objects, so that a remote caller pays for one call instead of many.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "RemoteFacade",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "A facade that exists because of the WIRE, not because of complexity. Its methods are shaped by round trips: each one does what a caller would otherwise have done in six calls, and it holds no logic of its own — the moment it decides something, the rule has moved out of the model and onto the boundary.",
+      "links": []
+    }
+  ]
+}
