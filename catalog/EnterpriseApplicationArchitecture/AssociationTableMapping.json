@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "AssociationTableMapping",
+  "summary": "A many-to-many association, carried in the database as a table of its own.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "AssociationTableMapping",
+      "targets": [
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "summary": "A collection whose association lives in a link table rather than in either object's own. It is the only mapping where the association has an existence separate from both ends, which is what makes it the natural home for anything the link itself carries — a date, a role, an order.",
+      "links": []
+    }
+  ]
+}

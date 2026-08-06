@@ -1,0 +1,22 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "ClassTableInheritance",
+  "summary": "A hierarchy of classes mapped to one table per class, joined on the key.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "ClassTableInheritance",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The root of a hierarchy stored as one table per class, each holding only its own fields and joined to its parent. It is the mapping that keeps the schema honest — no nullable column that exists for another subclass — and it pays for that with a join per level on every read.",
+      "links": []
+    }
+  ]
+}

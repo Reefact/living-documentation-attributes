@@ -1,0 +1,22 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "DependentMapping",
+  "summary": "A class whose persistence is handled entirely by another class, because it never exists alone.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "DependentMapping",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "A class with no mapper of its own: its owner loads and saves it. It suits what has no independent life — a line on an order, a note on a record — and the rule that keeps it honest is that nothing outside the owner may hold a reference to one, because nothing else can guarantee its state.",
+      "links": []
+    }
+  ]
+}

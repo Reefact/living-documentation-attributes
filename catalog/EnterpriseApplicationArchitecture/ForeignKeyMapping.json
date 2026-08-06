@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "ForeignKeyMapping",
+  "summary": "An association between objects, carried in the database as a foreign key.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "ForeignKeyMapping",
+      "targets": [
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "summary": "A reference from one object to another that the mapper stores as a key column. Annotating it says where an association crosses into the schema, which is what makes the update order visible: the referenced row must exist first, and a cycle between two of these is a mapping that cannot be written in any order.",
+      "links": []
+    }
+  ]
+}

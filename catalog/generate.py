@@ -289,7 +289,7 @@ def index_entry(pattern):
     out += ["", "| Role | Annotation | Applies to | Repeatable | Links |", "|---|---|---|---|---|"]
     for role in pattern["roles"]:
         targets_read = ", ".join(target.lower() for target in role["targets"])
-        repeatable = "no" if role["targets"] == ["Method"] else "yes"
+        repeatable = "yes" if role["repeatable"] else "no"
         links = ", ".join(f"`{link}`" for link in role["links"]) or "—"
         out.append(f"| {role['name']} | `{annotation_of(pattern, role)}` | {targets_read} | {repeatable} | {links} |")
 

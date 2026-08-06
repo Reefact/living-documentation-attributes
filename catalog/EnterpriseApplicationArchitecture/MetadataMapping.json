@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "MetadataMapping",
+  "summary": "The mapping between objects and tables held as data, rather than written as code.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "MetadataMapping",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The mapping expressed as metadata a mapper reads — a file, attributes, a table — instead of hand-written per class. It removes a great deal of repetitive code and moves the cost: a mapping error is no longer a compilation failure, and what was explicit becomes something a reader must go and look up.",
+      "links": []
+    }
+  ]
+}

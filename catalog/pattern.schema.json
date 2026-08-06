@@ -97,7 +97,7 @@
           "pattern": "^[A-Z][A-Za-z0-9]*$"
         },
         "targets": {
-          "description": "What the role can be applied to. A role targeting Method is a member role; it is generated exactly like the others, only its target differs. Declare Struct wherever a record struct would be a legitimate participant.",
+          "description": "What the role can be applied to. Method, Property and Field are member roles; they are generated exactly like the others, only their target differs. Declare Struct wherever a record struct would be a legitimate participant.",
           "type": "array",
           "minItems": 1,
           "uniqueItems": true,
@@ -106,6 +106,8 @@
               "Interface",
               "Class",
               "Struct",
+              "Property",
+              "Field",
               "Method",
               "Assembly"
             ]

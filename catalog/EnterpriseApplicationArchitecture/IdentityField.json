@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "IdentityField",
+  "summary": "The database key, carried on the object, so that an object in memory and a row in a table can be matched.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "IdentityField",
+      "targets": [
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "summary": "The field or property holding the row's key. It is the one piece of the database that a domain object legitimately carries, and saying which member it is matters: it must not be treated as part of the model's meaning — two objects are not equal because a mapper has not yet assigned one of them a key.",
+      "links": []
+    }
+  ]
+}
