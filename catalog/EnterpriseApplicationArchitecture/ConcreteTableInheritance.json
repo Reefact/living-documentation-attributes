@@ -1,0 +1,22 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "ConcreteTableInheritance",
+  "summary": "A hierarchy of classes mapped to one table per concrete class, each holding the whole of it.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "ConcreteTableInheritance",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The root of a hierarchy stored as one table per concrete class, each carrying inherited fields as well as its own. No joins and no nulls, at the price of the root's fields being duplicated across tables — and of a query across the hierarchy having to touch every one of them.",
+      "links": []
+    }
+  ]
+}

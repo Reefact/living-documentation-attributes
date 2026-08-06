@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "EmbeddedValue",
+  "summary": "A value object mapped into the columns of the object that owns it, rather than into a table of its own.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "EmbeddedValue",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "repeatable": false,
+      "summary": "A value whose fields become columns on the owner's row. It is what makes a rich value affordable — a money, a date range, an address stop being three loose columns without costing a join — and it is available exactly while nothing needs to query or share the value on its own.",
+      "links": []
+    }
+  ]
+}

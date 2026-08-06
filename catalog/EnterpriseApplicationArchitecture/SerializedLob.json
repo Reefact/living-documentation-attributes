@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "SerializedLob",
+  "summary": "A graph of objects saved into a single field as one serialised value.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "SerializedLob",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "repeatable": false,
+      "summary": "A type stored whole, in one column, rather than mapped. It suits a structure the database never has to query into and whose shape changes often. The cost is deferred rather than avoided: nothing can query inside it, and the day the format changes every stored value must still be readable.",
+      "links": []
+    }
+  ]
+}

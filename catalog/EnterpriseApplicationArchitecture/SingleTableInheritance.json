@@ -1,0 +1,22 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "SingleTableInheritance",
+  "summary": "A hierarchy of classes mapped to one table holding the columns of all of them.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "SingleTableInheritance",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The root of a hierarchy stored in a single table, with a discriminator and a column per field of every subclass. Simple and fast — no joins, no scattered rows — at the price of columns that are null for most rows, and a table that grows every time a subclass gains a field.",
+      "links": []
+    }
+  ]
+}

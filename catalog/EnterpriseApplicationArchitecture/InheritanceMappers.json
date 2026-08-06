@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseApplicationArchitecture",
+  "name": "InheritanceMappers",
+  "summary": "A structure that organises the mappers of a hierarchy, so that each class's mapping is written once.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Patterns of Enterprise Application Architecture",
+    "year": 2002
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "InheritanceMappers",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The mapper hierarchy that mirrors the class hierarchy, with the shared mapping on a base mapper and each subclass's on its own. It is what stops one of the three inheritance mappings from becoming a single procedure with a switch over the discriminator.",
+      "links": []
+    }
+  ]
+}
