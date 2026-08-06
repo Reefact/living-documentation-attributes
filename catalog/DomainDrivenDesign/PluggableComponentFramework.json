@@ -1,0 +1,31 @@
+{
+  "catalog": "DomainDrivenDesign",
+  "name": "PluggableComponentFramework",
+  "summary": "Distils a core of abstract interfaces that several teams share, and lets diverse implementations of that core be substituted for one another without any of them knowing the others exist.",
+  "reference": {
+    "author": "Eric Evans",
+    "work": "Domain-Driven Design",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "AbstractCore",
+      "targets": [
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "The shared interfaces every component implements and every application calls through. It is the whole of what the participants agree on, so it is distilled rather than accumulated: anything added here must be implemented by all of them, which is why a framework that keeps growing its core has stopped being one.",
+      "links": []
+    },
+    {
+      "name": "Component",
+      "targets": [
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "One interchangeable implementation of the abstract core. It may reference the core and nothing of any sibling — a component that reaches into another is no longer substitutable, and that is the one property the whole arrangement is bought for.",
+      "links": []
+    }
+  ]
+}

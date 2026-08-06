@@ -1,0 +1,23 @@
+{
+  "catalog": "DomainDrivenDesign",
+  "name": "SmartUi",
+  "summary": "Puts the business rules into the user interface itself, one screen at a time, and keeps no model at all — named by Evans as the anti-pattern, and presented with the circumstances under which it is nonetheless the right choice.",
+  "reference": {
+    "author": "Eric Evans",
+    "work": "Domain-Driven Design",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "SmartUi",
+      "targets": [
+        "Class",
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "Code where the rules live with the screen on purpose, because the application is small, short-lived or too simple to repay a model. Declaring it is what makes it a decision with a scope rather than a lapse: every rule about a layered architecture stops here, and the day this code stops being small the annotation is what has to be removed first.",
+      "links": []
+    }
+  ]
+}

@@ -16,6 +16,13 @@
     <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.Usage.RailNetwork\Reefact.LivingDocumentation.Attributes.Usage.RailNetwork.csproj" />
     <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.Usage.TrainOperations.Contracts\Reefact.LivingDocumentation.Attributes.Usage.TrainOperations.Contracts.csproj" />
     <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.Usage.ParkingPermits\Reefact.LivingDocumentation.Attributes.Usage.ParkingPermits.csproj" />
+    <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.Usage.BloodBank.Domain\Reefact.LivingDocumentation.Attributes.Usage.BloodBank.Domain.csproj" />
+    <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.Usage.BloodBank.Application\Reefact.LivingDocumentation.Attributes.Usage.BloodBank.Application.csproj" />
+    <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.Usage.BloodBank.Infrastructure\Reefact.LivingDocumentation.Attributes.Usage.BloodBank.Infrastructure.csproj" />
+    <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.Usage.BloodBank.Ui\Reefact.LivingDocumentation.Attributes.Usage.BloodBank.Ui.csproj" />
+    <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.Usage.Observatory.Instruments\Reefact.LivingDocumentation.Attributes.Usage.Observatory.Instruments.csproj" />
+    <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.Usage.Observatory.Spectrograph\Reefact.LivingDocumentation.Attributes.Usage.Observatory.Spectrograph.csproj" />
+    <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.Usage.Observatory.WideFieldCamera\Reefact.LivingDocumentation.Attributes.Usage.Observatory.WideFieldCamera.csproj" />
   </ItemGroup>
 
 </Project>
