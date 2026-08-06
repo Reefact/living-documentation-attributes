@@ -91,7 +91,8 @@ namespace Reefact.LivingDocumentation.Attributes.Tests {
         [Theory]
         [MemberData(nameof(EveryPattern))]
         public void Every_role_of_one_pattern_answers_one_identity(Type container) {
-            // ADR-0005, and the reason a consumer may group by identity at all: a pattern spread over seven attributes
+            // ADR-0019, which supersedes ADR-0005 on exactly this sentence, and the reason a consumer may group by
+            // identity at all: a pattern spread over seven attributes
             // must not be counted as seven patterns.
             Type[] identities = container.GetNestedTypes()
                                          .Where(type => typeof(LivingDocumentationAttribute).IsAssignableFrom(type))

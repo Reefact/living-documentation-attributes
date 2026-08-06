@@ -67,7 +67,9 @@ it, rather than rediscovering them:
   by their names ([ADR-0007](doc/handwritten/for-maintainers/adr/0007-decide-sameness-by-the-assertions-a-pattern-carries.md)).
 - A pattern is catalogued where the work that named it put it, and anteriority
   orders a declension ([ADR-0006](doc/handwritten/for-maintainers/adr/0006-catalogue-a-pattern-where-the-work-that-named-it-put-it.md)).
-- A declension is marked, a specialisation is not ([ADR-0005](doc/handwritten/for-maintainers/adr/0005-relate-patterns-by-inheritance-and-read-identity-from-it.md)).
+- A declension is marked, a specialisation is not ([ADR-0005](doc/handwritten/for-maintainers/adr/0005-relate-patterns-by-inheritance-and-read-identity-from-it.md),
+  superseded on the identity climb alone by [ADR-0019](doc/handwritten/for-maintainers/adr/0019-stop-the-identity-climb-at-the-pattern-boundary.md);
+  the marker is still ADR-0005's).
 - What cannot be attached to a type, a member or an assembly does not enter the
   catalog ([ADR-0011](doc/handwritten/for-maintainers/adr/0011-leave-out-what-cannot-be-annotated.md)).
 - Every pattern gets one sample file ([ADR-0012](doc/handwritten/for-maintainers/adr/0012-show-every-pattern-at-work-in-a-business-example.md)).
