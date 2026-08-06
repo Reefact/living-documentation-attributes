@@ -32,7 +32,18 @@ namespace Reefact.LivingDocumentation.Attributes.Usage {
                 typeof(Invoicing.GenericSubdomainSample.TrackAccessInvoice).Assembly,
                 typeof(RailNetwork.SharedKernelSample.SectionId).Assembly,
                 typeof(TrainOperations.Contracts.PublishedLanguageSample.PublishedService).Assembly,
-                typeof(ParkingPermits.DomainModelSample.ControlledZone).Assembly
+                typeof(ParkingPermits.DomainModelSample.ControlledZone).Assembly,
+                // Four for one pattern: a layered architecture IS the partition, so a sample that showed it
+                // inside one assembly would be showing something else.
+                typeof(BloodBank.Domain.LayeredArchitectureSample.BloodUnit).Assembly,
+                typeof(BloodBank.Application.LayeredArchitectureSample.IssueUnitService).Assembly,
+                typeof(BloodBank.Infrastructure.LayeredArchitectureSample.BloodUnitStore).Assembly,
+                typeof(BloodBank.Ui.LayeredArchitectureSample.IssueUnitScreen).Assembly,
+                // Three for another, and for the same reason: a core and two components that do not know
+                // each other cannot be one assembly.
+                typeof(Observatory.Instruments.PluggableComponentFrameworkSample.ObservationRequest).Assembly,
+                typeof(Observatory.Spectrograph.PluggableComponentFrameworkSample.EchelleSpectrograph).Assembly,
+                typeof(Observatory.WideFieldCamera.PluggableComponentFrameworkSample.SurveyCamera).Assembly
             ];
 
             Annotation[] annotations = samples.SelectMany(Read).ToArray();

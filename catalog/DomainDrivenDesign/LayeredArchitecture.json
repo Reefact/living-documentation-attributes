@@ -1,0 +1,49 @@
+{
+  "catalog": "DomainDrivenDesign",
+  "name": "LayeredArchitecture",
+  "summary": "Partitions a system so that the model is isolated from the user interface, the application logic and the technical plumbing, and can be reasoned about without any of them.",
+  "reference": {
+    "author": "Eric Evans",
+    "work": "Domain-Driven Design",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "UserInterface",
+      "targets": [
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "Shows information to the user and interprets what the user does. It holds no rule of the domain: everything it shows was decided below it, and a rule found here is a rule no other channel can reach.",
+      "links": []
+    },
+    {
+      "name": "Application",
+      "targets": [
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "Coordinates the work — it opens the transaction, calls the model and reports what happened — and is kept deliberately thin. It states what the system does, never what the business is, which is what stops it turning into a second model.",
+      "links": []
+    },
+    {
+      "name": "Domain",
+      "targets": [
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "The business concepts, their state and their rules. It is the reason the other three exist, and the whole point of naming the layers is that this one references none of them.",
+      "links": []
+    },
+    {
+      "name": "Infrastructure",
+      "targets": [
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "The technical means the layers above stand on — persistence, messaging, drawing on a screen. It implements what they declare rather than being called into their vocabulary, which is the inversion that keeps the model free of a database.",
+      "links": []
+    }
+  ]
+}

@@ -72,7 +72,7 @@ system into the code it documents.
 | Module | Domain-Driven Design | a namespace |
 | Conformist, Customer/Supplier, Partnership, Separate Ways | Domain-Driven Design | the relationship *between* two bounded contexts |
 | Context Map | Domain-Driven Design | the whole landscape — it is what you draw *from* the annotations |
-| Segregated Core, Abstract Core, Highlighted Core, Distillation Document | Domain-Driven Design | an act of refactoring, or a document; what they produce is already expressible, a distilled core being an assembly annotated `CoreDomain` |
+| Segregated Core, Abstract Core, Highlighted Core, Distillation Document, Domain Vision Statement | Domain-Driven Design | an act of refactoring, or a document; what they produce is already expressible, a distilled core being an assembly annotated `CoreDomain`, and the abstract core of a framework being a role of `PluggableComponentFramework` |
 | Guard Clause | — | a shape a method body takes; nothing holds a role in it |
 
 **Nothing a tool could check.** A role licenses no verifiable assertion, so an
@@ -85,12 +85,33 @@ applied to whether a pattern belongs here at all.
 | Intention-Revealing Interfaces | Domain-Driven Design | asks that names come from the ubiquitous language; nothing mechanical distinguishes a good name from a bad one |
 | Conceptual Contours | Domain-Driven Design | a judgement about where a model's seams fall, not a property of a declaration |
 | Ubiquitous Language, Continuous Integration, Evolving Order | Domain-Driven Design | practices of a team, not participants in code |
+| Model-Driven Design, Hands-On Modellers, Declarative Design, System Metaphor | Domain-Driven Design | ways of working, or of thinking about a model; a codebase can follow all four and no declaration is a participant in any |
+| Responsibility Layers | Domain-Driven Design | what the pattern asserts is an **order** — each layer depends only on those beneath it, and the layers are ranked by rate of change — and nothing in this vocabulary orders assemblies. Taking the five Evans names (Potential, Operations, Decision Support, Policy, Commitment) as fixed roles would supply one, but those are the layers he found in a shipping domain, offered as an illustration; the pattern is finding your own |
+| Big Ball of Mud | Foote and Yoder, *Pattern Languages of Program Design 4*, 2000 | what it asserts about a participant is that it has no discernible structure, which is the absence of an assertion rather than one. Reached through Evans, who uses it to characterise a neighbouring context, and decided on the same criterion that admits Smart UI ([ADR-0023](../doc/handwritten/for-maintainers/adr/0023-admit-an-anti-pattern-on-the-same-terms-as-any-pattern.md)) |
 
-**Not settled either way.** Responsibility Layers, Knowledge Level and Pluggable
-Component Framework could each plausibly be attached to something. They are absent
-because nobody has written down the assertions they would license, not because they
-were judged unannotable — the criterion for opening them is the one above, applied
-honestly.
+**Anti-patterns are not excluded as a category.** `SmartUi` is catalogued, because
+Evans names it, a class or an assembly holds it, and it licenses assertions — the
+usual three. It is the only entry whose assertions *exempt* rather than constrain,
+and [ADR-0023](../doc/handwritten/for-maintainers/adr/0023-admit-an-anti-pattern-on-the-same-terms-as-any-pattern.md)
+records why that is admitted rather than special-cased.
+
+## Named by another work
+
+A book may present a pattern it did not name. It is catalogued where the work that
+named it put it ([ADR-0006](../doc/handwritten/for-maintainers/adr/0006-catalogue-a-pattern-where-the-work-that-named-it-put-it.md)),
+which for one of Evans' large-scale structures is a catalog this repository does not
+have yet.
+
+| Pattern | Presented in | Named by |
+|---|---|---|
+| Knowledge Level | *Domain-Driven Design*, chapter 16 | Fowler, *Analysis Patterns*, 1997 — chapter 2, as the accountability knowledge level |
+
+It is **annotable and wanted**: two classes hold the two levels, and the assertions
+are the checkable kind — an operational object refers to its knowledge-level
+counterpart and never the reverse, and the knowledge level changes by configuration
+rather than by code. What it is waiting for is an `AnalysisPatterns` catalog, which
+is a body of work with several more entries in it and not something to open as a
+side-effect of finishing Evans.
 
 ## Shape of the generated attribute
 

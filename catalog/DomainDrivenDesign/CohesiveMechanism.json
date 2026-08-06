@@ -1,0 +1,24 @@
+{
+  "catalog": "DomainDrivenDesign",
+  "name": "CohesiveMechanism",
+  "summary": "Separates a self-contained piece of machinery — an algorithm, a formalism, a solver — from the model that needs it, so that the model states what it wants and not how the answer is computed.",
+  "reference": {
+    "author": "Eric Evans",
+    "work": "Domain-Driven Design",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "CohesiveMechanism",
+      "targets": [
+        "Interface",
+        "Class",
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "Machinery factored out of the model and exposed by an interface that speaks of what it computes rather than of how. What is left behind is the point: a model that asks for the shortest route stays a model, where one that carries the search alongside its concepts no longer reads as either.",
+      "links": []
+    }
+  ]
+}
