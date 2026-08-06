@@ -2,8 +2,9 @@
 
 🌍 🇬🇧 English (this file) · 🇫🇷 [Français](0019-stop-the-identity-climb-at-the-pattern-boundary.fr.md)
 
-**Status:** Proposed
+**Status:** Accepted
 **Proposed:** 2026-08-05
+**Accepted:** 2026-08-06
 **Decision Makers:** Reefact
 
 ## Context

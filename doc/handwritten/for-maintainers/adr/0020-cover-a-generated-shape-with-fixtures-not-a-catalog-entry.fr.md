@@ -2,8 +2,9 @@
 
 🌍 🇬🇧 [English](0020-cover-a-generated-shape-with-fixtures-not-a-catalog-entry.md) · 🇫🇷 Français (ce fichier)
 
-**Statut :** Proposé
+**Statut :** Accepté
 **Proposé :** 2026-08-05
+**Accepté :** 2026-08-06
 **Décideurs :** Reefact
 
 ## Contexte

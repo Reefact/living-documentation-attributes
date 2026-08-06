@@ -2,8 +2,9 @@
 
 🌍 🇬🇧 [English](0023-admit-an-anti-pattern-on-the-same-terms-as-any-pattern.md) · 🇫🇷 Français (ce fichier)
 
-**Statut :** Proposé
+**Statut :** Accepté
 **Proposé :** 2026-08-06
+**Accepté :** 2026-08-06
 **Décideurs :** Reefact
 
 ## Contexte

@@ -2,7 +2,7 @@
 
 🌍 🇬🇧 [English](0005-relate-patterns-by-inheritance-and-read-identity-from-it.md) · 🇫🇷 Français (ce fichier)
 
-**Statut :** Accepté
+**Statut :** Remplacé par l'[ADR-0019](0019-stop-the-identity-climb-at-the-pattern-boundary.fr.md)
 **Proposé :** 2026-08-05
 **Accepté :** 2026-08-05
 **Décideurs :** Reefact

@@ -18,10 +18,15 @@ Where one of them argues against a shape this repository briefly held, that shap
 appears under *Alternatives Considered*, which is where an option weighed and set
 aside belongs — not under a superseding record, which is a different instrument.
 
-From ADR-0019 onwards the base grows one decision at a time, and every record
-before it is accepted. Revisiting one therefore means writing its successor, never
-editing it in place: the successor is drafted as *Proposed*, and only the
-maintainer moves the record it replaces to *Superseded*.
+From ADR-0019 onwards the base grows one decision at a time. Revisiting a record
+means writing its successor, never editing it in place: the successor is drafted
+as *Proposed*, and only the maintainer moves the record it replaces to
+*Superseded*.
+
+That instrument has been used once. **ADR-0019 supersedes ADR-0005**, which is the
+only one of the first eighteen no longer current — and only for the sentence that
+changed; everything else it decided still holds, which is why the record stays
+readable rather than being removed.
 
 ## When is an ADR written?
 
@@ -124,7 +129,7 @@ Related ADRs, sources, catalog entries, code.
 | [ADR-0002](0002-keep-the-pattern-catalog-as-data-and-generate-the-attributes.md) | Keep the pattern catalog as data and generate the attributes from it | Accepted |
 | [ADR-0003](0003-give-each-role-its-own-attribute-nested-in-its-pattern.md) | Give each role its own attribute, nested in the pattern it belongs to | Accepted |
 | [ADR-0004](0004-keep-the-attribute-base-a-pure-marker.md) | Keep the attribute base a pure marker | Accepted |
-| [ADR-0005](0005-relate-patterns-by-inheritance-and-read-identity-from-it.md) | Relate patterns by inheritance, and read a pattern's identity from it | Accepted |
+| [ADR-0005](0005-relate-patterns-by-inheritance-and-read-identity-from-it.md) | Relate patterns by inheritance, and read a pattern's identity from it | Superseded by [ADR-0019](0019-stop-the-identity-climb-at-the-pattern-boundary.md) |
 | [ADR-0006](0006-catalogue-a-pattern-where-the-work-that-named-it-put-it.md) | Catalogue a pattern where the work that named it put it | Accepted |
 | [ADR-0007](0007-decide-sameness-by-the-assertions-a-pattern-carries.md) | Decide that two patterns are the same by the assertions they carry | Accepted |
 | [ADR-0008](0008-bind-participants-with-typed-links.md) | Bind participants of one pattern occurrence with typed links | Accepted |
@@ -138,8 +143,8 @@ Related ADRs, sources, catalog entries, code.
 | [ADR-0016](0016-prove-the-sources-are-what-the-catalog-generates.md) | Prove on every pull request that the sources are what the catalog generates | Accepted |
 | [ADR-0017](0017-pin-every-action-to-a-commit.md) | Pin every GitHub action to a commit | Accepted |
 | [ADR-0018](0018-hold-the-public-surface-to-a-committed-baseline.md) | Hold the public surface to a committed baseline | Accepted |
-| [ADR-0019](0019-stop-the-identity-climb-at-the-pattern-boundary.md) | Stop the identity climb at the pattern boundary | Proposed |
-| [ADR-0020](0020-cover-a-generated-shape-with-fixtures-not-a-catalog-entry.md) | Cover a generated shape with fixtures, not with a catalog entry | Proposed |
-| [ADR-0021](0021-version-what-a-consumer-reads-and-not-only-what-it-compiles.md) | Version what a consumer reads, and not only what it compiles | Proposed |
-| [ADR-0022](0022-admit-a-pattern-of-test-design-to-the-catalog.md) | Admit a pattern of test design to the catalog | Proposed |
-| [ADR-0023](0023-admit-an-anti-pattern-on-the-same-terms-as-any-pattern.md) | Admit an anti-pattern on the same terms as any pattern | Proposed |
+| [ADR-0019](0019-stop-the-identity-climb-at-the-pattern-boundary.md) | Stop the identity climb at the pattern boundary | Accepted |
+| [ADR-0020](0020-cover-a-generated-shape-with-fixtures-not-a-catalog-entry.md) | Cover a generated shape with fixtures, not with a catalog entry | Accepted |
+| [ADR-0021](0021-version-what-a-consumer-reads-and-not-only-what-it-compiles.md) | Version what a consumer reads, and not only what it compiles | Accepted |
+| [ADR-0022](0022-admit-a-pattern-of-test-design-to-the-catalog.md) | Admit a pattern of test design to the catalog | Accepted |
+| [ADR-0023](0023-admit-an-anti-pattern-on-the-same-terms-as-any-pattern.md) | Admit an anti-pattern on the same terms as any pattern | Accepted |
