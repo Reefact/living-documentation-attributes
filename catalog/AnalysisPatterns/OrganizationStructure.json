@@ -1,0 +1,57 @@
+{
+  "catalog": "AnalysisPatterns",
+  "name": "OrganizationStructure",
+  "summary": "Reifies the relationship between two organizations as an object carrying its own type, so that a business with several overlapping structures keeps one model instead of one hierarchy per structure.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Analysis Patterns",
+    "year": 1997
+  },
+  "inherited": false,
+  "specialisationOf": {
+    "catalog": "AnalysisPatterns",
+    "name": "Accountability"
+  },
+  "roles": [
+    {
+      "name": "OrganizationStructureType",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "What kind of structure this is — a sales hierarchy, a legal ownership chain, a reporting line — and which organizations may stand at each end of it. A new structure is configured here rather than written, which is what stops the model growing a class per hierarchy. It is also where the admissibility rule lives, so the question \"may this organization sit under that one\" is asked in one place.",
+      "links": []
+    },
+    {
+      "name": "OrganizationStructure",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "One relationship between two organizations, of one kind, for a period. The dates are why it is an object: a reorganisation does not erase the structure that preceded it, and a report about last quarter is asked against the structure that was in force then.",
+      "links": [
+        "OrganizationStructureType"
+      ]
+    },
+    {
+      "name": "Parent",
+      "targets": [
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "summary": "The organization above. Naming which end is which is the assertion, exactly as for an accountability: both ends are organizations, nothing in the type system tells them apart, and a model with them the wrong way round inverts every chart drawn from it while compiling and passing its tests.",
+      "links": []
+    },
+    {
+      "name": "Subsidiary",
+      "targets": [
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "summary": "The organization below. It is a whole organization rather than a division type, because the pattern's reach depends on the same organization being able to sit under different parents in different structures.",
+      "links": []
+    }
+  ]
+}
