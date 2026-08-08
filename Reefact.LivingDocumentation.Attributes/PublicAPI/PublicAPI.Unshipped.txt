@@ -65,6 +65,15 @@ Reefact.LivingDocumentation.Attributes.AnalysisPatterns.DualTimeRecord.TimeRecor
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.DualTimeRecord.TimeRecordAttribute.TimeRecordAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.HierarchicAccountabilityAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.HierarchicAccountabilityAttribute.HierarchicAccountabilityAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.IdentificationScheme
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.IdentificationScheme.IdentificationSchemeAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.IdentificationScheme.IdentificationSchemeAttribute.IdentificationSchemeAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.IdentificationScheme.IdentifierAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.IdentificationScheme.IdentifierAttribute.IdentificationScheme.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.IdentificationScheme.IdentifierAttribute.IdentificationScheme.init -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.IdentificationScheme.IdentifierAttribute.IdentifierAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.IdentificationScheme.Role
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.IdentificationScheme.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.KnowledgeLevel
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.KnowledgeLevel.KnowledgeAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.KnowledgeLevel.KnowledgeAttribute.KnowledgeAttribute() -> void
