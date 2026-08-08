@@ -1,0 +1,40 @@
+{
+  "catalog": "AnalysisPatterns",
+  "name": "ActiveObservation",
+  "summary": "Distinguishes what is believed from what is proposed and from what is expected, so that a hypothesis and a projection cannot be read as fact.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Analysis Patterns",
+    "year": 1997
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Active",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "links": [],
+      "summary": "An observation held to be true of the world. The default, and the only one a report should include without saying otherwise."
+    },
+    {
+      "name": "Hypothesis",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "links": [],
+      "summary": "An observation proposed but not established — a working diagnosis. It exists in the model because clinicians act on hypotheses, so they must be recordable; and it is a separate kind because a hypothesis counted in a prevalence figure inflates it, and nothing in the arithmetic objects."
+    },
+    {
+      "name": "Projection",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "links": [],
+      "summary": "An observation expected of a future time — a due date, a projected weight. It shares the shape of the others and none of their standing: a projection that has quietly become the basis of a billing run is a forecast being invoiced."
+    }
+  ]
+}
