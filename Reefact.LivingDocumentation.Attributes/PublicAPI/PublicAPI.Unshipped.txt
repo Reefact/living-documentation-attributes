@@ -1,4 +1,6 @@
 #nullable enable
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PartyAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PartyAttribute.PartyAttribute() -> void
 Reefact.LivingDocumentation.Attributes.DeclensionAttribute
 Reefact.LivingDocumentation.Attributes.DeclensionAttribute.DeclensionAttribute() -> void
 Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.Aggregate
