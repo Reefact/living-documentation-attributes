@@ -1,0 +1,43 @@
+{
+  "catalog": "AnalysisPatterns",
+  "name": "Measurement",
+  "summary": "Records that a phenomenon of a stated kind had a quantity, so that what may be measured is configured rather than written as a field per measurement.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Analysis Patterns",
+    "year": 1997
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "PhenomenonType",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "links": [],
+      "summary": "What kind of thing was measured — height, weight, blood glucose level. It is the knowledge level of figure 3.6, and the return on it is exactly the difference between figures 3.1 and 3.2: a class with one property per measurable thing must be edited to measure a new one, and a clinician who wants to record a new observation type should not need a release."
+    },
+    {
+      "name": "Measurement",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "links": [
+        "PhenomenonType"
+      ],
+      "summary": "One recorded quantity of one phenomenon type. Holding the type as a reference rather than as a name is what lets a rule range over measurements of a kind, which is what every clinical query does."
+    },
+    {
+      "name": "Subject",
+      "targets": [
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "links": [],
+      "summary": "What or who was measured. It is a party rather than a person in the general case, because an organization has measurable properties too and the pattern loses nothing by admitting them."
+    }
+  ]
+}
