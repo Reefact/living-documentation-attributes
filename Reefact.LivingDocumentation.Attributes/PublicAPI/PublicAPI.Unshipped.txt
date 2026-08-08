@@ -62,6 +62,15 @@ Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PartyTypeGeneralizations
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PartyTypeGeneralizations.SupertypeAttribute.SupertypeAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PostAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PostAttribute.PostAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Quantity
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Quantity.AmountAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Quantity.AmountAttribute.AmountAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Quantity.QuantityAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Quantity.QuantityAttribute.QuantityAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Quantity.Role
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Quantity.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Quantity.UnitAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Quantity.UnitAttribute.UnitAttribute() -> void
 Reefact.LivingDocumentation.Attributes.DeclensionAttribute
 Reefact.LivingDocumentation.Attributes.DeclensionAttribute.DeclensionAttribute() -> void
 Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.Aggregate
