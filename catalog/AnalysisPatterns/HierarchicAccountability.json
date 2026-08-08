@@ -1,0 +1,26 @@
+{
+  "catalog": "AnalysisPatterns",
+  "name": "HierarchicAccountability",
+  "summary": "Constrains a kind of accountability so that a party answers to at most one commissioner within it, which is what a reporting line is and what a general accountability does not promise.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Analysis Patterns",
+    "year": 1997
+  },
+  "inherited": false,
+  "specialisationOf": {
+    "catalog": "AnalysisPatterns",
+    "name": "Accountability"
+  },
+  "roles": [
+    {
+      "name": "HierarchicAccountability",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The kind of accountability that carries the constraint — the role is held by the type object rather than by the accountability, because what is being asserted is true of every accountability of that kind rather than of one of them. The constraint is that a party may be responsible to only one accountability of this type; the hierarchy is what that produces, and the reason a chart drawn from these can be laid out at all.",
+      "links": []
+    }
+  ]
+}
