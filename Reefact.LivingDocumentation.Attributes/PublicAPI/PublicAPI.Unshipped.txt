@@ -12,6 +12,17 @@ Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Accountability.Responsib
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Accountability.ResponsibleAttribute.ResponsibleAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Accountability.Role
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Accountability.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.CompoundUnits
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.CompoundUnits.AtomicUnitAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.CompoundUnits.AtomicUnitAttribute.AtomicUnitAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.CompoundUnits.CompoundUnitAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.CompoundUnits.CompoundUnitAttribute.CompoundUnitAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.CompoundUnits.Role
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.CompoundUnits.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.CompoundUnits.UnitAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.CompoundUnits.UnitAttribute.UnitAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.CompoundUnits.UnitReferenceAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.CompoundUnits.UnitReferenceAttribute.UnitReferenceAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ConversionRatio
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ConversionRatio.ConversionRatioAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ConversionRatio.ConversionRatioAttribute.ConversionRatioAttribute() -> void
