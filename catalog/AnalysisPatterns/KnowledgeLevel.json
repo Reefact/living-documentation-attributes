@@ -1,0 +1,35 @@
+{
+  "catalog": "AnalysisPatterns",
+  "name": "KnowledgeLevel",
+  "summary": "Splits a model into the objects that record what happened and the objects that say what is allowed to happen, so that the rules change by configuring data rather than by writing code.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Analysis Patterns",
+    "year": 1997
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Knowledge",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "What the business allows. It is populated by configuration rather than by deployment, which is the whole return on the pattern — and it must never refer downwards, because an allowed shape that mentions one of the things it permits has stopped being a rule and become an instance.",
+      "links": []
+    },
+    {
+      "name": "Operational",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "What actually happened, and the level a user works in all day. Each operational object names its knowledge-level counterpart, and the direction of that reference is the assertion a rule can check: it runs one way only, and a reference the other way is how the two levels quietly become one.",
+      "links": [
+        "Knowledge"
+      ]
+    }
+  ]
+}

@@ -12,6 +12,15 @@ Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Accountability.Responsib
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Accountability.ResponsibleAttribute.ResponsibleAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Accountability.Role
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Accountability.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.KnowledgeLevel
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.KnowledgeLevel.KnowledgeAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.KnowledgeLevel.KnowledgeAttribute.KnowledgeAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.KnowledgeLevel.OperationalAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.KnowledgeLevel.OperationalAttribute.Knowledge.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.KnowledgeLevel.OperationalAttribute.Knowledge.init -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.KnowledgeLevel.OperationalAttribute.OperationalAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.KnowledgeLevel.Role
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.KnowledgeLevel.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PartyAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PartyAttribute.PartyAttribute() -> void
 Reefact.LivingDocumentation.Attributes.DeclensionAttribute
