@@ -47,6 +47,17 @@ Reefact.LivingDocumentation.Attributes.AnalysisPatterns.KnowledgeLevel.Role
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.KnowledgeLevel.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.LeveledAccountabilityTypeAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.LeveledAccountabilityTypeAttribute.LeveledAccountabilityTypeAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Measurement
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Measurement.MeasurementAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Measurement.MeasurementAttribute.MeasurementAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Measurement.MeasurementAttribute.PhenomenonType.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Measurement.MeasurementAttribute.PhenomenonType.init -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Measurement.PhenomenonTypeAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Measurement.PhenomenonTypeAttribute.PhenomenonTypeAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Measurement.Role
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Measurement.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Measurement.SubjectAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Measurement.SubjectAttribute.SubjectAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.OperatingScopeAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.OperatingScopeAttribute.OperatingScopeAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.OrganizationHierarchies
