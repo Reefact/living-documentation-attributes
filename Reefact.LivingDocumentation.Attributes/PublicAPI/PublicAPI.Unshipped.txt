@@ -111,6 +111,13 @@ Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Quantity.Role
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Quantity.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Quantity.UnitAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Quantity.UnitAttribute.UnitAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.SubtypingObservationConcepts
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.SubtypingObservationConcepts.ObservationConceptAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.SubtypingObservationConcepts.ObservationConceptAttribute.ObservationConceptAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.SubtypingObservationConcepts.Role
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.SubtypingObservationConcepts.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.SubtypingObservationConcepts.SupertypesAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.SubtypingObservationConcepts.SupertypesAttribute.SupertypesAttribute() -> void
 Reefact.LivingDocumentation.Attributes.DeclensionAttribute
 Reefact.LivingDocumentation.Attributes.DeclensionAttribute.DeclensionAttribute() -> void
 Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.Aggregate
