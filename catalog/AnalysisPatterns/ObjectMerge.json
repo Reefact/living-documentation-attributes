@@ -1,0 +1,42 @@
+{
+  "catalog": "AnalysisPatterns",
+  "name": "ObjectMerge",
+  "summary": "Keeps a record that turned out to be a duplicate and points it at the one now in use, so that references made before the merge still resolve.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Analysis Patterns",
+    "year": 1997
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "ActiveObject",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "links": [],
+      "summary": "The record now in use, and the one everything should reach. Figure 5.5 makes it a «dynamic» subtype, which is right: no record is created active as opposed to superseded, it simply has not been merged away yet."
+    },
+    {
+      "name": "SupersededObject",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "links": [
+        "ActiveObject"
+      ],
+      "summary": "A record found to be the same thing as another, kept rather than deleted. Deleting is the obvious move and it breaks everything that already referred to it — an invoice, an appointment, a printed letter with a number on it. What the annotation licenses is the rule that matters: a reference to one of these must resolve forward, and a query that reads it directly is reading a record the business no longer believes."
+    },
+    {
+      "name": "ObjectEssence",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "links": [],
+      "summary": "The thing itself, holding its several appearances. Figure 5.6 is the other shape the section gives, and it suits a model that never knew which record was primary: instead of one record absorbing another, both remain appearances of one essence. A model uses this or the active-superseded pair, not both."
+    }
+  ]
+}
