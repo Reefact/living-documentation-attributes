@@ -2,8 +2,9 @@
 
 🌍 🇬🇧 [English](0024-admit-a-model-of-the-business-to-the-catalog.md) · 🇫🇷 Français (ce fichier)
 
-**Statut :** Proposé
+**Statut :** Accepté
 **Proposé :** 2026-08-08
+**Accepté :** 2026-08-08
 **Décideurs :** Reefact
 
 ## Contexte

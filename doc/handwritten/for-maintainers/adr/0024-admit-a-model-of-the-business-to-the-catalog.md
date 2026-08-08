@@ -2,8 +2,9 @@
 
 🌍 🇬🇧 English (this file) · 🇫🇷 [Français](0024-admit-a-model-of-the-business-to-the-catalog.fr.md)
 
-**Status:** Proposed
+**Status:** Accepted
 **Proposed:** 2026-08-08
+**Accepted:** 2026-08-08
 **Decision Makers:** Reefact
 
 ## Context
