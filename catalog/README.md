@@ -115,6 +115,32 @@ was a decision of its own
 ([ADR-0024](../doc/handwritten/for-maintainers/adr/0024-admit-a-model-of-the-business-to-the-catalog.md)),
 because its patterns are models of the business rather than shapes the code takes.
 
+## A chapter catalogued whole, including what its contents page does not name
+
+Chapter 2 of *Analysis Patterns* is complete: its nine sections are catalogued, and
+so are two patterns the section titles do not name.
+
+`Leveled Accountability Type` and `Directional Accountability Type` appear only in
+figures 2.12 and 2.13, as «overlapping» siblings of the hierarchic one. They meet
+the three criteria like any other entry — the work names them, a class holds them,
+they license assertions — so the only question was whether a name given in a
+diagram is *the name the work gave it* under
+[ADR-0006](../doc/handwritten/for-maintainers/adr/0006-catalogue-a-pattern-where-the-work-that-named-it-put-it.md).
+It is: the rule is about which work names a pattern, not about which part of the
+work. So the convention this chapter sets is **the section title where the book has
+one, the diagram's class name where it does not** — which is why
+`HierarchicAccountability` carries the section-2.7 spelling while its two siblings
+carry theirs from the figures.
+
+Three entries were resolved rather than catalogued as they stood, and how they were
+resolved is worth recording because each turned on a comparison rather than on a
+judgement:
+
+| Pattern | How it was settled |
+|---|---|
+| Party Type Generalizations | **An entry of its own.** Figure 2.10 asserts what `KnowledgeLevel` does not: a supertype / subtypes hierarchy on *Party Type* itself, plus a derived closure that the accountability type's constraint ranges over instead of the immediate type |
+| Organization Structure | **A specialisation of `Accountability`.** Figures 2.6 and 2.7 are drawn as 2.8 is, with *organization* for *party* and *parent* / *subsidiary* for *commissioner* / *responsible*. Restricting both ends to organizations is an added assertion, so it is narrower rather than the same thing spelled differently — [ADR-0007](../doc/handwritten/for-maintainers/adr/0007-decide-sameness-by-the-assertions-a-pattern-carries.md) |
+| Organization Hierarchies | **An entry of its own, and not that one.** Figure 2.4 has *no type object at all* — the admissible nesting is an invariant on each subtype — and figure 2.5 is Fowler showing why that collapses once a second structure appears. What it asserts is that one parent suffices, which is a claim about a participant and not merely a smaller version of the structure pattern |
 ## Shape of the generated attribute
 
 A pattern whose single role carries the pattern's own name is emitted flat, so
