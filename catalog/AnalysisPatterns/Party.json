@@ -1,0 +1,23 @@
+{
+  "catalog": "AnalysisPatterns",
+  "name": "Party",
+  "summary": "Makes person and organization subtypes of one supertype, so that everything a system records about whoever it deals with is recorded once rather than twice.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Analysis Patterns",
+    "year": 1997
+  },
+  "inherited": true,
+  "roles": [
+    {
+      "name": "Party",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "Whoever the system deals with, person or organization indifferently. The role is held by the supertype rather than by its subtypes, because the whole content of the pattern is that an address, a phone number and a responsibility attach here: a model that hangs them on person and on organization separately has two of everything, and they drift.",
+      "links": []
+    }
+  ]
+}
