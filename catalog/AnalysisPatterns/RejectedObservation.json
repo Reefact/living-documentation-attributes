@@ -1,0 +1,22 @@
+{
+  "catalog": "AnalysisPatterns",
+  "name": "RejectedObservation",
+  "summary": "Marks an observation as no longer believed instead of deleting it, so that what was acted upon at the time remains in the record.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Analysis Patterns",
+    "year": 1997
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "RejectedObservation",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "links": [],
+      "summary": "An observation withdrawn after the fact — a mislabelled sample, a transcription error. Figure 3.12 makes it a «dynamic» subtype, which is the whole content: rejection is a state an observation enters, not a kind of thing it was created as. Deleting instead would be the obvious move and the wrong one, because a decision was taken on the strength of it and the record has to be able to say so."
+    }
+  ]
+}
