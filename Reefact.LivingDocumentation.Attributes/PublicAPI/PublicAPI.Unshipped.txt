@@ -87,6 +87,8 @@ Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Measurement.Role
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Measurement.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Measurement.SubjectAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Measurement.SubjectAttribute.SubjectAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.NameAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.NameAttribute.NameAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Observation
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Observation.CategoryObservationAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Observation.CategoryObservationAttribute.CategoryObservationAttribute() -> void
