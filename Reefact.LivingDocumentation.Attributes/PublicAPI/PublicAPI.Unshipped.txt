@@ -1,4 +1,17 @@
 #nullable enable
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Accountability
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Accountability.AccountabilityAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Accountability.AccountabilityAttribute.AccountabilityAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Accountability.AccountabilityAttribute.AccountabilityType.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Accountability.AccountabilityAttribute.AccountabilityType.init -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Accountability.AccountabilityTypeAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Accountability.AccountabilityTypeAttribute.AccountabilityTypeAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Accountability.CommissionerAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Accountability.CommissionerAttribute.CommissionerAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Accountability.ResponsibleAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Accountability.ResponsibleAttribute.ResponsibleAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Accountability.Role
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Accountability.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PartyAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PartyAttribute.PartyAttribute() -> void
 Reefact.LivingDocumentation.Attributes.DeclensionAttribute

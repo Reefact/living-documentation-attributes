@@ -1,0 +1,53 @@
+{
+  "catalog": "AnalysisPatterns",
+  "name": "Accountability",
+  "summary": "Reifies a responsibility of one party towards another as an object carrying its own type, so that the kinds of responsibility a system recognises become data rather than structure.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Analysis Patterns",
+    "year": 1997
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "AccountabilityType",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "What kind of responsibility this is, and which parties may stand at each end of it. It is the reason the pattern is worth its indirection: a new kind of responsibility is a row, not a class, and the constraint on who may be made responsible is stated once here instead of in every screen that creates one.",
+      "links": []
+    },
+    {
+      "name": "Accountability",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "One responsibility, held by one party towards another, for a period. Reifying it is what lets it be found, dated and ended: a responsibility modelled as a reference from one party to another cannot record when it started, and cannot be two things at once.",
+      "links": [
+        "AccountabilityType"
+      ]
+    },
+    {
+      "name": "Commissioner",
+      "targets": [
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "summary": "The party the responsibility is owed to. Naming which end is which is the assertion worth making: the two ends are both parties, so nothing in the type system tells them apart, and a model that swaps them is wrong in a way that compiles and passes its tests.",
+      "links": []
+    },
+    {
+      "name": "Responsible",
+      "targets": [
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "summary": "The party that holds the responsibility. It is a party and not a person on purpose — the point of the pattern is that a department can be answerable for something, and that whoever currently staffs it is a separate question.",
+      "links": []
+    }
+  ]
+}
