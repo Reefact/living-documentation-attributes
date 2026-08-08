@@ -23,6 +23,15 @@ Reefact.LivingDocumentation.Attributes.AnalysisPatterns.KnowledgeLevel.Role
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.KnowledgeLevel.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PartyAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PartyAttribute.PartyAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PartyTypeGeneralizations
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PartyTypeGeneralizations.AllTypesAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PartyTypeGeneralizations.AllTypesAttribute.AllTypesAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PartyTypeGeneralizations.PartyTypeAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PartyTypeGeneralizations.PartyTypeAttribute.PartyTypeAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PartyTypeGeneralizations.Role
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PartyTypeGeneralizations.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PartyTypeGeneralizations.SupertypeAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PartyTypeGeneralizations.SupertypeAttribute.SupertypeAttribute() -> void
 Reefact.LivingDocumentation.Attributes.DeclensionAttribute
 Reefact.LivingDocumentation.Attributes.DeclensionAttribute.DeclensionAttribute() -> void
 Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.Aggregate
