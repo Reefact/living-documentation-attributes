@@ -175,7 +175,10 @@ That reaches back into catalogs already declared complete.
 
 A rule written for quantities now finds money, which is the point of recording the
 relation rather than leaving two unrelated entries. Nothing about the `Money`
-annotation changes for a consumer that asks for money.
+annotation changes for a consumer that asks for money: only the relation moves, so the
+entry keeps its name, its roles, its targets and its catalog. That is what makes the
+move cheap, and it is decided by
+[ADR-0025](../doc/handwritten/for-maintainers/adr/0025-let-an-earlier-work-reclaim-a-pattern-from-a-later-catalog.md).
 
 **This will happen again.** Chapter 12 of the same book names Two-Tier Architecture,
 Three-Tier Architecture and Presentation and Application Logic; chapter 13 names
