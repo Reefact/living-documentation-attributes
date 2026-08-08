@@ -58,6 +58,15 @@ Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Measurement.Role
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Measurement.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Measurement.SubjectAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Measurement.SubjectAttribute.SubjectAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Observation
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Observation.CategoryObservationAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Observation.CategoryObservationAttribute.CategoryObservationAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Observation.ObservationAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Observation.ObservationAttribute.ObservationAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Observation.PhenomenonAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Observation.PhenomenonAttribute.PhenomenonAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Observation.Role
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Observation.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.OperatingScopeAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.OperatingScopeAttribute.OperatingScopeAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.OrganizationHierarchies
