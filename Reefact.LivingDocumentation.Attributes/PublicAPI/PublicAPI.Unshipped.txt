@@ -40,6 +40,8 @@ Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PartyTypeGeneralizations
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PartyTypeGeneralizations.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PartyTypeGeneralizations.SupertypeAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PartyTypeGeneralizations.SupertypeAttribute.SupertypeAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PostAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PostAttribute.PostAttribute() -> void
 Reefact.LivingDocumentation.Attributes.DeclensionAttribute
 Reefact.LivingDocumentation.Attributes.DeclensionAttribute.DeclensionAttribute() -> void
 Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.Aggregate
