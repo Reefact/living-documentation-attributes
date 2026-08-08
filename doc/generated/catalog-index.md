@@ -65,7 +65,7 @@
 | [Memento](#memento-gang-of-four) | Gang of Four | 3 | — |
 | [MetadataMapping](#metadatamapping-patterns-of-enterprise-application-architecture) | Patterns of Enterprise Application Architecture | 1 | — |
 | [ModelViewController](#modelviewcontroller-patterns-of-enterprise-application-architecture) | Patterns of Enterprise Application Architecture | 3 | — |
-| [Money](#money-patterns-of-enterprise-application-architecture) | Patterns of Enterprise Application Architecture | 1 | — |
+| [Money](#money-patterns-of-enterprise-application-architecture) | Patterns of Enterprise Application Architecture | 1 | Quantity (specialisation) |
 | [NullObject](#nullobject-no-catalog-of-its-own) | no catalog of its own | 1 | SpecialCase (specialisation) |
 | [ObjectMother](#objectmother-no-catalog-of-its-own) | no catalog of its own | 1 | — |
 | [Observer](#observer-gang-of-four) | Gang of Four | 6 | — |
@@ -1062,11 +1062,13 @@ An amount with a currency, and arithmetic that refuses to mix the two or to lose
 
 *Martin Fowler, Patterns of Enterprise Application Architecture, 2002.*
 
+A narrower case of **Quantity** (Analysis Patterns): every participant here is one of those too.
+
 | Role | Annotation | Applies to | Repeatable | Links |
 |---|---|---|---|---|
 | Money | `[Money]` | class, struct | no | — |
 
-**Money** — A quantity of money as a value, never a bare decimal. It carries its currency, refuses arithmetic across currencies, and allocates a remainder rather than rounding it away — which is what makes it the pattern rather than a wrapper.
+**Money** — A quantity of money as a value, never a bare decimal. It carries its currency, refuses arithmetic across currencies, and allocates a remainder rather than rounding it away — the allocation being what makes it narrower than a quantity in general rather than an instance of one: no other quantity has to divide without losing anything.
 
 Held by a subtype: yes · [Source](../../Reefact.LivingDocumentation.Attributes/EnterpriseApplicationArchitecture/Money.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/MoneyUsage.cs)
 

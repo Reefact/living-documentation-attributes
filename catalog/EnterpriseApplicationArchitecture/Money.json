@@ -8,6 +8,10 @@
     "year": 2002
   },
   "inherited": true,
+  "specialisationOf": {
+    "catalog": "AnalysisPatterns",
+    "name": "Quantity"
+  },
   "roles": [
     {
       "name": "Money",
@@ -16,7 +20,7 @@
         "Struct"
       ],
       "repeatable": false,
-      "summary": "A quantity of money as a value, never a bare decimal. It carries its currency, refuses arithmetic across currencies, and allocates a remainder rather than rounding it away — which is what makes it the pattern rather than a wrapper.",
+      "summary": "A quantity of money as a value, never a bare decimal. It carries its currency, refuses arithmetic across currencies, and allocates a remainder rather than rounding it away — the allocation being what makes it narrower than a quantity in general rather than an instance of one: no other quantity has to divide without losing anything.",
       "links": []
     }
   ]
