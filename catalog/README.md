@@ -99,19 +99,21 @@ records why that is admitted rather than special-cased.
 
 A book may present a pattern it did not name. It is catalogued where the work that
 named it put it ([ADR-0006](../doc/handwritten/for-maintainers/adr/0006-catalogue-a-pattern-where-the-work-that-named-it-put-it.md)),
-which for one of Evans' large-scale structures is a catalog this repository does not
-have yet.
+which means the catalog a reader reaches a pattern through is not always the one
+that holds it.
 
-| Pattern | Presented in | Named by |
-|---|---|---|
-| Knowledge Level | *Domain-Driven Design*, chapter 16 | Fowler, *Analysis Patterns*, 1997 — chapter 2, as the accountability knowledge level |
+| Pattern | Presented in | Named by | Held in |
+|---|---|---|---|
+| Knowledge Level | *Domain-Driven Design*, chapter 16 | Fowler, *Analysis Patterns*, 1997 — chapter 2, as the accountability knowledge level | `AnalysisPatterns` |
 
-It is **annotable and wanted**: two classes hold the two levels, and the assertions
-are the checkable kind — an operational object refers to its knowledge-level
-counterpart and never the reverse, and the knowledge level changes by configuration
-rather than by code. What it is waiting for is an `AnalysisPatterns` catalog, which
-is a body of work with several more entries in it and not something to open as a
-side-effect of finishing Evans.
+This is the case that opened `AnalysisPatterns`. Knowledge Level had been recorded
+here as annotable and wanted, waiting on a catalog rather than on work: two classes
+hold the two levels, and the assertions are the checkable kind — an operational
+object refers to its knowledge-level counterpart and never the reverse, and the
+knowledge level changes by configuration rather than by code. Admitting the book
+was a decision of its own
+([ADR-0024](../doc/handwritten/for-maintainers/adr/0024-admit-a-model-of-the-business-to-the-catalog.md)),
+because its patterns are models of the business rather than shapes the code takes.
 
 ## Shape of the generated attribute
 
