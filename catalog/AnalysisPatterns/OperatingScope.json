@@ -1,0 +1,22 @@
+{
+  "catalog": "AnalysisPatterns",
+  "name": "OperatingScope",
+  "summary": "States what a responsibility covers rather than merely that it exists, by hanging clauses on an accountability the way line items hang on an order.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Analysis Patterns",
+    "year": 1997
+  },
+  "inherited": true,
+  "roles": [
+    {
+      "name": "OperatingScope",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "One clause of what a responsibility covers, belonging to exactly one accountability. It is a separate object rather than a field because the clauses are not known in advance and do not arrive together: a scope is added, narrowed or withdrawn while the responsibility itself continues unchanged. The kinds are subtypes, each naming what it is a scope of, so a clause about a territory and a clause about a resource are told apart by their type rather than by a label nothing ranges over.",
+      "links": []
+    }
+  ]
+}
