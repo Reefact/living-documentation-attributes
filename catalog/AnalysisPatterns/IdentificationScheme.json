@@ -1,0 +1,34 @@
+{
+  "catalog": "AnalysisPatterns",
+  "name": "IdentificationScheme",
+  "summary": "Makes an identifier belong to a scheme, so that a thing known by several numbers has no privileged one and each is unique only where it was issued.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Analysis Patterns",
+    "year": 1997
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "IdentificationScheme",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "links": [],
+      "summary": "Who issues identifiers, and within what they are unique. It is the object figure 5.3 lacks and figure 5.4 adds, and the difference between them is the whole pattern: a single id field asserts one issuer and global uniqueness, and the moment a second issuer exists that assertion is false without anything failing."
+    },
+    {
+      "name": "Identifier",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "repeatable": false,
+      "links": [
+        "IdentificationScheme"
+      ],
+      "summary": "One identifier of one thing, within one scheme. Uniqueness is scoped to the scheme rather than to the type, which is the assertion a rule can check and the one everybody gets wrong first: two schemes may perfectly well issue the same string, so a lookup that ignores the scheme finds the wrong thing rather than nothing."
+    }
+  ]
+}
