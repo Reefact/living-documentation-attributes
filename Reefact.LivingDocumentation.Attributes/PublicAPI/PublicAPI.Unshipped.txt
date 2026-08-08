@@ -34,6 +34,15 @@ Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ConversionRatio.ToAttrib
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ConversionRatio.ToAttribute.ToAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.DirectionalAccountabilityTypeAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.DirectionalAccountabilityTypeAttribute.DirectionalAccountabilityTypeAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.DualTimeRecord
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.DualTimeRecord.ApplicabilityAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.DualTimeRecord.ApplicabilityAttribute.ApplicabilityAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.DualTimeRecord.RecordingTimeAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.DualTimeRecord.RecordingTimeAttribute.RecordingTimeAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.DualTimeRecord.Role
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.DualTimeRecord.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.DualTimeRecord.TimeRecordAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.DualTimeRecord.TimeRecordAttribute.TimeRecordAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.HierarchicAccountabilityAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.HierarchicAccountabilityAttribute.HierarchicAccountabilityAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.KnowledgeLevel

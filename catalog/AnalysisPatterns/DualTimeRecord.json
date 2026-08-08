@@ -1,0 +1,43 @@
+{
+  "catalog": "AnalysisPatterns",
+  "name": "DualTimeRecord",
+  "summary": "Keeps when something was true apart from when it was recorded, so that a question about the past can be asked either as the world was or as the records stood.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Analysis Patterns",
+    "year": 1997
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "TimeRecord",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "repeatable": false,
+      "links": [],
+      "summary": "The two times an observation carries, held together because they answer different questions. Figure 3.11 draws them as separate associations for a reason: a result that arrives on Thursday about Tuesday is normal, and a model with one date cannot tell an auditor what was known on Wednesday."
+    },
+    {
+      "name": "Applicability",
+      "targets": [
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "links": [],
+      "summary": "When the observation was true of the world — a point or a period. This is the one a clinician means and the one every chart is drawn against."
+    },
+    {
+      "name": "RecordingTime",
+      "targets": [
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "links": [],
+      "summary": "When the system came to know it. This is the one an audit means, and the one that makes a retrospective correction visible instead of silent: without it, amending a result rewrites what the organisation is deemed to have known."
+    }
+  ]
+}
