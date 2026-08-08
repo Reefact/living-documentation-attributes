@@ -118,11 +118,19 @@ because its patterns are models of the business rather than shapes the code take
 ## Chapters catalogued whole, including what a contents page does not name
 
 Chapter 2 of *Analysis Patterns* is complete: its nine sections are catalogued, and
-so are two patterns the section titles do not name. **Chapter 3 is complete too** —
-its twelve sections, every one of which held up against the criteria, which is not
-something to assume of the chapters still to come: chapter 7 is a worked example
-whose sections are steps rather than patterns, and most of chapter 11 qualifies a
-package, which C# gives nothing to annotate.
+so are two patterns the section titles do not name. **Chapters 3 and 5 are complete
+too** — twelve sections and four, every one of which held up against the criteria,
+which is not something to assume of the chapters still to come: chapter 7 is a worked
+example whose sections are steps rather than patterns, and most of chapter 11
+qualifies a package, which C# gives nothing to annotate.
+
+Chapter 5 is worth a note of its own because its four entries are about *identity*,
+and three of them are distinguished from one another only by what they permit.
+`Name` permits several and permits none. `IdentificationScheme` permits several and
+scopes uniqueness to an issuer. `ObjectMerge` asserts sameness on the system's own
+authority; `ObjectEquivalence` records who asserts it and so admits disagreement —
+which is the difference between a duplicate cleaned up and two catalogues that do
+not concur.
 
 One departure from the naming convention below is worth stating here rather than
 leaving to be noticed. Section 3.10 is titled *Active Observation, Hypothesis, and

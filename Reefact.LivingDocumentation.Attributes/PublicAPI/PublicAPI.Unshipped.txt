@@ -98,6 +98,13 @@ Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Measurement.SubjectAttri
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Measurement.SubjectAttribute.SubjectAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.NameAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.NameAttribute.NameAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ObjectEquivalence
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ObjectEquivalence.AsserterAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ObjectEquivalence.AsserterAttribute.AsserterAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ObjectEquivalence.EquivalenceAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ObjectEquivalence.EquivalenceAttribute.EquivalenceAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ObjectEquivalence.Role
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ObjectEquivalence.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ObjectMerge
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ObjectMerge.ActiveObjectAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ObjectMerge.ActiveObjectAttribute.ActiveObjectAttribute() -> void
