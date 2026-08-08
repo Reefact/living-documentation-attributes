@@ -1,0 +1,43 @@
+{
+  "catalog": "AnalysisPatterns",
+  "name": "ConversionRatio",
+  "summary": "Reifies the factor between two units as an object, so that converting a quantity is looking something up rather than knowing it.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Analysis Patterns",
+    "year": 1997
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "ConversionRatio",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "repeatable": false,
+      "links": [],
+      "summary": "The factor from one unit to another, held as data. Figure 3.3 gives it two distinct ends and a number, which is the whole of it — and the reason it is worth having is that conversions written as code are written once per place that needs one, while a ratio held as an object is stated once and composed."
+    },
+    {
+      "name": "From",
+      "targets": [
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "links": [],
+      "summary": "The unit converted out of. Naming which end is which is the assertion: both ends are units, nothing distinguishes them, and an inverted ratio is a factor applied upside down — which produces a plausible number rather than an error."
+    },
+    {
+      "name": "To",
+      "targets": [
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "links": [],
+      "summary": "The unit converted into, and never the same as the one converted out of."
+    }
+  ]
+}

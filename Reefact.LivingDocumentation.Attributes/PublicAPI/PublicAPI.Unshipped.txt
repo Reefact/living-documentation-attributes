@@ -12,6 +12,15 @@ Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Accountability.Responsib
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Accountability.ResponsibleAttribute.ResponsibleAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Accountability.Role
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Accountability.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ConversionRatio
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ConversionRatio.ConversionRatioAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ConversionRatio.ConversionRatioAttribute.ConversionRatioAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ConversionRatio.FromAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ConversionRatio.FromAttribute.FromAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ConversionRatio.Role
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ConversionRatio.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ConversionRatio.ToAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ConversionRatio.ToAttribute.ToAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.DirectionalAccountabilityTypeAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.DirectionalAccountabilityTypeAttribute.DirectionalAccountabilityTypeAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.HierarchicAccountabilityAttribute
