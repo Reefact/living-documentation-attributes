@@ -12,6 +12,15 @@ Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Accountability.Responsib
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Accountability.ResponsibleAttribute.ResponsibleAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Accountability.Role
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Accountability.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ActiveObservation
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ActiveObservation.ActiveAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ActiveObservation.ActiveAttribute.ActiveAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ActiveObservation.HypothesisAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ActiveObservation.HypothesisAttribute.HypothesisAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ActiveObservation.ProjectionAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ActiveObservation.ProjectionAttribute.ProjectionAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ActiveObservation.Role
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ActiveObservation.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.CompoundUnits
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.CompoundUnits.AtomicUnitAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.CompoundUnits.AtomicUnitAttribute.AtomicUnitAttribute() -> void
