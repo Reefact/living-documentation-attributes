@@ -115,10 +115,21 @@ was a decision of its own
 ([ADR-0024](../doc/handwritten/for-maintainers/adr/0024-admit-a-model-of-the-business-to-the-catalog.md)),
 because its patterns are models of the business rather than shapes the code takes.
 
-## A chapter catalogued whole, including what its contents page does not name
+## Chapters catalogued whole, including what a contents page does not name
 
 Chapter 2 of *Analysis Patterns* is complete: its nine sections are catalogued, and
-so are two patterns the section titles do not name.
+so are two patterns the section titles do not name. **Chapter 3 is complete too** —
+its twelve sections, every one of which held up against the criteria, which is not
+something to assume of the chapters still to come: chapter 7 is a worked example
+whose sections are steps rather than patterns, and most of chapter 11 qualifies a
+package, which C# gives nothing to annotate.
+
+One departure from the naming convention below is worth stating here rather than
+leaving to be noticed. Section 3.10 is titled *Active Observation, Hypothesis, and
+Projection*; its faithful PascalCase is unreadable, so the entry is `ActiveObservation`
+and the other two are roles of it. That is a judgement against the rule, taken because
+the rule produced an unusable name, and it is the kind of thing a maintainer may
+reverse.
 
 `Leveled Accountability Type` and `Directional Accountability Type` appear only in
 figures 2.12 and 2.13, as «overlapping» siblings of the hierarchic one. They meet
@@ -141,6 +152,30 @@ judgement:
 | Party Type Generalizations | **An entry of its own.** Figure 2.10 asserts what `KnowledgeLevel` does not: a supertype / subtypes hierarchy on *Party Type* itself, plus a derived closure that the accountability type's constraint ranges over instead of the immediate type |
 | Organization Structure | **A specialisation of `Accountability`.** Figures 2.6 and 2.7 are drawn as 2.8 is, with *organization* for *party* and *parent* / *subsidiary* for *commissioner* / *responsible*. Restricting both ends to organizations is an added assertion, so it is narrower rather than the same thing spelled differently — [ADR-0007](../doc/handwritten/for-maintainers/adr/0007-decide-sameness-by-the-assertions-a-pattern-carries.md) |
 | Organization Hierarchies | **An entry of its own, and not that one.** Figure 2.4 has *no type object at all* — the admissible nesting is an invariant on each subtype — and figure 2.5 is Fowler showing why that collapses once a second structure appears. What it asserts is that one parent suffices, which is a claim about a participant and not merely a smaller version of the structure pattern |
+## When a later catalog turns out to hold the narrower pattern
+
+*Analysis Patterns* is 1997, which makes it the earliest of the four works
+catalogued here. So cataloguing it does not only add entries: where it names a
+pattern one of the later books also names, the **earlier publication holds the
+definition** and the later entry declines or narrows from it
+([ADR-0006](../doc/handwritten/for-maintainers/adr/0006-catalogue-a-pattern-where-the-work-that-named-it-put-it.md)).
+That reaches back into catalogs already declared complete.
+
+| Entry | Was | Is now | Why |
+|---|---|---|---|
+| `EnterpriseApplicationArchitecture/Money` | a pattern of its own | a **specialisation of `AnalysisPatterns/Quantity`** | money is an amount with a unit and arithmetic that refuses to mix units — Fowler's 1997 quantity. What makes it narrower rather than an instance is allocation: no other quantity has to divide without losing anything |
+
+A rule written for quantities now finds money, which is the point of recording the
+relation rather than leaving two unrelated entries. Nothing about the `Money`
+annotation changes for a consumer that asks for money.
+
+**This will happen again.** Chapter 12 of the same book names Two-Tier Architecture,
+Three-Tier Architecture and Presentation and Application Logic; chapter 13 names
+Application Facade. If those are the patterns `DomainDrivenDesign/LayeredArchitecture`
+(2003) and the enterprise catalog's facades (2002) hold, then those entries are the
+ones that move. Deciding it is ADR-0007 applied each time, and the anteriority is
+not negotiable.
+
 ## Shape of the generated attribute
 
 A pattern whose single role carries the pattern's own name is emitted flat, so

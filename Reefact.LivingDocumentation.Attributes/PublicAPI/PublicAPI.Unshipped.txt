@@ -131,6 +131,13 @@ Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PartyTypeGeneralizations
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PartyTypeGeneralizations.SupertypeAttribute.SupertypeAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PostAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PostAttribute.PostAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ProcessOfObservation
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ProcessOfObservation.AssessmentAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ProcessOfObservation.AssessmentAttribute.AssessmentAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ProcessOfObservation.EvidenceAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ProcessOfObservation.EvidenceAttribute.EvidenceAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ProcessOfObservation.Role
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ProcessOfObservation.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ProtocolAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ProtocolAttribute.ProtocolAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Quantity
