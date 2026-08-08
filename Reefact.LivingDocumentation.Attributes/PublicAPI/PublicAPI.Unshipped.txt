@@ -23,6 +23,8 @@ Reefact.LivingDocumentation.Attributes.AnalysisPatterns.KnowledgeLevel.Operation
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.KnowledgeLevel.OperationalAttribute.OperationalAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.KnowledgeLevel.Role
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.KnowledgeLevel.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.LeveledAccountabilityTypeAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.LeveledAccountabilityTypeAttribute.LeveledAccountabilityTypeAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PartyAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PartyAttribute.PartyAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PartyTypeGeneralizations
