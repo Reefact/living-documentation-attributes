@@ -1,0 +1,26 @@
+{
+  "catalog": "AnalysisPatterns",
+  "name": "DirectionalAccountabilityType",
+  "summary": "Constrains a kind of accountability by naming which party types may commission it and which may be responsible for it, so that the direction of a responsibility is data rather than a convention.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Analysis Patterns",
+    "year": 1997
+  },
+  "inherited": false,
+  "specialisationOf": {
+    "catalog": "AnalysisPatterns",
+    "name": "Accountability"
+  },
+  "roles": [
+    {
+      "name": "DirectionalAccountabilityType",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The kind of accountability that carries two sets of party types, one admissible at each end. It is the looser of the two ways of constraining direction: it says who may stand where without ordering them, which is what suits a responsibility that is genuinely not a ladder — an auditor answerable to a committee, where no level is being skipped. The role is held by the type object for the same reason as its siblings: the sets describe every accountability of the kind, including those not yet created.",
+      "links": []
+    }
+  ]
+}

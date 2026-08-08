@@ -12,6 +12,8 @@ Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Accountability.Responsib
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Accountability.ResponsibleAttribute.ResponsibleAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Accountability.Role
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Accountability.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.DirectionalAccountabilityTypeAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.DirectionalAccountabilityTypeAttribute.DirectionalAccountabilityTypeAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.HierarchicAccountabilityAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.HierarchicAccountabilityAttribute.HierarchicAccountabilityAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.KnowledgeLevel
