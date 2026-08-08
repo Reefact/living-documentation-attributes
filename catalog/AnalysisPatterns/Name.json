@@ -1,0 +1,24 @@
+{
+  "catalog": "AnalysisPatterns",
+  "name": "Name",
+  "summary": "Marks a member as a name rather than an identifier, so that nothing keys on something several of which may exist and any of which may change.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Analysis Patterns",
+    "year": 1997
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Name",
+      "targets": [
+        "Property",
+        "Field",
+        "Method"
+      ],
+      "repeatable": true,
+      "links": [],
+      "summary": "What a thing is called. Figures 5.1 and 5.2 are the whole pattern: a name may be absent, and there may be several. Neither is true of an identifier, and marking the difference is worth doing because the mistake is invisible — a name used as a key works perfectly until the day two things share one or one thing is renamed, and by then everything that joined on it is wrong."
+    }
+  ]
+}
