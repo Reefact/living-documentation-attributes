@@ -1,0 +1,22 @@
+{
+  "catalog": "AnalysisPatterns",
+  "name": "Protocol",
+  "summary": "Records the method by which an observation was made, so that two results of the same phenomenon type obtained differently are not treated as interchangeable.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Analysis Patterns",
+    "year": 1997
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Protocol",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "links": [],
+      "summary": "How the observation was obtained — which assay, which instrument, which procedure. Figure 3.10 hangs it off the phenomenon type at the knowledge level, and what it buys is comparability: two glucose readings taken by different methods have different reference ranges, so a trend line drawn through both is a clinical error that no arithmetic detects. Marking it says the comparison must ask."
+    }
+  ]
+}
