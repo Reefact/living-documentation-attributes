@@ -26,6 +26,7 @@ CATALOG_LABEL = {
     "GangOfFour": "Gang of Four",
     "DomainDrivenDesign": "Domain-Driven Design",
     "EnterpriseApplicationArchitecture": "Patterns of Enterprise Application Architecture",
+    "AnalysisPatterns": "Analysis Patterns",
     "Idioms": "no catalog of its own",
 }
 
