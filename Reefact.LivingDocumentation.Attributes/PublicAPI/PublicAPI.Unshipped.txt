@@ -102,6 +102,8 @@ Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PartyTypeGeneralizations
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PartyTypeGeneralizations.SupertypeAttribute.SupertypeAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PostAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PostAttribute.PostAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ProtocolAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ProtocolAttribute.ProtocolAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Quantity
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Quantity.AmountAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Quantity.AmountAttribute.AmountAttribute() -> void
