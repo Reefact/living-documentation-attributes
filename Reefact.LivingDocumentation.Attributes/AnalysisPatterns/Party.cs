@@ -19,6 +19,6 @@ namespace Reefact.LivingDocumentation.Attributes.AnalysisPatterns {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class, AllowMultiple = false, Inherited = true)]
-    public sealed class PartyAttribute : LivingDocumentationAttribute { }
+    public class PartyAttribute : LivingDocumentationAttribute { }
 
 }

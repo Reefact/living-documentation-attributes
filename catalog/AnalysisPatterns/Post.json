@@ -1,0 +1,26 @@
+{
+  "catalog": "AnalysisPatterns",
+  "name": "Post",
+  "summary": "Makes a position a party in its own right, so that a responsibility attached to the job survives whoever is holding it.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Analysis Patterns",
+    "year": 1997
+  },
+  "inherited": true,
+  "specialisationOf": {
+    "catalog": "AnalysisPatterns",
+    "name": "Party"
+  },
+  "roles": [
+    {
+      "name": "Post",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "A position the organization deals with as it deals with a person or an organization — the third kind of party, and the whole of the pattern. Because it is a party, every responsibility a party can hold attaches to it with no new machinery, and a handover changes who occupies it without touching one of them. A responsibility recorded against the person instead disappears the day they change job, and nothing reports that it has.",
+      "links": []
+    }
+  ]
+}
