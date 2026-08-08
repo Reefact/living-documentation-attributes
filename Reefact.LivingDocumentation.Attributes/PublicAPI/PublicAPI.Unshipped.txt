@@ -98,6 +98,17 @@ Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Measurement.SubjectAttri
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Measurement.SubjectAttribute.SubjectAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.NameAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.NameAttribute.NameAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ObjectMerge
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ObjectMerge.ActiveObjectAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ObjectMerge.ActiveObjectAttribute.ActiveObjectAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ObjectMerge.ObjectEssenceAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ObjectMerge.ObjectEssenceAttribute.ObjectEssenceAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ObjectMerge.Role
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ObjectMerge.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ObjectMerge.SupersededObjectAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ObjectMerge.SupersededObjectAttribute.ActiveObject.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ObjectMerge.SupersededObjectAttribute.ActiveObject.init -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ObjectMerge.SupersededObjectAttribute.SupersededObjectAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Observation
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Observation.CategoryObservationAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Observation.CategoryObservationAttribute.CategoryObservationAttribute() -> void
