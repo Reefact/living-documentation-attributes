@@ -1,0 +1,44 @@
+{
+  "catalog": "AnalysisPatterns",
+  "name": "AssociatedObservation",
+  "summary": "Derives an observation from others by a stated function while keeping what it was derived from, so that a conclusion can be re-explained rather than merely trusted.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Analysis Patterns",
+    "year": 1997
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "AssociativeFunction",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "links": [],
+      "summary": "The rule that produces one observation concept from others, held at the knowledge level. Figure 3.14 gives it arguments and a product, both observation concepts, which is what makes it configurable: a body mass index is a function of a height and a weight, and stating that as data rather than as a method means a new derived measure is added without a release."
+    },
+    {
+      "name": "AssociatedObservation",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "links": [
+        "AssociativeFunction"
+      ],
+      "summary": "An observation produced by such a function rather than taken directly. Naming it is what keeps a derived value from being mistaken for a measured one — the difference matters the moment an argument is corrected, because the derivation has to be redone and a directly measured value must not be."
+    },
+    {
+      "name": "Evidence",
+      "targets": [
+        "Property",
+        "Method"
+      ],
+      "repeatable": false,
+      "links": [],
+      "summary": "The observations it was derived from, retained rather than consumed. Keeping them is the pattern's second claim and the harder one to hold: it is always tempting to store only the result, and a stored result whose inputs are gone cannot be rechecked when one of them turns out to have been rejected."
+    }
+  ]
+}

@@ -21,6 +21,17 @@ Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ActiveObservation.Projec
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ActiveObservation.ProjectionAttribute.ProjectionAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ActiveObservation.Role
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ActiveObservation.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.AssociatedObservation
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.AssociatedObservation.AssociatedObservationAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.AssociatedObservation.AssociatedObservationAttribute.AssociatedObservationAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.AssociatedObservation.AssociatedObservationAttribute.AssociativeFunction.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.AssociatedObservation.AssociatedObservationAttribute.AssociativeFunction.init -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.AssociatedObservation.AssociativeFunctionAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.AssociatedObservation.AssociativeFunctionAttribute.AssociativeFunctionAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.AssociatedObservation.EvidenceAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.AssociatedObservation.EvidenceAttribute.EvidenceAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.AssociatedObservation.Role
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.AssociatedObservation.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.CompoundUnits
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.CompoundUnits.AtomicUnitAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.CompoundUnits.AtomicUnitAttribute.AtomicUnitAttribute() -> void

@@ -36,10 +36,10 @@ architecture" from a claim into something a build can check.
 | `GangOfFour` | 23 | Gamma, Helm, Johnson, Vlissides — *Design Patterns*, 1994 |
 | `DomainDrivenDesign` | 23 | Evans — *Domain-Driven Design*, 2003 |
 | `EnterpriseApplicationArchitecture` | 51 | Fowler — *Patterns of Enterprise Application Architecture*, 2002 |
-| `AnalysisPatterns` | 21 | Fowler — *Analysis Patterns*, 1997 |
+| `AnalysisPatterns` | 22 | Fowler — *Analysis Patterns*, 1997 |
 | `Idioms` | 2 | patterns with a source but no catalog of their own — each entry names its own |
 
-**120 patterns, 220 roles** today, and the catalog is meant to grow by an order of
+**121 patterns, 223 roles** today, and the catalog is meant to grow by an order of
 magnitude. A pattern is catalogued where the work that named it put it, under the
 name that work gave it — so a reader of a book finds its patterns spelled as it
 spelled them.
