@@ -1,0 +1,43 @@
+{
+  "catalog": "AnalysisPatterns",
+  "name": "Quantity",
+  "summary": "Makes an amount and its unit one value with arithmetic of its own, so that a number whose meaning depends on a unit cannot be used as though it were a bare number.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Analysis Patterns",
+    "year": 1997
+  },
+  "inherited": true,
+  "roles": [
+    {
+      "name": "Quantity",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "repeatable": false,
+      "links": [],
+      "summary": "An amount together with the unit that gives it meaning, carrying the arithmetic Fowler draws on it in figure 3.2 — addition, subtraction, scaling, division and comparison. The pattern is the refusal as much as the pairing: adding millilitres to milligrams and comparing a weight to a length must fail, and a model that keeps the unit in a neighbouring field cannot make either fail."
+    },
+    {
+      "name": "Amount",
+      "targets": [
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "links": [],
+      "summary": "The number. Marked because it is the member a rule must never find alone: every reported unit error begins with something reading this and doing arithmetic on it."
+    },
+    {
+      "name": "Unit",
+      "targets": [
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "links": [],
+      "summary": "What the amount is measured in. Its presence is what makes the quantity self-describing, and what lets a conversion be asked for rather than assumed."
+    }
+  ]
+}
