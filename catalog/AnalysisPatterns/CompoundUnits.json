@@ -1,0 +1,51 @@
+{
+  "catalog": "AnalysisPatterns",
+  "name": "CompoundUnits",
+  "summary": "Builds a unit out of other units raised to powers, so that a rate, an area or a dose per kilogram is a unit the model can reason about rather than a string.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Analysis Patterns",
+    "year": 1997
+  },
+  "inherited": true,
+  "roles": [
+    {
+      "name": "Unit",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "links": [],
+      "summary": "What a quantity is measured in, atomic or compound indifferently. The role sits on the supertype because that is the point: a quantity holds a unit without caring which kind it is, and a conversion between millilitres per hour and litres per day is asked of the same interface as one between grams and kilograms."
+    },
+    {
+      "name": "AtomicUnit",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "links": [],
+      "summary": "A unit that decomposes no further — a metre, a gram, a second."
+    },
+    {
+      "name": "CompoundUnit",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "links": [],
+      "summary": "A unit made of unit references. Figure 3.4 states the constraint that keeps it from being a redundant wrapper: it must hold more than one reference, or one whose power is negative or above one. A compound unit of a single reference to the power of one is a metre spelled twice."
+    },
+    {
+      "name": "UnitReference",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "repeatable": false,
+      "links": [],
+      "summary": "One unit and the power it is raised to. The power is what makes the model reason rather than concatenate: metres to the power of two is an area and metres to the power of minus one is a reciprocal, and a name like \"m2\" says neither to anything."
+    }
+  ]
+}
