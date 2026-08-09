@@ -41,9 +41,10 @@ architecture" from a claim into something a build can check.
 | `Idioms` | 2 | patterns with a source but no catalog of their own — each entry names its own |
 
 **140 patterns, 286 roles** today, and the catalog is meant to grow by an order of
-magnitude. A pattern is catalogued where the work that named it put it, under the
-name that work gave it — so a reader of a book finds its patterns spelled as it
-spelled them.
+magnitude. A pattern is held by every catalogue whose work presents it as one of its
+own, under the name that work gave it — so a reader of a book finds its patterns
+spelled as it spelled them, and a work that merely cites another's pattern does not
+claim it.
 
 **[Browse the catalog](doc/generated/catalog-index.md)** — every pattern, the
 annotation to type for each of its roles, what each role may be applied to, and a
@@ -51,15 +52,30 @@ link to its source and to a worked example.
 
 ## Installing
 
+**One package per catalogue.** Take the vocabulary of the works you actually read:
+
+```
+dotnet add package Reefact.LivingDocumentation.Attributes.GangOfFour
+dotnet add package Reefact.LivingDocumentation.Attributes.DomainDrivenDesign
+```
+
+Or take all of them at once:
+
 ```
 dotnet add package Reefact.LivingDocumentation.Attributes
 ```
 
-Targets `netstandard2.0` through `net8.0`, so it reaches .NET Framework 4.6.1 and
-everything after it. It has no dependencies.
+Each catalogue package is named after its row in the table above, and each is
+**independent of the others**: nothing in one refers to a pattern of another, so a
+codebase that declares domain-driven design does not carry the Gang of Four. They
+share one small package, `…Attributes.Core`, which holds the base marker a reader
+needs to find every annotation whatever mix you installed.
+
+Every package targets `netstandard2.0` through `net8.0`, so it reaches .NET
+Framework 4.6.1 and everything after it, and none has a dependency beyond `Core`.
 
 *Nothing is published yet* — the first release is still ahead, and until then the
-package is built from source.
+packages are built from source.
 
 ## How an annotation is written
 
@@ -102,7 +118,7 @@ package:
 | **Catalog** | the **first** namespace segment below the root — the first, so an organisational sub-namespace folds into the catalog it belongs to |
 | **Pattern name** | the declaring type; a single-role pattern has no container and carries its own name |
 | **Role name** | the attribute type name, without its `Attribute` suffix |
-| **Pattern identity** | the type reached by climbing through an abstract base *declared in the same pattern*, and through a declension |
+| **Pattern identity** | the type reached by climbing through an abstract base *declared in the same pattern*, stopping at anything else |
 
 Group by the **identity**, never by the pattern name: `Adapter` names one pattern
 in Gang of Four and an unrelated one in ports and adapters, and grouping by name
@@ -111,22 +127,27 @@ merges them silently.
 The sample project carries a working reader — around a hundred lines — that
 applies all four. It is meant to be copied and owned, not depended upon.
 
-## Two patterns can be related, in two ways
+## One pattern can narrow another
 
-The distinction is the reason this is a vocabulary rather than a list of tags.
+**Specialisation** — the narrower pattern derives from the broader one, so a rule
+written for the broader reaches the narrower without naming it. Fowler's row data
+gateway narrows his gateway: every one of the first is one of the second, while a
+gateway to a message queue is not a row of anything. Both stay countable patterns.
 
-* **Specialisation** — the narrower pattern derives from the broader one. Evans'
-  value object narrows Fowler's: every one of the first is one of the second,
-  while a mutable date range satisfies Fowler's rule and fails Evans'. Both stay
-  countable patterns, and a rule written for the broader one reaches the narrower.
-* **Declension** — the same pattern, catalogued twice, under the same name or
-  another one. Neither is narrower; both spellings resolve to a single identity,
-  so a reader of either catalog finds the pattern where they look for it and
-  nothing is counted twice. It carries a `[Declension]` marker, because that is
-  the one thing inheritance cannot say on its own.
+```csharp
+[RowDataGateway] public sealed class PersonRow { }   // is a [Gateway] too
+```
 
-Whether two entries are one pattern is decided by **the assertions they carry**,
-never by their names.
+**A relation never crosses a catalogue.** Each work ships as its own package with no
+reference to the others, so the inheritance a cross-catalogue relation would need
+cannot exist. Evans' value object and Fowler's are therefore two patterns here, each
+in its own package, each in its author's words — and a rule that wants both names
+both attributes. That is a deliberate trade: the catalogues stay independent, and
+what they have in common is stated in the books rather than asserted by the
+compiler.
+
+Whether two entries of **one** catalogue are one pattern is decided by **the
+assertions they carry**, never by their names.
 
 ## What it deliberately does not do
 

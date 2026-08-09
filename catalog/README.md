@@ -1,10 +1,10 @@
 # Pattern catalog
 
 The data behind the attributes. One file per pattern, mirroring the layout of
-`Reefact.LivingDocumentation.Attributes/`:
+`Reefact.LivingDocumentation.Attributes.<Catalog>/`, one project per catalogued work:
 
 ```
-catalog/GangOfFour/Composite.json  ──generate.py──▶  Reefact.LivingDocumentation.Attributes/GangOfFour/Composite.cs
+catalog/GangOfFour/Composite.json  ──generate.py──▶  Reefact.LivingDocumentation.Attributes.GangOfFour/Composite.cs
                                                  └─▶  doc/generated/catalog-index.md
 ```
 
@@ -95,26 +95,6 @@ usual three. It is the only entry whose assertions *exempt* rather than constrai
 and [ADR-0023](../doc/handwritten/for-maintainers/adr/0023-admit-an-anti-pattern-on-the-same-terms-as-any-pattern.md)
 records why that is admitted rather than special-cased.
 
-## Named by another work
-
-A book may present a pattern it did not name. It is catalogued where the work that
-named it put it ([ADR-0006](../doc/handwritten/for-maintainers/adr/0006-catalogue-a-pattern-where-the-work-that-named-it-put-it.md)),
-which means the catalog a reader reaches a pattern through is not always the one
-that holds it.
-
-| Pattern | Presented in | Named by | Held in |
-|---|---|---|---|
-| Knowledge Level | *Domain-Driven Design*, chapter 16 | Fowler, *Analysis Patterns*, 1997 — chapter 2, as the accountability knowledge level | `AnalysisPatterns` |
-
-This is the case that opened `AnalysisPatterns`. Knowledge Level had been recorded
-here as annotable and wanted, waiting on a catalog rather than on work: two classes
-hold the two levels, and the assertions are the checkable kind — an operational
-object refers to its knowledge-level counterpart and never the reverse, and the
-knowledge level changes by configuration rather than by code. Admitting the book
-was a decision of its own
-([ADR-0024](../doc/handwritten/for-maintainers/adr/0024-admit-a-model-of-the-business-to-the-catalog.md)),
-because its patterns are models of the business rather than shapes the code takes.
-
 ## Chapters catalogued whole, including what a contents page does not name
 
 Chapter 2 of *Analysis Patterns* is complete: its nine sections are catalogued, and
@@ -178,33 +158,6 @@ judgement:
 | Party Type Generalizations | **An entry of its own.** Figure 2.10 asserts what `KnowledgeLevel` does not: a supertype / subtypes hierarchy on *Party Type* itself, plus a derived closure that the accountability type's constraint ranges over instead of the immediate type |
 | Organization Structure | **A specialisation of `Accountability`.** Figures 2.6 and 2.7 are drawn as 2.8 is, with *organization* for *party* and *parent* / *subsidiary* for *commissioner* / *responsible*. Restricting both ends to organizations is an added assertion, so it is narrower rather than the same thing spelled differently — [ADR-0007](../doc/handwritten/for-maintainers/adr/0007-decide-sameness-by-the-assertions-a-pattern-carries.md) |
 | Organization Hierarchies | **An entry of its own, and not that one.** Figure 2.4 has *no type object at all* — the admissible nesting is an invariant on each subtype — and figure 2.5 is Fowler showing why that collapses once a second structure appears. What it asserts is that one parent suffices, which is a claim about a participant and not merely a smaller version of the structure pattern |
-## When a later catalog turns out to hold the narrower pattern
-
-*Analysis Patterns* is 1997, which makes it the earliest of the four works
-catalogued here. So cataloguing it does not only add entries: where it names a
-pattern one of the later books also names, the **earlier publication holds the
-definition** and the later entry declines or narrows from it
-([ADR-0006](../doc/handwritten/for-maintainers/adr/0006-catalogue-a-pattern-where-the-work-that-named-it-put-it.md)).
-That reaches back into catalogs already declared complete.
-
-| Entry | Was | Is now | Why |
-|---|---|---|---|
-| `EnterpriseApplicationArchitecture/Money` | a pattern of its own | a **specialisation of `AnalysisPatterns/Quantity`** | money is an amount with a unit and arithmetic that refuses to mix units — Fowler's 1997 quantity. What makes it narrower rather than an instance is allocation: no other quantity has to divide without losing anything |
-
-A rule written for quantities now finds money, which is the point of recording the
-relation rather than leaving two unrelated entries. Nothing about the `Money`
-annotation changes for a consumer that asks for money: only the relation moves, so the
-entry keeps its name, its roles, its targets and its catalog. That is what makes the
-move cheap, and it is decided by
-[ADR-0025](../doc/handwritten/for-maintainers/adr/0025-let-an-earlier-work-reclaim-a-pattern-from-a-later-catalog.md).
-
-**This will happen again.** Chapter 12 of the same book names Two-Tier Architecture,
-Three-Tier Architecture and Presentation and Application Logic; chapter 13 names
-Application Facade. If those are the patterns `DomainDrivenDesign/LayeredArchitecture`
-(2003) and the enterprise catalog's facades (2002) hold, then those entries are the
-ones that move. Deciding it is ADR-0007 applied each time, and the anteriority is
-not negotiable.
-
 ## When the author says a chapter is superseded
 
 The UML companion Fowler publishes for chapter 6 of *Analysis Patterns* carries a note
@@ -216,8 +169,8 @@ So **chapter 6 is not catalogued from the book**, and the paper — *Accounting 
 seventy-two pages, its PDF created 8 December 2000 — is catalogued as
 `AccountingPatterns` instead. The decision is
 [ADR-0026](../doc/handwritten/for-maintainers/adr/0026-follow-an-authors-own-supersession-of-a-catalogued-chapter.md),
-and its argument is that ADR-0006's anteriority rule guards against a *later presenter*
-redefining an earlier work, which is not what an author replacing his own model is doing.
+and its argument is that a rule protecting a work's authorship should not be turned
+against the author himself: replacing one's own model is not a rival presentation of it.
 
 The paper has **nine patterns**, read from its own section headings: Event (p11),
 Accounting Entry (p15), Posting Rule (p19), Secondary Posting Rule (p33), Account (p39),
@@ -243,19 +196,7 @@ Three of the paper's nine have no section in chapter 6 at all — `Event`, and t
 adjustments beyond the reversal. The paper is built around reacting to an event, which
 is the shift the note is really about.
 
-### Two comparisons worth recording
-
-`AccountingPatterns/Event` and `DomainDrivenDesign/DomainEvent` are **kept apart**. The
-core is shared — something that happened, as an immutable object — but each carries an
-assertion the other does not: Evans' requires the past-tense name and domain meaning,
-Fowler's requires the two timestamps and the role of triggering a rule. Under
-[ADR-0007](../doc/handwritten/for-maintainers/adr/0007-decide-sameness-by-the-assertions-a-pattern-carries.md)
-that is two patterns, not one spelled twice. It is a judgement, the paper is the earlier
-publication of the two, and reversing it would make the 2003 entry decline from the 2000
-one — so it is written here rather than left implicit.
-
-The two timestamps of `Event` **are** `AnalysisPatterns/DualTimeRecord`, which the 1997
-book names and therefore holds. `Event` does not re-assert it; its role summaries say so.
+### The three adjustments are siblings
 
 The three adjustments are siblings and not a hierarchy. Each is a whole strategy for one
 problem — you cannot edit a booked entry — and they differ in what they cost:
@@ -289,8 +230,8 @@ generated exactly like the others, and consumers tell them apart by reading
 
 `Idioms` is for a pattern that has a **source** but no body of work of its own
 (ADR-0013) — it names the absence of a catalog, not the absence of a source, and
-every entry must record a reference with a year, because that reference is what
-orders a declension (ADR-0006).
+every entry must record a reference with a year, because that reference is what says
+which work presents the pattern as its own (ADR-0028).
 
 Two everyday practices fail that, and one of them is named in ADR-0013 itself as
 the example of an Idioms candidate:

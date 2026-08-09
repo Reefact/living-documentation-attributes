@@ -42,12 +42,13 @@ python3 tools/catalog/validate.py     # needs: pip install -r tools/catalog/requ
 
 ## The public API baseline
 
-This library ships public types and nothing else, so its public surface is the
-whole of the product. It is declared in
-`Reefact.LivingDocumentation.Attributes/PublicAPI/`, one baseline shared by all
-six target frameworks — the attributes are the same on every one of them, and a
-shared file makes a divergence between two targets a failure rather than
-something two baselines would absorb.
+These libraries ship public types and nothing else, so their public surface is the
+whole of the product. It is declared in `<project>/PublicAPI/` — **one baseline per
+package** since ADR-0027 split the catalogues, each shared by all six target
+frameworks. The attributes are the same on every framework, so a shared file makes a
+divergence between two targets a failure rather than something two baselines would
+absorb; and a baseline per package means a change to one work's surface cannot hide
+in another's diff.
 
 An undeclared public symbol raises `RS0016`; a declared symbol that no longer
 exists raises `RS0017`. Both are warnings locally and errors in CI, so a surface
@@ -56,7 +57,7 @@ change cannot merge until the same change updates the baseline.
 **Accepting an intended surface change.** Update the baseline in the same commit:
 
 ```
-dotnet format analyzers Reefact.LivingDocumentation.Attributes/Reefact.LivingDocumentation.Attributes.csproj \
+dotnet format analyzers Reefact.LivingDocumentation.Attributes.<Catalog>/Reefact.LivingDocumentation.Attributes.<Catalog>.csproj \
   --diagnostics RS0016 --severity warn
 ```
 
@@ -74,26 +75,30 @@ published. At the first release the accumulated entries are promoted to
 
 ## Versioning
 
-The package follows Semantic Versioning over **two** contracts, not one: what a
+The packages follow Semantic Versioning over **two** contracts, not one: what a
 consumer compiles against, and what it reads back. The attributes carry no
-behaviour and the library ships no reader, so a change can leave the public
+behaviour and the libraries ship no reader, so a change can leave the public
 surface byte-identical and still change every consumer's answers.
+
+**One version number for all of them.** ADR-0027 splits the catalogues into
+independent packages and prescribes releasing them in lockstep at first: loosening
+that later is easy, and tightening it later is not. It lives in
+`build/Packaging.props`.
 
 | | |
 |---|---|
-| **Major** | a role or pattern removed or renamed · a target set narrowed · `AllowMultiple` or `Inherited` changed · a pattern moved between catalogs · a relation added, removed or changed in nature · a reading rule changed |
+| **Major** | a role or pattern removed or renamed · a target set narrowed · `AllowMultiple` or `Inherited` changed · a pattern moved between catalogs, which now moves it between packages · a relation added or removed · a reading rule changed |
 | **Minor** | a pattern added · a role added to a published pattern · a target set widened · a link added to a role |
 | **Patch** | documentation, samples, the catalog index, anything that reaches no consumer |
 
 The two rows worth reading twice are in the major line. **A relation** — declaring
-that one pattern declines or narrows another — reads as an editorial statement
-about two books and is in fact a change to what `IdentityOf` answers for
-annotations already written. **A reading rule** reads as documentation and is what
-consumers copy.
+that one pattern narrows another — reads as an editorial remark and is in fact a
+change to what `IdentityOf` answers for annotations already written. **A reading
+rule** reads as documentation and is what consumers copy.
 
 The version is below `1.0.0` and stays there until no catalogued pattern is
 expected to move catalog: a pattern sits in `Idioms` because no body of work
-claims it yet, and the day one does it moves namespace. Below `1.0.0` the table
+claims it yet, and the day one does it changes namespace and package both. Below `1.0.0` the table
 applies one step down — a breaking change moves the minor, everything else the
 patch. Reasoning: ADR-0021.
 

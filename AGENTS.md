@@ -65,11 +65,13 @@ it, rather than rediscovering them:
   **Never hand-edit a generated attribute** — edit the catalog and regenerate.
 - Whether two patterns are the same is decided by the assertions they carry, not
   by their names ([ADR-0007](doc/handwritten/for-maintainers/adr/0007-decide-sameness-by-the-assertions-a-pattern-carries.md)).
-- A pattern is catalogued where the work that named it put it, and anteriority
-  orders a declension ([ADR-0006](doc/handwritten/for-maintainers/adr/0006-catalogue-a-pattern-where-the-work-that-named-it-put-it.md)).
-- A declension is marked, a specialisation is not ([ADR-0005](doc/handwritten/for-maintainers/adr/0005-relate-patterns-by-inheritance-and-read-identity-from-it.md),
-  superseded on the identity climb alone by [ADR-0019](doc/handwritten/for-maintainers/adr/0019-stop-the-identity-climb-at-the-pattern-boundary.md);
-  the marker is still ADR-0005's).
+- A pattern is held by every catalogue whose work presents it as its own; a work
+  that merely cites another's pattern does not hold it
+  ([ADR-0028](doc/handwritten/for-maintainers/adr/0028-hold-a-pattern-in-every-catalogue-whose-work-presents-it.md)).
+- **A relation never crosses a catalogue.** Each catalogued work ships as its own
+  independent package, so the inheritance a cross-catalogue relation would emit
+  cannot exist; `validate.py` and the generator both refuse one
+  ([ADR-0027](doc/handwritten/for-maintainers/adr/0027-ship-one-independent-package-per-catalogued-work.md)).
 - What cannot be attached to a type, a member or an assembly does not enter the
   catalog ([ADR-0011](doc/handwritten/for-maintainers/adr/0011-leave-out-what-cannot-be-annotated.md)).
 - Every pattern gets one sample file ([ADR-0012](doc/handwritten/for-maintainers/adr/0012-show-every-pattern-at-work-in-a-business-example.md)).
