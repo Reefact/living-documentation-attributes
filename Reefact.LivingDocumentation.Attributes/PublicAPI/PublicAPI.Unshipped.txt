@@ -19,6 +19,17 @@ Reefact.LivingDocumentation.Attributes.AccountingPatterns.AccountingEntry.Role
 Reefact.LivingDocumentation.Attributes.AccountingPatterns.AccountingEntry.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.AccountingPatterns.AccountingEntry.WhenBookedAttribute
 Reefact.LivingDocumentation.Attributes.AccountingPatterns.AccountingEntry.WhenBookedAttribute.WhenBookedAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.AccountingTransaction
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.AccountingTransaction.AccountingTransactionAttribute
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.AccountingTransaction.AccountingTransactionAttribute.AccountingTransactionAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.AccountingTransaction.EntriesAttribute
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.AccountingTransaction.EntriesAttribute.EntriesAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.AccountingTransaction.MultiLeggedAttribute
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.AccountingTransaction.MultiLeggedAttribute.MultiLeggedAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.AccountingTransaction.Role
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.AccountingTransaction.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.AccountingTransaction.TwoLeggedAttribute
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.AccountingTransaction.TwoLeggedAttribute.TwoLeggedAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AccountingPatterns.Event
 Reefact.LivingDocumentation.Attributes.AccountingPatterns.Event.EventAttribute
 Reefact.LivingDocumentation.Attributes.AccountingPatterns.Event.EventAttribute.EventAttribute() -> void
