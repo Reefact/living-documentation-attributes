@@ -1,0 +1,71 @@
+{
+  "catalog": "AnalysisPatterns",
+  "name": "ResourceAllocation",
+  "summary": "Records what an action needs as an allocation of a resource type and a quantity, so that booking a resource and using it are two facts rather than one guess.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Analysis Patterns",
+    "year": 1997
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "ResourceType",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "What kind of thing an action can call on — a skill, a machine, a consumable. A type object, so adding a resource to the business is configuration rather than a class.",
+      "links": []
+    },
+    {
+      "name": "ResourceAllocation",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "One claim on a resource by an action, carrying a quantity. Its whole point is that a proposed action books and an implemented action uses, so the plan's demand and the actual draw are comparable instead of the same number twice.",
+      "links": [
+        "ResourceType"
+      ]
+    },
+    {
+      "name": "GeneralAllocation",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "A claim on a type rather than on a thing: two hours of a welder, not that welder. It is what a plan can state before anybody knows which asset will be free.",
+      "links": []
+    },
+    {
+      "name": "SpecificAllocation",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "A claim on the very asset. It says more than a general one and can therefore fail where a general one would not — which is why the two are separate rather than one with a nullable asset.",
+      "links": []
+    },
+    {
+      "name": "Books",
+      "targets": [
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "summary": "The allocations a proposed action claims. A booking, so it can be refused, moved or dropped without anything having happened.",
+      "links": []
+    },
+    {
+      "name": "Uses",
+      "targets": [
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "summary": "The allocations an implemented action actually drew. Held apart from what was booked, because the difference between them is the figure anybody planning again wants.",
+      "links": []
+    }
+  ]
+}
