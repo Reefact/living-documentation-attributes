@@ -130,12 +130,30 @@ authority; `ObjectEquivalence` records who asserts it and so admits disagreement
 which is the difference between a duplicate cleaned up and two catalogues that do
 not concur.
 
-One departure from the naming convention below is worth stating here rather than
-leaving to be noticed. Section 3.10 is titled *Active Observation, Hypothesis, and
-Projection*; its faithful PascalCase is unreadable, so the entry is `ActiveObservation`
-and the other two are roles of it. That is a judgement against the rule, taken because
-the rule produced an unusable name, and it is the kind of thing a maintainer may
-reverse.
+**Chapter 8 is complete: all seven sections.** Proposed and Implemented Action,
+Completed and Abandoned Actions, Suspension, Plan, Resource Allocation, Outcome and
+Start Functions — and its Protocol, catalogued under another name for the reason below.
+Its UML companion redraws all seventeen figures, so nothing here rests on inference.
+
+Two departures from the naming convention below are worth stating here rather than
+leaving to be noticed.
+
+Section 3.10 is titled *Active Observation, Hypothesis, and Projection*; its faithful
+PascalCase is unreadable, so the entry is `ActiveObservation` and the other two are
+roles of it.
+
+Section 8.5 is titled *Protocol*, and `AnalysisPatterns/Protocol` was already taken by
+chapter 3. **They are two patterns, not one spelled twice.** Chapter 3's records the
+method by which an observation was made, so that two results of one phenomenon type
+obtained differently are not interchangeable — which is why `MeasurementProtocol`
+narrows it. Chapter 8's is a composite of steps at the knowledge level whose operational
+instance is a plan (figures 8.9, 8.10 and 8.12). Different assertions, so
+[ADR-0007](../doc/handwritten/for-maintainers/adr/0007-decide-sameness-by-the-assertions-a-pattern-carries.md)
+makes them two entries — and since one catalogue cannot hold the name twice, chapter 8's
+is `PlanProtocol`, named after what it is the knowledge level *of*.
+
+Both are judgements against the rule, taken because the rule produced an unusable or an
+impossible name, and both are the kind of thing a maintainer may reverse.
 
 `Leveled Accountability Type` and `Directional Accountability Type` appear only in
 figures 2.12 and 2.13, as «overlapping» siblings of the hierarchic one. They meet
