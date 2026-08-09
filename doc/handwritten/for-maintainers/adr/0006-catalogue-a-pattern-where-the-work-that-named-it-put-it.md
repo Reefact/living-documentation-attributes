@@ -2,7 +2,7 @@
 
 🌍 🇬🇧 English (this file) · 🇫🇷 [Français](0006-catalogue-a-pattern-where-the-work-that-named-it-put-it.fr.md)
 
-**Status:** Accepted
+**Status:** Superseded by [ADR-0028](0028-hold-a-pattern-in-every-catalogue-whose-work-presents-it.md)
 **Proposed:** 2026-08-05
 **Accepted:** 2026-08-05
 **Decision Makers:** Reefact

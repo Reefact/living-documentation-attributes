@@ -23,10 +23,18 @@ means writing its successor, never editing it in place: the successor is drafted
 as *Proposed*, and only the maintainer moves the record it replaces to
 *Superseded*.
 
-That instrument has been used once. **ADR-0019 supersedes ADR-0005**, which is the
-only one of the first eighteen no longer current — and only for the sentence that
-changed; everything else it decided still holds, which is why the record stays
-readable rather than being removed.
+That instrument has been used four times, and the four are worth reading together
+because they are one line of reasoning rather than four repairs. **ADR-0019 supersedes
+ADR-0005** on the identity climb. **ADR-0027** then supersedes ADR-0019 itself, along
+with **ADR-0025**, by making each catalogued work an independent package with no
+relation across works — which leaves the climb with one mechanism instead of two, and
+leaves the reach-back with nothing to reach. **ADR-0028 supersedes ADR-0006**, because
+once the catalogues no longer refer to one another, what each of them holds has to be
+decided without appeal to the others.
+
+A superseded record is never edited and never removed. ADR-0019 is both a superseder
+and superseded, which is what the chain should look like: each record says what was
+believed when it was written.
 
 ## When is an ADR written?
 
@@ -130,7 +138,7 @@ Related ADRs, sources, catalog entries, code.
 | [ADR-0003](0003-give-each-role-its-own-attribute-nested-in-its-pattern.md) | Give each role its own attribute, nested in the pattern it belongs to | Accepted |
 | [ADR-0004](0004-keep-the-attribute-base-a-pure-marker.md) | Keep the attribute base a pure marker | Accepted |
 | [ADR-0005](0005-relate-patterns-by-inheritance-and-read-identity-from-it.md) | Relate patterns by inheritance, and read a pattern's identity from it | Superseded by [ADR-0019](0019-stop-the-identity-climb-at-the-pattern-boundary.md) |
-| [ADR-0006](0006-catalogue-a-pattern-where-the-work-that-named-it-put-it.md) | Catalogue a pattern where the work that named it put it | Accepted |
+| [ADR-0006](0006-catalogue-a-pattern-where-the-work-that-named-it-put-it.md) | Catalogue a pattern where the work that named it put it | Superseded by [ADR-0028](0028-hold-a-pattern-in-every-catalogue-whose-work-presents-it.md) |
 | [ADR-0007](0007-decide-sameness-by-the-assertions-a-pattern-carries.md) | Decide that two patterns are the same by the assertions they carry | Accepted |
 | [ADR-0008](0008-bind-participants-with-typed-links.md) | Bind participants of one pattern occurrence with typed links | Accepted |
 | [ADR-0009](0009-let-each-role-declare-what-it-applies-to.md) | Let each role declare what it can be applied to | Accepted |
@@ -143,11 +151,13 @@ Related ADRs, sources, catalog entries, code.
 | [ADR-0016](0016-prove-the-sources-are-what-the-catalog-generates.md) | Prove on every pull request that the sources are what the catalog generates | Accepted |
 | [ADR-0017](0017-pin-every-action-to-a-commit.md) | Pin every GitHub action to a commit | Accepted |
 | [ADR-0018](0018-hold-the-public-surface-to-a-committed-baseline.md) | Hold the public surface to a committed baseline | Accepted |
-| [ADR-0019](0019-stop-the-identity-climb-at-the-pattern-boundary.md) | Stop the identity climb at the pattern boundary | Accepted |
+| [ADR-0019](0019-stop-the-identity-climb-at-the-pattern-boundary.md) | Stop the identity climb at the pattern boundary | Superseded by [ADR-0027](0027-ship-one-independent-package-per-catalogued-work.md) |
 | [ADR-0020](0020-cover-a-generated-shape-with-fixtures-not-a-catalog-entry.md) | Cover a generated shape with fixtures, not with a catalog entry | Accepted |
 | [ADR-0021](0021-version-what-a-consumer-reads-and-not-only-what-it-compiles.md) | Version what a consumer reads, and not only what it compiles | Accepted |
 | [ADR-0022](0022-admit-a-pattern-of-test-design-to-the-catalog.md) | Admit a pattern of test design to the catalog | Accepted |
 | [ADR-0023](0023-admit-an-anti-pattern-on-the-same-terms-as-any-pattern.md) | Admit an anti-pattern on the same terms as any pattern | Accepted |
 | [ADR-0024](0024-admit-a-model-of-the-business-to-the-catalog.md) | Admit a model of the business to the catalog | Accepted |
-| [ADR-0025](0025-let-an-earlier-work-reclaim-a-pattern-from-a-later-catalog.md) | Let an earlier work reclaim a pattern from a later catalog | Accepted |
+| [ADR-0025](0025-let-an-earlier-work-reclaim-a-pattern-from-a-later-catalog.md) | Let an earlier work reclaim a pattern from a later catalog | Superseded by [ADR-0027](0027-ship-one-independent-package-per-catalogued-work.md) |
 | [ADR-0026](0026-follow-an-authors-own-supersession-of-a-catalogued-chapter.md) | Follow an author's own supersession of a catalogued chapter | Accepted |
+| [ADR-0027](0027-ship-one-independent-package-per-catalogued-work.md) | Ship one independent package per catalogued work | Accepted |
+| [ADR-0028](0028-hold-a-pattern-in-every-catalogue-whose-work-presents-it.md) | Hold a pattern in every catalogue whose work presents it as its own | Accepted |

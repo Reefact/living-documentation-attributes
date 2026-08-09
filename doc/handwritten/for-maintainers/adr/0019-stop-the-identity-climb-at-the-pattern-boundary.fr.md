@@ -2,7 +2,7 @@
 
 🌍 🇬🇧 [English](0019-stop-the-identity-climb-at-the-pattern-boundary.md) · 🇫🇷 Français (ce fichier)
 
-**Statut :** Accepté
+**Statut :** Remplacé par l'[ADR-0027](0027-ship-one-independent-package-per-catalogued-work.fr.md)
 **Proposé :** 2026-08-05
 **Accepté :** 2026-08-06
 **Décideurs :** Reefact
