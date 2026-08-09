@@ -1,0 +1,63 @@
+{
+  "catalog": "AnalysisPatterns",
+  "name": "ProposedAndImplementedAction",
+  "summary": "Keeps what was planned and what happened as two linked objects rather than one object with a flag, so that a plan can be compared with its outcome instead of being overwritten by it.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Analysis Patterns",
+    "year": 1997
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Action",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "Something done or to be done, carrying when it is referred to, where it happens and who performs it. It is one type for both sides of the story, which is what lets a report range over intentions and outcomes together.",
+      "links": []
+    },
+    {
+      "name": "ProposedAction",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The action as intended. It may point at the implemented action that answered it, and may point at none — an intention that came to nothing is still on the record, which is the whole reason for the split.",
+      "links": [
+        "ImplementedAction"
+      ]
+    },
+    {
+      "name": "ImplementedAction",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The action as it happened. It may point at the proposal it answers, and may point at none — work done that nobody planned is as real as work planned and done.",
+      "links": [
+        "ProposedAction"
+      ]
+    },
+    {
+      "name": "ActionStatus",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "Where the action stands: proposed, started, completed, suspended, abandoned. A type object rather than an enumeration, and derived rather than set, so the status cannot disagree with the facts it is drawn from.",
+      "links": []
+    },
+    {
+      "name": "Performers",
+      "targets": [
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "summary": "The parties who carry the action out. Several, because work is done by people and organisations together, and naming them on the action is what lets a workload be asked of a party.",
+      "links": []
+    }
+  ]
+}
