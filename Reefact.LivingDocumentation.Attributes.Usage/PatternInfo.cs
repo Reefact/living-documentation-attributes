@@ -82,17 +82,16 @@ namespace Reefact.LivingDocumentation.Attributes.Usage {
         ///     <para>
         ///         The walk climbs through what belongs to one pattern and stops where a new one begins. It goes up
         ///         through an abstract base <b>declared in the same pattern</b> — the role base a multi-role pattern's
-        ///         container holds — so every role of a pattern answers the same type. It goes up through a
-        ///         <see cref="DeclensionAttribute">declension</see>, since that is the same pattern spelled by another
-        ///         catalog. It stops at anything else, because a specialisation derives from a broader pattern without
-        ///         being it: a value object of Evans is a value object of Fowler, and is still a pattern of its own.
+        ///         container holds — so every role of a pattern answers the same type. It stops at anything else,
+        ///         because a specialisation derives from a broader pattern without being it: a row data gateway is a
+        ///         gateway, and is still a pattern of its own.
         ///     </para>
         ///     <para>
         ///         The same-pattern test is what the abstract base alone cannot do. A multi-role specialisation
         ///         inherits one abstract role base from another — <c>Derived.Role : Base.Role</c> — and climbing
         ///         through both would report the specialisation as the pattern it specialises, which is the failure
         ///         this rule exists to avoid. Comparing the declaring types stops the walk at the boundary between two
-        ///         patterns, and a declension crosses that boundary because it is marked, not because it is abstract.
+        ///         patterns.
         ///     </para>
         /// </remarks>
         public static Type IdentityOf(LivingDocumentationAttribute annotation) => IdentityOf(annotation.GetType());
@@ -102,9 +101,7 @@ namespace Reefact.LivingDocumentation.Attributes.Usage {
             Type current = attributeType;
 
             while (current.BaseType is { } parent && parent != typeof(LivingDocumentationAttribute)) {
-                bool sameParentPattern  = parent.IsAbstract && parent.DeclaringType == current.DeclaringType;
-                bool sameSpelledPattern = current.GetCustomAttribute<DeclensionAttribute>(false) is not null;
-                if (!sameParentPattern && !sameSpelledPattern) { break; }
+                if (!parent.IsAbstract || parent.DeclaringType != current.DeclaringType) { break; }
 
                 current = parent;
             }

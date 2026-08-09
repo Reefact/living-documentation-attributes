@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes\Reefact.LivingDocumentation.Attributes.csproj" />
+    <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.DomainDrivenDesign\Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.csproj" />
     <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.Usage.RailNetwork\Reefact.LivingDocumentation.Attributes.Usage.RailNetwork.csproj" />
     <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.Usage.TrainOperations.Contracts\Reefact.LivingDocumentation.Attributes.Usage.TrainOperations.Contracts.csproj" />
   </ItemGroup>

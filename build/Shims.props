@@ -1,0 +1,17 @@
+<Project>
+
+  <!--
+    Compiler shims, compiled INTO every package that ships types rather than referenced from one of them.
+
+    IsExternalInit is what `init` accessors need on the older targets, and it must be internal to each
+    assembly: making it public to share it would put a compiler detail on the public surface of a vocabulary,
+    and the baseline would then have to declare it. One file linked into each project is the standard answer,
+    and it is why every catalogue can carry `Type? Link { get; init; }` on netstandard2.0.
+
+    The meta-package does not import this: it compiles nothing.
+  -->
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)IsExternalInit.cs" Link="IsExternalInit.cs" />
+  </ItemGroup>
+
+</Project>

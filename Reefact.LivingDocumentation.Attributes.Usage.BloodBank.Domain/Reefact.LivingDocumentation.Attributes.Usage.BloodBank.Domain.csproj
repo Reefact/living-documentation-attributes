@@ -11,7 +11,7 @@
   <!-- The domain layer references the attribute vocabulary and nothing else. That is not tidiness: it is
        the claim the annotation makes, and the one thing about a layered architecture a build can check. -->
   <ItemGroup>
-    <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes\Reefact.LivingDocumentation.Attributes.csproj" />
+    <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.DomainDrivenDesign\Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.csproj" />
   </ItemGroup>
 
 </Project>

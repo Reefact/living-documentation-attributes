@@ -11,7 +11,7 @@
   <!-- The user interface reaches the model through the application layer, and holds no reference to
        infrastructure: what persists a unit of blood is chosen where the application is composed, not here. -->
   <ItemGroup>
-    <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes\Reefact.LivingDocumentation.Attributes.csproj" />
+    <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.DomainDrivenDesign\Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.csproj" />
     <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.Usage.BloodBank.Application\Reefact.LivingDocumentation.Attributes.Usage.BloodBank.Application.csproj" />
   </ItemGroup>
 

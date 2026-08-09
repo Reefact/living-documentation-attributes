@@ -10,7 +10,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes\Reefact.LivingDocumentation.Attributes.csproj" />
+    <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.GangOfFour\Reefact.LivingDocumentation.Attributes.GangOfFour.csproj" />
+    <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.DomainDrivenDesign\Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.csproj" />
+    <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture\Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture.csproj" />
+    <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.AnalysisPatterns\Reefact.LivingDocumentation.Attributes.AnalysisPatterns.csproj" />
+    <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.AccountingPatterns\Reefact.LivingDocumentation.Attributes.AccountingPatterns.csproj" />
+    <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.Idioms\Reefact.LivingDocumentation.Attributes.Idioms.csproj" />
     <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.Usage.TrainOperations\Reefact.LivingDocumentation.Attributes.Usage.TrainOperations.csproj" />
     <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.Usage.Invoicing\Reefact.LivingDocumentation.Attributes.Usage.Invoicing.csproj" />
     <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.Usage.RailNetwork\Reefact.LivingDocumentation.Attributes.Usage.RailNetwork.csproj" />

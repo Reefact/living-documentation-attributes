@@ -9,7 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes\Reefact.LivingDocumentation.Attributes.csproj" />
+    <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.DomainDrivenDesign\Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.csproj" />
+    <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture\Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,74 +1,39 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
+  <Import Project="..\build\Packaging.props" />
+
+  <!--
+    The meta-package. It holds no code: it exists so that a consumer who wants the whole vocabulary installs
+    one package, and so that the identifier this repository published before ADR-0027 split the catalogues
+    keeps meaning "all of it". PublicSurface.props is deliberately not imported — there is no surface here to
+    baseline, and the seven packages it references each carry their own.
+
+    The assembly it produces is empty. That is accepted rather than worked around with a hand-written nuspec,
+    because a nuspec would be a second description of the package metadata that MSBuild already holds.
+  -->
+
   <PropertyGroup>
-    <!-- Build -->
-    <TargetFrameworks>netstandard2.0;netcoreapp3.1;net5.0;net6.0;net7.0;net8.0</TargetFrameworks>
-    <Nullable>enable</Nullable>
-    <LangVersion>latest</LangVersion>
-
-    <!-- XML documentation. Not a nicety here: the library publishes no reader, so the reading rules and
-         what every role means reach a consumer through this file and nowhere else. -->
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-
-    <!-- Version. A development placeholder until a release tag carries it. Semantic Versioning over TWO
-         contracts — what a consumer compiles against and what it reads back — so a relation between two
-         patterns, or a change to a reading rule, is major even though the public surface is byte-identical.
-         Below 1.0.0 until no catalogued pattern is expected to move catalog, and there the table applies one
-         step down: breaking moves the minor. Policy: ADR-0021; the table: CONTRIBUTING.md. -->
-    <Version>0.1.0-dev</Version>
-
-    <!-- NuGet identity -->
     <PackageId>Reefact.LivingDocumentation.Attributes</PackageId>
-    <Authors>Sylvain AURAT</Authors>
-    <Company>Reefact</Company>
 
     <Description>
-      A vocabulary of .NET attributes that lets code state which design pattern a type or a member participates in — the Gang of Four catalog, the tactical patterns of Domain-Driven Design, and Patterns of Enterprise Application Architecture. The attributes carry no behaviour and no dependency: they are declarative data, read back by reflection, so a team can build its own inventory, diagram or architecture rules on a shared vocabulary instead of a naming convention.
+      Every catalogue of the living-documentation vocabulary in one package: Design Patterns, Domain-Driven
+      Design, Patterns of Enterprise Application Architecture, Analysis Patterns, Accounting Patterns, and the
+      idioms that have no body of work of their own. Install this to get all of them, or install a single
+      catalogue package to carry only the vocabulary you read.
     </Description>
 
-    <!-- Metadata -->
-    <PackageTags>design-patterns;living-documentation;architecture;attributes;annotations;ddd;gang-of-four;documentation;archunit</PackageTags>
-    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-
-    <!-- Links -->
-    <PackageProjectUrl>https://github.com/Reefact/living-documentation-attributes</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/Reefact/living-documentation-attributes.git</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-
-    <!-- One README serves the repository and the package. FCE keeps a separate README.nuget.md per package
-         because it ships six of them from one repository; here there is one package, and a second file would
-         be one more thing to keep in step for no reader's benefit. -->
-    <PackageReadmeFile>readme.md</PackageReadmeFile>
+    <PackageTags>design-patterns;living-documentation;architecture;attributes;annotations;documentation;archunit;ddd;gang-of-four;enterprise;analysis-patterns;accounting</PackageTags>
   </PropertyGroup>
 
-  <!-- The licence travels as an SPDX expression, which is what nuget.org renders and what a consumer's
-       licence scanner reads; packing the text as well would only duplicate it. -->
   <ItemGroup>
-    <None Include="..\README.md" Pack="true" PackagePath="readme.md" Visible="false" />
+    <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.Core\Reefact.LivingDocumentation.Attributes.Core.csproj" />
+    <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.GangOfFour\Reefact.LivingDocumentation.Attributes.GangOfFour.csproj" />
+    <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.DomainDrivenDesign\Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.csproj" />
+    <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture\Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture.csproj" />
+    <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.AnalysisPatterns\Reefact.LivingDocumentation.Attributes.AnalysisPatterns.csproj" />
+    <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.AccountingPatterns\Reefact.LivingDocumentation.Attributes.AccountingPatterns.csproj" />
+    <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.Idioms\Reefact.LivingDocumentation.Attributes.Idioms.csproj" />
   </ItemGroup>
 
-  <!--
-    The public surface is the product here: this library ships types and nothing else. The analyzer holds
-    it to a committed baseline, so every change to it is a reviewed diff — an undeclared public symbol
-    raises RS0016, and a declared symbol that no longer exists raises RS0017. Both are warnings locally
-    and errors in CI, where the warning ratchet promotes them. Decision: ADR-0018.
-
-    Build-time only: PrivateAssets keeps the analyzer out of any package this project produces.
-  -->
-  <ItemGroup>
-    <PackageReference Include="Microsoft.CodeAnalysis.PublicApiAnalyzers" Version="3.3.4" PrivateAssets="all" />
-  </ItemGroup>
-
-  <!--
-    ONE baseline shared by all six target frameworks, rather than one per framework. The attributes do not
-    vary by target — the surface is the same everywhere — so a single file states that intent and makes a
-    divergence between two targets a failure rather than something each baseline would quietly absorb.
-    The condition guards the outer, framework-less evaluation of a multi-targeting project.
-  -->
-  <ItemGroup Condition="'$(TargetFramework)' != ''">
-    <AdditionalFiles Include="$(MSBuildProjectDirectory)\PublicAPI\PublicAPI.Shipped.txt" />
-    <AdditionalFiles Include="$(MSBuildProjectDirectory)\PublicAPI\PublicAPI.Unshipped.txt" />
-  </ItemGroup>
 
 </Project>

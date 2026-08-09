@@ -4,7 +4,7 @@
     python3 catalog/generate.py
 
 Reads every catalog/<Catalog>/<Pattern>.json and rewrites the matching
-Reefact.LivingDocumentation.Attributes/<Catalog>/<Pattern>.cs. The generated
+Reefact.LivingDocumentation.Attributes.<Catalog>/<Pattern>.cs. The generated
 sources are committed and are what ships; this script only keeps them uniform.
 A pattern whose single role carries the pattern's own name is emitted as a flat
 attribute, every other pattern as a static container holding one attribute per
@@ -18,7 +18,6 @@ import textwrap
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
-ROOT = os.path.join(REPO, "Reefact.LivingDocumentation.Attributes")
 INDEX_DIR = os.path.join(REPO, "doc", "generated")
 NS = "Reefact.LivingDocumentation.Attributes"
 
@@ -33,12 +32,13 @@ CATALOG_LABEL = {
 
 
 def relation(pattern):
-    """The pattern this one derives from, if any, with the nature of the relation."""
-    if "declensionOf" in pattern:
-        return pattern["declensionOf"], "declension"
-    if "specialisationOf" in pattern:
-        return pattern["specialisationOf"], "specialisation"
-    return None, None
+    """The pattern this one narrows, if any.
+
+    Only one kind of relation is left. A declension — the same pattern named by two works — needed the two
+    catalogues to refer to each other, and since ADR-0027 each ships as its own package with no reference to
+    another, so it can no longer exist. A specialisation stays, inside one catalogue.
+    """
+    return pattern.get("specialisationOf")
 
 
 def key(pattern):
@@ -60,17 +60,11 @@ def base_of(pattern):
 
 
 def relation_doc(pattern):
-    target, nature = relation(pattern)
+    target = relation(pattern)
     if target is None:
         return None
-    label = CATALOG_LABEL[target["catalog"]]
-    if nature == "declension":
-        return (f"The same pattern as {target['name']}, in {label}, which published it first and holds its "
-                f"definition. Written from either catalog, an annotation resolves to that one identity — so a "
-                f"reader of this catalog finds the pattern where it looks for it, without the two spellings "
-                f"drifting apart.")
-    return (f"A narrower case of {target['name']}, in {label}: every participant annotated here is one of those "
-            f"too, and a consumer asking for the broader pattern gets these as well.")
+    return (f"A narrower case of {target['name']}: every participant annotated here is one of those too, and a "
+            f"consumer asking for the broader pattern gets these as well.")
 
 
 def reference_doc(pattern):
@@ -118,28 +112,7 @@ def header(catalog):
     ]
 
 
-def declined_role_class(pattern, role, indent):
-    """A role of a declension: the same role, spelled by another catalog.
-
-    It derives from its counterpart rather than from a role base of its own, so it inherits that role's
-    targets, its multiplicity and its links instead of restating them — the declension is the same pattern,
-    and two spellings that each declared their own could drift apart. Only the marker is added, which is the
-    one thing inheritance cannot say.
-    """
-    pad = " " * indent
-    target = relation(pattern)[0]
-
-    out = [doc(role["summary"], indent)]
-    out.append(f"{pad}[Declension]")
-    out.append(f"{pad}public {role['_modifier']}class {role['name']}Attribute : "
-               f"{target['catalog']}.{target['name']}.{role['name']}Attribute {{ }}")
-    return "\n".join(out)
-
-
 def role_class(pattern, role, indent):
-    if relation(pattern)[1] == "declension":
-        return declined_role_class(pattern, role, indent)
-
     pad = " " * indent
     # Multiplicity comes from the catalog, not from the targets. Deriving it worked only for as long as the
     # rule "a member holds its role once, anything else may repeat" happened to hold; an assembly is one
@@ -177,19 +150,12 @@ def flat_attribute(pattern):
                         "applied on its own.",
                         relation_doc(pattern),
                         reference_doc(pattern)], 4))
-    _, nature = relation(pattern)
-    if nature == "declension":
-        # One pattern, two spellings: they must not end up accepting different targets, so the declension
-        # inherits AttributeUsage instead of restating it, and says what it is.
-        out.append("    [Declension]")
-    else:
-        # A specialisation is a pattern of its own, and may legitimately accept fewer targets than the
-        # pattern that contains it. Multiplicity comes from the catalog here too: this branch hardcoded
-        # `false` while role_class read the field, so a flat pattern's declared multiplicity was written
-        # down and then ignored — the catalog said one thing and the shipped attribute another.
-        role = pattern["roles"][0]
-        out.append(f"    [AttributeUsage({targets(role['targets'])}, "
-                   f"AllowMultiple = {'true' if role['repeatable'] else 'false'}, Inherited = {inherited})]")
+    # A specialisation is a pattern of its own, and may legitimately accept fewer targets than the pattern it
+    # narrows. Multiplicity comes from the catalog: a flat pattern's declared multiplicity used to be written
+    # down here and then ignored, so the catalog said one thing and the shipped attribute another.
+    role = pattern["roles"][0]
+    out.append(f"    [AttributeUsage({targets(role['targets'])}, "
+               f"AllowMultiple = {'true' if role['repeatable'] else 'false'}, Inherited = {inherited})]")
     out.append(f"    public {pattern['_modifier']}class {name}Attribute : {base_of(pattern)} {{ }}")
     out.append("")
     out.append("}")
@@ -207,13 +173,11 @@ def nested_container(pattern):
                         relation_doc(pattern),
                         reference_doc(pattern)], 4))
     out.append(f"    public static class {name} {{")
-    # A declension declares no role base: each of its roles derives from its counterpart, so the container is
-    # a spelling and nothing more. Every other pattern gathers its roles under one abstract base — the type
-    # every role of the pattern answers, and what a specialisation inherits from to answer the broader one.
-    if relation(pattern)[1] != "declension":
-        out.append("")
-        out.append(doc(f"Role played by a type or a member in the {name} design pattern.", 8))
-        out.append(f"        public abstract class Role : {base_of(pattern)} {{ }}")
+    # Every pattern gathers its roles under one abstract base — the type every role of the pattern answers,
+    # and what a specialisation inherits from in order to answer the broader one as well.
+    out.append("")
+    out.append(doc(f"Role played by a type or a member in the {name} design pattern.", 8))
+    out.append(f"        public abstract class Role : {base_of(pattern)} {{ }}")
     for role in pattern["roles"]:
         out.append("")
         out.append(role_class(pattern, role, 8))
@@ -268,13 +232,10 @@ def anchor_of(pattern):
 
 
 def relation_line(pattern):
-    target, nature = relation(pattern)
+    target = relation(pattern)
     if target is None:
         return None
-    where = CATALOG_LABEL[target["catalog"]]
-    if nature == "declension":
-        return f"The same pattern as **{target['name']}** ({where}), which holds its definition."
-    return f"A narrower case of **{target['name']}** ({where}): every participant here is one of those too."
+    return f"A narrower case of **{target['name']}**: every participant here is one of those too."
 
 
 def index_entry(pattern):
@@ -298,7 +259,7 @@ def index_entry(pattern):
     for role in pattern["roles"]:
         out += ["", f"**{role['name']}** — {role['summary']}"]
 
-    source = f"../../Reefact.LivingDocumentation.Attributes/{pattern['catalog']}/{name}.cs"
+    source = f"../../{NS}.{pattern['catalog']}/{name}.cs"
     sample = SAMPLES.get((pattern["catalog"], name)) or SAMPLES.get((None, name))
     where = f"[Sample](../../{sample})" if sample else "**no sample**"
     out += ["",
@@ -328,8 +289,8 @@ def index_document(patterns):
            "|---|---|---|---|"]
 
     for pattern in sorted(patterns, key=lambda p: (p["name"], p["catalog"])):
-        target, nature = relation(pattern)
-        related = "—" if target is None else f"{target['name']} ({nature})"
+        target = relation(pattern)
+        related = "—" if target is None else f"narrows {target['name']}"
         out.append(f"| [{pattern['name']}](#{anchor_of(pattern)}) | {CATALOG_LABEL[pattern['catalog']]} | "
                    f"{len(pattern['roles'])} | {related} |")
 
@@ -352,41 +313,41 @@ def main():
     index = {key(pattern): pattern for pattern in patterns}
 
     # Nothing is unsealed that is not actually derived from, so the exceptions in the generated sources are
-    # explained by the catalog rather than by the template. A declension is inherited role by role, a
-    # specialisation pattern by pattern, so the two unseal different things.
+    # explained by the catalog rather than by the template. A specialisation derives pattern by pattern, so
+    # what it unseals is the pattern it narrows and never a single role.
     unsealed_patterns = set()
     unsealed_roles = set()
     for pattern in patterns:
-        target, nature = relation(pattern)
+        target = relation(pattern)
         if target is None:
             continue
+        if target["catalog"] != pattern["catalog"]:
+            raise SystemExit(f"{pattern['name']}: narrows {target['catalog']}.{target['name']}, which is in "
+                             f"another catalogue. Each catalogue ships as its own package with no reference to "
+                             f"another, so the inheritance this would emit cannot exist (ADR-0027)")
         base = index.get((target["catalog"], target["name"]))
         if base is None:
             raise SystemExit(f"{pattern['name']}: derives from {target['catalog']}.{target['name']}, "
                              f"which is not in the catalog")
-        if nature == "declension" and (is_single_role(pattern) != is_single_role(base)
-                                       or role_names(pattern) != role_names(base)):
-            raise SystemExit(f"{pattern['name']}: a declension is the same pattern spelled again, so it holds "
-                             f"the same roles, in the same order, as {base['name']}")
         if is_single_role(base):
             unsealed_patterns.add(key(base))
-        elif nature == "declension":
-            unsealed_roles |= {(*key(base), name) for name in role_names(base)}
 
     for pattern in patterns:
-        target, _ = relation(pattern)
+        target = relation(pattern)
         if target is None:
             pattern["_base"] = "LivingDocumentationAttribute"
         else:
             base = index[(target["catalog"], target["name"])]
-            pattern["_base"] = (f"{base['catalog']}.{base['name']}Attribute" if is_single_role(base)
-                                else f"{base['catalog']}.{base['name']}.Role")
+            # Same catalogue, so the same namespace: no prefix needed, and none possible for another.
+            pattern["_base"] = (f"{base['name']}Attribute" if is_single_role(base)
+                                else f"{base['name']}.Role")
         pattern["_modifier"] = "" if key(pattern) in unsealed_patterns else "sealed "
         for role in pattern["roles"]:
             role["_modifier"] = "" if (*key(pattern), role["name"]) in unsealed_roles else "sealed "
 
     for pattern in patterns:
-        folder = os.path.join(ROOT, pattern["catalog"])
+        # One project per catalogued work, since ADR-0027 ships each as its own package.
+        folder = os.path.join(REPO, f"{NS}.{pattern['catalog']}")
         os.makedirs(folder, exist_ok=True)
         body = flat_attribute(pattern) if is_single_role(pattern) else nested_container(pattern)
         with open(os.path.join(folder, pattern["name"] + ".cs"), "w", encoding="utf-8") as handle:

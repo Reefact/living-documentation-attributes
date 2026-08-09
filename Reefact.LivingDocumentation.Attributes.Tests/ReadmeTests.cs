@@ -27,24 +27,12 @@ namespace Reefact.LivingDocumentation.Attributes.Tests {
     /// </remarks>
     public sealed class ReadmeTests {
 
-        private static readonly string Repository = FindRepository();
-        private static readonly string Readme     = File.ReadAllText(Path.Combine(Repository, "README.md"));
+        private static readonly string Readme = File.ReadAllText(Path.Combine(Repository.Root, "README.md"));
 
         #region Statics members declarations
 
-        private static string FindRepository() {
-            DirectoryInfo? directory = new(AppContext.BaseDirectory);
-            while (directory is not null && !File.Exists(Path.Combine(directory.FullName, "Reefact.LivingDocumentation.Attributes.sln"))) {
-                directory = directory.Parent;
-            }
-
-            Assert.NotNull(directory);
-
-            return directory.FullName;
-        }
-
         private static (int Patterns, int Roles) Catalogued() {
-            string[] entries = Directory.GetFiles(Path.Combine(Repository, "catalog"), "*.json", SearchOption.AllDirectories)
+            string[] entries = Directory.GetFiles(Path.Combine(Repository.Root, "catalog"), "*.json", SearchOption.AllDirectories)
                                         .Where(path => !path.EndsWith("schema.json", StringComparison.Ordinal))
                                         .ToArray();
 
@@ -72,7 +60,7 @@ namespace Reefact.LivingDocumentation.Attributes.Tests {
         public void The_readme_lists_every_catalog_and_its_size() {
             (int _, int _) = Catalogued();
 
-            foreach (string directory in Directory.GetDirectories(Path.Combine(Repository, "catalog"))) {
+            foreach (string directory in Directory.GetDirectories(Path.Combine(Repository.Root, "catalog"))) {
                 string catalog = Path.GetFileName(directory);
                 int    count   = Directory.GetFiles(directory, "*.json").Length;
 
@@ -85,7 +73,7 @@ namespace Reefact.LivingDocumentation.Attributes.Tests {
 
         [Fact]
         public void The_readme_states_how_many_records_the_adr_base_holds() {
-            int records = Directory.GetFiles(Path.Combine(Repository, "doc", "handwritten", "for-maintainers", "adr"), "0*.md")
+            int records = Directory.GetFiles(Path.Combine(Repository.Root, "doc", "handwritten", "for-maintainers", "adr"), "0*.md")
                                    .Count(path => !path.EndsWith(".fr.md", StringComparison.Ordinal));
 
             Assert.Contains($"{records} records", Readme, StringComparison.Ordinal);
