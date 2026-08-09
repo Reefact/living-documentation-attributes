@@ -32,6 +32,8 @@ Reefact.LivingDocumentation.Attributes.AccountingPatterns.PostingRule.ProcessAtt
 Reefact.LivingDocumentation.Attributes.AccountingPatterns.PostingRule.ProcessAttribute.ProcessAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AccountingPatterns.PostingRule.Role
 Reefact.LivingDocumentation.Attributes.AccountingPatterns.PostingRule.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.SecondaryPostingRuleAttribute
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.SecondaryPostingRuleAttribute.SecondaryPostingRuleAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Accountability
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Accountability.AccountabilityAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Accountability.AccountabilityAttribute.AccountabilityAttribute() -> void
