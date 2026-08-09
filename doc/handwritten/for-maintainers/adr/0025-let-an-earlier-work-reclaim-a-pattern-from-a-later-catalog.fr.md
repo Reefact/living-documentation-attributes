@@ -2,7 +2,7 @@
 
 🌍 🇬🇧 [English](0025-let-an-earlier-work-reclaim-a-pattern-from-a-later-catalog.md) · 🇫🇷 Français (ce fichier)
 
-**Statut :** Accepté
+**Statut :** Remplacé par l'[ADR-0027](0027-ship-one-independent-package-per-catalogued-work.fr.md)
 **Proposé :** 2026-08-08
 **Accepté :** 2026-08-09
 **Décideurs :** Reefact
