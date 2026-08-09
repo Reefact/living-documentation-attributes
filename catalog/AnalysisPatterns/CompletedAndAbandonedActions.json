@@ -1,0 +1,31 @@
+{
+  "catalog": "AnalysisPatterns",
+  "name": "CompletedAndAbandonedActions",
+  "summary": "Treats abandonment and completion as two independent facts about an action, so that giving up before starting and giving up halfway are the same kind of record.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Analysis Patterns",
+    "year": 1997
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "AbandonedAction",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "An action given up on, whether or not it was ever started. Abandonment cuts across the proposed and implemented split rather than sitting under one side of it, which is what stops the model needing two ways to say the same thing.",
+      "links": []
+    },
+    {
+      "name": "CompletedAction",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "An implemented action that ran to its end. Only an implemented action can be completed, which is why completion is not a second dimension but a narrowing of one — and why nothing needs to say that a proposal cannot be complete.",
+      "links": []
+    }
+  ]
+}
