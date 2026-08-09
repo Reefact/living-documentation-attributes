@@ -1,0 +1,54 @@
+{
+  "catalog": "AnalysisPatterns",
+  "name": "PlanProtocol",
+  "summary": "Puts the standard procedure at the knowledge level, so that a plan is an instance of something configured rather than a shape someone remembers to repeat.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Analysis Patterns",
+    "year": 1997
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Protocol",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The procedure as a type object: an ordered set of steps that plans are drawn from. It is the knowledge level of a plan, so changing how the work is meant to be done is configuration and not a new plan per case.",
+      "links": []
+    },
+    {
+      "name": "ProtocolReference",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "One step of a protocol, and the protocol that step refers to. That indirection is what lets protocols compose — a step is itself a whole procedure — without a protocol containing copies of another.",
+      "links": [
+        "Protocol"
+      ]
+    },
+    {
+      "name": "ProtocolDependency",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "That one step must follow another. Both are steps of the same protocol and the graph is acyclic, exactly as in a plan; the difference is that this is stated once for every plan the protocol yields.",
+      "links": [
+        "ProtocolReference"
+      ]
+    },
+    {
+      "name": "Steps",
+      "targets": [
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "summary": "The references making up the protocol, in order. The components a protocol reaches are derived from its steps' referred protocols rather than listed a second time.",
+      "links": []
+    }
+  ]
+}
