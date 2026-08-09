@@ -1,0 +1,51 @@
+{
+  "catalog": "AccountingPatterns",
+  "name": "Event",
+  "summary": "Records that something happened which the business reacts to, and forbids changing it afterwards, so that the log of what happened stays trustworthy and a correction has to be a new fact.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Accounting Patterns",
+    "year": 2000
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Event",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The thing that happened. Its source data is immutable: once created it is never edited, because editing it would break the integrity of the log it belongs to. A record later found to be wrong is corrected by a further event and an adjustment, never in place.",
+      "links": []
+    },
+    {
+      "name": "EventType",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "What kind of event this is, as an object, so that which kinds exist is configured and a rule can be attached to a kind rather than to a class.",
+      "links": []
+    },
+    {
+      "name": "WhenOccurred",
+      "targets": [
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "summary": "When the thing happened in the world. Together with when it was noticed this is the dual time record of Analysis Patterns, which the earlier work names; the assertion here is only that an event carries both.",
+      "links": []
+    },
+    {
+      "name": "WhenNoticed",
+      "targets": [
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "summary": "When the system learned of it. It differs from when the event occurred, and keeping both is what lets a figure be restated without pretending the restatement was known earlier.",
+      "links": []
+    }
+  ]
+}
