@@ -1,0 +1,102 @@
+{
+  "catalog": "AnalysisPatterns",
+  "name": "MeasurementProtocol",
+  "summary": "Makes the method behind a measurement an object stating what it takes and what it yields, so that a figure can be recomputed and explained rather than only stored.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Analysis Patterns",
+    "year": 1997
+  },
+  "inherited": false,
+  "specialisationOf": {
+    "catalog": "AnalysisPatterns",
+    "name": "Protocol"
+  },
+  "roles": [
+    {
+      "name": "MeasurementProtocol",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The protocol as a type object: it names the phenomenon type it results in, and in order the phenomenon types it takes as inputs. What it adds to a protocol is that it says enough for a measurement to be produced, and not only enough for two figures obtained differently to be kept apart.",
+      "links": []
+    },
+    {
+      "name": "SourceMeasurementProtocol",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "A protocol whose result is observed rather than computed — someone read an instrument. It takes no inputs, and it is where the numbers every calculation stands on enter the model.",
+      "links": []
+    },
+    {
+      "name": "CalculatedMeasurementProtocol",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "A protocol whose result is computed from measurements of its input types by a formula it holds. Every measurement made under it is a calculated measurement and every calculated measurement is made under one, which is the constraint stated in both directions.",
+      "links": []
+    },
+    {
+      "name": "Method",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The formula a calculated protocol holds, as an object rather than as code inside the protocol, so that one piece of arithmetic can serve several protocols and a new protocol can be configured instead of written.",
+      "links": []
+    },
+    {
+      "name": "CausalCalculation",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "A method deriving its result from inputs of different phenomenon types — a cost per unit from a cost and a count. Its inputs are heterogeneous, which is exactly what distinguishes it from a comparison.",
+      "links": []
+    },
+    {
+      "name": "ComparativeCalculation",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "A method taking exactly two inputs of the same phenomenon type, so that its result is a comparison: this month against last, actual against planned. The cardinality and the sameness of the two types are the assertion.",
+      "links": []
+    },
+    {
+      "name": "DimensionCombination",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "A method summing a measurement over the children of one dimension element, so that a figure for a country is derived from the figures for its cities. Its single input type is its result type, which is what lets it compose up a hierarchy without a case per level.",
+      "links": []
+    },
+    {
+      "name": "CalculatedMeasurement",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The measurement produced under a calculated protocol. It is an ordinary measurement to anything that reads it, which is what keeps a derived figure comparable with an observed one.",
+      "links": [
+        "CalculatedMeasurementProtocol"
+      ]
+    },
+    {
+      "name": "Sources",
+      "targets": [
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "summary": "The measurements a calculated measurement was computed from, kept rather than discarded once the arithmetic is done. Keeping them is what makes a figure re-explainable instead of a number whose provenance is lost.",
+      "links": []
+    }
+  ]
+}
