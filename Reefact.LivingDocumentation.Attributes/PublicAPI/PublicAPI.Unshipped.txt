@@ -1,4 +1,15 @@
 #nullable enable
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.Event
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.Event.EventAttribute
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.Event.EventAttribute.EventAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.Event.EventTypeAttribute
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.Event.EventTypeAttribute.EventTypeAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.Event.Role
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.Event.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.Event.WhenNoticedAttribute
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.Event.WhenNoticedAttribute.WhenNoticedAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.Event.WhenOccurredAttribute
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.Event.WhenOccurredAttribute.WhenOccurredAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Accountability
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Accountability.AccountabilityAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Accountability.AccountabilityAttribute.AccountabilityAttribute() -> void
