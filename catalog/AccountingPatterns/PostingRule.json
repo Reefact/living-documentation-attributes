@@ -1,0 +1,43 @@
+{
+  "catalog": "AccountingPatterns",
+  "name": "PostingRule",
+  "summary": "Holds the decision about which accounting entries an event leads to, so that the connection between a business event and its financial consequence is configured rather than written once per case.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Accounting Patterns",
+    "year": 2000
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "PostingRule",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The rule itself: given an event of a kind it names, it creates the entries that follow. It exists because the connection is not uniform — it varies by the kind of event and again by the business unit or agreement that governs it, and a rule per combination written in code is what this replaces.",
+      "links": [
+        "Host"
+      ]
+    },
+    {
+      "name": "Host",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "What holds the rules that apply — a service agreement, a business unit, a tariff. Each host carries its own set, which is how two customers on different agreements get different entries from the same event.",
+      "links": []
+    },
+    {
+      "name": "Process",
+      "targets": [
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "The operation that takes an event and yields entries. Naming it as a role is what lets a reader find where an event becomes money.",
+      "links": []
+    }
+  ]
+}

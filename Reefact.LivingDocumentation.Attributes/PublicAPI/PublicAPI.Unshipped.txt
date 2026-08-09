@@ -21,6 +21,17 @@ Reefact.LivingDocumentation.Attributes.AccountingPatterns.Event.WhenNoticedAttri
 Reefact.LivingDocumentation.Attributes.AccountingPatterns.Event.WhenNoticedAttribute.WhenNoticedAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AccountingPatterns.Event.WhenOccurredAttribute
 Reefact.LivingDocumentation.Attributes.AccountingPatterns.Event.WhenOccurredAttribute.WhenOccurredAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.PostingRule
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.PostingRule.HostAttribute
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.PostingRule.HostAttribute.HostAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.PostingRule.PostingRuleAttribute
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.PostingRule.PostingRuleAttribute.Host.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.PostingRule.PostingRuleAttribute.Host.init -> void
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.PostingRule.PostingRuleAttribute.PostingRuleAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.PostingRule.ProcessAttribute
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.PostingRule.ProcessAttribute.ProcessAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.PostingRule.Role
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.PostingRule.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Accountability
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Accountability.AccountabilityAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Accountability.AccountabilityAttribute.AccountabilityAttribute() -> void
