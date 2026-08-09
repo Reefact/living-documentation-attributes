@@ -1,0 +1,24 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "FileTransfer",
+  "summary": "Integrates applications by having one produce a file the other consumes, so that neither needs to know anything of the other beyond an agreed format.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "FileTransfer",
+      "targets": [
+        "Interface",
+        "Class",
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "The participant that produces or consumes the shared file. What it buys is that the two applications need share no technology at all; what it costs is timeliness, since the receiver learns nothing until a file is written and found.",
+      "links": []
+    }
+  ]
+}
