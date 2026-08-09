@@ -124,6 +124,24 @@ which is not something to assume of the chapters still to come: chapter 7 is a w
 example whose sections are steps rather than patterns, and most of chapter 11
 qualifies a package, which C# gives nothing to annotate.
 
+**Chapter 4 is complete at four of its five sections.** Enterprise Segment,
+Measurement Protocol, Range and Phenomenon with Range are catalogued; §4.5 *Using the
+Resulting Framework* is not, because it applies the four rather than adding a fifth —
+the same shape as chapter 7, and the reason to say so here is that a reader counting
+sections against entries would otherwise find one missing. `StatusType` is a fifth
+entry from §4.2.3, which names it; it earns its own entry rather than roles on the
+protocol because what it asserts is about an observation's claim on the world, and a
+comparative status is itself observable.
+
+Three things about this chapter are worth recording rather than leaving to be found
+again. The chapter's figures spell one method *Casual Calculation*; the contents page
+has **Causal**, which is what it is, so that is the spelling the role carries.
+`Projection` and `AssociativeFunction` are not new here — chapter 3 already holds them
+on `ActiveObservation` and `AssociatedObservation` — so figures 4.9 and 4.24 add only
+`Plan` and the range function. And the UML companion redraws sixteen of the chapter's
+twenty-four figures: 4.2, 4.6, 4.13–4.16, 4.18 and 4.23 are absent, and 4.13–4.16 fall
+in *Creating a Measurement*, which is procedural. The entries rest on the sixteen.
+
 Chapter 5 is worth a note of its own because its four entries are about *identity*,
 and three of them are distinguished from one another only by what they permit.
 `Name` permits several and permits none. `IdentificationScheme` permits several and
