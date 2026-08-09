@@ -1,4 +1,13 @@
 #nullable enable
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.Account
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.Account.AccountAttribute
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.Account.AccountAttribute.AccountAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.Account.BalanceAttribute
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.Account.BalanceAttribute.BalanceAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.Account.EntriesAttribute
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.Account.EntriesAttribute.EntriesAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.Account.Role
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.Account.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.AccountingPatterns.AccountingEntry
 Reefact.LivingDocumentation.Attributes.AccountingPatterns.AccountingEntry.AccountingEntryAttribute
 Reefact.LivingDocumentation.Attributes.AccountingPatterns.AccountingEntry.AccountingEntryAttribute.AccountingEntryAttribute() -> void
