@@ -1,0 +1,42 @@
+{
+  "catalog": "AnalysisPatterns",
+  "name": "Suspension",
+  "summary": "Records a pause as an interval of its own, so that an action stopped and restarted keeps both facts and its status stays derivable.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Analysis Patterns",
+    "year": 1997
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Suspension",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "One period during which the action was not proceeding. There may be several, because work stops more than once, and each is a record rather than a change to the action — which is what lets elapsed time be told from worked time.",
+      "links": []
+    },
+    {
+      "name": "Period",
+      "targets": [
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "summary": "The interval the suspension covers. Open at the end while the suspension lasts, which is what makes the current status answerable from the same data as the history.",
+      "links": []
+    },
+    {
+      "name": "Suspended",
+      "targets": [
+        "Property",
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "Whether the action is suspended now, derived from its suspensions rather than stored beside them. Storing it is what lets an action be marked suspended with no suspension to show for it.",
+      "links": []
+    }
+  ]
+}
