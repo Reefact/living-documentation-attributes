@@ -1,0 +1,52 @@
+{
+  "catalog": "AccountingPatterns",
+  "name": "ReversalAdjustment",
+  "summary": "Corrects a booked entry by reversing it and posting what it should have been, so that both the mistake and the correction stay on the record.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Accounting Patterns",
+    "year": 2000
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "ReversalAdjustment",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The correction as a whole: for every entry to be adjusted, two new entries. Nothing is edited and nothing is removed, which is what keeps the account auditable at the price of more entries than either other strategy.",
+      "links": [
+        "AdjustedEvent"
+      ]
+    },
+    {
+      "name": "ReversingEntry",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "An entry cancelling the original: the same occurred date, the same amount, the opposite sign. Using the original's date rather than today's is what keeps a past period's total unchanged.",
+      "links": []
+    },
+    {
+      "name": "ReplacementEntry",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The entry the original should have been, calculated the way any entry of its kind is calculated. It is not a special case, which is the point of reversing first.",
+      "links": []
+    },
+    {
+      "name": "AdjustedEvent",
+      "targets": [
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "summary": "The event being corrected, named by the event that corrects it. The link is what lets the correction be explained rather than merely observed.",
+      "links": []
+    }
+  ]
+}
