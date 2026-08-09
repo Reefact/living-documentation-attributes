@@ -2,8 +2,9 @@
 
 🌍 🇬🇧 [English](0025-let-an-earlier-work-reclaim-a-pattern-from-a-later-catalog.md) · 🇫🇷 Français (ce fichier)
 
-**Statut :** Proposé
+**Statut :** Accepté
 **Proposé :** 2026-08-08
+**Accepté :** 2026-08-09
 **Décideurs :** Reefact
 
 ## Contexte
