@@ -37,10 +37,10 @@ architecture" from a claim into something a build can check.
 | `DomainDrivenDesign` | 23 | Evans — *Domain-Driven Design*, 2003 |
 | `EnterpriseApplicationArchitecture` | 51 | Fowler — *Patterns of Enterprise Application Architecture*, 2002 |
 | `AnalysisPatterns` | 32 | Fowler — *Analysis Patterns*, 1997 |
-| `AccountingPatterns` | 4 | Fowler — *Accounting Patterns*, 2000 |
+| `AccountingPatterns` | 5 | Fowler — *Accounting Patterns*, 2000 |
 | `Idioms` | 2 | patterns with a source but no catalog of their own — each entry names its own |
 
-**135 patterns, 269 roles** today, and the catalog is meant to grow by an order of
+**136 patterns, 272 roles** today, and the catalog is meant to grow by an order of
 magnitude. A pattern is catalogued where the work that named it put it, under the
 name that work gave it — so a reader of a book finds its patterns spelled as it
 spelled them.

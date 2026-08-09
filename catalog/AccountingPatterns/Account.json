@@ -1,0 +1,42 @@
+{
+  "catalog": "AccountingPatterns",
+  "name": "Account",
+  "summary": "Gathers the entries of one classification and answers for them, so that a value's history is kept rather than only its present total.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Accounting Patterns",
+    "year": 2000
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Account",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "A container of entries that is more than a container: it answers a balance, and a balance as at any past moment, because it holds every discrete change rather than a running figure. That is what makes it the history of a value and not a field holding one.",
+      "links": []
+    },
+    {
+      "name": "Entries",
+      "targets": [
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "summary": "The entries gathered here. An entry is put into an account when it is created, and the account is the one place that decides which entries belong together.",
+      "links": []
+    },
+    {
+      "name": "Balance",
+      "targets": [
+        "Property",
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "What the entries add up to, over all time or over a stated range. It is derived from the entries rather than stored beside them, so it cannot disagree with them.",
+      "links": []
+    }
+  ]
+}
