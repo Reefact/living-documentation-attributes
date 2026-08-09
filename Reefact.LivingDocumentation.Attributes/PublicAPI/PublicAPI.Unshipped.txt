@@ -1,4 +1,15 @@
 #nullable enable
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.AccountingEntry
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.AccountingEntry.AccountingEntryAttribute
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.AccountingEntry.AccountingEntryAttribute.AccountingEntryAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.AccountingEntry.AmountAttribute
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.AccountingEntry.AmountAttribute.AmountAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.AccountingEntry.DescriptorAttribute
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.AccountingEntry.DescriptorAttribute.DescriptorAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.AccountingEntry.Role
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.AccountingEntry.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.AccountingEntry.WhenBookedAttribute
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.AccountingEntry.WhenBookedAttribute.WhenBookedAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AccountingPatterns.Event
 Reefact.LivingDocumentation.Attributes.AccountingPatterns.Event.EventAttribute
 Reefact.LivingDocumentation.Attributes.AccountingPatterns.Event.EventAttribute.EventAttribute() -> void
