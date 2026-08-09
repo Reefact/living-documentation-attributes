@@ -1,0 +1,61 @@
+{
+  "catalog": "AnalysisPatterns",
+  "name": "OutcomeAndStartFunctions",
+  "summary": "Puts at the knowledge level what an action is expected to produce and what sets a plan going, so that neither is a rule buried in the code that happens to run.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Analysis Patterns",
+    "year": 1997
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "KnowledgeFunction",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "A function stated at the knowledge level, taking observation concepts as arguments. It exists as an object so that what the business expects can be configured and inspected rather than compiled in.",
+      "links": []
+    },
+    {
+      "name": "OutcomeFunction",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "What an action is expected to bring about, as a target and as side effects. Stating it makes the outcome of an action checkable against what was intended, which is what turns a completed action into evidence.",
+      "links": []
+    },
+    {
+      "name": "StartFunction",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "What observation sets a plan going, and which protocol it indicates. It is the reason a plan can begin because of something observed rather than because somebody noticed.",
+      "links": [
+        "Outcome"
+      ]
+    },
+    {
+      "name": "Outcome",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The observation an action produced, tying the plan back to the world. It is an observation like any other, which is what lets an outcome be the trigger of the next plan.",
+      "links": []
+    },
+    {
+      "name": "Arguments",
+      "targets": [
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "summary": "The observation concepts a knowledge function ranges over. Named on the function rather than assumed by its caller, so a function says for itself what it needs.",
+      "links": []
+    }
+  ]
+}
