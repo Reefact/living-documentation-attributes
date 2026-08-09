@@ -161,4 +161,4 @@ Related ADRs, sources, catalog entries, code.
 | [ADR-0026](0026-follow-an-authors-own-supersession-of-a-catalogued-chapter.md) | Follow an author's own supersession of a catalogued chapter | Accepted |
 | [ADR-0027](0027-ship-one-independent-package-per-catalogued-work.md) | Ship one independent package per catalogued work | Accepted |
 | [ADR-0028](0028-hold-a-pattern-in-every-catalogue-whose-work-presents-it.md) | Hold a pattern in every catalogue whose work presents it as its own | Accepted |
-| [ADR-0029](0029-admit-enterprise-integration-patterns-as-a-catalogue.md) | Admit Enterprise Integration Patterns as a catalogue | Proposed |
+| [ADR-0029](0029-admit-enterprise-integration-patterns-as-a-catalogue.md) | Admit Enterprise Integration Patterns as a catalogue | Accepted |

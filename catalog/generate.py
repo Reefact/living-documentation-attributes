@@ -27,6 +27,7 @@ CATALOG_LABEL = {
     "EnterpriseApplicationArchitecture": "Patterns of Enterprise Application Architecture",
     "AnalysisPatterns": "Analysis Patterns",
     "AccountingPatterns": "Accounting Patterns",
+    "EnterpriseIntegration": "Enterprise Integration Patterns",
     "Idioms": "no catalog of its own",
 }
 
