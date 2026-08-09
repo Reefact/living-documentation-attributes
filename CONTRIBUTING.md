@@ -141,6 +141,12 @@ Optional, and names a component — never a file or a class. One of:
 Several scopes are comma-separated, with no space, unique and alphabetical:
 `feat(attributes,catalog): …`.
 
+A scope must say what the type does not, so one that repeats the type is left out
+wherever it appears — not only where it stands alone. The type already says the
+change is documentation, or the build; a scope beside it names the *other*
+components reached. So `docs(doc)` is `docs:`, `docs(build,doc)` is
+`docs(build):`, and `build(build)` is `build:`. The repetition is rejected.
+
 ### Description
 
 Imperative and lowercase — *add*, not *Add* or *Added* — and no trailing period.
