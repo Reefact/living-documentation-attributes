@@ -2,8 +2,9 @@
 
 🌍 🇬🇧 English (this file) · 🇫🇷 [Français](0029-admit-enterprise-integration-patterns-as-a-catalogue.fr.md)
 
-**Status:** Proposed
+**Status:** Accepted
 **Proposed:** 2026-08-09
+**Accepted:** 2026-08-09
 **Decision Makers:** Reefact
 
 ## Context

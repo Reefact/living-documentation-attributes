@@ -2,8 +2,9 @@
 
 🌍 🇬🇧 [English](0029-admit-enterprise-integration-patterns-as-a-catalogue.md) · 🇫🇷 Français (ce fichier)
 
-**Statut :** Proposé
+**Statut :** Accepté
 **Proposé :** 2026-08-09
+**Accepté :** 2026-08-09
 **Décideurs :** Reefact
 
 ## Contexte
