@@ -21,6 +21,7 @@
         "DomainDrivenDesign",
         "EnterpriseApplicationArchitecture",
         "AnalysisPatterns",
+        "AccountingPatterns",
         "Idioms"
       ]
     },

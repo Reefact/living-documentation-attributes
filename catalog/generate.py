@@ -27,6 +27,7 @@ CATALOG_LABEL = {
     "DomainDrivenDesign": "Domain-Driven Design",
     "EnterpriseApplicationArchitecture": "Patterns of Enterprise Application Architecture",
     "AnalysisPatterns": "Analysis Patterns",
+    "AccountingPatterns": "Accounting Patterns",
     "Idioms": "no catalog of its own",
 }
 

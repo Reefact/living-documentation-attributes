@@ -150,3 +150,4 @@ Related ADRs, sources, catalog entries, code.
 | [ADR-0023](0023-admit-an-anti-pattern-on-the-same-terms-as-any-pattern.md) | Admit an anti-pattern on the same terms as any pattern | Accepted |
 | [ADR-0024](0024-admit-a-model-of-the-business-to-the-catalog.md) | Admit a model of the business to the catalog | Accepted |
 | [ADR-0025](0025-let-an-earlier-work-reclaim-a-pattern-from-a-later-catalog.md) | Let an earlier work reclaim a pattern from a later catalog | Proposed |
+| [ADR-0026](0026-follow-an-authors-own-supersession-of-a-catalogued-chapter.md) | Follow an author's own supersession of a catalogued chapter | Accepted |
