@@ -1,0 +1,43 @@
+{
+  "catalog": "AccountingPatterns",
+  "name": "ReplacementAdjustment",
+  "summary": "Corrects a booked entry by removing it and processing the corrected event afresh, so that the account shows only what is now believed.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Accounting Patterns",
+    "year": 2000
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "ReplacementAdjustment",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The correction as a whole: find the entries of the old event, get rid of them, and process the new event the ordinary way. Getting rid of them may be a deletion or an unlinking that keeps them for logging, and either way this is the strategy to choose when the audit trail of the old entries is not wanted.",
+      "links": [
+        "AdjustedEvent"
+      ]
+    },
+    {
+      "name": "ReplacingEntry",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The entry created by processing the corrected event, which stands where the old one stood. Because it is made by the ordinary rules, nothing about the correction is special-cased.",
+      "links": []
+    },
+    {
+      "name": "AdjustedEvent",
+      "targets": [
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "summary": "The event being corrected, and the way back to the entries to remove. Without it the old entries cannot be found, which is what makes this strategy depend on the link rather than merely record it.",
+      "links": []
+    }
+  ]
+}
