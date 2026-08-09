@@ -205,6 +205,64 @@ Application Facade. If those are the patterns `DomainDrivenDesign/LayeredArchite
 ones that move. Deciding it is ADR-0007 applied each time, and the anteriority is
 not negotiable.
 
+## When the author says a chapter is superseded
+
+The UML companion Fowler publishes for chapter 6 of *Analysis Patterns* carries a note
+in his own hand: a more up-to-date discussion of accounting patterns is at
+`martinfowler.com/apsupp/accounting.pdf`, and the patterns there supersede the book's.
+The note is on that chapter's companion and on no other.
+
+So **chapter 6 is not catalogued from the book**, and the paper — *Accounting Patterns*,
+seventy-two pages, its PDF created 8 December 2000 — is catalogued as
+`AccountingPatterns` instead. The decision is
+[ADR-0026](../doc/handwritten/for-maintainers/adr/0026-follow-an-authors-own-supersession-of-a-catalogued-chapter.md),
+and its argument is that ADR-0006's anteriority rule guards against a *later presenter*
+redefining an earlier work, which is not what an author replacing his own model is doing.
+
+The paper has **nine patterns**, read from its own section headings: Event (p11),
+Accounting Entry (p15), Posting Rule (p19), Secondary Posting Rule (p33), Account (p39),
+Accounting Transaction (p44), Reversal Adjustment (p53), Difference Adjustment (p59) and
+Replacement Adjustment (p69).
+
+### What became of chapter 6's fifteen sections
+
+| Book section | In the paper |
+|---|---|
+| Account | **`Account`** — and the paper takes the entries *out* of it. Fowler says so in the text: "Account often goes with Accounting Entry. Indeed in *Analysis Patterns* I put them in the same pattern" |
+| Transactions | **`AccountingTransaction`**, with the sum-to-zero invariant stated, and two-legged and multi-legged as separate roles |
+| Posting Rules | **`PostingRule`**, with the host — a service agreement, a business unit — made a role, which is what carries "different rules for different business units" |
+| Posting Rule Execution · Posting Rules for Many Accounts | folded into `PostingRule` and `SecondaryPostingRule` rather than kept as patterns of their own |
+| Individual Instance Method · Summary Account · Memo Account · Choosing Entries · Accounting Practice · Sources of an Entry · Balance Sheet and Income Statement · Corresponding Account · Specialized Account Model · Booking Entries to Multiple Accounts | **no pattern of their own in the paper** |
+
+The last row is the honest state of it, and it is where a maintainer's eye is wanted.
+ADR-0026 records the risk in its own words: a book pattern with no successor is absent
+for a reason that is *not* supersession, and whether any of those ten should be
+catalogued from the book despite the note is not a question this file can settle.
+
+Three of the paper's nine have no section in chapter 6 at all — `Event`, and the pair of
+adjustments beyond the reversal. The paper is built around reacting to an event, which
+is the shift the note is really about.
+
+### Two comparisons worth recording
+
+`AccountingPatterns/Event` and `DomainDrivenDesign/DomainEvent` are **kept apart**. The
+core is shared — something that happened, as an immutable object — but each carries an
+assertion the other does not: Evans' requires the past-tense name and domain meaning,
+Fowler's requires the two timestamps and the role of triggering a rule. Under
+[ADR-0007](../doc/handwritten/for-maintainers/adr/0007-decide-sameness-by-the-assertions-a-pattern-carries.md)
+that is two patterns, not one spelled twice. It is a judgement, the paper is the earlier
+publication of the two, and reversing it would make the 2003 entry decline from the 2000
+one — so it is written here rather than left implicit.
+
+The two timestamps of `Event` **are** `AnalysisPatterns/DualTimeRecord`, which the 1997
+book names and therefore holds. `Event` does not re-assert it; its role summaries say so.
+
+The three adjustments are siblings and not a hierarchy. Each is a whole strategy for one
+problem — you cannot edit a booked entry — and they differ in what they cost:
+`ReversalAdjustment` keeps everything and pays in entries, `DifferenceAdjustment` pays
+one entry and loses the statement of what the figure should have been, and
+`ReplacementAdjustment` trades the audit trail away on purpose.
+
 ## Shape of the generated attribute
 
 A pattern whose single role carries the pattern's own name is emitted flat, so
