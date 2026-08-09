@@ -1,0 +1,27 @@
+{
+  "catalog": "AccountingPatterns",
+  "name": "SecondaryPostingRule",
+  "summary": "Lets one posting rule invoke another, so that a consequence which follows from several kinds of event is stated once instead of copied into each rule.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Accounting Patterns",
+    "year": 2000
+  },
+  "inherited": false,
+  "specialisationOf": {
+    "catalog": "AccountingPatterns",
+    "name": "PostingRule"
+  },
+  "roles": [
+    {
+      "name": "SecondaryPostingRule",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "A posting rule reached from another rule rather than from an event of its own — a tax that applies to usage and to service charges alike. It may be given the original event, or a second event may be created and processed in the ordinary way; the second costs an extra event and buys the ability to adjust the tax without adjusting what it was charged on.",
+      "links": []
+    }
+  ]
+}
