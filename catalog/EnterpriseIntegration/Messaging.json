@@ -1,0 +1,24 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "Messaging",
+  "summary": "Integrates applications by sending packets of data over channels, so that the sender is decoupled from the receiver in time as well as in technology.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Messaging",
+      "targets": [
+        "Interface",
+        "Class",
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "The participant that sends or receives messages rather than calling or sharing. It is the style the rest of this catalogue elaborates: everything else here presupposes that integration happens by message.",
+      "links": []
+    }
+  ]
+}
