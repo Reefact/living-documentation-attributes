@@ -1,3 +1,5 @@
 #nullable enable
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.FileTransferAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.FileTransferAttribute.FileTransferAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.SharedDatabaseAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.SharedDatabaseAttribute.SharedDatabaseAttribute() -> void
