@@ -1,0 +1,24 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "RemoteProcedureInvocation",
+  "summary": "Integrates applications by letting one call a procedure the other exposes, so that data and behaviour travel together and the caller learns the answer at once.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "RemoteProcedureInvocation",
+      "targets": [
+        "Interface",
+        "Class",
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "The participant that exposes or calls the remote procedure. The caller gets an immediate answer, and pays for it with a coupling in time: the callee must be up, and the caller waits.",
+      "links": []
+    }
+  ]
+}
