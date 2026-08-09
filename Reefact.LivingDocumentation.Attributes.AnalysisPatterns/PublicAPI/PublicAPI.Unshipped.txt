@@ -231,6 +231,21 @@ Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Plan.ReplacesAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Plan.ReplacesAttribute.ReplacesAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Plan.Role
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Plan.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PlanProtocol
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PlanProtocol.ProtocolAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PlanProtocol.ProtocolAttribute.ProtocolAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PlanProtocol.ProtocolDependencyAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PlanProtocol.ProtocolDependencyAttribute.ProtocolDependencyAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PlanProtocol.ProtocolDependencyAttribute.ProtocolReference.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PlanProtocol.ProtocolDependencyAttribute.ProtocolReference.init -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PlanProtocol.ProtocolReferenceAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PlanProtocol.ProtocolReferenceAttribute.Protocol.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PlanProtocol.ProtocolReferenceAttribute.Protocol.init -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PlanProtocol.ProtocolReferenceAttribute.ProtocolReferenceAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PlanProtocol.Role
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PlanProtocol.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PlanProtocol.StepsAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PlanProtocol.StepsAttribute.StepsAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PostAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PostAttribute.PostAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ProcessOfObservation
