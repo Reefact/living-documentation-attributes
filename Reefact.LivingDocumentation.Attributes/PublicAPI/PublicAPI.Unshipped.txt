@@ -30,6 +30,17 @@ Reefact.LivingDocumentation.Attributes.AccountingPatterns.AccountingTransaction.
 Reefact.LivingDocumentation.Attributes.AccountingPatterns.AccountingTransaction.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.AccountingPatterns.AccountingTransaction.TwoLeggedAttribute
 Reefact.LivingDocumentation.Attributes.AccountingPatterns.AccountingTransaction.TwoLeggedAttribute.TwoLeggedAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.DifferenceAdjustment
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.DifferenceAdjustment.AdjustedEventAttribute
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.DifferenceAdjustment.AdjustedEventAttribute.AdjustedEventAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.DifferenceAdjustment.AdjustingEntryAttribute
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.DifferenceAdjustment.AdjustingEntryAttribute.AdjustingEntryAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.DifferenceAdjustment.DifferenceAdjustmentAttribute
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.DifferenceAdjustment.DifferenceAdjustmentAttribute.AdjustedEvent.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.DifferenceAdjustment.DifferenceAdjustmentAttribute.AdjustedEvent.init -> void
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.DifferenceAdjustment.DifferenceAdjustmentAttribute.DifferenceAdjustmentAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.DifferenceAdjustment.Role
+Reefact.LivingDocumentation.Attributes.AccountingPatterns.DifferenceAdjustment.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.AccountingPatterns.Event
 Reefact.LivingDocumentation.Attributes.AccountingPatterns.Event.EventAttribute
 Reefact.LivingDocumentation.Attributes.AccountingPatterns.Event.EventAttribute.EventAttribute() -> void
