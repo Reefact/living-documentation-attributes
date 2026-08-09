@@ -8,10 +8,6 @@
     "year": 1997
   },
   "inherited": true,
-  "specialisationOf": {
-    "catalog": "EnterpriseApplicationArchitecture",
-    "name": "SpecialCase"
-  },
   "roles": [
     {
       "name": "NullObject",

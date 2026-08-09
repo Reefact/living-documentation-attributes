@@ -30,13 +30,6 @@ namespace Reefact.LivingDocumentation.Attributes.Tests {
         }
 
         [Fact]
-        public void A_declension_answers_the_pattern_it_spells() {
-            Assert.Equal(typeof(Shapes.Pattern.Role), PatternInfo.IdentityOf(typeof(Shapes.Declined.ComponentAttribute)));
-            Assert.Equal(typeof(Shapes.Pattern.Role), PatternInfo.IdentityOf(typeof(Shapes.Declined.LeafAttribute)));
-            Assert.Equal(typeof(Shapes.FlatAttribute), PatternInfo.IdentityOf(typeof(Shapes.FlatDeclinedAttribute)));
-        }
-
-        [Fact]
         public void A_specialisation_answers_itself_and_stays_a_pattern_of_its_own() {
             Assert.Equal(typeof(Shapes.Narrowed.Role), PatternInfo.IdentityOf(typeof(Shapes.Narrowed.ComponentAttribute)));
             Assert.Equal(typeof(Shapes.Narrowed.Role), PatternInfo.IdentityOf(typeof(Shapes.Narrowed.LeafAttribute)));
@@ -61,14 +54,13 @@ namespace Reefact.LivingDocumentation.Attributes.Tests {
 
         /// <summary>
         ///     Counting is the simplest thing a consumer does, and the whole point of an identity is that it counts
-        ///     right. Six attributes, three patterns: the declension folds into the pattern it spells, the
-        ///     specialisation counts on its own.
+        ///     right. Four attributes, two patterns: every role of one pattern folds into it, and the specialisation
+        ///     counts on its own rather than as the pattern it narrows.
         /// </summary>
         [Fact]
         public void The_shapes_count_as_the_patterns_they_are() {
             Type[] annotations = [
                 typeof(Shapes.Pattern.ComponentAttribute), typeof(Shapes.Pattern.LeafAttribute),
-                typeof(Shapes.Declined.ComponentAttribute), typeof(Shapes.Declined.LeafAttribute),
                 typeof(Shapes.Narrowed.ComponentAttribute), typeof(Shapes.Narrowed.LeafAttribute)
             ];
 
@@ -81,25 +73,6 @@ namespace Reefact.LivingDocumentation.Attributes.Tests {
             // pattern still reaches the narrower one, because every role of it derives from the broader role base.
             Assert.True(typeof(Shapes.Pattern.Role).IsAssignableFrom(typeof(Shapes.Narrowed.LeafAttribute)));
             Assert.True(typeof(Shapes.FlatAttribute).IsAssignableFrom(typeof(Shapes.FlatNarrowedAttribute)));
-        }
-
-        [Fact]
-        public void A_declension_restates_nothing_it_can_inherit() {
-            // Declared on the counterpart, not on the declension: one pattern, one declaration of what it applies to.
-            Assert.Null(typeof(Shapes.Declined.LeafAttribute).GetCustomAttributes(typeof(AttributeUsageAttribute), false)
-                                                             .FirstOrDefault());
-
-            AttributeUsageAttribute? inherited = (AttributeUsageAttribute?)typeof(Shapes.Declined.LeafAttribute)
-                                                                          .GetCustomAttributes(typeof(AttributeUsageAttribute), true)
-                                                                          .FirstOrDefault();
-
-            Assert.NotNull(inherited);
-            Assert.Equal(AttributeTargets.Class | AttributeTargets.Struct, inherited.ValidOn);
-        }
-
-        [Fact]
-        public void A_declension_inherits_the_links_of_the_role_it_spells() {
-            Assert.NotNull(typeof(Shapes.Declined.LeafAttribute).GetProperty(nameof(Shapes.Pattern.LeafAttribute.Component)));
         }
 
     }

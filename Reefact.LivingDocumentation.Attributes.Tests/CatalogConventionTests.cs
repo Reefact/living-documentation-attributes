@@ -15,7 +15,7 @@ namespace Reefact.LivingDocumentation.Attributes.Tests {
     /// </summary>
     /// <remarks>
     ///     <para>
-    ///         These run over the assembly rather than over the catalog on disk. Regenerating an unchanged catalog and
+    ///         These run over the shipped assemblies rather than over the catalog on disk. Regenerating an unchanged catalog and
     ///         finding no diff already proves the sources are what the catalog produces; what it cannot prove is that
     ///         what the template produces is well formed. A defect written into the template is emitted uniformly,
     ///         survives the round trip, and is invisible in a diff spanning two hundred files — these assertions are
@@ -27,19 +27,17 @@ namespace Reefact.LivingDocumentation.Attributes.Tests {
     /// </remarks>
     public sealed class CatalogConventionTests {
 
-        private static readonly Assembly Catalog = typeof(LivingDocumentationAttribute).Assembly;
+        // One assembly per catalogued work since ADR-0027, so the whole vocabulary is the union of them. The
+        // assembly holding the base marker is not among them: it ships no pattern.
+        private static readonly Type[] Catalogued = Repository.CatalogueAssemblies
+                                                             .SelectMany(assembly => assembly.GetTypes())
+                                                             .Where(type => typeof(LivingDocumentationAttribute).IsAssignableFrom(type))
+                                                             .Where(type => type != typeof(LivingDocumentationAttribute))
+                                                             .ToArray();
 
-        private static readonly Type[] Roles = Catalog.GetTypes()
-                                                      .Where(type => typeof(LivingDocumentationAttribute).IsAssignableFrom(type))
-                                                      .Where(type => type != typeof(LivingDocumentationAttribute))
-                                                      .Where(type => !type.IsAbstract)
-                                                      .ToArray();
+        private static readonly Type[] Roles = Catalogued.Where(type => !type.IsAbstract).ToArray();
 
-        private static readonly Type[] RoleBases = Catalog.GetTypes()
-                                                          .Where(type => typeof(LivingDocumentationAttribute).IsAssignableFrom(type))
-                                                          .Where(type => type != typeof(LivingDocumentationAttribute))
-                                                          .Where(type => type.IsAbstract)
-                                                          .ToArray();
+        private static readonly Type[] RoleBases = Catalogued.Where(type => type.IsAbstract).ToArray();
 
         #region Statics members declarations
 
@@ -107,12 +105,13 @@ namespace Reefact.LivingDocumentation.Attributes.Tests {
         [Theory]
         [MemberData(nameof(EveryRole))]
         public void A_role_is_sealed_unless_something_derives_from_it(Type role) {
-            // ADR-0005 leaves exactly the attributes that are derived from unsealed, and the difference is explained
-            // by the catalog rather than readable in the file. An unsealed attribute nothing derives from is a
-            // template slip, and the only place it shows is here.
+            // Exactly the attributes that are derived from are left unsealed, and the difference is explained by the
+            // catalog rather than readable in the file. An unsealed attribute nothing derives from is a template slip,
+            // and the only place it shows is here. Since ADR-0027 the search stays inside the role's own assembly:
+            // nothing in another catalogue can derive from it, which is the point of the split.
             if (role.IsSealed) { return; }
 
-            Assert.Contains(Catalog.GetTypes(), other => other != role && role.IsAssignableFrom(other));
+            Assert.Contains(role.Assembly.GetTypes(), other => other != role && role.IsAssignableFrom(other));
         }
 
         [Theory]
@@ -163,14 +162,24 @@ namespace Reefact.LivingDocumentation.Attributes.Tests {
         }
 
         [Fact]
-        public void The_library_publishes_the_vocabulary_and_two_types_of_its_own() {
-            // ADR-0004: the library is a vocabulary and nothing else. Anything public that is neither an attribute nor
-            // a pattern container is surface a consumer can take a dependency on.
-            IEnumerable<Type> strays = Catalog.GetExportedTypes()
-                                              .Where(type => !typeof(Attribute).IsAssignableFrom(type))
-                                              .Where(type => !(type.IsAbstract && type.IsSealed));
+        public void Every_catalogue_publishes_the_vocabulary_and_nothing_else() {
+            // ADR-0004: a catalogue is a vocabulary and nothing else. Anything public that is neither an attribute nor
+            // a pattern container is surface a consumer can take a dependency on. Run over each shipped assembly, so
+            // one catalogue cannot smuggle a stray type in under cover of another's diff.
+            IEnumerable<Type> strays = Repository.CatalogueAssemblies
+                                                 .SelectMany(assembly => assembly.GetExportedTypes())
+                                                 .Where(type => !typeof(Attribute).IsAssignableFrom(type))
+                                                 .Where(type => !(type.IsAbstract && type.IsSealed));
 
             Assert.Empty(strays);
+        }
+
+        [Fact]
+        public void Every_catalogue_in_the_data_ships_as_a_package() {
+            // ADR-0027: one package per catalogued work. A catalogue that exists as JSON and not as an assembly would
+            // be a directory nobody can annotate with, and loading them by name is what makes that fail here.
+            Assert.Equal(Repository.Catalogues.Length, Repository.CatalogueAssemblies.Length);
+            Assert.NotEmpty(Repository.Catalogues);
         }
 
     }

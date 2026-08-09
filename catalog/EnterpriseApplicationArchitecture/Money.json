@@ -1,17 +1,13 @@
 {
   "catalog": "EnterpriseApplicationArchitecture",
   "name": "Money",
-  "summary": "An amount with a currency, and arithmetic that refuses to mix the two or to lose a penny in a division.",
+  "summary": "Makes an amount and its currency one value with arithmetic of its own, so that a number whose meaning depends on a currency cannot be added to one that means something else.",
   "reference": {
     "author": "Martin Fowler",
     "work": "Patterns of Enterprise Application Architecture",
     "year": 2002
   },
   "inherited": true,
-  "specialisationOf": {
-    "catalog": "AnalysisPatterns",
-    "name": "Quantity"
-  },
   "roles": [
     {
       "name": "Money",
@@ -20,7 +16,7 @@
         "Struct"
       ],
       "repeatable": false,
-      "summary": "A quantity of money as a value, never a bare decimal. It carries its currency, refuses arithmetic across currencies, and allocates a remainder rather than rounding it away — the allocation being what makes it narrower than a quantity in general rather than an instance of one: no other quantity has to divide without losing anything.",
+      "summary": "The money value itself, holding an amount and the currency it is in, and refusing arithmetic that would mix two currencies. What it adds over a plain decimal is allocation: dividing a sum between several parties without losing or inventing a cent, which no rounding of a bare number does correctly.",
       "links": []
     }
   ]

@@ -48,7 +48,7 @@
       }
     },
     "reference": {
-      "description": "The work the pattern comes from. Load-bearing, not editorial: when two catalogs name the same pattern, the earlier publication holds the definition and the other declines from it.",
+      "description": "The work the pattern comes from. Load-bearing, not editorial: a pattern is held by every catalogue whose work presents it as its own (ADR-0028), and the reference is what says which work that is.",
       "type": "object",
       "additionalProperties": false,
       "required": [
@@ -72,12 +72,8 @@
         }
       }
     },
-    "declensionOf": {
-      "description": "Set when this entry is the same pattern as another, named or catalogued differently. The attribute is generated deriving from it, so both spellings resolve to one identity. Which side holds the definition is decided by anteriority of publication.",
-      "$ref": "#/$defs/patternRef"
-    },
     "specialisationOf": {
-      "description": "Set when this pattern is a narrower case of another, as Null Object is of Special Case. The attribute is generated deriving from it, so a consumer asking for the broader pattern gets this one too. Decided by the taxonomy, never by publication dates.",
+      "description": "The pattern this one narrows, which must be a pattern of the SAME catalogue. A relation is emitted as inheritance and each catalogue ships as its own package (ADR-0027), so a relation across catalogues cannot exist; the validator rejects one.",
       "$ref": "#/$defs/patternRef"
     }
   },

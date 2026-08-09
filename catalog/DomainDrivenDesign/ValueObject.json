@@ -7,10 +7,6 @@
     "work": "Domain-Driven Design",
     "year": 2003
   },
-  "specialisationOf": {
-    "catalog": "EnterpriseApplicationArchitecture",
-    "name": "ValueObject"
-  },
   "inherited": true,
   "roles": [
     {

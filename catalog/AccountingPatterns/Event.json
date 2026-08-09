@@ -34,7 +34,7 @@
         "Field"
       ],
       "repeatable": false,
-      "summary": "When the thing happened in the world. Together with when it was noticed this is the dual time record of Analysis Patterns, which the earlier work names; the assertion here is only that an event carries both.",
+      "summary": "When the thing happened in the world, as against when the system learned of it. An event carries both, so a figure can be restated later without the restatement pretending it was known at the time.",
       "links": []
     },
     {
@@ -44,7 +44,7 @@
         "Field"
       ],
       "repeatable": false,
-      "summary": "When the system learned of it. It differs from when the event occurred, and keeping both is what lets a figure be restated without pretending the restatement was known earlier.",
+      "summary": "When the system learned of it. It differs from when the event occurred, and holding the two apart is what lets a correction be dated honestly instead of overwriting history.",
       "links": []
     }
   ]

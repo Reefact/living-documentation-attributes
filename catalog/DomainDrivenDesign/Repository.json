@@ -8,10 +8,6 @@
     "year": 2003
   },
   "inherited": true,
-  "specialisationOf": {
-    "catalog": "EnterpriseApplicationArchitecture",
-    "name": "Repository"
-  },
   "roles": [
     {
       "name": "Repository",

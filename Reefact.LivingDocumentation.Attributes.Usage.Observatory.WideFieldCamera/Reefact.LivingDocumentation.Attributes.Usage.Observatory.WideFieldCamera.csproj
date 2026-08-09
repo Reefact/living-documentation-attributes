@@ -11,7 +11,7 @@
   <!-- Written by a different team, three years after the spectrograph, against the same core and with no
        reference to it. -->
   <ItemGroup>
-    <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes\Reefact.LivingDocumentation.Attributes.csproj" />
+    <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.DomainDrivenDesign\Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.csproj" />
     <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.Usage.Observatory.Instruments\Reefact.LivingDocumentation.Attributes.Usage.Observatory.Instruments.csproj" />
   </ItemGroup>
 

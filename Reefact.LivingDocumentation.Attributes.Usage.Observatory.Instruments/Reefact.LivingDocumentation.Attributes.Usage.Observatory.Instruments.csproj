@@ -11,7 +11,7 @@
   <!-- The abstract core knows no component. If it ever referenced one, it would stop being a core and
        become the first of them. -->
   <ItemGroup>
-    <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes\Reefact.LivingDocumentation.Attributes.csproj" />
+    <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.DomainDrivenDesign\Reefact.LivingDocumentation.Attributes.DomainDrivenDesign.csproj" />
   </ItemGroup>
 
 </Project>

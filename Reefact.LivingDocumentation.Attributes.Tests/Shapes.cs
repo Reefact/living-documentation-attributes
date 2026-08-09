@@ -51,20 +51,6 @@ namespace Reefact.LivingDocumentation.Attributes.Tests {
         }
 
         /// <summary>
-        ///     The same pattern, spelled by another catalog: declined role by role, so that each role inherits its
-        ///     counterpart's targets, multiplicity and links rather than restating them.
-        /// </summary>
-        internal static class Declined {
-
-            [Declension]
-            public sealed class ComponentAttribute : Pattern.ComponentAttribute { }
-
-            [Declension]
-            public sealed class LeafAttribute : Pattern.LeafAttribute { }
-
-        }
-
-        /// <summary>
         ///     A narrower case of <see cref="Pattern" />: it derives at the role base, and keeps roles of its own —
         ///     here one that accepts fewer targets than the role it narrows.
         /// </summary>
@@ -83,10 +69,6 @@ namespace Reefact.LivingDocumentation.Attributes.Tests {
         /// <summary>A single-role pattern: a flat attribute, with neither nesting nor argument.</summary>
         [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct, AllowMultiple = false, Inherited = true)]
         public class FlatAttribute : LivingDocumentationAttribute { }
-
-        /// <summary>The same single-role pattern, spelled by another catalog.</summary>
-        [Declension]
-        public sealed class FlatDeclinedAttribute : FlatAttribute { }
 
         /// <summary>A narrower case of the single-role pattern.</summary>
         [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = true)]
