@@ -218,6 +218,8 @@ Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Quantity.Role
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Quantity.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Quantity.UnitAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Quantity.UnitAttribute.UnitAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.RangeAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.RangeAttribute.RangeAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.RejectedObservationAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.RejectedObservationAttribute.RejectedObservationAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.StatusType

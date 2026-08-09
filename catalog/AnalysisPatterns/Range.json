@@ -1,0 +1,23 @@
+{
+  "catalog": "AnalysisPatterns",
+  "name": "Range",
+  "summary": "Makes an interval one object carrying its own comparisons, so that a pair of loose bounds cannot be tested one way in one place and another way in the next.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Analysis Patterns",
+    "year": 1997
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Range",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "repeatable": false,
+      "summary": "The interval itself, holding its two bounds and whether each is inclusive, and answering whether it includes a value, overlaps another range or abuts one. The operations belong to it rather than to whatever holds the bounds, which is what stops one comparison using an inclusive bound where another used an exclusive one; an open end is a null bound or a special case for the extreme, and either way a caller does not test for it.",
+      "links": []
+    }
+  ]
+}
