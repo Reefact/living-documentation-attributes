@@ -19,6 +19,6 @@ namespace Reefact.LivingDocumentation.Attributes.AnalysisPatterns {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
-    public sealed class ProtocolAttribute : LivingDocumentationAttribute { }
+    public class ProtocolAttribute : LivingDocumentationAttribute { }
 
 }
