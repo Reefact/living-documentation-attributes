@@ -1,6 +1,8 @@
 #nullable enable
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.FileTransferAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.FileTransferAttribute.FileTransferAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessageChannelAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessageChannelAttribute.MessageChannelAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessagingAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessagingAttribute.MessagingAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RemoteProcedureInvocationAttribute

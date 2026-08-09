@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "MessageChannel",
+  "summary": "Names the logical path a message travels, so that a sender addresses a channel rather than a receiver and neither has to know the other exists.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "MessageChannel",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The channel itself, where a codebase gives it a type rather than a configured name. What it asserts is that the sender chooses a channel and not a recipient — which is what makes a receiver replaceable without the sender changing.",
+      "links": []
+    }
+  ]
+}
