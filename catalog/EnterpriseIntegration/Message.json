@@ -1,0 +1,43 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "Message",
+  "summary": "Wraps data in a packet the channel can carry, so that what is sent is a thing in its own right rather than a call's arguments.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Message",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "repeatable": false,
+      "summary": "The packet sent over a channel. It exists as a type so that what crosses a boundary is named and versionable, which is what a call's argument list is not.",
+      "links": []
+    },
+    {
+      "name": "Header",
+      "targets": [
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "summary": "What the messaging system reads to do its work — the identifiers, the return address, the expiry. Held apart from the body because the infrastructure may read it and the application need not.",
+      "links": []
+    },
+    {
+      "name": "Body",
+      "targets": [
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "summary": "What the application sent. The messaging system carries it without looking at it, which is what lets one channel serve payloads it knows nothing about.",
+      "links": []
+    }
+  ]
+}

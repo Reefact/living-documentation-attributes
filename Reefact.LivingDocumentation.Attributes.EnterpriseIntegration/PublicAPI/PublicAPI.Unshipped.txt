@@ -1,6 +1,15 @@
 #nullable enable
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.FileTransferAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.FileTransferAttribute.FileTransferAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.Message
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.Message.BodyAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.Message.BodyAttribute.BodyAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.Message.HeaderAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.Message.HeaderAttribute.HeaderAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.Message.MessageAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.Message.MessageAttribute.MessageAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.Message.Role
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.Message.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessageChannelAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessageChannelAttribute.MessageChannelAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessagingAttribute
