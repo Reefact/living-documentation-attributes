@@ -14,6 +14,17 @@ Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessageChannelAttri
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessageChannelAttribute.MessageChannelAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessagingAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessagingAttribute.MessagingAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.PipesAndFilters
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.PipesAndFilters.FilterAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.PipesAndFilters.FilterAttribute.FilterAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.PipesAndFilters.PipeAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.PipesAndFilters.PipeAttribute.PipeAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.PipesAndFilters.PipelineAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.PipesAndFilters.PipelineAttribute.Filter.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.PipesAndFilters.PipelineAttribute.Filter.init -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.PipesAndFilters.PipelineAttribute.PipelineAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.PipesAndFilters.Role
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.PipesAndFilters.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RemoteProcedureInvocationAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RemoteProcedureInvocationAttribute.RemoteProcedureInvocationAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.SharedDatabaseAttribute
