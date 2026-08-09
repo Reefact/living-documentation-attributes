@@ -1,0 +1,46 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "PipesAndFilters",
+  "summary": "Divides a larger processing task into a sequence of independent steps joined by channels, so that a step can be reordered, reused or replaced without the others knowing.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Filter",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "One processing step. It reads from a channel and writes to a channel, and knows nothing of what precedes or follows it — which is the whole property that lets the sequence be rearranged.",
+      "links": []
+    },
+    {
+      "name": "Pipe",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The channel joining two steps. Making it a participant rather than a call is what decouples the steps in time and lets one be replaced while the other runs.",
+      "links": []
+    },
+    {
+      "name": "Pipeline",
+      "targets": [
+        "Interface",
+        "Class",
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "The assembled sequence. It is the only participant that knows the order, so the order is stated in one place rather than implied by who calls whom.",
+      "links": [
+        "Filter"
+      ]
+    }
+  ]
+}
