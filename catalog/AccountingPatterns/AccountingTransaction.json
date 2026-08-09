@@ -1,0 +1,50 @@
+{
+  "catalog": "AccountingPatterns",
+  "name": "AccountingTransaction",
+  "summary": "Binds the entries of one movement so that they sum to zero, so that money is conserved by the model rather than by the care of whoever wrote the last posting.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Accounting Patterns",
+    "year": 2000
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "AccountingTransaction",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The movement as a whole. Its entries must sum to zero — nothing is created, only moved — which is double entry stated as an invariant the model can be held to instead of a discipline the accountant remembers.",
+      "links": []
+    },
+    {
+      "name": "Entries",
+      "targets": [
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "summary": "The entries the invariant ranges over. They belong to the transaction, and no entry of a transaction stands alone.",
+      "links": []
+    },
+    {
+      "name": "TwoLegged",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "A transaction of exactly two entries of opposite sign: one account down, one account up. It is the literal single movement, and its constraint is stronger than the general one.",
+      "links": []
+    },
+    {
+      "name": "MultiLegged",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "A transaction of any number of entries that still sum to zero, which is what a movement split across several accounts needs — a charge, the tax on it, and what is owed, in one balanced whole.",
+      "links": []
+    }
+  ]
+}
