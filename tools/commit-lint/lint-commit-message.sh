@@ -143,6 +143,29 @@ else
       err "scopes must be unique and alphabetical: write '(${sorted})'"
     fi
   fi
+
+  # a scope that repeats the type. Both sets are closed, so the repetition has
+  # two forms: 'doc' behind 'docs', and 'build' behind 'build'. It is rejected
+  # wherever it appears and not only where it stands alone — the type already
+  # says the change is documentation, or the build, and a scope beside it names
+  # the other components reached.
+  if printf '%s' "$subject" | grep -Eq "^(${TYPES})\((${SCOPES})(,(${SCOPES}))*\)!?: "; then
+    typ="$(printf '%s' "$subject" | sed -E 's/^([a-z]+)\(.*/\1/')"
+    grp="$(printf '%s' "$subject" | sed -E 's/^[a-z]+\(([^)]*)\).*/\1/')"
+    case "$typ" in
+      docs) own='doc' ;;
+      build) own='build' ;;
+      *) own='' ;; # no scope names this type's own component
+    esac
+    if [ -n "$own" ] && printf '%s' "$grp" | tr ',' '\n' | grep -qx "$own"; then
+      rest="$(printf '%s' "$grp" | tr ',' '\n' | grep -vx "$own" | tr '\n' ',' | sed 's/,$//')"
+      if [ -n "$rest" ]; then
+        err "drop '${own}' from the scope: it only repeats the type — write '${typ}(${rest}):' (a scope must say what the type does not)"
+      else
+        err "drop the scope: '${typ}(${own})' only repeats the type — write '${typ}:' (a scope must say what the type does not)"
+      fi
+    fi
+  fi
 fi
 
 # --- blank line between header and body ---------------------------------------
