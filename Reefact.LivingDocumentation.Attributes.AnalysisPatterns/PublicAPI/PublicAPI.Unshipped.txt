@@ -287,6 +287,23 @@ Reefact.LivingDocumentation.Attributes.AnalysisPatterns.RangeAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.RangeAttribute.RangeAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.RejectedObservationAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.RejectedObservationAttribute.RejectedObservationAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ResourceAllocation
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ResourceAllocation.BooksAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ResourceAllocation.BooksAttribute.BooksAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ResourceAllocation.GeneralAllocationAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ResourceAllocation.GeneralAllocationAttribute.GeneralAllocationAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ResourceAllocation.ResourceAllocationAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ResourceAllocation.ResourceAllocationAttribute.ResourceAllocationAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ResourceAllocation.ResourceAllocationAttribute.ResourceType.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ResourceAllocation.ResourceAllocationAttribute.ResourceType.init -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ResourceAllocation.ResourceTypeAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ResourceAllocation.ResourceTypeAttribute.ResourceTypeAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ResourceAllocation.Role
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ResourceAllocation.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ResourceAllocation.SpecificAllocationAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ResourceAllocation.SpecificAllocationAttribute.SpecificAllocationAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ResourceAllocation.UsesAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ResourceAllocation.UsesAttribute.UsesAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.StatusType
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.StatusType.ActualAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.StatusType.ActualAttribute.ActualAttribute() -> void
