@@ -32,6 +32,13 @@ Reefact.LivingDocumentation.Attributes.AnalysisPatterns.AssociatedObservation.Ev
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.AssociatedObservation.EvidenceAttribute.EvidenceAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.AssociatedObservation.Role
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.AssociatedObservation.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.CompletedAndAbandonedActions
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.CompletedAndAbandonedActions.AbandonedActionAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.CompletedAndAbandonedActions.AbandonedActionAttribute.AbandonedActionAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.CompletedAndAbandonedActions.CompletedActionAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.CompletedAndAbandonedActions.CompletedActionAttribute.CompletedActionAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.CompletedAndAbandonedActions.Role
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.CompletedAndAbandonedActions.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.CompoundUnits
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.CompoundUnits.AtomicUnitAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.CompoundUnits.AtomicUnitAttribute.AtomicUnitAttribute() -> void
