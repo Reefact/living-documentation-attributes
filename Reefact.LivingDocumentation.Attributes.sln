@@ -51,6 +51,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reefact.LivingDocumentation
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reefact.LivingDocumentation.Attributes.Idioms", "Reefact.LivingDocumentation.Attributes.Idioms\Reefact.LivingDocumentation.Attributes.Idioms.csproj", "{52B55D4F-493C-4A04-A0A2-5F7012BAC13B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reefact.LivingDocumentation.Attributes.EnterpriseIntegration", "Reefact.LivingDocumentation.Attributes.EnterpriseIntegration\Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.csproj", "{BDF4C9B5-A71B-4F32-AA26-8F0393FB2A37}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -325,6 +327,18 @@ Global
 		{52B55D4F-493C-4A04-A0A2-5F7012BAC13B}.Release|x64.Build.0 = Release|Any CPU
 		{52B55D4F-493C-4A04-A0A2-5F7012BAC13B}.Release|x86.ActiveCfg = Release|Any CPU
 		{52B55D4F-493C-4A04-A0A2-5F7012BAC13B}.Release|x86.Build.0 = Release|Any CPU
+		{BDF4C9B5-A71B-4F32-AA26-8F0393FB2A37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDF4C9B5-A71B-4F32-AA26-8F0393FB2A37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDF4C9B5-A71B-4F32-AA26-8F0393FB2A37}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BDF4C9B5-A71B-4F32-AA26-8F0393FB2A37}.Debug|x64.Build.0 = Debug|Any CPU
+		{BDF4C9B5-A71B-4F32-AA26-8F0393FB2A37}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BDF4C9B5-A71B-4F32-AA26-8F0393FB2A37}.Debug|x86.Build.0 = Debug|Any CPU
+		{BDF4C9B5-A71B-4F32-AA26-8F0393FB2A37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDF4C9B5-A71B-4F32-AA26-8F0393FB2A37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDF4C9B5-A71B-4F32-AA26-8F0393FB2A37}.Release|x64.ActiveCfg = Release|Any CPU
+		{BDF4C9B5-A71B-4F32-AA26-8F0393FB2A37}.Release|x64.Build.0 = Release|Any CPU
+		{BDF4C9B5-A71B-4F32-AA26-8F0393FB2A37}.Release|x86.ActiveCfg = Release|Any CPU
+		{BDF4C9B5-A71B-4F32-AA26-8F0393FB2A37}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,3 @@
+#nullable enable
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.FileTransferAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.FileTransferAttribute.FileTransferAttribute() -> void
