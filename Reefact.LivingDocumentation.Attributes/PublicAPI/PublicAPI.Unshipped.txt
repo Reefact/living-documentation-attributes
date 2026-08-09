@@ -198,6 +198,15 @@ Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PartyTypeGeneralizations
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PartyTypeGeneralizations.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PartyTypeGeneralizations.SupertypeAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PartyTypeGeneralizations.SupertypeAttribute.SupertypeAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PhenomenonWithRange
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PhenomenonWithRange.RangeAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PhenomenonWithRange.RangeAttribute.RangeAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PhenomenonWithRange.RangedPhenomenonAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PhenomenonWithRange.RangedPhenomenonAttribute.RangedPhenomenonAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PhenomenonWithRange.RangeFunctionAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PhenomenonWithRange.RangeFunctionAttribute.RangeFunctionAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PhenomenonWithRange.Role
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PhenomenonWithRange.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PostAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.PostAttribute.PostAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.ProcessOfObservation

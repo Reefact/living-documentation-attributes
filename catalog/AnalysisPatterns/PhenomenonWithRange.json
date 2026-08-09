@@ -1,0 +1,42 @@
+{
+  "catalog": "AnalysisPatterns",
+  "name": "PhenomenonWithRange",
+  "summary": "Defines a category by the range of quantities it covers, so that a measured amount is classified by the model rather than by a chain of comparisons written at each call site.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Analysis Patterns",
+    "year": 1997
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "RangedPhenomenon",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "A phenomenon — a category such as an age band or a fever — carrying the range of the quantitative phenomenon type it stands for. The ranges of the phenomena of one type should neither overlap nor leave a gap, which is the pair of constraints that makes the classification total and unambiguous.",
+      "links": []
+    },
+    {
+      "name": "RangeFunction",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The function mapping a quantity to the phenomenon whose range contains it. It is an object rather than a lookup repeated at each call site, so the classification has one definition; and because it derives one observation from another, what it yields keeps the measurement it was derived from.",
+      "links": []
+    },
+    {
+      "name": "Range",
+      "targets": [
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "summary": "The range a ranged phenomenon covers, on the phenomenon rather than in the function, so that adding a band is configuration and the function is unchanged.",
+      "links": []
+    }
+  ]
+}
