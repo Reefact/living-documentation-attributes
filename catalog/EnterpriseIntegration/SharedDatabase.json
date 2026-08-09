@@ -1,0 +1,24 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "SharedDatabase",
+  "summary": "Integrates applications by having them read and write one schema, so that there is no data to transfer and nothing to fall out of step.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "SharedDatabase",
+      "targets": [
+        "Interface",
+        "Class",
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "The participant that reads or writes the shared schema. Consistency comes free because there is one copy; what it costs is that the schema becomes a contract between applications that must agree on it, and a change to it is a change to all of them.",
+      "links": []
+    }
+  ]
+}
