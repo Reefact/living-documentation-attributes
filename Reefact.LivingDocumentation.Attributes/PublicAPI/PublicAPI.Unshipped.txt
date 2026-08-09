@@ -63,6 +63,23 @@ Reefact.LivingDocumentation.Attributes.AnalysisPatterns.DualTimeRecord.Role
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.DualTimeRecord.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.DualTimeRecord.TimeRecordAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.DualTimeRecord.TimeRecordAttribute.TimeRecordAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.EnterpriseSegment
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.EnterpriseSegment.DimensionAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.EnterpriseSegment.DimensionAttribute.DimensionAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.EnterpriseSegment.DimensionElementAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.EnterpriseSegment.DimensionElementAttribute.Dimension.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.EnterpriseSegment.DimensionElementAttribute.Dimension.init -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.EnterpriseSegment.DimensionElementAttribute.DimensionElementAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.EnterpriseSegment.DimensionLevelAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.EnterpriseSegment.DimensionLevelAttribute.Dimension.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.EnterpriseSegment.DimensionLevelAttribute.Dimension.init -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.EnterpriseSegment.DimensionLevelAttribute.DimensionLevelAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.EnterpriseSegment.ElementsAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.EnterpriseSegment.ElementsAttribute.ElementsAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.EnterpriseSegment.EnterpriseSegmentAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.EnterpriseSegment.EnterpriseSegmentAttribute.EnterpriseSegmentAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.EnterpriseSegment.Role
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.EnterpriseSegment.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.HierarchicAccountabilityAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.HierarchicAccountabilityAttribute.HierarchicAccountabilityAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.IdentificationScheme
