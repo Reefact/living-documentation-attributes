@@ -1,0 +1,70 @@
+{
+  "catalog": "AnalysisPatterns",
+  "name": "StatusType",
+  "summary": "Makes planned and actual a type object an observation names, so that a plan's figures and the world's figures are the same kind of thing and can be compared without a special case.",
+  "reference": {
+    "author": "Martin Fowler",
+    "work": "Analysis Patterns",
+    "year": 1997
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "StatusType",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The status as a type object, so that which statuses exist is configured rather than written as classes. The alternative — a subclass per status, or a boolean — makes comparing a plan against an outcome a special case instead of an ordinary observation.",
+      "links": []
+    },
+    {
+      "name": "Actual",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "A status asserting the observation is of the world as it was. It may carry a time offset, so that a figure stated a month after the period it covers is distinguished from the same figure restated later.",
+      "links": []
+    },
+    {
+      "name": "Planned",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "A status asserting the observation belongs to a plan, and naming which. Two plans for one period are therefore two sets of observations rather than two columns on one.",
+      "links": [
+        "Plan"
+      ]
+    },
+    {
+      "name": "Plan",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The plan a planned status refers to. Making it an object rather than a label is what lets one plan's observations be gathered, and what lets a plan be superseded without rewriting the figures it held.",
+      "links": []
+    },
+    {
+      "name": "ComparativeStatusType",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "A status type whose observations compare a datum against a comparator — a variance. It is a status rather than a calculation because what it yields is an observation like any other, and so can itself be planned or actual.",
+      "links": []
+    },
+    {
+      "name": "Status",
+      "targets": [
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "summary": "The status type an observation names. One reference, on the observation rather than on its subtype, is what makes planned and actual interchangeable to everything that reads observations.",
+      "links": []
+    }
+  ]
+}

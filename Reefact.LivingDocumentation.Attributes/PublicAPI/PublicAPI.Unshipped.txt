@@ -220,6 +220,23 @@ Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Quantity.UnitAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.Quantity.UnitAttribute.UnitAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.RejectedObservationAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.RejectedObservationAttribute.RejectedObservationAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.StatusType
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.StatusType.ActualAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.StatusType.ActualAttribute.ActualAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.StatusType.ComparativeStatusTypeAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.StatusType.ComparativeStatusTypeAttribute.ComparativeStatusTypeAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.StatusType.PlanAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.StatusType.PlanAttribute.PlanAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.StatusType.PlannedAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.StatusType.PlannedAttribute.Plan.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.StatusType.PlannedAttribute.Plan.init -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.StatusType.PlannedAttribute.PlannedAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.StatusType.Role
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.StatusType.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.StatusType.StatusAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.StatusType.StatusAttribute.StatusAttribute() -> void
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.StatusType.StatusTypeAttribute
+Reefact.LivingDocumentation.Attributes.AnalysisPatterns.StatusType.StatusTypeAttribute.StatusTypeAttribute() -> void
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.SubtypingObservationConcepts
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.SubtypingObservationConcepts.ObservationConceptAttribute
 Reefact.LivingDocumentation.Attributes.AnalysisPatterns.SubtypingObservationConcepts.ObservationConceptAttribute.ObservationConceptAttribute() -> void
