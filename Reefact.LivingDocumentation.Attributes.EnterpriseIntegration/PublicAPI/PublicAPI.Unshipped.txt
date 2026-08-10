@@ -81,6 +81,8 @@ Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.EnvelopeWrapper.Wra
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.EnvelopeWrapper.WrapperAttribute.Envelope.get -> System.Type?
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.EnvelopeWrapper.WrapperAttribute.Envelope.init -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.EnvelopeWrapper.WrapperAttribute.WrapperAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.EventDrivenConsumerAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.EventDrivenConsumerAttribute.EventDrivenConsumerAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.EventMessageAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.EventMessageAttribute.EventMessageAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.FileTransferAttribute
