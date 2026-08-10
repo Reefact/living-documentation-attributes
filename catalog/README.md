@@ -325,8 +325,8 @@ made the catalogues independent, there is nothing to arbitrate — only this not
 
 ## xUnit Test Patterns, and the five words nobody agrees on
 
-**Thirty-five of its sixty-eight are catalogued**: chapter 18, test strategy, chapter 19, the
-xUnit basics, chapter 23, the test doubles, and chapter 24, test organisation. Its admission is
+**Forty-three of its sixty-eight are catalogued**: chapters 18, 19, 20, 23 and 24 — test
+strategy, the xUnit basics, fixture setup, the test doubles and test organisation. Its admission is
 [ADR-0032](../doc/handwritten/for-maintainers/adr/0032-admit-xunit-test-patterns-as-a-catalogue.md).
 A reader counting sixteen against sixty-eight is looking at work in progress, and at a book
 about a third of which will not be catalogued at all — roughly ten entries are shapes a
@@ -459,6 +459,31 @@ does not have — ADR-0030's test is a sentence about two patterns, and there is
 door is a second definition of the data's shape, so when the system's own writing changes,
 the back door keeps working and keeps being wrong. Annotating them is what turns "how many
 do we have" from an archaeology exercise into a query.
+
+**Chapter 20 is five answers to one question: where does the fixture get built?** Delegated
+setup puts it in methods the test calls; implicit setup puts it in the method the framework
+calls; lazy setup builds it on first use; suite fixture setup builds it once for a suite; a
+prebuilt fixture was there before the run began. A test class usually mixes several without
+anybody having chosen, and the choice is invisible: all five leave a test body that says
+nothing about where its state came from.
+
+**`ChainedTests` is annotated because it is a hazard, not because it is a recommendation.**
+The book offers it as a last resort. It breaks when a runner changes order, parallelises, or
+runs one test alone — three things nobody announces — and nothing else in the code admits it
+was chosen rather than drifted into. This is the same reason `BackDoorManipulation` is here.
+
+**`CreationMethod` and `Idioms/ObjectMother` are the same idea one level apart**, and nothing
+in the packages says so. An object mother is a class of creation methods; Meszaros catalogues
+the method, Schuh and Punke named the class. They live in different packages and no relation
+crosses a catalogue
+([ADR-0027](../doc/handwritten/for-maintainers/adr/0027-ship-one-independent-package-per-catalogued-work.md)),
+so a codebase that means both writes both.
+
+**One of chapter 20's nine is left out**, on the ground already used twice:
+
+| Pattern | Why |
+|---|---|
+| In-line Setup | the fixture built in the body of the test method itself; nothing holds a role in it |
 
 ## Shape of the generated attribute
 
