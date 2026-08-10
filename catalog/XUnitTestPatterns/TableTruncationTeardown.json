@@ -1,0 +1,23 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "TableTruncationTeardown",
+  "summary": "Empties the tables the tests filled, so that a run starts from a state nothing left behind.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "TableTruncationTeardown",
+      "targets": [
+        "Class",
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "The blunt teardown: it removes everything rather than tracking what was added. It is fast and it is total, which is the trade — it will empty a table a colleague's fixture was relying on just as happily, so what it truncates is a decision worth reading rather than inferring.",
+      "links": []
+    }
+  ]
+}
