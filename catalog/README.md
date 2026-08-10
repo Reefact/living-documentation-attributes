@@ -325,13 +325,23 @@ made the catalogues independent, there is nothing to arbitrate — only this not
 
 ## xUnit Test Patterns, and the five words nobody agrees on
 
-**Eight of its sixty-eight are catalogued**: the whole of chapter 23, the test doubles. Its
-admission is
-[ADR-0032](../doc/handwritten/for-maintainers/adr/0032-admit-xunit-test-patterns-as-a-catalogue.md),
-which is `Proposed`. A reader counting eight against sixty-eight is looking at work in
-progress, and at a book about a third of which will not be catalogued at all — roughly ten
-entries are shapes a method body takes rather than participants a declaration holds, and
-every exclusion will be listed here as it is decided.
+**Sixteen of its sixty-eight are catalogued**: chapter 23, the test doubles, and chapter 24,
+test organisation. Its admission is
+[ADR-0032](../doc/handwritten/for-maintainers/adr/0032-admit-xunit-test-patterns-as-a-catalogue.md).
+A reader counting sixteen against sixty-eight is looking at work in progress, and at a book
+about a third of which will not be catalogued at all — roughly ten entries are shapes a
+method body takes rather than participants a declaration holds, and every exclusion will be
+listed here as it is decided.
+
+**Where each part was read from.** The author's canonical index at `xunitpatterns.com` is
+refused by the environment this catalogue is written in, so the pattern list comes from the
+publisher's table of contents. Chapter 23 was written from the publisher's free sample
+chapter — Meszaros' own problem and solution statements. **Chapter 24 was not**: its names
+and page numbers are verified against the publisher's index, and its summaries are written
+from knowledge of the patterns rather than from the text in front of the writer. Nothing in
+them is asserted about what the book says. The distinction is recorded because a reader
+weighing an entry deserves to know which kind it is, and because the two are otherwise
+indistinguishable.
 
 **Five kinds and one umbrella, and the distinction is the whole point.** These are the words
 a codebase gets wrong most reliably: "mock" is what most people call all five. The entries
@@ -373,6 +383,30 @@ fakes would annotate most of a codebase without asserting anything about it.
 Gang of Four Component. That is a property of these patterns rather than a default: what
 makes a class a double is what it stands in for, and deriving from one does not stop it
 standing in.
+
+**The three organisations are the point of chapter 24.** `TestcaseClassPerClass`,
+`TestcaseClassPerFeature` and `TestcaseClassPerFixture` are mutually exclusive answers to
+one question — what does a testcase class correspond to — and a test tree usually holds all
+three without anyone having decided. Each survives a different change: per class follows a
+refactoring of the production tree, per feature survives one, per fixture keeps a setup that
+is true for every test that reads it.
+
+`TestcaseSuperclass` and `TestHelper` are the same pairing for sharing code: inheritance
+against delegation. The superclass spends the one base class a testcase class has and hides
+the setup in a parent; the helper relates nothing to anything. Which was chosen is invisible
+in the code and is exactly what an annotation is for.
+
+**Chapter 24's roles are not `inherited`, and chapter 23's are.** A subclass of a fake is
+still a fake — what makes a double a double is what it stands in for, and deriving from one
+does not stop it standing in. A subclass of a testcase superclass is a testcase class and not
+a superclass: an organisation is a decision about one declaration, not a nature a subtype
+carries. The flag is a fact about each pattern rather than a default
+([ADR-0009](../doc/handwritten/for-maintainers/adr/0009-let-each-role-declare-what-it-applies-to.md)).
+
+**Three entries will narrow `TestcaseClass` when chapter 19 is catalogued.** The book presents
+the three organisations as kinds of testcase class, which is a narrowing ADR-0030 would carry
+— but `TestcaseClass` is a chapter 19 pattern and is not here yet, so the relation cannot be
+written. It is noted rather than forgotten.
 
 ## Shape of the generated attribute
 
