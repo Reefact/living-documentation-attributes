@@ -1,0 +1,35 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "MessageDispatcher",
+  "summary": "Puts one consumer on the channel and hands each message to a performer, so that several workers process concurrently under a coordination the application controls.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Dispatcher",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The single consumer on the channel, which obtains a performer and gives it the message. Being the only consumer is the difference from competing consumers: the application, not the messaging system, decides who gets what and how many run at once.",
+      "links": [
+        "Performer"
+      ]
+    },
+    {
+      "name": "Performer",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The worker the dispatcher hands a message to, often on a thread of its own. It may be created per message or drawn from a pool, and the dispatcher may pick a specialised one by looking at the message — none of which the channel knows about.",
+      "links": []
+    }
+  ]
+}

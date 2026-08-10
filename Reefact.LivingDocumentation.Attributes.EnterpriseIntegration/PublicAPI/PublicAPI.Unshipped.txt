@@ -110,6 +110,15 @@ Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessageBusAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessageBusAttribute.MessageBusAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessageChannelAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessageChannelAttribute.MessageChannelAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessageDispatcher
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessageDispatcher.DispatcherAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessageDispatcher.DispatcherAttribute.DispatcherAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessageDispatcher.DispatcherAttribute.Performer.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessageDispatcher.DispatcherAttribute.Performer.init -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessageDispatcher.PerformerAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessageDispatcher.PerformerAttribute.PerformerAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessageDispatcher.Role
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessageDispatcher.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessageEndpointAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessageEndpointAttribute.MessageEndpointAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessageExpirationAttribute
