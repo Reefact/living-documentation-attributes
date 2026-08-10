@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "DeadLetterChannel",
+  "summary": "Gives the messaging system somewhere to put a message it cannot deliver, so that a failure to deliver is visible rather than silent.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "DeadLetterChannel",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The channel the messaging system moves an undeliverable message to. The assertion worth checking is that nothing is lost quietly: a channel with no dead letter channel behind it drops messages and says nothing.",
+      "links": []
+    }
+  ]
+}
