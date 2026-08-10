@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "MessageHistory",
+  "summary": "Carries on the message the list of components it has passed through, so that a system whose parts deliberately do not know each other can still be debugged.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "MessageHistory",
+      "targets": [
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "summary": "The header property every component appends itself to, the originator included. It belongs to the header rather than the body because it is control information about the journey and not application data — and it is the price of loose coupling paid back: the message says where it has been because nothing else in the system can.",
+      "links": []
+    }
+  ]
+}
