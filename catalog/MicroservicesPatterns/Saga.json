@@ -1,0 +1,70 @@
+{
+  "catalog": "MicroservicesPatterns",
+  "name": "Saga",
+  "summary": "Maintains consistency across services without a distributed transaction, by running a sequence of local transactions and undoing the earlier ones with compensating transactions when a later one fails.",
+  "reference": {
+    "author": "Chris Richardson",
+    "work": "Microservices Patterns",
+    "year": 2018
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Saga",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The whole sequence, standing in for a transaction that cannot span services. It has no rollback of its own: everything it undoes is undone by code somebody wrote for the purpose.",
+      "links": []
+    },
+    {
+      "name": "Orchestrator",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "Tells the participants which local transaction to run next and decides the outcome. Its alternative is choreography, where no such class exists and the order is spread across the event handlers of every service involved.",
+      "links": [
+        "Saga"
+      ]
+    },
+    {
+      "name": "Participant",
+      "targets": [
+        "Interface",
+        "Class",
+        "Assembly"
+      ],
+      "repeatable": true,
+      "summary": "A service whose local transaction is one step. It commits before the saga is over, which is the isolation the pattern gives up and the reason a half-finished saga is visible to everybody.",
+      "links": [
+        "Saga"
+      ]
+    },
+    {
+      "name": "LocalTransaction",
+      "targets": [
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "One step: it updates its own service's database and triggers the next. Its effects are visible the moment it commits, whether or not the steps after it will succeed.",
+      "links": [
+        "Saga"
+      ]
+    },
+    {
+      "name": "CompensatingTransaction",
+      "targets": [
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "Undoes what a local transaction did, semantically rather than by rollback — a refund rather than an unpayment. A step without one is a step the saga cannot back out of, and counting the two annotations on a participant is the only way to notice.",
+      "links": [
+        "Saga"
+      ]
+    }
+  ]
+}
