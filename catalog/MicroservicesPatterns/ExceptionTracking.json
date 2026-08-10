@@ -1,0 +1,23 @@
+{
+  "catalog": "MicroservicesPatterns",
+  "name": "ExceptionTracking",
+  "summary": "Reports every exception to a service that de-duplicates, tracks and notifies, so that a fault is investigated rather than merely logged.",
+  "reference": {
+    "author": "Chris Richardson",
+    "work": "Microservices Patterns",
+    "year": 2018
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "ExceptionTracking",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The participant that reports exceptions onward. It says what a catch block does not: this fault reaches a human. A swallowed exception and a reported one are one line apart and read almost identically.",
+      "links": []
+    }
+  ]
+}
