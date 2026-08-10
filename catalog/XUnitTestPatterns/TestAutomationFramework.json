@@ -1,0 +1,23 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "TestAutomationFramework",
+  "summary": "Provides the mechanisms tests are written against, so that a test states its intent rather than its plumbing.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "TestAutomationFramework",
+      "targets": [
+        "Assembly",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The framework a team wrote, or the one it wraps. Annotating it draws the line a codebase most often loses: what belongs to the harness and what belongs to a test — because a helper that has drifted into the framework is one nobody dares change, and a framework rule that has drifted into a test is one nobody finds.",
+      "links": []
+    }
+  ]
+}
