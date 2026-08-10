@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "WireTap",
+  "summary": "Publishes every message to a second channel as well as its own, so that traffic on a point-to-point channel can be watched without anyone consuming it twice.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "WireTap",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "A fixed recipient list with two outputs, forwarding the message unmodified to both. Keeping the analysis in whatever consumes the second channel is what lets one be inserted anywhere without risk to the first: it can be added to a running system, and it cannot change what the destination receives.",
+      "links": []
+    }
+  ]
+}
