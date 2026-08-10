@@ -37,7 +37,7 @@
 | [CoarseGrainedLock](#coarsegrainedlock-patterns-of-enterprise-application-architecture) | Patterns of Enterprise Application Architecture | 1 | — |
 | [CohesiveMechanism](#cohesivemechanism-domain-driven-design) | Domain-Driven Design | 1 | — |
 | [Command](#command-gang-of-four) | Gang of Four | 5 | — |
-| [CommandMessage](#commandmessage-enterprise-integration-patterns) | Enterprise Integration Patterns | 1 | — |
+| [CommandMessage](#commandmessage-enterprise-integration-patterns) | Enterprise Integration Patterns | 1 | narrows Message |
 | [CompetingConsumers](#competingconsumers-enterprise-integration-patterns) | Enterprise Integration Patterns | 1 | — |
 | [CompletedAndAbandonedActions](#completedandabandonedactions-analysis-patterns) | Analysis Patterns | 2 | — |
 | [ComposedMessageProcessor](#composedmessageprocessor-enterprise-integration-patterns) | Enterprise Integration Patterns | 1 | — |
@@ -61,7 +61,7 @@
 | [Detour](#detour-enterprise-integration-patterns) | Enterprise Integration Patterns | 1 | — |
 | [DifferenceAdjustment](#differenceadjustment-accounting-patterns) | Accounting Patterns | 3 | — |
 | [DirectionalAccountabilityType](#directionalaccountabilitytype-analysis-patterns) | Analysis Patterns | 1 | narrows Accountability |
-| [DocumentMessage](#documentmessage-enterprise-integration-patterns) | Enterprise Integration Patterns | 1 | — |
+| [DocumentMessage](#documentmessage-enterprise-integration-patterns) | Enterprise Integration Patterns | 1 | narrows Message |
 | [DomainEvent](#domainevent-domain-driven-design) | Domain-Driven Design | 1 | — |
 | [DomainModel](#domainmodel-patterns-of-enterprise-application-architecture) | Patterns of Enterprise Application Architecture | 1 | — |
 | [DualTimeRecord](#dualtimerecord-analysis-patterns) | Analysis Patterns | 3 | — |
@@ -73,7 +73,7 @@
 | [EnvelopeWrapper](#envelopewrapper-enterprise-integration-patterns) | Enterprise Integration Patterns | 3 | — |
 | [Event](#event-accounting-patterns) | Accounting Patterns | 4 | — |
 | [EventDrivenConsumer](#eventdrivenconsumer-enterprise-integration-patterns) | Enterprise Integration Patterns | 1 | — |
-| [EventMessage](#eventmessage-enterprise-integration-patterns) | Enterprise Integration Patterns | 1 | — |
+| [EventMessage](#eventmessage-enterprise-integration-patterns) | Enterprise Integration Patterns | 1 | narrows Message |
 | [Facade](#facade-gang-of-four) | Gang of Four | 2 | — |
 | [Factory](#factory-domain-driven-design) | Domain-Driven Design | 1 | — |
 | [FactoryMethod](#factorymethod-gang-of-four) | Gang of Four | 5 | — |
@@ -219,7 +219,7 @@
 | [ValueObject](#valueobject-domain-driven-design) | Domain-Driven Design | 1 | — |
 | [ValueObject](#valueobject-patterns-of-enterprise-application-architecture) | Patterns of Enterprise Application Architecture | 1 | — |
 | [Visitor](#visitor-gang-of-four) | Gang of Four | 7 | — |
-| [WireTap](#wiretap-enterprise-integration-patterns) | Enterprise Integration Patterns | 1 | — |
+| [WireTap](#wiretap-enterprise-integration-patterns) | Enterprise Integration Patterns | 1 | narrows RecipientList |
 
 ## Accounting Patterns
 
@@ -2382,6 +2382,8 @@ Carries an instruction to do something, so that invoking a procedure in another 
 
 *Gregor Hohpe, Bobby Woolf, Enterprise Integration Patterns, 2003.*
 
+A narrower case of **Message**: every participant here is one of those too.
+
 | Role | Annotation | Applies to | Repeatable | Links |
 |---|---|---|---|---|
 | CommandMessage | `[CommandMessage]` | class, struct | no | — |
@@ -2545,6 +2547,8 @@ Carries data with no instruction attached, so that the receiver decides what to 
 
 *Gregor Hohpe, Bobby Woolf, Enterprise Integration Patterns, 2003.*
 
+A narrower case of **Message**: every participant here is one of those too.
+
 | Role | Annotation | Applies to | Repeatable | Links |
 |---|---|---|---|---|
 | DocumentMessage | `[DocumentMessage]` | class, struct | no | — |
@@ -2626,6 +2630,8 @@ Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.E
 Announces that something has happened, so that the sender is relieved of knowing who cares.
 
 *Gregor Hohpe, Bobby Woolf, Enterprise Integration Patterns, 2003.*
+
+A narrower case of **Message**: every participant here is one of those too.
 
 | Role | Annotation | Applies to | Repeatable | Links |
 |---|---|---|---|---|
@@ -3291,6 +3297,8 @@ Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.E
 Publishes every message to a second channel as well as its own, so that traffic on a point-to-point channel can be watched without anyone consuming it twice.
 
 *Gregor Hohpe, Bobby Woolf, Enterprise Integration Patterns, 2003.*
+
+A narrower case of **RecipientList**: every participant here is one of those too.
 
 | Role | Annotation | Applies to | Repeatable | Links |
 |---|---|---|---|---|
