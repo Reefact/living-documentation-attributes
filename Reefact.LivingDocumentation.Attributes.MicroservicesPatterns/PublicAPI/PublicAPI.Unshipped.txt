@@ -1,4 +1,13 @@
 #nullable enable
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.ApiComposition
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.ApiComposition.ComposerAttribute
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.ApiComposition.ComposerAttribute.ComposerAttribute() -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.ApiComposition.ProviderAttribute
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.ApiComposition.ProviderAttribute.Composer.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.ApiComposition.ProviderAttribute.Composer.init -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.ApiComposition.ProviderAttribute.ProviderAttribute() -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.ApiComposition.Role
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.ApiComposition.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.CommandSideReplica
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.CommandSideReplica.CommandServiceAttribute
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.CommandSideReplica.CommandServiceAttribute.CommandServiceAttribute() -> void
