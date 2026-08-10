@@ -231,9 +231,9 @@
 | [TestSuiteObject](#testsuiteobject-xunit-test-patterns) | xUnit Test Patterns | 1 | — |
 | [TestUtilityMethod](#testutilitymethod-xunit-test-patterns) | xUnit Test Patterns | 1 | — |
 | [TestcaseClass](#testcaseclass-xunit-test-patterns) | xUnit Test Patterns | 1 | — |
-| [TestcaseClassPerClass](#testcaseclassperclass-xunit-test-patterns) | xUnit Test Patterns | 1 | — |
-| [TestcaseClassPerFeature](#testcaseclassperfeature-xunit-test-patterns) | xUnit Test Patterns | 1 | — |
-| [TestcaseClassPerFixture](#testcaseclassperfixture-xunit-test-patterns) | xUnit Test Patterns | 1 | — |
+| [TestcaseClassPerClass](#testcaseclassperclass-xunit-test-patterns) | xUnit Test Patterns | 1 | narrows TestcaseClass |
+| [TestcaseClassPerFeature](#testcaseclassperfeature-xunit-test-patterns) | xUnit Test Patterns | 1 | narrows TestcaseClass |
+| [TestcaseClassPerFixture](#testcaseclassperfixture-xunit-test-patterns) | xUnit Test Patterns | 1 | narrows TestcaseClass |
 | [TestcaseObject](#testcaseobject-xunit-test-patterns) | xUnit Test Patterns | 1 | — |
 | [TestcaseSuperclass](#testcasesuperclass-xunit-test-patterns) | xUnit Test Patterns | 1 | — |
 | [TransactionScript](#transactionscript-patterns-of-enterprise-application-architecture) | Patterns of Enterprise Application Architecture | 1 | — |
@@ -4185,6 +4185,8 @@ Puts the tests of one class under test into one testcase class, so that the test
 
 *Gerard Meszaros, xUnit Test Patterns, 2007.*
 
+A narrower case of **TestcaseClass**: every participant here is one of those too.
+
 | Role | Annotation | Applies to | Repeatable | Links |
 |---|---|---|---|---|
 | TestcaseClassPerClass | `[TestcaseClassPerClass]` | class | no | — |
@@ -4199,6 +4201,8 @@ Puts the tests of one feature into one testcase class, whatever classes the feat
 
 *Gerard Meszaros, xUnit Test Patterns, 2007.*
 
+A narrower case of **TestcaseClass**: every participant here is one of those too.
+
 | Role | Annotation | Applies to | Repeatable | Links |
 |---|---|---|---|---|
 | TestcaseClassPerFeature | `[TestcaseClassPerFeature]` | class | no | — |
@@ -4212,6 +4216,8 @@ Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.X
 Puts into one testcase class exactly the tests that need the same starting state, so that the setup is written once and is true for every test in it.
 
 *Gerard Meszaros, xUnit Test Patterns, 2007.*
+
+A narrower case of **TestcaseClass**: every participant here is one of those too.
 
 | Role | Annotation | Applies to | Repeatable | Links |
 |---|---|---|---|---|

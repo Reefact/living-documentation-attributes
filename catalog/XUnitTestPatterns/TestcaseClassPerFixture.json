@@ -7,6 +7,10 @@
     "work": "xUnit Test Patterns",
     "year": 2007
   },
+  "specialisationOf": {
+    "catalog": "XUnitTestPatterns",
+    "name": "TestcaseClass"
+  },
   "inherited": false,
   "roles": [
     {
