@@ -1,0 +1,23 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "HumbleObject",
+  "summary": "Reduces the part that cannot be tested to a shell thin enough not to need testing, and moves the logic somewhere that can.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "HumbleObject",
+      "targets": [
+        "Class",
+        "Interface"
+      ],
+      "repeatable": false,
+      "summary": "The thin remainder — the view, the handler, the job that only a running framework can exercise. What makes it humble is that it holds no decision, and that is precisely the claim to keep true: every line that creeps back into it is a line no test can reach, and nothing else in the code will say so.",
+      "links": []
+    }
+  ]
+}
