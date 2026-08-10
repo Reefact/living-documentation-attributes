@@ -1,4 +1,6 @@
 #nullable enable
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.DatatypeChannelAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.DatatypeChannelAttribute.DatatypeChannelAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.FileTransferAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.FileTransferAttribute.FileTransferAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.Message

@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "DatatypeChannel",
+  "summary": "Carries messages of one type only, so that a receiver knows what it is reading without inspecting it.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "DatatypeChannel",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "A channel restricted to one kind of message. It trades channels for certainty: more channels to manage, and no receiver that has to ask what it just got.",
+      "links": []
+    }
+  ]
+}
