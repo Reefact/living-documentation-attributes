@@ -256,6 +256,8 @@ Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ServiceActivator.Se
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ServiceActivator.ServiceAttribute.ServiceAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.SharedDatabaseAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.SharedDatabaseAttribute.SharedDatabaseAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.SmartProxyAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.SmartProxyAttribute.SmartProxyAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.SplitterAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.SplitterAttribute.SplitterAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.TransactionalClient
