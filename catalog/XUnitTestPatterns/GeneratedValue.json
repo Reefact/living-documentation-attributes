@@ -1,0 +1,24 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "GeneratedValue",
+  "summary": "Produces a value at run time, so that a test needing something unique or unimportant does not have to invent one.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "GeneratedValue",
+      "targets": [
+        "Method",
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "summary": "A member that makes a fresh value on demand. It removes collisions between runs and buys them back as irreproducibility: a failure that depends on what was generated cannot be re-run unless what was generated is reported, which is the discipline this annotation exists to make askable.",
+      "links": []
+    }
+  ]
+}

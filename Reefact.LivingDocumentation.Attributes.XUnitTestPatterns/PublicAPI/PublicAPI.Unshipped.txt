@@ -35,6 +35,8 @@ Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.FreshFixtureAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.FreshFixtureAttribute.FreshFixtureAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.GarbageCollectedTeardownAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.GarbageCollectedTeardownAttribute.GarbageCollectedTeardownAttribute() -> void
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.GeneratedValueAttribute
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.GeneratedValueAttribute.GeneratedValueAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.HardCodedTestDoubleAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.HardCodedTestDoubleAttribute.HardCodedTestDoubleAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.HumbleObjectAttribute
