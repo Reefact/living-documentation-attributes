@@ -261,3 +261,5 @@ Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.TransactionalClient
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.TransactionalClient.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.TransactionalClient.SenderAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.TransactionalClient.SenderAttribute.SenderAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.WireTapAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.WireTapAttribute.WireTapAttribute() -> void
