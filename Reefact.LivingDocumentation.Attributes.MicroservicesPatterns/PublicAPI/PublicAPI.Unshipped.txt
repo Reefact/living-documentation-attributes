@@ -8,6 +8,8 @@ Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.ApiComposition.Prov
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.ApiComposition.ProviderAttribute.ProviderAttribute() -> void
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.ApiComposition.Role
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.ApiComposition.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.CircuitBreakerAttribute
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.CircuitBreakerAttribute.CircuitBreakerAttribute() -> void
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.CommandSideReplica
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.CommandSideReplica.CommandServiceAttribute
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.CommandSideReplica.CommandServiceAttribute.CommandServiceAttribute() -> void
