@@ -187,7 +187,7 @@
 | [Plugin](#plugin-patterns-of-enterprise-application-architecture) | Patterns of Enterprise Application Architecture | 1 | — |
 | [PointToPointChannel](#pointtopointchannel-enterprise-integration-patterns) | Enterprise Integration Patterns | 1 | — |
 | [PollingConsumer](#pollingconsumer-enterprise-integration-patterns) | Enterprise Integration Patterns | 1 | — |
-| [PollingPublisher](#pollingpublisher-microservices-patterns) | Microservices Patterns | 1 | — |
+| [PollingPublisher](#pollingpublisher-microservices-patterns) | Microservices Patterns | 1 | narrows TransactionalOutbox |
 | [Post](#post-analysis-patterns) | Analysis Patterns | 1 | narrows Party |
 | [PostingRule](#postingrule-accounting-patterns) | Accounting Patterns | 3 | — |
 | [PrebuiltFixture](#prebuiltfixture-xunit-test-patterns) | xUnit Test Patterns | 1 | — |
@@ -280,7 +280,7 @@
 | [TestcaseClassPerFixture](#testcaseclassperfixture-xunit-test-patterns) | xUnit Test Patterns | 1 | narrows TestcaseClass |
 | [TestcaseObject](#testcaseobject-xunit-test-patterns) | xUnit Test Patterns | 1 | — |
 | [TestcaseSuperclass](#testcasesuperclass-xunit-test-patterns) | xUnit Test Patterns | 1 | — |
-| [TransactionLogTailing](#transactionlogtailing-microservices-patterns) | Microservices Patterns | 1 | — |
+| [TransactionLogTailing](#transactionlogtailing-microservices-patterns) | Microservices Patterns | 1 | narrows TransactionalOutbox |
 | [TransactionRollbackTeardown](#transactionrollbackteardown-xunit-test-patterns) | xUnit Test Patterns | 1 | — |
 | [TransactionScript](#transactionscript-patterns-of-enterprise-application-architecture) | Patterns of Enterprise Application Architecture | 1 | — |
 | [TransactionalClient](#transactionalclient-enterprise-integration-patterns) | Enterprise Integration Patterns | 2 | — |
@@ -4055,6 +4055,8 @@ Publishes the messages an outbox holds by polling the table for them, which work
 
 *Chris Richardson, Microservices Patterns, 2018.*
 
+A narrower case of **TransactionalOutbox**: every participant here is one of those too.
+
 | Role | Annotation | Applies to | Repeatable | Links |
 |---|---|---|---|---|
 | PollingPublisher | `[PollingPublisher]` | interface, class | no | — |
@@ -4108,6 +4110,8 @@ Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.M
 Publishes the messages an outbox holds by reading the database's own transaction log, so that every committed row reaches the broker and nothing else has to be asked.
 
 *Chris Richardson, Microservices Patterns, 2018.*
+
+A narrower case of **TransactionalOutbox**: every participant here is one of those too.
 
 | Role | Annotation | Applies to | Repeatable | Links |
 |---|---|---|---|---|

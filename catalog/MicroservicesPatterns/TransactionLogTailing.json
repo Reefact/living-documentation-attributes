@@ -8,6 +8,11 @@
     "year": 2018
   },
   "inherited": false,
+  "specialisationOf": {
+    "catalog": "MicroservicesPatterns",
+    "name": "TransactionalOutbox",
+    "role": "MessageRelay"
+  },
   "roles": [
     {
       "name": "TransactionLogTailing",
