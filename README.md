@@ -38,10 +38,10 @@ architecture" from a claim into something a build can check.
 | `EnterpriseApplicationArchitecture` | 51 | Fowler — *Patterns of Enterprise Application Architecture*, 2002 |
 | `AnalysisPatterns` | 39 | Fowler — *Analysis Patterns*, 1997 |
 | `AccountingPatterns` | 9 | Fowler — *Accounting Patterns*, 2000 |
-| `EnterpriseIntegration` | 53 | Hohpe & Woolf — *Enterprise Integration Patterns*, 2003 |
+| `EnterpriseIntegration` | 54 | Hohpe & Woolf — *Enterprise Integration Patterns*, 2003 |
 | `Idioms` | 2 | patterns with a source but no catalog of their own — each entry names its own |
 
-**200 patterns, 395 roles** today, and the catalog is meant to grow by an order of
+**201 patterns, 398 roles** today, and the catalog is meant to grow by an order of
 magnitude. A pattern is held by every catalogue whose work presents it as one of its
 own, under the name that work gave it — so a reader of a book finds its patterns
 spelled as it spelled them, and a work that merely cites another's pattern does not
