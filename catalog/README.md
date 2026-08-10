@@ -325,8 +325,8 @@ made the catalogues independent, there is nothing to arbitrate — only this not
 
 ## xUnit Test Patterns, and the five words nobody agrees on
 
-**Sixteen of its sixty-eight are catalogued**: chapter 23, the test doubles, and chapter 24,
-test organisation. Its admission is
+**Twenty-five of its sixty-eight are catalogued**: chapter 19, the xUnit basics, chapter 23,
+the test doubles, and chapter 24, test organisation. Its admission is
 [ADR-0032](../doc/handwritten/for-maintainers/adr/0032-admit-xunit-test-patterns-as-a-catalogue.md).
 A reader counting sixteen against sixty-eight is looking at work in progress, and at a book
 about a third of which will not be catalogued at all — roughly ten entries are shapes a
@@ -403,10 +403,38 @@ a superclass: an organisation is a decision about one declaration, not a nature 
 carries. The flag is a fact about each pattern rather than a default
 ([ADR-0009](../doc/handwritten/for-maintainers/adr/0009-let-each-role-declare-what-it-applies-to.md)).
 
-**Three entries will narrow `TestcaseClass` when chapter 19 is catalogued.** The book presents
-the three organisations as kinds of testcase class, which is a narrowing ADR-0030 would carry
-— but `TestcaseClass` is a chapter 19 pattern and is not here yet, so the relation cannot be
-written. It is noted rather than forgotten.
+**The three organisations narrow `TestcaseClass`**, which chapter 19 brought. The book
+presents them as kinds of testcase class, so
+[ADR-0030](../doc/handwritten/for-maintainers/adr/0030-relate-only-the-narrowings-a-work-states-outright.md)
+carries it. `TestcaseClass` has a single role, so the relations emit at full precision —
+`TestcaseClassPerClassAttribute : TestcaseClassAttribute` — and a rule asking for every
+testcase class reaches all three organisations without naming them.
+
+Note that the four attributes disagree about `Inherited`, on purpose. A subclass holding
+tests is a testcase class, so that role is inherited; a subclass of a class organised per
+fixture is not itself organised per fixture, so those three are not. Nothing forces a
+narrowing to agree with what it narrows, and here the difference is the point: one is a
+nature, the others are decisions about one declaration.
+
+**Chapter 19 is the vocabulary the rest of the book is written in** — test method, testcase
+class, assertion method, runner, suite — and most of it is what a framework already gives a
+team. Annotating a `[TestMethod]` that xUnit already marks says little; the entries earn
+their place elsewhere, where a team built its own. The samples are written for that case: a
+runner for a handheld the crane drivers carry, a suite object it composes, and a discovery
+rule by naming convention with the gap such rules always have.
+
+**Discovery and enumeration are opposites worth annotating together.** Discovery runs
+whatever exists, so its failure is a test written outside the convention and never run.
+Enumeration runs exactly what is listed, so its failure is a test written and never added.
+A codebase usually has both, in different corners, and which corner is which is invisible.
+
+**Two of chapter 19's eleven are left out**, on the same ground as Guard Clause: they are
+shapes a method body takes rather than participants a declaration holds.
+
+| Pattern | Why |
+|---|---|
+| Four-Phase Test | the arrangement of setup, exercise, verify and teardown *inside* one test method; nothing holds a role in it |
+| Assertion Message | the string handed to an assertion — an argument value, not a declaration |
 
 ## Shape of the generated attribute
 
