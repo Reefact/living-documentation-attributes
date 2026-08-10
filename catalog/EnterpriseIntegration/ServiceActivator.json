@@ -1,0 +1,35 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "ServiceActivator",
+  "summary": "Connects a channel to a service the application already has, so that the same service can be reached by a message and by an ordinary call without knowing which happened.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "ServiceActivator",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The participant that consumes the message and invokes the service like any other client. It handles every messaging detail, and may be one-way or half of a request-reply, so that whether the caller arrived over a channel is a fact the service never has to learn.",
+      "links": [
+        "Service"
+      ]
+    },
+    {
+      "name": "Service",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "What is being made available. Naming it is what makes the pattern's claim checkable: a service that has acquired a message type in its signature, or a reply channel in its parameters, is no longer invocable by anything but the activator.",
+      "links": []
+    }
+  ]
+}
