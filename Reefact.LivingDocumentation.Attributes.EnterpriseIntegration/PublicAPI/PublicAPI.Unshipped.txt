@@ -27,6 +27,8 @@ Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ClaimCheck.Role
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ClaimCheck.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.CommandMessageAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.CommandMessageAttribute.CommandMessageAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.CompetingConsumersAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.CompetingConsumersAttribute.CompetingConsumersAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ComposedMessageProcessorAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ComposedMessageProcessorAttribute.ComposedMessageProcessorAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ContentBasedRouterAttribute
