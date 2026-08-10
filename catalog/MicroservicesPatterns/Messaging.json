@@ -1,0 +1,24 @@
+{
+  "catalog": "MicroservicesPatterns",
+  "name": "Messaging",
+  "summary": "Has services collaborate by exchanging messages over channels rather than by calling one another, so that neither has to be running when the other is.",
+  "reference": {
+    "author": "Chris Richardson",
+    "work": "Microservices Patterns",
+    "year": 2018
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Messaging",
+      "targets": [
+        "Interface",
+        "Class",
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "The participant that sends or receives messages rather than calling. What it buys is that the other end may be down; what it costs is a broker that may not be, and a reply that is a second message rather than a return value.",
+      "links": []
+    }
+  ]
+}
