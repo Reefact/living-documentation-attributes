@@ -29,6 +29,8 @@ Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestDiscoveryAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestDiscoveryAttribute.TestDiscoveryAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestDoubleAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestDoubleAttribute.TestDoubleAttribute() -> void
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestEnumerationAttribute
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestEnumerationAttribute.TestEnumerationAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestHelperAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestHelperAttribute.TestHelperAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestMethodAttribute
