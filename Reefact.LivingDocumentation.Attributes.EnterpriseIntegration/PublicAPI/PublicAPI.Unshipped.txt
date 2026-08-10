@@ -86,6 +86,8 @@ Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RecipientList.Role
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RecipientList.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RemoteProcedureInvocationAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RemoteProcedureInvocationAttribute.RemoteProcedureInvocationAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ResequencerAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ResequencerAttribute.ResequencerAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.SharedDatabaseAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.SharedDatabaseAttribute.SharedDatabaseAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.SplitterAttribute
