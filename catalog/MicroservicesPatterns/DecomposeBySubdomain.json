@@ -1,0 +1,24 @@
+{
+  "catalog": "MicroservicesPatterns",
+  "name": "DecomposeBySubdomain",
+  "summary": "Draws a service around one subdomain of the business as domain-driven design identifies them, so that the boundary follows the model rather than what the organisation happens to do.",
+  "reference": {
+    "author": "Chris Richardson",
+    "work": "Microservices Patterns",
+    "year": 2018
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "DecomposeBySubdomain",
+      "targets": [
+        "Interface",
+        "Class",
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "The service drawn around one subdomain, which the work classifies after Evans as core, supporting or generic. It usually lands on the same boundary a business capability would, and it is not the same claim: this one says the boundary follows the model, so a change to the model of a second subdomain should not reach here.",
+      "links": []
+    }
+  ]
+}
