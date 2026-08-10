@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "MessageEndpoint",
+  "summary": "Encapsulates how an application attaches to a channel, so that the application's code sends and receives without holding the messaging system's API.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "MessageEndpoint",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The participant that connects application code to a channel. It is the seam the messaging library lives behind, which is what lets the application be tested without a broker and the broker be changed without the application.",
+      "links": []
+    }
+  ]
+}
