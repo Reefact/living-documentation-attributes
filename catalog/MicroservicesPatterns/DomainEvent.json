@@ -1,0 +1,23 @@
+{
+  "catalog": "MicroservicesPatterns",
+  "name": "DomainEvent",
+  "summary": "Has an aggregate emit an event whenever it is created or changed, and the service publish it, so that other services can react to a change in data they do not own.",
+  "reference": {
+    "author": "Chris Richardson",
+    "work": "Microservices Patterns",
+    "year": 2018
+  },
+  "inherited": true,
+  "roles": [
+    {
+      "name": "DomainEvent",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "repeatable": false,
+      "summary": "States, in the past tense, that a service's data changed, and is published so that services which do not own that data can act on it. Named for the domain rather than for its consumers, because the service that publishes it does not know who is listening and must not.",
+      "links": []
+    }
+  ]
+}
