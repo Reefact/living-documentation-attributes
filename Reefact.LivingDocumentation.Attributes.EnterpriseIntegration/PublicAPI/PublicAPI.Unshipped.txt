@@ -14,6 +14,8 @@ Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.CanonicalDataModelA
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.CanonicalDataModelAttribute.CanonicalDataModelAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ChannelAdapterAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ChannelAdapterAttribute.ChannelAdapterAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ChannelPurgerAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ChannelPurgerAttribute.ChannelPurgerAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ClaimCheck
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ClaimCheck.CheckLuggageAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ClaimCheck.CheckLuggageAttribute.CheckLuggageAttribute() -> void
