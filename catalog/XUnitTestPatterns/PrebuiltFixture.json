@@ -1,0 +1,23 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "PrebuiltFixture",
+  "summary": "Uses a fixture that already existed before the test run began, so that building it is not part of running the tests.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "PrebuiltFixture",
+      "targets": [
+        "Class",
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "A fixture nothing in the test suite creates — a seeded database, a directory of files, a environment somebody set up. It makes the suite fast and makes it depend on something no version of the code describes, so a test that fails on a fresh machine and passes on yours is the ordinary failure here.",
+      "links": []
+    }
+  ]
+}

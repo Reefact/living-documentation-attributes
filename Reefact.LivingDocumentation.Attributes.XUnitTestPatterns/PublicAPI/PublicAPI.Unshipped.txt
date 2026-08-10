@@ -29,6 +29,8 @@ Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.NamedTestSuiteAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.NamedTestSuiteAttribute.NamedTestSuiteAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.ParameterizedTestAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.ParameterizedTestAttribute.ParameterizedTestAttribute() -> void
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.PrebuiltFixtureAttribute
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.PrebuiltFixtureAttribute.PrebuiltFixtureAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.RecordedTestAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.RecordedTestAttribute.RecordedTestAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.ScriptedTestAttribute
