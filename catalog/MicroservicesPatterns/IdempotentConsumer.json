@@ -1,0 +1,36 @@
+{
+  "catalog": "MicroservicesPatterns",
+  "name": "IdempotentConsumer",
+  "summary": "Lets a consumer be invoked repeatedly with one message and produce the outcome it would have produced once, by recording the messages it has already handled.",
+  "reference": {
+    "author": "Chris Richardson",
+    "work": "Microservices Patterns",
+    "year": 2018
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "IdempotentConsumer",
+      "targets": [
+        "Interface",
+        "Class",
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "The handler for which processing a message once and processing it three times have the same outcome. At-least-once delivery makes that obligatory rather than desirable, and nothing but this says which handlers have honoured it.",
+      "links": [
+        "ProcessedMessages"
+      ]
+    },
+    {
+      "name": "ProcessedMessages",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "Where the identifiers of handled messages are recorded, so that a duplicate is detected and discarded — a table of its own, or the identifier carried on the business entity the consumer updates. The primary key is what does the work, and no C# type expresses it.",
+      "links": []
+    }
+  ]
+}

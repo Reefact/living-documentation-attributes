@@ -66,6 +66,15 @@ Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.EventSourcing.Snaps
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.EventSourcing.SnapshotAttribute.Aggregate.get -> System.Type?
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.EventSourcing.SnapshotAttribute.Aggregate.init -> void
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.EventSourcing.SnapshotAttribute.SnapshotAttribute() -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.IdempotentConsumer
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.IdempotentConsumer.IdempotentConsumerAttribute
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.IdempotentConsumer.IdempotentConsumerAttribute.IdempotentConsumerAttribute() -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.IdempotentConsumer.IdempotentConsumerAttribute.ProcessedMessages.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.IdempotentConsumer.IdempotentConsumerAttribute.ProcessedMessages.init -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.IdempotentConsumer.ProcessedMessagesAttribute
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.IdempotentConsumer.ProcessedMessagesAttribute.ProcessedMessagesAttribute() -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.IdempotentConsumer.Role
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.IdempotentConsumer.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.MessagingAttribute
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.MessagingAttribute.MessagingAttribute() -> void
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.PollingPublisherAttribute
