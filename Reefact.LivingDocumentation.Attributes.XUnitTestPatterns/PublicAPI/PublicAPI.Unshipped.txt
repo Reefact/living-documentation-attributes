@@ -1,6 +1,8 @@
 #nullable enable
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.AssertionMethodAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.AssertionMethodAttribute.AssertionMethodAttribute() -> void
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.AutomatedTeardownAttribute
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.AutomatedTeardownAttribute.AutomatedTeardownAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.BackDoorManipulationAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.BackDoorManipulationAttribute.BackDoorManipulationAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.BehaviorVerificationAttribute

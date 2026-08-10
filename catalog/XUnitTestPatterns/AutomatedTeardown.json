@@ -1,0 +1,23 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "AutomatedTeardown",
+  "summary": "Records what the test created and removes it afterwards without the test saying so, so that cleaning up cannot be forgotten.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "AutomatedTeardown",
+      "targets": [
+        "Class",
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "The participant that tracks allocations and undoes them. It removes the commonest cause of tests that pass alone and fail together, and it moves the risk: what it does not know how to track is now cleaned up by nobody, silently, which is worth being able to find.",
+      "links": []
+    }
+  ]
+}
