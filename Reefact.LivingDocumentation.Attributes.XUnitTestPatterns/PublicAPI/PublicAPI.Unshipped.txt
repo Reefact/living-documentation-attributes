@@ -1,4 +1,6 @@
 #nullable enable
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.FakeObjectAttribute
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.FakeObjectAttribute.FakeObjectAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.MockObjectAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.MockObjectAttribute.MockObjectAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestDoubleAttribute
