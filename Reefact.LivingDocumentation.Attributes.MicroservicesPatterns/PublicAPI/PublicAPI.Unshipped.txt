@@ -51,6 +51,8 @@ Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.DatabasePerService.
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.DatabasePerService.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.DatabasePerService.ServiceAttribute
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.DatabasePerService.ServiceAttribute.ServiceAttribute() -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.DecomposeByBusinessCapabilityAttribute
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.DecomposeByBusinessCapabilityAttribute.DecomposeByBusinessCapabilityAttribute() -> void
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.DomainEventAttribute
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.DomainEventAttribute.DomainEventAttribute() -> void
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.DomainSpecificProtocolAttribute
