@@ -1,0 +1,24 @@
+{
+  "catalog": "MicroservicesPatterns",
+  "name": "ServicePerTeam",
+  "summary": "Gives each team sole responsibility for changing its own service, and ideally one service, so that autonomy is achieved with the fewest services rather than the most.",
+  "reference": {
+    "author": "Chris Richardson",
+    "work": "Microservices Patterns",
+    "year": 2018
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "ServicePerTeam",
+      "targets": [
+        "Interface",
+        "Class",
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "The service exactly one team may change. It is the rare claim in this catalogue that something outside the code can check — a `CODEOWNERS` file, or a year of history — and the rare one a codebase cannot break on its own: it is broken by a reorganisation nobody thought to tell the code about.",
+      "links": []
+    }
+  ]
+}
