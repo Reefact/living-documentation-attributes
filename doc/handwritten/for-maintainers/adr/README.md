@@ -163,3 +163,4 @@ Related ADRs, sources, catalog entries, code.
 | [ADR-0028](0028-hold-a-pattern-in-every-catalogue-whose-work-presents-it.md) | Hold a pattern in every catalogue whose work presents it as its own | Accepted |
 | [ADR-0029](0029-admit-enterprise-integration-patterns-as-a-catalogue.md) | Admit Enterprise Integration Patterns as a catalogue | Accepted |
 | [ADR-0030](0030-relate-only-the-narrowings-a-work-states-outright.md) | Relate only the narrowings a work states outright | Accepted |
+| [ADR-0031](0031-carry-no-generator-machinery-for-an-unused-capability.md) | Carry no generator machinery for an unused capability | Accepted |
