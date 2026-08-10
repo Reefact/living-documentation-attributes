@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "MessagingGateway",
+  "summary": "Wraps the messaging calls behind methods stated in the domain's own words, so that only one class in the application knows there is a messaging system at all.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "MessagingGateway",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The class that turns a business call into a message and back. Its methods take domain arguments rather than message properties, which is what lets the rest of the application be tested, read and changed without a broker in sight — and what makes the messaging system replaceable by editing one class.",
+      "links": []
+    }
+  ]
+}
