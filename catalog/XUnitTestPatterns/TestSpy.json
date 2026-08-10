@@ -1,0 +1,27 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "TestSpy",
+  "summary": "Captures the indirect outputs the system under test sends to another component, so that the test can verify them after the fact.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "specialisationOf": {
+    "catalog": "XUnitTestPatterns",
+    "name": "TestDouble"
+  },
+  "inherited": true,
+  "roles": [
+    {
+      "name": "TestSpy",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "repeatable": false,
+      "summary": "A stub that also records how it was called, so the test asks its questions afterwards. That ordering is the assertion: the spy records and never judges, and the verification lives in the test where a reader looks for it.",
+      "links": []
+    }
+  ]
+}
