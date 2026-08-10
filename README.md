@@ -31,19 +31,22 @@ architecture" from a claim into something a build can check.
 
 ## What is in it
 
-| Catalog | Patterns | Source |
-|---|---|---|
-| `GangOfFour` | 23 | Gamma, Helm, Johnson, Vlissides — *Design Patterns*, 1994 |
-| `DomainDrivenDesign` | 23 | Evans — *Domain-Driven Design*, 2003 |
-| `EnterpriseApplicationArchitecture` | 51 | Fowler — *Patterns of Enterprise Application Architecture*, 2002 |
-| `AnalysisPatterns` | 39 | Fowler — *Analysis Patterns*, 1997 |
-| `AccountingPatterns` | 9 | Fowler — *Accounting Patterns*, 2000 |
-| `EnterpriseIntegration` | 65 | Hohpe & Woolf — *Enterprise Integration Patterns*, 2003 |
-| `XUnitTestPatterns` | 62 | Meszaros — *xUnit Test Patterns*, 2007 |
-| `Idioms` | 2 | patterns with a source but no catalog of their own — each entry names its own |
+| Catalog | Patterns | | Source |
+|---|---|---|---|
+| `GangOfFour` | 23 | complete | Gamma, Helm, Johnson, Vlissides — *Design Patterns*, 1994 |
+| `DomainDrivenDesign` | 23 | complete | Evans — *Domain-Driven Design*, 2003 |
+| `EnterpriseApplicationArchitecture` | 51 | complete | Fowler — *Patterns of Enterprise Application Architecture*, 2002 |
+| `AnalysisPatterns` | 39 | in progress | Fowler — *Analysis Patterns*, 1997 |
+| `AccountingPatterns` | 9 | complete | Fowler — *Accounting Patterns*, 2000 |
+| `EnterpriseIntegration` | 65 | complete | Hohpe & Woolf — *Enterprise Integration Patterns*, 2003 |
+| `XUnitTestPatterns` | 62 | complete | Meszaros — *xUnit Test Patterns*, 2007 |
+| `Idioms` | 2 | open-ended | patterns with a source but no catalog of their own — each entry names its own |
 
 **274 patterns, 476 roles** today, and the catalog is meant to grow by an order of
-magnitude. A pattern is held by every catalogue whose work presents it as one of its
+magnitude. *Complete* means every pattern of the work is either held or named in
+[the exclusion tables](catalog/README.md#patterns-deliberately-left-out) with the reason it
+cannot be annotated — so in those six, a missing pattern is a defect rather than work in
+progress. A pattern is held by every catalogue whose work presents it as one of its
 own, under the name that work gave it — so a reader of a book finds its patterns
 spelled as it spelled them, and a work that merely cites another's pattern does not
 claim it.
