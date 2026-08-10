@@ -1,0 +1,22 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "AssertionMethod",
+  "summary": "Compares what happened with what was expected and fails the test when they differ, so that a verification is a call rather than a conditional.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "AssertionMethod",
+      "targets": [
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "The method a test calls to state its expectation. What it must do is fail the test rather than return a verdict — an assertion whose result the caller has to check is one a caller can forget to check, which is how a test starts passing for the wrong reason.",
+      "links": []
+    }
+  ]
+}
