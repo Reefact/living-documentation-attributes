@@ -112,7 +112,7 @@ exists to prevent, applied to catalogues rather than to decisions.
 | `EnterpriseIntegration` | 65 | 65 | **complete** |
 | `XUnitTestPatterns` | 62 | 68 | **complete** — the other six are in the exclusion tables above |
 | `DomainDrivenDesign` | 23 | 45 + 2 | **complete** — with one open question about a possible twenty-fourth entry, below |
-| `MicroservicesPatterns` | 18 | 48 | **in progress** — five groups of fourteen catalogued, and around half the work will be excluded ([ADR-0033](../doc/handwritten/for-maintainers/adr/0033-admit-microservices-patterns-as-a-catalogue.md)) |
+| `MicroservicesPatterns` | 20 | 48 | **in progress** — five groups of fourteen catalogued whole and a sixth part-held, and around half the work will be excluded ([ADR-0033](../doc/handwritten/for-maintainers/adr/0033-admit-microservices-patterns-as-a-catalogue.md)) |
 | `AnalysisPatterns` | 39 | — | **deliberately stopped**, and the only one that is |
 | `Idioms` | 2 | — | **never complete by construction** ([ADR-0013](../doc/handwritten/for-maintainers/adr/0013-shelve-a-pattern-without-a-body-of-work-under-idioms.md)) |
 
@@ -660,17 +660,18 @@ is never looked at, which is why the honest implementation throws.
 
 ## Microservices Patterns, and the words this catalogue already knew
 
-**Eighteen of forty-eight.** Richardson's pattern language holds 48 patterns across fourteen
+**Twenty of forty-eight.** Richardson's pattern language holds 48 patterns across fourteen
 groups on the index he maintains at `microservices.io/patterns/index.html`; *Service
 collaboration* (eight), *Transactional messaging* (three), *Communication styles* (four),
-*External API* (two) and *Reliability* (one) are catalogued, each whole and none with an
-exclusion. Its admission is
+*External API* (two) and *Reliability* (one) are catalogued whole, and two of the four *Service
+boundaries* patterns are held while the other two wait on the maintainer — see below. Nothing so
+far has been excluded. Its admission is
 [ADR-0033](../doc/handwritten/for-maintainers/adr/0033-admit-microservices-patterns-as-a-catalogue.md),
 which also estimates that between twenty-five and thirty of the 48 will be admissible: roughly
 half the language is deployment and observability topology, which no C# declaration holds.
-A reader counting eighteen against forty-eight is looking at work in progress.
+A reader counting twenty against forty-eight is looking at work in progress.
 
-**Where these entries were read from.** All eighteen pattern pages were fetched and read —
+**Where these entries were read from.** All twenty-two pattern pages were fetched and read —
 context, problem, solution, related patterns — so the roles below are the participants the
 author names, not participants recalled from the book. Where a page names a thing without
 giving it a noun, the name here is this catalogue's and is flagged as such: `ViewUpdater` is
@@ -679,10 +680,10 @@ date by subscribing to domain events*. The four roles of `TransactionalOutbox` a
 own list.
 
 The work in the `reference` field is the 2018 book, not the site; the site is the same pattern
-language maintained by the same author. **Nine of the eighteen pages say outright that the book
-covers the pattern.** The other nine — Database per Service, Shared database, Event sourcing,
+language maintained by the same author. **Nine of the twenty pages say outright that the book
+covers the pattern.** The other eleven — Database per Service, Shared database, Event sourcing,
 Remote Procedure Invocation, Domain-specific protocol, Idempotent Consumer, API Gateway,
-Backend for front-end and Circuit Breaker — carry no such line,
+Backend for front-end, Circuit Breaker and the two decomposition patterns — carry no such line,
 and are held on
 [ADR-0033](../doc/handwritten/for-maintainers/adr/0033-admit-microservices-patterns-as-a-catalogue.md)'s
 other ground: each is the subject matter of a chapter of the 2018 book, or predates it outright.
@@ -796,6 +797,48 @@ breaker is open, which is the worst moment to find out.
 what makes the partitioning free to change; it also gives this one participant a reason to know
 about every service there is. A codebase that can list its gateways can see the day one of them
 has grown back into the thing it replaced.
+
+**Service boundaries is the sixth group, and the first this catalogue has not finished.** Two of
+its four are held; two wait on the maintainer, and the reason is a rule ADR-0033 states rather
+than a judgement about the patterns.
+
+`DecomposeByBusinessCapability` and `DecomposeBySubdomain` answer one question — *how to
+decompose an application into services?* — so they are siblings and nothing relates them. Their
+pages share a context, a set of forces and an example list word for word, which makes it worth
+saying what separates the two entries: a capability is **what the business does**, a subdomain is
+**what the business means**. They usually land on the same line. Where they do not, it is because
+two parts of one capability use the same noun for different things, and that is a reason to split
+which no organisation chart shows.
+
+Neither is related to `DomainDrivenDesign/CoreDomain` or `GenericSubdomain`, and could not be:
+a relation never crosses a catalogue
+([ADR-0027](../doc/handwritten/for-maintainers/adr/0027-ship-one-independent-package-per-catalogued-work.md)).
+The classification the subdomain entry mentions — core, supporting, generic — is Evans', borrowed
+by this work and spelled in its own summary rather than asserted by inheritance.
+
+### Two patterns held back for want of evidence, not for want of merit
+
+`SelfContainedService` and `ServicePerTeam` are **not** excluded. Both are annotatable, and both
+carry assertions of the useful kind — a self-contained service makes no synchronous call while
+handling a request, and a service per team has exactly one team that may change it, which is a
+claim a `CODEOWNERS` file can be held to.
+
+What stops them is the reference. ADR-0033 says an entry is added *only where the site states the
+book covers it, or the pattern predates it*, and neither limb holds:
+
+* the author marks both **`new`** on his index — and they are the **only two** of the 48 he marks,
+  which is his own signal that they are recent additions to the pattern language;
+* neither page cites the book, where nine other pages do;
+* the 2018 book's chapter 2 is *Decomposition strategies*, confirmed from the publisher's own
+  table of contents, which is what carries the two entries that **are** held — and that same table
+  of contents could not be read past chapter 2, so it settles nothing about these two.
+
+Cataloguing them would put `Microservices Patterns, 2018` in a `reference` field on evidence that
+does not support it, and the reference is load-bearing: it is what says which work presents the
+pattern (ADR-0028). **The decision is the maintainer's**, and there are three ways out: read the
+book's contents past chapter 2 and add them if they are there; decide that the catalogue follows
+the author's *pattern language* rather than the 2018 book, which is a change to ADR-0033 and needs
+its own record; or leave them out and say so here.
 
 **Transactional messaging is the second group**, three patterns, catalogued whole. It answers
 the question the first group keeps running into: a service has to change its data *and* send a
