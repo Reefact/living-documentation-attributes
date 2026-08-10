@@ -9,6 +9,8 @@ Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.MockObjectAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.MockObjectAttribute.MockObjectAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.NamedTestSuiteAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.NamedTestSuiteAttribute.NamedTestSuiteAttribute() -> void
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.ParameterizedTestAttribute
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.ParameterizedTestAttribute.ParameterizedTestAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestDoubleAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestDoubleAttribute.TestDoubleAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestSpecificSubclassAttribute

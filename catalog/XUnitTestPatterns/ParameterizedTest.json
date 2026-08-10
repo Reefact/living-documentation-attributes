@@ -1,0 +1,22 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "ParameterizedTest",
+  "summary": "Takes the values that differ as arguments, so that several test conditions share one body instead of one copy each.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "ParameterizedTest",
+      "targets": [
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "A test method whose data comes from outside it. The trade is stated by the pattern itself: one body to maintain, at the price that a failure names a row rather than a case — so the arguments have to identify themselves, or the report says nothing.",
+      "links": []
+    }
+  ]
+}
