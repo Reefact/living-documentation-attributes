@@ -124,6 +124,8 @@ Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RequestReply.Role
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RequestReply.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ResequencerAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ResequencerAttribute.ResequencerAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ReturnAddressAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ReturnAddressAttribute.ReturnAddressAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RoutingSlip
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RoutingSlip.ItineraryAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RoutingSlip.ItineraryAttribute.ItineraryAttribute() -> void

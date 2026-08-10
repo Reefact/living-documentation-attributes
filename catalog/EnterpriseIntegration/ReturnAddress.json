@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "ReturnAddress",
+  "summary": "Puts the reply channel on the request, so that a replier answers where the requestor asked rather than where it was configured to.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "ReturnAddress",
+      "targets": [
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "summary": "The property naming the channel the reply belongs on. Carrying it on the message is what lets one replier serve many requestors, each getting its answer on its own channel — and what makes a reply that goes nowhere a defect in the message rather than in the replier.",
+      "links": []
+    }
+  ]
+}
