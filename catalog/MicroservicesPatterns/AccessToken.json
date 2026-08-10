@@ -1,0 +1,24 @@
+{
+  "catalog": "MicroservicesPatterns",
+  "name": "AccessToken",
+  "summary": "Has the API gateway authenticate a request and pass a token that identifies the requestor onward, so that every service downstream knows who is asking without asking again.",
+  "reference": {
+    "author": "Chris Richardson",
+    "work": "Microservices Patterns",
+    "year": 2018
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "AccessToken",
+      "targets": [
+        "Interface",
+        "Class",
+        "Struct"
+      ],
+      "repeatable": false,
+      "summary": "The token carrying identity across service boundaries. Everything downstream trusts it, which makes its validation the whole security boundary — and makes a service that reads a claim without verifying the signature a hole nothing else can see.",
+      "links": []
+    }
+  ]
+}
