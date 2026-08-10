@@ -1,0 +1,22 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "ImplicitTeardown",
+  "summary": "Puts the cleaning up in a method the framework calls after every test, so that it happens whether the test succeeded, failed or threw.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "ImplicitTeardown",
+      "targets": [
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "The tearDown the framework runs. Running after a failure is the property that matters: a test that cleans up at the end of its own body leaves the fixture behind precisely on the runs where somebody is about to investigate it.",
+      "links": []
+    }
+  ]
+}
