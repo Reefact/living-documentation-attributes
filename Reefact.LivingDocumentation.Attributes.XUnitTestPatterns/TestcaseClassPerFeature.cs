@@ -1,0 +1,24 @@
+#region Usings declarations
+
+using System;
+
+#endregion
+
+namespace Reefact.LivingDocumentation.Attributes.XUnitTestPatterns {
+
+    /// <summary>
+    ///     TestcaseClassPerFeature (xUnit Test Patterns) — Puts the tests of one feature into one testcase class,
+    ///     whatever classes the feature runs through, so that the test tree mirrors what the system does.
+    /// </summary>
+    /// <remarks>
+    ///     <para>
+    ///         This pattern has a single role, so there is nothing to choose: the attribute is applied on its own.
+    ///     </para>
+    ///     <para>
+    ///         Gerard Meszaros, <i>xUnit Test Patterns</i>, 2007.
+    ///     </para>
+    /// </remarks>
+    [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
+    public sealed class TestcaseClassPerFeatureAttribute : LivingDocumentationAttribute { }
+
+}

@@ -1,0 +1,22 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "TestcaseClassPerFeature",
+  "summary": "Puts the tests of one feature into one testcase class, whatever classes the feature runs through, so that the test tree mirrors what the system does.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "TestcaseClassPerFeature",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The organisation that follows behaviour rather than structure. It survives a refactoring that moves a feature between classes, and it costs the direct correspondence a reader uses to find the tests of a class.",
+      "links": []
+    }
+  ]
+}
