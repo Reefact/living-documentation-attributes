@@ -41,6 +41,8 @@ Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.SharedFixtureAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.SharedFixtureAttribute.SharedFixtureAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.StandardFixtureAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.StandardFixtureAttribute.StandardFixtureAttribute() -> void
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.SuiteFixtureSetupAttribute
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.SuiteFixtureSetupAttribute.SuiteFixtureSetupAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestAutomationFrameworkAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestAutomationFrameworkAttribute.TestAutomationFrameworkAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestcaseClassAttribute

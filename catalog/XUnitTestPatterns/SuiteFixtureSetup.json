@@ -1,0 +1,22 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "SuiteFixtureSetup",
+  "summary": "Runs once before the tests of a suite and once after them, so that an expensive fixture is built one time for many tests.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "SuiteFixtureSetup",
+      "targets": [
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "The framework's one-time hook. It is where a shared fixture is legitimately built, and it is the point at which every test in the suite becomes able to affect every other — which is why what it builds should be the part no test modifies.",
+      "links": []
+    }
+  ]
+}
