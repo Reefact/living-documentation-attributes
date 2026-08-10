@@ -224,11 +224,11 @@ one entry and loses the statement of what the figure should have been, and
 
 ## Enterprise Integration Patterns, and what a channel's annotation depends on
 
-**Forty-six of its sixty-five are catalogued**: the integration styles, the base patterns,
-the channels, and the whole of message routing, message construction and message
-transformation. A reader counting forty-six against sixty-five is looking at work in
-progress and not at nineteen decisions. What remains is the messaging endpoints and system
-management.
+**Fifty-seven of its sixty-five are catalogued**: the integration styles, the base
+patterns, the channels, and the whole of message routing, message construction, message
+transformation and the messaging endpoints. A reader counting fifty-seven against
+sixty-five is looking at work in progress and not at eight decisions. What remains is
+system management.
 
 **Routing was taken before construction**, and construction closed the gap that left.
 Routing went first because it is the core of the work — the router, the splitter, the
@@ -268,6 +268,15 @@ asking for `Message.Role` would get them beside headers. The relation would stat
 something the book does not, which is worse than stating nothing: a codebase that means
 both writes both attributes.
 
+**`CompetingConsumers` keeps a plural name for a role that annotates one class**, and that
+is deliberate. It is the name the book gives, and the rule for names is to spell a pattern
+as its work spelled it
+([ADR-0028](../doc/handwritten/for-maintainers/adr/0028-hold-a-pattern-in-every-catalogue-whose-work-presents-it.md)).
+Reading `[CompetingConsumers]` on one consumer is also true to the pattern: a single
+competing consumer is not one, the arrangement is, and the plural is what stops a reader
+taking the annotation for a property of the class instead of a statement about the channel
+it shares.
+
 **Pipes and Filters and Message Broker are held here although POSA named them first** in
 1996. The test is
 [ADR-0028](../doc/handwritten/for-maintainers/adr/0028-hold-a-pattern-in-every-catalogue-whose-work-presents-it.md)'s:
@@ -278,15 +287,16 @@ catalogue refers to the other.
 
 ### Three homonyms, expected and unrelated
 
-The later parts of this work will bring three names the catalogue already holds elsewhere.
-They are **different patterns**, and since each catalogue ships as its own package nothing
-in the packages will say so — hence this table.
+This work carries three names the catalogue already holds elsewhere. Two arrived with the
+messaging endpoints; the third comes with system management. They are **different
+patterns**, and since each catalogue ships as its own package nothing in the packages says
+so — hence this table.
 
-| Coming as | Already held as | Why they are not the same |
+| Here | Already held as | Why they are not the same |
 |---|---|---|
 | `EnterpriseIntegration/MessagingGateway` | `EnterpriseApplicationArchitecture/Gateway` | Fowler's wraps any external resource behind a simple interface; this one hides a messaging API from application code |
 | `EnterpriseIntegration/MessagingMapper` | `EnterpriseApplicationArchitecture/Mapper` | Fowler's moves data between two objects that should not know each other; this one moves it between a domain object and a message |
-| `EnterpriseIntegration/SmartProxy` | `GangOfFour/Proxy` | the Gang of Four's stands in for an object; this one intercepts a request and its reply in order to observe them |
+| `EnterpriseIntegration/SmartProxy` *(to come)* | `GangOfFour/Proxy` | the Gang of Four's stands in for an object; this one intercepts a request and its reply in order to observe them |
 
 Three days ago each would have been a question of which publication held the definition.
 Since [ADR-0027](../doc/handwritten/for-maintainers/adr/0027-ship-one-independent-package-per-catalogued-work.md)
