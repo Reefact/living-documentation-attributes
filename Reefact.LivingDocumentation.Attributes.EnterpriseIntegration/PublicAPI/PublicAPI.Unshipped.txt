@@ -148,6 +148,8 @@ Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.PipesAndFilters.Rol
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.PipesAndFilters.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.PointToPointChannelAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.PointToPointChannelAttribute.PointToPointChannelAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.PollingConsumerAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.PollingConsumerAttribute.PollingConsumerAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ProcessManager
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ProcessManager.ProcessInstanceAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ProcessManager.ProcessInstanceAttribute.ProcessInstanceAttribute() -> void
