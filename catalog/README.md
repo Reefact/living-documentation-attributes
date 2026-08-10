@@ -74,6 +74,10 @@ system into the code it documents.
 | Context Map | Domain-Driven Design | the whole landscape — it is what you draw *from* the annotations |
 | Segregated Core, Abstract Core, Highlighted Core, Distillation Document, Domain Vision Statement | Domain-Driven Design | an act of refactoring, or a document; what they produce is already expressible, a distilled core being an assembly annotated `CoreDomain`, and the abstract core of a framework being a role of `PluggableComponentFramework` |
 | Guard Clause | — | a shape a method body takes; nothing holds a role in it |
+| Monolithic architecture, Microservice architecture | Microservices Patterns | the **application**, which is above the assembly and so has no declaration. They are also what a reader concludes *from* the annotations — the same ground as Context Map |
+| Multiple service instances per host, Service instance per host, Service instance per VM, Service instance per Container, Serverless deployment, Service deployment platform | Microservices Patterns | how an artifact is **packaged and run**. One assembly can hold all six over its life without a line changing, so an annotation on it would distinguish nothing |
+| 3rd party registration | Microservices Patterns | a registrar **outside** the service — Registrator, Prana, Kubernetes. The pattern's stated benefit is that the service code does none of this, so its participant is by construction not in the codebase |
+| Log aggregation | Microservices Patterns | the centralized logging service. What is in the codebase is a logging call, which every codebase has whether or not anything aggregates |
 
 **Nothing a tool could check.** A role licenses no verifiable assertion, so an
 attribute would name it without letting anything range over it — the criterion of
@@ -87,6 +91,7 @@ applied to whether a pattern belongs here at all.
 | Ubiquitous Language, Continuous Integration, Evolving Order | Domain-Driven Design | practices of a team, not participants in code |
 | Model-Driven Design, Hands-on Modelers, Declarative Design, System Metaphor, Refactoring Toward Deeper Insight, Drawing on Established Formalisms | Domain-Driven Design | ways of working, or of thinking about a model; a codebase can follow all six and no declaration is a participant in any |
 | Responsibility Layers | Domain-Driven Design | what the pattern asserts is an **order** — each layer depends only on those beneath it, and the layers are ranked by rate of change — and nothing in this vocabulary orders assemblies. Taking the five Evans names (Potential, Operations, Decision Support, Policy, Commitment) as fixed roles would supply one, but those are the layers he found in a shipping domain, offered as an illustration; the pattern is finding your own |
+| Log deployments and changes | Microservices Patterns | a practice of whoever operates the application — *log every deployment and every change to the environment*. No declaration participates, which is the ground that excludes Continuous Integration and Evolving Order |
 | Big Ball of Mud | Foote and Yoder, *Pattern Languages of Program Design 4*, 2000 | what it asserts about a participant is that it has no discernible structure, which is the absence of an assertion rather than one. Reached through Evans, who uses it to characterise a neighbouring context, and decided on the same criterion that admits Smart UI ([ADR-0023](../doc/handwritten/for-maintainers/adr/0023-admit-an-anti-pattern-on-the-same-terms-as-any-pattern.md)) |
 
 **Anti-patterns are not excluded as a category.** `SmartUi` is catalogued, because
@@ -112,7 +117,7 @@ exists to prevent, applied to catalogues rather than to decisions.
 | `EnterpriseIntegration` | 65 | 65 | **complete** |
 | `XUnitTestPatterns` | 62 | 68 | **complete** — the other six are in the exclusion tables above |
 | `DomainDrivenDesign` | 23 | 45 + 2 | **complete** — with one open question about a possible twenty-fourth entry, below |
-| `MicroservicesPatterns` | 24 | 48 | **in progress** — six groups of fourteen catalogued whole and two part-held, and around half the work will be excluded ([ADR-0033](../doc/handwritten/for-maintainers/adr/0033-admit-microservices-patterns-as-a-catalogue.md)) |
+| `MicroservicesPatterns` | 39 | 51 | **read whole, three entries pending a decision** — 39 held, 11 excluded in the tables above, 3 in the held-back section, and around half the work will be excluded ([ADR-0033](../doc/handwritten/for-maintainers/adr/0033-admit-microservices-patterns-as-a-catalogue.md)) |
 | `AnalysisPatterns` | 39 | — | **deliberately stopped**, and the only one that is |
 | `Idioms` | 2 | — | **never complete by construction** ([ADR-0013](../doc/handwritten/for-maintainers/adr/0013-shelve-a-pattern-without-a-body-of-work-under-idioms.md)) |
 
@@ -660,19 +665,21 @@ is never looked at, which is why the honest implementation throws.
 
 ## Microservices Patterns, and the words this catalogue already knew
 
-**Twenty-four of forty-eight.** Richardson's pattern language holds 48 patterns across fourteen
-groups on the index he maintains at `microservices.io/patterns/index.html`; *Service
-collaboration* (eight), *Transactional messaging* (three), *Communication styles* (four),
-*External API* (two), *Reliability* (one) and *Refactoring to services* (two) are catalogued
-whole; *Testing* holds two of the three the index lists, and two of the four *Service boundaries*
-patterns are held while the rest wait on the maintainer — see below. Nothing so far has been
-excluded. Its admission is
+**Thirty-nine held, eleven excluded, three waiting — out of fifty-one.** Richardson's pattern
+language is indexed at `microservices.io/patterns/index.html`, and the index carries **53 bullets
+over 51 distinct pages in 15 groups**: two pages are listed twice, under *External API* and under
+*Testing*. Every group has now been read. Its admission is
 [ADR-0033](../doc/handwritten/for-maintainers/adr/0033-admit-microservices-patterns-as-a-catalogue.md),
 which also estimates that between twenty-five and thirty of the 48 will be admissible: roughly
 half the language is deployment and observability topology, which no C# declaration holds.
-A reader counting twenty-four against forty-eight is looking at work in progress.
+**The figure this file carried for eight instalments — 48 patterns in fourteen groups — was
+wrong.** It came from the admission check and was never recounted. Recounting bullet by bullet
+gives 53 over 51 pages in 15 groups, and it turned up a group nobody had looked at:
+*Architectural style*, whose two entries were neither catalogued nor excluded. They are excluded
+now, above. ADR-0033 carries the old figure and its per-group counts; the numbers here are the
+ones to trust.
 
-**Where these entries were read from.** All twenty-five pattern pages were fetched and read —
+**Where these entries were read from.** All fifty-one pattern pages were fetched and read —
 context, problem, solution, related patterns — so the roles below are the participants the
 author names, not participants recalled from the book. Where a page names a thing without
 giving it a noun, the name here is this catalogue's and is flagged as such: `ViewUpdater` is
@@ -681,14 +688,14 @@ date by subscribing to domain events*. The four roles of `TransactionalOutbox` a
 own list.
 
 The work in the `reference` field is the 2018 book, not the site; the site is the same pattern
-language maintained by the same author. **Ten of the twenty-four pages point at the book in their
-body.** Seven say outright that it "describes this pattern in a lot more detail"; Saga sends the
+language maintained by the same author. **Ten of the thirty-eight pages behind a catalogued entry
+point at the book in their body.** Seven say outright that it "describes this pattern in a lot more detail"; Saga sends the
 reader to section 4.3, Messaging to the book's treatment of inter-communication, and Strangler
 application to chapter 13 for the refactoring rather than for the pattern. The other twelve —
 Database per Service, Shared database, Event sourcing, Remote Procedure Invocation,
 Domain-specific protocol, Idempotent Consumer, API Gateway, Backend for front-end, Circuit
-Breaker, the two decomposition patterns, Anti-corruption layer and the two testing patterns —
-carry no such line,
+Breaker, the two decomposition patterns, Anti-corruption layer, the two testing patterns and all
+fifteen of the last instalment — carry no such line,
 and are held on
 [ADR-0033](../doc/handwritten/for-maintainers/adr/0033-admit-microservices-patterns-as-a-catalogue.md)'s
 other ground: each is the subject matter of a chapter of the 2018 book, or predates it outright.
@@ -928,6 +935,57 @@ exist across catalogues
 ([ADR-0027](../doc/handwritten/for-maintainers/adr/0027-ship-one-independent-package-per-catalogued-work.md)).
 What this catalogue adds is `ServiceUnderTest` — the boundary of what a green run actually
 covered — and the sample annotates the boundary and leaves the stub bare.
+
+**The last six groups, and this catalogue's first exclusions.** *Service discovery*,
+*Cross-cutting concerns*, *Observability*, *Security*, *UI design*, *Deployment* and the
+*Architectural style* group nobody had counted: twenty-six pages, fifteen held and eleven left out.
+The exclusions are in the tables at the top of this file, and three of them are worth their reasons
+being read rather than skimmed.
+
+**The six deployment patterns are excluded together, and for one reason.** They answer *how are
+services packaged and deployed?* with a host, a VM image, a container image, a serverless platform
+or a deployment platform. One assembly can be deployed all six ways over its life without a line
+changing, so an annotation on it would distinguish nothing — which is ADR-0011's first ground stated
+about time rather than about scope.
+
+**3rd party registration is excluded by what the pattern is for.** Its stated benefit is that *the
+service code is less complex than with self registration, since it is not responsible for
+registering itself*. The registrar is Registrator, or Prana, or Kubernetes. The pattern is the
+absence of code, and an absence has no declaration to sit on — while `SelfRegistration`, its
+alternative, is annotated on the participant that does the work.
+
+**Log aggregation and Log deployments and changes fail on different grounds**, which is why they are
+in different tables. Aggregation's participant is a centralized logging service; what is in the
+codebase is a logging call, which every codebase has whether or not anything aggregates it. Logging
+deployments is a practice of whoever operates the application — the ground that already excludes
+Continuous Integration and Evolving Order.
+
+**`Monolithic architecture` and `Microservice architecture` close a hole rather than fill one.**
+Neither was catalogued and neither was excluded for eight instalments, because the group they are in
+was miscounted out of existence. What they qualify is the application, which is above the assembly
+and so holds no attribute — and they are what a reader concludes *from* the annotations rather than
+something an annotation adds. That is Context Map's ground, and it explains why they were never
+missed: every other entry in this catalogue presupposes one of them.
+
+Of the fifteen held, four are worth a note.
+
+* **`HealthCheckApi` is the sharpest entry in the group.** Its verdict takes an instance out of
+  rotation, so what the handler does not check is what will keep receiving traffic while broken —
+  and a handler that returns healthy unconditionally is indistinguishable from one that works.
+* **`DistributedTracing` fails silently or not at all.** A participant that forgets to propagate the
+  identifier does not break; it ends the trace, and the gap reads as a service that was never
+  called. Being able to list which participants propagate is the whole value.
+* **`MicroserviceChassis` carries a prohibition rather than a capability**: no business logic, ever,
+  because anything in the chassis is in every service.
+* **`ServiceRegistry` is the participant whose availability bounds the application's**, and it is
+  briefly wrong every time an instance dies without deregistering — which is what `HealthCheckApi`
+  exists to notice.
+
+**Two pairs of alternatives, and nothing related.** Client-side and server-side discovery answer one
+question two ways; server-side and client-side UI composition likewise. Siblings, not narrowings —
+the fifth instalment running where
+[ADR-0030](../doc/handwritten/for-maintainers/adr/0030-relate-only-the-narrowings-a-work-states-outright.md)
+records nothing.
 
 **Transactional messaging is the second group**, three patterns, catalogued whole. It answers
 the question the first group keeps running into: a service has to change its data *and* send a
