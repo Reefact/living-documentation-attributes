@@ -35,6 +35,8 @@ Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.GarbageCollectedTeardow
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.GarbageCollectedTeardownAttribute.GarbageCollectedTeardownAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.HardCodedTestDoubleAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.HardCodedTestDoubleAttribute.HardCodedTestDoubleAttribute() -> void
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.HumbleObjectAttribute
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.HumbleObjectAttribute.HumbleObjectAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.ImplicitSetupAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.ImplicitSetupAttribute.ImplicitSetupAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.ImplicitTeardownAttribute
