@@ -1,0 +1,24 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "DerivedValue",
+  "summary": "Computes a value from another rather than writing it out, so that the relationship between input and expectation is in the test rather than in the head of whoever wrote it.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "DerivedValue",
+      "targets": [
+        "Method",
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "summary": "A member that derives one value from another — the expected total from the order, the check digit from the number. It states the relationship, which is what a hard-coded expectation hides: two numbers that agree tell a reader nothing about why they agree, and neither does a failure.",
+      "links": []
+    }
+  ]
+}
