@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "EventDrivenConsumer",
+  "summary": "Is handed each message as it arrives, so that an application consumes as fast as the channel delivers without a thread of its own waiting.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "EventDrivenConsumer",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The consumer the messaging system invokes when a message arrives — the asynchronous receiver. It sits dormant with no running thread, and it does not choose its own pace, so nothing in it limits how many messages it may be processing at once.",
+      "links": []
+    }
+  ]
+}
