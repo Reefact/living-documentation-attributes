@@ -112,7 +112,7 @@ exists to prevent, applied to catalogues rather than to decisions.
 | `EnterpriseIntegration` | 65 | 65 | **complete** |
 | `XUnitTestPatterns` | 62 | 68 | **complete** — the other six are in the exclusion tables above |
 | `DomainDrivenDesign` | 23 | 45 + 2 | **complete** — with one open question about a possible twenty-fourth entry, below |
-| `MicroservicesPatterns` | 11 | 48 | **in progress** — two groups of fourteen catalogued, and around half the work will be excluded ([ADR-0033](../doc/handwritten/for-maintainers/adr/0033-admit-microservices-patterns-as-a-catalogue.md)) |
+| `MicroservicesPatterns` | 15 | 48 | **in progress** — three groups of fourteen catalogued, and around half the work will be excluded ([ADR-0033](../doc/handwritten/for-maintainers/adr/0033-admit-microservices-patterns-as-a-catalogue.md)) |
 | `AnalysisPatterns` | 39 | — | **deliberately stopped**, and the only one that is |
 | `Idioms` | 2 | — | **never complete by construction** ([ADR-0013](../doc/handwritten/for-maintainers/adr/0013-shelve-a-pattern-without-a-body-of-work-under-idioms.md)) |
 
@@ -660,24 +660,33 @@ is never looked at, which is why the honest implementation throws.
 
 ## Microservices Patterns, and the words this catalogue already knew
 
-**Eleven of forty-eight.** Richardson's pattern language holds 48 patterns across fourteen
+**Fifteen of forty-eight.** Richardson's pattern language holds 48 patterns across fourteen
 groups on the index he maintains at `microservices.io/patterns/index.html`; *Service
-collaboration* (eight) and *Transactional messaging* (three) are catalogued, each whole and
-neither with an exclusion. Its admission is
+collaboration* (eight), *Transactional messaging* (three) and *Communication styles* (four) are
+catalogued, each whole and none with an exclusion. Its admission is
 [ADR-0033](../doc/handwritten/for-maintainers/adr/0033-admit-microservices-patterns-as-a-catalogue.md),
 which also estimates that between twenty-five and thirty of the 48 will be admissible: roughly
 half the language is deployment and observability topology, which no C# declaration holds.
-A reader counting eleven against forty-eight is looking at work in progress.
+A reader counting fifteen against forty-eight is looking at work in progress.
 
-**Where these entries were read from.** All eleven pattern pages were fetched and read —
+**Where these entries were read from.** All fifteen pattern pages were fetched and read —
 context, problem, solution, related patterns — so the roles below are the participants the
 author names, not participants recalled from the book. Where a page names a thing without
 giving it a noun, the name here is this catalogue's and is flagged as such: `ViewUpdater` is
 the only one so far, for what the CQRS page calls *the application keeping the database up to
 date by subscribing to domain events*. The four roles of `TransactionalOutbox` are the author's
-own list. The work in the `reference` field is the 2018 book, not the site; the site is the
-same pattern language maintained by the same author, and each of the eleven pages states that
-the book covers it.
+own list.
+
+The work in the `reference` field is the 2018 book, not the site; the site is the same pattern
+language maintained by the same author. **Nine of the fifteen pages say outright that the book
+covers the pattern.** The other six — Database per Service, Shared database, Event sourcing,
+Remote Procedure Invocation, Domain-specific protocol, Idempotent Consumer — carry no such line,
+and are held on
+[ADR-0033](../doc/handwritten/for-maintainers/adr/0033-admit-microservices-patterns-as-a-catalogue.md)'s
+other ground: each is the subject matter of a chapter of the 2018 book, or predates it outright.
+Earlier versions of this paragraph claimed every page carried the line. They were wrong: the
+claim was made from the pages that happened to be read closely and checked properly only when
+the third group was catalogued.
 
 **Two names were already in the catalog, and both are held twice on purpose.** This is
 [ADR-0028](../doc/handwritten/for-maintainers/adr/0028-hold-a-pattern-in-every-catalogue-whose-work-presents-it.md)
@@ -690,9 +699,15 @@ find it in the microservices package has been failed by the catalogue.
 |---|---|---|
 | `MicroservicesPatterns/DomainEvent` | `DomainDrivenDesign/DomainEvent` | credited to DDD in its first line, then answering a problem Evans never posed — *how does a service publish an event when it updates its data?* An aggregate emitting an event is Evans'; somebody in another process listening is not |
 | `MicroservicesPatterns/SharedDatabase` | `EnterpriseIntegration/SharedDatabase` | Hohpe and Woolf present it as an integration style to choose; Richardson presents it as the thing *Database per Service* exists to escape, and names it an anti-pattern from that page. Same schema, opposite recommendation |
+| `MicroservicesPatterns/RemoteProcedureInvocation` | `EnterpriseIntegration/RemoteProcedureInvocation` | a full write-up crediting nobody, answering *how do services in a microservice architecture communicate?* — which is not the question Hohpe and Woolf's integration style answers. It also says something theirs does not: the caller is unavailable for as long as the callee is, and it has to find the callee first |
+| `MicroservicesPatterns/Messaging` | `EnterpriseIntegration/Messaging` | same shape of answer. Richardson's *See also* points at *Enterprise Integration Patterns* as "a comprehensive set of message patterns", which is the scholarship ADR-0028 allows rather than the passing mention it excludes — his own page carries context, problem, solution, five interaction styles and a resulting context |
 
-Three more homonyms are ahead in later groups — Anti-corruption layer, Remote Procedure
-Invocation and Messaging — and each is decided when its group is reached, not now.
+One homonym is still ahead — Anti-corruption layer, in *Refactoring to services* — and it is
+decided when that group is reached, not now.
+
+`IdempotentConsumer` is a **near**-homonym of `EnterpriseIntegration/IdempotentReceiver`, and
+needs no arbitration at all: the two works spell it differently, and each entry carries the
+spelling its work gave it.
 
 **`SharedDatabase` is catalogued as an anti-pattern**, which
 [ADR-0023](../doc/handwritten/for-maintainers/adr/0023-admit-an-anti-pattern-on-the-same-terms-as-any-pattern.md)
@@ -721,6 +736,30 @@ Three shapes in this group are worth explaining, because each could have been do
   then the method
   ([ADR-0010](../doc/handwritten/for-maintainers/adr/0010-annotate-the-declaration-that-introduces-a-role.md)).
   The same is true of `Cqrs.ViewUpdater`, which is as often a handler method as a class.
+
+**Communication styles is the third group**, four patterns, catalogued whole, and it is the one
+that meets *Enterprise Integration Patterns* head-on. Three of the four are answers to a single
+question — *how do services communicate?* — and they are siblings rather than narrowings, so
+nothing is related to anything: `RemoteProcedureInvocation` asks and waits, `Messaging` sends
+and stops caring, `DomainSpecificProtocol` speaks SMTP or RTMP because the domain does.
+
+`RemoteProcedureInvocation` is the only entry in this catalogue with a `Client` role, and it is
+the point of the entry. The service's annotation says what it exposes; the client's says what it
+has taken on — it cannot answer while the service cannot, for the length of every call, and it
+must find the service before it can call it. That is where a circuit breaker and a discovery
+mechanism attach, and no signature in a C# codebase shows any of it.
+
+`DomainSpecificProtocol` is the thinnest page in the group — no forces, no resulting context —
+and it is catalogued for what it **rules out** rather than for what it says. A participant that
+speaks IMAP is governed by none of this catalogue's other communication machinery: no registry,
+no broker, no channel. A reader who assumes the house conventions apply there is wrong in a way
+that shows up in production.
+
+`IdempotentConsumer` carries the obligation the previous group created. A message relay may
+publish twice, so at-least-once delivery makes idempotence compulsory rather than desirable —
+and the mechanism is a primary key on `(subscriber, message)` that lives in a schema and in no
+signature. Drop the constraint and every handler still compiles and still passes its tests, on
+messages that never arrive twice.
 
 **Transactional messaging is the second group**, three patterns, catalogued whole. It answers
 the question the first group keeps running into: a service has to change its data *and* send a
