@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "MessageBroker",
+  "summary": "Puts the routing of a whole system in one hub, so that each application has one channel rather than one per correspondent.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "MessageBroker",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The hub every application sends to and receives from, and the only participant that knows the topology. It replaces the arithmetic of point-to-point integrations with a single dependency, and becomes the thing whose failure stops everything — which is the trade to state rather than discover.",
+      "links": []
+    }
+  ]
+}
