@@ -1,0 +1,24 @@
+{
+  "catalog": "MicroservicesPatterns",
+  "name": "ServerSideServiceDiscovery",
+  "summary": "Has the caller send its request to a router at a well known address, and the router ask the registry which instance should receive it.",
+  "reference": {
+    "author": "Chris Richardson",
+    "work": "Microservices Patterns",
+    "year": 2018
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "ServerSideServiceDiscovery",
+      "targets": [
+        "Interface",
+        "Class",
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "The router that resolves on the caller's behalf. Most codebases do not own this participant — it is a load balancer — and the annotation is for the case where they do: the resolving, the balancing and the staleness are then this code's problem rather than the platform's.",
+      "links": []
+    }
+  ]
+}
