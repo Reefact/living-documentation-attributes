@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "DurableSubscriber",
+  "summary": "Has the messaging system keep the messages published while it was disconnected, so that going away is not the same as declining to hear.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "DurableSubscriber",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "A subscriber whose subscription outlives its connection. Nothing about it differs while it is connected, which is exactly why the intent has to be declared rather than read off the code: the whole pattern is a behaviour visible only during an absence.",
+      "links": []
+    }
+  ]
+}
