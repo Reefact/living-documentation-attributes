@@ -5,6 +5,8 @@ Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.BackDoorManipulationAtt
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.BackDoorManipulationAttribute.BackDoorManipulationAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.ConfigurableTestDoubleAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.ConfigurableTestDoubleAttribute.ConfigurableTestDoubleAttribute() -> void
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.CreationMethodAttribute
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.CreationMethodAttribute.CreationMethodAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.DataDrivenTestAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.DataDrivenTestAttribute.DataDrivenTestAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.FakeObjectAttribute

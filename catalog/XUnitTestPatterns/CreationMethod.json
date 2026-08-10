@@ -1,0 +1,22 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "CreationMethod",
+  "summary": "Returns an object ready for a test to use, so that the test names the situation it needs instead of assembling it.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "CreationMethod",
+      "targets": [
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "A method that builds a valid object for a test, named for the situation rather than for the constructor it hides. Its assertion is that what comes back is usable as-is — a creation method returning something a test must finish configuring has become a constructor with a nicer name.",
+      "links": []
+    }
+  ]
+}
