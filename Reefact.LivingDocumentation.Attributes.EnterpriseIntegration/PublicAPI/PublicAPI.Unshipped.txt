@@ -12,6 +12,8 @@ Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.Aggregator.Role
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.Aggregator.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ChannelAdapterAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ChannelAdapterAttribute.ChannelAdapterAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.CommandMessageAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.CommandMessageAttribute.CommandMessageAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ComposedMessageProcessorAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ComposedMessageProcessorAttribute.ComposedMessageProcessorAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ContentBasedRouterAttribute

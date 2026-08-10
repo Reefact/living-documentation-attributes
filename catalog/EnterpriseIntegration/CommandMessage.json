@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "CommandMessage",
+  "summary": "Carries an instruction to do something, so that invoking a procedure in another application is a message rather than a call.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "CommandMessage",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "repeatable": false,
+      "summary": "A message whose content is an imperative — cancel this booking, print this document. It expects one handler and, usually, a reply saying what happened; naming it as a command is what tells a reader that ignoring it is a defect rather than a choice.",
+      "links": []
+    }
+  ]
+}
