@@ -1,0 +1,22 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "TestHelper",
+  "summary": "Holds test utility methods in a class of its own, so that several testcase classes reuse them without being related to each other.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "TestHelper",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "Reuse between testcase classes by delegation. Chosen over a superclass when the tests sharing the code have nothing else in common — and the annotation is what makes the choice between the two legible, since nothing else in the code says which was decided and which was inherited from whoever wrote the first test.",
+      "links": []
+    }
+  ]
+}
