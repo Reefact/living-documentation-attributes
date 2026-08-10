@@ -1,0 +1,23 @@
+{
+  "catalog": "MicroservicesPatterns",
+  "name": "ClientSideServiceDiscovery",
+  "summary": "Has the caller ask a service registry where the instances of a service are, and choose one itself, rather than being handed a fixed address.",
+  "reference": {
+    "author": "Chris Richardson",
+    "work": "Microservices Patterns",
+    "year": 2018
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "ClientSideServiceDiscovery",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The participant that resolves locations and picks an instance. It holds the load balancing, the retry and the staleness — it may pick an instance the registry has not yet noticed is gone — and none of that is visible in the call it eventually makes.",
+      "links": []
+    }
+  ]
+}
