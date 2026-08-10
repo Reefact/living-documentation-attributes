@@ -64,6 +64,8 @@ Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.EventSourcing.Snaps
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.EventSourcing.SnapshotAttribute.Aggregate.get -> System.Type?
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.EventSourcing.SnapshotAttribute.Aggregate.init -> void
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.EventSourcing.SnapshotAttribute.SnapshotAttribute() -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.MessagingAttribute
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.MessagingAttribute.MessagingAttribute() -> void
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.PollingPublisherAttribute
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.PollingPublisherAttribute.PollingPublisherAttribute() -> void
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.RemoteProcedureInvocation
