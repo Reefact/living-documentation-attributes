@@ -1,0 +1,37 @@
+{
+  "catalog": "MicroservicesPatterns",
+  "name": "ApiComposition",
+  "summary": "Answers a query that spans services by invoking each service owning part of the answer and joining the results in memory.",
+  "reference": {
+    "author": "Chris Richardson",
+    "work": "Microservices Patterns",
+    "year": 2018
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Composer",
+      "targets": [
+        "Interface",
+        "Class",
+        "Method"
+      ],
+      "repeatable": true,
+      "summary": "Invokes the providers and joins what they return. The join that a database would have done on an index is done here on a list, so the cost of the query is this participant's cost and its inefficiency is this participant's problem.",
+      "links": []
+    },
+    {
+      "name": "Provider",
+      "targets": [
+        "Interface",
+        "Class",
+        "Assembly"
+      ],
+      "repeatable": true,
+      "summary": "A service owning part of the answer, invoked for its share of it. It is queried on the read path of an operation it knows nothing about, so its latency is the composer's latency.",
+      "links": [
+        "Composer"
+      ]
+    }
+  ]
+}
