@@ -2,8 +2,9 @@
 
 🌍 🇫🇷 Français (ce fichier) · 🇬🇧 [English](0033-admit-microservices-patterns-as-a-catalogue.md)
 
-**Statut :** Proposé
+**Statut :** Accepté
 **Proposé :** 2026-08-10
+**Accepté :** 2026-08-10
 **Décideurs :** Reefact
 
 ## Contexte

@@ -2,8 +2,9 @@
 
 🌍 🇬🇧 English (this file) · 🇫🇷 [Français](0035-index-the-pattern-language-and-require-a-write-up.fr.md)
 
-**Status:** Proposed
+**Status:** Accepted
 **Proposed:** 2026-08-10
+**Accepted:** 2026-08-10
 **Decision Makers:** Reefact
 
 ## Context
@@ -38,6 +39,12 @@ all: one line of gloss in the index, on a bullet that links to the page for a di
 The first two are blocked by a rule about the book. The third is blocked by something else
 entirely, and the difference has been recorded in prose across two instalments without ever being
 decided.
+
+**ADR-0033's arithmetic is also wrong, and this record is where a reader is told so.** It states 48
+patterns across fourteen groups, with a count per group. Recounting the index bullet by bullet gives
+**53 bullets over 51 distinct pages in 15 groups** — two pages are listed twice, and one group,
+*Architectural style*, was missed entirely and is now excluded. ADR-0033 is a historical record and
+is not edited; `catalog/README.md` carries the true figures.
 
 ## Decision
 

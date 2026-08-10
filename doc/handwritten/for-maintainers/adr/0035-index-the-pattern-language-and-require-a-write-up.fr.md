@@ -2,8 +2,9 @@
 
 🌍 🇫🇷 Français (ce fichier) · 🇬🇧 [English](0035-index-the-pattern-language-and-require-a-write-up.md)
 
-**Statut :** Proposé
+**Statut :** Accepté
 **Proposé :** 2026-08-10
+**Accepté :** 2026-08-10
 **Décideurs :** Reefact
 
 ## Contexte
@@ -40,6 +41,12 @@ pattern.
 
 Les deux premiers sont bloqués par une règle sur le livre. Le troisième l'est par tout autre chose,
 et la différence a été consignée en prose sur deux tranches sans jamais être tranchée.
+
+**L'arithmétique de l'ADR-0033 est fausse elle aussi, et c'est ici qu'un lecteur l'apprend.** Il
+énonce 48 patterns en quatorze groupes, avec un compte par groupe. Le recomptage puce par puce donne
+**53 puces sur 51 pages distinctes en 15 groupes** — deux pages sont listées deux fois, et un groupe,
+*Architectural style*, avait été manqué et se trouve désormais exclu. L'ADR-0033 est un enregistrement
+historique et n'est pas édité ; `catalog/README.md` porte les chiffres justes.
 
 ## Décision
 
