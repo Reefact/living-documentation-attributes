@@ -1,0 +1,23 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "GarbageCollectedTeardown",
+  "summary": "Leaves the fixture to the runtime, so that a test that allocated nothing outside memory needs no teardown at all.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "GarbageCollectedTeardown",
+      "targets": [
+        "Class",
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "A fixture with nothing to clean up, said on purpose. The annotation is a claim rather than a shrug: everything this creates is reclaimed by the runtime, so no file, no socket, no row and no temporary directory is left behind — and the day one appears, the claim is the thing that was broken.",
+      "links": []
+    }
+  ]
+}
