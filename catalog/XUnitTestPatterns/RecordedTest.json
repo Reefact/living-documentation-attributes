@@ -1,0 +1,23 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "RecordedTest",
+  "summary": "Is produced by recording what somebody did to the system, so that a test exists without anyone writing one.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "RecordedTest",
+      "targets": [
+        "Class",
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "A test captured rather than written. It is the cheapest test to obtain and the most expensive to keep: nothing in it says what it is about, so when it goes red the only way to learn what changed is to re-record it — which is why knowing a test is one matters more than for any other kind.",
+      "links": []
+    }
+  ]
+}
