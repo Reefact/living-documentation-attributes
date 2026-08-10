@@ -1,0 +1,22 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "TestMethod",
+  "summary": "Holds one test, so that a single expectation about the system has a name, a body and a result of its own.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "TestMethod",
+      "targets": [
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "The method the framework runs and reports on. One test condition per method is what makes a red bar say something: a method verifying four things reports one failure and hides three, and no framework can tell the difference.",
+      "links": []
+    }
+  ]
+}

@@ -23,6 +23,8 @@ Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestDoubleAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestDoubleAttribute.TestDoubleAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestHelperAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestHelperAttribute.TestHelperAttribute() -> void
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestMethodAttribute
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestMethodAttribute.TestMethodAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestSpecificSubclassAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestSpecificSubclassAttribute.TestSpecificSubclassAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestSpyAttribute
