@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "MessagingMapper",
+  "summary": "Holds the conversion between domain objects and messages in a class of its own, so that neither the domain nor the messaging layer knows the other exists.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "MessagingMapper",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The class that reads domain objects into a message and builds or updates them from one. It knows both sides and neither side knows it — the layers do not even know it exists, which is what keeps a message format from leaking references and inheritance the receiving application may not have.",
+      "links": []
+    }
+  ]
+}
