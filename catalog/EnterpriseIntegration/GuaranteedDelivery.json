@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "GuaranteedDelivery",
+  "summary": "Makes the messaging system persist a message until it is delivered, so that a crash between sending and receiving loses nothing.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "GuaranteedDelivery",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The channel that persists what it carries. It is a property of the channel rather than of a message, and it costs throughput for durability — which is why it is declared rather than assumed.",
+      "links": []
+    }
+  ]
+}
