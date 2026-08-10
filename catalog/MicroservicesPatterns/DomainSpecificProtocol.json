@@ -1,0 +1,24 @@
+{
+  "catalog": "MicroservicesPatterns",
+  "name": "DomainSpecificProtocol",
+  "summary": "Has services collaborate over a protocol belonging to their domain — mail, media streaming — rather than over a general-purpose request/reply or messaging one.",
+  "reference": {
+    "author": "Chris Richardson",
+    "work": "Microservices Patterns",
+    "year": 2018
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "DomainSpecificProtocol",
+      "targets": [
+        "Interface",
+        "Class",
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "The participant that speaks a protocol of its own domain — SMTP, IMAP, RTMP. Saying so says that none of the discovery, circuit-breaking and broker machinery the other two styles bring governs this conversation, which is otherwise learned by reading it.",
+      "links": []
+    }
+  ]
+}

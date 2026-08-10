@@ -47,6 +47,8 @@ Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.DatabasePerService.
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.DatabasePerService.ServiceAttribute.ServiceAttribute() -> void
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.DomainEventAttribute
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.DomainEventAttribute.DomainEventAttribute() -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.DomainSpecificProtocolAttribute
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.DomainSpecificProtocolAttribute.DomainSpecificProtocolAttribute() -> void
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.EventSourcing
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.EventSourcing.AggregateAttribute
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.EventSourcing.AggregateAttribute.AggregateAttribute() -> void
