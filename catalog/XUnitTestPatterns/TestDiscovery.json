@@ -1,0 +1,23 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "TestDiscovery",
+  "summary": "Finds the tests without being told where they are, so that writing a test is enough to have it run.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": true,
+  "roles": [
+    {
+      "name": "TestDiscovery",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The participant that builds the suite by looking rather than by being given a list. Its assertion is the one that matters most in practice: a test that exists is a test that runs, so a discovery rule with a gap in it produces a green build for a test nobody has executed in months.",
+      "links": []
+    }
+  ]
+}

@@ -25,6 +25,8 @@ Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestcaseObjectAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestcaseObjectAttribute.TestcaseObjectAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestcaseSuperclassAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestcaseSuperclassAttribute.TestcaseSuperclassAttribute() -> void
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestDiscoveryAttribute
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestDiscoveryAttribute.TestDiscoveryAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestDoubleAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestDoubleAttribute.TestDoubleAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestHelperAttribute
