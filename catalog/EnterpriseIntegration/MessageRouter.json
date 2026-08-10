@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "MessageRouter",
+  "summary": "Decides where a message goes next, so that the steps of a process need not know one another's addresses.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "MessageRouter",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The participant that consumes a message and sends it on unchanged. It asserts that it does not modify the message: a router that alters what it forwards is a translator wearing the wrong name, and a rule can be written against that.",
+      "links": []
+    }
+  ]
+}
