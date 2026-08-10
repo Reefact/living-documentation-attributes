@@ -1,0 +1,23 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "DatabaseSandbox",
+  "summary": "Gives each developer and each run a database of its own, so that tests touching a database do not touch each other's.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "DatabaseSandbox",
+      "targets": [
+        "Class",
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "The participant that hands a test its own schema, its own instance, or its own slice of one. It is what makes database tests runnable in parallel and on a laptop at the same time as on the build — and its absence is not a defect anybody sees until two runs collide, which is why saying it is present is worth a line.",
+      "links": []
+    }
+  ]
+}
