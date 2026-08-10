@@ -1,0 +1,23 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "BackDoorManipulation",
+  "summary": "Sets up or inspects state by going around the system under test, so that a fixture is reached without exercising what is being tested.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "BackDoorManipulation",
+      "targets": [
+        "Class",
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "The participant that reaches past the SUT — straight into the database, the file, the queue. It is often the only practical way to arrange a state, and it is always a second definition of the data's shape: when the SUT's own writing changes, the back door keeps working and keeps being wrong.",
+      "links": []
+    }
+  ]
+}
