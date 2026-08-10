@@ -1,0 +1,23 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "ScriptedTest",
+  "summary": "Is written by hand as code, so that what it verifies is stated rather than captured.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "ScriptedTest",
+      "targets": [
+        "Class",
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "The counterpart of a recorded test, and the default this catalogue's other entries assume. It costs someone's time and it earns a test that says what it is about, survives a refactoring and can be read by the person who did not write it.",
+      "links": []
+    }
+  ]
+}
