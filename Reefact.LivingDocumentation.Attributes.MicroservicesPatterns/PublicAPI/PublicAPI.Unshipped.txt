@@ -8,5 +8,26 @@ Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.DatabasePerService.
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.DatabasePerService.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.DatabasePerService.ServiceAttribute
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.DatabasePerService.ServiceAttribute.ServiceAttribute() -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Saga
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Saga.CompensatingTransactionAttribute
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Saga.CompensatingTransactionAttribute.CompensatingTransactionAttribute() -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Saga.CompensatingTransactionAttribute.Saga.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Saga.CompensatingTransactionAttribute.Saga.init -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Saga.LocalTransactionAttribute
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Saga.LocalTransactionAttribute.LocalTransactionAttribute() -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Saga.LocalTransactionAttribute.Saga.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Saga.LocalTransactionAttribute.Saga.init -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Saga.OrchestratorAttribute
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Saga.OrchestratorAttribute.OrchestratorAttribute() -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Saga.OrchestratorAttribute.Saga.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Saga.OrchestratorAttribute.Saga.init -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Saga.ParticipantAttribute
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Saga.ParticipantAttribute.ParticipantAttribute() -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Saga.ParticipantAttribute.Saga.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Saga.ParticipantAttribute.Saga.init -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Saga.Role
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Saga.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Saga.SagaAttribute
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Saga.SagaAttribute.SagaAttribute() -> void
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.SharedDatabaseAttribute
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.SharedDatabaseAttribute.SharedDatabaseAttribute() -> void
