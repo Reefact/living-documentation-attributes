@@ -1,0 +1,23 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "BehaviorVerification",
+  "summary": "Verifies by checking the calls the system under test made to something else, so that an effect leaving no state behind can still be asserted.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "BehaviorVerification",
+      "targets": [
+        "Method",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "A test that checks what the system did rather than what it holds. It is the only way to verify an indirect output — a message sent, a notification raised — and it is bought with coupling to the collaboration: a refactoring that changes how the work is delegated breaks it even when the outcome is unchanged.",
+      "links": []
+    }
+  ]
+}
