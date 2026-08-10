@@ -31,6 +31,8 @@ Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.PipesAndFilters.Pip
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.PipesAndFilters.PipelineAttribute.PipelineAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.PipesAndFilters.Role
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.PipesAndFilters.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.PointToPointChannelAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.PointToPointChannelAttribute.PointToPointChannelAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RemoteProcedureInvocationAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RemoteProcedureInvocationAttribute.RemoteProcedureInvocationAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.SharedDatabaseAttribute
