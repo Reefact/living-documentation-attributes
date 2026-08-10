@@ -325,8 +325,9 @@ made the catalogues independent, there is nothing to arbitrate — only this not
 
 ## xUnit Test Patterns, and the five words nobody agrees on
 
-**Forty-three of its sixty-eight are catalogued**: chapters 18, 19, 20, 23 and 24 — test
-strategy, the xUnit basics, fixture setup, the test doubles and test organisation. Its admission is
+**Forty-eight of its sixty-eight are catalogued**: chapters 18, 19, 20, 21, 23 and 24 — test
+strategy, the xUnit basics, fixture setup, result verification, the test doubles and test
+organisation. Its admission is
 [ADR-0032](../doc/handwritten/for-maintainers/adr/0032-admit-xunit-test-patterns-as-a-catalogue.md).
 A reader counting sixteen against sixty-eight is looking at work in progress, and at a book
 about a third of which will not be catalogued at all — roughly ten entries are shapes a
@@ -484,6 +485,33 @@ so a codebase that means both writes both.
 | Pattern | Why |
 |---|---|
 | In-line Setup | the fixture built in the body of the test method itself; nothing holds a role in it |
+
+**Chapter 21 is one more pair of opposites, and it is the one the test doubles serve.** State
+verification asks the system what it holds afterwards; behaviour verification asks a
+collaborator what it was told. The first survives a refactoring that changes the calls and
+cannot catch an effect that leaves no trace; the second catches exactly that and breaks when
+the delegation changes. `TestSpy` and `MockObject` exist to make the second possible, which is
+why the two chapters are worth reading together.
+
+**`UnfinishedTestAssertion` attaches to the test, not to the assertion inside it.** The
+assertion is a call, and a call holds no role; what is being stated is that this *test* is a
+placeholder. It is also the one annotation in this catalogue whose value is that somebody
+comes back and removes it.
+
+**No relation was added, and one is pending.** `CustomAssertion`, `DeltaAssertion` and
+`UnfinishedTestAssertion` are all assertion methods, and chapter 19's `AssertionMethod` is
+catalogued — but
+[ADR-0030](../doc/handwritten/for-maintainers/adr/0030-relate-only-the-narrowings-a-work-states-outright.md)
+carries a narrowing the *work states*, and the sentence that would state it has not been read:
+this chapter is not among the publisher's free samples. The relation is left unwritten rather
+than inferred from the fact that it is probably true. It is the first time that rule has
+refused something, and refusing is what it is for.
+
+**One of chapter 21's six is left out:**
+
+| Pattern | Why |
+|---|---|
+| Guard Assertion | an assertion used *in a guarding position* early in a test; the same method is a guard in one test and an ordinary assertion in another, so no declaration holds the role — the assertion counterpart of Guard Clause, excluded on the same ground |
 
 ## Shape of the generated attribute
 
