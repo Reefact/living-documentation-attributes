@@ -1,0 +1,43 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "MessageSequence",
+  "summary": "Marks each message of a set with its place and the set's extent, so that an arbitrarily large body of data can travel as many messages and be reassembled.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "SequenceIdentifier",
+      "targets": [
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "summary": "The property naming the set a message belongs to. Without it two large transfers interleaved on one channel cannot be told apart, which is the failure the pattern is written against.",
+      "links": []
+    },
+    {
+      "name": "Position",
+      "targets": [
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "summary": "The property giving the message's place in the set. It is what lets a receiver reassemble in order however the messages arrive, and what a resequencer works from.",
+      "links": []
+    },
+    {
+      "name": "Size",
+      "targets": [
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "summary": "The property saying how many there are, or marking the last one. It is what lets a receiver know the set is complete rather than merely quiet — the same question an aggregator's completeness condition asks.",
+      "links": []
+    }
+  ]
+}
