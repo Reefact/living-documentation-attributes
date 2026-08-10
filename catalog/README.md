@@ -325,9 +325,10 @@ made the catalogues independent, there is nothing to arbitrate — only this not
 
 ## xUnit Test Patterns, and the five words nobody agrees on
 
-**Forty-eight of its sixty-eight are catalogued**: chapters 18, 19, 20, 21, 23 and 24 — test
-strategy, the xUnit basics, fixture setup, result verification, the test doubles and test
-organisation. Its admission is
+**Fifty-one of its sixty-eight are catalogued**: chapters 18 to 24 but for the interludes —
+test strategy, the xUnit basics, fixture setup, result verification, fixture teardown, the
+test doubles and test organisation. What remains is the database, design-for-testability and
+value chapters. Its admission is
 [ADR-0032](../doc/handwritten/for-maintainers/adr/0032-admit-xunit-test-patterns-as-a-catalogue.md).
 A reader counting sixteen against sixty-eight is looking at work in progress, and at a book
 about a third of which will not be catalogued at all — roughly ten entries are shapes a
@@ -512,6 +513,26 @@ refused something, and refusing is what it is for.
 | Pattern | Why |
 |---|---|
 | Guard Assertion | an assertion used *in a guarding position* early in a test; the same method is a guard in one test and an ordinary assertion in another, so no declaration holds the role — the assertion counterpart of Guard Clause, excluded on the same ground |
+
+**Chapter 22 completes the symmetry chapter 20 started, exclusion included.** Setup and
+teardown each offer the same three places to put the work — in the test, in a method the
+framework calls, or in something that does it for you — and in each chapter the in-line
+answer is left out on Guard Clause's ground. What is catalogued is the choice a declaration
+can hold.
+
+`GarbageCollectedTeardown` is the odd one and the most useful of the three: it annotates a
+fixture that has *nothing* to clean up, which turns an empty tearDown somebody wrote out of
+habit into a statement — everything here is reclaimed by the runtime, so no file, no socket,
+no row survives the test. The day one does, that is the claim that was broken.
+
+Two more teardowns arrive with chapter 25: table truncation and transaction rollback are
+teardown patterns the book files under Database rather than here.
+
+**One of chapter 22's four is left out:**
+
+| Pattern | Why |
+|---|---|
+| In-line Teardown | the cleaning up written in the body of the test method itself; nothing holds a role in it — the same ground as In-line Setup |
 
 ## Shape of the generated attribute
 
