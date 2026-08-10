@@ -70,7 +70,7 @@ system into the code it documents.
 | Pattern | Work | What it qualifies |
 |---|---|---|
 | Module | Domain-Driven Design | a namespace |
-| Conformist, Customer/Supplier, Partnership, Separate Ways | Domain-Driven Design | the relationship *between* two bounded contexts |
+| Conformist, Customer/Supplier Development, Partnership, Separate Ways | Domain-Driven Design | the relationship *between* two bounded contexts |
 | Context Map | Domain-Driven Design | the whole landscape — it is what you draw *from* the annotations |
 | Segregated Core, Abstract Core, Highlighted Core, Distillation Document, Domain Vision Statement | Domain-Driven Design | an act of refactoring, or a document; what they produce is already expressible, a distilled core being an assembly annotated `CoreDomain`, and the abstract core of a framework being a role of `PluggableComponentFramework` |
 | Guard Clause | — | a shape a method body takes; nothing holds a role in it |
@@ -85,7 +85,7 @@ applied to whether a pattern belongs here at all.
 | Intention-Revealing Interfaces | Domain-Driven Design | asks that names come from the ubiquitous language; nothing mechanical distinguishes a good name from a bad one |
 | Conceptual Contours | Domain-Driven Design | a judgement about where a model's seams fall, not a property of a declaration |
 | Ubiquitous Language, Continuous Integration, Evolving Order | Domain-Driven Design | practices of a team, not participants in code |
-| Model-Driven Design, Hands-On Modellers, Declarative Design, System Metaphor | Domain-Driven Design | ways of working, or of thinking about a model; a codebase can follow all four and no declaration is a participant in any |
+| Model-Driven Design, Hands-on Modelers, Declarative Design, System Metaphor, Refactoring Toward Deeper Insight, Drawing on Established Formalisms | Domain-Driven Design | ways of working, or of thinking about a model; a codebase can follow all six and no declaration is a participant in any |
 | Responsibility Layers | Domain-Driven Design | what the pattern asserts is an **order** — each layer depends only on those beneath it, and the layers are ranked by rate of change — and nothing in this vocabulary orders assemblies. Taking the five Evans names (Potential, Operations, Decision Support, Policy, Commitment) as fixed roles would supply one, but those are the layers he found in a shipping domain, offered as an illustration; the pattern is finding your own |
 | Big Ball of Mud | Foote and Yoder, *Pattern Languages of Program Design 4*, 2000 | what it asserts about a participant is that it has no discernible structure, which is the absence of an assertion rather than one. Reached through Evans, who uses it to characterise a neighbouring context, and decided on the same criterion that admits Smart UI ([ADR-0023](../doc/handwritten/for-maintainers/adr/0023-admit-an-anti-pattern-on-the-same-terms-as-any-pattern.md)) |
 
@@ -94,6 +94,61 @@ Evans names it, a class or an assembly holds it, and it licenses assertions — 
 usual three. It is the only entry whose assertions *exempt* rather than constrain,
 and [ADR-0023](../doc/handwritten/for-maintainers/adr/0023-admit-an-anti-pattern-on-the-same-terms-as-any-pattern.md)
 records why that is admitted rather than special-cased.
+
+## How complete each catalogue is
+
+A count on its own does not say whether a catalogue is finished. Twenty-three Gang of Four
+patterns is the whole book; thirty-nine *Analysis Patterns* is where somebody stopped. Until
+this was written down the two looked the same, and an absent pattern could not be told from a
+deliberate one — which is the condition
+[ADR-0001](../doc/handwritten/for-maintainers/adr/0001-check-every-pull-request-against-the-adr-base.md)
+exists to prevent, applied to catalogues rather than to decisions.
+
+| Catalogue | Held | Its work | Status |
+|---|---|---|---|
+| `GangOfFour` | 23 | 23 | **complete** — every pattern of the book |
+| `EnterpriseApplicationArchitecture` | 51 | 51 | **complete** — checked name by name against Fowler's own index at `martinfowler.com/eaaCatalog` |
+| `AccountingPatterns` | 9 | 9 | **complete** — the whole of the 2000 paper |
+| `EnterpriseIntegration` | 65 | 65 | **complete** |
+| `XUnitTestPatterns` | 62 | 68 | **complete** — the other six are in the exclusion tables above |
+| `DomainDrivenDesign` | 23 | 45 + 2 | **complete** — with one open question about a possible twenty-fourth entry, below |
+| `AnalysisPatterns` | 39 | — | **deliberately stopped**, and the only one that is |
+| `Idioms` | 2 | — | **never complete by construction** ([ADR-0013](../doc/handwritten/for-maintainers/adr/0013-shelve-a-pattern-without-a-body-of-work-under-idioms.md)) |
+
+In all six marked complete, a pattern of the work that is neither catalogued nor named in an
+exclusion table above is a **defect**, not work in progress. That is what the word is for here.
+The open question below is about whether one *more* entry belongs, not about a gap.
+
+**Domain-Driven Design, counted against Evans' own reference.** The *DDD Reference* he
+publishes under Creative Commons lists **45** patterns; the catalogue holds 21 of them, 19 are
+in the exclusion tables, and two more entries — `Specification` and `SmartUi` — come from the
+2004 book without appearing in the reference's contents, which is why the total is 23 rather
+than 21. Checking the two lists against each other turned up four things worth fixing and one
+worth asking:
+
+* **Two exclusions were spelled in this file's words rather than in Evans'.** *Hands-On
+  Modellers* is his *Hands-on Modelers*, and *Customer/Supplier* is his *Customer/Supplier
+  Development*. A work's own spelling is what an entry carries
+  ([ADR-0028](../doc/handwritten/for-maintainers/adr/0028-hold-a-pattern-in-every-catalogue-whose-work-presents-it.md)),
+  and an exclusion is no different — a reader searching for the name Evans used found nothing.
+* **Two patterns were in neither list.** *Refactoring Toward Deeper Insight* and *Drawing on
+  Established Formalisms* are ways of working, so they belong with the other four in the
+  practices row; they were simply never written down.
+* **`KnowledgeLevel` is the open question, and it is the maintainer's.** It is catalogued under
+  `AnalysisPatterns`, where Fowler named it. Evans gives it a section of his own reference, in
+  his own pattern language — which reads as a presentation under ADR-0028, and would make it
+  the third name held by two catalogues, beside `Repository` and `ValueObject`. But ADR-0024
+  described it as reached "through Evans, who sends the reader to Fowler for it", which reads
+  as crediting rather than presenting. **The two readings are not settled by anything read
+  here**, so nothing was changed: deciding it needs the 2004 book's own words, not a
+  recollection of them.
+
+**Analysis Patterns is the one catalogue stopped on purpose**, and stopping is a decision like
+any other. Chapters 2, 3, 4, 5 and 8 are catalogued; chapter 6 is superseded by the accounting
+paper
+([ADR-0026](../doc/handwritten/for-maintainers/adr/0026-follow-an-authors-own-supersession-of-a-catalogued-chapter.md));
+the rest is untouched. A reader counting thirty-nine against the book should read it as work
+paused rather than a catalogue with holes.
 
 ## Chapters catalogued whole, including what a contents page does not name
 
