@@ -1,0 +1,23 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "StoredProcedureTest",
+  "summary": "Tests logic that lives in the database rather than in the application, so that what the schema computes is covered like anything else.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "StoredProcedureTest",
+      "targets": [
+        "Class",
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "A test whose system under test is a stored procedure. Annotating it says the coverage exists somewhere a code-coverage tool will never look: logic in the database is invisible to every measurement the application makes of itself, so an unannotated procedure and an untested one are indistinguishable.",
+      "links": []
+    }
+  ]
+}
