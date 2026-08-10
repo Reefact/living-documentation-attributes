@@ -1,0 +1,23 @@
+{
+  "catalog": "MicroservicesPatterns",
+  "name": "PollingPublisher",
+  "summary": "Publishes the messages an outbox holds by polling the table for them, which works on any database and buys that with a poll interval and an ordering problem.",
+  "reference": {
+    "author": "Chris Richardson",
+    "work": "Microservices Patterns",
+    "year": 2018
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "PollingPublisher",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "Reads the outbox on a timer and publishes what it finds. Working against any SQL database is its whole argument; what it costs is latency the rest of the system inherits, and an order that is tricky to guarantee once more than one instance is polling.",
+      "links": []
+    }
+  ]
+}
