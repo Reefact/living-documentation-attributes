@@ -1,0 +1,27 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "TestStub",
+  "summary": "Feeds the system under test the indirect inputs a test needs, so that logic depending on what another component returns can be verified.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "specialisationOf": {
+    "catalog": "XUnitTestPatterns",
+    "name": "TestDouble"
+  },
+  "inherited": true,
+  "roles": [
+    {
+      "name": "TestStub",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "repeatable": false,
+      "summary": "A double that answers with what the test decided it should answer. Its whole direction is inward — it supplies inputs and it is not consulted afterwards, so a stub that has grown assertions is a mock wearing the wrong name, which is the confusion this catalogue exists to end.",
+      "links": []
+    }
+  ]
+}
