@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "MessageExpiration",
+  "summary": "Says when a message stops being worth acting on, so that a stale instruction is discarded rather than obeyed late.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "MessageExpiration",
+      "targets": [
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "summary": "The property after which the message should not be processed. It exists because a message queued through an outage may arrive after it has become wrong, and a receiver has no other way to know that acting on it is worse than dropping it.",
+      "links": []
+    }
+  ]
+}
