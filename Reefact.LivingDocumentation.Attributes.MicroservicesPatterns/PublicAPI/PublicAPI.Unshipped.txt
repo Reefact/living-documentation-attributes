@@ -8,3 +8,5 @@ Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.DatabasePerService.
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.DatabasePerService.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.DatabasePerService.ServiceAttribute
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.DatabasePerService.ServiceAttribute.ServiceAttribute() -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.SharedDatabaseAttribute
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.SharedDatabaseAttribute.SharedDatabaseAttribute() -> void

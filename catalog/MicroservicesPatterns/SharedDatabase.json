@@ -1,0 +1,24 @@
+{
+  "catalog": "MicroservicesPatterns",
+  "name": "SharedDatabase",
+  "summary": "Lets several services read and write one database, so that a transaction spanning them is an ordinary local one — and so that none of them can change a table alone.",
+  "reference": {
+    "author": "Chris Richardson",
+    "work": "Microservices Patterns",
+    "year": 2018
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "SharedDatabase",
+      "targets": [
+        "Interface",
+        "Class",
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "The service that reads or writes data another service owns. It buys ACID across the whole application and pays for it twice over: a schema change must be coordinated with every other service, and a long transaction in one of them blocks the rest.",
+      "links": []
+    }
+  ]
+}
