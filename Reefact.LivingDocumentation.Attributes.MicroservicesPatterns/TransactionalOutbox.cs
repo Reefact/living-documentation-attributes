@@ -72,7 +72,7 @@ namespace Reefact.LivingDocumentation.Attributes.MicroservicesPatterns {
         ///     of it has to be idempotent whether its author knew that or not.
         /// </summary>
         [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
-        public sealed class MessageRelayAttribute : Role {
+        public class MessageRelayAttribute : Role {
 
             /// <summary>
             ///     The <see cref="MessageOutboxAttribute" /> this role is bound to. Optional: it is only needed when
