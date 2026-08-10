@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "FormatIndicator",
+  "summary": "Says which version or format a message is in, so that a receiver can accept more than one and a sender can change to a third.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "FormatIndicator",
+      "targets": [
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "summary": "The property naming the message's format. It is the cheapest thing to add before the first version ships and the most expensive to add afterwards, since a message without one can only be read by guessing.",
+      "links": []
+    }
+  ]
+}
