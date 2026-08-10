@@ -1,0 +1,23 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "TestRunner",
+  "summary": "Runs the tests and reports what happened, so that running them is one action rather than a procedure.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": true,
+  "roles": [
+    {
+      "name": "TestRunner",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The participant that turns a suite into a result. Most codebases use the one their framework ships and annotate nothing; the role earns its place where a team wrote its own — a runner for a device, a harness for a legacy system — because then it is the piece nobody else understands.",
+      "links": []
+    }
+  ]
+}
