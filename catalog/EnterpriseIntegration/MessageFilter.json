@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "MessageFilter",
+  "summary": "Discards the messages a component is not interested in, so that a receiver is spared the ones it would only ignore.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "MessageFilter",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "A router with one output and the option of none: what matches passes, what does not is dropped. The distinction from a selective consumer is where it sits — a filter is in the channel and drops for everyone, a selective consumer chooses for itself.",
+      "links": []
+    }
+  ]
+}
