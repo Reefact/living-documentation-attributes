@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "Resequencer",
+  "summary": "Puts a stream of related messages back into order, so that a receiver that depends on sequence is not defeated by the transport.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Resequencer",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The stateful participant that buffers what arrives early and releases in order. It changes neither the messages nor their destination, which is what makes it a router rather than a translator, and it needs a sequence to work from.",
+      "links": []
+    }
+  ]
+}
