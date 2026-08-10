@@ -123,6 +123,8 @@ Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Saga.Role
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Saga.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Saga.SagaAttribute
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Saga.SagaAttribute.SagaAttribute() -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.SelfRegistrationAttribute
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.SelfRegistrationAttribute.SelfRegistrationAttribute() -> void
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.ServerSideServiceDiscoveryAttribute
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.ServerSideServiceDiscoveryAttribute.ServerSideServiceDiscoveryAttribute() -> void
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.ServiceComponentTest
