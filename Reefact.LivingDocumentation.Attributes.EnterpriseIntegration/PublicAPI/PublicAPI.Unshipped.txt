@@ -1,4 +1,6 @@
 #nullable enable
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ChannelAdapterAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ChannelAdapterAttribute.ChannelAdapterAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.DatatypeChannelAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.DatatypeChannelAttribute.DatatypeChannelAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.DeadLetterChannelAttribute
