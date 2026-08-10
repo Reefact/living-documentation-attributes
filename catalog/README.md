@@ -112,7 +112,7 @@ exists to prevent, applied to catalogues rather than to decisions.
 | `EnterpriseIntegration` | 65 | 65 | **complete** |
 | `XUnitTestPatterns` | 62 | 68 | **complete** — the other six are in the exclusion tables above |
 | `DomainDrivenDesign` | 23 | 45 + 2 | **complete** — with one open question about a possible twenty-fourth entry, below |
-| `MicroservicesPatterns` | 22 | 48 | **in progress** — six groups of fourteen catalogued whole and a seventh part-held, and around half the work will be excluded ([ADR-0033](../doc/handwritten/for-maintainers/adr/0033-admit-microservices-patterns-as-a-catalogue.md)) |
+| `MicroservicesPatterns` | 24 | 48 | **in progress** — six groups of fourteen catalogued whole and two part-held, and around half the work will be excluded ([ADR-0033](../doc/handwritten/for-maintainers/adr/0033-admit-microservices-patterns-as-a-catalogue.md)) |
 | `AnalysisPatterns` | 39 | — | **deliberately stopped**, and the only one that is |
 | `Idioms` | 2 | — | **never complete by construction** ([ADR-0013](../doc/handwritten/for-maintainers/adr/0013-shelve-a-pattern-without-a-body-of-work-under-idioms.md)) |
 
@@ -660,18 +660,19 @@ is never looked at, which is why the honest implementation throws.
 
 ## Microservices Patterns, and the words this catalogue already knew
 
-**Twenty-two of forty-eight.** Richardson's pattern language holds 48 patterns across fourteen
+**Twenty-four of forty-eight.** Richardson's pattern language holds 48 patterns across fourteen
 groups on the index he maintains at `microservices.io/patterns/index.html`; *Service
 collaboration* (eight), *Transactional messaging* (three), *Communication styles* (four),
 *External API* (two), *Reliability* (one) and *Refactoring to services* (two) are catalogued
-whole, and two of the four *Service boundaries* patterns are held while the other two wait on
-the maintainer — see below. Nothing so far has been excluded. Its admission is
+whole; *Testing* holds two of the three the index lists, and two of the four *Service boundaries*
+patterns are held while the rest wait on the maintainer — see below. Nothing so far has been
+excluded. Its admission is
 [ADR-0033](../doc/handwritten/for-maintainers/adr/0033-admit-microservices-patterns-as-a-catalogue.md),
 which also estimates that between twenty-five and thirty of the 48 will be admissible: roughly
 half the language is deployment and observability topology, which no C# declaration holds.
-A reader counting twenty-two against forty-eight is looking at work in progress.
+A reader counting twenty-four against forty-eight is looking at work in progress.
 
-**Where these entries were read from.** All twenty-four pattern pages were fetched and read —
+**Where these entries were read from.** All twenty-five pattern pages were fetched and read —
 context, problem, solution, related patterns — so the roles below are the participants the
 author names, not participants recalled from the book. Where a page names a thing without
 giving it a noun, the name here is this catalogue's and is flagged as such: `ViewUpdater` is
@@ -680,13 +681,14 @@ date by subscribing to domain events*. The four roles of `TransactionalOutbox` a
 own list.
 
 The work in the `reference` field is the 2018 book, not the site; the site is the same pattern
-language maintained by the same author. **Ten of the twenty-two pages point at the book in their
+language maintained by the same author. **Ten of the twenty-four pages point at the book in their
 body.** Seven say outright that it "describes this pattern in a lot more detail"; Saga sends the
 reader to section 4.3, Messaging to the book's treatment of inter-communication, and Strangler
 application to chapter 13 for the refactoring rather than for the pattern. The other twelve —
 Database per Service, Shared database, Event sourcing, Remote Procedure Invocation,
 Domain-specific protocol, Idempotent Consumer, API Gateway, Backend for front-end, Circuit
-Breaker, the two decomposition patterns and Anti-corruption layer — carry no such line,
+Breaker, the two decomposition patterns, Anti-corruption layer and the two testing patterns —
+carry no such line,
 and are held on
 [ADR-0033](../doc/handwritten/for-maintainers/adr/0033-admit-microservices-patterns-as-a-catalogue.md)'s
 other ground: each is the subject matter of a chapter of the 2018 book, or predates it outright.
@@ -824,7 +826,7 @@ a relation never crosses a catalogue
 The classification the subdomain entry mentions — core, supporting, generic — is Evans', borrowed
 by this work and spelled in its own summary rather than asserted by inheritance.
 
-### Two patterns held back for want of evidence, not for want of merit
+### Three patterns held back for want of evidence, not for want of merit
 
 `SelfContainedService` and `ServicePerTeam` are **not** excluded. Both are annotatable, and both
 carry assertions of the useful kind — a self-contained service makes no synchronous call while
@@ -847,6 +849,15 @@ pattern (ADR-0028). **The decision is the maintainer's**, and there are three wa
 book's contents past chapter 2 and add them if they are there; decide that the catalogue follows
 the author's *pattern language* rather than the 2018 book, which is a change to ADR-0033 and needs
 its own record; or leave them out and say so here.
+
+**`ConsumerSideContractTest` joins them, for a different reason.** It is annotatable and it carries
+a clear assertion — a suite that verifies a *client* can still talk to the service it calls, the
+counterpart of the consumer-driven test — and unlike the two above it is not marked `new`, and
+contract testing from the client's side predates the 2018 book. What it has no write-up: the index
+gives it one line of gloss and links to the page for a different pattern. Every other entry in this
+catalogue rests on a page with at least a problem and a solution, `AntiCorruptionLayer` included.
+Minting an entry from an index gloss alone would be a lower bar than any entry so far has cleared,
+and lowering it is the maintainer's call, not a drafting decision.
 
 **Refactoring to services is the seventh group**, two patterns, catalogued whole — and it is the
 group about leaving, which makes both entries assertions with an expiry date.
@@ -882,6 +893,41 @@ Its page is the thinnest in the catalogue — a problem and a solution, nothing 
 is still held. ADR-0033's inclusive posture covers the presentation question, and its reference
 rule is satisfied by the second limb rather than the first: no book line, but the pattern predates
 the 2018 book outright, being Evans' from 2003.
+
+**Testing is the eighth group, and its index and its pages disagree about how many patterns it
+has.** The index lists three bullets; there are two pages, and the third bullet points at a page
+describing something else:
+
+| Index bullet | Page it links to | Page's own title |
+|---|---|---|
+| Consumer-driven contract test | `testing/service-integration-contract-test.html` | **Service Integration Contract Test** |
+| Consumer-side contract test | *the same page* | — the page describes the consumer-**driven** test, not this one |
+| Service component sest *(sic)* | `testing/service-component-test.html` | **Service Component Test** |
+
+The two entries take their names from the page headings, which are the author's own titles for the
+patterns; *consumer-driven contract test* is the phrase most readers will search for and is written
+into `ServiceIntegrationContractTest`'s summary for that reason. `ConsumerSideContractTest` is
+**held back**, below, and not because it is unannotatable.
+
+**The two are each other's mitigation**, which is the reason to hold both rather than one.
+`ServiceComponentTest` is fast, cheap and reliable because it replaces everything the service
+invokes — and the work states its own open issue: *how to ensure that the test doubles always
+correctly emulate the behavior of the invoked services?* `ServiceIntegrationContractTest` is the
+answer, and it carries an open issue of its own pointing the other way: *how to ensure that the
+consumer provided tests match what the consumer actually requires?* Neither closes the loop; each
+role's summary says which end it leaves open.
+
+**`ServiceIntegrationContractTest` is annotated for one fact and one only**: the suite runs in the
+provider's build and belongs to the consumer's team. Nothing in a test class shows that, and it is
+what makes such a suite baffling to the people it fails.
+
+**No `TestDouble` role here, on purpose.** `ServiceComponentTest`'s doubles are exactly what
+`XUnitTestPatterns` names in five entries and separates by what each never does. A sixth, vaguer
+role in this package would say less about the same class, and a relation to the real one cannot
+exist across catalogues
+([ADR-0027](../doc/handwritten/for-maintainers/adr/0027-ship-one-independent-package-per-catalogued-work.md)).
+What this catalogue adds is `ServiceUnderTest` — the boundary of what a green run actually
+covered — and the sample annotates the boundary and leaves the stub bare.
 
 **Transactional messaging is the second group**, three patterns, catalogued whole. It answers
 the question the first group keeps running into: a service has to change its data *and* send a
