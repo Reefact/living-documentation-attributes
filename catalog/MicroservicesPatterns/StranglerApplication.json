@@ -1,0 +1,61 @@
+{
+  "catalog": "MicroservicesPatterns",
+  "name": "StranglerApplication",
+  "summary": "Migrates a monolith by growing a new application around it, service by service, so that the monolith's share of the work only ever shrinks and no rewrite has to be finished before anything ships.",
+  "reference": {
+    "author": "Chris Richardson",
+    "work": "Microservices Patterns",
+    "year": 2018
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "StranglerApplication",
+      "targets": [
+        "Interface",
+        "Class",
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "The new application growing around the old one. Its value is that it ships before the migration is over, and its risk is that the migration is never over — which is a state nothing in the code reports.",
+      "links": []
+    },
+    {
+      "name": "Monolith",
+      "targets": [
+        "Interface",
+        "Class",
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "The legacy application being strangled. Saying so is what distinguishes it from an application nobody intends to replace, and the two are otherwise identical to read.",
+      "links": []
+    },
+    {
+      "name": "ExtractedService",
+      "targets": [
+        "Interface",
+        "Class",
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "A service holding functionality that used to live in the monolith. It carries an obligation the new code cannot show: there is, or was, code in the monolith doing this too, and until somebody deletes it the system has two answers to one question.",
+      "links": [
+        "Monolith"
+      ]
+    },
+    {
+      "name": "NewService",
+      "targets": [
+        "Interface",
+        "Class",
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "A service implementing something the monolith never did. The work singles these out because they show the business a return before any extraction is finished — and because, unlike an extracted service, they leave nothing behind to remove.",
+      "links": [
+        "StranglerApplication"
+      ]
+    }
+  ]
+}
