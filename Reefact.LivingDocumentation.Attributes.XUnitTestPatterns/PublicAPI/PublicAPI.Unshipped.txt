@@ -93,3 +93,5 @@ Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestSuiteObjectAttribut
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestSuiteObjectAttribute.TestSuiteObjectAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestUtilityMethodAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestUtilityMethodAttribute.TestUtilityMethodAttribute() -> void
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.UnfinishedTestAssertionAttribute
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.UnfinishedTestAssertionAttribute.UnfinishedTestAssertionAttribute() -> void

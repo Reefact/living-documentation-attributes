@@ -1,0 +1,22 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "UnfinishedTestAssertion",
+  "summary": "Fails on purpose to say the test is not written yet, so that a missing test is a red bar rather than an absence.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "UnfinishedTestAssertion",
+      "targets": [
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "A test that exists to be missing. It turns a gap into something the build reports, which is the only form in which a gap gets fixed — and it is the one annotation here whose value is that somebody comes back and removes it.",
+      "links": []
+    }
+  ]
+}
