@@ -1,0 +1,22 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "TestSuiteObject",
+  "summary": "Holds a collection of tests as an object, so that a set of tests is run, nested and passed around as one thing.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": true,
+  "roles": [
+    {
+      "name": "TestSuiteObject",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The composite of test cases, and often of other suites. Annotating it is what separates a real suite from a class that merely happens to hold a list of names: a suite can be nested, and a suite that has quietly become a flat list has lost the property its callers rely on.",
+      "links": []
+    }
+  ]
+}
