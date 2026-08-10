@@ -1,0 +1,22 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "TestcaseClassPerClass",
+  "summary": "Puts the tests of one class under test into one testcase class, so that the test tree mirrors the production tree.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "TestcaseClassPerClass",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The organisation that follows the code. It is the easiest to find and the least likely to say anything: a class with six responsibilities gets one testcase class with six unrelated fixtures, which is the pressure this choice hides.",
+      "links": []
+    }
+  ]
+}
