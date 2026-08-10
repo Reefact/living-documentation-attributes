@@ -12,7 +12,10 @@ its own:
 * role names are unique within a pattern;
 * `specialisationOf` points at an entry that exists in the SAME catalogue, and a
   declension never derives from a work published later than its own — the
-  anteriority that decides which side holds the definition (ADR-0006).
+  anteriority that decides which side holds the definition (ADR-0006);
+* a `specialisationOf` that names a role names one the target actually has, on a
+  target that is not flat, and no role of the narrowing reaches further than the
+  role it narrows (ADR-0034).
 
 Exit status: 0 when every entry is valid, 1 otherwise.
 """
@@ -77,6 +80,28 @@ def main():
             elif key not in entries:
                 failures.append(f"{shown}: specialisationOf points at {key[0]}.{key[1]}, "
                                 f"which is not in the catalog")
+            elif target.get("role") is not None:
+                # A relation may narrow one participant rather than the whole pattern (ADR-0034), and the two
+                # things that can go wrong with that are silent: a role that does not exist compiles to a
+                # missing base type, and a narrowing that may sit somewhere its parent may not asserts
+                # something the parent's own AttributeUsage denies.
+                _, base = entries[key]
+                base_roles = {role["name"]: role for role in base.get("roles", [])}
+                if len(base.get("roles", [])) == 1:
+                    failures.append(f"{shown}: specialisationOf names the role {target['role']} of a pattern "
+                                    f"with a single role, which is emitted flat — that relation is already "
+                                    f"attribute to attribute, so naming the role adds nothing")
+                elif target["role"] not in base_roles:
+                    failures.append(f"{shown}: specialisationOf names {target['role']}, "
+                                    f"which is not a role of {key[0]}.{key[1]}")
+                else:
+                    narrowed = set(base_roles[target["role"]]["targets"])
+                    for role in entry.get("roles", []):
+                        wider = set(role["targets"]) - narrowed
+                        if wider:
+                            failures.append(f"{shown}: role {role['name']} may be applied to "
+                                            f"{', '.join(sorted(wider))}, which {key[1]}.{target['role']} "
+                                            f"may not — a narrowing cannot reach further than what it narrows")
 
     for failure in failures:
         print(failure, file=sys.stderr)
