@@ -1,0 +1,49 @@
+{
+  "catalog": "MicroservicesPatterns",
+  "name": "CommandSideReplica",
+  "summary": "Lets a service implementing a command read another service's data from a local read-only replica it keeps current from that service's events, rather than querying it.",
+  "reference": {
+    "author": "Chris Richardson",
+    "work": "Microservices Patterns",
+    "year": 2018
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "CommandService",
+      "targets": [
+        "Interface",
+        "Class",
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "The service implementing the command. It reads the replica instead of calling the provider, which is what removes the runtime coupling and what makes the data it decides on potentially stale.",
+      "links": [
+        "ReplicaDatabase"
+      ]
+    },
+    {
+      "name": "ProviderService",
+      "targets": [
+        "Interface",
+        "Class",
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "The service that owns the data, and that must publish an event whenever it changes — a duty it acquires for the benefit of a service it does not know is there.",
+      "links": []
+    },
+    {
+      "name": "ReplicaDatabase",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The read-only copy the command service keeps up to date by subscribing to the provider's events. It has exactly one writer, and nothing reading it may assume it is current.",
+      "links": [
+        "ProviderService"
+      ]
+    }
+  ]
+}
