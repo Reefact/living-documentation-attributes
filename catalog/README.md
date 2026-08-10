@@ -112,6 +112,7 @@ exists to prevent, applied to catalogues rather than to decisions.
 | `EnterpriseIntegration` | 65 | 65 | **complete** |
 | `XUnitTestPatterns` | 62 | 68 | **complete** — the other six are in the exclusion tables above |
 | `DomainDrivenDesign` | 23 | 45 + 2 | **complete** — with one open question about a possible twenty-fourth entry, below |
+| `MicroservicesPatterns` | 8 | 48 | **in progress** — one group of fourteen catalogued, and around half the work will be excluded ([ADR-0033](../doc/handwritten/for-maintainers/adr/0033-admit-microservices-patterns-as-a-catalogue.md)) |
 | `AnalysisPatterns` | 39 | — | **deliberately stopped**, and the only one that is |
 | `Idioms` | 2 | — | **never complete by construction** ([ADR-0013](../doc/handwritten/for-maintainers/adr/0013-shelve-a-pattern-without-a-body-of-work-under-idioms.md)) |
 
@@ -656,6 +657,69 @@ numbers that agree tell a reader nothing about why. A generated value removes co
 between runs and buys them back as irreproducibility, so a failure that depends on what was
 generated cannot be re-run unless what was generated is reported. And a dummy is the value that
 is never looked at, which is why the honest implementation throws.
+
+## Microservices Patterns, and the words this catalogue already knew
+
+**Eight of forty-eight.** Richardson's pattern language holds 48 patterns across fourteen
+groups on the index he maintains at `microservices.io/patterns/index.html`; the *Service
+collaboration* group is the first instalment, and it is catalogued whole — eight entries, no
+exclusion. Its admission is
+[ADR-0033](../doc/handwritten/for-maintainers/adr/0033-admit-microservices-patterns-as-a-catalogue.md),
+which also estimates that between twenty-five and thirty of the 48 will be admissible: roughly
+half the language is deployment and observability topology, which no C# declaration holds.
+A reader counting eight against forty-eight is looking at work in progress.
+
+**Where this instalment was read from.** All eight pattern pages were fetched and read —
+context, problem, solution, related patterns — so the roles below are the participants the
+author names, not participants recalled from the book. Where a page names a thing without
+giving it a noun, the name here is this catalogue's and is flagged as such: `ViewUpdater` is
+the one, for what the CQRS page calls *the application keeping the database up to date by
+subscribing to domain events*. The work in the `reference` field is the 2018 book, not the
+site; the site is the same pattern language maintained by the same author, and each of the
+eight pages states that the book covers it.
+
+**Two names were already in the catalog, and both are held twice on purpose.** This is
+[ADR-0028](../doc/handwritten/for-maintainers/adr/0028-hold-a-pattern-in-every-catalogue-whose-work-presents-it.md)
+applied entry by entry, and ADR-0033 states the posture for the close calls: where the work
+presents the pattern and a reader could still argue it leans on an earlier source, the entry
+is held. A developer who reaches for `[DomainEvent]` in a microservices codebase and does not
+find it in the microservices package has been failed by the catalogue.
+
+| Here | Already held as | Why this work presents it |
+|---|---|---|
+| `MicroservicesPatterns/DomainEvent` | `DomainDrivenDesign/DomainEvent` | credited to DDD in its first line, then answering a problem Evans never posed — *how does a service publish an event when it updates its data?* An aggregate emitting an event is Evans'; somebody in another process listening is not |
+| `MicroservicesPatterns/SharedDatabase` | `EnterpriseIntegration/SharedDatabase` | Hohpe and Woolf present it as an integration style to choose; Richardson presents it as the thing *Database per Service* exists to escape, and names it an anti-pattern from that page. Same schema, opposite recommendation |
+
+Three more homonyms are ahead in later groups — Anti-corruption layer, Remote Procedure
+Invocation and Messaging — and each is decided when its group is reached, not now.
+
+**`SharedDatabase` is catalogued as an anti-pattern**, which
+[ADR-0023](../doc/handwritten/for-maintainers/adr/0023-admit-an-anti-pattern-on-the-same-terms-as-any-pattern.md)
+already allows. It is worth more here than the clean half of the pair: *Database per Service*
+is what a team says in a design review, and *shared database* is what the code actually does
+for another two years. The annotation is what makes the second countable.
+
+**`Cqrs`, not `CQRS`.** The .NET convention capitalises only the first letter of an acronym of
+three letters or more, and the generated attribute follows it. The full name is in the entry's
+summary, and a case-insensitive search for the word finds it.
+
+Three shapes in this group are worth explaining, because each could have been done otherwise.
+
+* **`DomainEvent` is flat**, one role on the event class, exactly like the DDD entry. The
+  publication half of Richardson's version — the outbox, the polling publisher, the log tailing
+  — is the *Transactional messaging* group, three patterns of its own. Giving this entry a
+  `Publisher` role would have swallowed them.
+* **`Saga.CompensatingTransaction` links the saga, not the step it undoes.** Linking the step
+  is what a reader wants, and a link is a `Type`
+  ([ADR-0008](../doc/handwritten/for-maintainers/adr/0008-bind-participants-with-typed-links.md))
+  while a local transaction is a method — so it cannot be written. What the annotations do give
+  is the count: a participant with two local transactions and one compensating transaction is
+  visibly a participant the saga cannot fully back out of.
+* **`ApiComposition.Composer` targets `Method` as well as a type.** A composition is often one
+  controller action doing an in-memory join, and the declaration that introduces the role is
+  then the method
+  ([ADR-0010](../doc/handwritten/for-maintainers/adr/0010-annotate-the-declaration-that-introduces-a-role.md)).
+  The same is true of `Cqrs.ViewUpdater`, which is as often a handler method as a class.
 
 ## Shape of the generated attribute
 
