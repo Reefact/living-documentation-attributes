@@ -40,10 +40,10 @@ architecture" from a claim into something a build can check.
 | `AccountingPatterns` | 9 | complete | Fowler — *Accounting Patterns*, 2000 |
 | `EnterpriseIntegration` | 65 | complete | Hohpe & Woolf — *Enterprise Integration Patterns*, 2003 |
 | `XUnitTestPatterns` | 62 | complete | Meszaros — *xUnit Test Patterns*, 2007 |
-| `MicroservicesPatterns` | 17 | in progress | Richardson — *Microservices Patterns*, 2018 |
+| `MicroservicesPatterns` | 18 | in progress | Richardson — *Microservices Patterns*, 2018 |
 | `Idioms` | 2 | open-ended | patterns with a source but no catalog of their own — each entry names its own |
 
-**291 patterns, 512 roles** today, and the catalog is meant to grow by an order of
+**292 patterns, 513 roles** today, and the catalog is meant to grow by an order of
 magnitude. *Complete* means every pattern of the work is either held or named in
 [the exclusion tables](catalog/README.md#patterns-deliberately-left-out) with the reason it
 cannot be annotated — so in those six, a missing pattern is a defect rather than work in
