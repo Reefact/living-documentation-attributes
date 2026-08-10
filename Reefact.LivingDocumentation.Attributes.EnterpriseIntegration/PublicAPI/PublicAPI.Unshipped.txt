@@ -10,6 +10,8 @@ Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.Aggregator.Correlat
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.Aggregator.CorrelationAttribute.CorrelationAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.Aggregator.Role
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.Aggregator.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.CanonicalDataModelAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.CanonicalDataModelAttribute.CanonicalDataModelAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ChannelAdapterAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ChannelAdapterAttribute.ChannelAdapterAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ClaimCheck

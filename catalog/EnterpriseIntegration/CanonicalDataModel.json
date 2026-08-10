@@ -1,0 +1,25 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "CanonicalDataModel",
+  "summary": "A message format belonging to no application, which every application translates to and from, so that adding one application costs one translation rather than one per correspondent.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "CanonicalDataModel",
+      "targets": [
+        "Interface",
+        "Class",
+        "Struct",
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "The format that is nobody's. Annotating it is what makes the indirection countable: six applications translating to each other need thirty translators and twelve through a canonical model, and a type that has quietly acquired one application's vocabulary is the way that saving is lost.",
+      "links": []
+    }
+  ]
+}
