@@ -1,0 +1,22 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "LayerTest",
+  "summary": "Exercises one layer of the system on its own, so that a failure names the layer it is in.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "LayerTest",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "A test scoped to a layer rather than to a class or a feature. Annotating it is what makes a claimed architecture checkable from the test side: a layer test that has quietly started reaching two layers is a test whose failure no longer localises anything.",
+      "links": []
+    }
+  ]
+}
