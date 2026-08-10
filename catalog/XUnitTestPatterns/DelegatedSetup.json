@@ -1,0 +1,23 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "DelegatedSetup",
+  "summary": "Builds the fixture by calling methods written for the purpose, so that a test states what it needs without showing how it is made.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "DelegatedSetup",
+      "targets": [
+        "Method",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "A test whose setup lives in methods it calls rather than in its own body. It is the middle answer between writing everything in the test and letting the framework do it unseen: the reader can follow the call if they want to and does not have to.",
+      "links": []
+    }
+  ]
+}
