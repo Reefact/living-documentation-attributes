@@ -19,6 +19,8 @@ Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.RecordedTestAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.RecordedTestAttribute.RecordedTestAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.ScriptedTestAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.ScriptedTestAttribute.ScriptedTestAttribute() -> void
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestAutomationFrameworkAttribute
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestAutomationFrameworkAttribute.TestAutomationFrameworkAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestcaseClassAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestcaseClassAttribute.TestcaseClassAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestcaseClassPerClassAttribute
