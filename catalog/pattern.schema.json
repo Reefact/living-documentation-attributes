@@ -23,6 +23,7 @@
         "AnalysisPatterns",
         "AccountingPatterns",
         "EnterpriseIntegration",
+        "XUnitTestPatterns",
         "Idioms"
       ]
     },
