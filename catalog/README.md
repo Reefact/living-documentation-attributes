@@ -112,7 +112,7 @@ exists to prevent, applied to catalogues rather than to decisions.
 | `EnterpriseIntegration` | 65 | 65 | **complete** |
 | `XUnitTestPatterns` | 62 | 68 | **complete** — the other six are in the exclusion tables above |
 | `DomainDrivenDesign` | 23 | 45 + 2 | **complete** — with one open question about a possible twenty-fourth entry, below |
-| `MicroservicesPatterns` | 20 | 48 | **in progress** — five groups of fourteen catalogued whole and a sixth part-held, and around half the work will be excluded ([ADR-0033](../doc/handwritten/for-maintainers/adr/0033-admit-microservices-patterns-as-a-catalogue.md)) |
+| `MicroservicesPatterns` | 22 | 48 | **in progress** — six groups of fourteen catalogued whole and a seventh part-held, and around half the work will be excluded ([ADR-0033](../doc/handwritten/for-maintainers/adr/0033-admit-microservices-patterns-as-a-catalogue.md)) |
 | `AnalysisPatterns` | 39 | — | **deliberately stopped**, and the only one that is |
 | `Idioms` | 2 | — | **never complete by construction** ([ADR-0013](../doc/handwritten/for-maintainers/adr/0013-shelve-a-pattern-without-a-body-of-work-under-idioms.md)) |
 
@@ -660,18 +660,18 @@ is never looked at, which is why the honest implementation throws.
 
 ## Microservices Patterns, and the words this catalogue already knew
 
-**Twenty of forty-eight.** Richardson's pattern language holds 48 patterns across fourteen
+**Twenty-two of forty-eight.** Richardson's pattern language holds 48 patterns across fourteen
 groups on the index he maintains at `microservices.io/patterns/index.html`; *Service
 collaboration* (eight), *Transactional messaging* (three), *Communication styles* (four),
-*External API* (two) and *Reliability* (one) are catalogued whole, and two of the four *Service
-boundaries* patterns are held while the other two wait on the maintainer — see below. Nothing so
-far has been excluded. Its admission is
+*External API* (two), *Reliability* (one) and *Refactoring to services* (two) are catalogued
+whole, and two of the four *Service boundaries* patterns are held while the other two wait on
+the maintainer — see below. Nothing so far has been excluded. Its admission is
 [ADR-0033](../doc/handwritten/for-maintainers/adr/0033-admit-microservices-patterns-as-a-catalogue.md),
 which also estimates that between twenty-five and thirty of the 48 will be admissible: roughly
 half the language is deployment and observability topology, which no C# declaration holds.
-A reader counting twenty against forty-eight is looking at work in progress.
+A reader counting twenty-two against forty-eight is looking at work in progress.
 
-**Where these entries were read from.** All twenty-two pattern pages were fetched and read —
+**Where these entries were read from.** All twenty-four pattern pages were fetched and read —
 context, problem, solution, related patterns — so the roles below are the participants the
 author names, not participants recalled from the book. Where a page names a thing without
 giving it a noun, the name here is this catalogue's and is flagged as such: `ViewUpdater` is
@@ -680,16 +680,24 @@ date by subscribing to domain events*. The four roles of `TransactionalOutbox` a
 own list.
 
 The work in the `reference` field is the 2018 book, not the site; the site is the same pattern
-language maintained by the same author. **Nine of the twenty pages say outright that the book
-covers the pattern.** The other eleven — Database per Service, Shared database, Event sourcing,
-Remote Procedure Invocation, Domain-specific protocol, Idempotent Consumer, API Gateway,
-Backend for front-end, Circuit Breaker and the two decomposition patterns — carry no such line,
+language maintained by the same author. **Ten of the twenty-two pages point at the book in their
+body.** Seven say outright that it "describes this pattern in a lot more detail"; Saga sends the
+reader to section 4.3, Messaging to the book's treatment of inter-communication, and Strangler
+application to chapter 13 for the refactoring rather than for the pattern. The other twelve —
+Database per Service, Shared database, Event sourcing, Remote Procedure Invocation,
+Domain-specific protocol, Idempotent Consumer, API Gateway, Backend for front-end, Circuit
+Breaker, the two decomposition patterns and Anti-corruption layer — carry no such line,
 and are held on
 [ADR-0033](../doc/handwritten/for-maintainers/adr/0033-admit-microservices-patterns-as-a-catalogue.md)'s
 other ground: each is the subject matter of a chapter of the 2018 book, or predates it outright.
 Earlier versions of this paragraph claimed every page carried the line. They were wrong: the
 claim was made from the pages that happened to be read closely and checked properly only when
 the third group was catalogued.
+
+One trap, recorded because the next person to count will fall into it. Searching the pages for
+*"my book"* returns twelve, not ten: the API Gateway page carries a MEAP announcement for the
+second edition in its furniture, which is site chrome rather than a statement about the pattern.
+The count above is of the body only.
 
 **Two names were already in the catalog, and both are held twice on purpose.** This is
 [ADR-0028](../doc/handwritten/for-maintainers/adr/0028-hold-a-pattern-in-every-catalogue-whose-work-presents-it.md)
@@ -839,6 +847,41 @@ pattern (ADR-0028). **The decision is the maintainer's**, and there are three wa
 book's contents past chapter 2 and add them if they are there; decide that the catalogue follows
 the author's *pattern language* rather than the 2018 book, which is a change to ADR-0033 and needs
 its own record; or leave them out and say so here.
+
+**Refactoring to services is the seventh group**, two patterns, catalogued whole — and it is the
+group about leaving, which makes both entries assertions with an expiry date.
+
+`StranglerApplication` has four roles, and the one that earns the entry is `ExtractedService`. It
+carries an obligation the new code cannot show: there is, or was, code in the monolith doing this
+too, and until somebody deletes it the system has two answers to one question. `NewService` is its
+opposite and the work singles it out for a reason — it shows a return before any extraction is
+finished, and it leaves nothing behind to remove. `Monolith` is worth annotating because a legacy
+application being strangled reads exactly like one nobody intends to replace.
+
+Two of the four role names are this catalogue's rather than the author's, and are flagged here as
+`ViewUpdater` was. The page says *"there are services that implement functionality that previously
+resided in the monolith"* and *"services that implement new features"* — the distinction is the
+work's, the nouns `ExtractedService` and `NewService` are not.
+
+**`AntiCorruptionLayer` is the fifth and last exact homonym**, and the only one the two works spell
+differently. Evans writes *Anticorruption Layer*, Richardson writes *Anti-corruption layer*, so the
+entries are `DomainDrivenDesign/AnticorruptionLayer` and `MicroservicesPatterns/AntiCorruptionLayer`
+— which is
+[ADR-0028](../doc/handwritten/for-maintainers/adr/0028-hold-a-pattern-in-every-catalogue-whose-work-presents-it.md)
+working as intended rather than an inconsistency: a reader of either book finds the name spelled as
+that book spelled it.
+
+The two carry different assertions, which is
+[ADR-0007](../doc/handwritten/for-maintainers/adr/0007-decide-sameness-by-the-assertions-a-pattern-carries.md)'s
+test and the reason holding both costs nothing. Evans' has three roles — facade, adapter,
+translator — and is about two bounded contexts, either of which may outlive the other. Richardson's
+is flat, one role, and is about a legacy monolith: the layer exists to be deleted when the monolith
+goes, so counting the layers is counting how much of the migration is still owed.
+
+Its page is the thinnest in the catalogue — a problem and a solution, nothing else — and the entry
+is still held. ADR-0033's inclusive posture covers the presentation question, and its reference
+rule is satisfied by the second limb rather than the first: no book line, but the pattern predates
+the 2018 book outright, being Evans' from 2003.
 
 **Transactional messaging is the second group**, three patterns, catalogued whole. It answers
 the question the first group keeps running into: a service has to change its data *and* send a
