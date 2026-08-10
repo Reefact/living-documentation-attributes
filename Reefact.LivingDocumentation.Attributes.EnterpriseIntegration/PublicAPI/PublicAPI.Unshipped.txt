@@ -140,6 +140,8 @@ Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessageExpirationAt
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessageExpirationAttribute.MessageExpirationAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessageFilterAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessageFilterAttribute.MessageFilterAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessageHistoryAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessageHistoryAttribute.MessageHistoryAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessageRouterAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessageRouterAttribute.MessageRouterAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessageSequence
