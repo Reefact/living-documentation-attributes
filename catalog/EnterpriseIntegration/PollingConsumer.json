@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "PollingConsumer",
+  "summary": "Consumes a message only when it asks for one, so that the application decides when it is ready rather than the channel deciding for it.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "PollingConsumer",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The consumer that explicitly asks for a message and blocks until it gets one — the synchronous receiver. Its thread is its own, so the number of messages in flight is something the application can count, which is the trade against an event-driven consumer.",
+      "links": []
+    }
+  ]
+}
