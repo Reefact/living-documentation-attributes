@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "Normalizer",
+  "summary": "Routes each incoming format through a translator of its own so that messages meaning the same thing arrive in one format, whatever the sender chose to send.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Normalizer",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The participant that turns many equivalent formats into one. Like a composed message processor it is an assembly rather than a mechanism — a message router picking the format, a message translator per format — so its parts wear those patterns' own annotations and this one names the whole.",
+      "links": []
+    }
+  ]
+}
