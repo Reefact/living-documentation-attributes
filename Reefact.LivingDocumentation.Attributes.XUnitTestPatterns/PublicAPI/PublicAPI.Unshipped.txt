@@ -95,6 +95,8 @@ Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestEnumerationAttribut
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestEnumerationAttribute.TestEnumerationAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestHelperAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestHelperAttribute.TestHelperAttribute() -> void
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestHookAttribute
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestHookAttribute.TestHookAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestMethodAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestMethodAttribute.TestMethodAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestRunnerAttribute

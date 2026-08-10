@@ -1,0 +1,24 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "TestHook",
+  "summary": "Puts something in production code that exists only for a test, so that behaviour otherwise unreachable can be reached.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "TestHook",
+      "targets": [
+        "Method",
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "summary": "A member the production path never uses. The book offers it as a last resort, and the reason to annotate it is the same as the reason to hesitate: it is code shipped to production for the benefit of a test, and a codebase that cannot list its test hooks has no way to know how much of that it carries.",
+      "links": []
+    }
+  ]
+}
