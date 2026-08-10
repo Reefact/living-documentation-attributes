@@ -1,0 +1,45 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "DynamicRouter",
+  "summary": "Lets the destinations tell the router how to reach them, so that adding one is a message rather than a change to the router.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "DynamicRouter",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "A router whose rule is data it maintains rather than code it contains. It keeps the efficiency of a single hop while losing the dependency on knowing every destination in advance.",
+      "links": [
+        "RoutingTable"
+      ]
+    },
+    {
+      "name": "ControlChannel",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The channel a destination announces itself on. It is what makes the router dynamic: the knowledge arrives as a message, so a new destination costs the router no edit.",
+      "links": []
+    },
+    {
+      "name": "RoutingTable",
+      "targets": [
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "summary": "What the router learned from the control channel. Held as state rather than configuration, which is what makes it answerable at run time and what makes it something to rebuild after a restart.",
+      "links": []
+    }
+  ]
+}
