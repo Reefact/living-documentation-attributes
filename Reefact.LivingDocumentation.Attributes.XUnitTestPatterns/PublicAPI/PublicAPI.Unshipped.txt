@@ -11,6 +11,8 @@ Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.ConfigurableTestDoubleA
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.ConfigurableTestDoubleAttribute.ConfigurableTestDoubleAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.CreationMethodAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.CreationMethodAttribute.CreationMethodAttribute() -> void
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.CustomAssertionAttribute
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.CustomAssertionAttribute.CustomAssertionAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.DataDrivenTestAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.DataDrivenTestAttribute.DataDrivenTestAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.DelegatedSetupAttribute
