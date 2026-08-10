@@ -1,0 +1,36 @@
+{
+  "catalog": "MicroservicesPatterns",
+  "name": "ServiceComponentTest",
+  "summary": "Tests one service on its own, standing in for every service it invokes, so that the suite is fast and reliable and its verdict rests entirely on how honest the stand-ins are.",
+  "reference": {
+    "author": "Chris Richardson",
+    "work": "Microservices Patterns",
+    "year": 2018
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "ServiceComponentTest",
+      "targets": [
+        "Class",
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "The suite that exercises the service and nothing beyond it. Fast, cheap and reliable, and it can be entirely green while the application is broken — which is the trade the work states rather than a defect in any particular suite.",
+      "links": [
+        "ServiceUnderTest"
+      ]
+    },
+    {
+      "name": "ServiceUnderTest",
+      "targets": [
+        "Interface",
+        "Class",
+        "Assembly"
+      ],
+      "repeatable": true,
+      "summary": "The one service actually running. Everything it invokes is replaced, so this role marks the boundary of what the suite has really tested — and everything outside it is a claim resting on a double somebody has to keep honest.",
+      "links": []
+    }
+  ]
+}

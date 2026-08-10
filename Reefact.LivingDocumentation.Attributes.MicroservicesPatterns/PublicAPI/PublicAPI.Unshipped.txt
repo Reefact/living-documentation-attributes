@@ -121,6 +121,15 @@ Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Saga.Role
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Saga.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Saga.SagaAttribute
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Saga.SagaAttribute.SagaAttribute() -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.ServiceComponentTest
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.ServiceComponentTest.Role
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.ServiceComponentTest.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.ServiceComponentTest.ServiceComponentTestAttribute
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.ServiceComponentTest.ServiceComponentTestAttribute.ServiceComponentTestAttribute() -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.ServiceComponentTest.ServiceComponentTestAttribute.ServiceUnderTest.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.ServiceComponentTest.ServiceComponentTestAttribute.ServiceUnderTest.init -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.ServiceComponentTest.ServiceUnderTestAttribute
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.ServiceComponentTest.ServiceUnderTestAttribute.ServiceUnderTestAttribute() -> void
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.SharedDatabaseAttribute
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.SharedDatabaseAttribute.SharedDatabaseAttribute() -> void
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.StranglerApplication
