@@ -29,6 +29,8 @@ Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.DependencyLookupAttribu
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.DependencyLookupAttribute.DependencyLookupAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.DerivedValueAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.DerivedValueAttribute.DerivedValueAttribute() -> void
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.DummyObjectAttribute
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.DummyObjectAttribute.DummyObjectAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.FakeObjectAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.FakeObjectAttribute.FakeObjectAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.FreshFixtureAttribute

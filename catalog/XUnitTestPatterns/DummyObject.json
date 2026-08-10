@@ -1,0 +1,27 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "DummyObject",
+  "summary": "Fills a parameter that has to be there and is never used, so that a test can call what it needs to call without inventing something meaningful.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "specialisationOf": {
+    "catalog": "XUnitTestPatterns",
+    "name": "TestDouble"
+  },
+  "inherited": true,
+  "roles": [
+    {
+      "name": "DummyObject",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "repeatable": false,
+      "summary": "The emptiest of the doubles: passed around, never called. Annotating it says the emptiness is the point — nothing should ever invoke it, so the day something does, a test is exercising a path nobody meant to describe.",
+      "links": []
+    }
+  ]
+}
