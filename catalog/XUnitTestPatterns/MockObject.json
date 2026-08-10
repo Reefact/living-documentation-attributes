@@ -1,0 +1,27 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "MockObject",
+  "summary": "Carries the calls it expects to receive and fails when it does not receive them, so that a specification of the interaction is verified by the double itself.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "specialisationOf": {
+    "catalog": "XUnitTestPatterns",
+    "name": "TestDouble"
+  },
+  "inherited": true,
+  "roles": [
+    {
+      "name": "MockObject",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "repeatable": false,
+      "summary": "A double that is told beforehand what it should be asked, and that judges. That is what separates it from a spy: the expectation is set before the exercise and checked by the double, so a test using one can pass its assertions and still fail on a call nobody wrote down.",
+      "links": []
+    }
+  ]
+}
