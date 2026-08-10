@@ -17,6 +17,8 @@ Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.FreshFixtureAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.FreshFixtureAttribute.FreshFixtureAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.HardCodedTestDoubleAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.HardCodedTestDoubleAttribute.HardCodedTestDoubleAttribute() -> void
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.ImplicitSetupAttribute
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.ImplicitSetupAttribute.ImplicitSetupAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.LayerTestAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.LayerTestAttribute.LayerTestAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.MinimalFixtureAttribute
