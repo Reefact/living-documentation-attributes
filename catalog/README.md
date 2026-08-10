@@ -260,28 +260,35 @@ common in .NET, the role attaches to it. They are catalogued because the routing
 route *between* channels and the endpoint patterns consume *from* them: a catalogue without
 channels describes half a mechanism, and an absence with no record reads as an oversight.
 
-**This catalogue carries no `specialisationOf` at all, and the book states plenty.** That
-is [ADR-0030](../doc/handwritten/for-maintainers/adr/0030-decide-whether-enterprise-integration-carries-its-books-relations.md),
-which is `Proposed` and holds the alternatives — it records the absence rather than
-defending it. What the book states, so that a reader is not left to wonder:
+**Four relations, and around thirty deliberately not.** The book states a family in two
+ways, and only one of them is carried
+([ADR-0030](../doc/handwritten/for-maintainers/adr/0030-relate-only-the-narrowings-a-work-states-outright.md)).
 
-| The book says | Here |
+| What the book does | Here |
 |---|---|
-| the twelve patterns of *Message Routing* are kinds of `MessageRouter` | unrelated entries |
-| the six of *Message Transformation* are kinds of `MessageTranslator` | unrelated entries |
-| the channels of *Messaging Channels* are kinds of `MessageChannel` | unrelated entries |
-| the consumers of *Messaging Endpoints* are kinds of `MessageEndpoint` | unrelated entries |
-| a `WireTap` **is** a fixed `RecipientList` with two output channels | unrelated entries |
-| `CommandMessage`, `DocumentMessage` and `EventMessage` are three kinds of `Message` | unrelated entries |
+| states a `WireTap` **is** a fixed `RecipientList` with two output channels | `specialisationOf` |
+| presents `CommandMessage`, `DocumentMessage` and `EventMessage` as three kinds of `Message` | `specialisationOf` |
+| prints the twelve routing patterns under `MessageRouter` | unrelated |
+| prints the six transformation patterns under `MessageTranslator` | unrelated |
+| prints the channels under `MessageChannel`, the consumers under `MessageEndpoint` | unrelated |
 
-An earlier version of this file gave a reason for the last row — that the relation would
-assert something the book does not, since `Message` has three roles and the inheritance
-would be from `Message.Role`. **That reason was wrong.** Six relations of exactly that
-shape are already shipped in other catalogues —
-`HierarchicAccountabilityAttribute : Accountability.Role` is one — and they say "a
-participant in the broader pattern", which a command message is. The relation would
-under-specify, not misstate. Until ADR-0030 is decided, a codebase that means both writes
-both attributes, which costs one line.
+The test is
+[ADR-0007](../doc/handwritten/for-maintainers/adr/0007-decide-sameness-by-the-assertions-a-pattern-carries.md)'s:
+a sentence saying one pattern *is* another is an assertion the author made; a chapter heading
+is neighbourhood. Twelve patterns are printed under `MessageRouter` because they are about
+routing, and reading each as a message router is reading the table of contents rather than
+the text.
+
+The four are emitted at the precision the relation has —
+`WireTapAttribute : RecipientList.Role`, so a wire tap answers as *a participant in* a
+recipient list rather than as the recipient list itself. That is what the six relations of
+this shape in the other catalogues say too. A codebase that wants the precise role writes
+both attributes.
+
+An earlier version of this file gave a different reason for leaving the three message
+intents unrelated: that the relation would assert something the book does not. **That was
+wrong** — it under-specifies, it does not misstate — and it is what sent the question to an
+ADR.
 
 **`CompetingConsumers` keeps a plural name for a role that annotates one class**, and that
 is deliberate. It is the name the book gives, and the rule for names is to spell a pattern
