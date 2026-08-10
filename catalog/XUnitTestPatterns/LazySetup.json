@@ -1,0 +1,23 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "LazySetup",
+  "summary": "Builds the fixture the first time a test asks for it, so that a costly setup is paid for only when it is used.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "LazySetup",
+      "targets": [
+        "Method",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "An accessor that builds what is missing and returns what exists. It buys the cost of an unused fixture and pays in a lifetime nobody stated: what it builds outlives the test that triggered it, so the first test in a run and the same test alone are not running against the same thing.",
+      "links": []
+    }
+  ]
+}
