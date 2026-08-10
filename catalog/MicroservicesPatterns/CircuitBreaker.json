@@ -1,0 +1,24 @@
+{
+  "catalog": "MicroservicesPatterns",
+  "name": "CircuitBreaker",
+  "summary": "Invokes a remote service through a proxy that counts failures and, past a threshold, fails immediately for a time rather than letting a slow or dead service exhaust the caller's threads.",
+  "reference": {
+    "author": "Chris Richardson",
+    "work": "Microservices Patterns",
+    "year": 2018
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "CircuitBreaker",
+      "targets": [
+        "Interface",
+        "Class",
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "The proxy that trips. Once open it fails every call at once for a timeout, then lets a few through to see whether the service has recovered — so this participant returns errors the remote service never sent, and a caller written as though it did not is the bug the pattern brings with it.",
+      "links": []
+    }
+  ]
+}
