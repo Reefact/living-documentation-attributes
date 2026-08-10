@@ -1,0 +1,37 @@
+{
+  "catalog": "MicroservicesPatterns",
+  "name": "RemoteProcedureInvocation",
+  "summary": "Has services collaborate by request and reply over a network protocol, so that a caller gets its answer at once and is unavailable for as long as the service it called is.",
+  "reference": {
+    "author": "Chris Richardson",
+    "work": "Microservices Patterns",
+    "year": 2018
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Service",
+      "targets": [
+        "Interface",
+        "Class",
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "The participant that exposes a request/reply API to other services. Its availability becomes theirs for the duration of every call, and its signature says nothing about that.",
+      "links": []
+    },
+    {
+      "name": "Client",
+      "targets": [
+        "Interface",
+        "Class",
+        "Assembly"
+      ],
+      "repeatable": true,
+      "summary": "The participant that calls it. It cannot answer while the service cannot, and it has to find the service before it can call it at all — which is why this is the role a circuit breaker and a discovery mechanism attach to.",
+      "links": [
+        "Service"
+      ]
+    }
+  ]
+}
