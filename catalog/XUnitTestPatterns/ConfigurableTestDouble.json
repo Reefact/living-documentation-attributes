@@ -1,0 +1,27 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "ConfigurableTestDouble",
+  "summary": "Holds the values to return or expect in fields the test sets during fixture setup, so that one double serves many tests.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "specialisationOf": {
+    "catalog": "XUnitTestPatterns",
+    "name": "TestDouble"
+  },
+  "inherited": true,
+  "roles": [
+    {
+      "name": "ConfigurableTestDouble",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "repeatable": false,
+      "summary": "A double configured at run time rather than written per case. It exists to remove duplication between near-identical doubles, and its cost is stated in its shape: a double with enough knobs becomes a small framework that itself wants testing.",
+      "links": []
+    }
+  ]
+}

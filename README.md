@@ -39,10 +39,10 @@ architecture" from a claim into something a build can check.
 | `AnalysisPatterns` | 39 | Fowler — *Analysis Patterns*, 1997 |
 | `AccountingPatterns` | 9 | Fowler — *Accounting Patterns*, 2000 |
 | `EnterpriseIntegration` | 65 | Hohpe & Woolf — *Enterprise Integration Patterns*, 2003 |
-| `XUnitTestPatterns` | 5 | Meszaros — *xUnit Test Patterns*, 2007 |
+| `XUnitTestPatterns` | 6 | Meszaros — *xUnit Test Patterns*, 2007 |
 | `Idioms` | 2 | patterns with a source but no catalog of their own — each entry names its own |
 
-**217 patterns, 419 roles** today, and the catalog is meant to grow by an order of
+**218 patterns, 420 roles** today, and the catalog is meant to grow by an order of
 magnitude. A pattern is held by every catalogue whose work presents it as one of its
 own, under the name that work gave it — so a reader of a book finds its patterns
 spelled as it spelled them, and a work that merely cites another's pattern does not
