@@ -1,0 +1,24 @@
+{
+  "catalog": "MicroservicesPatterns",
+  "name": "ApplicationMetrics",
+  "summary": "Instruments a service so that each operation reports statistics to a metrics service, by push or by pull, and behaviour can be seen rather than guessed at.",
+  "reference": {
+    "author": "Chris Richardson",
+    "work": "Microservices Patterns",
+    "year": 2018
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "ApplicationMetrics",
+      "targets": [
+        "Interface",
+        "Class",
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "The instrumented participant. Annotating it answers the question a dashboard cannot: which operations are measured — and therefore which silence means healthy and which silence means nobody is looking.",
+      "links": []
+    }
+  ]
+}

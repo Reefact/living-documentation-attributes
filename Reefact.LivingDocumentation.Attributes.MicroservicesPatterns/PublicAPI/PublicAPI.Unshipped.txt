@@ -12,6 +12,8 @@ Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.ApiComposition.Role
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.ApiComposition.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.ApiGatewayAttribute
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.ApiGatewayAttribute.ApiGatewayAttribute() -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.ApplicationMetricsAttribute
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.ApplicationMetricsAttribute.ApplicationMetricsAttribute() -> void
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.BackendForFrontendAttribute
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.BackendForFrontendAttribute.BackendForFrontendAttribute() -> void
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.CircuitBreakerAttribute
