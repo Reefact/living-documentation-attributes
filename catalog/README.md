@@ -112,7 +112,7 @@ exists to prevent, applied to catalogues rather than to decisions.
 | `EnterpriseIntegration` | 65 | 65 | **complete** |
 | `XUnitTestPatterns` | 62 | 68 | **complete** — the other six are in the exclusion tables above |
 | `DomainDrivenDesign` | 23 | 45 + 2 | **complete** — with one open question about a possible twenty-fourth entry, below |
-| `MicroservicesPatterns` | 8 | 48 | **in progress** — one group of fourteen catalogued, and around half the work will be excluded ([ADR-0033](../doc/handwritten/for-maintainers/adr/0033-admit-microservices-patterns-as-a-catalogue.md)) |
+| `MicroservicesPatterns` | 11 | 48 | **in progress** — two groups of fourteen catalogued, and around half the work will be excluded ([ADR-0033](../doc/handwritten/for-maintainers/adr/0033-admit-microservices-patterns-as-a-catalogue.md)) |
 | `AnalysisPatterns` | 39 | — | **deliberately stopped**, and the only one that is |
 | `Idioms` | 2 | — | **never complete by construction** ([ADR-0013](../doc/handwritten/for-maintainers/adr/0013-shelve-a-pattern-without-a-body-of-work-under-idioms.md)) |
 
@@ -660,23 +660,24 @@ is never looked at, which is why the honest implementation throws.
 
 ## Microservices Patterns, and the words this catalogue already knew
 
-**Eight of forty-eight.** Richardson's pattern language holds 48 patterns across fourteen
-groups on the index he maintains at `microservices.io/patterns/index.html`; the *Service
-collaboration* group is the first instalment, and it is catalogued whole — eight entries, no
-exclusion. Its admission is
+**Eleven of forty-eight.** Richardson's pattern language holds 48 patterns across fourteen
+groups on the index he maintains at `microservices.io/patterns/index.html`; *Service
+collaboration* (eight) and *Transactional messaging* (three) are catalogued, each whole and
+neither with an exclusion. Its admission is
 [ADR-0033](../doc/handwritten/for-maintainers/adr/0033-admit-microservices-patterns-as-a-catalogue.md),
 which also estimates that between twenty-five and thirty of the 48 will be admissible: roughly
 half the language is deployment and observability topology, which no C# declaration holds.
-A reader counting eight against forty-eight is looking at work in progress.
+A reader counting eleven against forty-eight is looking at work in progress.
 
-**Where this instalment was read from.** All eight pattern pages were fetched and read —
+**Where these entries were read from.** All eleven pattern pages were fetched and read —
 context, problem, solution, related patterns — so the roles below are the participants the
 author names, not participants recalled from the book. Where a page names a thing without
 giving it a noun, the name here is this catalogue's and is flagged as such: `ViewUpdater` is
-the one, for what the CQRS page calls *the application keeping the database up to date by
-subscribing to domain events*. The work in the `reference` field is the 2018 book, not the
-site; the site is the same pattern language maintained by the same author, and each of the
-eight pages states that the book covers it.
+the only one so far, for what the CQRS page calls *the application keeping the database up to
+date by subscribing to domain events*. The four roles of `TransactionalOutbox` are the author's
+own list. The work in the `reference` field is the 2018 book, not the site; the site is the
+same pattern language maintained by the same author, and each of the eleven pages states that
+the book covers it.
 
 **Two names were already in the catalog, and both are held twice on purpose.** This is
 [ADR-0028](../doc/handwritten/for-maintainers/adr/0028-hold-a-pattern-in-every-catalogue-whose-work-presents-it.md)
@@ -720,6 +721,52 @@ Three shapes in this group are worth explaining, because each could have been do
   then the method
   ([ADR-0010](../doc/handwritten/for-maintainers/adr/0010-annotate-the-declaration-that-introduces-a-role.md)).
   The same is true of `Cqrs.ViewUpdater`, which is as often a handler method as a class.
+
+**Transactional messaging is the second group**, three patterns, catalogued whole. It answers
+the question the first group keeps running into: a service has to change its data *and* send a
+message, and it cannot do both in one transaction. `TransactionalOutbox` makes it one anyway by
+writing the message into a table of the same database, and the other two are the two ways of
+draining that table — `PollingPublisher` asks it on a timer, `TransactionLogTailing` follows
+the log the database already writes.
+
+The four roles of the outbox are the author's own words — *Sender*, *Database*, *Message
+outbox*, *Message relay* — and the one worth annotating most is `Database`. That the business
+entities and the outbox live in **one** database is the entire mechanism; splitting them
+compiles, and silently restores the distributed transaction the pattern exists to avoid.
+
+**This group is where the relation ADR-0030 deferred stopped being hypothetical**, and it is
+the reason the relation mechanism grew a third shape.
+
+`PollingPublisher` and `TransactionLogTailing` are not narrowings of `TransactionalOutbox`.
+They are two ways of being **one of its roles** — the work says so outright: *"There are two
+patterns for implementing the Message relay."* Nothing in the schema could carry that.
+`specialisationOf` related a pattern to a pattern; where the target has several roles the
+generated attribute derived from its `Role` base, which would have said *a polling publisher is
+a narrower case of transactional outbox* — and it is not, it is a narrower case of one of its
+four participants. Recording it that way would have overstated the work, which is what
+[ADR-0030](../doc/handwritten/for-maintainers/adr/0030-relate-only-the-narrowings-a-work-states-outright.md)
+exists to prevent.
+
+That is a different failure from the nine coarse relations already shipping. Where a work says
+*pattern A is a kind of pattern B*, deriving from `B.Role` is true and merely coarse — a command
+message really is a message. Where it says *pattern A is a way of being role R of pattern B*,
+there is no true pattern-level statement at all, so the relation was not imprecise, it was
+unwritable.
+
+[ADR-0034](../doc/handwritten/for-maintainers/adr/0034-let-a-specialisation-name-the-role-it-narrows.md)
+settles it: `specialisationOf` may name a **role** of the target, and the narrowing derives from
+that role's attribute, which is emitted unsealed.
+
+```csharp
+public sealed class PollingPublisherAttribute : TransactionalOutbox.MessageRelayAttribute { }
+```
+
+So a rule asking *is anything draining this outbox?* gets an answer from the type system rather
+than from this paragraph. Two consequences are worth knowing before writing another one. The
+nine coarse relations are **not** retro-fitted — ADR-0030 still decides what may be recorded, and
+a role is named only where the work names one. And a narrowing now inherits its parent role's
+link properties, so `[PollingPublisher(MessageOutbox = typeof(…))]` is accepted although nothing
+in that entry declares it: the surface grew somewhere the catalog does not show it.
 
 ## Shape of the generated attribute
 
