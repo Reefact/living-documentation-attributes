@@ -29,6 +29,7 @@ CATALOG_LABEL = {
     "AccountingPatterns": "Accounting Patterns",
     "EnterpriseIntegration": "Enterprise Integration Patterns",
     "XUnitTestPatterns": "xUnit Test Patterns",
+    "MicroservicesPatterns": "Microservices Patterns",
     "Idioms": "no catalog of its own",
 }
 
