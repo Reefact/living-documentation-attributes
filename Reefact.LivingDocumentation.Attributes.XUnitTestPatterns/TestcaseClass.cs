@@ -19,6 +19,6 @@ namespace Reefact.LivingDocumentation.Attributes.XUnitTestPatterns {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = true)]
-    public sealed class TestcaseClassAttribute : LivingDocumentationAttribute { }
+    public class TestcaseClassAttribute : LivingDocumentationAttribute { }
 
 }

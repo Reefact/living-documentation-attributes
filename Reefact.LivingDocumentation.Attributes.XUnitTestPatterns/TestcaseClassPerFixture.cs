@@ -15,10 +15,14 @@ namespace Reefact.LivingDocumentation.Attributes.XUnitTestPatterns {
     ///         This pattern has a single role, so there is nothing to choose: the attribute is applied on its own.
     ///     </para>
     ///     <para>
+    ///         A narrower case of TestcaseClass: every participant annotated here is one of those too, and a consumer
+    ///         asking for the broader pattern gets these as well.
+    ///     </para>
+    ///     <para>
     ///         Gerard Meszaros, <i>xUnit Test Patterns</i>, 2007.
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
-    public sealed class TestcaseClassPerFixtureAttribute : LivingDocumentationAttribute { }
+    public sealed class TestcaseClassPerFixtureAttribute : TestcaseClassAttribute { }
 
 }
