@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "InvalidMessageChannel",
+  "summary": "Gives a receiver somewhere to put a message it cannot process, so that bad data neither blocks the channel nor disappears.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "InvalidMessageChannel",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The channel a receiver moves a message to when the message makes no sense to it. The distinction from a dead letter channel is who decides: here the receiver read the message and rejected it.",
+      "links": []
+    }
+  ]
+}
