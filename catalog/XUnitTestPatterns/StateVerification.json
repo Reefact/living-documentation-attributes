@@ -1,0 +1,23 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "StateVerification",
+  "summary": "Verifies by looking at what the system under test holds afterwards, so that a test asserts about the result rather than about the journey.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "StateVerification",
+      "targets": [
+        "Method",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "A test that checks the state left behind. It couples to what the system is rather than to how it works, so a refactoring that changes the calls and keeps the outcome leaves it passing — which is the whole argument for it, and the reason it cannot catch an effect that leaves no trace.",
+      "links": []
+    }
+  ]
+}
