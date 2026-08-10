@@ -1,0 +1,24 @@
+{
+  "catalog": "MicroservicesPatterns",
+  "name": "MicroserviceChassis",
+  "summary": "Gathers the cross-cutting concerns every service needs — configuration, logging, health checks, metrics, discovery — into a framework, so that a new service starts from them rather than reimplementing them.",
+  "reference": {
+    "author": "Chris Richardson",
+    "work": "Microservices Patterns",
+    "year": 2018
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "MicroserviceChassis",
+      "targets": [
+        "Interface",
+        "Class",
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "The framework the services are built on. What makes it a chassis is that it holds no business logic at all, and that is the claim worth keeping true: every domain decision that leaks in here is a decision every service now shares whether it wanted to or not.",
+      "links": []
+    }
+  ]
+}

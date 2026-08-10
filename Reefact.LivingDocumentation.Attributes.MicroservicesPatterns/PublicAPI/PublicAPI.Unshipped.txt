@@ -91,6 +91,8 @@ Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.IdempotentConsumer.
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.IdempotentConsumer.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.MessagingAttribute
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.MessagingAttribute.MessagingAttribute() -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.MicroserviceChassisAttribute
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.MicroserviceChassisAttribute.MicroserviceChassisAttribute() -> void
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.PollingPublisherAttribute
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.PollingPublisherAttribute.PollingPublisherAttribute() -> void
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.RemoteProcedureInvocation
