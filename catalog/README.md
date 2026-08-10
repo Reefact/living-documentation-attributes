@@ -222,6 +222,50 @@ problem — you cannot edit a booked entry — and they differ in what they cost
 one entry and loses the statement of what the figure should have been, and
 `ReplacementAdjustment` trades the audit trail away on purpose.
 
+## Enterprise Integration Patterns, and what a channel's annotation depends on
+
+The catalogue is filled **in the book's own order** — integration styles, base patterns,
+channels, construction, routing, transformation, endpoints, system management — so that it
+can be reviewed with the book open. **Nineteen of its sixty-five are catalogued**: the
+first two parts. A reader counting nineteen against sixty-five is looking at work in
+progress and not at forty-six decisions.
+
+Its admission is
+[ADR-0029](../doc/handwritten/for-maintainers/adr/0029-admit-enterprise-integration-patterns-as-a-catalogue.md),
+which also settled the two judgements this work forces.
+
+**The channels are in, and their annotation depends on the codebase.** A channel is often a
+configured queue name rather than a type, and where that is so there is nothing to annotate
+— the pattern is simply not used, which is the ordinary condition of every role rather than
+a defect in the entry. Where a codebase has a typed abstraction per channel, and that is
+common in .NET, the role attaches to it. They are catalogued because the routing patterns
+route *between* channels and the endpoint patterns consume *from* them: a catalogue without
+channels describes half a mechanism, and an absence with no record reads as an oversight.
+
+**Pipes and Filters and Message Broker are held here although POSA named them first** in
+1996. The test is
+[ADR-0028](../doc/handwritten/for-maintainers/adr/0028-hold-a-pattern-in-every-catalogue-whose-work-presents-it.md)'s:
+this work names each, describes it in full and gives it a place in its own pattern language,
+which is a presentation. Crediting an earlier source is scholarship, not the passing mention
+that rule excludes. If POSA is ever catalogued it holds its own entries and neither
+catalogue refers to the other.
+
+### Three homonyms, expected and unrelated
+
+The later parts of this work will bring three names the catalogue already holds elsewhere.
+They are **different patterns**, and since each catalogue ships as its own package nothing
+in the packages will say so — hence this table.
+
+| Coming as | Already held as | Why they are not the same |
+|---|---|---|
+| `EnterpriseIntegration/MessagingGateway` | `EnterpriseApplicationArchitecture/Gateway` | Fowler's wraps any external resource behind a simple interface; this one hides a messaging API from application code |
+| `EnterpriseIntegration/MessagingMapper` | `EnterpriseApplicationArchitecture/Mapper` | Fowler's moves data between two objects that should not know each other; this one moves it between a domain object and a message |
+| `EnterpriseIntegration/SmartProxy` | `GangOfFour/Proxy` | the Gang of Four's stands in for an object; this one intercepts a request and its reply in order to observe them |
+
+Three days ago each would have been a question of which publication held the definition.
+Since [ADR-0027](../doc/handwritten/for-maintainers/adr/0027-ship-one-independent-package-per-catalogued-work.md)
+made the catalogues independent, there is nothing to arbitrate — only this note to write.
+
 ## Shape of the generated attribute
 
 A pattern whose single role carries the pattern's own name is emitted flat, so
