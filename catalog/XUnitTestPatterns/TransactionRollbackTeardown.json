@@ -1,0 +1,23 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "TransactionRollbackTeardown",
+  "summary": "Wraps the test in a transaction and rolls it back, so that nothing the test wrote ever becomes visible.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "TransactionRollbackTeardown",
+      "targets": [
+        "Class",
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "The teardown that undoes by never committing. It is the cleanest of the database teardowns and the one with a hidden constraint: the system under test must not commit on its own, so it cannot test anything whose behaviour depends on a commit — a rule nothing enforces and a failure that looks like flakiness.",
+      "links": []
+    }
+  ]
+}
