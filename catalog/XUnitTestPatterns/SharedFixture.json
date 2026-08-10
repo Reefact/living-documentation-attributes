@@ -1,0 +1,23 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "SharedFixture",
+  "summary": "Is built once and used by many tests, so that an expensive starting state is paid for once.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "SharedFixture",
+      "targets": [
+        "Class",
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "A fixture that outlives a test, and therefore the one that makes tests depend on each other whether anybody intended it or not. The assertion it licenses is the one worth checking: no test mutates it — and nothing in the code says so unless this is annotated.",
+      "links": []
+    }
+  ]
+}
