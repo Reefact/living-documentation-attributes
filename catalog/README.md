@@ -323,6 +323,57 @@ Three days ago each would have been a question of which publication held the def
 Since [ADR-0027](../doc/handwritten/for-maintainers/adr/0027-ship-one-independent-package-per-catalogued-work.md)
 made the catalogues independent, there is nothing to arbitrate — only this note to write.
 
+## xUnit Test Patterns, and the five words nobody agrees on
+
+**Eight of its sixty-eight are catalogued**: the whole of chapter 23, the test doubles. Its
+admission is
+[ADR-0032](../doc/handwritten/for-maintainers/adr/0032-admit-xunit-test-patterns-as-a-catalogue.md),
+which is `Proposed`. A reader counting eight against sixty-eight is looking at work in
+progress, and at a book about a third of which will not be catalogued at all — roughly ten
+entries are shapes a method body takes rather than participants a declaration holds, and
+every exclusion will be listed here as it is decided.
+
+**Five kinds and one umbrella, and the distinction is the whole point.** These are the words
+a codebase gets wrong most reliably: "mock" is what most people call all five. The entries
+carry what separates them, and each is a rule a review can hold to.
+
+| Kind | What it does | What it never does |
+|---|---|---|
+| `TestStub` | feeds indirect inputs | get consulted afterwards |
+| `TestSpy` | records the calls it got | judge them |
+| `MockObject` | carries expectations and judges | wait for the test to ask |
+| `FakeObject` | works, lightly | stay in production |
+| `ConfigurableTestDouble` | is told what to answer at run time | come pre-decided |
+| `HardCodedTestDouble` | has its answer written in | be told anything |
+
+A stub that has grown a `VerifyWasCalled` is a mock wearing the wrong name; a fake is the
+only kind with behaviour of its own, so it is the only kind that can be wrong while every
+test using it passes.
+
+**Six of the eight narrow `TestDouble`, and one does not.** The relations are the four kinds
+plus the two implementation styles, all stated outright by the book —
+[ADR-0030](../doc/handwritten/for-maintainers/adr/0030-relate-only-the-narrowings-a-work-states-outright.md)'s
+test. Because `TestDouble` has a single role, they emit at full precision:
+`TestStubAttribute : TestDoubleAttribute`, so a rule asking for every stand-in in a test tree
+reaches all six without naming them.
+
+`TestSpecificSubclass` carries **no** relation although the book prints it in the same
+chapter. Its problem statement is *how can we make code testable when we need to access
+private state of the SUT*, and its solution subclasses the system under test — it does not
+replace a depended-on component, so it is not a double. That is the distinction a reader most
+often gets wrong, and it is the one place in this chapter where the chapter heading and the
+text disagree.
+
+**The depended-on component is not a role.** Every diagram in the chapter names the DOC — the
+thing the double stands in for — and it is deliberately not annotated: it is an ordinary
+production type that happens to be replaced in a test, and annotating every interface a test
+fakes would annotate most of a codebase without asserting anything about it.
+
+**The roles are `inherited`.** A subclass of a fake is still a fake, unlike a subtype of a
+Gang of Four Component. That is a property of these patterns rather than a default: what
+makes a class a double is what it stands in for, and deriving from one does not stop it
+standing in.
+
 ## Shape of the generated attribute
 
 A pattern whose single role carries the pattern's own name is emitted flat, so
