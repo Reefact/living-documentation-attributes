@@ -206,3 +206,10 @@ Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.SharedDatabaseAttri
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.SharedDatabaseAttribute.SharedDatabaseAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.SplitterAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.SplitterAttribute.SplitterAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.TransactionalClient
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.TransactionalClient.ReceiverAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.TransactionalClient.ReceiverAttribute.ReceiverAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.TransactionalClient.Role
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.TransactionalClient.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.TransactionalClient.SenderAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.TransactionalClient.SenderAttribute.SenderAttribute() -> void
