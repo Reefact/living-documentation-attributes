@@ -224,18 +224,27 @@ one entry and loses the statement of what the figure should have been, and
 
 ## Enterprise Integration Patterns, and what a channel's annotation depends on
 
-**Forty of its sixty-five are catalogued**: the integration styles, the base patterns,
-the channels, the whole of message routing and the whole of message construction. A
-reader counting forty against sixty-five is looking at work in progress and not at
-twenty-five decisions.
+**Forty-six of its sixty-five are catalogued**: the integration styles, the base patterns,
+the channels, and the whole of message routing, message construction and message
+transformation. A reader counting forty-six against sixty-five is looking at work in
+progress and not at nineteen decisions. What remains is the messaging endpoints and system
+management.
 
-**Routing was taken before construction**, and construction closes the gap that left.
+**Routing was taken before construction**, and construction closed the gap that left.
 Routing went first because it is the core of the work — the router, the splitter, the
 aggregator and the process manager are what a messaging codebase is made of, while
-message construction is mostly properties on a message. Chapter 5 is now filled behind
-chapter 7, so the catalogue reads in the book's order again and what remains follows it:
-transformation, endpoints, system management. The detour is recorded because it happened,
-not because anything is still missing from the middle.
+message construction is mostly properties on a message. Chapter 5 was then filled behind
+chapter 7, so the catalogue reads in the book's order again and what remains follows it.
+The detour is recorded because it happened, not because anything is still missing from
+the middle.
+
+**A pattern the book builds out of other patterns gets one role, not a role per part.**
+`ComposedMessageProcessor` is a splitter, a router and an aggregator; `Normalizer` is a
+router and a translator per format. In both the entry names the assembled whole, and the
+parts inside wear `Splitter`, `MessageRouter`, `MessageTranslator` and the rest
+themselves. Giving a composite a role per constituent would count the same participant
+twice — once under its own pattern, once under the composite — and a codebase with three
+normalizers could no longer say how many translators it has.
 
 Its admission is
 [ADR-0029](../doc/handwritten/for-maintainers/adr/0029-admit-enterprise-integration-patterns-as-a-catalogue.md),
