@@ -80,6 +80,8 @@ Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.EventSourcing.Snaps
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.EventSourcing.SnapshotAttribute.Aggregate.get -> System.Type?
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.EventSourcing.SnapshotAttribute.Aggregate.init -> void
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.EventSourcing.SnapshotAttribute.SnapshotAttribute() -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.ExternalizedConfigurationAttribute
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.ExternalizedConfigurationAttribute.ExternalizedConfigurationAttribute() -> void
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.IdempotentConsumer
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.IdempotentConsumer.IdempotentConsumerAttribute
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.IdempotentConsumer.IdempotentConsumerAttribute.IdempotentConsumerAttribute() -> void

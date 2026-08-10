@@ -1,0 +1,23 @@
+{
+  "catalog": "MicroservicesPatterns",
+  "name": "ExternalizedConfiguration",
+  "summary": "Keeps every environment-dependent value — credentials, endpoints, limits — outside the code and reads it on startup, so that one build runs everywhere.",
+  "reference": {
+    "author": "Chris Richardson",
+    "work": "Microservices Patterns",
+    "year": 2018
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "ExternalizedConfiguration",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The participant holding what was read from outside. The claim is that nothing here is compiled in, which is what lets the same artifact be promoted rather than rebuilt — and a single hard-coded fallback quietly ends that without failing anything.",
+      "links": []
+    }
+  ]
+}
