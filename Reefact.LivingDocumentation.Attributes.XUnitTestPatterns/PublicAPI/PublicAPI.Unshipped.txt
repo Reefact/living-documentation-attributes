@@ -23,6 +23,8 @@ Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.DelegatedSetupAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.DelegatedSetupAttribute.DelegatedSetupAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.DeltaAssertionAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.DeltaAssertionAttribute.DeltaAssertionAttribute() -> void
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.DependencyInjectionAttribute
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.DependencyInjectionAttribute.DependencyInjectionAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.FakeObjectAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.FakeObjectAttribute.FakeObjectAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.FreshFixtureAttribute

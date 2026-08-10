@@ -1,0 +1,23 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "DependencyInjection",
+  "summary": "Has its collaborators handed to it from outside, so that a test can give it something other than what production gives it.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "DependencyInjection",
+      "targets": [
+        "Class",
+        "Interface"
+      ],
+      "repeatable": false,
+      "summary": "A participant that never obtains its own collaborators. It is the most common answer to testability and the one that leaves the fewest traces: a class built this way looks like any other, and the fact that it was designed to be substitutable is exactly what nothing in it says.",
+      "links": []
+    }
+  ]
+}
