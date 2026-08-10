@@ -1,0 +1,22 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "TestUtilityMethod",
+  "summary": "Holds a step several tests share, so that each test states what it is about rather than how it is done.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "TestUtilityMethod",
+      "targets": [
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "A method extracted from tests, not from production code. Annotating it separates it from the test methods around it: it is called by tests and asserts nothing on its own behalf, so a utility that has grown its own assertions has quietly become a test that never runs.",
+      "links": []
+    }
+  ]
+}
