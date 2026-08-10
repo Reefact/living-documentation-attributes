@@ -1,0 +1,24 @@
+{
+  "catalog": "MicroservicesPatterns",
+  "name": "AntiCorruptionLayer",
+  "summary": "Translates between a legacy monolith's domain model and a new service's, so that the model being escaped does not reach the model being built.",
+  "reference": {
+    "author": "Chris Richardson",
+    "work": "Microservices Patterns",
+    "year": 2018
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "AntiCorruptionLayer",
+      "targets": [
+        "Interface",
+        "Class",
+        "Assembly"
+      ],
+      "repeatable": true,
+      "summary": "The translator between the two models, and the only participant allowed to know both. It is written to be deleted: when the monolith goes, so does this, and a codebase that cannot list its layers cannot tell how much of the migration is still owed.",
+      "links": []
+    }
+  ]
+}

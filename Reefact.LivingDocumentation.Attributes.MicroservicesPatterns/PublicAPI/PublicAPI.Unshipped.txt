@@ -1,4 +1,6 @@
 #nullable enable
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.AntiCorruptionLayerAttribute
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.AntiCorruptionLayerAttribute.AntiCorruptionLayerAttribute() -> void
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.ApiComposition
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.ApiComposition.ComposerAttribute
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.ApiComposition.ComposerAttribute.ComposerAttribute() -> void
