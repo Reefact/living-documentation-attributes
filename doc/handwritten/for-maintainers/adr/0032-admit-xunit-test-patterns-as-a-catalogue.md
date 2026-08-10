@@ -2,8 +2,9 @@
 
 🌍 🇬🇧 English (this file) · 🇫🇷 [Français](0032-admit-xunit-test-patterns-as-a-catalogue.fr.md)
 
-**Status:** Proposed
+**Status:** Accepted
 **Proposed:** 2026-08-10
+**Accepted:** 2026-08-10
 **Decision Makers:** Reefact
 
 ## Context
