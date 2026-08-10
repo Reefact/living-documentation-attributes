@@ -1,0 +1,24 @@
+{
+  "catalog": "MicroservicesPatterns",
+  "name": "DecomposeByBusinessCapability",
+  "summary": "Draws a service around one business capability — something the business does in order to generate value — so that a change to that capability lands in one service and one team.",
+  "reference": {
+    "author": "Chris Richardson",
+    "work": "Microservices Patterns",
+    "year": 2018
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "DecomposeByBusinessCapability",
+      "targets": [
+        "Interface",
+        "Class",
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "The service drawn around one capability — order management, inventory management — rather than around a layer, an entity or a team's convenience. The claim is checkable by review and by nothing else: a requirement that touches a second capability should not touch this service.",
+      "links": []
+    }
+  ]
+}
