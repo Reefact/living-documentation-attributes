@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "EventMessage",
+  "summary": "Announces that something has happened, so that the sender is relieved of knowing who cares.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "EventMessage",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "repeatable": false,
+      "summary": "A message naming a fact in the past tense. It carries no instruction and expects no reply, so a subscriber added tomorrow costs the publisher nothing — which is what makes it the message of a publish-subscribe channel rather than of a queue.",
+      "links": []
+    }
+  ]
+}
