@@ -1,0 +1,24 @@
+{
+  "catalog": "MicroservicesPatterns",
+  "name": "HealthCheckApi",
+  "summary": "Gives a service an endpoint that says whether this instance can handle requests, for a monitor, a registry or a load balancer to ask.",
+  "reference": {
+    "author": "Chris Richardson",
+    "work": "Microservices Patterns",
+    "year": 2018
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "HealthCheckApi",
+      "targets": [
+        "Interface",
+        "Class",
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "The endpoint and what it decides to check. Its verdict takes an instance out of rotation, so what it does not check is what will keep receiving traffic while broken — and a handler that returns healthy unconditionally is indistinguishable from one that works.",
+      "links": []
+    }
+  ]
+}
