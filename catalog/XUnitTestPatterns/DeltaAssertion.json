@@ -1,0 +1,22 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "DeltaAssertion",
+  "summary": "Asserts the difference the exercise made rather than the absolute value afterwards, so that a test survives a fixture it does not fully control.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "DeltaAssertion",
+      "targets": [
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "An assertion about a change: one more row than before, two euros more than before. It is what makes a test safe against a shared or prebuilt fixture whose exact contents nobody guarantees — and it is weaker on purpose, since a delta of one says nothing about what the one was.",
+      "links": []
+    }
+  ]
+}
