@@ -1,0 +1,22 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "ChainedTests",
+  "summary": "Lets each test leave behind the state the next one needs, so that a long sequence is not set up from scratch every time.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "ChainedTests",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "Tests that depend on the ones before them. The book offers it as a last resort and it is worth annotating for exactly that reason: it is the arrangement that breaks when a runner changes order, parallelises, or runs one test alone — three things nobody announces — and nothing else in the code admits it was chosen.",
+      "links": []
+    }
+  ]
+}

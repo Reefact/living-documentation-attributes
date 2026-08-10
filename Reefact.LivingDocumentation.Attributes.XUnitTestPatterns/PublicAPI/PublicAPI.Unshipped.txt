@@ -3,6 +3,8 @@ Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.AssertionMethodAttribut
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.AssertionMethodAttribute.AssertionMethodAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.BackDoorManipulationAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.BackDoorManipulationAttribute.BackDoorManipulationAttribute() -> void
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.ChainedTestsAttribute
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.ChainedTestsAttribute.ChainedTestsAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.ConfigurableTestDoubleAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.ConfigurableTestDoubleAttribute.ConfigurableTestDoubleAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.CreationMethodAttribute
