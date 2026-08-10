@@ -1,0 +1,23 @@
+{
+  "catalog": "MicroservicesPatterns",
+  "name": "ServiceTemplate",
+  "summary": "A runnable skeleton service, complete with the build and the cross-cutting concerns, meant to be copied so that a new service starts consistent rather than improvised.",
+  "reference": {
+    "author": "Chris Richardson",
+    "work": "Microservices Patterns",
+    "year": 2018
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "ServiceTemplate",
+      "targets": [
+        "Class",
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "The codebase that exists to be copied and never deployed. Copies diverge from it the moment they are taken, which is the pattern's cost and the reason to know which participant is the original.",
+      "links": []
+    }
+  ]
+}
