@@ -76,7 +76,7 @@
       }
     },
     "specialisationOf": {
-      "description": "The pattern this one narrows, which must be a pattern of the SAME catalogue. A relation is emitted as inheritance and each catalogue ships as its own package (ADR-0027), so a relation across catalogues cannot exist; the validator rejects one.",
+      "description": "The pattern this one narrows, which must be a pattern of the SAME catalogue. A relation is emitted as inheritance and each catalogue ships as its own package (ADR-0027), so a relation across catalogues cannot exist; the validator rejects one. Name a role of the target where the work says this pattern is a way of being that participant rather than a kind of the whole pattern (ADR-0034).",
       "$ref": "#/$defs/patternRef"
     }
   },
@@ -147,6 +147,11 @@
         },
         "name": {
           "type": "string"
+        },
+        "role": {
+          "description": "The role of the target this pattern narrows, where what the work states is that this pattern is a way of being one participant rather than a kind of the whole pattern (ADR-0034). Omit it, and the relation is to the pattern: to its single attribute when the target is flat, to its abstract Role base otherwise. Naming a role of a flat target is rejected, since that relation is already attribute to attribute.",
+          "type": "string",
+          "pattern": "^[A-Z][A-Za-z0-9]*$"
         }
       }
     }

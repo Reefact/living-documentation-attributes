@@ -66,6 +66,11 @@ def relation_doc(pattern):
     target = relation(pattern)
     if target is None:
         return None
+    if target.get("role"):
+        # The work said this is a way of being one participant, not a way of being the whole pattern
+        # (ADR-0034), and the sentence has to say the same thing the inheritance does.
+        return (f"A narrower case of {target['name']}'s {target['role']} role: every participant annotated "
+                f"here is one of those too, and a consumer asking for that role gets these as well.")
     return (f"A narrower case of {target['name']}: every participant annotated here is one of those too, and a "
             f"consumer asking for the broader pattern gets these as well.")
 
@@ -127,10 +132,10 @@ def role_class(pattern, role, indent):
     out.append(f"{pad}[AttributeUsage({targets(role['targets'])}, "
                f"AllowMultiple = {allow_multiple}, Inherited = {inherited})]")
     if not role["links"]:
-        out.append(f"{pad}public sealed class {role['name']}Attribute : Role {{ }}")
+        out.append(f"{pad}public {role['_modifier']}class {role['name']}Attribute : Role {{ }}")
         return "\n".join(out)
 
-    out.append(f"{pad}public sealed class {role['name']}Attribute : Role {{")
+    out.append(f"{pad}public {role['_modifier']}class {role['name']}Attribute : Role {{")
     for link in role["links"]:
         out.append("")
         out.append(doc(f'The <see cref="{link}Attribute" /> this role is bound to. Optional: it is only needed '
@@ -316,9 +321,11 @@ def main():
     index = {key(pattern): pattern for pattern in patterns}
 
     # Nothing is unsealed that is not actually derived from, so the exceptions in the generated sources are
-    # explained by the catalog rather than by the template. A specialisation derives pattern by pattern: it
-    # unseals the pattern it narrows, and a role is always sealed because nothing can name one (ADR-0031).
+    # explained by the catalog rather than by the template. A specialisation narrows a whole pattern or one
+    # of its roles (ADR-0034), so both a pattern and a role can be the thing something derives from, and
+    # each is unsealed exactly when some entry names it.
     unsealed_patterns = set()
+    unsealed_roles = set()
     for pattern in patterns:
         target = relation(pattern)
         if target is None:
@@ -331,19 +338,32 @@ def main():
         if base is None:
             raise SystemExit(f"{pattern['name']}: derives from {target['catalog']}.{target['name']}, "
                              f"which is not in the catalog")
-        if is_single_role(base):
+        if target.get("role"):
+            if is_single_role(base):
+                raise SystemExit(f"{pattern['name']}: names the role {target['role']} of "
+                                 f"{target['name']}, which is flat — a flat target is already derived from "
+                                 f"attribute to attribute, so naming its role adds nothing")
+            if target["role"] not in role_names(base):
+                raise SystemExit(f"{pattern['name']}: narrows the role {target['role']}, which is not a role "
+                                 f"of {target['name']}")
+            unsealed_roles.add((*key(base), target["role"]))
+        elif is_single_role(base):
             unsealed_patterns.add(key(base))
 
     for pattern in patterns:
         target = relation(pattern)
         if target is None:
             pattern["_base"] = "LivingDocumentationAttribute"
+        elif target.get("role"):
+            # Same catalogue, so the same namespace: no prefix needed, and none possible for another.
+            pattern["_base"] = f"{target['name']}.{target['role']}Attribute"
         else:
             base = index[(target["catalog"], target["name"])]
-            # Same catalogue, so the same namespace: no prefix needed, and none possible for another.
             pattern["_base"] = (f"{base['name']}Attribute" if is_single_role(base)
                                 else f"{base['name']}.Role")
         pattern["_modifier"] = "" if key(pattern) in unsealed_patterns else "sealed "
+        for role in pattern["roles"]:
+            role["_modifier"] = "" if (*key(pattern), role["name"]) in unsealed_roles else "sealed "
 
     for pattern in patterns:
         # One project per catalogued work, since ADR-0027 ships each as its own package.
