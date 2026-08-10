@@ -1,0 +1,23 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "NamedTestSuite",
+  "summary": "Collects a chosen subset of the tests under a name, so that a set worth running on its own can be run on its own.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "NamedTestSuite",
+      "targets": [
+        "Class",
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "The suite that names a subset — the smoke tests, the slow ones, the ones touching the database. It exists because the useful groupings are rarely the ones the directory layout produces, and a suite nobody can name is a suite nobody runs deliberately.",
+      "links": []
+    }
+  ]
+}
