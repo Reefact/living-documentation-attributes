@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "ContentBasedRouter",
+  "summary": "Sends a message to one destination chosen by examining the message itself, so that the sender needs to know neither the destinations nor the rule.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "ContentBasedRouter",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The participant that inspects a message and forwards it, unchanged, to exactly one destination. It centralises knowledge of the destinations, which is the trade: one participant knows them all so that no sender knows any.",
+      "links": []
+    }
+  ]
+}
