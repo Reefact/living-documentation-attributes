@@ -1,0 +1,24 @@
+{
+  "catalog": "MicroservicesPatterns",
+  "name": "SelfRegistration",
+  "summary": "Has each service instance register itself with the registry on startup, renew while it lives and unregister on shutdown.",
+  "reference": {
+    "author": "Chris Richardson",
+    "work": "Microservices Patterns",
+    "year": 2018
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "SelfRegistration",
+      "targets": [
+        "Interface",
+        "Class",
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "The instance that puts itself in the registry and takes itself out. It knows its own state, which is the argument for it; what it cannot do is unregister after it has crashed, so the registry stays wrong until a lease expires.",
+      "links": []
+    }
+  ]
+}
