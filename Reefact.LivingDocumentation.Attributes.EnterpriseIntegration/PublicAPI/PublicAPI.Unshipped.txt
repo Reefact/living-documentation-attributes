@@ -44,6 +44,19 @@ Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.DynamicRouter.Role
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.DynamicRouter.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.DynamicRouter.RoutingTableAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.DynamicRouter.RoutingTableAttribute.RoutingTableAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.EnvelopeWrapper
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.EnvelopeWrapper.EnvelopeAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.EnvelopeWrapper.EnvelopeAttribute.EnvelopeAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.EnvelopeWrapper.Role
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.EnvelopeWrapper.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.EnvelopeWrapper.UnwrapperAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.EnvelopeWrapper.UnwrapperAttribute.Envelope.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.EnvelopeWrapper.UnwrapperAttribute.Envelope.init -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.EnvelopeWrapper.UnwrapperAttribute.UnwrapperAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.EnvelopeWrapper.WrapperAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.EnvelopeWrapper.WrapperAttribute.Envelope.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.EnvelopeWrapper.WrapperAttribute.Envelope.init -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.EnvelopeWrapper.WrapperAttribute.WrapperAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.EventMessageAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.EventMessageAttribute.EventMessageAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.FileTransferAttribute
