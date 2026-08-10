@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "SmartProxy",
+  "summary": "Substitutes its own address for the requestor's return address, keeps the original, and forwards the reply on — so that a service answering wherever it is told can still be watched.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "SmartProxy",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The participant that stands between a requestor and a request-reply service, remembering where each answer really belongs. A pair of wire taps cannot do this because there is no fixed output channel to tap — and remembering means it holds state per outstanding request, so an answer that never comes is a leak rather than a silence.",
+      "links": []
+    }
+  ]
+}
