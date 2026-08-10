@@ -1,0 +1,23 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "MinimalFixture",
+  "summary": "Sets up only what the test actually needs, so that what is present is what matters.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "MinimalFixture",
+      "targets": [
+        "Class",
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "A fixture with nothing in it the test does not use. It is what makes a test readable — everything present is there for a reason — and its failure mode is quiet: a fixture that has grown one field per new test stops telling a reader anything about any of them.",
+      "links": []
+    }
+  ]
+}
