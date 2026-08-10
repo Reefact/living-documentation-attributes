@@ -53,6 +53,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reefact.LivingDocumentation
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reefact.LivingDocumentation.Attributes.EnterpriseIntegration", "Reefact.LivingDocumentation.Attributes.EnterpriseIntegration\Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.csproj", "{BDF4C9B5-A71B-4F32-AA26-8F0393FB2A37}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reefact.LivingDocumentation.Attributes.XUnitTestPatterns", "Reefact.LivingDocumentation.Attributes.XUnitTestPatterns\Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.csproj", "{7F3A1C64-9D28-4E15-B0A7-2C6E4D8F51B3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -315,6 +317,18 @@ Global
 		{3028DC12-C0EE-41A0-83F6-B56277106B84}.Release|x64.Build.0 = Release|Any CPU
 		{3028DC12-C0EE-41A0-83F6-B56277106B84}.Release|x86.ActiveCfg = Release|Any CPU
 		{3028DC12-C0EE-41A0-83F6-B56277106B84}.Release|x86.Build.0 = Release|Any CPU
+		{7F3A1C64-9D28-4E15-B0A7-2C6E4D8F51B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F3A1C64-9D28-4E15-B0A7-2C6E4D8F51B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F3A1C64-9D28-4E15-B0A7-2C6E4D8F51B3}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{7F3A1C64-9D28-4E15-B0A7-2C6E4D8F51B3}.Debug|x64.Build.0 = Debug|Any CPU
+		{7F3A1C64-9D28-4E15-B0A7-2C6E4D8F51B3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7F3A1C64-9D28-4E15-B0A7-2C6E4D8F51B3}.Debug|x86.Build.0 = Debug|Any CPU
+		{7F3A1C64-9D28-4E15-B0A7-2C6E4D8F51B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F3A1C64-9D28-4E15-B0A7-2C6E4D8F51B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F3A1C64-9D28-4E15-B0A7-2C6E4D8F51B3}.Release|x64.ActiveCfg = Release|Any CPU
+		{7F3A1C64-9D28-4E15-B0A7-2C6E4D8F51B3}.Release|x64.Build.0 = Release|Any CPU
+		{7F3A1C64-9D28-4E15-B0A7-2C6E4D8F51B3}.Release|x86.ActiveCfg = Release|Any CPU
+		{7F3A1C64-9D28-4E15-B0A7-2C6E4D8F51B3}.Release|x86.Build.0 = Release|Any CPU
 		{52B55D4F-493C-4A04-A0A2-5F7012BAC13B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{52B55D4F-493C-4A04-A0A2-5F7012BAC13B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52B55D4F-493C-4A04-A0A2-5F7012BAC13B}.Debug|x64.ActiveCfg = Debug|Any CPU
