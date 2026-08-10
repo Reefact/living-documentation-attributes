@@ -1,0 +1,22 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "TestcaseSuperclass",
+  "summary": "Holds in a superclass what several testcase classes have in common, so that shared setup and shared utilities are written once.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "TestcaseSuperclass",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "Reuse between testcase classes by inheritance. It is the counterpart of a test helper and the more expensive of the two: it spends the single base class a testcase class has, and it hides in a parent the setup a reader is looking for in the test.",
+      "links": []
+    }
+  ]
+}
