@@ -117,7 +117,7 @@ exists to prevent, applied to catalogues rather than to decisions.
 | `EnterpriseIntegration` | 65 | 65 | **complete** |
 | `XUnitTestPatterns` | 62 | 68 | **complete** — the other six are in the exclusion tables above |
 | `DomainDrivenDesign` | 23 | 45 + 2 | **complete** — with one open question about a possible twenty-fourth entry, below |
-| `MicroservicesPatterns` | 39 | 51 | **read whole, three entries pending a decision** — 39 held, 11 excluded in the tables above, 3 in the held-back section, and around half the work will be excluded ([ADR-0033](../doc/handwritten/for-maintainers/adr/0033-admit-microservices-patterns-as-a-catalogue.md)) |
+| `MicroservicesPatterns` | 41 | 51 | **read whole** — 41 held, 11 excluded in the tables above, 1 in the held-back section, and around half the work will be excluded ([ADR-0033](../doc/handwritten/for-maintainers/adr/0033-admit-microservices-patterns-as-a-catalogue.md)) |
 | `AnalysisPatterns` | 39 | — | **deliberately stopped**, and the only one that is |
 | `Idioms` | 2 | — | **never complete by construction** ([ADR-0013](../doc/handwritten/for-maintainers/adr/0013-shelve-a-pattern-without-a-body-of-work-under-idioms.md)) |
 
@@ -665,7 +665,7 @@ is never looked at, which is why the honest implementation throws.
 
 ## Microservices Patterns, and the words this catalogue already knew
 
-**Thirty-nine held, eleven excluded, three waiting — out of fifty-one.** Richardson's pattern
+**Forty-one held, eleven excluded, one waiting — out of fifty-one.** Richardson's pattern
 language is indexed at `microservices.io/patterns/index.html`, and the index carries **53 bullets
 over 51 distinct pages in 15 groups**: two pages are listed twice, under *External API* and under
 *Testing*. Every group has now been read. Its admission is
@@ -833,38 +833,24 @@ a relation never crosses a catalogue
 The classification the subdomain entry mentions — core, supporting, generic — is Evans', borrowed
 by this work and spelled in its own summary rather than asserted by inheritance.
 
-### Three patterns held back for want of evidence, not for want of merit
+### One pattern held back, and the bar it fails
 
-`SelfContainedService` and `ServicePerTeam` are **not** excluded. Both are annotatable, and both
-carry assertions of the useful kind — a self-contained service makes no synchronous call while
-handling a request, and a service per team has exactly one team that may change it, which is a
-claim a `CODEOWNERS` file can be held to.
+`ConsumerSideContractTest` is annotatable, carries a clear assertion — a suite verifying that a
+*client* can still talk to the service it calls — is not marked `new`, and describes something that
+predates the 2018 book. It is held back on
+[ADR-0035](../doc/handwritten/for-maintainers/adr/0035-index-the-pattern-language-and-require-a-write-up.md)'s
+second rule: **an index gloss is not a presentation.** One line of description on a bullet that links
+to the page for a different pattern is not a write-up, and an entry built from it would have its
+summary, its roles and every assertion written here rather than by the author.
 
-What stops them is the reference. ADR-0033 says an entry is added *only where the site states the
-book covers it, or the pattern predates it*, and neither limb holds:
+`AntiCorruptionLayer` sets the floor — a problem and a solution, and nothing else — and this does not
+reach it. If the author writes the page, the entry follows.
 
-* the author marks both **`new`** on his index — and they are the **only two** of the 48 he marks,
-  which is his own signal that they are recent additions to the pattern language;
-* neither page cites the book, where nine other pages do;
-* the 2018 book's chapter 2 is *Decomposition strategies*, confirmed from the publisher's own
-  table of contents, which is what carries the two entries that **are** held — and that same table
-  of contents could not be read past chapter 2, so it settles nothing about these two.
-
-Cataloguing them would put `Microservices Patterns, 2018` in a `reference` field on evidence that
-does not support it, and the reference is load-bearing: it is what says which work presents the
-pattern (ADR-0028). **The decision is the maintainer's**, and there are three ways out: read the
-book's contents past chapter 2 and add them if they are there; decide that the catalogue follows
-the author's *pattern language* rather than the 2018 book, which is a change to ADR-0033 and needs
-its own record; or leave them out and say so here.
-
-**`ConsumerSideContractTest` joins them, for a different reason.** It is annotatable and it carries
-a clear assertion — a suite that verifies a *client* can still talk to the service it calls, the
-counterpart of the consumer-driven test — and unlike the two above it is not marked `new`, and
-contract testing from the client's side predates the 2018 book. What it has no write-up: the index
-gives it one line of gloss and links to the page for a different pattern. Every other entry in this
-catalogue rests on a page with at least a problem and a solution, `AntiCorruptionLayer` included.
-Minting an entry from an index gloss alone would be a lower bar than any entry so far has cleared,
-and lowering it is the maintainer's call, not a drafting decision.
+**`SelfContainedService` and `ServicePerTeam` were held back beside it and are now held.** Their
+block was the rule ADR-0033 stated about the 2018 book, which ADR-0035 replaced: both have full
+write-ups, and the `new` marker the author puts on them says his pattern language has grown, not that
+the patterns are doubtful. They are the two entries this catalogue holds that the 2018 book does not
+carry, which rule 3 of ADR-0035 requires be named here — and this is where they are named.
 
 **Refactoring to services is the seventh group**, two patterns, catalogued whole — and it is the
 group about leaving, which makes both entries assertions with an expiry date.
