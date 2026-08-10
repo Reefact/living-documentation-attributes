@@ -1,0 +1,22 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "SetupDecorator",
+  "summary": "Wraps a suite so that something is set up before it runs and torn down after, so that the arrangement travels with the suite rather than with a class.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "SetupDecorator",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "A wrapper around a suite rather than a method inside a class. It is what lets an environment be arranged for a set of tests chosen at run time, and it is the piece a reader will not find by looking in the test — because it is not there.",
+      "links": []
+    }
+  ]
+}
