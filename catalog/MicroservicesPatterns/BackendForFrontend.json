@@ -1,0 +1,28 @@
+{
+  "catalog": "MicroservicesPatterns",
+  "name": "BackendForFrontend",
+  "summary": "Gives each kind of client an API gateway of its own, so that the API a mobile application is served is designed for a mobile application and changes with it.",
+  "reference": {
+    "author": "Chris Richardson",
+    "work": "Microservices Patterns",
+    "year": 2018
+  },
+  "inherited": false,
+  "specialisationOf": {
+    "catalog": "MicroservicesPatterns",
+    "name": "ApiGateway"
+  },
+  "roles": [
+    {
+      "name": "BackendForFrontend",
+      "targets": [
+        "Interface",
+        "Class",
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "A gateway serving one kind of client and no other. What it buys is that its API answers to one team's needs rather than to the average of everybody's; what it costs is that the fan-out logic several of them share is now written several times, or extracted into something nobody owns.",
+      "links": []
+    }
+  ]
+}
