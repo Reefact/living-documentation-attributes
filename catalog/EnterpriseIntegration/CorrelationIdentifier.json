@@ -1,0 +1,35 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "CorrelationIdentifier",
+  "summary": "Makes a reply name the request it answers, so that a requestor sending many can tell which answer is which.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Identifier",
+      "targets": [
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "summary": "The property identifying a request uniquely. It is what a reply will quote, so it must be unique for as long as an answer might arrive — which is longer than the request takes.",
+      "links": []
+    },
+    {
+      "name": "Correlation",
+      "targets": [
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "summary": "The property on the reply that quotes the request's identifier. This is the assertion the pattern exists for: an answer that does not carry it cannot be matched to anything, and a requestor holding several open requests has no way to guess.",
+      "links": [
+        "Identifier"
+      ]
+    }
+  ]
+}
