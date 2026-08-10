@@ -1,0 +1,22 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "TestcaseClassPerFixture",
+  "summary": "Puts into one testcase class exactly the tests that need the same starting state, so that the setup is written once and is true for every test in it.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "TestcaseClassPerFixture",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The organisation that follows the fixture. Every test in the class shares one starting state, which is what lets the setup be read once rather than re-read per test — and what makes a test that needs something slightly different a signal to split the class rather than to widen the setup.",
+      "links": []
+    }
+  ]
+}
