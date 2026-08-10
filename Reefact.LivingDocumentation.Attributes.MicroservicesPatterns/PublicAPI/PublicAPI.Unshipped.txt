@@ -104,3 +104,5 @@ Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.TransactionalOutbox
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.TransactionalOutbox.SenderAttribute.MessageOutbox.get -> System.Type?
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.TransactionalOutbox.SenderAttribute.MessageOutbox.init -> void
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.TransactionalOutbox.SenderAttribute.SenderAttribute() -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.TransactionLogTailingAttribute
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.TransactionLogTailingAttribute.TransactionLogTailingAttribute() -> void

@@ -1,0 +1,23 @@
+{
+  "catalog": "MicroservicesPatterns",
+  "name": "TransactionLogTailing",
+  "summary": "Publishes the messages an outbox holds by reading the database's own transaction log, so that every committed row reaches the broker and nothing else has to be asked.",
+  "reference": {
+    "author": "Chris Richardson",
+    "work": "Microservices Patterns",
+    "year": 2018
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "TransactionLogTailing",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "Reads the log the database already writes — the MySQL binlog, the Postgres write-ahead log, a DynamoDB stream — and publishes each message committed to the outbox. Accurate by construction and tied to one database engine by the same construction, so it is the participant a migration discovers late.",
+      "links": []
+    }
+  ]
+}
