@@ -325,10 +325,8 @@ made the catalogues independent, there is nothing to arbitrate — only this not
 
 ## xUnit Test Patterns, and the five words nobody agrees on
 
-**Fifty-five of its sixty-eight are catalogued**: chapters 18 to 25 but for the interludes —
-test strategy, the xUnit basics, fixture setup, result verification, fixture teardown, the
-test doubles, test organisation and the database patterns. What remains is
-design-for-testability and the value chapter. Its admission is
+**Fifty-nine of its sixty-eight are catalogued**: chapters 18 to 26 but for the interludes.
+What remains is the value chapter, chapter 27. Its admission is
 [ADR-0032](../doc/handwritten/for-maintainers/adr/0032-admit-xunit-test-patterns-as-a-catalogue.md).
 A reader counting sixteen against sixty-eight is looking at work in progress, and at a book
 about a third of which will not be catalogued at all — roughly ten entries are shapes a
@@ -550,6 +548,34 @@ commit, and the failure when it does arrives looking like flakiness.
 
 **All four of the chapter are catalogued**, the first chapter of this work with no exclusion
 at all.
+
+**`DependencyInjection` and `HumbleObject` are held here although Fowler and Feathers are the
+names attached to them**, and the question is settled by the test that already settled Pipes
+and Filters
+([ADR-0028](../doc/handwritten/for-maintainers/adr/0028-hold-a-pattern-in-every-catalogue-whose-work-presents-it.md)):
+does this work *present* the pattern as one of its own? Chapter 26 gives Dependency Injection
+eight pages, Dependency Lookup nine, Humble Object fourteen and Test Hook four, each a numbered
+pattern in Part III with its own problem statement and its own place in the book's pattern
+language. That is a presentation. Crediting an earlier source is scholarship, not the passing
+mention the rule excludes.
+
+Nothing collides, either: none of the four names is held by another catalogue today. If
+Fowler's *Dependency Injection* is ever catalogued it takes its own entry, in its own package,
+and neither refers to the other — which is
+[ADR-0027](../doc/handwritten/for-maintainers/adr/0027-ship-one-independent-package-per-catalogued-work.md),
+not a judgement to make again.
+
+**Injection and lookup are the chapter's pair of opposites** — how does a participant come by
+its collaborators, given from outside or fetched from a registry. The trade is where the
+substitution lives: a constructor argument is in the signature, a registry entry is in no
+signature at all, so a test that fails because somebody forgot to reset the registry fails a
+long way from its cause.
+
+**`TestHook` is the entry to count rather than to admire.** It is production code shipped for
+the benefit of a test, offered by the book as a last resort — and a codebase that cannot list
+its test hooks has no way to know how many it carries.
+
+**All four of the chapter are catalogued**, the second chapter running with no exclusion.
 
 ## Shape of the generated attribute
 
