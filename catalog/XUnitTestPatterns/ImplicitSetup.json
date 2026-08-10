@@ -1,0 +1,22 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "ImplicitSetup",
+  "summary": "Puts the fixture in a method the framework calls before every test, so that every test in the class starts from the same state without saying so.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "ImplicitSetup",
+      "targets": [
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "The setUp the framework runs. It removes the repetition and takes the setup out of the reader's line of sight, which is the trade: a test that fails now has a cause that is not in the test — and nothing in the test says where to look.",
+      "links": []
+    }
+  ]
+}
