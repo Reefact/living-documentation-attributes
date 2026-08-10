@@ -1,0 +1,24 @@
+{
+  "catalog": "MicroservicesPatterns",
+  "name": "DistributedTracing",
+  "summary": "Gives each external request an identifier, passes it to every service that handles it, and records the timing of each step centrally, so that one slow request can be followed across services.",
+  "reference": {
+    "author": "Chris Richardson",
+    "work": "Microservices Patterns",
+    "year": 2018
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "DistributedTracing",
+      "targets": [
+        "Interface",
+        "Class",
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "The participant that assigns or propagates the request identifier. It is load-bearing and invisible: one participant that forgets to pass the identifier on does not fail, it silently ends the trace, and the gap looks like a service that was never called.",
+      "links": []
+    }
+  ]
+}
