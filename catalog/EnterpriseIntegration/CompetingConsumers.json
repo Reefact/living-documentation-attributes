@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "CompetingConsumers",
+  "summary": "Puts several consumers on one point-to-point channel so that messages are processed concurrently, each message going to exactly one of them.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "CompetingConsumers",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "A consumer that competes with its fellows for each message the channel delivers; which of them wins is the messaging system's business and not the application's. It works only on a point-to-point channel — several consumers on a publish-subscribe channel each get their own copy, which is the opposite of what this pattern is for.",
+      "links": []
+    }
+  ]
+}
