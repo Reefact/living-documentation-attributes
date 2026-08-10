@@ -1,0 +1,58 @@
+{
+  "catalog": "MicroservicesPatterns",
+  "name": "EventSourcing",
+  "summary": "Persists an entity as the sequence of events that changed it rather than as its current state, so that recording a change and publishing it are one atomic append.",
+  "reference": {
+    "author": "Chris Richardson",
+    "work": "Microservices Patterns",
+    "year": 2018
+  },
+  "inherited": true,
+  "roles": [
+    {
+      "name": "Aggregate",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The entity whose state is never stored, only replayed. Its current state is a function of its events, so changing how an old event is applied silently changes what happened.",
+      "links": [
+        "Event"
+      ]
+    },
+    {
+      "name": "Event",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "repeatable": false,
+      "summary": "One state change, appended to the entity's history. It is kept for as long as the entity exists and replayed by code years newer than itself, which makes it the hardest thing here to change and the easiest to change by accident.",
+      "links": [
+        "Aggregate"
+      ]
+    },
+    {
+      "name": "EventStore",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The database of events, which also behaves like a broker: the append is one operation and it delivers to every subscriber, which is how this pattern avoids the two-phase commit the problem starts from.",
+      "links": []
+    },
+    {
+      "name": "Snapshot",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "repeatable": false,
+      "summary": "A saved copy of an entity's state, so that replay starts from it rather than from the beginning. It restates what the events already say, and it is wrong from the moment one of them is applied differently.",
+      "links": [
+        "Aggregate"
+      ]
+    }
+  ]
+}
