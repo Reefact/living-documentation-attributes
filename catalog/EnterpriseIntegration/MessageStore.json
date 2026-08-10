@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "MessageStore",
+  "summary": "Collects information about every message in one place, so that a transient and loosely coupled system can be reported on without being made less transient or less loosely coupled.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "MessageStore",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "Where a duplicate of each message, or a few fields of it, is kept for later analysis. It is fed and forgotten so the main flow is not slowed, at the cost of traffic — which is why what it keeps is a decision rather than an oversight, and worth being able to find.",
+      "links": []
+    }
+  ]
+}
