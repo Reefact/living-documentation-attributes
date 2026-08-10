@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "ChannelAdapter",
+  "summary": "Connects an application to the messaging system from outside it, so that an application that knows nothing of messaging can still take part.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "ChannelAdapter",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The participant that reads or writes an application's own interface on one side and a channel on the other. It is what lets a system be integrated without being modified, which is often the only option there is.",
+      "links": []
+    }
+  ]
+}
