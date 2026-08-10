@@ -1,0 +1,23 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "TestDouble",
+  "summary": "Replaces a component the system under test depends on with a test-specific equivalent, so that logic can be verified when what it depends on is unusable or slow.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": true,
+  "roles": [
+    {
+      "name": "TestDouble",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "repeatable": false,
+      "summary": "The stand-in for a depended-on component. It is the umbrella the five kinds below narrow: what makes something a test double is that the system under test cannot tell it from the real thing, and the test can. Annotating it is what separates a deliberate stand-in from a class that merely happens to be simple.",
+      "links": []
+    }
+  ]
+}
