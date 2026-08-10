@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "Detour",
+  "summary": "Sends messages through extra steps or straight to their destination depending on a switch the control bus holds, so that validation or debugging can be turned on without a deployment.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Detour",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The router with two outputs and a state told to it from outside: one output is the ordinary destination, the other the way round through steps that inspect or modify. Unlike a wire tap it can change what arrives, which is why it is worth knowing where one is before reading a message that looks wrong.",
+      "links": []
+    }
+  ]
+}

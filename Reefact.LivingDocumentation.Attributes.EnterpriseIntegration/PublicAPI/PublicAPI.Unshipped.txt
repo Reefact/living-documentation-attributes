@@ -66,6 +66,8 @@ Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.DatatypeChannelAttr
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.DatatypeChannelAttribute.DatatypeChannelAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.DeadLetterChannelAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.DeadLetterChannelAttribute.DeadLetterChannelAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.DetourAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.DetourAttribute.DetourAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.DocumentMessageAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.DocumentMessageAttribute.DocumentMessageAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.DurableSubscriberAttribute
