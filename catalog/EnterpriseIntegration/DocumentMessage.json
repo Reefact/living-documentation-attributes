@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "DocumentMessage",
+  "summary": "Carries data with no instruction attached, so that the receiver decides what to do with what it has been given.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "DocumentMessage",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "repeatable": false,
+      "summary": "A message that transfers a thing rather than an order. The sender is indifferent to what happens next, which is the difference from a command and the reason a document can be sent to a receiver that does something the sender never imagined.",
+      "links": []
+    }
+  ]
+}
