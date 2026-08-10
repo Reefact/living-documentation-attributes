@@ -12,6 +12,17 @@ Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.Aggregator.Role
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.Aggregator.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ChannelAdapterAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ChannelAdapterAttribute.ChannelAdapterAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ClaimCheck
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ClaimCheck.CheckLuggageAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ClaimCheck.CheckLuggageAttribute.CheckLuggageAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ClaimCheck.CheckLuggageAttribute.DataStore.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ClaimCheck.CheckLuggageAttribute.DataStore.init -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ClaimCheck.ClaimCheckAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ClaimCheck.ClaimCheckAttribute.ClaimCheckAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ClaimCheck.DataStoreAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ClaimCheck.DataStoreAttribute.DataStoreAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ClaimCheck.Role
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ClaimCheck.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.CommandMessageAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.CommandMessageAttribute.CommandMessageAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ComposedMessageProcessorAttribute

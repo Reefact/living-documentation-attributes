@@ -1,0 +1,45 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "ClaimCheck",
+  "summary": "Stores a message's bulk in a persistent store and puts a key on the message in its place, so that the data travels once and the steps in between carry only a reference.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "CheckLuggage",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The participant that generates the key, puts the data in the store under it, and replaces the data on the message with the key. Three things in one step, and they belong together: a key issued without a store entry, or an entry made without the data being removed, is the pattern half applied and worse than not applying it.",
+      "links": [
+        "DataStore"
+      ]
+    },
+    {
+      "name": "ClaimCheck",
+      "targets": [
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "summary": "The key left on the message in place of what was removed. It is what every step downstream carries instead of the data, and what a later content enricher presents to get the data back — so it must stay valid for as long as any step might still ask.",
+      "links": []
+    },
+    {
+      "name": "DataStore",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "Where the data waits. It is named because it is the pattern's cost: what was one message becomes a message and a stored record whose lifetime nothing on the message states, so somebody has to decide when it is safe to delete.",
+      "links": []
+    }
+  ]
+}
