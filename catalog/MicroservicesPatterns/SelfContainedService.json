@@ -1,0 +1,24 @@
+{
+  "catalog": "MicroservicesPatterns",
+  "name": "SelfContainedService",
+  "summary": "Designs a service so that it answers a synchronous request without waiting on any other service, keeping a replica of what it needs to read and finishing the rest asynchronously.",
+  "reference": {
+    "author": "Chris Richardson",
+    "work": "Microservices Patterns",
+    "year": 2018
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "SelfContainedService",
+      "targets": [
+        "Interface",
+        "Class",
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "The service that makes no synchronous call while handling a request, so that its availability is its own rather than the product of everything it would have called. What it pays is a reply that cannot say whether the work succeeded, and a caller that has to come back and ask.",
+      "links": []
+    }
+  ]
+}
