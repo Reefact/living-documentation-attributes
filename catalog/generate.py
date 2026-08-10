@@ -125,10 +125,10 @@ def role_class(pattern, role, indent):
     out.append(f"{pad}[AttributeUsage({targets(role['targets'])}, "
                f"AllowMultiple = {allow_multiple}, Inherited = {inherited})]")
     if not role["links"]:
-        out.append(f"{pad}public {role['_modifier']}class {role['name']}Attribute : Role {{ }}")
+        out.append(f"{pad}public sealed class {role['name']}Attribute : Role {{ }}")
         return "\n".join(out)
 
-    out.append(f"{pad}public {role['_modifier']}class {role['name']}Attribute : Role {{")
+    out.append(f"{pad}public sealed class {role['name']}Attribute : Role {{")
     for link in role["links"]:
         out.append("")
         out.append(doc(f'The <see cref="{link}Attribute" /> this role is bound to. Optional: it is only needed '
@@ -314,10 +314,9 @@ def main():
     index = {key(pattern): pattern for pattern in patterns}
 
     # Nothing is unsealed that is not actually derived from, so the exceptions in the generated sources are
-    # explained by the catalog rather than by the template. A specialisation derives pattern by pattern, so
-    # what it unseals is the pattern it narrows and never a single role.
+    # explained by the catalog rather than by the template. A specialisation derives pattern by pattern: it
+    # unseals the pattern it narrows, and a role is always sealed because nothing can name one (ADR-0031).
     unsealed_patterns = set()
-    unsealed_roles = set()
     for pattern in patterns:
         target = relation(pattern)
         if target is None:
@@ -343,8 +342,6 @@ def main():
             pattern["_base"] = (f"{base['name']}Attribute" if is_single_role(base)
                                 else f"{base['name']}.Role")
         pattern["_modifier"] = "" if key(pattern) in unsealed_patterns else "sealed "
-        for role in pattern["roles"]:
-            role["_modifier"] = "" if (*key(pattern), role["name"]) in unsealed_roles else "sealed "
 
     for pattern in patterns:
         # One project per catalogued work, since ADR-0027 ships each as its own package.
