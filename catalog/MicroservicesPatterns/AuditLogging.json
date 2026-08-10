@@ -1,0 +1,24 @@
+{
+  "catalog": "MicroservicesPatterns",
+  "name": "AuditLogging",
+  "summary": "Records what users did, in a database, so that the question of who changed what has an answer.",
+  "reference": {
+    "author": "Chris Richardson",
+    "work": "Microservices Patterns",
+    "year": 2018
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "AuditLogging",
+      "targets": [
+        "Interface",
+        "Class",
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "The participant that records user activity. Its records are evidence rather than diagnostics, which is the distinction nothing in a logging call shows — and the reason a retention policy written for logs is the wrong policy for these.",
+      "links": []
+    }
+  ]
+}
