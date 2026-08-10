@@ -1,0 +1,27 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "FakeObject",
+  "summary": "Provides a working but much lighter implementation of what the system under test depends on, so that a real interaction can happen without the real cost.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "specialisationOf": {
+    "catalog": "XUnitTestPatterns",
+    "name": "TestDouble"
+  },
+  "inherited": true,
+  "roles": [
+    {
+      "name": "FakeObject",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "repeatable": false,
+      "summary": "A double that actually works — an in-memory store standing in for a database. It is the only kind with behaviour of its own, which is why it is the only one that can have bugs, and why a fake that has drifted from the thing it replaces makes every test that uses it lie.",
+      "links": []
+    }
+  ]
+}
