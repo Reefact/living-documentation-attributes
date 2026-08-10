@@ -44,6 +44,15 @@ Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ContentEnricher.Rol
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ContentEnricher.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ContentFilterAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ContentFilterAttribute.ContentFilterAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ControlBus
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ControlBus.ControlBusAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ControlBus.ControlBusAttribute.ControlBusAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ControlBus.ManagedComponentAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ControlBus.ManagedComponentAttribute.ControlBus.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ControlBus.ManagedComponentAttribute.ControlBus.init -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ControlBus.ManagedComponentAttribute.ManagedComponentAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ControlBus.Role
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ControlBus.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.CorrelationIdentifier
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.CorrelationIdentifier.CorrelationAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.CorrelationIdentifier.CorrelationAttribute.CorrelationAttribute() -> void
