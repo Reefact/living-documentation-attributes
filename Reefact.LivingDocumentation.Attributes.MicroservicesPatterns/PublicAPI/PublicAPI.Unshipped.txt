@@ -87,3 +87,20 @@ Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Saga.SagaAttribute
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Saga.SagaAttribute.SagaAttribute() -> void
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.SharedDatabaseAttribute
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.SharedDatabaseAttribute.SharedDatabaseAttribute() -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.TransactionalOutbox
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.TransactionalOutbox.DatabaseAttribute
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.TransactionalOutbox.DatabaseAttribute.DatabaseAttribute() -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.TransactionalOutbox.MessageOutboxAttribute
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.TransactionalOutbox.MessageOutboxAttribute.Database.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.TransactionalOutbox.MessageOutboxAttribute.Database.init -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.TransactionalOutbox.MessageOutboxAttribute.MessageOutboxAttribute() -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.TransactionalOutbox.MessageRelayAttribute
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.TransactionalOutbox.MessageRelayAttribute.MessageOutbox.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.TransactionalOutbox.MessageRelayAttribute.MessageOutbox.init -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.TransactionalOutbox.MessageRelayAttribute.MessageRelayAttribute() -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.TransactionalOutbox.Role
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.TransactionalOutbox.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.TransactionalOutbox.SenderAttribute
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.TransactionalOutbox.SenderAttribute.MessageOutbox.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.TransactionalOutbox.SenderAttribute.MessageOutbox.init -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.TransactionalOutbox.SenderAttribute.SenderAttribute() -> void

@@ -1,0 +1,60 @@
+{
+  "catalog": "MicroservicesPatterns",
+  "name": "TransactionalOutbox",
+  "summary": "Makes updating the data and sending the message one local transaction, by writing the message to a table in the same database and letting a separate process forward it to the broker.",
+  "reference": {
+    "author": "Chris Richardson",
+    "work": "Microservices Patterns",
+    "year": 2018
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Sender",
+      "targets": [
+        "Interface",
+        "Class",
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "The service that changes its data and sends the message. It writes both in one local transaction and never touches the broker, which is what makes the send reliable — and what makes forgetting to write the row a failure with nothing to see.",
+      "links": [
+        "MessageOutbox"
+      ]
+    },
+    {
+      "name": "Database",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The one database holding both the business entities and the outbox. That they are the same database is the entire mechanism: two would need the distributed transaction this pattern exists to avoid.",
+      "links": []
+    },
+    {
+      "name": "MessageOutbox",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The table — or, in a document store, the property on each record — where a message waits. Written by the business transaction, read by nothing but the relay, and empty in a healthy system, which is why nobody notices when it stops being drained.",
+      "links": [
+        "Database"
+      ]
+    },
+    {
+      "name": "MessageRelay",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "Moves what the outbox holds to the broker once the transaction has committed. It can publish the same message twice — it may crash between publishing and recording that it did — so every consumer downstream of it has to be idempotent whether its author knew that or not.",
+      "links": [
+        "MessageOutbox"
+      ]
+    }
+  ]
+}
