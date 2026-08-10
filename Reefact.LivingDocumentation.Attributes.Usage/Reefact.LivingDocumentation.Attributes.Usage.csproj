@@ -18,6 +18,7 @@
     <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.AccountingPatterns\Reefact.LivingDocumentation.Attributes.AccountingPatterns.csproj" />
     <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.Idioms\Reefact.LivingDocumentation.Attributes.Idioms.csproj" />
     <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.XUnitTestPatterns\Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.csproj" />
+    <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.MicroservicesPatterns\Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.csproj" />
     <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.Usage.TrainOperations\Reefact.LivingDocumentation.Attributes.Usage.TrainOperations.csproj" />
     <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.Usage.Invoicing\Reefact.LivingDocumentation.Attributes.Usage.Invoicing.csproj" />
     <ProjectReference Include="..\Reefact.LivingDocumentation.Attributes.Usage.RailNetwork\Reefact.LivingDocumentation.Attributes.Usage.RailNetwork.csproj" />
