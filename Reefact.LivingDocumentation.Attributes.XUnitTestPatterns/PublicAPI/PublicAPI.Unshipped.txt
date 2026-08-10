@@ -1,1 +1,3 @@
 #nullable enable
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestDoubleAttribute
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestDoubleAttribute.TestDoubleAttribute() -> void
