@@ -13,6 +13,8 @@ Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.NamedTestSuiteAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.NamedTestSuiteAttribute.NamedTestSuiteAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.ParameterizedTestAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.ParameterizedTestAttribute.ParameterizedTestAttribute() -> void
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestcaseClassAttribute
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestcaseClassAttribute.TestcaseClassAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestcaseClassPerClassAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestcaseClassPerClassAttribute.TestcaseClassPerClassAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestcaseClassPerFeatureAttribute
