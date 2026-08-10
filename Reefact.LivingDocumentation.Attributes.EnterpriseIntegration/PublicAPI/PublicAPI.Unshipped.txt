@@ -1,4 +1,15 @@
 #nullable enable
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.Aggregator
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.Aggregator.AggregationStrategyAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.Aggregator.AggregationStrategyAttribute.AggregationStrategyAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.Aggregator.AggregatorAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.Aggregator.AggregatorAttribute.AggregatorAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.Aggregator.CompletenessConditionAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.Aggregator.CompletenessConditionAttribute.CompletenessConditionAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.Aggregator.CorrelationAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.Aggregator.CorrelationAttribute.CorrelationAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.Aggregator.Role
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.Aggregator.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ChannelAdapterAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ChannelAdapterAttribute.ChannelAdapterAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ContentBasedRouterAttribute

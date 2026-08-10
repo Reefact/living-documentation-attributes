@@ -1,0 +1,53 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "Aggregator",
+  "summary": "Collects related messages and emits one message when the set is complete, so that a result assembled from many parts can be treated as a whole.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Aggregator",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The stateful participant that holds messages until they belong together. It is the counterpart of a splitter, and being stateful is what distinguishes it from every other router — it must survive a restart or lose a half-finished set.",
+      "links": []
+    },
+    {
+      "name": "Correlation",
+      "targets": [
+        "Property",
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "What decides that two messages belong to the same set. Named explicitly because getting it wrong merges two unrelated consignments, and nothing else in the pattern would notice.",
+      "links": []
+    },
+    {
+      "name": "CompletenessCondition",
+      "targets": [
+        "Property",
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "What decides that a set is finished — a count, a timeout, an end marker. The hard part of the pattern, since a condition that never holds is a set that never emits and a leak nobody sees.",
+      "links": []
+    },
+    {
+      "name": "AggregationStrategy",
+      "targets": [
+        "Property",
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "How the collected messages become one. Held apart from the completeness condition because when to emit and what to emit are different questions, and conflating them is how an aggregator becomes unreadable.",
+      "links": []
+    }
+  ]
+}
