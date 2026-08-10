@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "PointToPointChannel",
+  "summary": "Delivers each message to exactly one receiver, so that competing consumers can share a load without any message being handled twice.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "PointToPointChannel",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "A channel whose message is consumed once, however many receivers listen. That is the assertion, and it is the one a consumer relies on to scale by adding another instance.",
+      "links": []
+    }
+  ]
+}
