@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "ChannelPurger",
+  "summary": "Removes left-over messages from a channel, so that what persisted from an earlier run does not get taken for a result of this one.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "ChannelPurger",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The participant that empties a channel, or removes the messages matching some criterion. It exists because persistence outlives a test: a stale reply consumed as though it answered the request just sent is a bug that reproduces perfectly and explains nothing, and something that deletes messages on purpose is worth finding before it is pointed at production.",
+      "links": []
+    }
+  ]
+}
