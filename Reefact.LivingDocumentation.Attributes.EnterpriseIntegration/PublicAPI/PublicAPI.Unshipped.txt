@@ -77,3 +77,5 @@ Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RemoteProcedureInvo
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RemoteProcedureInvocationAttribute.RemoteProcedureInvocationAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.SharedDatabaseAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.SharedDatabaseAttribute.SharedDatabaseAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.SplitterAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.SplitterAttribute.SplitterAttribute() -> void

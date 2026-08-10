@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "Splitter",
+  "summary": "Breaks a message carrying several elements into one message per element, so that each can be processed and routed on its own.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Splitter",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The participant that consumes one message and emits many. The assertion is the arithmetic: nothing is dropped and nothing invented, so a consignment of forty containers yields forty messages and a rule can check the count.",
+      "links": []
+    }
+  ]
+}
