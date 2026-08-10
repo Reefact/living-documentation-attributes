@@ -1,0 +1,27 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "HardCodedTestDouble",
+  "summary": "Has its return values and expected calls written into it, so that a double needed in one shape only costs nothing to configure.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "specialisationOf": {
+    "catalog": "XUnitTestPatterns",
+    "name": "TestDouble"
+  },
+  "inherited": true,
+  "roles": [
+    {
+      "name": "HardCodedTestDouble",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "repeatable": false,
+      "summary": "A double built by hand for one job, with no way to tell it anything. The right choice while there is one job; the wrong one by the fifth near-copy, which is the point at which the book sends a reader to the configurable kind.",
+      "links": []
+    }
+  ]
+}
