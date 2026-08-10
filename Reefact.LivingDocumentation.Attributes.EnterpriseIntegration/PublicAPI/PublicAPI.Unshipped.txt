@@ -107,6 +107,21 @@ Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RecipientList.Role
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RecipientList.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RemoteProcedureInvocationAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RemoteProcedureInvocationAttribute.RemoteProcedureInvocationAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RequestReply
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RequestReply.ReplierAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RequestReply.ReplierAttribute.ReplierAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RequestReply.ReplyAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RequestReply.ReplyAttribute.ReplyAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RequestReply.ReplyAttribute.Request.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RequestReply.ReplyAttribute.Request.init -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RequestReply.RequestAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RequestReply.RequestAttribute.Reply.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RequestReply.RequestAttribute.Reply.init -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RequestReply.RequestAttribute.RequestAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RequestReply.RequestorAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RequestReply.RequestorAttribute.RequestorAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RequestReply.Role
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RequestReply.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ResequencerAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ResequencerAttribute.ResequencerAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RoutingSlip
