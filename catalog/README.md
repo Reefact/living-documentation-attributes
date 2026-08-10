@@ -325,8 +325,13 @@ made the catalogues independent, there is nothing to arbitrate — only this not
 
 ## xUnit Test Patterns, and the five words nobody agrees on
 
-**Fifty-nine of its sixty-eight are catalogued**: chapters 18 to 26 but for the interludes.
-What remains is the value chapter, chapter 27. Its admission is
+**The book is complete.** Sixty-two of its sixty-eight patterns are catalogued and the other
+six are left out on purpose, each with its reason in the table above — nothing in this work is
+now unaccounted for.
+
+That changes what an absence means here, as it did for *Enterprise Integration Patterns*: a
+pattern of this book that is neither catalogued nor listed as an exclusion is a defect rather
+than work in progress. Its admission is
 [ADR-0032](../doc/handwritten/for-maintainers/adr/0032-admit-xunit-test-patterns-as-a-catalogue.md).
 A reader counting sixteen against sixty-eight is looking at work in progress, and at a book
 about a third of which will not be catalogued at all — roughly ten entries are shapes a
@@ -533,6 +538,7 @@ neither narrows anything catalogued here.
 | Pattern | Why |
 |---|---|
 | In-line Teardown | the cleaning up written in the body of the test method itself; nothing holds a role in it — the same ground as In-line Setup |
+| Literal Value | a value written inline in a test — an expression, not a declaration. A named constant is a different thing: what this pattern describes is precisely the value that is *not* given a name |
 
 **Chapter 25 is the only one whose patterns are about something outside the code**, and every
 entry earns its place the same way: what it states is invisible to every measurement the
@@ -576,6 +582,25 @@ the benefit of a test, offered by the book as a last resort — and a codebase t
 its test hooks has no way to know how many it carries.
 
 **All four of the chapter are catalogued**, the second chapter running with no exclusion.
+
+**`DummyObject` is a sixth test double, filed by the book under the value patterns.** It
+narrows `TestDouble` like the five in chapter 23, so a rule asking for every stand-in in a test
+tree finds it — which it would not, if the catalogue had followed the chapter it is printed in.
+
+The evidence for that relation is worth naming, because it is weaker than chapter 23's and
+stronger than what
+[ADR-0030](../doc/handwritten/for-maintainers/adr/0030-relate-only-the-narrowings-a-work-states-outright.md)
+refused in chapter 21. Chapter 23 was read from the publisher's free sample. This one rests on
+Fowler's *Test Double* page, which reports Meszaros' own taxonomy and names the five kinds
+outright — dummy among them. A named source reporting the author's list is not the book, and it
+is not an inference either.
+
+**Chapter 27 is about where a value in a test comes from**, and the three answers differ in
+what they cost. A derived value states the relationship a hard-coded expectation hides — two
+numbers that agree tell a reader nothing about why. A generated value removes collisions
+between runs and buys them back as irreproducibility, so a failure that depends on what was
+generated cannot be re-run unless what was generated is reported. And a dummy is the value that
+is never looked at, which is why the honest implementation throws.
 
 ## Shape of the generated attribute
 
