@@ -1,0 +1,22 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "CustomAssertion",
+  "summary": "States a domain expectation in one call, so that a test says what should be true rather than how to check it.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "CustomAssertion",
+      "targets": [
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "An assertion written for this codebase, named in its own words. It shortens tests and, more importantly, it makes the failure message say something: a comparison of two positions can report which of bay, row and tier moved, where a string comparison reports two strings.",
+      "links": []
+    }
+  ]
+}
