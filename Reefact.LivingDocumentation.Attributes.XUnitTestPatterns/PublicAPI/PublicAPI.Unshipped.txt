@@ -39,5 +39,7 @@ Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestSpyAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestSpyAttribute.TestSpyAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestStubAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestStubAttribute.TestStubAttribute() -> void
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestSuiteObjectAttribute
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestSuiteObjectAttribute.TestSuiteObjectAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestUtilityMethodAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestUtilityMethodAttribute.TestUtilityMethodAttribute() -> void
