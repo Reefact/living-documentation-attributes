@@ -1,0 +1,55 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "TestMessage",
+  "summary": "Feeds known data through a live component and checks what comes out, so that a component which is running but quietly producing rubbish is caught.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "TestDataGenerator",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "Produces the messages to be sent through the component under test, constant, from a file or random. Naming it separately from the verifier is what allows the two to be reasoned about apart — the generator decides what is exercised, and a generator that only ever emits the easy case is a green light that means nothing.",
+      "links": []
+    },
+    {
+      "name": "TestMessageInjector",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "Puts test data into the real stream and marks it as test data. The marking is the delicate part: a header field is the honest way, and a magic value in a business field makes one field mean two things — the book's last resort, and worth being able to find in a codebase that took it.",
+      "links": []
+    },
+    {
+      "name": "TestMessageSeparator",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "Takes the test results back out of the output stream, usually by routing on that mark. It is what keeps the experiment from reaching real consumers, so a separator that misses one sends a fabricated message to a system that will act on it.",
+      "links": []
+    },
+    {
+      "name": "TestDataVerifier",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "Compares what came out against what was expected and raises the discrepancy. It may need the original test data to do so, which is the one coupling inside this pattern and the reason the generator is worth pointing at rather than merely having.",
+      "links": [
+        "TestDataGenerator"
+      ]
+    }
+  ]
+}
