@@ -131,6 +131,8 @@ Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessagingBridgeAttr
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessagingBridgeAttribute.MessagingBridgeAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessagingGatewayAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessagingGatewayAttribute.MessagingGatewayAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessagingMapperAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessagingMapperAttribute.MessagingMapperAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.NormalizerAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.NormalizerAttribute.NormalizerAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.PipesAndFilters
