@@ -325,10 +325,10 @@ made the catalogues independent, there is nothing to arbitrate — only this not
 
 ## xUnit Test Patterns, and the five words nobody agrees on
 
-**Fifty-one of its sixty-eight are catalogued**: chapters 18 to 24 but for the interludes —
+**Fifty-five of its sixty-eight are catalogued**: chapters 18 to 25 but for the interludes —
 test strategy, the xUnit basics, fixture setup, result verification, fixture teardown, the
-test doubles and test organisation. What remains is the database, design-for-testability and
-value chapters. Its admission is
+test doubles, test organisation and the database patterns. What remains is
+design-for-testability and the value chapter. Its admission is
 [ADR-0032](../doc/handwritten/for-maintainers/adr/0032-admit-xunit-test-patterns-as-a-catalogue.md).
 A reader counting sixteen against sixty-eight is looking at work in progress, and at a book
 about a third of which will not be catalogued at all — roughly ten entries are shapes a
@@ -525,14 +525,31 @@ fixture that has *nothing* to clean up, which turns an empty tearDown somebody w
 habit into a statement — everything here is reclaimed by the runtime, so no file, no socket,
 no row survives the test. The day one does, that is the claim that was broken.
 
-Two more teardowns arrive with chapter 25: table truncation and transaction rollback are
-teardown patterns the book files under Database rather than here.
+Two more teardowns arrived with chapter 25: table truncation and transaction rollback are
+teardown patterns the book files under Database rather than here. They answer a different
+question from these three — *what* is undone rather than *where* the undoing is written — so
+neither narrows anything catalogued here.
 
 **One of chapter 22's four is left out:**
 
 | Pattern | Why |
 |---|---|
 | In-line Teardown | the cleaning up written in the body of the test method itself; nothing holds a role in it — the same ground as In-line Setup |
+
+**Chapter 25 is the only one whose patterns are about something outside the code**, and every
+entry earns its place the same way: what it states is invisible to every measurement the
+application makes of itself.
+
+A `StoredProcedureTest` covers logic no code-coverage tool will ever look at, so an
+unannotated procedure and an untested one are indistinguishable. A `DatabaseSandbox` is a
+thing nobody notices is missing until two runs collide. And the two teardowns carry the
+sharper trades: truncation is fast and total, so it will empty a table a colleague's fixture
+relied on just as happily; rollback is clean and carries a rule nothing enforces — the system
+under test must not commit on its own, so it cannot test anything whose behaviour depends on a
+commit, and the failure when it does arrives looking like flakiness.
+
+**All four of the chapter are catalogued**, the first chapter of this work with no exclusion
+at all.
 
 ## Shape of the generated attribute
 
