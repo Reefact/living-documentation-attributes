@@ -112,7 +112,7 @@ exists to prevent, applied to catalogues rather than to decisions.
 | `EnterpriseIntegration` | 65 | 65 | **complete** |
 | `XUnitTestPatterns` | 62 | 68 | **complete** — the other six are in the exclusion tables above |
 | `DomainDrivenDesign` | 23 | 45 + 2 | **complete** — with one open question about a possible twenty-fourth entry, below |
-| `MicroservicesPatterns` | 15 | 48 | **in progress** — three groups of fourteen catalogued, and around half the work will be excluded ([ADR-0033](../doc/handwritten/for-maintainers/adr/0033-admit-microservices-patterns-as-a-catalogue.md)) |
+| `MicroservicesPatterns` | 18 | 48 | **in progress** — five groups of fourteen catalogued, and around half the work will be excluded ([ADR-0033](../doc/handwritten/for-maintainers/adr/0033-admit-microservices-patterns-as-a-catalogue.md)) |
 | `AnalysisPatterns` | 39 | — | **deliberately stopped**, and the only one that is |
 | `Idioms` | 2 | — | **never complete by construction** ([ADR-0013](../doc/handwritten/for-maintainers/adr/0013-shelve-a-pattern-without-a-body-of-work-under-idioms.md)) |
 
@@ -660,16 +660,17 @@ is never looked at, which is why the honest implementation throws.
 
 ## Microservices Patterns, and the words this catalogue already knew
 
-**Fifteen of forty-eight.** Richardson's pattern language holds 48 patterns across fourteen
+**Eighteen of forty-eight.** Richardson's pattern language holds 48 patterns across fourteen
 groups on the index he maintains at `microservices.io/patterns/index.html`; *Service
-collaboration* (eight), *Transactional messaging* (three) and *Communication styles* (four) are
-catalogued, each whole and none with an exclusion. Its admission is
+collaboration* (eight), *Transactional messaging* (three), *Communication styles* (four),
+*External API* (two) and *Reliability* (one) are catalogued, each whole and none with an
+exclusion. Its admission is
 [ADR-0033](../doc/handwritten/for-maintainers/adr/0033-admit-microservices-patterns-as-a-catalogue.md),
 which also estimates that between twenty-five and thirty of the 48 will be admissible: roughly
 half the language is deployment and observability topology, which no C# declaration holds.
-A reader counting fifteen against forty-eight is looking at work in progress.
+A reader counting eighteen against forty-eight is looking at work in progress.
 
-**Where these entries were read from.** All fifteen pattern pages were fetched and read —
+**Where these entries were read from.** All eighteen pattern pages were fetched and read —
 context, problem, solution, related patterns — so the roles below are the participants the
 author names, not participants recalled from the book. Where a page names a thing without
 giving it a noun, the name here is this catalogue's and is flagged as such: `ViewUpdater` is
@@ -678,9 +679,10 @@ date by subscribing to domain events*. The four roles of `TransactionalOutbox` a
 own list.
 
 The work in the `reference` field is the 2018 book, not the site; the site is the same pattern
-language maintained by the same author. **Nine of the fifteen pages say outright that the book
-covers the pattern.** The other six — Database per Service, Shared database, Event sourcing,
-Remote Procedure Invocation, Domain-specific protocol, Idempotent Consumer — carry no such line,
+language maintained by the same author. **Nine of the eighteen pages say outright that the book
+covers the pattern.** The other nine — Database per Service, Shared database, Event sourcing,
+Remote Procedure Invocation, Domain-specific protocol, Idempotent Consumer, API Gateway,
+Backend for front-end and Circuit Breaker — carry no such line,
 and are held on
 [ADR-0033](../doc/handwritten/for-maintainers/adr/0033-admit-microservices-patterns-as-a-catalogue.md)'s
 other ground: each is the subject matter of a chapter of the 2018 book, or predates it outright.
@@ -760,6 +762,40 @@ publish twice, so at-least-once delivery makes idempotence compulsory rather tha
 and the mechanism is a primary key on `(subscriber, message)` that lives in a schema and in no
 signature. Drop the constraint and every handler still compiles and still passes its tests, on
 messages that never arrive twice.
+
+**External API and Reliability are the fourth and fifth groups**, three entries between them,
+and they are the ones a reader is most likely to have come looking for: *API gateway* and
+*circuit breaker* are said in standups by people who have read neither the book nor the site.
+
+**`BackendForFrontend` is the first `specialisationOf` this catalogue records**, and it is
+recorded at the pattern rather than at a role, which is the ordinary shape rather than the one
+[ADR-0034](../doc/handwritten/for-maintainers/adr/0034-let-a-specialisation-name-the-role-it-narrows.md)
+added. The work states it outright — *"A variation of this pattern is the Backends for frontends
+pattern. It defines a separate API gateway for each kind of client"* — so every backend for
+frontend **is** an API gateway, and a rule written for the broader one reaches all of them.
+`ApiGateway` is flat, so the relation is attribute to attribute and loses nothing.
+
+The work spells it two ways: *Backend for front-end* in the index, *Backends for frontends* in
+the heading of the page it shares with API Gateway. The entry takes the index's spelling in the
+singular, because an annotation names one participant, and this sentence is where a reader who
+searched for the other spelling finds out why.
+
+**`CircuitBreaker` is not related to anything, and the temptation was real.** The page says a
+service client invokes the remote service *via a proxy*, and a circuit breaker is plainly a way
+of being an RPI client — the mechanism to say so now exists. But the work does not say it, and
+[ADR-0030](../doc/handwritten/for-maintainers/adr/0030-relate-only-the-narrowings-a-work-states-outright.md)
+carries the narrowings a work states outright rather than the ones its arrangement suggests. The
+second instalment running where having the mechanism was not a reason to use it.
+
+What `CircuitBreaker` asserts is worth spelling out, because it is the one people annotate
+carelessly: this participant **returns errors the remote service never sent**. A caller written
+as though every failure came from the far end is wrong in a way that only appears when the
+breaker is open, which is the worst moment to find out.
+
+**`ApiGateway` is the entry whose annotation ages into a warning.** Hiding the partitioning is
+what makes the partitioning free to change; it also gives this one participant a reason to know
+about every service there is. A codebase that can list its gateways can see the day one of them
+has grown back into the thing it replaced.
 
 **Transactional messaging is the second group**, three patterns, catalogued whole. It answers
 the question the first group keeps running into: a service has to change its data *and* send a
