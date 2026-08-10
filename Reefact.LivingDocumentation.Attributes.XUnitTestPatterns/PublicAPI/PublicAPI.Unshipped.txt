@@ -3,6 +3,8 @@ Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.ConfigurableTestDoubleA
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.ConfigurableTestDoubleAttribute.ConfigurableTestDoubleAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.FakeObjectAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.FakeObjectAttribute.FakeObjectAttribute() -> void
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.HardCodedTestDoubleAttribute
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.HardCodedTestDoubleAttribute.HardCodedTestDoubleAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.MockObjectAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.MockObjectAttribute.MockObjectAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestDoubleAttribute
