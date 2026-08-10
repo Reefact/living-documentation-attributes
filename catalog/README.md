@@ -224,19 +224,21 @@ one entry and loses the statement of what the figure should have been, and
 
 ## Enterprise Integration Patterns, and what a channel's annotation depends on
 
-**Fifty-seven of its sixty-five are catalogued**: the integration styles, the base
-patterns, the channels, and the whole of message routing, message construction, message
-transformation and the messaging endpoints. A reader counting fifty-seven against
-sixty-five is looking at work in progress and not at eight decisions. What remains is
-system management.
+**All sixty-five are catalogued.** The integration styles, the base patterns, the channels,
+message routing, message construction, message transformation, the messaging endpoints and
+system management — the whole book, in its own order but for routing, which was taken
+before construction and is the one detour recorded below.
+
+It is the largest catalogue here and the first taken to completion, which changes what an
+absence means: a pattern of this book that is missing is now a defect rather than work in
+progress.
 
 **Routing was taken before construction**, and construction closed the gap that left.
 Routing went first because it is the core of the work — the router, the splitter, the
 aggregator and the process manager are what a messaging codebase is made of, while
 message construction is mostly properties on a message. Chapter 5 was then filled behind
-chapter 7, so the catalogue reads in the book's order again and what remains follows it.
-The detour is recorded because it happened, not because anything is still missing from
-the middle.
+chapter 7. The detour is recorded because it happened, and because a reader comparing the
+commit history to the book would otherwise take it for a gap.
 
 **A pattern the book builds out of other patterns gets one role, not a role per part.**
 `ComposedMessageProcessor` is a splitter, a router and an aggregator; `Normalizer` is a
@@ -258,15 +260,28 @@ common in .NET, the role attaches to it. They are catalogued because the routing
 route *between* channels and the endpoint patterns consume *from* them: a catalogue without
 channels describes half a mechanism, and an absence with no record reads as an oversight.
 
-**The three message intents do not narrow `Message`, although the book calls them kinds
-of message.** `CommandMessage`, `DocumentMessage` and `EventMessage` are separate
-patterns here, with no `specialisationOf`. Not because the book is wrong: because a
-relation targets a *pattern* and `Message` has three roles, so the inheritance it emits
-would be from `Message.Role` — the base every role of `Message` answers, header and body
-included. A consumer asking for `Message.Message` would not get the commands, and one
-asking for `Message.Role` would get them beside headers. The relation would state
-something the book does not, which is worse than stating nothing: a codebase that means
-both writes both attributes.
+**This catalogue carries no `specialisationOf` at all, and the book states plenty.** That
+is [ADR-0030](../doc/handwritten/for-maintainers/adr/0030-decide-whether-enterprise-integration-carries-its-books-relations.md),
+which is `Proposed` and holds the alternatives — it records the absence rather than
+defending it. What the book states, so that a reader is not left to wonder:
+
+| The book says | Here |
+|---|---|
+| the twelve patterns of *Message Routing* are kinds of `MessageRouter` | unrelated entries |
+| the six of *Message Transformation* are kinds of `MessageTranslator` | unrelated entries |
+| the channels of *Messaging Channels* are kinds of `MessageChannel` | unrelated entries |
+| the consumers of *Messaging Endpoints* are kinds of `MessageEndpoint` | unrelated entries |
+| a `WireTap` **is** a fixed `RecipientList` with two output channels | unrelated entries |
+| `CommandMessage`, `DocumentMessage` and `EventMessage` are three kinds of `Message` | unrelated entries |
+
+An earlier version of this file gave a reason for the last row — that the relation would
+assert something the book does not, since `Message` has three roles and the inheritance
+would be from `Message.Role`. **That reason was wrong.** Six relations of exactly that
+shape are already shipped in other catalogues —
+`HierarchicAccountabilityAttribute : Accountability.Role` is one — and they say "a
+participant in the broader pattern", which a command message is. The relation would
+under-specify, not misstate. Until ADR-0030 is decided, a codebase that means both writes
+both attributes, which costs one line.
 
 **`CompetingConsumers` keeps a plural name for a role that annotates one class**, and that
 is deliberate. It is the name the book gives, and the rule for names is to spell a pattern
@@ -287,16 +302,15 @@ catalogue refers to the other.
 
 ### Three homonyms, expected and unrelated
 
-This work carries three names the catalogue already holds elsewhere. Two arrived with the
-messaging endpoints; the third comes with system management. They are **different
-patterns**, and since each catalogue ships as its own package nothing in the packages says
-so — hence this table.
+This work carries three names the catalogue already holds elsewhere. All three are now
+here. They are **different patterns**, and since each catalogue ships as its own package
+nothing in the packages says so — hence this table.
 
 | Here | Already held as | Why they are not the same |
 |---|---|---|
 | `EnterpriseIntegration/MessagingGateway` | `EnterpriseApplicationArchitecture/Gateway` | Fowler's wraps any external resource behind a simple interface; this one hides a messaging API from application code |
 | `EnterpriseIntegration/MessagingMapper` | `EnterpriseApplicationArchitecture/Mapper` | Fowler's moves data between two objects that should not know each other; this one moves it between a domain object and a message |
-| `EnterpriseIntegration/SmartProxy` *(to come)* | `GangOfFour/Proxy` | the Gang of Four's stands in for an object; this one intercepts a request and its reply in order to observe them |
+| `EnterpriseIntegration/SmartProxy` | `GangOfFour/Proxy` | the Gang of Four's stands in for an object; this one intercepts a request and its reply in order to observe them |
 
 Three days ago each would have been a question of which publication held the definition.
 Since [ADR-0027](../doc/handwritten/for-maintainers/adr/0027-ship-one-independent-package-per-catalogued-work.md)
