@@ -1,0 +1,23 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "FreshFixture",
+  "summary": "Is built anew for each test, so that no test can be affected by what another one did.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "FreshFixture",
+      "targets": [
+        "Class",
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "A fixture with a lifetime of one test. It is the only arrangement in which a test that passes alone passes in a suite, and it is bought with the time it takes to build — which is the whole of the argument against it.",
+      "links": []
+    }
+  ]
+}

@@ -7,6 +7,8 @@ Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.DataDrivenTestAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.DataDrivenTestAttribute.DataDrivenTestAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.FakeObjectAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.FakeObjectAttribute.FakeObjectAttribute() -> void
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.FreshFixtureAttribute
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.FreshFixtureAttribute.FreshFixtureAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.HardCodedTestDoubleAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.HardCodedTestDoubleAttribute.HardCodedTestDoubleAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.MinimalFixtureAttribute
