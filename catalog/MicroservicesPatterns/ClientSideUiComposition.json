@@ -1,0 +1,35 @@
+{
+  "catalog": "MicroservicesPatterns",
+  "name": "ClientSideUiComposition",
+  "summary": "Builds one screen from UI components rendered by several service-specific front ends, composed on the client.",
+  "reference": {
+    "author": "Chris Richardson",
+    "work": "Microservices Patterns",
+    "year": 2018
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "UiComponent",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": true,
+      "summary": "The participant rendering one region, owned by the team behind its service. Composed in the browser rather than on the server, so a failure degrades one region instead of the response.",
+      "links": [
+        "PageSkeleton"
+      ]
+    },
+    {
+      "name": "PageSkeleton",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": true,
+      "summary": "The skeleton the components are placed into. It decides layout and nothing else, and it is the participant that must keep working when a component does not arrive.",
+      "links": []
+    }
+  ]
+}
