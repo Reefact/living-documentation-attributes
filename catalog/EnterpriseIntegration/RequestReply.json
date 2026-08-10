@@ -1,0 +1,57 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "RequestReply",
+  "summary": "Pairs a request with a reply over two channels, so that a message can get an answer without either side blocking on the other's availability.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Request",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "repeatable": false,
+      "summary": "The message that asks. It travels one channel and names, or carries, the channel the answer should come back on — which is what makes the exchange two one-way messages rather than a call.",
+      "links": [
+        "Reply"
+      ]
+    },
+    {
+      "name": "Reply",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "repeatable": false,
+      "summary": "The message that answers, sent on a channel of its own. Being a separate message is what lets the requestor be down when it arrives and still receive it.",
+      "links": [
+        "Request"
+      ]
+    },
+    {
+      "name": "Requestor",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The participant that sends the request and consumes the reply. It must be able to match one to the other, which is what a correlation identifier is for and why the two patterns are always seen together.",
+      "links": []
+    },
+    {
+      "name": "Replier",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The participant that consumes the request and sends the reply. It learns where to answer from the message rather than from configuration, which is what lets one replier serve requestors it was never told about.",
+      "links": []
+    }
+  ]
+}
