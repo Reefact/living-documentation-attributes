@@ -224,18 +224,18 @@ one entry and loses the statement of what the figure should have been, and
 
 ## Enterprise Integration Patterns, and what a channel's annotation depends on
 
-**Thirty-one of its sixty-five are catalogued**: the integration styles, the base
-patterns, the channels and — taken out of turn — the whole of message routing. A reader
-counting thirty-one against sixty-five is looking at work in progress and not at
-thirty-four decisions.
+**Forty of its sixty-five are catalogued**: the integration styles, the base patterns,
+the channels, the whole of message routing and the whole of message construction. A
+reader counting forty against sixty-five is looking at work in progress and not at
+twenty-five decisions.
 
-The catalogue was being filled in the book's own order, and **routing was taken before
-construction** because it is the core of the work: the router, the splitter, the aggregator
-and the process manager are what a messaging codebase is made of, and message construction
-is mostly properties on a message. So the order now reads: styles, base patterns, channels,
-**routing**, then construction, transformation, endpoints and system management. Saying so
-matters because a reader following the book will find chapter 5 missing before chapter 7,
-and that is a choice rather than an omission.
+**Routing was taken before construction**, and construction closes the gap that left.
+Routing went first because it is the core of the work — the router, the splitter, the
+aggregator and the process manager are what a messaging codebase is made of, while
+message construction is mostly properties on a message. Chapter 5 is now filled behind
+chapter 7, so the catalogue reads in the book's order again and what remains follows it:
+transformation, endpoints, system management. The detour is recorded because it happened,
+not because anything is still missing from the middle.
 
 Its admission is
 [ADR-0029](../doc/handwritten/for-maintainers/adr/0029-admit-enterprise-integration-patterns-as-a-catalogue.md),
@@ -248,6 +248,16 @@ a defect in the entry. Where a codebase has a typed abstraction per channel, and
 common in .NET, the role attaches to it. They are catalogued because the routing patterns
 route *between* channels and the endpoint patterns consume *from* them: a catalogue without
 channels describes half a mechanism, and an absence with no record reads as an oversight.
+
+**The three message intents do not narrow `Message`, although the book calls them kinds
+of message.** `CommandMessage`, `DocumentMessage` and `EventMessage` are separate
+patterns here, with no `specialisationOf`. Not because the book is wrong: because a
+relation targets a *pattern* and `Message` has three roles, so the inheritance it emits
+would be from `Message.Role` — the base every role of `Message` answers, header and body
+included. A consumer asking for `Message.Message` would not get the commands, and one
+asking for `Message.Role` would get them beside headers. The relation would state
+something the book does not, which is worse than stating nothing: a codebase that means
+both writes both attributes.
 
 **Pipes and Filters and Message Broker are held here although POSA named them first** in
 1996. The test is
