@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "ComposedMessageProcessor",
+  "summary": "Splits a message, routes each element to the processing it needs, and reassembles the results, so that a message of mixed elements is handled without a step that understands all of them.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "ComposedMessageProcessor",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The participant that assembles a splitter, a router and an aggregator into one addressable step. It is a composite of three patterns rather than a fourth mechanism, and naming it is what stops the three being reinvented at every call site.",
+      "links": []
+    }
+  ]
+}
