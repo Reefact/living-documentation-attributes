@@ -21,6 +21,21 @@ Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.CommandSideReplica.
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.CommandSideReplica.ReplicaDatabaseAttribute.ReplicaDatabaseAttribute() -> void
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.CommandSideReplica.Role
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.CommandSideReplica.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Cqrs
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Cqrs.CommandSideAttribute
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Cqrs.CommandSideAttribute.CommandSideAttribute() -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Cqrs.QuerySideAttribute
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Cqrs.QuerySideAttribute.QuerySideAttribute() -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Cqrs.QuerySideAttribute.View.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Cqrs.QuerySideAttribute.View.init -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Cqrs.Role
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Cqrs.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Cqrs.ViewAttribute
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Cqrs.ViewAttribute.ViewAttribute() -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Cqrs.ViewUpdaterAttribute
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Cqrs.ViewUpdaterAttribute.View.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Cqrs.ViewUpdaterAttribute.View.init -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.Cqrs.ViewUpdaterAttribute.ViewUpdaterAttribute() -> void
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.DatabasePerService
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.DatabasePerService.PrivateDatabaseAttribute
 Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.DatabasePerService.PrivateDatabaseAttribute.PrivateDatabaseAttribute() -> void
