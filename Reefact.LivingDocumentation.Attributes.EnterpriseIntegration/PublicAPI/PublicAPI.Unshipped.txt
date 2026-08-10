@@ -30,6 +30,8 @@ Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessageTranslatorAt
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessageTranslatorAttribute.MessageTranslatorAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessagingAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessagingAttribute.MessagingAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessagingBridgeAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessagingBridgeAttribute.MessagingBridgeAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.PipesAndFilters
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.PipesAndFilters.FilterAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.PipesAndFilters.FilterAttribute.FilterAttribute() -> void

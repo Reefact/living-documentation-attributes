@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "MessagingBridge",
+  "summary": "Connects two messaging systems so that a message available on one is available on the other, without either being aware of the other.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "MessagingBridge",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The participant that consumes from one messaging system and publishes to another. It exists because two systems are rarely replaced at once, and it is the seam that lets one be retired gradually.",
+      "links": []
+    }
+  ]
+}
