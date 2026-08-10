@@ -1,0 +1,22 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "TestcaseClass",
+  "summary": "Groups test methods into a class the framework can find and run, so that tests have somewhere to live and something to share.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": true,
+  "roles": [
+    {
+      "name": "TestcaseClass",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The class the test methods belong to. It is what a runner discovers, what a fixture is set up for, and what the three organisations of chapter 24 are three different answers about — so a codebase that annotates its testcase classes can then be asked which of the three each one follows.",
+      "links": []
+    }
+  ]
+}
