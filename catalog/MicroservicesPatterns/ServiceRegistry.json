@@ -1,0 +1,23 @@
+{
+  "catalog": "MicroservicesPatterns",
+  "name": "ServiceRegistry",
+  "summary": "Holds where every instance of every service is, written on startup and erased on shutdown, so that callers and routers have somewhere to ask.",
+  "reference": {
+    "author": "Chris Richardson",
+    "work": "Microservices Patterns",
+    "year": 2018
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "ServiceRegistry",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The database of locations. Everything that discovers depends on it, so it is the participant whose own availability bounds the application's — and it is wrong, briefly, every time an instance dies without saying so.",
+      "links": []
+    }
+  ]
+}
