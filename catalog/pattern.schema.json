@@ -24,6 +24,7 @@
         "AccountingPatterns",
         "EnterpriseIntegration",
         "XUnitTestPatterns",
+        "MicroservicesPatterns",
         "Idioms"
       ]
     },
