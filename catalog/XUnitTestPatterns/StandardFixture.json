@@ -1,0 +1,23 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "StandardFixture",
+  "summary": "Sets up the same well-known starting state for many tests, so that one design is learned once and reused.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "StandardFixture",
+      "targets": [
+        "Class",
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "The opposite trade to a minimal fixture: one fixture everyone knows, at the price that most tests use a fraction of it. Worth stating rather than drifting into, because the two are indistinguishable in code and answer opposite questions about what a reader should assume.",
+      "links": []
+    }
+  ]
+}
