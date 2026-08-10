@@ -1,1 +1,10 @@
 #nullable enable
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.DatabasePerService
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.DatabasePerService.PrivateDatabaseAttribute
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.DatabasePerService.PrivateDatabaseAttribute.PrivateDatabaseAttribute() -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.DatabasePerService.PrivateDatabaseAttribute.Service.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.DatabasePerService.PrivateDatabaseAttribute.Service.init -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.DatabasePerService.Role
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.DatabasePerService.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.DatabasePerService.ServiceAttribute
+Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.DatabasePerService.ServiceAttribute.ServiceAttribute() -> void

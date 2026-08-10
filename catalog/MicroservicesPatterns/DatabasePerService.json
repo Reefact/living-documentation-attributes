@@ -1,0 +1,36 @@
+{
+  "catalog": "MicroservicesPatterns",
+  "name": "DatabasePerService",
+  "summary": "Keeps each service's persistent data private to it and reachable only through its API, so that a change to one service's schema is a change to nothing else.",
+  "reference": {
+    "author": "Chris Richardson",
+    "work": "Microservices Patterns",
+    "year": 2018
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Service",
+      "targets": [
+        "Interface",
+        "Class",
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "The service whose data is its own: its transactions involve its database and no other, and anything outside it that wants the data asks for it rather than reading it.",
+      "links": []
+    },
+    {
+      "name": "PrivateDatabase",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The tables, schema or server one service owns. Nothing in the code enforces the privacy — a connection string is a connection string — so the barrier is a grant, a reviewer, or this annotation.",
+      "links": [
+        "Service"
+      ]
+    }
+  ]
+}
