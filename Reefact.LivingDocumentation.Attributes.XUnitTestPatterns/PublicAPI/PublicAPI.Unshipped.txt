@@ -37,6 +37,8 @@ Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestMethodAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestMethodAttribute.TestMethodAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestRunnerAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestRunnerAttribute.TestRunnerAttribute() -> void
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestSelectionAttribute
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestSelectionAttribute.TestSelectionAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestSpecificSubclassAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestSpecificSubclassAttribute.TestSpecificSubclassAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.TestSpyAttribute

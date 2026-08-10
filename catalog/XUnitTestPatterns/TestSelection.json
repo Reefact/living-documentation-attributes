@@ -1,0 +1,23 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "TestSelection",
+  "summary": "Chooses at run time which of the available tests to run, so that a subset can be run without a suite being written for it.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": true,
+  "roles": [
+    {
+      "name": "TestSelection",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The filter applied to what discovery or enumeration produced — by category, by name, by whatever the team decided. It is worth naming because a selection that excludes more than anybody realises is indistinguishable, from the report, from a suite that passed.",
+      "links": []
+    }
+  ]
+}
