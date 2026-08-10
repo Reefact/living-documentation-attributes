@@ -152,6 +152,14 @@ change is documentation, or the build; a scope beside it names the *other*
 components reached. So `docs(doc)` is `docs:`, `docs(build,doc)` is
 `docs(build):`, and `build(build)` is `build:`. The repetition is rejected.
 
+The same reasoning, one step further, leaves out `usage` beside `catalog`: ADR-0012
+requires a worked sample for every pattern, so adding a pattern always touches the
+sample project. `feat(catalog,usage): add Splitter` tells a reader nothing
+`feat(catalog): add Splitter` does not. Write `catalog` alone; the scope stays for a
+change that reaches the samples and nothing else. Nothing rejects this one — it is a
+convention, and the header limit is tight enough that the six wasted characters are
+worth having back.
+
 ### Description
 
 Imperative and lowercase — *add*, not *Add* or *Added* — and no trailing period.
