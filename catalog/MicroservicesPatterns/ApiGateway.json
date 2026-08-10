@@ -1,0 +1,24 @@
+{
+  "catalog": "MicroservicesPatterns",
+  "name": "ApiGateway",
+  "summary": "Gives every client one entry point, routing some requests to a single service and answering others by fanning out to several, so that no client has to know how the application is partitioned.",
+  "reference": {
+    "author": "Chris Richardson",
+    "work": "Microservices Patterns",
+    "year": 2018
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "ApiGateway",
+      "targets": [
+        "Interface",
+        "Class",
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "The single entry point. It hides the partitioning, the locations and sometimes the protocols, which is why every one of those becomes free to change — and why this participant has a reason to know about every service there is, and turns into the monolith it replaced if nobody watches.",
+      "links": []
+    }
+  ]
+}
