@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "PublishSubscribeChannel",
+  "summary": "Delivers a copy of each message to every subscriber, so that an event reaches all interested parties and the sender learns of none of them.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "PublishSubscribeChannel",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "A channel that copies its message to each subscriber. A sender adds no code when a subscriber is added, which is the property that makes it the channel for events rather than for commands.",
+      "links": []
+    }
+  ]
+}
