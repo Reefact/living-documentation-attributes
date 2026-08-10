@@ -1,0 +1,22 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "TestcaseObject",
+  "summary": "Represents one test as an object, so that a test can be passed around, held in a collection and run later.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": true,
+  "roles": [
+    {
+      "name": "TestcaseObject",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "One test, reified — the command object a suite holds. It is what lets a suite be built at run time rather than written out, and it is why a test can be counted, filtered and re-run without the framework parsing anything.",
+      "links": []
+    }
+  ]
+}
