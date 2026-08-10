@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "ScatterGather",
+  "summary": "Sends a message to several recipients and assembles their replies, so that the best or the fullest answer can be taken from a set of candidates.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "ScatterGather",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The participant that broadcasts a request and aggregates the replies. It differs from a composed message processor in what is distributed: there, the parts of one message; here, the whole message to several parties who each answer.",
+      "links": []
+    }
+  ]
+}

@@ -90,6 +90,8 @@ Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RemoteProcedureInvo
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RemoteProcedureInvocationAttribute.RemoteProcedureInvocationAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ResequencerAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ResequencerAttribute.ResequencerAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ScatterGatherAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ScatterGatherAttribute.ScatterGatherAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.SharedDatabaseAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.SharedDatabaseAttribute.SharedDatabaseAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.SplitterAttribute
