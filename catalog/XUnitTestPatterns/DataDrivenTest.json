@@ -1,0 +1,23 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "DataDrivenTest",
+  "summary": "Takes both its data and its expected results from outside the code, so that cases can be added without a programmer.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "DataDrivenTest",
+      "targets": [
+        "Class",
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "A test whose cases live in a file or a table. Distinct from a parameterized test, which takes arguments a programmer wrote: here the point is that somebody who is not a programmer adds a row — and the cost is that a failure has to be traced back to a row rather than to a line.",
+      "links": []
+    }
+  ]
+}

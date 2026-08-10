@@ -3,6 +3,8 @@ Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.AssertionMethodAttribut
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.AssertionMethodAttribute.AssertionMethodAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.ConfigurableTestDoubleAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.ConfigurableTestDoubleAttribute.ConfigurableTestDoubleAttribute() -> void
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.DataDrivenTestAttribute
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.DataDrivenTestAttribute.DataDrivenTestAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.FakeObjectAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.FakeObjectAttribute.FakeObjectAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.HardCodedTestDoubleAttribute
