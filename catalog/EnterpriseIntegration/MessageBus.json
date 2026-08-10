@@ -1,0 +1,24 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "MessageBus",
+  "summary": "Gives applications a shared messaging infrastructure and a common command set, so that one can be added or removed without the others being touched.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "MessageBus",
+      "targets": [
+        "Interface",
+        "Class",
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "The participant that provides the shared infrastructure and the agreed vocabulary. What makes it more than a channel is the second half: without a common command set, a bus is only a way of moving strings.",
+      "links": []
+    }
+  ]
+}
