@@ -1,0 +1,23 @@
+{
+  "catalog": "XUnitTestPatterns",
+  "name": "DependencyLookup",
+  "summary": "Asks a registry for its collaborators, so that a test can substitute what the registry answers.",
+  "reference": {
+    "author": "Gerard Meszaros",
+    "work": "xUnit Test Patterns",
+    "year": 2007
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "DependencyLookup",
+      "targets": [
+        "Class",
+        "Interface"
+      ],
+      "repeatable": false,
+      "summary": "The other answer: the participant fetches, and the test changes what it fetches. It keeps constructors simple and moves the substitution to a place no signature mentions — so a test that fails because somebody forgot to reset the registry fails a long way from the cause.",
+      "links": []
+    }
+  ]
+}
