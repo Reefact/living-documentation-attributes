@@ -12,6 +12,8 @@ Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.Message.Role
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.Message.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessageChannelAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessageChannelAttribute.MessageChannelAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessageEndpointAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessageEndpointAttribute.MessageEndpointAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessageRouterAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessageRouterAttribute.MessageRouterAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.MessageTranslatorAttribute
