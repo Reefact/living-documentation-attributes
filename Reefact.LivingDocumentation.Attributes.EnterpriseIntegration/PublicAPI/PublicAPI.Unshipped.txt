@@ -27,6 +27,8 @@ Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ContentEnricher.Res
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ContentEnricher.ResourceAttribute.ResourceAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ContentEnricher.Role
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ContentEnricher.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ContentFilterAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ContentFilterAttribute.ContentFilterAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.CorrelationIdentifier
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.CorrelationIdentifier.CorrelationAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.CorrelationIdentifier.CorrelationAttribute.CorrelationAttribute() -> void

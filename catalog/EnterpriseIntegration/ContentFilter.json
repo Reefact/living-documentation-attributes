@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "ContentFilter",
+  "summary": "Removes from a message the items a receiver has no use for, so that a large or deeply nested message becomes one that is simple to handle.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "ContentFilter",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The participant that strips a message down to the items that matter, and often flattens its structure while doing so. It is the opposite of a content enricher and not to be confused with a message filter, which drops whole messages and leaves the ones it keeps untouched.",
+      "links": []
+    }
+  ]
+}
