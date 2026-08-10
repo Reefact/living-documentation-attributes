@@ -325,8 +325,8 @@ made the catalogues independent, there is nothing to arbitrate — only this not
 
 ## xUnit Test Patterns, and the five words nobody agrees on
 
-**Twenty-five of its sixty-eight are catalogued**: chapter 19, the xUnit basics, chapter 23,
-the test doubles, and chapter 24, test organisation. Its admission is
+**Thirty-five of its sixty-eight are catalogued**: chapter 18, test strategy, chapter 19, the
+xUnit basics, chapter 23, the test doubles, and chapter 24, test organisation. Its admission is
 [ADR-0032](../doc/handwritten/for-maintainers/adr/0032-admit-xunit-test-patterns-as-a-catalogue.md).
 A reader counting sixteen against sixty-eight is looking at work in progress, and at a book
 about a third of which will not be catalogued at all — roughly ten entries are shapes a
@@ -435,6 +435,30 @@ shapes a method body takes rather than participants a declaration holds.
 |---|---|
 | Four-Phase Test | the arrangement of setup, exercise, verify and teardown *inside* one test method; nothing holds a role in it |
 | Assertion Message | the string handed to an assertion — an argument value, not a declaration |
+
+**Chapter 18 is four pairs of opposites, and that is why it is worth annotating.** None of
+its ten entries describes a mechanism; each states a choice, and in every case the two
+answers are indistinguishable in code.
+
+| Axis | One answer | The other |
+|---|---|---|
+| how the test was produced | `RecordedTest` | `ScriptedTest` |
+| where its cases come from | `DataDrivenTest` | a test whose cases are written in it |
+| how much the fixture holds | `MinimalFixture` | `StandardFixture` |
+| how long the fixture lives | `FreshFixture` | `SharedFixture` |
+
+The two fixture axes are **orthogonal**: a fixture is minimal or standard *and* fresh or
+shared, so one declaration legitimately carries two of these attributes. That is not a
+duplication to clean up.
+
+**No relation was added.** The book presents these as strategies rather than as kinds of one
+another, and the fixture entries would want a `Fixture` pattern to narrow, which this work
+does not have — ADR-0030's test is a sentence about two patterns, and there is none here.
+
+**`BackDoorManipulation` is the entry a codebase most benefits from finding.** Every back
+door is a second definition of the data's shape, so when the system's own writing changes,
+the back door keeps working and keeps being wrong. Annotating them is what turns "how many
+do we have" from an archaeology exercise into a query.
 
 ## Shape of the generated attribute
 
