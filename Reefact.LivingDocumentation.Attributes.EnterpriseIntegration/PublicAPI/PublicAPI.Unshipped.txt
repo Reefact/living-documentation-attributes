@@ -90,6 +90,15 @@ Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RemoteProcedureInvo
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RemoteProcedureInvocationAttribute.RemoteProcedureInvocationAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ResequencerAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ResequencerAttribute.ResequencerAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RoutingSlip
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RoutingSlip.ItineraryAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RoutingSlip.ItineraryAttribute.ItineraryAttribute() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RoutingSlip.Role
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RoutingSlip.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RoutingSlip.RoutingSlipAttribute
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RoutingSlip.RoutingSlipAttribute.Itinerary.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RoutingSlip.RoutingSlipAttribute.Itinerary.init -> void
+Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.RoutingSlip.RoutingSlipAttribute.RoutingSlipAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ScatterGatherAttribute
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.ScatterGatherAttribute.ScatterGatherAttribute() -> void
 Reefact.LivingDocumentation.Attributes.EnterpriseIntegration.SharedDatabaseAttribute
