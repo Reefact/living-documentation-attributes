@@ -224,11 +224,18 @@ one entry and loses the statement of what the figure should have been, and
 
 ## Enterprise Integration Patterns, and what a channel's annotation depends on
 
-The catalogue is filled **in the book's own order** — integration styles, base patterns,
-channels, construction, routing, transformation, endpoints, system management — so that it
-can be reviewed with the book open. **Nineteen of its sixty-five are catalogued**: the
-first two parts. A reader counting nineteen against sixty-five is looking at work in
-progress and not at forty-six decisions.
+**Thirty-one of its sixty-five are catalogued**: the integration styles, the base
+patterns, the channels and — taken out of turn — the whole of message routing. A reader
+counting thirty-one against sixty-five is looking at work in progress and not at
+thirty-four decisions.
+
+The catalogue was being filled in the book's own order, and **routing was taken before
+construction** because it is the core of the work: the router, the splitter, the aggregator
+and the process manager are what a messaging codebase is made of, and message construction
+is mostly properties on a message. So the order now reads: styles, base patterns, channels,
+**routing**, then construction, transformation, endpoints and system management. Saying so
+matters because a reader following the book will find chapter 5 missing before chapter 7,
+and that is a choice rather than an omission.
 
 Its admission is
 [ADR-0029](../doc/handwritten/for-maintainers/adr/0029-admit-enterprise-integration-patterns-as-a-catalogue.md),
