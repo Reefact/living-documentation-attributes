@@ -1,0 +1,23 @@
+{
+  "catalog": "EnterpriseIntegration",
+  "name": "IdempotentReceiver",
+  "summary": "Can receive the same message twice without doing it twice, so that a sender is free to resend whenever it is unsure the first one arrived.",
+  "reference": {
+    "author": "Gregor Hohpe, Bobby Woolf",
+    "work": "Enterprise Integration Patterns",
+    "year": 2003
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "IdempotentReceiver",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "A receiver for which handling a message once and handling it three times have the same effect — reached either by discarding duplicates or by giving the message semantics that survive repetition. It is an assertion about behaviour that no signature carries, and the only thing that makes a resend safe.",
+      "links": []
+    }
+  ]
+}
