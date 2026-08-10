@@ -9,6 +9,8 @@ Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.CreationMethodAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.CreationMethodAttribute.CreationMethodAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.DataDrivenTestAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.DataDrivenTestAttribute.DataDrivenTestAttribute() -> void
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.DelegatedSetupAttribute
+Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.DelegatedSetupAttribute.DelegatedSetupAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.FakeObjectAttribute
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.FakeObjectAttribute.FakeObjectAttribute() -> void
 Reefact.LivingDocumentation.Attributes.XUnitTestPatterns.FreshFixtureAttribute
