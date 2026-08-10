@@ -166,3 +166,4 @@ Related ADRs, sources, catalog entries, code.
 | [ADR-0031](0031-carry-no-generator-machinery-for-an-unused-capability.md) | Carry no generator machinery for an unused capability | Accepted |
 | [ADR-0032](0032-admit-xunit-test-patterns-as-a-catalogue.md) | Admit xUnit Test Patterns as a catalogue | Accepted |
 | [ADR-0033](0033-admit-microservices-patterns-as-a-catalogue.md) | Admit Microservices Patterns as a catalogue | Proposed |
+| [ADR-0034](0034-let-a-specialisation-name-the-role-it-narrows.md) | Let a specialisation name the role it narrows | Accepted |
