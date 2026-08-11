@@ -14,7 +14,7 @@ complètes, et trente-sept records derrière. **Rien n'est publié.** La version
 développement, il n'existe aucun workflow de publication, et il n'y a de consommateur nulle part.
 
 Les paquets s'appellent `Reefact.LivingDocumentation.Attributes.<Catalogue>`. L'identifiant le plus
-long qu'un consommateur tape fait **soixante-douze caractères** ; la solution, les vingt-six projets et
+long qu'un consommateur tape fait **soixante-douze caractères** ; la solution, les vingt-sept projets et
 le dépôt GitHub portent tous la même racine. Le segment `Attributes` nomme ce que les types sont déjà :
 tout type public de tout paquet est un attribut, et un consommateur le voit à la première ligne
 d'usage.
@@ -25,9 +25,10 @@ admissions, et aucun ne nomme un paquet. Deux records citent le namespace actuel
 ([ADR-0033](0033-admit-microservices-patterns-as-a-catalogue.md) et sa traduction) ; rien d'autre dans
 la base n'en dépend.
 
-Le nom apparaît **56 984 fois dans 3 582 fichiers**. La quasi-totalité est du code généré et du code
-d'exemple, qui suivent mécaniquement. Les douze baselines `PublicAPI.Shipped.txt` font exception :
-chaque ligne commence par le namespace, et
+Le nom apparaît **3 934 fois dans 755 fichiers suivis**. La quasi-totalité est du code généré et du
+code d'exemple, qui suivent mécaniquement. Les douze baselines `PublicAPI.Unshipped.txt` font
+exception — rien n'a été publié, donc les fichiers *Shipped* sont vides et toute la surface publique
+se trouve dans les *Unshipped*, chaque ligne commençant par le namespace, et
 [ADR-0018](0018-hold-the-public-surface-to-a-committed-baseline.md) interdit de les dériver avec le
 générateur.
 
@@ -108,7 +109,7 @@ donne pas.
 d'un paquet est la seule chose que le versionnement d'[ADR-0021](0021-version-what-a-consumer-reads-and-not-only-what-it-compiles.md)
 ne peut pas porter : un nouvel identifiant est un nouveau paquet, jamais une nouvelle version de
 l'ancien. Renommer aujourd'hui coûte une passe mécanique sur des fichiers générés et douze baselines
-réécrites à la main. Renommer après la première release coûte un cycle de dépréciation sur douze
+réécrites à la main. Renommer après la première release coûte un cycle de dépréciation sur treize
 paquets publiés et coupe en deux l'historique de chaque consommateur. La fenêtre se ferme à la première
 release et ne se rouvre pas.
 
@@ -161,10 +162,10 @@ nuget.org cherche ce qu'il y a dans le paquet.
 
 ### Ne rien renommer
 
-Envisagée parce que le changement touche 3 582 fichiers et que les noms actuels fonctionnent.
+Envisagée parce que le changement touche 755 fichiers suivis et que les noms actuels fonctionnent.
 
 Rejetée parce que le coût ne baisse jamais et devient irréversible : à la première release, le même
-renommage se transforme en cycle de dépréciation sur douze paquets publiés. Différer, c'est choisir la
+renommage se transforme en cycle de dépréciation sur treize paquets publiés. Différer, c'est choisir la
 version chère de la même décision.
 
 ### Renommer les paquets mais pas le dépôt
@@ -205,7 +206,7 @@ identité survivrait dans les métadonnées de chaque paquet publié sous la nou
 
 ### Risques
 
-* Un renommage couvrant 3 582 fichiers peut manquer une chaîne qui n'appartient pas à un namespace —
+* Un renommage couvrant 755 fichiers suivis peut manquer une chaîne qui n'appartient pas à un namespace —
   un lien de documentation, un chemin de workflow, un renvoi dans un commentaire XML. Les garde-fous
   sont qu'une régénération à catalogue inchangé doit laisser l'arbre propre, et que l'exemple doit
   toujours imprimer le catalogue entier relu par le seul attribut de base.
@@ -217,7 +218,7 @@ identité survivrait dans les métadonnées de chaque paquet publié sous la nou
 
 * Renommer en une passe, régénérer, et vérifier qu'un catalogue inchangé laisse l'arbre de travail
   propre.
-* Réécrire à la main les douze baselines `PublicAPI.Shipped.txt`.
+* Réécrire à la main les douze baselines `PublicAPI.Unshipped.txt`.
 * Renommer le dépôt GitHub en `design-pattern-catalog` et mettre à jour `PackageProjectUrl` et
   `RepositoryUrl`.
 * Demander une réservation de préfixe d'identifiant sur `DesignPatternCatalog.`, et consigner la
@@ -225,7 +226,9 @@ identité survivrait dans les métadonnées de chaque paquet publié sous la nou
   permanent le risque de squat.
 * Mettre à jour les quatre documents racine et `catalog/README.md`, qui nomment les paquets de bout en
   bout.
-* Laisser ADR-0033 et sa traduction intacts.
+* Mettre à jour les occurrences de l'ancien nom qui relèvent de l'illustration et non de la décision —
+  le nom de paquet d'ADR-0033 et les liens de pull request d'ADR-0035 — et laisser en l'état le
+  Contexte, la Décision et l'alternative rejetée du présent record.
 
 ## Références
 

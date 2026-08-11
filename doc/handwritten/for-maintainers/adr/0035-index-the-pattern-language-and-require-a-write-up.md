@@ -22,8 +22,8 @@ now known that were not known when it was written.
 point at the 2018 book in their body at all, and only seven of those say it "describes this
 pattern". Every other entry rests on the second limb, or on a third ground never stated in
 ADR-0033 — *this is the subject matter of a chapter* — which was used in
-[#57](https://github.com/Reefact/living-documentation-attributes/pull/57) and
-[#58](https://github.com/Reefact/living-documentation-attributes/pull/58) and is an inference from
+[#57](https://github.com/Reefact/design-pattern-catalog/pull/57) and
+[#58](https://github.com/Reefact/design-pattern-catalog/pull/58) and is an inference from
 a chapter title rather than a statement by the author.
 
 **A book citation supplies nothing this library uses.** What an entry needs is a problem, a
