@@ -3,6 +3,8 @@ Reefact.LivingDocumentation.Attributes.DependencyInjection.CompositionRootAttrib
 Reefact.LivingDocumentation.Attributes.DependencyInjection.CompositionRootAttribute.CompositionRootAttribute() -> void
 Reefact.LivingDocumentation.Attributes.DependencyInjection.ConstructorInjectionAttribute
 Reefact.LivingDocumentation.Attributes.DependencyInjection.ConstructorInjectionAttribute.ConstructorInjectionAttribute() -> void
+Reefact.LivingDocumentation.Attributes.DependencyInjection.ControlFreakAttribute
+Reefact.LivingDocumentation.Attributes.DependencyInjection.ControlFreakAttribute.ControlFreakAttribute() -> void
 Reefact.LivingDocumentation.Attributes.DependencyInjection.MethodInjectionAttribute
 Reefact.LivingDocumentation.Attributes.DependencyInjection.MethodInjectionAttribute.MethodInjectionAttribute() -> void
 Reefact.LivingDocumentation.Attributes.DependencyInjection.PropertyInjectionAttribute
