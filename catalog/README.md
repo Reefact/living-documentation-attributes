@@ -119,6 +119,7 @@ exists to prevent, applied to catalogues rather than to decisions.
 | `DomainDrivenDesign` | 23 | 45 + 2 | **complete** — with one open question about a possible twenty-fourth entry, below |
 | `MicroservicesPatterns` | 41 | 51 | **read whole** — 41 held, 11 excluded in the tables above, 1 in the held-back section, and around half the work will be excluded ([ADR-0033](../doc/handwritten/for-maintainers/adr/0033-admit-microservices-patterns-as-a-catalogue.md)) |
 | `Posa2` | 17 | 17 | **complete** — all four chapters that hold patterns, admitted by [ADR-0036](../doc/handwritten/for-maintainers/adr/0036-admit-posa2-as-a-catalogue.md) |
+| `DependencyInjection` | 4 | 14 | **in progress** — chapter 4 of the three catalogue sections, admitted by [ADR-0037](../doc/handwritten/for-maintainers/adr/0037-admit-the-dependency-injection-catalogue.md) |
 | `AnalysisPatterns` | 39 | — | **deliberately stopped**, and the only one that is |
 | `Idioms` | 2 | — | **never complete by construction** ([ADR-0013](../doc/handwritten/for-maintainers/adr/0013-shelve-a-pattern-without-a-body-of-work-under-idioms.md)) |
 
@@ -1178,6 +1179,51 @@ claims it is called from the facade and nowhere else, which is precisely the lea
 prevent and which compiles perfectly. `Proactor.AsynchronousOperation` goes on the method that starts
 the operation, where the claim is that nothing written after the call has anything to do with the
 outcome.
+
+## Dependency Injection, and the target the schema did not have
+
+The tenth catalogue, proposed by
+[ADR-0037](../doc/handwritten/for-maintainers/adr/0037-admit-the-dependency-injection-catalogue.md). Its
+first instalment is **chapter 4, the DI patterns: four entries, four held**, and all four are flat —
+because each of these patterns *is* the declaration it names. There is nothing to choose between
+participants when the participant is the constructor.
+
+**The schema gained a target, and this is the first entry in 336 that needed one.** `AttributeTargets`
+has a `Constructor` member; the enum in `pattern.schema.json` had seven of the language's kinds and not
+that one, because no role until now was introduced by a constructor. `Method` does not cover
+constructors — the build says so, with `CS0592` — so `ConstructorInjection` was unannotatable until the
+kind was added.
+
+That is not a new decision.
+[ADR-0009](../doc/handwritten/for-maintainers/adr/0009-let-each-role-declare-what-it-applies-to.md)
+already decides that a role declares what it applies to; the set of kinds available is the C# language's
+and not this repository's, and the enum was a subset that had simply never been asked for the eighth
+member. Nor does it leave machinery unused, which is
+[ADR-0031](../doc/handwritten/for-maintainers/adr/0031-carry-no-generator-machinery-for-an-unused-capability.md)'s
+concern: the entry that adds the kind uses it, and two more of this work's items will — *Constrained
+Construction* and *Constructor Over-injection* are both about a constructor.
+
+**The edition is named before an instalment can rest on the wrong one**, which is ADR-0037's follow-up
+and ADR-0035's lesson applied in advance. The list comes from the **2019 second edition**, by van
+Deursen and Seemann. The 2011 first edition — Seemann alone, titled *Dependency Injection in .NET* — has
+a different chapter arrangement and a different set of anti-patterns, and is not what `reference` names.
+
+**Where the four came from**, entry by entry, on the discipline the POSA2 chapters arrived at the hard
+way:
+
+| Entry | Read from |
+|---|---|
+| `CompositionRoot` | Seemann's own definition and his rule that a DI container is referenced from there and nowhere else — his blog, where he named the pattern in 2011 |
+| `ConstructorInjection` · `MethodInjection` · `PropertyInjection` | the publisher's section-level contents, which name each pattern and its *How it works* / *When to use it* sections. The names are the mechanism, so there is no participant to get wrong; what is written from the sections rather than quoted is the **claim** each carries — required, per-invocation, optional-with-a-default |
+
+Manning publishes a free article per pattern. They are behind a captcha, and were not read; nothing here
+rests on them.
+
+**The claims are of a kind the catalogue has not carried before.** `CompositionRoot`'s is checkable
+against *assembly references* — no module but this one may reference the container — rather than against
+the shape of any code. `PropertyInjection`'s is the sharpest of the four: it asserts that a working
+default exists, so a property injection without one is a required dependency that has forgotten to fail,
+and it fails later, on a null reference, far from the declaration that promised otherwise.
 
 ## Shape of the generated attribute
 
