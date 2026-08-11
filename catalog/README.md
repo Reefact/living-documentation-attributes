@@ -118,6 +118,7 @@ exists to prevent, applied to catalogues rather than to decisions.
 | `XUnitTestPatterns` | 62 | 68 | **complete** — the other six are in the exclusion tables above |
 | `DomainDrivenDesign` | 23 | 45 + 2 | **complete** — with one open question about a possible twenty-fourth entry, below |
 | `MicroservicesPatterns` | 41 | 51 | **read whole** — 41 held, 11 excluded in the tables above, 1 in the held-back section, and around half the work will be excluded ([ADR-0033](../doc/handwritten/for-maintainers/adr/0033-admit-microservices-patterns-as-a-catalogue.md)) |
+| `Posa2` | 4 | 17 | **in progress** — chapter 4 of 4 chapters that hold patterns, admitted by [ADR-0036](../doc/handwritten/for-maintainers/adr/0036-admit-posa2-as-a-catalogue.md) |
 | `AnalysisPatterns` | 39 | — | **deliberately stopped**, and the only one that is |
 | `Idioms` | 2 | — | **never complete by construction** ([ADR-0013](../doc/handwritten/for-maintainers/adr/0013-shelve-a-pattern-without-a-body-of-work-under-idioms.md)) |
 
@@ -1019,6 +1020,61 @@ a role is named only where the work names one. And a narrowing now inherits its 
 link properties, so `[PollingPublisher(MessageOutbox = typeof(…))]` is accepted although nothing
 in that entry declares it: the surface grew somewhere the catalog does not show it.
 
+## POSA2, and the guard that saves Scoped Locking from ADR-0011
+
+The ninth catalogue, admitted by
+[ADR-0036](../doc/handwritten/for-maintainers/adr/0036-admit-posa2-as-a-catalogue.md). Its first
+instalment is **chapter 4, Synchronization: four patterns, four held.** Nothing is excluded, which
+has not happened since Gang of Four, and nothing narrows anything, which is the sixth instalment
+running where [ADR-0030](../doc/handwritten/for-maintainers/adr/0030-relate-only-the-narrowings-a-work-states-outright.md)
+records nothing.
+
+**Scoped Locking is admitted, on the guard rather than on the discipline.** ADR-0036 left this open
+against [ADR-0011](../doc/handwritten/for-maintainers/adr/0011-leave-out-what-cannot-be-annotated.md),
+and it is worth stating why it lands the opposite way from `GuardClause` at the foot of this file,
+because the two look alike and are not.
+
+What the pattern *describes* is the shape of a method body — acquire on entry, release on every
+exit — and that shape holds no role, exactly as a guard clause holds none. But the pattern's
+**solution names a class**: *"Define a guard class whose constructor automatically acquires a lock
+… and whose destructor automatically releases the lock"*. That class is a declaration, it is the
+thing a reader needs to find, and the assertion attached to it is checkable — every exit from the
+scope releases. `GuardClause` has no such class to point at; it is a way of writing an `if`. The
+line ADR-0011 draws is *is there a participant?*, not *is the pattern small?*
+
+The second role is the lock the guard manages, on a field or a property, and it carries the sharper
+claim of the two: that this lock is taken through the guard and never directly. A bare acquire
+elsewhere in the type is then a breach of something stated rather than a difference of style.
+
+**One participant is left out, and its own author says why.** *Double-Checked Locking
+Optimization* names four participants — Just Once Critical Section, Mutex, Flag, and **Application
+Thread**, of which the paper says *"It is implicit in the pseudocode"*. A participant the author
+calls implicit has no declaration to sit on, so the entry holds three roles rather than four. This
+is ADR-0011 applied to a role instead of to a pattern, which is the first time that has been
+needed.
+
+**Where the role names come from, stated because it is not the book.** The `reference` on all four
+entries is the 2000 volume, and it is the volume that fixes these four as a chapter. The
+participants, though, were read from the papers the same author published before it and still
+hosts: *Strategized Locking, Thread-safe Interface, and Scoped Locking* in the *C++ Report*, and
+*Double-Checked Locking* in *Pattern Languages of Program Design 3*. Those give the intents quoted
+above, the two design conventions of Thread-Safe Interface — *interface methods check,
+implementation methods trust* — and the Structure and Participants table the Flag and the Mutex are
+taken from. Where the printed chapter names a participant differently, the entry is wrong and the
+chapter wins.
+
+**Strategized Scoped Locking is not a fifth entry.** The paper lists it as a variant of Scoped
+Locking, and what it describes is the two patterns applied together: a guard parameterized by the
+lock type. Two annotations already say that, so a third pattern would only say it again.
+
+Two of the four are worth reading for the assertion rather than the name. **Thread-Safe Interface**
+is the only entry in the whole catalogue whose claim is about what a method *must not call*: an
+implementation method that calls back across the border self-deadlocks on a non-recursive lock, and
+no compiler will mention it. **Double-Checked Locking Optimization** is the pattern famous for
+being wrong — its flag has to be read and written atomically, or the thread that skips the lock can
+be handed a reference published before the object behind it is built. Annotating it marks the
+places to re-read, which is worth more than naming them.
+
 ## Shape of the generated attribute
 
 A pattern whose single role carries the pattern's own name is emitted flat, so
@@ -1064,4 +1120,6 @@ in a record of its own rather than in a catalog entry written quietly.
 
 `GuardClause` was looked at with them and is closed rather than held back: it is a
 shape a method body takes, so nothing holds a role and nothing can be asserted
-about a participant (ADR-0011).
+about a participant (ADR-0011). POSA2's Scoped Locking reads as the same case and
+is not — its solution names a guard class, which is a participant — and the
+difference is set out above.
