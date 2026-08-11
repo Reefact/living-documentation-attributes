@@ -1,0 +1,49 @@
+{
+  "catalog": "Posa2",
+  "name": "HalfSyncHalfAsync",
+  "summary": "Decomposes concurrent processing into a synchronous layer and an asynchronous one, with a queueing layer between them, so simplicity and responsiveness are each paid for where they are worth it.",
+  "reference": {
+    "author": "Douglas Schmidt, Michael Stal, Hans Rohnert, Frank Buschmann",
+    "work": "Pattern-Oriented Software Architecture, Volume 2",
+    "year": 2000
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "SynchronousTaskLayer",
+      "targets": [
+        "Interface",
+        "Class",
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "Where the high-level work happens, in threads of its own that may block: it has a stack and registers, so it can be written as a sequence of steps and read as one. Everything easy to follow in the system lives here, and it is here that the thread count is paid for.",
+      "links": [
+        "QueueingLayer"
+      ]
+    },
+    {
+      "name": "AsynchronousTaskLayer",
+      "targets": [
+        "Interface",
+        "Class",
+        "Assembly"
+      ],
+      "repeatable": false,
+      "summary": "Where the low-level work happens, driven by events from outside and never blocking, because it has no stack of its own to block on. A blocking call added here does not slow the layer down \u2014 it stops the system taking events at all.",
+      "links": [
+        "QueueingLayer"
+      ]
+    },
+    {
+      "name": "QueueingLayer",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": true,
+      "summary": "The buffering and notification point between the two layers, in both directions. It is the only place they meet, which is what makes the decomposition real rather than a diagram: a direct call across it puts one layer's blocking into the other's thread.",
+      "links": []
+    }
+  ]
+}
