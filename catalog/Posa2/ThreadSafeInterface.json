@@ -1,0 +1,43 @@
+{
+  "catalog": "Posa2",
+  "name": "ThreadSafeInterface",
+  "summary": "Ensures that intra-component method calls avoid self-deadlock and incur no unnecessary locking, by taking the lock only at the border of the component.",
+  "reference": {
+    "author": "Douglas Schmidt, Michael Stal, Hans Rohnert, Frank Buschmann",
+    "work": "Pattern-Oriented Software Architecture, Volume 2",
+    "year": 2000
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Component",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "repeatable": false,
+      "links": [],
+      "summary": "The component whose lock is taken at its border and nowhere within. Its methods divide in two, and that division is the whole pattern: the annotation on the type says the division is meant, so a method that belongs to neither side is visible as an omission."
+    },
+    {
+      "name": "InterfaceMethod",
+      "targets": [
+        "Method",
+        "Property"
+      ],
+      "repeatable": false,
+      "links": [],
+      "summary": "A method callers reach from outside: it acquires the lock, forwards to an implementation method, and is responsible for releasing the lock when control returns to the caller. It performs the check, not the work."
+    },
+    {
+      "name": "ImplementationMethod",
+      "targets": [
+        "Method",
+        "Property"
+      ],
+      "repeatable": false,
+      "links": [],
+      "summary": "A method that performs the work and trusts that it was called with the lock already held: it never acquires or releases the lock, and it never calls an interface method. One call back to an interface method from here self-deadlocks on a non-recursive lock, and nothing in the type system says so."
+    }
+  ]
+}
