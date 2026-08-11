@@ -129,6 +129,27 @@ Reefact.LivingDocumentation.Attributes.Posa2.MonitorObject.Role
 Reefact.LivingDocumentation.Attributes.Posa2.MonitorObject.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.Posa2.MonitorObject.SynchronizedMethodAttribute
 Reefact.LivingDocumentation.Attributes.Posa2.MonitorObject.SynchronizedMethodAttribute.SynchronizedMethodAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.Proactor
+Reefact.LivingDocumentation.Attributes.Posa2.Proactor.AsynchronousOperationAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.Proactor.AsynchronousOperationAttribute.AsynchronousOperationAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.Proactor.AsynchronousOperationAttribute.Proactor.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.Posa2.Proactor.AsynchronousOperationAttribute.Proactor.init -> void
+Reefact.LivingDocumentation.Attributes.Posa2.Proactor.AsynchronousOperationProcessorAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.Proactor.AsynchronousOperationProcessorAttribute.AsynchronousOperationProcessorAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.Proactor.AsynchronousOperationProcessorAttribute.Proactor.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.Posa2.Proactor.AsynchronousOperationProcessorAttribute.Proactor.init -> void
+Reefact.LivingDocumentation.Attributes.Posa2.Proactor.CompletionHandlerAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.Proactor.CompletionHandlerAttribute.CompletionHandlerAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.Proactor.CompletionHandlerAttribute.Proactor.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.Posa2.Proactor.CompletionHandlerAttribute.Proactor.init -> void
+Reefact.LivingDocumentation.Attributes.Posa2.Proactor.ProactiveInitiatorAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.Proactor.ProactiveInitiatorAttribute.ProactiveInitiatorAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.Proactor.ProactiveInitiatorAttribute.Proactor.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.Posa2.Proactor.ProactiveInitiatorAttribute.Proactor.init -> void
+Reefact.LivingDocumentation.Attributes.Posa2.Proactor.ProactorAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.Proactor.ProactorAttribute.ProactorAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.Proactor.Role
+Reefact.LivingDocumentation.Attributes.Posa2.Proactor.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.Posa2.Reactor
 Reefact.LivingDocumentation.Attributes.Posa2.Reactor.ConcreteEventHandlerAttribute
 Reefact.LivingDocumentation.Attributes.Posa2.Reactor.ConcreteEventHandlerAttribute.ConcreteEventHandlerAttribute() -> void
