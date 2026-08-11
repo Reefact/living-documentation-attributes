@@ -97,3 +97,16 @@ Reefact.LivingDocumentation.Attributes.Posa2.ThreadSafeInterface.InterfaceMethod
 Reefact.LivingDocumentation.Attributes.Posa2.ThreadSafeInterface.InterfaceMethodAttribute.InterfaceMethodAttribute() -> void
 Reefact.LivingDocumentation.Attributes.Posa2.ThreadSafeInterface.Role
 Reefact.LivingDocumentation.Attributes.Posa2.ThreadSafeInterface.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.ThreadSpecificStorage
+Reefact.LivingDocumentation.Attributes.Posa2.ThreadSpecificStorage.Role
+Reefact.LivingDocumentation.Attributes.Posa2.ThreadSpecificStorage.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.ThreadSpecificStorage.TSObjectAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.ThreadSpecificStorage.TSObjectAttribute.TSObjectAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.ThreadSpecificStorage.TSObjectAttribute.TSObjectProxy.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.Posa2.ThreadSpecificStorage.TSObjectAttribute.TSObjectProxy.init -> void
+Reefact.LivingDocumentation.Attributes.Posa2.ThreadSpecificStorage.TSObjectCollectionAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.ThreadSpecificStorage.TSObjectCollectionAttribute.TSObjectCollectionAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.ThreadSpecificStorage.TSObjectCollectionAttribute.TSObjectProxy.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.Posa2.ThreadSpecificStorage.TSObjectCollectionAttribute.TSObjectProxy.init -> void
+Reefact.LivingDocumentation.Attributes.Posa2.ThreadSpecificStorage.TSObjectProxyAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.ThreadSpecificStorage.TSObjectProxyAttribute.TSObjectProxyAttribute() -> void
