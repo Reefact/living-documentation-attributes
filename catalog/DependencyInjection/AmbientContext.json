@@ -1,0 +1,24 @@
+{
+  "catalog": "DependencyInjection",
+  "name": "AmbientContext",
+  "summary": "Exposes a dependency through a static access point that any code may reach, so that it is passed to nobody and available to everybody.",
+  "reference": {
+    "author": "Steven van Deursen, Mark Seemann",
+    "work": "Dependency Injection Principles, Practices, and Patterns",
+    "year": 2019
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "AmbientContext",
+      "targets": [
+        "Class",
+        "Property",
+        "Field"
+      ],
+      "repeatable": false,
+      "summary": "The static access point through which the dependency is reached. Whatever depends on it says so nowhere: two consumers of the same context are indistinguishable from two that need nothing, and replacing it for one test replaces it for whatever else runs beside that test.",
+      "links": []
+    }
+  ]
+}
