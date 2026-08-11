@@ -24,6 +24,19 @@ Reefact.LivingDocumentation.Attributes.Posa2.ActiveObject.ServantAttribute
 Reefact.LivingDocumentation.Attributes.Posa2.ActiveObject.ServantAttribute.Proxy.get -> System.Type?
 Reefact.LivingDocumentation.Attributes.Posa2.ActiveObject.ServantAttribute.Proxy.init -> void
 Reefact.LivingDocumentation.Attributes.Posa2.ActiveObject.ServantAttribute.ServantAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.AsynchronousCompletionToken
+Reefact.LivingDocumentation.Attributes.Posa2.AsynchronousCompletionToken.AsynchronousCompletionTokenAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.AsynchronousCompletionToken.AsynchronousCompletionTokenAttribute.AsynchronousCompletionTokenAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.AsynchronousCompletionToken.ClientAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.AsynchronousCompletionToken.ClientAttribute.AsynchronousCompletionToken.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.Posa2.AsynchronousCompletionToken.ClientAttribute.AsynchronousCompletionToken.init -> void
+Reefact.LivingDocumentation.Attributes.Posa2.AsynchronousCompletionToken.ClientAttribute.ClientAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.AsynchronousCompletionToken.Role
+Reefact.LivingDocumentation.Attributes.Posa2.AsynchronousCompletionToken.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.AsynchronousCompletionToken.ServiceAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.AsynchronousCompletionToken.ServiceAttribute.AsynchronousCompletionToken.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.Posa2.AsynchronousCompletionToken.ServiceAttribute.AsynchronousCompletionToken.init -> void
+Reefact.LivingDocumentation.Attributes.Posa2.AsynchronousCompletionToken.ServiceAttribute.ServiceAttribute() -> void
 Reefact.LivingDocumentation.Attributes.Posa2.ComponentConfigurator
 Reefact.LivingDocumentation.Attributes.Posa2.ComponentConfigurator.ComponentAttribute
 Reefact.LivingDocumentation.Attributes.Posa2.ComponentConfigurator.ComponentAttribute.ComponentAttribute() -> void

@@ -1,0 +1,48 @@
+{
+  "catalog": "Posa2",
+  "name": "AsynchronousCompletionToken",
+  "summary": "Lets an application demultiplex the responses of the asynchronous operations it invoked, by handing the service a value it returns untouched with the completion.",
+  "reference": {
+    "author": "Douglas Schmidt, Michael Stal, Hans Rohnert, Frank Buschmann",
+    "work": "Pattern-Oriented Software Architecture, Volume 2",
+    "year": 2000
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "AsynchronousCompletionToken",
+      "targets": [
+        "Interface",
+        "Class",
+        "Struct"
+      ],
+      "repeatable": true,
+      "summary": "Identifies the actions and the state the client needs in order to process one completion. Opaque to the service and meaningful to the client, which is the whole trick: it travels through code that cannot interpret it and must not try.",
+      "links": []
+    },
+    {
+      "name": "Client",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "Invokes the operation, supplies the token with it, and is the only participant that can make sense of the token when it comes back. Everything it will need at completion time has to be reachable from that token, and what it forgot is not recoverable later.",
+      "links": [
+        "AsynchronousCompletionToken"
+      ]
+    },
+    {
+      "name": "Service",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "Performs the operation and returns the token unchanged with the completion. It may hold many at once and must interpret none of them \u2014 reading one is the coupling this pattern exists to avoid, and it is invisible from the client's side.",
+      "links": [
+        "AsynchronousCompletionToken"
+      ]
+    }
+  ]
+}
