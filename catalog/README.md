@@ -118,11 +118,11 @@ exists to prevent, applied to catalogues rather than to decisions.
 | `XUnitTestPatterns` | 62 | 68 | **complete** — the other six are in the exclusion tables above |
 | `DomainDrivenDesign` | 23 | 45 + 2 | **complete** — with one open question about a possible twenty-fourth entry, below |
 | `MicroservicesPatterns` | 41 | 51 | **read whole** — 41 held, 11 excluded in the tables above, 1 in the held-back section, and around half the work will be excluded ([ADR-0033](../doc/handwritten/for-maintainers/adr/0033-admit-microservices-patterns-as-a-catalogue.md)) |
-| `Posa2` | 9 | 17 | **in progress** — chapters 4 and 5 of the 4 chapters that hold patterns, admitted by [ADR-0036](../doc/handwritten/for-maintainers/adr/0036-admit-posa2-as-a-catalogue.md) |
+| `Posa2` | 17 | 17 | **complete** — all four chapters that hold patterns, admitted by [ADR-0036](../doc/handwritten/for-maintainers/adr/0036-admit-posa2-as-a-catalogue.md) |
 | `AnalysisPatterns` | 39 | — | **deliberately stopped**, and the only one that is |
 | `Idioms` | 2 | — | **never complete by construction** ([ADR-0013](../doc/handwritten/for-maintainers/adr/0013-shelve-a-pattern-without-a-body-of-work-under-idioms.md)) |
 
-In all six marked complete, a pattern of the work that is neither catalogued nor named in an
+In all seven marked complete, a pattern of the work that is neither catalogued nor named in an
 exclusion table above is a **defect**, not work in progress. That is what the word is for here.
 The open question below is about whether one *more* entry belongs, not about a gap.
 
@@ -1139,6 +1139,45 @@ why: six unrelated types make up one occurrence, and no type hierarchy says whic
 which servant, which is exactly the case
 [ADR-0008](../doc/handwritten/for-maintainers/adr/0008-bind-participants-with-typed-links.md) exists
 for. The anchor is the proxy, because that is the participant a reader recognises.
+
+### Chapters 2 and 3, and where each role name comes from
+
+**Seventeen of seventeen. The catalogue is complete** — four chapters, thirty-two roles added here,
+nothing excluded in any of the four. POSA2 is the first work since Gang of Four whose every pattern is
+held, and the reason is the one ADR-0036 gave in advance: it is a book of object patterns, so almost
+nothing in it fails ADR-0011.
+
+Chapter 5 shipped two role names that were wrong. So the useful thing to record about these eight is
+not what they claim but **where each name was read**, entry by entry, because that is what the next
+correction will need:
+
+| Entry | Role names read from | What to check |
+|---|---|---|
+| `WrapperFacade` | the *C++ Report* paper's participants list | — |
+| `ComponentConfigurator` | the PLoP paper, **renamed** | The paper is *Service Configurator* and names Service, Concrete Service, Service Repository, Service Configurator. The book renamed the pattern to Component Configurator; the entry follows that rename through to all four roles. `ComponentRepository` is the only name not seen in any source — it is the rename applied to the paper's `Service Repository`. |
+| `Interceptor` | the tutorial's class diagram | The book's chapter calls the context participant *Context Object*; the diagram box says `Context`, and that is what the entry uses. |
+| `ExtensionInterface` | the tutorial's class diagram | The diagram gives Factory, Component, Root and the extending interfaces. `ComponentFactory` and `RootInterface` are the diagram's labels spelled out. |
+| `Reactor` | the paper's participants list, **one renamed** | The paper calls the dispatcher an *Initiation Dispatcher*; the entry calls it `Reactor`, because the book named the pattern after that participant and no practitioner says the other. Inferred, not read. |
+| `Proactor` | the paper's participants list, **one renamed** | Same shape: the paper's *Completion Dispatcher* is `Proactor` here. The paper's *Proactive Initiator* is kept as read, though the book may shorten it to `Initiator`. |
+| `AsynchronousCompletionToken` | the paper's CRC cards | — |
+| `AcceptorConnector` | the paper's participants list | `TransportEndpoint` is a participant the paper describes in prose rather than lists. |
+
+Three names in that table are **inferred rather than read** — `ComponentRepository`, `Reactor` and
+`Proactor` — and one more, `ProactiveInitiator`, is read from the paper against a book that may have
+shortened it. That is the honest state of it. The two chapter-5 corrections were both found by writing
+a flag like this one down, so the flag is the mechanism rather than an apology.
+
+**`Client` earns a role here for the second time in the catalogue.** In
+`AsynchronousCompletionToken` the client is not scenery: the token is *opaque to the service and
+meaningful to the client*, so the whole pattern is a statement about which participant may read a
+value. Annotating only the service and the token would leave that unsaid.
+
+**Two roles land on a member rather than a type**, and both are the interesting part of their entry.
+`WrapperFacade.Functions` goes on the platform declaration itself — in .NET, on the `extern` — and
+claims it is called from the facade and nowhere else, which is precisely the leak a facade exists to
+prevent and which compiles perfectly. `Proactor.AsynchronousOperation` goes on the method that starts
+the operation, where the claim is that nothing written after the call has anything to do with the
+outcome.
 
 ## Shape of the generated attribute
 
