@@ -23,8 +23,8 @@ désormais connues qui ne l'étaient pas à sa rédaction.
 document renvoient au livre de 2018 dans leur corps, et sept seulement disent qu'il « décrit ce
 pattern ». Toutes les autres entrées reposent sur le second volet, ou sur un troisième motif que
 l'ADR-0033 n'énonce nulle part — *c'est le sujet d'un chapitre* — employé dans les
-[#57](https://github.com/Reefact/living-documentation-attributes/pull/57) et
-[#58](https://github.com/Reefact/living-documentation-attributes/pull/58), et qui est une inférence
+[#57](https://github.com/Reefact/design-pattern-catalog/pull/57) et
+[#58](https://github.com/Reefact/design-pattern-catalog/pull/58), et qui est une inférence
 tirée d'un titre de chapitre plutôt qu'un énoncé de l'auteur.
 
 **Une citation du livre n'apporte rien de ce que cette bibliothèque consomme.** Ce dont une entrée a

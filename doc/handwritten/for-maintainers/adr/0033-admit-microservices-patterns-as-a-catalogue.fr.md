@@ -140,7 +140,7 @@ Ne tenir Domain event que sous `DomainDrivenDesign`, Shared database que sous
 Rejeté, et c'est l'arête la plus vive de cette décision. Le refus général était déjà celui de
 l'ADR-0028 ; ce qui est nouveau, c'est la posture énoncée plus haut. Un nom désigne une seule
 chose *à l'intérieur d'une œuvre*, et cette bibliothèque indexe des œuvres.
-`Reefact.LivingDocumentation.Attributes.MicroservicesPatterns` est installé par quelqu'un qui
+`DesignPatternCatalog.MicroservicesPatterns` est installé par quelqu'un qui
 construit des microservices, et le mot qu'il cherchera est celui qu'emploie son schéma
 d'architecture.
 

@@ -14,7 +14,7 @@ and thirty-seven records behind them. **Nothing is published.** The version is a
 placeholder, there is no release workflow, and there is no consumer anywhere.
 
 The packages are named `Reefact.LivingDocumentation.Attributes.<Catalog>`. The longest identifier a
-consumer types is **seventy-two characters**; the solution, the twenty-six projects and the GitHub
+consumer types is **seventy-two characters**; the solution, the twenty-seven projects and the GitHub
 repository all carry the same root. The `Attributes` segment names what the types already are: every
 public type in every package is an attribute, and a consumer sees that in the first line of use.
 
@@ -23,9 +23,10 @@ generator, the versioning policy, the public-surface baseline and eleven admissi
 names a package. Two records quote the current namespace in prose ([ADR-0033](0033-admit-microservices-patterns-as-a-catalogue.md)
 and its translation); nothing else in the base depends on it.
 
-The name occurs **56 984 times across 3 582 files**. Almost all of that is generated code and sample
-code, both of which follow mechanically. The twelve `PublicAPI.Shipped.txt` baselines are the
-exception: every line begins with the namespace, and
+The name occurs **3 934 times across 755 tracked files**. Almost all of that is generated code and
+sample code, both of which follow mechanically. The twelve `PublicAPI.Unshipped.txt` baselines are the
+exception — nothing has shipped, so the *Shipped* files are empty and the whole public surface sits in
+the *Unshipped* ones, every line beginning with the namespace, and
 [ADR-0018](0018-hold-the-public-surface-to-a-committed-baseline.md) forbids deriving them with the
 generator.
 
@@ -101,7 +102,7 @@ on, and it is what the bare word `Patterns` fails to give.
 thing [ADR-0021](0021-version-what-a-consumer-reads-and-not-only-what-it-compiles.md)'s versioning
 cannot carry: a new identifier is a new package, never a new version of the old one. Renaming today
 costs a mechanical pass over generated files and twelve baselines rewritten by hand. Renaming after
-the first release costs a deprecation cycle across twelve published packages and splits every
+the first release costs a deprecation cycle across thirteen published packages and splits every
 consumer's history in two. The window closes at the first release and does not reopen.
 
 **The reading rules survive unchanged**, which is what makes the word `Catalog` usable at the root
@@ -153,10 +154,10 @@ searches for what is in the package.
 
 ### Rename nothing
 
-Considered because the change touches 3 582 files and the current names work.
+Considered because the change touches 755 tracked files and the current names work.
 
 Rejected because the cost never falls and becomes irreversible: at the first release the same rename
-turns into a deprecation cycle over twelve published packages. Deferring is choosing the expensive
+turns into a deprecation cycle over thirteen published packages. Deferring is choosing the expensive
 version of the same decision.
 
 ### Rename the packages but not the repository
@@ -190,13 +191,15 @@ would survive in the metadata of every package published under the new one.
   accepted records using "design pattern" in two senses. This record is the only place that says the
   wider sense is deliberate.
 * The twelve public-surface baselines are rewritten by hand, since ADR-0018 forbids generating them.
-* ADR-0033 and its translation quote the old namespace and are not edited, because an accepted record
-  is not rewritten. A reader of the base meets the old name there and is sent here.
+* **The old name survives in this record alone** — in its Context, its Decision and one rejected
+  alternative, where it is the subject rather than an illustration. A reader grepping the base for the
+  old identifier finds only this record, and has to know that the illustrative occurrences elsewhere
+  were updated rather than overlooked.
 * Every external link to the repository resolves through a redirect rather than directly.
 
 ### Risks
 
-* A rename spanning 3 582 files can miss a string that is not part of a namespace — a documentation
+* A rename spanning 755 tracked files can miss a string that is not part of a namespace — a documentation
   link, a workflow path, a cross-reference in an XML comment. The guards are that regenerating an
   unchanged catalogue must leave the tree clean and that the sample must still print the whole
   catalogue read back through the base attribute alone.
@@ -207,14 +210,16 @@ would survive in the metadata of every package published under the new one.
 
 * Rename in a single pass, regenerate, and confirm that an unchanged catalogue leaves the working tree
   clean.
-* Rewrite the twelve `PublicAPI.Shipped.txt` baselines by hand.
+* Rewrite the twelve `PublicAPI.Unshipped.txt` baselines by hand.
 * Rename the GitHub repository to `design-pattern-catalog` and update `PackageProjectUrl` and
   `RepositoryUrl`.
 * Apply for an identifier prefix reservation on `DesignPatternCatalog.`, and record the answer here —
   a generic prefix may well be refused, and a refusal is the fact that makes the squatting risk
   permanent.
 * Update the four root documents and `catalog/README.md`, which name the packages throughout.
-* Leave ADR-0033 and its translation untouched.
+* Update the occurrences of the old name that are illustrative rather than decided — ADR-0033's
+  package name and ADR-0035's pull-request links — and leave this record's own Context, Decision and
+  rejected alternative as they stand.
 
 ## References
 

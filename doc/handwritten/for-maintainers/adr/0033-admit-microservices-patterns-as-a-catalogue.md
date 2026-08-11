@@ -134,7 +134,7 @@ Hold Domain event only under `DomainDrivenDesign`, Shared database only under
 
 Rejected, and this is the decision's sharpest edge. It was already refused in general by
 ADR-0028; what is new is the posture stated above. A name means one thing *within a work*,
-and this library indexes works. `Reefact.LivingDocumentation.Attributes.MicroservicesPatterns`
+and this library indexes works. `DesignPatternCatalog.MicroservicesPatterns`
 is installed by somebody building microservices, and the word they will search for is the word
 their architecture diagram uses.
 
