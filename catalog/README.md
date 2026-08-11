@@ -135,11 +135,11 @@ exists to prevent, applied to catalogues rather than to decisions.
 | `DomainDrivenDesign` | 23 | 45 + 2 | **complete** — with one open question about a possible twenty-fourth entry, below |
 | `MicroservicesPatterns` | 41 | 51 | **read whole** — 41 held, 11 excluded in the tables above, 1 in the held-back section, and around half the work will be excluded ([ADR-0033](../doc/handwritten/for-maintainers/adr/0033-admit-microservices-patterns-as-a-catalogue.md)) |
 | `Posa2` | 17 | 17 | **complete** — all four chapters that hold patterns, admitted by [ADR-0036](../doc/handwritten/for-maintainers/adr/0036-admit-posa2-as-a-catalogue.md) |
-| `DependencyInjection` | 8 | 14 | **in progress** — chapters 4 and 5 of the three catalogue sections. Eleven when complete: [ADR-0037](../doc/handwritten/for-maintainers/adr/0037-admit-the-dependency-injection-catalogue.md) refuses chapter 6's three, one on ADR-0011 and two by decision |
+| `DependencyInjection` | 11 | 14 | **complete** — the eleven [ADR-0037](../doc/handwritten/for-maintainers/adr/0037-admit-the-dependency-injection-catalogue.md) admits. Chapter 6's three are refused, one on ADR-0011 and two by decision, and four concepts named outside the catalogue sections are an open question below |
 | `AnalysisPatterns` | 39 | — | **deliberately stopped**, and the only one that is |
 | `Idioms` | 2 | — | **never complete by construction** ([ADR-0013](../doc/handwritten/for-maintainers/adr/0013-shelve-a-pattern-without-a-body-of-work-under-idioms.md)) |
 
-In all seven marked complete, a pattern of the work that is neither catalogued nor named in an
+In all eight marked complete, a pattern of the work that is neither catalogued nor named in an
 exclusion table above is a **defect**, not work in progress. That is what the word is for here.
 The open question below is about whether one *more* entry belongs, not about a gap.
 
@@ -1286,6 +1286,42 @@ book contains a section on the **Ambient Context pattern**"*; the 2019 edition f
 under chapter 5, the anti-patterns. Same author, same shape, different verdict eight years apart. The
 catalogue follows the 2019 edition, and this is the concrete instance of why ADR-0037 names an edition
 rather than a work.
+
+### The lifestyles, and four concepts this catalogue has not decided
+
+Eleven of eleven. **Three entries, three roles**, all flat, and the catalogue is complete against what
+ADR-0037 admits.
+
+**A lifestyle annotation is a constraint on the class, not a description of the registration.** The
+composition root's `AddSingleton` line says what the container was told; it says nothing about what that
+obliges the class to be. `[SingletonLifestyle]` does: used concurrently, therefore thread-safe, holding
+nothing belonging to one caller, and depending only on things that live at least as long. That is the
+first claim in this base checkable **against configuration in both directions** — every class marked
+here should be registered once, and every class registered once should be marked.
+
+The three obligations are worth separating, because each entry carries a different one:
+
+| Entry | What the class owes |
+|---|---|
+| `SingletonLifestyle` | thread-safety, no per-caller state, and no shorter-lived dependency captured |
+| `TransientLifestyle` | nothing about state — but if it is disposable, a disposal nobody arranged is a leak nothing reports |
+| `ScopedLifestyle` | safety only within one scope, and never reached from outside one |
+
+**Nothing stops a class carrying two of them.** The generator emits three independent attributes and
+`AllowMultiple` is false on each, so the compiler refuses a repeat of the *same* lifestyle and permits a
+`[SingletonLifestyle]` beside a `[TransientLifestyle]`. That is a rule for a reader to write — *no
+declaration carries more than one lifestyle* — and it is named here because nothing in the vocabulary
+expresses mutual exclusion between patterns.
+
+**Four concepts the work names are left undecided, and ADR-0037 said this instalment would face them.**
+They sit outside its three catalogue sections, so the record admits nothing about them; it asks for a
+decision when chapter 8 is reached, and it is reached. The recommendation below is not a decision:
+
+| Concept | Where | Recommendation |
+|---|---|---|
+| `CaptiveDependency` | §8.4.1 | **Exclude, on Context Map's ground.** It is what a reader *concludes from* the annotations rather than a participant: a `[SingletonLifestyle]` class holding a `[ScopedLifestyle]` one **is** a captive dependency, so a rule derives it from what is already annotated and an entry would annotate a conclusion |
+| `LeakyAbstraction` | §8.4.2 | **Exclude**, for consistency with ADR-0037's refusal of the smells — *leaky* is a judgement rather than a shape |
+| `StableDependency`, `VolatileDependency` | §1.3 | **Admit**, if the maintainer will have them. The classification is binary, the authors give criteria for it, it sits on an abstraction, and *is this dependency volatile?* is the question that decides whether to inject at all — but they are outside the catalogue sections, so ADR-0037 does not cover them and a record would have to |
 
 ## Shape of the generated attribute
 
