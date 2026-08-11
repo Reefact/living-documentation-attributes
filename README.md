@@ -41,13 +41,13 @@ architecture" from a claim into something a build can check.
 | `EnterpriseIntegration` | 65 | complete | Hohpe & Woolf — *Enterprise Integration Patterns*, 2003 |
 | `XUnitTestPatterns` | 62 | complete | Meszaros — *xUnit Test Patterns*, 2007 |
 | `MicroservicesPatterns` | 41 | in progress | Richardson — *Microservices Patterns*, 2018 |
-| `Posa2` | 16 | in progress | Schmidt, Stal, Rohnert & Buschmann — *Pattern-Oriented Software Architecture, Volume 2*, 2000 |
+| `Posa2` | 17 | complete | Schmidt, Stal, Rohnert & Buschmann — *Pattern-Oriented Software Architecture, Volume 2*, 2000 |
 | `Idioms` | 2 | open-ended | patterns with a source but no catalog of their own — each entry names its own |
 
-**331 patterns, 603 roles** today, and the catalog is meant to grow by an order of
+**332 patterns, 607 roles** today, and the catalog is meant to grow by an order of
 magnitude. *Complete* means every pattern of the work is either held or named in
 [the exclusion tables](catalog/README.md#patterns-deliberately-left-out) with the reason it
-cannot be annotated — so in those six, a missing pattern is a defect rather than work in
+cannot be annotated — so in those seven, a missing pattern is a defect rather than work in
 progress. A pattern is held by every catalogue whose work presents it as one of its
 own, under the name that work gave it — so a reader of a book finds its patterns
 spelled as it spelled them, and a work that merely cites another's pattern does not

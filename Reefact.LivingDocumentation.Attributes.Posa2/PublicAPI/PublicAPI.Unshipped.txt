@@ -1,4 +1,21 @@
 #nullable enable
+Reefact.LivingDocumentation.Attributes.Posa2.AcceptorConnector
+Reefact.LivingDocumentation.Attributes.Posa2.AcceptorConnector.AcceptorAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.AcceptorConnector.AcceptorAttribute.AcceptorAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.AcceptorConnector.AcceptorAttribute.ServiceHandler.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.Posa2.AcceptorConnector.AcceptorAttribute.ServiceHandler.init -> void
+Reefact.LivingDocumentation.Attributes.Posa2.AcceptorConnector.ConnectorAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.AcceptorConnector.ConnectorAttribute.ConnectorAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.AcceptorConnector.ConnectorAttribute.ServiceHandler.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.Posa2.AcceptorConnector.ConnectorAttribute.ServiceHandler.init -> void
+Reefact.LivingDocumentation.Attributes.Posa2.AcceptorConnector.Role
+Reefact.LivingDocumentation.Attributes.Posa2.AcceptorConnector.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.AcceptorConnector.ServiceHandlerAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.AcceptorConnector.ServiceHandlerAttribute.ServiceHandlerAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.AcceptorConnector.TransportEndpointAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.AcceptorConnector.TransportEndpointAttribute.ServiceHandler.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.Posa2.AcceptorConnector.TransportEndpointAttribute.ServiceHandler.init -> void
+Reefact.LivingDocumentation.Attributes.Posa2.AcceptorConnector.TransportEndpointAttribute.TransportEndpointAttribute() -> void
 Reefact.LivingDocumentation.Attributes.Posa2.ActiveObject
 Reefact.LivingDocumentation.Attributes.Posa2.ActiveObject.ActivationListAttribute
 Reefact.LivingDocumentation.Attributes.Posa2.ActiveObject.ActivationListAttribute.ActivationListAttribute() -> void
