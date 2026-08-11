@@ -1,9 +1,10 @@
-# ADR-0037 | Admettre le catalogue Dependency Injection, avec ses code smells et ses lifestyles
+# ADR-0037 | Admettre le catalogue Dependency Injection, avec ses lifestyles mais sans ses code smells
 
 🌍 🇫🇷 Français (ce fichier) · 🇬🇧 [English](0037-admit-the-dependency-injection-catalogue.md)
 
-**Statut :** Proposé
+**Statut :** Accepté
 **Proposé :** 2026-08-11
+**Accepté :** 2026-08-11
 **Décideurs :** Reefact
 
 ## Contexte
@@ -78,8 +79,8 @@ articles libres de Manning, un par pattern, sont derrière un captcha et n'ont p
 
 ## Décision
 
-L'œuvre est admise comme catalogue sous le nom `DependencyInjection`, et **ses code smells et ses
-lifestyles entrent aux mêmes conditions que ses patterns**.
+L'œuvre est admise comme catalogue sous le nom `DependencyInjection`, et **ses lifestyles entrent aux
+mêmes conditions que ses patterns, ses code smells non**.
 
 ## Justification
 
@@ -99,15 +100,27 @@ règle sur la configuration, et la seule affirmation comparable du catalogue est
 `[SingletonLifestyle]` sur une classe dit *celle-ci doit être enregistrée une fois*, et l'enregistrement
 du conteneur est d'accord ou ne l'est pas.
 
-Le raisonnement de l'ADR-0023 s'étend à un code smell sans effort, et c'est pourquoi la décision les
-prend au lieu de discuter du mot. Cet enregistrement a admis un anti-pattern parce que dire *voici la
-forme dans laquelle nous sommes coincés* vaut autant que dire *voici la forme que nous avons choisie*. Un
-smell est le même énoncé tenu avec moins de certitude, et une annotation est un meilleur endroit pour lui
-qu'un wiki : elle se pose sur le constructeur en question plutôt que dans un document sur les
-constructeurs en général. Ce qui est réellement nouveau, c'est le mot de degré — `ConstructorOverInjection`
-dit *trop*, et *trop* est un jugement et non un fait. Ce n'est pas une objection mais la description de
-l'entrée : l'annotation *est* le jugement, porté par quelqu'un, consigné là où il s'applique, ce qui est
-la prémisse de toute la bibliothèque.
+Les code smells sont refusés, et la raison est le mot de degré et non la catégorie. Le raisonnement de
+l'ADR-0023 s'étend bien à eux — dire *voici la forme dans laquelle nous sommes coincés* vaut autant que
+dire *voici la forme que nous avons choisie*, et un smell est cet énoncé tenu avec moins de certitude. Ce
+qui ne passe pas, c'est qu'un anti-pattern est une **forme**, présente ou absente, tandis que
+`ConstructorOverInjection` dit *trop*, et *trop* est un jugement de degré et non un fait au sujet d'une
+déclaration.
+
+Cela compte à cause de ce à quoi sert réellement une annotation d'anti-pattern. Ce n'est pas la
+détection : un anti-pattern auto-déclaré ne trouve que le contrevenant honnête, et celui qu'il faudrait
+attraper est celui que personne n'a annoté. Son usage est une **baseline** : le compte de ce qui est
+connu et accepté, qu'une compilation peut tenir à *pas plus que ceci, et jamais plus*. C'est
+l'instrument dont ce dépôt vit déjà, dans `PublicAPI.Shipped.txt` et RS0016. Un cliquet a besoin d'un
+nombre sur lequel deux personnes s'accordent ; une forme en donne un, un degré non : le même
+constructeur est sur-injecté pour un relecteur et convenable pour le suivant, si bien que la baseline
+bouge sans que le code bouge.
+
+Les refuser coûte deux entrées au catalogue et aucune cohérence. `AbuseOfAbstractFactories` est celui
+qui est sans doute une forme plutôt qu'une quantité, et il sort avec les deux autres parce que la
+décision porte sur le **genre** : une règle qui admet un genre est vérifiable par quiconque ajoute
+l'entrée suivante, là où une règle qui admet certains membres d'un genre est un jugement à rejouer
+chaque fois — et cet enregistrement trancherait alors cas par cas ce qu'il prétend trancher une fois.
 
 Les lifestyles sont admises quoique l'œuvre ne les appelle pas des patterns, et la raison est que le test
 de l'[ADR-0007](0007-decide-sameness-by-the-assertions-a-pattern-carries.fr.md) porte sur ce qu'une chose
@@ -126,27 +139,36 @@ C#, et c'est exactement le genre de chose que cette bibliothèque existe pour re
 
 ## Alternatives envisagées
 
+### Prendre aussi les code smells
+
+Onze entrées plus les trois du chapitre 6. Envisagé parce que le raisonnement de l'ADR-0023 s'étend bien
+à eux, et parce que `ConstructorOverInjection` est l'entrée qu'un relecteur irait chercher le plus
+souvent des quatorze — la refuser est le coût réel de cette décision et non un arrondi.
+
+Rejeté sur le mot de degré, pour la raison que donne la Justification : un cliquet a besoin d'un nombre
+qui ne bouge pas quand le relecteur change. C'était la décision telle que d'abord rédigée, et
+l'enregistrement a été amendé avant acceptation plutôt qu'accepté tel quel.
+
 ### Ne prendre que les patterns et les anti-patterns
 
-Huit entrées, en laissant dehors les smells du chapitre 6 et les lifestyles du §8.3. Envisagé parce qu'un
-code smell n'est un pattern dans aucune des neuf œuvres déjà cataloguées, et parce qu'une lifestyle n'en
-est pas un dans les mots de cette œuvre — c'est donc l'option qui n'ajoute aucun genre nouveau.
+Huit entrées, en laissant aussi dehors les lifestyles du §8.3. Envisagé parce qu'une lifestyle n'est pas
+un pattern dans les mots de cette œuvre, c'est donc l'option qui n'ajoute aucun genre nouveau.
 
-Rejeté sur ce que cela coûterait. Cela laisse dehors `ConstructorOverInjection`, l'entrée qu'un relecteur
-irait chercher le plus souvent des quatorze, et les trois lifestyles, qui portent les affirmations les
-plus vérifiables du candidat. Et le motif du refus serait le *mot* plutôt que le test de l'ADR-0007, qui
-demande quelles assertions une chose porte.
+Rejeté sur ce que cela coûterait. Les trois lifestyles portent les affirmations les plus vérifiables du
+candidat, et le motif du refus serait le *mot* — la rubrique sous laquelle leur auteur les a classées —
+plutôt que le test de l'ADR-0007, qui demande quelles assertions une chose porte. C'est la distinction
+sur laquelle cette décision tourne deux fois : les lifestyles entrent parce que leur affirmation est un
+fait au sujet d'une déclaration, et les smells sortent parce que l'une des leurs n'en est pas un.
 
-### Prendre les lifestyles et refuser les smells
+### Garder `AbuseOfAbstractFactories` en refusant les deux autres smells
 
-Une position médiane : les lifestyles portent des affirmations vérifiables, les smells portent un
-jugement de degré.
+C'est une forme plutôt qu'une quantité, donc l'argument contre `ConstructorOverInjection` ne l'atteint
+pas, et il survivrait comme la seule entrée utile du chapitre 6.
 
-Rejeté, quoique ce soit le refus le plus défendable qui se présente et que le mainteneur puisse le
-préférer. Le mot de degré est réel, mais une base de code qui marque sa propre dette connue fait ce que
-l'ADR-0023 a admis les anti-patterns pour permettre. Si c'est là que passe la ligne, alors
-`ConstructorOverInjection` est la seule entrée à laisser dehors et `AbuseOfAbstractFactories` — qui est
-une forme et non une quantité — devrait quand même être tenue.
+Rejeté parce que cela fait de la règle un jugement cas par cas. Une décision sur un genre s'applique par
+quiconque écrit l'entrée suivante sans rouvrir cet enregistrement ; une décision sur deux membres sur
+trois, non. Si le mainteneur préfère l'entrée à la règle, c'est un amendement d'une ligne et l'entrée est
+`AbuseOfAbstractFactories`.
 
 ### Admettre *Release It!* à la place
 
@@ -193,8 +215,13 @@ Rejeté : l'[ADR-0013](0013-shelve-a-pattern-without-a-body-of-work-under-idioms
   seul endroit qui dise pourquoi elles sont tenues quand même.
 * Un lecteur qui parcourt [l'index](../../../generated/catalog-index.md) croise `SingletonLifestyle` près
   du `Singleton` du Gang of Four et doit ouvrir deux paquets pour apprendre qu'ils sont opposés.
-* `ConstructorOverInjection` porte un mot de degré. Deux équipes placeront la ligne ailleurs, et
-  l'annotation se lira comme une affirmation sur un nombre alors qu'elle en est une sur un jugement.
+* **Trois des quatorze éléments de l'œuvre restent dehors, et un seul des trois échoue à l'ADR-0011.**
+  `ConstructorOverInjection` et `AbuseOfAbstractFactories` sont annotables et portent bien des
+  assertions ; ils sont absents par décision. Un lecteur qui compte le chapitre contre le paquet trouve
+  un chapitre entier manquant, et `catalog/README.md` est là où il doit apprendre qu'il a été refusé et
+  non oublié.
+* `ConstructorOverInjection` est l'entrée qu'un relecteur aurait cherchée le plus souvent. La refuser est
+  le coût d'une règle applicable sans rediscussion, et c'est un coût réel.
 
 ### Risques
 
@@ -208,14 +235,16 @@ Rejeté : l'[ADR-0013](0013-shelve-a-pattern-without-a-body-of-work-under-idioms
 
 ## Actions de suivi
 
-* Remplir le catalogue par livraisons, en commençant par les DI patterns du chapitre 4.
+* Remplir le catalogue par livraisons : les DI patterns du chapitre 4 sont là, restent les anti-patterns
+  du chapitre 5 et les lifestyles du §8.3. Onze entrées une fois complet, pas quatorze.
 * Consigner dans `catalog/README.md` que l'édition de 2019 fixe la liste et que celle de 2011 diffère —
   avant qu'une livraison ne repose sur la mauvaise.
+* Consigner le chapitre 6 dans les tables d'exclusion, en séparant les deux raisons :
+  `CyclicDependencies` échoue à l'ADR-0011, tandis que `ConstructorOverInjection` et
+  `AbuseOfAbstractFactories` sont refusés par cette décision alors qu'ils y satisferaient.
 * Trancher `StableDependency`, `VolatileDependency`, `CaptiveDependency` et `LeakyAbstraction` quand le
   chapitre 8 sera atteint : ils sont nommés dans l'œuvre mais hors de ses trois sections de catalogue,
   donc savoir s'ils sont des entrées est une question à laquelle cet enregistrement ne répond pas.
-* Consigner chaque élément exclu dans `catalog/README.md` avec le critère auquel il a échoué,
-  `CyclicDependencies` en premier.
 
 ## Références
 

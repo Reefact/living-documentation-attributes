@@ -1,9 +1,10 @@
-# ADR-0037 | Admit the Dependency Injection catalogue, with its code smells and its lifestyles
+# ADR-0037 | Admit the Dependency Injection catalogue, with its lifestyles but not its code smells
 
 🌍 🇬🇧 English (this file) · 🇫🇷 [Français](0037-admit-the-dependency-injection-catalogue.fr.md)
 
-**Status:** Proposed
+**Status:** Accepted
 **Proposed:** 2026-08-11
+**Accepted:** 2026-08-11
 **Decision Makers:** Reefact
 
 ## Context
@@ -75,8 +76,8 @@ are behind a captcha and were not read.
 
 ## Decision
 
-The work is admitted as a catalogue named `DependencyInjection`, and **its code smells and its
-lifestyles enter on the same terms as its patterns**.
+The work is admitted as a catalogue named `DependencyInjection`, and **its lifestyles enter on the same
+terms as its patterns while its code smells do not**.
 
 ## Rationale
 
@@ -95,14 +96,25 @@ in the catalogue is `ServicePerTeam`'s, checkable against `CODEOWNERS`. The life
 kind: `[SingletonLifestyle]` on a class says *this must be registered once*, and the container's
 registration either agrees or does not.
 
-ADR-0023's reasoning extends to a code smell without strain, which is why the decision takes them
-rather than arguing about the word. That record admitted an anti-pattern because *this is the shape we
-are stuck with* is worth as much as *this is the shape we chose*. A smell is the same statement held
-with less certainty, and an annotation is a better place for it than a wiki: it sits on the constructor
-in question rather than in a document about constructors in general. What is genuinely new is the
-degree word — `ConstructorOverInjection` says *too many*, and *too many* is a judgement rather than a
-fact. That is not an objection but a description of the entry: the annotation is the judgement, made by
-somebody, recorded where it applies, which is the premise of the whole library.
+The code smells are refused, and the reason is the degree word rather than the category. ADR-0023's
+reasoning does extend to them — *this is the shape we are stuck with* is worth as much as *this is the
+shape we chose*, and a smell is that statement held with less certainty. What it does not carry across
+is that an anti-pattern is a **shape**, present or absent, while `ConstructorOverInjection` says *too
+many*, and *too many* is a judgement of degree rather than a fact about a declaration.
+
+That matters because of what an anti-pattern annotation is actually for. It is not detection — a
+self-reported anti-pattern finds only the honest offender, and the one worth catching is the one nobody
+annotated. Its use is a **baseline**: the count of what is known and accepted, which a build can hold
+at *no more than this, and never more*. That is the instrument this repository already lives by, in
+`PublicAPI.Shipped.txt` and RS0016. A ratchet needs a number two people agree on, and a shape gives one
+while a degree does not: the same constructor is over-injected to one reviewer and fine to the next, so
+the baseline moves without the code moving.
+
+Refusing them costs the catalogue two entries and no coherence. `AbuseOfAbstractFactories` is the one
+that is arguably a shape rather than a quantity, and it goes out with the other two because the
+decision is about the **kind**: a rule that admits a kind is checkable by whoever adds the next entry,
+where a rule that admits some members of a kind is a judgement to be re-argued each time — and this
+record would then be deciding case by case what it claims to decide once.
 
 The lifestyles are admitted although the work does not call them patterns, and the reason is that
 [ADR-0007](0007-decide-sameness-by-the-assertions-a-pattern-carries.md)'s test is what a thing asserts
@@ -121,25 +133,36 @@ thing this library exists to make sayable.
 
 ## Alternatives Considered
 
+### Take the code smells as well
+
+Eleven entries plus chapter 6's three. Considered because ADR-0023's reasoning does extend to them, and
+because `ConstructorOverInjection` is the entry a reviewer would reach for most often of the fourteen —
+refusing it is the real cost of this decision and not a rounding.
+
+Rejected on the degree word, for the reason the Rationale gives: a baseline needs a number that does not
+move when the reviewer changes. This was the decision as first drafted, and the record was amended
+before acceptance rather than accepted as written.
+
 ### Take only the patterns and the anti-patterns
 
-Eight entries, leaving chapter 6's smells and §8.3's lifestyles out. Considered because a code smell is
-not a pattern in any of the nine works already catalogued, and because a lifestyle is not one in this
-work's own words — so this is the option that adds no new kind at all.
+Eight entries, leaving §8.3's lifestyles out as well. Considered because a lifestyle is not a pattern in
+this work's own words, so this is the option that adds no new kind at all.
 
-Rejected on what it would cost. It leaves out `ConstructorOverInjection`, which is the entry a reviewer
-would reach for most often of the fourteen, and the three lifestyles, which carry the most checkable
-claims in the candidate. And the ground for refusing them would be the *word* rather than ADR-0007's
-test, which asks what assertions a thing carries.
+Rejected on what it would cost. The three lifestyles carry the most checkable claims in the candidate,
+and the ground for refusing them would be the *word* — the rubric their author filed them under —
+rather than ADR-0007's test, which asks what assertions a thing carries. That is the distinction this
+decision turns on twice: the lifestyles are in because their claim is a fact about a declaration, and
+the smells are out because one of theirs is not.
 
-### Take the lifestyles and refuse the smells
+### Keep `AbuseOfAbstractFactories` while refusing the other two smells
 
-A middle position: lifestyles carry checkable claims, smells carry a judgement of degree.
+It is a shape rather than a quantity, so the argument against `ConstructorOverInjection` does not reach
+it, and it would survive as the one useful entry of chapter 6.
 
-Rejected, though it is the most defensible refusal on offer and the maintainer may prefer it. The
-degree word is real, but a codebase that marks its own known debt is doing what ADR-0023 admitted
-anti-patterns in order to allow. If this is the line, then `ConstructorOverInjection` is the one entry
-to leave out and `AbuseOfAbstractFactories` — which is a shape, not a quantity — should still be held.
+Rejected because it makes the rule a case-by-case judgement. A decision about a kind can be applied by
+whoever writes the next entry without reopening this record; a decision about two of three members
+cannot. If the maintainer would rather have the entry than the rule, this is a one-line amendment and
+the entry is `AbuseOfAbstractFactories`.
 
 ### Admit *Release It!* instead
 
@@ -186,8 +209,13 @@ catalogue.
   why they are held anyway.
 * A reader browsing [the index](../../../generated/catalog-index.md) meets `SingletonLifestyle` near
   Gang of Four's `Singleton` and must open two packages to learn that they are opposites.
-* `ConstructorOverInjection` carries a degree word. Two teams will put the line in different places, and
-  the annotation will read as a claim about a number when it is a claim about a judgement.
+* **Three of the work's fourteen items are left out, and only one of the three fails ADR-0011.**
+  `ConstructorOverInjection` and `AbuseOfAbstractFactories` are annotatable and do license assertions;
+  they are absent by decision. A reader who counts the chapter against the package finds a whole
+  chapter missing, and `catalog/README.md` is where they must find out that it was refused rather than
+  overlooked.
+* `ConstructorOverInjection` is the entry a reviewer would have reached for most often. Refusing it is
+  the cost of a rule that can be applied without re-arguing, and it is a real cost.
 
 ### Risks
 
@@ -200,14 +228,16 @@ catalogue.
 
 ## Follow-up Actions
 
-* Fill the catalogue in instalments, beginning with chapter 4's DI patterns.
+* Fill the catalogue in instalments: chapter 4's DI patterns are in, chapter 5's anti-patterns and
+  §8.3's lifestyles remain. Eleven entries when it is complete, not fourteen.
 * Record in `catalog/README.md` that the 2019 edition fixes the list, and that the 2011 edition's
   differs — before an instalment rests on the wrong one.
+* Record chapter 6 in the exclusion tables, and separate the two reasons: `CyclicDependencies` fails
+  ADR-0011, while `ConstructorOverInjection` and `AbuseOfAbstractFactories` are refused by this
+  decision although they would pass it.
 * Decide `StableDependency`, `VolatileDependency`, `CaptiveDependency` and `LeakyAbstraction` when
   chapter 8 is reached: they are named in the work but outside its three catalogue sections, so whether
   they are entries is a question this record does not answer.
-* Record every excluded item in `catalog/README.md` with the criterion it failed, `CyclicDependencies`
-  first.
 
 ## References
 
