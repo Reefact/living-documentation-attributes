@@ -1,0 +1,23 @@
+{
+  "catalog": "DependencyInjection",
+  "name": "CompositionRoot",
+  "summary": "Assembles the application's object graph in one location as close as possible to its entry point, so that everything else is composed rather than composing.",
+  "reference": {
+    "author": "Steven van Deursen, Mark Seemann",
+    "work": "Dependency Injection Principles, Practices, and Patterns",
+    "year": 2019
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "CompositionRoot",
+      "targets": [
+        "Class",
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "The one place where the application's modules are put together, and the only place a DI container may be referenced \u2014 every other module holds no reference to it. An application has one of these however large it grows; a library has none, because composing is the application's decision and not its dependencies'.",
+      "links": []
+    }
+  ]
+}

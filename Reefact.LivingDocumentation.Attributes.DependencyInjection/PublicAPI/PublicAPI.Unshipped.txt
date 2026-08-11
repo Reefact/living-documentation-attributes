@@ -1,1 +1,3 @@
 #nullable enable
+Reefact.LivingDocumentation.Attributes.DependencyInjection.CompositionRootAttribute
+Reefact.LivingDocumentation.Attributes.DependencyInjection.CompositionRootAttribute.CompositionRootAttribute() -> void
