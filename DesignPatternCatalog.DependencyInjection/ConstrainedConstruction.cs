@@ -20,6 +20,6 @@ namespace DesignPatternCatalog.DependencyInjection {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Constructor, AllowMultiple = false, Inherited = false)]
-    public sealed class ConstrainedConstructionAttribute : LivingDocumentationAttribute { }
+    public sealed class ConstrainedConstructionAttribute : DesignPatternAttribute { }
 
 }

@@ -20,6 +20,6 @@ namespace DesignPatternCatalog.EnterpriseIntegration {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class | AttributeTargets.Assembly, AllowMultiple = false, Inherited = false)]
-    public sealed class RemoteProcedureInvocationAttribute : LivingDocumentationAttribute { }
+    public sealed class RemoteProcedureInvocationAttribute : DesignPatternAttribute { }
 
 }

@@ -19,6 +19,6 @@ namespace DesignPatternCatalog.EnterpriseIntegration {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class | AttributeTargets.Assembly, AllowMultiple = false, Inherited = false)]
-    public sealed class FileTransferAttribute : LivingDocumentationAttribute { }
+    public sealed class FileTransferAttribute : DesignPatternAttribute { }
 
 }

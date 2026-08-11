@@ -20,6 +20,6 @@ namespace DesignPatternCatalog.MicroservicesPatterns {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = false, Inherited = false)]
-    public sealed class DistributedTracingAttribute : LivingDocumentationAttribute { }
+    public sealed class DistributedTracingAttribute : DesignPatternAttribute { }
 
 }

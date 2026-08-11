@@ -26,7 +26,7 @@ namespace DesignPatternCatalog.Posa2 {
         /// <summary>
         ///     Role played by a type or a member in the ThreadSpecificStorage design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute { }
+        public abstract class Role : DesignPatternAttribute { }
 
         /// <summary>
         ///     The one access point every thread uses, which hides the key and the collection behind it and hands each

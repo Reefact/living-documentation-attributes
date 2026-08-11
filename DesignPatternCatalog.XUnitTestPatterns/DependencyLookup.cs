@@ -19,6 +19,6 @@ namespace DesignPatternCatalog.XUnitTestPatterns {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Interface, AllowMultiple = false, Inherited = false)]
-    public sealed class DependencyLookupAttribute : LivingDocumentationAttribute { }
+    public sealed class DependencyLookupAttribute : DesignPatternAttribute { }
 
 }

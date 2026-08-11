@@ -19,6 +19,6 @@ namespace DesignPatternCatalog.DomainDrivenDesign {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Assembly, AllowMultiple = false, Inherited = false)]
-    public sealed class GenericSubdomainAttribute : LivingDocumentationAttribute { }
+    public sealed class GenericSubdomainAttribute : DesignPatternAttribute { }
 
 }

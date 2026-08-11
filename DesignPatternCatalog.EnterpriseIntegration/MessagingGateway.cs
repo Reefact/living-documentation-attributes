@@ -19,6 +19,6 @@ namespace DesignPatternCatalog.EnterpriseIntegration {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
-    public sealed class MessagingGatewayAttribute : LivingDocumentationAttribute { }
+    public sealed class MessagingGatewayAttribute : DesignPatternAttribute { }
 
 }

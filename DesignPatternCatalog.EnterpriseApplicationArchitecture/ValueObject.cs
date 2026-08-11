@@ -20,6 +20,6 @@ namespace DesignPatternCatalog.EnterpriseApplicationArchitecture {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct, AllowMultiple = false, Inherited = true)]
-    public sealed class ValueObjectAttribute : LivingDocumentationAttribute { }
+    public sealed class ValueObjectAttribute : DesignPatternAttribute { }
 
 }

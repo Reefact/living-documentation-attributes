@@ -25,7 +25,7 @@ namespace DesignPatternCatalog.Posa2 {
         /// <summary>
         ///     Role played by a type or a member in the WrapperFacade design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute { }
+        public abstract class Role : DesignPatternAttribute { }
 
         /// <summary>
         ///     The class that encapsulates the low-level functions and the data structures they work on, and forwards

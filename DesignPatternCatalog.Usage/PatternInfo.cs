@@ -14,7 +14,7 @@ namespace DesignPatternCatalog.Usage {
     /// <remarks>
     ///     The library itself carries none of this: an attribute is inert data, and everything below is already said by
     ///     the shape of its declaration. This is a reference implementation of the four rules documented on
-    ///     <see cref="LivingDocumentationAttribute" /> — copy it, adapt it, own it. It is deliberately not part of the
+    ///     <see cref="DesignPatternAttribute" /> — copy it, adapt it, own it. It is deliberately not part of the
     ///     library, so that nothing here has to be versioned or kept compatible.
     /// </remarks>
     public static class PatternInfo {
@@ -31,9 +31,9 @@ namespace DesignPatternCatalog.Usage {
         ///     The first segment below the root, not the last: a sub-namespace such as <c>DomainDrivenDesign.Strategic</c>
         ///     is organisational, and folds into the catalog it belongs to.
         /// </remarks>
-        public static string CatalogOf(LivingDocumentationAttribute annotation) => CatalogOf(annotation.GetType());
+        public static string CatalogOf(DesignPatternAttribute annotation) => CatalogOf(annotation.GetType());
 
-        /// <inheritdoc cref="CatalogOf(LivingDocumentationAttribute)" />
+        /// <inheritdoc cref="CatalogOf(DesignPatternAttribute)" />
         public static string CatalogOf(Type attributeType) {
             string? space = attributeType.Namespace;
             if (space is null) { return string.Empty; }
@@ -52,17 +52,17 @@ namespace DesignPatternCatalog.Usage {
         ///     The declaring type is the container a multi-role pattern is written in. A pattern with a single role has
         ///     no container, and carries its own name.
         /// </remarks>
-        public static string PatternNameOf(LivingDocumentationAttribute annotation) => PatternNameOf(annotation.GetType());
+        public static string PatternNameOf(DesignPatternAttribute annotation) => PatternNameOf(annotation.GetType());
 
-        /// <inheritdoc cref="PatternNameOf(LivingDocumentationAttribute)" />
+        /// <inheritdoc cref="PatternNameOf(DesignPatternAttribute)" />
         public static string PatternNameOf(Type attributeType) => attributeType.DeclaringType?.Name ?? RoleNameOf(attributeType);
 
         /// <summary>
         ///     The name of the role held within the pattern, such as <c>Leaf</c> or <c>AcceptMethod</c>.
         /// </summary>
-        public static string RoleNameOf(LivingDocumentationAttribute annotation) => RoleNameOf(annotation.GetType());
+        public static string RoleNameOf(DesignPatternAttribute annotation) => RoleNameOf(annotation.GetType());
 
-        /// <inheritdoc cref="RoleNameOf(LivingDocumentationAttribute)" />
+        /// <inheritdoc cref="RoleNameOf(DesignPatternAttribute)" />
         public static string RoleNameOf(Type attributeType) {
             string name = attributeType.Name;
 
@@ -94,13 +94,13 @@ namespace DesignPatternCatalog.Usage {
         ///         patterns.
         ///     </para>
         /// </remarks>
-        public static Type IdentityOf(LivingDocumentationAttribute annotation) => IdentityOf(annotation.GetType());
+        public static Type IdentityOf(DesignPatternAttribute annotation) => IdentityOf(annotation.GetType());
 
-        /// <inheritdoc cref="IdentityOf(LivingDocumentationAttribute)" />
+        /// <inheritdoc cref="IdentityOf(DesignPatternAttribute)" />
         public static Type IdentityOf(Type attributeType) {
             Type current = attributeType;
 
-            while (current.BaseType is { } parent && parent != typeof(LivingDocumentationAttribute)) {
+            while (current.BaseType is { } parent && parent != typeof(DesignPatternAttribute)) {
                 if (!parent.IsAbstract || parent.DeclaringType != current.DeclaringType) { break; }
 
                 current = parent;

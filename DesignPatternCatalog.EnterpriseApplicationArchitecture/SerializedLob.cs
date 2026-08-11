@@ -19,6 +19,6 @@ namespace DesignPatternCatalog.EnterpriseApplicationArchitecture {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct, AllowMultiple = false, Inherited = false)]
-    public sealed class SerializedLobAttribute : LivingDocumentationAttribute { }
+    public sealed class SerializedLobAttribute : DesignPatternAttribute { }
 
 }

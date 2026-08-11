@@ -38,7 +38,7 @@ guessing the last segment gets a plausible wrong answer.
 
 ## Decision
 
-`LivingDocumentationAttribute` declares no member, and the rules for reading a
+`DesignPatternAttribute` declares no member, and the rules for reading a
 pattern back from an attribute type are documented rather than implemented.
 
 ## Rationale

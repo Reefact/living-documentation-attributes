@@ -20,6 +20,6 @@ namespace DesignPatternCatalog.EnterpriseIntegration {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
-    public sealed class DetourAttribute : LivingDocumentationAttribute { }
+    public sealed class DetourAttribute : DesignPatternAttribute { }
 
 }

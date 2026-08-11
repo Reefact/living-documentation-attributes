@@ -24,7 +24,7 @@ namespace DesignPatternCatalog.AccountingPatterns {
         /// <summary>
         ///     Role played by a type or a member in the DifferenceAdjustment design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute { }
+        public abstract class Role : DesignPatternAttribute { }
 
         /// <summary>
         ///     The correction as a whole: one entry per original, holding what the original was short or over by. It is

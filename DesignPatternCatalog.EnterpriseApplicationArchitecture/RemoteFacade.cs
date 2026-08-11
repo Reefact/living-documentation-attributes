@@ -19,6 +19,6 @@ namespace DesignPatternCatalog.EnterpriseApplicationArchitecture {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
-    public sealed class RemoteFacadeAttribute : LivingDocumentationAttribute { }
+    public sealed class RemoteFacadeAttribute : DesignPatternAttribute { }
 
 }

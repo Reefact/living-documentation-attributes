@@ -19,6 +19,6 @@ namespace DesignPatternCatalog.MicroservicesPatterns {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class | AttributeTargets.Assembly, AllowMultiple = true, Inherited = false)]
-    public sealed class AntiCorruptionLayerAttribute : LivingDocumentationAttribute { }
+    public sealed class AntiCorruptionLayerAttribute : DesignPatternAttribute { }
 
 }

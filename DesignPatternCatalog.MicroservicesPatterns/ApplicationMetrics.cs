@@ -19,6 +19,6 @@ namespace DesignPatternCatalog.MicroservicesPatterns {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = false, Inherited = false)]
-    public sealed class ApplicationMetricsAttribute : LivingDocumentationAttribute { }
+    public sealed class ApplicationMetricsAttribute : DesignPatternAttribute { }
 
 }

@@ -20,6 +20,6 @@ namespace DesignPatternCatalog.DomainDrivenDesign {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Assembly, AllowMultiple = false, Inherited = false)]
-    public sealed class SmartUiAttribute : LivingDocumentationAttribute { }
+    public sealed class SmartUiAttribute : DesignPatternAttribute { }
 
 }

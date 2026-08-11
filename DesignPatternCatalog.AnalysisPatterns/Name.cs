@@ -19,6 +19,6 @@ namespace DesignPatternCatalog.AnalysisPatterns {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field | AttributeTargets.Method, AllowMultiple = true, Inherited = false)]
-    public sealed class NameAttribute : LivingDocumentationAttribute { }
+    public sealed class NameAttribute : DesignPatternAttribute { }
 
 }

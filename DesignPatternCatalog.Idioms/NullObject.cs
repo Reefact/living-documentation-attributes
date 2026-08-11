@@ -19,6 +19,6 @@ namespace DesignPatternCatalog.Idioms {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct, AllowMultiple = false, Inherited = true)]
-    public sealed class NullObjectAttribute : LivingDocumentationAttribute { }
+    public sealed class NullObjectAttribute : DesignPatternAttribute { }
 
 }

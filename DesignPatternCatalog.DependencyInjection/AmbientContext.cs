@@ -19,6 +19,6 @@ namespace DesignPatternCatalog.DependencyInjection {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Property | AttributeTargets.Field, AllowMultiple = false, Inherited = false)]
-    public sealed class AmbientContextAttribute : LivingDocumentationAttribute { }
+    public sealed class AmbientContextAttribute : DesignPatternAttribute { }
 
 }

@@ -24,7 +24,7 @@ namespace DesignPatternCatalog.AccountingPatterns {
         /// <summary>
         ///     Role played by a type or a member in the Account design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute { }
+        public abstract class Role : DesignPatternAttribute { }
 
         /// <summary>
         ///     A container of entries that is more than a container: it answers a balance, and a balance as at any past

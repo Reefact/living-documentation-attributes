@@ -19,6 +19,6 @@ namespace DesignPatternCatalog.DomainDrivenDesign {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Interface, AllowMultiple = false, Inherited = true)]
-    public sealed class EntityAttribute : LivingDocumentationAttribute { }
+    public sealed class EntityAttribute : DesignPatternAttribute { }
 
 }

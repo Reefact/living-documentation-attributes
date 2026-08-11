@@ -24,7 +24,7 @@ namespace DesignPatternCatalog.DomainDrivenDesign {
         /// <summary>
         ///     Role played by a type or a member in the Aggregate design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute { }
+        public abstract class Role : DesignPatternAttribute { }
 
         /// <summary>
         ///     The single entity by which the aggregate is referenced from outside, and the only participant allowed to

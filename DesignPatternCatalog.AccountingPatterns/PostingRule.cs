@@ -25,7 +25,7 @@ namespace DesignPatternCatalog.AccountingPatterns {
         /// <summary>
         ///     Role played by a type or a member in the PostingRule design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute { }
+        public abstract class Role : DesignPatternAttribute { }
 
         /// <summary>
         ///     The rule itself: given an event of a kind it names, it creates the entries that follow. It exists

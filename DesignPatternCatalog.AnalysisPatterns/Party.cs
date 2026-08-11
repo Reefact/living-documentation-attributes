@@ -19,6 +19,6 @@ namespace DesignPatternCatalog.AnalysisPatterns {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class, AllowMultiple = false, Inherited = true)]
-    public class PartyAttribute : LivingDocumentationAttribute { }
+    public class PartyAttribute : DesignPatternAttribute { }
 
 }

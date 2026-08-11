@@ -33,8 +33,8 @@ fails with *a declension or specialisation of a multi-role pattern is not
 generated yet*. ADR-0005 anticipated this only for a declension.
 
 Two documents that ship with the library contradicted the accepted decision. The
-identity rule published on `LivingDocumentationAttribute` read *the type
-immediately below `LivingDocumentationAttribute`* — which is the alternative
+identity rule published on `DesignPatternAttribute` read *the type
+immediately below `DesignPatternAttribute`* — which is the alternative
 ADR-0005 considered and rejected, and which returns the wrong answer for the one
 relation the catalog holds. `DeclensionAttribute` illustrated a declension with
 Fowler's and Evans' value objects, which

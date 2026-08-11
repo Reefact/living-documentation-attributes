@@ -19,6 +19,6 @@ namespace DesignPatternCatalog.EnterpriseApplicationArchitecture {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Assembly, AllowMultiple = false, Inherited = false)]
-    public sealed class DomainModelAttribute : LivingDocumentationAttribute { }
+    public sealed class DomainModelAttribute : DesignPatternAttribute { }
 
 }

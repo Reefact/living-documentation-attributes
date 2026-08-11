@@ -19,6 +19,6 @@ namespace DesignPatternCatalog.MicroservicesPatterns {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Assembly, AllowMultiple = false, Inherited = false)]
-    public sealed class ServiceTemplateAttribute : LivingDocumentationAttribute { }
+    public sealed class ServiceTemplateAttribute : DesignPatternAttribute { }
 
 }

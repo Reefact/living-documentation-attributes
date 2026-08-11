@@ -24,7 +24,7 @@ namespace DesignPatternCatalog.GangOfFour {
         /// <summary>
         ///     Role played by a type or a member in the ChainOfResponsibility design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute { }
+        public abstract class Role : DesignPatternAttribute { }
 
         /// <summary>
         ///     Declares the handling operation and, usually, the link to the successor.

@@ -19,6 +19,6 @@ namespace DesignPatternCatalog.XUnitTestPatterns {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Interface, AllowMultiple = false, Inherited = false)]
-    public sealed class HumbleObjectAttribute : LivingDocumentationAttribute { }
+    public sealed class HumbleObjectAttribute : DesignPatternAttribute { }
 
 }

@@ -19,6 +19,6 @@ namespace DesignPatternCatalog.MicroservicesPatterns {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = false, Inherited = false)]
-    public sealed class HealthCheckApiAttribute : LivingDocumentationAttribute { }
+    public sealed class HealthCheckApiAttribute : DesignPatternAttribute { }
 
 }

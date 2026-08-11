@@ -19,6 +19,6 @@ namespace DesignPatternCatalog.EnterpriseIntegration {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field, AllowMultiple = false, Inherited = false)]
-    public sealed class MessageHistoryAttribute : LivingDocumentationAttribute { }
+    public sealed class MessageHistoryAttribute : DesignPatternAttribute { }
 
 }

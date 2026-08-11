@@ -19,6 +19,6 @@ namespace DesignPatternCatalog.MicroservicesPatterns {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class | AttributeTargets.Assembly, AllowMultiple = false, Inherited = false)]
-    public sealed class ServerSideServiceDiscoveryAttribute : LivingDocumentationAttribute { }
+    public sealed class ServerSideServiceDiscoveryAttribute : DesignPatternAttribute { }
 
 }

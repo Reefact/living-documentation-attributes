@@ -25,7 +25,7 @@ namespace DesignPatternCatalog.DomainDrivenDesign {
         /// <summary>
         ///     Role played by a type or a member in the PluggableComponentFramework design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute { }
+        public abstract class Role : DesignPatternAttribute { }
 
         /// <summary>
         ///     The shared interfaces every component implements and every application calls through. It is the whole of

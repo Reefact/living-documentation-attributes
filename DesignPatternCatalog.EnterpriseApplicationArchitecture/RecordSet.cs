@@ -19,6 +19,6 @@ namespace DesignPatternCatalog.EnterpriseApplicationArchitecture {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
-    public sealed class RecordSetAttribute : LivingDocumentationAttribute { }
+    public sealed class RecordSetAttribute : DesignPatternAttribute { }
 
 }

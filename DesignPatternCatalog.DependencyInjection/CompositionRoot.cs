@@ -20,6 +20,6 @@ namespace DesignPatternCatalog.DependencyInjection {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = false, Inherited = false)]
-    public sealed class CompositionRootAttribute : LivingDocumentationAttribute { }
+    public sealed class CompositionRootAttribute : DesignPatternAttribute { }
 
 }

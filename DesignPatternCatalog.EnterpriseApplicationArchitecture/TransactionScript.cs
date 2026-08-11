@@ -19,6 +19,6 @@ namespace DesignPatternCatalog.EnterpriseApplicationArchitecture {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Method, AllowMultiple = false, Inherited = false)]
-    public sealed class TransactionScriptAttribute : LivingDocumentationAttribute { }
+    public sealed class TransactionScriptAttribute : DesignPatternAttribute { }
 
 }

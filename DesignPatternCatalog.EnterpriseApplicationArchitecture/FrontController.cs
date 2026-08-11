@@ -24,7 +24,7 @@ namespace DesignPatternCatalog.EnterpriseApplicationArchitecture {
         /// <summary>
         ///     Role played by a type or a member in the FrontController design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute { }
+        public abstract class Role : DesignPatternAttribute { }
 
         /// <summary>
         ///     The single entry point every request passes through. Because there is exactly one, what is common to all

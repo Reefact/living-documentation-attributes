@@ -64,6 +64,6 @@ namespace DesignPatternCatalog {
     ///         catalog index instead.
     ///     </para>
     /// </remarks>
-    public abstract class LivingDocumentationAttribute : Attribute { }
+    public abstract class DesignPatternAttribute : Attribute { }
 
 }

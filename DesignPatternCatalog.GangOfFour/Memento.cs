@@ -24,7 +24,7 @@ namespace DesignPatternCatalog.GangOfFour {
         /// <summary>
         ///     Role played by a type or a member in the Memento design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute { }
+        public abstract class Role : DesignPatternAttribute { }
 
         /// <summary>
         ///     Creates a memento of its own state, and uses one to restore itself.

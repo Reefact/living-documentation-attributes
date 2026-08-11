@@ -19,6 +19,6 @@ namespace DesignPatternCatalog.AnalysisPatterns {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
-    public sealed class RejectedObservationAttribute : LivingDocumentationAttribute { }
+    public sealed class RejectedObservationAttribute : DesignPatternAttribute { }
 
 }

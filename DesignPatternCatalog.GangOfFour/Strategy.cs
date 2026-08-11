@@ -24,7 +24,7 @@ namespace DesignPatternCatalog.GangOfFour {
         /// <summary>
         ///     Role played by a type or a member in the Strategy design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute { }
+        public abstract class Role : DesignPatternAttribute { }
 
         /// <summary>
         ///     Is configured with a strategy, and delegates the algorithm to it.

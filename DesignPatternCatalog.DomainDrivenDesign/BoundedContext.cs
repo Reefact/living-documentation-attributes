@@ -19,6 +19,6 @@ namespace DesignPatternCatalog.DomainDrivenDesign {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Assembly, AllowMultiple = false, Inherited = false)]
-    public sealed class BoundedContextAttribute : LivingDocumentationAttribute { }
+    public sealed class BoundedContextAttribute : DesignPatternAttribute { }
 
 }

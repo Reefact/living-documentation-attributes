@@ -19,6 +19,6 @@ namespace DesignPatternCatalog.MicroservicesPatterns {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct, AllowMultiple = false, Inherited = true)]
-    public sealed class DomainEventAttribute : LivingDocumentationAttribute { }
+    public sealed class DomainEventAttribute : DesignPatternAttribute { }
 
 }

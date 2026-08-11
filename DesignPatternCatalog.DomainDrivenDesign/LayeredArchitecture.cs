@@ -24,7 +24,7 @@ namespace DesignPatternCatalog.DomainDrivenDesign {
         /// <summary>
         ///     Role played by a type or a member in the LayeredArchitecture design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute { }
+        public abstract class Role : DesignPatternAttribute { }
 
         /// <summary>
         ///     Shows information to the user and interprets what the user does. It holds no rule of the domain:

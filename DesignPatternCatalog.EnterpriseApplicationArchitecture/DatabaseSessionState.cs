@@ -19,6 +19,6 @@ namespace DesignPatternCatalog.EnterpriseApplicationArchitecture {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
-    public sealed class DatabaseSessionStateAttribute : LivingDocumentationAttribute { }
+    public sealed class DatabaseSessionStateAttribute : DesignPatternAttribute { }
 
 }

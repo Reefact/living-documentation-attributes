@@ -355,7 +355,7 @@ def main():
     for pattern in patterns:
         target = relation(pattern)
         if target is None:
-            pattern["_base"] = "LivingDocumentationAttribute"
+            pattern["_base"] = "DesignPatternAttribute"
         elif target.get("role"):
             # Same catalogue, so the same namespace: no prefix needed, and none possible for another.
             pattern["_base"] = f"{target['name']}.{target['role']}Attribute"

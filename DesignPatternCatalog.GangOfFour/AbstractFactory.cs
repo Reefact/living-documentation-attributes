@@ -24,7 +24,7 @@ namespace DesignPatternCatalog.GangOfFour {
         /// <summary>
         ///     Role played by a type or a member in the AbstractFactory design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute { }
+        public abstract class Role : DesignPatternAttribute { }
 
         /// <summary>
         ///     Declares the set of operations that create the abstract products of the family.

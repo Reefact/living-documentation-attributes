@@ -20,6 +20,6 @@ namespace DesignPatternCatalog.DomainDrivenDesign {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class | AttributeTargets.Assembly, AllowMultiple = false, Inherited = false)]
-    public sealed class CohesiveMechanismAttribute : LivingDocumentationAttribute { }
+    public sealed class CohesiveMechanismAttribute : DesignPatternAttribute { }
 
 }
