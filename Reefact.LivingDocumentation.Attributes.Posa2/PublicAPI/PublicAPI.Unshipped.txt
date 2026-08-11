@@ -24,6 +24,23 @@ Reefact.LivingDocumentation.Attributes.Posa2.ActiveObject.ServantAttribute
 Reefact.LivingDocumentation.Attributes.Posa2.ActiveObject.ServantAttribute.Proxy.get -> System.Type?
 Reefact.LivingDocumentation.Attributes.Posa2.ActiveObject.ServantAttribute.Proxy.init -> void
 Reefact.LivingDocumentation.Attributes.Posa2.ActiveObject.ServantAttribute.ServantAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.ComponentConfigurator
+Reefact.LivingDocumentation.Attributes.Posa2.ComponentConfigurator.ComponentAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.ComponentConfigurator.ComponentAttribute.ComponentAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.ComponentConfigurator.ComponentConfiguratorAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.ComponentConfigurator.ComponentConfiguratorAttribute.Component.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.Posa2.ComponentConfigurator.ComponentConfiguratorAttribute.Component.init -> void
+Reefact.LivingDocumentation.Attributes.Posa2.ComponentConfigurator.ComponentConfiguratorAttribute.ComponentConfiguratorAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.ComponentConfigurator.ComponentRepositoryAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.ComponentConfigurator.ComponentRepositoryAttribute.Component.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.Posa2.ComponentConfigurator.ComponentRepositoryAttribute.Component.init -> void
+Reefact.LivingDocumentation.Attributes.Posa2.ComponentConfigurator.ComponentRepositoryAttribute.ComponentRepositoryAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.ComponentConfigurator.ConcreteComponentAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.ComponentConfigurator.ConcreteComponentAttribute.Component.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.Posa2.ComponentConfigurator.ConcreteComponentAttribute.Component.init -> void
+Reefact.LivingDocumentation.Attributes.Posa2.ComponentConfigurator.ConcreteComponentAttribute.ConcreteComponentAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.ComponentConfigurator.Role
+Reefact.LivingDocumentation.Attributes.Posa2.ComponentConfigurator.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.Posa2.DoubleCheckedLockingOptimization
 Reefact.LivingDocumentation.Attributes.Posa2.DoubleCheckedLockingOptimization.FlagAttribute
 Reefact.LivingDocumentation.Attributes.Posa2.DoubleCheckedLockingOptimization.FlagAttribute.FlagAttribute() -> void
