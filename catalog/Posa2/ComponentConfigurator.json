@@ -1,0 +1,58 @@
+{
+  "catalog": "Posa2",
+  "name": "ComponentConfigurator",
+  "summary": "Lets an application link and unlink its component implementations at run time, without modifying, recompiling or relinking the application.",
+  "reference": {
+    "author": "Douglas Schmidt, Michael Stal, Hans Rohnert, Frank Buschmann",
+    "work": "Pattern-Oriented Software Architecture, Volume 2",
+    "year": 2000
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Component",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "Declares the hooks by which a component is initialized, suspended, resumed and terminated. Everything the configurator can do to a component is on this interface, so a component that needs anything else is one the configurator cannot manage.",
+      "links": []
+    },
+    {
+      "name": "ConcreteComponent",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "Implements the hooks and the service itself. Its initialization runs at a moment the application chooses rather than at start-up, so anything it assumes about what else exists yet is an assumption about configuration order.",
+      "links": [
+        "Component"
+      ]
+    },
+    {
+      "name": "ComponentRepository",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": true,
+      "summary": "Holds the components currently configured into the application, and is what makes them addressable at run time. A component missing from here is not merely unreachable \u2014 it cannot be suspended, resumed or terminated either.",
+      "links": [
+        "Component"
+      ]
+    },
+    {
+      "name": "ComponentConfigurator",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": true,
+      "summary": "Links and unlinks implementations while the application runs, and records them in the repository. It is the one participant with the power to change what the application is made of after it has started.",
+      "links": [
+        "Component"
+      ]
+    }
+  ]
+}
