@@ -170,4 +170,4 @@ Related ADRs, sources, catalog entries, code.
 | [ADR-0035](0035-index-the-pattern-language-and-require-a-write-up.md) | Index the pattern language, and admit on a write-up rather than a book citation | Accepted |
 | [ADR-0036](0036-admit-posa2-as-a-catalogue.md) | Admit Pattern-Oriented Software Architecture Volume 2 as a catalogue | Accepted |
 | [ADR-0037](0037-admit-the-dependency-injection-catalogue.md) | Admit the Dependency Injection catalogue, with its lifestyles but not its code smells | Accepted |
-| [ADR-0038](0038-name-the-packages-after-the-catalogue-rather-than-the-vendor.md) | Name the packages after the catalogue rather than after the vendor | Proposed |
+| [ADR-0038](0038-name-the-packages-after-the-catalogue-rather-than-the-vendor.md) | Name the packages after the catalogue rather than after the vendor | Accepted |
