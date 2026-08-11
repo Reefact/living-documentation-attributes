@@ -57,6 +57,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reefact.LivingDocumentation
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reefact.LivingDocumentation.Attributes.MicroservicesPatterns", "Reefact.LivingDocumentation.Attributes.MicroservicesPatterns\Reefact.LivingDocumentation.Attributes.MicroservicesPatterns.csproj", "{4C81E2A7-5B9D-4F36-A1C8-7E20D93B6F45}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reefact.LivingDocumentation.Attributes.Posa2", "Reefact.LivingDocumentation.Attributes.Posa2\Reefact.LivingDocumentation.Attributes.Posa2.csproj", "{9E5D71A8-3C64-4B02-8F17-6AD4E92C05B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -343,6 +345,18 @@ Global
 		{4C81E2A7-5B9D-4F36-A1C8-7E20D93B6F45}.Release|x64.Build.0 = Release|Any CPU
 		{4C81E2A7-5B9D-4F36-A1C8-7E20D93B6F45}.Release|x86.ActiveCfg = Release|Any CPU
 		{4C81E2A7-5B9D-4F36-A1C8-7E20D93B6F45}.Release|x86.Build.0 = Release|Any CPU
+		{9E5D71A8-3C64-4B02-8F17-6AD4E92C05B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E5D71A8-3C64-4B02-8F17-6AD4E92C05B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E5D71A8-3C64-4B02-8F17-6AD4E92C05B7}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9E5D71A8-3C64-4B02-8F17-6AD4E92C05B7}.Debug|x64.Build.0 = Debug|Any CPU
+		{9E5D71A8-3C64-4B02-8F17-6AD4E92C05B7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9E5D71A8-3C64-4B02-8F17-6AD4E92C05B7}.Debug|x86.Build.0 = Debug|Any CPU
+		{9E5D71A8-3C64-4B02-8F17-6AD4E92C05B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E5D71A8-3C64-4B02-8F17-6AD4E92C05B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E5D71A8-3C64-4B02-8F17-6AD4E92C05B7}.Release|x64.ActiveCfg = Release|Any CPU
+		{9E5D71A8-3C64-4B02-8F17-6AD4E92C05B7}.Release|x64.Build.0 = Release|Any CPU
+		{9E5D71A8-3C64-4B02-8F17-6AD4E92C05B7}.Release|x86.ActiveCfg = Release|Any CPU
+		{9E5D71A8-3C64-4B02-8F17-6AD4E92C05B7}.Release|x86.Build.0 = Release|Any CPU
 		{52B55D4F-493C-4A04-A0A2-5F7012BAC13B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{52B55D4F-493C-4A04-A0A2-5F7012BAC13B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52B55D4F-493C-4A04-A0A2-5F7012BAC13B}.Debug|x64.ActiveCfg = Debug|Any CPU
