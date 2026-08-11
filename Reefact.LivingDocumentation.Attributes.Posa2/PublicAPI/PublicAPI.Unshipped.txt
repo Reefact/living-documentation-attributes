@@ -129,6 +129,27 @@ Reefact.LivingDocumentation.Attributes.Posa2.MonitorObject.Role
 Reefact.LivingDocumentation.Attributes.Posa2.MonitorObject.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.Posa2.MonitorObject.SynchronizedMethodAttribute
 Reefact.LivingDocumentation.Attributes.Posa2.MonitorObject.SynchronizedMethodAttribute.SynchronizedMethodAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.Reactor
+Reefact.LivingDocumentation.Attributes.Posa2.Reactor.ConcreteEventHandlerAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.Reactor.ConcreteEventHandlerAttribute.ConcreteEventHandlerAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.Reactor.ConcreteEventHandlerAttribute.EventHandler.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.Posa2.Reactor.ConcreteEventHandlerAttribute.EventHandler.init -> void
+Reefact.LivingDocumentation.Attributes.Posa2.Reactor.EventHandlerAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.Reactor.EventHandlerAttribute.EventHandlerAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.Reactor.EventHandlerAttribute.Reactor.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.Posa2.Reactor.EventHandlerAttribute.Reactor.init -> void
+Reefact.LivingDocumentation.Attributes.Posa2.Reactor.HandleAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.Reactor.HandleAttribute.HandleAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.Reactor.HandleAttribute.Reactor.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.Posa2.Reactor.HandleAttribute.Reactor.init -> void
+Reefact.LivingDocumentation.Attributes.Posa2.Reactor.ReactorAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.Reactor.ReactorAttribute.ReactorAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.Reactor.Role
+Reefact.LivingDocumentation.Attributes.Posa2.Reactor.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.Reactor.SynchronousEventDemultiplexerAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.Reactor.SynchronousEventDemultiplexerAttribute.Reactor.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.Posa2.Reactor.SynchronousEventDemultiplexerAttribute.Reactor.init -> void
+Reefact.LivingDocumentation.Attributes.Posa2.Reactor.SynchronousEventDemultiplexerAttribute.SynchronousEventDemultiplexerAttribute() -> void
 Reefact.LivingDocumentation.Attributes.Posa2.ScopedLocking
 Reefact.LivingDocumentation.Attributes.Posa2.ScopedLocking.GuardAttribute
 Reefact.LivingDocumentation.Attributes.Posa2.ScopedLocking.GuardAttribute.GuardAttribute() -> void
