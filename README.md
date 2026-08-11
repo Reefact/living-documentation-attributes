@@ -42,10 +42,10 @@ architecture" from a claim into something a build can check.
 | `XUnitTestPatterns` | 62 | complete | Meszaros — *xUnit Test Patterns*, 2007 |
 | `MicroservicesPatterns` | 41 | in progress | Richardson — *Microservices Patterns*, 2018 |
 | `Posa2` | 17 | complete | Schmidt, Stal, Rohnert & Buschmann — *Pattern-Oriented Software Architecture, Volume 2*, 2000 |
-| `DependencyInjection` | 2 | in progress | van Deursen & Seemann — *Dependency Injection Principles, Practices, and Patterns*, 2019 |
+| `DependencyInjection` | 3 | in progress | van Deursen & Seemann — *Dependency Injection Principles, Practices, and Patterns*, 2019 |
 | `Idioms` | 2 | open-ended | patterns with a source but no catalog of their own — each entry names its own |
 
-**334 patterns, 609 roles** today, and the catalog is meant to grow by an order of
+**335 patterns, 610 roles** today, and the catalog is meant to grow by an order of
 magnitude. *Complete* means every pattern of the work is either held or named in
 [the exclusion tables](catalog/README.md#patterns-deliberately-left-out) with the reason it
 cannot be annotated — so in those seven, a missing pattern is a defect rather than work in

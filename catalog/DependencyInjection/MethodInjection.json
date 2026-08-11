@@ -1,0 +1,22 @@
+{
+  "catalog": "DependencyInjection",
+  "name": "MethodInjection",
+  "summary": "Supplies a dependency as a parameter of the method that uses it, so that it may differ from one call to the next.",
+  "reference": {
+    "author": "Steven van Deursen, Mark Seemann",
+    "work": "Dependency Injection Principles, Practices, and Patterns",
+    "year": 2019
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "MethodInjection",
+      "targets": [
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "The method that is handed its dependency by the caller rather than by construction. It asserts that the dependency belongs to the invocation and not to the instance \u2014 so holding on to what arrives here, in a field or a cache, is the one way to get this wrong while the code still compiles.",
+      "links": []
+    }
+  ]
+}
