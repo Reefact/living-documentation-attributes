@@ -1,0 +1,53 @@
+{
+  "catalog": "Posa2",
+  "name": "MonitorObject",
+  "summary": "Serializes concurrent method calls on an object so that only one runs at a time, and lets its methods cooperatively schedule their turns.",
+  "reference": {
+    "author": "Douglas Schmidt, Michael Stal, Hans Rohnert, Frank Buschmann",
+    "work": "Pattern-Oriented Software Architecture, Volume 2",
+    "year": 2000
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "MonitorObject",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The object whose methods are serialized. It has no thread of its own: every method runs in the thread of the client that called it, which is the whole difference from an active object and the reason a long method here blocks a caller rather than a worker.",
+      "links": []
+    },
+    {
+      "name": "SynchronizedMethod",
+      "targets": [
+        "Method",
+        "Property"
+      ],
+      "repeatable": false,
+      "summary": "One of the thread-safe services the monitor exports. Exactly one of them runs inside the monitor at a time, whatever the number of threads calling and whatever the number of such methods \u2014 so the object's throughput is one method, not one per caller.",
+      "links": []
+    },
+    {
+      "name": "MonitorLock",
+      "targets": [
+        "Field",
+        "Property"
+      ],
+      "repeatable": false,
+      "summary": "The lock this monitor object holds of its own, taken as a synchronized method enters and released as it leaves. One monitor object, one lock: sharing a lock between two of them serializes both and neither of them says so.",
+      "links": []
+    },
+    {
+      "name": "MonitorCondition",
+      "targets": [
+        "Field",
+        "Property"
+      ],
+      "repeatable": true,
+      "summary": "What a synchronized method waits on when it cannot make progress, which releases the monitor lock and suspends the caller until another method notifies it. A condition nothing ever notifies is a caller that never returns, and no compiler pairs the two.",
+      "links": []
+    }
+  ]
+}

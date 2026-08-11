@@ -33,6 +33,17 @@ Reefact.LivingDocumentation.Attributes.Posa2.DoubleCheckedLockingOptimization.Mu
 Reefact.LivingDocumentation.Attributes.Posa2.DoubleCheckedLockingOptimization.MutexAttribute.MutexAttribute() -> void
 Reefact.LivingDocumentation.Attributes.Posa2.DoubleCheckedLockingOptimization.Role
 Reefact.LivingDocumentation.Attributes.Posa2.DoubleCheckedLockingOptimization.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.MonitorObject
+Reefact.LivingDocumentation.Attributes.Posa2.MonitorObject.MonitorConditionAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.MonitorObject.MonitorConditionAttribute.MonitorConditionAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.MonitorObject.MonitorLockAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.MonitorObject.MonitorLockAttribute.MonitorLockAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.MonitorObject.MonitorObjectAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.MonitorObject.MonitorObjectAttribute.MonitorObjectAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.MonitorObject.Role
+Reefact.LivingDocumentation.Attributes.Posa2.MonitorObject.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.MonitorObject.SynchronizedMethodAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.MonitorObject.SynchronizedMethodAttribute.SynchronizedMethodAttribute() -> void
 Reefact.LivingDocumentation.Attributes.Posa2.ScopedLocking
 Reefact.LivingDocumentation.Attributes.Posa2.ScopedLocking.GuardAttribute
 Reefact.LivingDocumentation.Attributes.Posa2.ScopedLocking.GuardAttribute.GuardAttribute() -> void
