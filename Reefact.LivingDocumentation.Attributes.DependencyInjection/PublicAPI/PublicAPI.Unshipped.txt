@@ -9,3 +9,12 @@ Reefact.LivingDocumentation.Attributes.DependencyInjection.MethodInjectionAttrib
 Reefact.LivingDocumentation.Attributes.DependencyInjection.MethodInjectionAttribute.MethodInjectionAttribute() -> void
 Reefact.LivingDocumentation.Attributes.DependencyInjection.PropertyInjectionAttribute
 Reefact.LivingDocumentation.Attributes.DependencyInjection.PropertyInjectionAttribute.PropertyInjectionAttribute() -> void
+Reefact.LivingDocumentation.Attributes.DependencyInjection.ServiceLocator
+Reefact.LivingDocumentation.Attributes.DependencyInjection.ServiceLocator.ConsumerAttribute
+Reefact.LivingDocumentation.Attributes.DependencyInjection.ServiceLocator.ConsumerAttribute.ConsumerAttribute() -> void
+Reefact.LivingDocumentation.Attributes.DependencyInjection.ServiceLocator.ConsumerAttribute.ServiceLocator.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.DependencyInjection.ServiceLocator.ConsumerAttribute.ServiceLocator.init -> void
+Reefact.LivingDocumentation.Attributes.DependencyInjection.ServiceLocator.Role
+Reefact.LivingDocumentation.Attributes.DependencyInjection.ServiceLocator.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.DependencyInjection.ServiceLocator.ServiceLocatorAttribute
+Reefact.LivingDocumentation.Attributes.DependencyInjection.ServiceLocator.ServiceLocatorAttribute.ServiceLocatorAttribute() -> void

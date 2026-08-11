@@ -1,0 +1,35 @@
+{
+  "catalog": "DependencyInjection",
+  "name": "ServiceLocator",
+  "summary": "Supplies a dependency by having the consumer ask a registry for it at the moment it is needed, rather than being given it.",
+  "reference": {
+    "author": "Steven van Deursen, Mark Seemann",
+    "work": "Dependency Injection Principles, Practices, and Patterns",
+    "year": 2019
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "ServiceLocator",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The registry a consumer asks. It is not the participant that carries the cost, and a codebase has one of these against many consumers \u2014 annotating it says where the boundary of the pattern is, so a rule can range over everything that touches it.",
+      "links": []
+    },
+    {
+      "name": "Consumer",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "repeatable": false,
+      "summary": "A class that resolves what it needs instead of receiving it, and therefore does not state its preconditions in its contract. Nothing about its constructor says what must be registered for it to work, so a missing registration is a failure at run time and adding a dependency to it is a breaking change that breaks no build.",
+      "links": [
+        "ServiceLocator"
+      ]
+    }
+  ]
+}
