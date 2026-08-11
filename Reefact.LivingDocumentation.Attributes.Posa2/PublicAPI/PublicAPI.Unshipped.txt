@@ -46,6 +46,23 @@ Reefact.LivingDocumentation.Attributes.Posa2.HalfSyncHalfAsync.SynchronousTaskLa
 Reefact.LivingDocumentation.Attributes.Posa2.HalfSyncHalfAsync.SynchronousTaskLayerAttribute.QueueingLayer.get -> System.Type?
 Reefact.LivingDocumentation.Attributes.Posa2.HalfSyncHalfAsync.SynchronousTaskLayerAttribute.QueueingLayer.init -> void
 Reefact.LivingDocumentation.Attributes.Posa2.HalfSyncHalfAsync.SynchronousTaskLayerAttribute.SynchronousTaskLayerAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.LeaderFollowers
+Reefact.LivingDocumentation.Attributes.Posa2.LeaderFollowers.ConcreteEventHandlerAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.LeaderFollowers.ConcreteEventHandlerAttribute.ConcreteEventHandlerAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.LeaderFollowers.ConcreteEventHandlerAttribute.EventHandler.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.Posa2.LeaderFollowers.ConcreteEventHandlerAttribute.EventHandler.init -> void
+Reefact.LivingDocumentation.Attributes.Posa2.LeaderFollowers.EventHandlerAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.LeaderFollowers.EventHandlerAttribute.EventHandlerAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.LeaderFollowers.EventHandlerAttribute.ThreadPool.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.Posa2.LeaderFollowers.EventHandlerAttribute.ThreadPool.init -> void
+Reefact.LivingDocumentation.Attributes.Posa2.LeaderFollowers.HandleSetAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.LeaderFollowers.HandleSetAttribute.HandleSetAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.LeaderFollowers.HandleSetAttribute.ThreadPool.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.Posa2.LeaderFollowers.HandleSetAttribute.ThreadPool.init -> void
+Reefact.LivingDocumentation.Attributes.Posa2.LeaderFollowers.Role
+Reefact.LivingDocumentation.Attributes.Posa2.LeaderFollowers.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.LeaderFollowers.ThreadPoolAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.LeaderFollowers.ThreadPoolAttribute.ThreadPoolAttribute() -> void
 Reefact.LivingDocumentation.Attributes.Posa2.MonitorObject
 Reefact.LivingDocumentation.Attributes.Posa2.MonitorObject.MonitorConditionAttribute
 Reefact.LivingDocumentation.Attributes.Posa2.MonitorObject.MonitorConditionAttribute.MonitorConditionAttribute() -> void
