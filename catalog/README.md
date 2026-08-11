@@ -135,7 +135,7 @@ exists to prevent, applied to catalogues rather than to decisions.
 | `DomainDrivenDesign` | 23 | 45 + 2 | **complete** — with one open question about a possible twenty-fourth entry, below |
 | `MicroservicesPatterns` | 41 | 51 | **read whole** — 41 held, 11 excluded in the tables above, 1 in the held-back section, and around half the work will be excluded ([ADR-0033](../doc/handwritten/for-maintainers/adr/0033-admit-microservices-patterns-as-a-catalogue.md)) |
 | `Posa2` | 17 | 17 | **complete** — all four chapters that hold patterns, admitted by [ADR-0036](../doc/handwritten/for-maintainers/adr/0036-admit-posa2-as-a-catalogue.md) |
-| `DependencyInjection` | 4 | 14 | **in progress** — chapter 4 of the three catalogue sections. Eleven when complete: [ADR-0037](../doc/handwritten/for-maintainers/adr/0037-admit-the-dependency-injection-catalogue.md) refuses chapter 6's three, one on ADR-0011 and two by decision |
+| `DependencyInjection` | 8 | 14 | **in progress** — chapters 4 and 5 of the three catalogue sections. Eleven when complete: [ADR-0037](../doc/handwritten/for-maintainers/adr/0037-admit-the-dependency-injection-catalogue.md) refuses chapter 6's three, one on ADR-0011 and two by decision |
 | `AnalysisPatterns` | 39 | — | **deliberately stopped**, and the only one that is |
 | `Idioms` | 2 | — | **never complete by construction** ([ADR-0013](../doc/handwritten/for-maintainers/adr/0013-shelve-a-pattern-without-a-body-of-work-under-idioms.md)) |
 
@@ -1240,6 +1240,52 @@ against *assembly references* — no module but this one may reference the conta
 the shape of any code. `PropertyInjection`'s is the sharpest of the four: it asserts that a working
 default exists, so a property injection without one is a required dependency that has forgotten to fail,
 and it fails later, on a null reference, far from the declaration that promised otherwise.
+
+### Chapter 5, the anti-patterns, and what the annotation does not do
+
+Eight of eleven. **Four entries, five roles**, and the chapter is complete — Control Freak, Service
+Locator, Ambient Context, Constrained Construction. What is left is §8.3's three lifestyles.
+
+**The samples are the same radio station as chapter 4, and deliberately so.** Chapter 4 showed the
+shapes the station moved *to*; these four are what it has not moved yet — eleven classes that construct
+their own dependencies, four resolve calls inside a plug-in host with no seam to inject through,
+sixty-one call sites on a static clock, and a processor chain loaded by reflection. Nobody writes these
+on purpose. They are what a codebase has before somebody asks the question.
+
+That matters because it is the only use these four entries have. **An anti-pattern annotation is not
+detection**: one that annotates itself is an honest offender, and the one worth catching is the one
+nobody marked. Its use is a **baseline** — the count of what is known and accepted, held by a build at
+*no more than eleven, and never more*, which is the only architecture rule that works on code that
+already exists. Without the annotation the rule cannot be written at all, because nothing distinguishes
+the eleven that were accepted from the twelfth added next Tuesday. It is the same instrument as
+`PublicAPI.Shipped.txt` and RS0016, in the domain's words instead of the compiler's, and
+[ADR-0037](../doc/handwritten/for-maintainers/adr/0037-admit-the-dependency-injection-catalogue.md)
+turns on it: a shape can be counted, and a degree cannot, which is why chapter 6 is out.
+
+**`ServiceLocator` is the only one of the four with two roles**, and the split is the point. A codebase
+has one registry against many consumers. The role on the registry marks the *boundary*, so a rule can
+range over everything that references it; the role on the consumer carries the *cost*, and it is
+Seemann's own: the class does not state its preconditions, so a missing registration fails at run time
+and adding a dependency inside it is a breaking change that breaks no build.
+
+**And the annotation takes no side in a live disagreement.** Fowler named Service Locator as a pattern
+in 2004 and leans toward it for application code — *"I don't see the injector's inversion as providing
+anything compelling"* where the consumer is your own application. Seemann calls it an anti-pattern.
+This catalogue holds Seemann's entry because Seemann's is the work catalogued; Fowler's is absent
+because the 2004 article is not one of the works here, and a reader should know that the index shows one
+side of the argument. What the attribute records either way is a structural fact — *the preconditions
+are not in the contract* — and the verdict belongs to whoever writes the rule.
+
+**`ConstrainedConstruction` is the second use of the `Constructor` target**, as ADR-0037 predicted when
+the kind was added. It sits on the constructor rather than on the loader that constrains it, because the
+constructor is where the constraint lands and where a reader meets the puzzle: a class with an obvious
+dependency that declares none, for a reason three files away.
+
+**One entry has changed classification between the work's own editions.** Seemann's 2010 post says *"My
+book contains a section on the **Ambient Context pattern**"*; the 2019 edition files Ambient Context
+under chapter 5, the anti-patterns. Same author, same shape, different verdict eight years apart. The
+catalogue follows the 2019 edition, and this is the concrete instance of why ADR-0037 names an edition
+rather than a work.
 
 ## Shape of the generated attribute
 
