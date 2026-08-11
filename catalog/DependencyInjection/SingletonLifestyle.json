@@ -1,0 +1,23 @@
+{
+  "catalog": "DependencyInjection",
+  "name": "SingletonLifestyle",
+  "summary": "One instance serves every consumer for the lifetime of the application, created once and never replaced.",
+  "reference": {
+    "author": "Steven van Deursen, Mark Seemann",
+    "work": "Dependency Injection Principles, Practices, and Patterns",
+    "year": 2019
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "SingletonLifestyle",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "repeatable": false,
+      "summary": "A class of which exactly one instance exists. Two things follow and neither is visible in it: it is used concurrently, so it must be thread-safe and hold nothing belonging to one caller; and everything it depends on outlives every consumer, so a shorter-lived dependency reaching it is held long past the life it was given.",
+      "links": []
+    }
+  ]
+}
