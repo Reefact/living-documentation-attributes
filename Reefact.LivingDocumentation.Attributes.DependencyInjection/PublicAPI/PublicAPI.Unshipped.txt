@@ -13,6 +13,8 @@ Reefact.LivingDocumentation.Attributes.DependencyInjection.MethodInjectionAttrib
 Reefact.LivingDocumentation.Attributes.DependencyInjection.MethodInjectionAttribute.MethodInjectionAttribute() -> void
 Reefact.LivingDocumentation.Attributes.DependencyInjection.PropertyInjectionAttribute
 Reefact.LivingDocumentation.Attributes.DependencyInjection.PropertyInjectionAttribute.PropertyInjectionAttribute() -> void
+Reefact.LivingDocumentation.Attributes.DependencyInjection.ScopedLifestyleAttribute
+Reefact.LivingDocumentation.Attributes.DependencyInjection.ScopedLifestyleAttribute.ScopedLifestyleAttribute() -> void
 Reefact.LivingDocumentation.Attributes.DependencyInjection.ServiceLocator
 Reefact.LivingDocumentation.Attributes.DependencyInjection.ServiceLocator.ConsumerAttribute
 Reefact.LivingDocumentation.Attributes.DependencyInjection.ServiceLocator.ConsumerAttribute.ConsumerAttribute() -> void
