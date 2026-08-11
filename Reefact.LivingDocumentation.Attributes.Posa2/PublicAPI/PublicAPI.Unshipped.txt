@@ -114,3 +114,12 @@ Reefact.LivingDocumentation.Attributes.Posa2.ThreadSpecificStorage.ThreadSpecifi
 Reefact.LivingDocumentation.Attributes.Posa2.ThreadSpecificStorage.ThreadSpecificObjectSetAttribute.ThreadSpecificObjectProxy.get -> System.Type?
 Reefact.LivingDocumentation.Attributes.Posa2.ThreadSpecificStorage.ThreadSpecificObjectSetAttribute.ThreadSpecificObjectProxy.init -> void
 Reefact.LivingDocumentation.Attributes.Posa2.ThreadSpecificStorage.ThreadSpecificObjectSetAttribute.ThreadSpecificObjectSetAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.WrapperFacade
+Reefact.LivingDocumentation.Attributes.Posa2.WrapperFacade.FunctionsAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.WrapperFacade.FunctionsAttribute.FunctionsAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.WrapperFacade.FunctionsAttribute.WrapperFacade.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.Posa2.WrapperFacade.FunctionsAttribute.WrapperFacade.init -> void
+Reefact.LivingDocumentation.Attributes.Posa2.WrapperFacade.Role
+Reefact.LivingDocumentation.Attributes.Posa2.WrapperFacade.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.WrapperFacade.WrapperFacadeAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.WrapperFacade.WrapperFacadeAttribute.WrapperFacadeAttribute() -> void

@@ -1,0 +1,34 @@
+{
+  "catalog": "Posa2",
+  "name": "WrapperFacade",
+  "summary": "Encapsulates the functions and data of an existing non-object-oriented API within concise, portable, cohesive class interfaces.",
+  "reference": {
+    "author": "Douglas Schmidt, Michael Stal, Hans Rohnert, Frank Buschmann",
+    "work": "Pattern-Oriented Software Architecture, Volume 2",
+    "year": 2000
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "WrapperFacade",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "repeatable": false,
+      "summary": "The class that encapsulates the low-level functions and the data structures they work on, and forwards its callers' invocations to them. One place holds the platform's quirks, which is what a second platform makes visible.",
+      "links": []
+    },
+    {
+      "name": "Functions",
+      "targets": [
+        "Method"
+      ],
+      "repeatable": false,
+      "summary": "One of the existing low-level functions being wrapped, declared as the platform exposes it. Annotating the declaration says it is meant to be called from the facade and nowhere else: a call from elsewhere is the leak the facade exists to prevent, and it compiles.",
+      "links": [
+        "WrapperFacade"
+      ]
+    }
+  ]
+}
