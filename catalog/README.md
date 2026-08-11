@@ -1,10 +1,10 @@
 # Pattern catalog
 
 The data behind the attributes. One file per pattern, mirroring the layout of
-`Reefact.LivingDocumentation.Attributes.<Catalog>/`, one project per catalogued work:
+`DesignPatternCatalog.<Catalog>/`, one project per catalogued work:
 
 ```
-catalog/GangOfFour/Composite.json  ──generate.py──▶  Reefact.LivingDocumentation.Attributes.GangOfFour/Composite.cs
+catalog/GangOfFour/Composite.json  ──generate.py──▶  DesignPatternCatalog.GangOfFour/Composite.cs
                                                  └─▶  doc/generated/catalog-index.md
 ```
 

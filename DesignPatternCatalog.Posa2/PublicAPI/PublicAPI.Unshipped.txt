@@ -1,0 +1,252 @@
+#nullable enable
+DesignPatternCatalog.Posa2.AcceptorConnector
+DesignPatternCatalog.Posa2.AcceptorConnector.AcceptorAttribute
+DesignPatternCatalog.Posa2.AcceptorConnector.AcceptorAttribute.AcceptorAttribute() -> void
+DesignPatternCatalog.Posa2.AcceptorConnector.AcceptorAttribute.ServiceHandler.get -> System.Type?
+DesignPatternCatalog.Posa2.AcceptorConnector.AcceptorAttribute.ServiceHandler.init -> void
+DesignPatternCatalog.Posa2.AcceptorConnector.ConnectorAttribute
+DesignPatternCatalog.Posa2.AcceptorConnector.ConnectorAttribute.ConnectorAttribute() -> void
+DesignPatternCatalog.Posa2.AcceptorConnector.ConnectorAttribute.ServiceHandler.get -> System.Type?
+DesignPatternCatalog.Posa2.AcceptorConnector.ConnectorAttribute.ServiceHandler.init -> void
+DesignPatternCatalog.Posa2.AcceptorConnector.Role
+DesignPatternCatalog.Posa2.AcceptorConnector.Role.Role() -> void
+DesignPatternCatalog.Posa2.AcceptorConnector.ServiceHandlerAttribute
+DesignPatternCatalog.Posa2.AcceptorConnector.ServiceHandlerAttribute.ServiceHandlerAttribute() -> void
+DesignPatternCatalog.Posa2.AcceptorConnector.TransportEndpointAttribute
+DesignPatternCatalog.Posa2.AcceptorConnector.TransportEndpointAttribute.ServiceHandler.get -> System.Type?
+DesignPatternCatalog.Posa2.AcceptorConnector.TransportEndpointAttribute.ServiceHandler.init -> void
+DesignPatternCatalog.Posa2.AcceptorConnector.TransportEndpointAttribute.TransportEndpointAttribute() -> void
+DesignPatternCatalog.Posa2.ActiveObject
+DesignPatternCatalog.Posa2.ActiveObject.ActivationListAttribute
+DesignPatternCatalog.Posa2.ActiveObject.ActivationListAttribute.ActivationListAttribute() -> void
+DesignPatternCatalog.Posa2.ActiveObject.ActivationListAttribute.Proxy.get -> System.Type?
+DesignPatternCatalog.Posa2.ActiveObject.ActivationListAttribute.Proxy.init -> void
+DesignPatternCatalog.Posa2.ActiveObject.FutureAttribute
+DesignPatternCatalog.Posa2.ActiveObject.FutureAttribute.FutureAttribute() -> void
+DesignPatternCatalog.Posa2.ActiveObject.FutureAttribute.Proxy.get -> System.Type?
+DesignPatternCatalog.Posa2.ActiveObject.FutureAttribute.Proxy.init -> void
+DesignPatternCatalog.Posa2.ActiveObject.MethodRequestAttribute
+DesignPatternCatalog.Posa2.ActiveObject.MethodRequestAttribute.MethodRequestAttribute() -> void
+DesignPatternCatalog.Posa2.ActiveObject.MethodRequestAttribute.Proxy.get -> System.Type?
+DesignPatternCatalog.Posa2.ActiveObject.MethodRequestAttribute.Proxy.init -> void
+DesignPatternCatalog.Posa2.ActiveObject.ProxyAttribute
+DesignPatternCatalog.Posa2.ActiveObject.ProxyAttribute.ProxyAttribute() -> void
+DesignPatternCatalog.Posa2.ActiveObject.Role
+DesignPatternCatalog.Posa2.ActiveObject.Role.Role() -> void
+DesignPatternCatalog.Posa2.ActiveObject.SchedulerAttribute
+DesignPatternCatalog.Posa2.ActiveObject.SchedulerAttribute.Proxy.get -> System.Type?
+DesignPatternCatalog.Posa2.ActiveObject.SchedulerAttribute.Proxy.init -> void
+DesignPatternCatalog.Posa2.ActiveObject.SchedulerAttribute.SchedulerAttribute() -> void
+DesignPatternCatalog.Posa2.ActiveObject.ServantAttribute
+DesignPatternCatalog.Posa2.ActiveObject.ServantAttribute.Proxy.get -> System.Type?
+DesignPatternCatalog.Posa2.ActiveObject.ServantAttribute.Proxy.init -> void
+DesignPatternCatalog.Posa2.ActiveObject.ServantAttribute.ServantAttribute() -> void
+DesignPatternCatalog.Posa2.AsynchronousCompletionToken
+DesignPatternCatalog.Posa2.AsynchronousCompletionToken.AsynchronousCompletionTokenAttribute
+DesignPatternCatalog.Posa2.AsynchronousCompletionToken.AsynchronousCompletionTokenAttribute.AsynchronousCompletionTokenAttribute() -> void
+DesignPatternCatalog.Posa2.AsynchronousCompletionToken.ClientAttribute
+DesignPatternCatalog.Posa2.AsynchronousCompletionToken.ClientAttribute.AsynchronousCompletionToken.get -> System.Type?
+DesignPatternCatalog.Posa2.AsynchronousCompletionToken.ClientAttribute.AsynchronousCompletionToken.init -> void
+DesignPatternCatalog.Posa2.AsynchronousCompletionToken.ClientAttribute.ClientAttribute() -> void
+DesignPatternCatalog.Posa2.AsynchronousCompletionToken.Role
+DesignPatternCatalog.Posa2.AsynchronousCompletionToken.Role.Role() -> void
+DesignPatternCatalog.Posa2.AsynchronousCompletionToken.ServiceAttribute
+DesignPatternCatalog.Posa2.AsynchronousCompletionToken.ServiceAttribute.AsynchronousCompletionToken.get -> System.Type?
+DesignPatternCatalog.Posa2.AsynchronousCompletionToken.ServiceAttribute.AsynchronousCompletionToken.init -> void
+DesignPatternCatalog.Posa2.AsynchronousCompletionToken.ServiceAttribute.ServiceAttribute() -> void
+DesignPatternCatalog.Posa2.ComponentConfigurator
+DesignPatternCatalog.Posa2.ComponentConfigurator.ComponentAttribute
+DesignPatternCatalog.Posa2.ComponentConfigurator.ComponentAttribute.ComponentAttribute() -> void
+DesignPatternCatalog.Posa2.ComponentConfigurator.ComponentConfiguratorAttribute
+DesignPatternCatalog.Posa2.ComponentConfigurator.ComponentConfiguratorAttribute.Component.get -> System.Type?
+DesignPatternCatalog.Posa2.ComponentConfigurator.ComponentConfiguratorAttribute.Component.init -> void
+DesignPatternCatalog.Posa2.ComponentConfigurator.ComponentConfiguratorAttribute.ComponentConfiguratorAttribute() -> void
+DesignPatternCatalog.Posa2.ComponentConfigurator.ComponentRepositoryAttribute
+DesignPatternCatalog.Posa2.ComponentConfigurator.ComponentRepositoryAttribute.Component.get -> System.Type?
+DesignPatternCatalog.Posa2.ComponentConfigurator.ComponentRepositoryAttribute.Component.init -> void
+DesignPatternCatalog.Posa2.ComponentConfigurator.ComponentRepositoryAttribute.ComponentRepositoryAttribute() -> void
+DesignPatternCatalog.Posa2.ComponentConfigurator.ConcreteComponentAttribute
+DesignPatternCatalog.Posa2.ComponentConfigurator.ConcreteComponentAttribute.Component.get -> System.Type?
+DesignPatternCatalog.Posa2.ComponentConfigurator.ConcreteComponentAttribute.Component.init -> void
+DesignPatternCatalog.Posa2.ComponentConfigurator.ConcreteComponentAttribute.ConcreteComponentAttribute() -> void
+DesignPatternCatalog.Posa2.ComponentConfigurator.Role
+DesignPatternCatalog.Posa2.ComponentConfigurator.Role.Role() -> void
+DesignPatternCatalog.Posa2.DoubleCheckedLockingOptimization
+DesignPatternCatalog.Posa2.DoubleCheckedLockingOptimization.FlagAttribute
+DesignPatternCatalog.Posa2.DoubleCheckedLockingOptimization.FlagAttribute.FlagAttribute() -> void
+DesignPatternCatalog.Posa2.DoubleCheckedLockingOptimization.JustOnceCriticalSectionAttribute
+DesignPatternCatalog.Posa2.DoubleCheckedLockingOptimization.JustOnceCriticalSectionAttribute.JustOnceCriticalSectionAttribute() -> void
+DesignPatternCatalog.Posa2.DoubleCheckedLockingOptimization.MutexAttribute
+DesignPatternCatalog.Posa2.DoubleCheckedLockingOptimization.MutexAttribute.MutexAttribute() -> void
+DesignPatternCatalog.Posa2.DoubleCheckedLockingOptimization.Role
+DesignPatternCatalog.Posa2.DoubleCheckedLockingOptimization.Role.Role() -> void
+DesignPatternCatalog.Posa2.ExtensionInterface
+DesignPatternCatalog.Posa2.ExtensionInterface.ComponentAttribute
+DesignPatternCatalog.Posa2.ExtensionInterface.ComponentAttribute.ComponentAttribute() -> void
+DesignPatternCatalog.Posa2.ExtensionInterface.ComponentFactoryAttribute
+DesignPatternCatalog.Posa2.ExtensionInterface.ComponentFactoryAttribute.Component.get -> System.Type?
+DesignPatternCatalog.Posa2.ExtensionInterface.ComponentFactoryAttribute.Component.init -> void
+DesignPatternCatalog.Posa2.ExtensionInterface.ComponentFactoryAttribute.ComponentFactoryAttribute() -> void
+DesignPatternCatalog.Posa2.ExtensionInterface.ExtensionInterfaceAttribute
+DesignPatternCatalog.Posa2.ExtensionInterface.ExtensionInterfaceAttribute.ExtensionInterfaceAttribute() -> void
+DesignPatternCatalog.Posa2.ExtensionInterface.ExtensionInterfaceAttribute.RootInterface.get -> System.Type?
+DesignPatternCatalog.Posa2.ExtensionInterface.ExtensionInterfaceAttribute.RootInterface.init -> void
+DesignPatternCatalog.Posa2.ExtensionInterface.Role
+DesignPatternCatalog.Posa2.ExtensionInterface.Role.Role() -> void
+DesignPatternCatalog.Posa2.ExtensionInterface.RootInterfaceAttribute
+DesignPatternCatalog.Posa2.ExtensionInterface.RootInterfaceAttribute.Component.get -> System.Type?
+DesignPatternCatalog.Posa2.ExtensionInterface.RootInterfaceAttribute.Component.init -> void
+DesignPatternCatalog.Posa2.ExtensionInterface.RootInterfaceAttribute.RootInterfaceAttribute() -> void
+DesignPatternCatalog.Posa2.HalfSyncHalfAsync
+DesignPatternCatalog.Posa2.HalfSyncHalfAsync.AsynchronousTaskLayerAttribute
+DesignPatternCatalog.Posa2.HalfSyncHalfAsync.AsynchronousTaskLayerAttribute.AsynchronousTaskLayerAttribute() -> void
+DesignPatternCatalog.Posa2.HalfSyncHalfAsync.AsynchronousTaskLayerAttribute.QueueingLayer.get -> System.Type?
+DesignPatternCatalog.Posa2.HalfSyncHalfAsync.AsynchronousTaskLayerAttribute.QueueingLayer.init -> void
+DesignPatternCatalog.Posa2.HalfSyncHalfAsync.QueueingLayerAttribute
+DesignPatternCatalog.Posa2.HalfSyncHalfAsync.QueueingLayerAttribute.QueueingLayerAttribute() -> void
+DesignPatternCatalog.Posa2.HalfSyncHalfAsync.Role
+DesignPatternCatalog.Posa2.HalfSyncHalfAsync.Role.Role() -> void
+DesignPatternCatalog.Posa2.HalfSyncHalfAsync.SynchronousTaskLayerAttribute
+DesignPatternCatalog.Posa2.HalfSyncHalfAsync.SynchronousTaskLayerAttribute.QueueingLayer.get -> System.Type?
+DesignPatternCatalog.Posa2.HalfSyncHalfAsync.SynchronousTaskLayerAttribute.QueueingLayer.init -> void
+DesignPatternCatalog.Posa2.HalfSyncHalfAsync.SynchronousTaskLayerAttribute.SynchronousTaskLayerAttribute() -> void
+DesignPatternCatalog.Posa2.Interceptor
+DesignPatternCatalog.Posa2.Interceptor.ConcreteInterceptorAttribute
+DesignPatternCatalog.Posa2.Interceptor.ConcreteInterceptorAttribute.ConcreteInterceptorAttribute() -> void
+DesignPatternCatalog.Posa2.Interceptor.ConcreteInterceptorAttribute.Interceptor.get -> System.Type?
+DesignPatternCatalog.Posa2.Interceptor.ConcreteInterceptorAttribute.Interceptor.init -> void
+DesignPatternCatalog.Posa2.Interceptor.ContextAttribute
+DesignPatternCatalog.Posa2.Interceptor.ContextAttribute.ContextAttribute() -> void
+DesignPatternCatalog.Posa2.Interceptor.ContextAttribute.Interceptor.get -> System.Type?
+DesignPatternCatalog.Posa2.Interceptor.ContextAttribute.Interceptor.init -> void
+DesignPatternCatalog.Posa2.Interceptor.DispatcherAttribute
+DesignPatternCatalog.Posa2.Interceptor.DispatcherAttribute.DispatcherAttribute() -> void
+DesignPatternCatalog.Posa2.Interceptor.DispatcherAttribute.Interceptor.get -> System.Type?
+DesignPatternCatalog.Posa2.Interceptor.DispatcherAttribute.Interceptor.init -> void
+DesignPatternCatalog.Posa2.Interceptor.FrameworkAttribute
+DesignPatternCatalog.Posa2.Interceptor.FrameworkAttribute.FrameworkAttribute() -> void
+DesignPatternCatalog.Posa2.Interceptor.FrameworkAttribute.Interceptor.get -> System.Type?
+DesignPatternCatalog.Posa2.Interceptor.FrameworkAttribute.Interceptor.init -> void
+DesignPatternCatalog.Posa2.Interceptor.InterceptorAttribute
+DesignPatternCatalog.Posa2.Interceptor.InterceptorAttribute.InterceptorAttribute() -> void
+DesignPatternCatalog.Posa2.Interceptor.Role
+DesignPatternCatalog.Posa2.Interceptor.Role.Role() -> void
+DesignPatternCatalog.Posa2.LeaderFollowers
+DesignPatternCatalog.Posa2.LeaderFollowers.ConcreteEventHandlerAttribute
+DesignPatternCatalog.Posa2.LeaderFollowers.ConcreteEventHandlerAttribute.ConcreteEventHandlerAttribute() -> void
+DesignPatternCatalog.Posa2.LeaderFollowers.ConcreteEventHandlerAttribute.EventHandler.get -> System.Type?
+DesignPatternCatalog.Posa2.LeaderFollowers.ConcreteEventHandlerAttribute.EventHandler.init -> void
+DesignPatternCatalog.Posa2.LeaderFollowers.EventHandlerAttribute
+DesignPatternCatalog.Posa2.LeaderFollowers.EventHandlerAttribute.EventHandlerAttribute() -> void
+DesignPatternCatalog.Posa2.LeaderFollowers.EventHandlerAttribute.ThreadPool.get -> System.Type?
+DesignPatternCatalog.Posa2.LeaderFollowers.EventHandlerAttribute.ThreadPool.init -> void
+DesignPatternCatalog.Posa2.LeaderFollowers.HandleSetAttribute
+DesignPatternCatalog.Posa2.LeaderFollowers.HandleSetAttribute.HandleSetAttribute() -> void
+DesignPatternCatalog.Posa2.LeaderFollowers.HandleSetAttribute.ThreadPool.get -> System.Type?
+DesignPatternCatalog.Posa2.LeaderFollowers.HandleSetAttribute.ThreadPool.init -> void
+DesignPatternCatalog.Posa2.LeaderFollowers.Role
+DesignPatternCatalog.Posa2.LeaderFollowers.Role.Role() -> void
+DesignPatternCatalog.Posa2.LeaderFollowers.ThreadPoolAttribute
+DesignPatternCatalog.Posa2.LeaderFollowers.ThreadPoolAttribute.ThreadPoolAttribute() -> void
+DesignPatternCatalog.Posa2.MonitorObject
+DesignPatternCatalog.Posa2.MonitorObject.MonitorConditionAttribute
+DesignPatternCatalog.Posa2.MonitorObject.MonitorConditionAttribute.MonitorConditionAttribute() -> void
+DesignPatternCatalog.Posa2.MonitorObject.MonitorLockAttribute
+DesignPatternCatalog.Posa2.MonitorObject.MonitorLockAttribute.MonitorLockAttribute() -> void
+DesignPatternCatalog.Posa2.MonitorObject.MonitorObjectAttribute
+DesignPatternCatalog.Posa2.MonitorObject.MonitorObjectAttribute.MonitorObjectAttribute() -> void
+DesignPatternCatalog.Posa2.MonitorObject.Role
+DesignPatternCatalog.Posa2.MonitorObject.Role.Role() -> void
+DesignPatternCatalog.Posa2.MonitorObject.SynchronizedMethodAttribute
+DesignPatternCatalog.Posa2.MonitorObject.SynchronizedMethodAttribute.SynchronizedMethodAttribute() -> void
+DesignPatternCatalog.Posa2.Proactor
+DesignPatternCatalog.Posa2.Proactor.AsynchronousOperationAttribute
+DesignPatternCatalog.Posa2.Proactor.AsynchronousOperationAttribute.AsynchronousOperationAttribute() -> void
+DesignPatternCatalog.Posa2.Proactor.AsynchronousOperationAttribute.Proactor.get -> System.Type?
+DesignPatternCatalog.Posa2.Proactor.AsynchronousOperationAttribute.Proactor.init -> void
+DesignPatternCatalog.Posa2.Proactor.AsynchronousOperationProcessorAttribute
+DesignPatternCatalog.Posa2.Proactor.AsynchronousOperationProcessorAttribute.AsynchronousOperationProcessorAttribute() -> void
+DesignPatternCatalog.Posa2.Proactor.AsynchronousOperationProcessorAttribute.Proactor.get -> System.Type?
+DesignPatternCatalog.Posa2.Proactor.AsynchronousOperationProcessorAttribute.Proactor.init -> void
+DesignPatternCatalog.Posa2.Proactor.CompletionHandlerAttribute
+DesignPatternCatalog.Posa2.Proactor.CompletionHandlerAttribute.CompletionHandlerAttribute() -> void
+DesignPatternCatalog.Posa2.Proactor.CompletionHandlerAttribute.Proactor.get -> System.Type?
+DesignPatternCatalog.Posa2.Proactor.CompletionHandlerAttribute.Proactor.init -> void
+DesignPatternCatalog.Posa2.Proactor.ProactiveInitiatorAttribute
+DesignPatternCatalog.Posa2.Proactor.ProactiveInitiatorAttribute.ProactiveInitiatorAttribute() -> void
+DesignPatternCatalog.Posa2.Proactor.ProactiveInitiatorAttribute.Proactor.get -> System.Type?
+DesignPatternCatalog.Posa2.Proactor.ProactiveInitiatorAttribute.Proactor.init -> void
+DesignPatternCatalog.Posa2.Proactor.ProactorAttribute
+DesignPatternCatalog.Posa2.Proactor.ProactorAttribute.ProactorAttribute() -> void
+DesignPatternCatalog.Posa2.Proactor.Role
+DesignPatternCatalog.Posa2.Proactor.Role.Role() -> void
+DesignPatternCatalog.Posa2.Reactor
+DesignPatternCatalog.Posa2.Reactor.ConcreteEventHandlerAttribute
+DesignPatternCatalog.Posa2.Reactor.ConcreteEventHandlerAttribute.ConcreteEventHandlerAttribute() -> void
+DesignPatternCatalog.Posa2.Reactor.ConcreteEventHandlerAttribute.EventHandler.get -> System.Type?
+DesignPatternCatalog.Posa2.Reactor.ConcreteEventHandlerAttribute.EventHandler.init -> void
+DesignPatternCatalog.Posa2.Reactor.EventHandlerAttribute
+DesignPatternCatalog.Posa2.Reactor.EventHandlerAttribute.EventHandlerAttribute() -> void
+DesignPatternCatalog.Posa2.Reactor.EventHandlerAttribute.Reactor.get -> System.Type?
+DesignPatternCatalog.Posa2.Reactor.EventHandlerAttribute.Reactor.init -> void
+DesignPatternCatalog.Posa2.Reactor.HandleAttribute
+DesignPatternCatalog.Posa2.Reactor.HandleAttribute.HandleAttribute() -> void
+DesignPatternCatalog.Posa2.Reactor.HandleAttribute.Reactor.get -> System.Type?
+DesignPatternCatalog.Posa2.Reactor.HandleAttribute.Reactor.init -> void
+DesignPatternCatalog.Posa2.Reactor.ReactorAttribute
+DesignPatternCatalog.Posa2.Reactor.ReactorAttribute.ReactorAttribute() -> void
+DesignPatternCatalog.Posa2.Reactor.Role
+DesignPatternCatalog.Posa2.Reactor.Role.Role() -> void
+DesignPatternCatalog.Posa2.Reactor.SynchronousEventDemultiplexerAttribute
+DesignPatternCatalog.Posa2.Reactor.SynchronousEventDemultiplexerAttribute.Reactor.get -> System.Type?
+DesignPatternCatalog.Posa2.Reactor.SynchronousEventDemultiplexerAttribute.Reactor.init -> void
+DesignPatternCatalog.Posa2.Reactor.SynchronousEventDemultiplexerAttribute.SynchronousEventDemultiplexerAttribute() -> void
+DesignPatternCatalog.Posa2.ScopedLocking
+DesignPatternCatalog.Posa2.ScopedLocking.GuardAttribute
+DesignPatternCatalog.Posa2.ScopedLocking.GuardAttribute.GuardAttribute() -> void
+DesignPatternCatalog.Posa2.ScopedLocking.LockAttribute
+DesignPatternCatalog.Posa2.ScopedLocking.LockAttribute.LockAttribute() -> void
+DesignPatternCatalog.Posa2.ScopedLocking.Role
+DesignPatternCatalog.Posa2.ScopedLocking.Role.Role() -> void
+DesignPatternCatalog.Posa2.StrategizedLocking
+DesignPatternCatalog.Posa2.StrategizedLocking.ComponentAttribute
+DesignPatternCatalog.Posa2.StrategizedLocking.ComponentAttribute.ComponentAttribute() -> void
+DesignPatternCatalog.Posa2.StrategizedLocking.LockingStrategyAttribute
+DesignPatternCatalog.Posa2.StrategizedLocking.LockingStrategyAttribute.LockingStrategyAttribute() -> void
+DesignPatternCatalog.Posa2.StrategizedLocking.Role
+DesignPatternCatalog.Posa2.StrategizedLocking.Role.Role() -> void
+DesignPatternCatalog.Posa2.ThreadSafeInterface
+DesignPatternCatalog.Posa2.ThreadSafeInterface.ComponentAttribute
+DesignPatternCatalog.Posa2.ThreadSafeInterface.ComponentAttribute.ComponentAttribute() -> void
+DesignPatternCatalog.Posa2.ThreadSafeInterface.ImplementationMethodAttribute
+DesignPatternCatalog.Posa2.ThreadSafeInterface.ImplementationMethodAttribute.ImplementationMethodAttribute() -> void
+DesignPatternCatalog.Posa2.ThreadSafeInterface.InterfaceMethodAttribute
+DesignPatternCatalog.Posa2.ThreadSafeInterface.InterfaceMethodAttribute.InterfaceMethodAttribute() -> void
+DesignPatternCatalog.Posa2.ThreadSafeInterface.Role
+DesignPatternCatalog.Posa2.ThreadSafeInterface.Role.Role() -> void
+DesignPatternCatalog.Posa2.ThreadSpecificStorage
+DesignPatternCatalog.Posa2.ThreadSpecificStorage.KeyFactoryAttribute
+DesignPatternCatalog.Posa2.ThreadSpecificStorage.KeyFactoryAttribute.KeyFactoryAttribute() -> void
+DesignPatternCatalog.Posa2.ThreadSpecificStorage.KeyFactoryAttribute.ThreadSpecificObjectProxy.get -> System.Type?
+DesignPatternCatalog.Posa2.ThreadSpecificStorage.KeyFactoryAttribute.ThreadSpecificObjectProxy.init -> void
+DesignPatternCatalog.Posa2.ThreadSpecificStorage.Role
+DesignPatternCatalog.Posa2.ThreadSpecificStorage.Role.Role() -> void
+DesignPatternCatalog.Posa2.ThreadSpecificStorage.ThreadSpecificObjectAttribute
+DesignPatternCatalog.Posa2.ThreadSpecificStorage.ThreadSpecificObjectAttribute.ThreadSpecificObjectAttribute() -> void
+DesignPatternCatalog.Posa2.ThreadSpecificStorage.ThreadSpecificObjectAttribute.ThreadSpecificObjectProxy.get -> System.Type?
+DesignPatternCatalog.Posa2.ThreadSpecificStorage.ThreadSpecificObjectAttribute.ThreadSpecificObjectProxy.init -> void
+DesignPatternCatalog.Posa2.ThreadSpecificStorage.ThreadSpecificObjectProxyAttribute
+DesignPatternCatalog.Posa2.ThreadSpecificStorage.ThreadSpecificObjectProxyAttribute.ThreadSpecificObjectProxyAttribute() -> void
+DesignPatternCatalog.Posa2.ThreadSpecificStorage.ThreadSpecificObjectSetAttribute
+DesignPatternCatalog.Posa2.ThreadSpecificStorage.ThreadSpecificObjectSetAttribute.ThreadSpecificObjectProxy.get -> System.Type?
+DesignPatternCatalog.Posa2.ThreadSpecificStorage.ThreadSpecificObjectSetAttribute.ThreadSpecificObjectProxy.init -> void
+DesignPatternCatalog.Posa2.ThreadSpecificStorage.ThreadSpecificObjectSetAttribute.ThreadSpecificObjectSetAttribute() -> void
+DesignPatternCatalog.Posa2.WrapperFacade
+DesignPatternCatalog.Posa2.WrapperFacade.FunctionsAttribute
+DesignPatternCatalog.Posa2.WrapperFacade.FunctionsAttribute.FunctionsAttribute() -> void
+DesignPatternCatalog.Posa2.WrapperFacade.FunctionsAttribute.WrapperFacade.get -> System.Type?
+DesignPatternCatalog.Posa2.WrapperFacade.FunctionsAttribute.WrapperFacade.init -> void
+DesignPatternCatalog.Posa2.WrapperFacade.Role
+DesignPatternCatalog.Posa2.WrapperFacade.Role.Role() -> void
+DesignPatternCatalog.Posa2.WrapperFacade.WrapperFacadeAttribute
+DesignPatternCatalog.Posa2.WrapperFacade.WrapperFacadeAttribute.WrapperFacadeAttribute() -> void

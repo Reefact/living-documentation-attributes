@@ -52,13 +52,13 @@ jobs:
             10.0.x
 
       - name: Restore
-        run: dotnet restore Reefact.LivingDocumentation.Attributes.sln
+        run: dotnet restore DesignPatternCatalog.sln
 
       # The library multi-targets netstandard2.0 through net8.0, so a change that
       # compiles on the newest target may not compile on the oldest. Building the
       # solution exercises every one of them.
       - name: Build
-        run: dotnet build Reefact.LivingDocumentation.Attributes.sln -c Release --no-restore
+        run: dotnet build DesignPatternCatalog.sln -c Release --no-restore
 
       # Packing is where NuGet checks each package's own metadata — a missing licence, a readme declared and
       # not packed, an empty lib folder are all NU5xxx warnings, which the ratchet promotes to errors here.
@@ -66,7 +66,7 @@ jobs:
       # The whole solution is packed rather than one project: since ADR-0027 there are eight packages, and the
       # tests and samples declare IsPackable=false so they are skipped.
       - name: Pack
-        run: dotnet pack Reefact.LivingDocumentation.Attributes.sln -c Release --no-build
+        run: dotnet pack DesignPatternCatalog.sln -c Release --no-build
 
       # The attributes carry no behaviour, so nothing here tests what code does.
       # What these assert is what every generated attribute must LOOK like — it
@@ -77,7 +77,7 @@ jobs:
       # trip and is invisible in a diff spanning the whole catalog; this is where
       # it shows. Deferred by ADR-0016 and ADR-0018, required by ADR-0019.
       - name: Convention tests
-        run: dotnet test Reefact.LivingDocumentation.Attributes.sln -c Release --no-build
+        run: dotnet test DesignPatternCatalog.sln -c Release --no-build
 
       # The whole catalog reads back through the base attribute alone — the
       # contract of ADR-0004 — which is exactly what the sample project's
@@ -88,7 +88,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          dotnet run --project Reefact.LivingDocumentation.Attributes.Usage -c Release --no-build > inventory.txt
+          dotnet run --project DesignPatternCatalog.Usage -c Release --no-build > inventory.txt
           cat inventory.txt
           # Positive proof, not just exit 0.
           if ! grep -Eq '^[0-9]+ annotations, covering [0-9]+ patterns and [0-9]+ distinct roles\.$' inventory.txt; then

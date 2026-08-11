@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\build\Packaging.props" />
+
+  <!--
+    The meta-package. It holds no code: it exists so that a consumer who wants the whole vocabulary installs
+    one package, and so that the identifier this repository published before ADR-0027 split the catalogues
+    keeps meaning "all of it". PublicSurface.props is deliberately not imported — there is no surface here to
+    baseline, and the seven packages it references each carry their own.
+
+    The assembly it produces is empty. That is accepted rather than worked around with a hand-written nuspec,
+    because a nuspec would be a second description of the package metadata that MSBuild already holds.
+  -->
+
+  <PropertyGroup>
+    <PackageId>DesignPatternCatalog</PackageId>
+
+    <Description>
+      Every catalogue of the living-documentation vocabulary in one package: Design Patterns, Domain-Driven
+      Design, Patterns of Enterprise Application Architecture, Analysis Patterns, Accounting Patterns, and the
+      idioms that have no body of work of their own. Install this to get all of them, or install a single
+      catalogue package to carry only the vocabulary you read.
+    </Description>
+
+    <PackageTags>design-patterns;living-documentation;architecture;attributes;annotations;documentation;archunit;ddd;gang-of-four;enterprise;analysis-patterns;accounting</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DesignPatternCatalog.Core\DesignPatternCatalog.Core.csproj" />
+    <ProjectReference Include="..\DesignPatternCatalog.GangOfFour\DesignPatternCatalog.GangOfFour.csproj" />
+    <ProjectReference Include="..\DesignPatternCatalog.DomainDrivenDesign\DesignPatternCatalog.DomainDrivenDesign.csproj" />
+    <ProjectReference Include="..\DesignPatternCatalog.EnterpriseApplicationArchitecture\DesignPatternCatalog.EnterpriseApplicationArchitecture.csproj" />
+    <ProjectReference Include="..\DesignPatternCatalog.AnalysisPatterns\DesignPatternCatalog.AnalysisPatterns.csproj" />
+    <ProjectReference Include="..\DesignPatternCatalog.AccountingPatterns\DesignPatternCatalog.AccountingPatterns.csproj" />
+    <ProjectReference Include="..\DesignPatternCatalog.XUnitTestPatterns\DesignPatternCatalog.XUnitTestPatterns.csproj" />
+    <ProjectReference Include="..\DesignPatternCatalog.MicroservicesPatterns\DesignPatternCatalog.MicroservicesPatterns.csproj" />
+    <ProjectReference Include="..\DesignPatternCatalog.Posa2\DesignPatternCatalog.Posa2.csproj" />
+    <ProjectReference Include="..\DesignPatternCatalog.DependencyInjection\DesignPatternCatalog.DependencyInjection.csproj" />
+    <ProjectReference Include="..\DesignPatternCatalog.EnterpriseIntegration\DesignPatternCatalog.EnterpriseIntegration.csproj" />
+    <ProjectReference Include="..\DesignPatternCatalog.Idioms\DesignPatternCatalog.Idioms.csproj" />
+  </ItemGroup>
+
+
+</Project>

@@ -4,7 +4,7 @@
     python3 catalog/generate.py
 
 Reads every catalog/<Catalog>/<Pattern>.json and rewrites the matching
-Reefact.LivingDocumentation.Attributes.<Catalog>/<Pattern>.cs. The generated
+DesignPatternCatalog.<Catalog>/<Pattern>.cs. The generated
 sources are committed and are what ships; this script only keeps them uniform.
 A pattern whose single role carries the pattern's own name is emitted as a flat
 attribute, every other pattern as a static container holding one attribute per
@@ -19,7 +19,7 @@ import textwrap
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
 INDEX_DIR = os.path.join(REPO, "doc", "generated")
-NS = "Reefact.LivingDocumentation.Attributes"
+NS = "DesignPatternCatalog"
 
 CATALOG_LABEL = {
     "GangOfFour": "Gang of Four",

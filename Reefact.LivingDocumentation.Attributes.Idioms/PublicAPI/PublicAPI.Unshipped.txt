@@ -1,5 +1,0 @@
-#nullable enable
-Reefact.LivingDocumentation.Attributes.Idioms.NullObjectAttribute
-Reefact.LivingDocumentation.Attributes.Idioms.NullObjectAttribute.NullObjectAttribute() -> void
-Reefact.LivingDocumentation.Attributes.Idioms.ObjectMotherAttribute
-Reefact.LivingDocumentation.Attributes.Idioms.ObjectMotherAttribute.ObjectMotherAttribute() -> void

@@ -1,0 +1,343 @@
+#nullable enable
+DesignPatternCatalog.GangOfFour.AbstractFactory
+DesignPatternCatalog.GangOfFour.AbstractFactory.AbstractFactoryAttribute
+DesignPatternCatalog.GangOfFour.AbstractFactory.AbstractFactoryAttribute.AbstractFactoryAttribute() -> void
+DesignPatternCatalog.GangOfFour.AbstractFactory.AbstractProductAttribute
+DesignPatternCatalog.GangOfFour.AbstractFactory.AbstractProductAttribute.AbstractProductAttribute() -> void
+DesignPatternCatalog.GangOfFour.AbstractFactory.ConcreteFactoryAttribute
+DesignPatternCatalog.GangOfFour.AbstractFactory.ConcreteFactoryAttribute.AbstractFactory.get -> System.Type?
+DesignPatternCatalog.GangOfFour.AbstractFactory.ConcreteFactoryAttribute.AbstractFactory.init -> void
+DesignPatternCatalog.GangOfFour.AbstractFactory.ConcreteFactoryAttribute.ConcreteFactoryAttribute() -> void
+DesignPatternCatalog.GangOfFour.AbstractFactory.ConcreteProductAttribute
+DesignPatternCatalog.GangOfFour.AbstractFactory.ConcreteProductAttribute.AbstractProduct.get -> System.Type?
+DesignPatternCatalog.GangOfFour.AbstractFactory.ConcreteProductAttribute.AbstractProduct.init -> void
+DesignPatternCatalog.GangOfFour.AbstractFactory.ConcreteProductAttribute.ConcreteProductAttribute() -> void
+DesignPatternCatalog.GangOfFour.AbstractFactory.Role
+DesignPatternCatalog.GangOfFour.AbstractFactory.Role.Role() -> void
+DesignPatternCatalog.GangOfFour.Adapter
+DesignPatternCatalog.GangOfFour.Adapter.AdapteeAttribute
+DesignPatternCatalog.GangOfFour.Adapter.AdapteeAttribute.AdapteeAttribute() -> void
+DesignPatternCatalog.GangOfFour.Adapter.AdapterAttribute
+DesignPatternCatalog.GangOfFour.Adapter.AdapterAttribute.Adaptee.get -> System.Type?
+DesignPatternCatalog.GangOfFour.Adapter.AdapterAttribute.Adaptee.init -> void
+DesignPatternCatalog.GangOfFour.Adapter.AdapterAttribute.AdapterAttribute() -> void
+DesignPatternCatalog.GangOfFour.Adapter.AdapterAttribute.Target.get -> System.Type?
+DesignPatternCatalog.GangOfFour.Adapter.AdapterAttribute.Target.init -> void
+DesignPatternCatalog.GangOfFour.Adapter.Role
+DesignPatternCatalog.GangOfFour.Adapter.Role.Role() -> void
+DesignPatternCatalog.GangOfFour.Adapter.TargetAttribute
+DesignPatternCatalog.GangOfFour.Adapter.TargetAttribute.TargetAttribute() -> void
+DesignPatternCatalog.GangOfFour.Bridge
+DesignPatternCatalog.GangOfFour.Bridge.AbstractionAttribute
+DesignPatternCatalog.GangOfFour.Bridge.AbstractionAttribute.AbstractionAttribute() -> void
+DesignPatternCatalog.GangOfFour.Bridge.AbstractionAttribute.Implementor.get -> System.Type?
+DesignPatternCatalog.GangOfFour.Bridge.AbstractionAttribute.Implementor.init -> void
+DesignPatternCatalog.GangOfFour.Bridge.ConcreteImplementorAttribute
+DesignPatternCatalog.GangOfFour.Bridge.ConcreteImplementorAttribute.ConcreteImplementorAttribute() -> void
+DesignPatternCatalog.GangOfFour.Bridge.ConcreteImplementorAttribute.Implementor.get -> System.Type?
+DesignPatternCatalog.GangOfFour.Bridge.ConcreteImplementorAttribute.Implementor.init -> void
+DesignPatternCatalog.GangOfFour.Bridge.ImplementorAttribute
+DesignPatternCatalog.GangOfFour.Bridge.ImplementorAttribute.ImplementorAttribute() -> void
+DesignPatternCatalog.GangOfFour.Bridge.RefinedAbstractionAttribute
+DesignPatternCatalog.GangOfFour.Bridge.RefinedAbstractionAttribute.Abstraction.get -> System.Type?
+DesignPatternCatalog.GangOfFour.Bridge.RefinedAbstractionAttribute.Abstraction.init -> void
+DesignPatternCatalog.GangOfFour.Bridge.RefinedAbstractionAttribute.RefinedAbstractionAttribute() -> void
+DesignPatternCatalog.GangOfFour.Bridge.Role
+DesignPatternCatalog.GangOfFour.Bridge.Role.Role() -> void
+DesignPatternCatalog.GangOfFour.Builder
+DesignPatternCatalog.GangOfFour.Builder.BuilderAttribute
+DesignPatternCatalog.GangOfFour.Builder.BuilderAttribute.BuilderAttribute() -> void
+DesignPatternCatalog.GangOfFour.Builder.ConcreteBuilderAttribute
+DesignPatternCatalog.GangOfFour.Builder.ConcreteBuilderAttribute.Builder.get -> System.Type?
+DesignPatternCatalog.GangOfFour.Builder.ConcreteBuilderAttribute.Builder.init -> void
+DesignPatternCatalog.GangOfFour.Builder.ConcreteBuilderAttribute.ConcreteBuilderAttribute() -> void
+DesignPatternCatalog.GangOfFour.Builder.ConcreteBuilderAttribute.Product.get -> System.Type?
+DesignPatternCatalog.GangOfFour.Builder.ConcreteBuilderAttribute.Product.init -> void
+DesignPatternCatalog.GangOfFour.Builder.DirectorAttribute
+DesignPatternCatalog.GangOfFour.Builder.DirectorAttribute.Builder.get -> System.Type?
+DesignPatternCatalog.GangOfFour.Builder.DirectorAttribute.Builder.init -> void
+DesignPatternCatalog.GangOfFour.Builder.DirectorAttribute.DirectorAttribute() -> void
+DesignPatternCatalog.GangOfFour.Builder.ProductAttribute
+DesignPatternCatalog.GangOfFour.Builder.ProductAttribute.ProductAttribute() -> void
+DesignPatternCatalog.GangOfFour.Builder.Role
+DesignPatternCatalog.GangOfFour.Builder.Role.Role() -> void
+DesignPatternCatalog.GangOfFour.ChainOfResponsibility
+DesignPatternCatalog.GangOfFour.ChainOfResponsibility.ConcreteHandlerAttribute
+DesignPatternCatalog.GangOfFour.ChainOfResponsibility.ConcreteHandlerAttribute.ConcreteHandlerAttribute() -> void
+DesignPatternCatalog.GangOfFour.ChainOfResponsibility.ConcreteHandlerAttribute.Handler.get -> System.Type?
+DesignPatternCatalog.GangOfFour.ChainOfResponsibility.ConcreteHandlerAttribute.Handler.init -> void
+DesignPatternCatalog.GangOfFour.ChainOfResponsibility.HandlerAttribute
+DesignPatternCatalog.GangOfFour.ChainOfResponsibility.HandlerAttribute.HandlerAttribute() -> void
+DesignPatternCatalog.GangOfFour.ChainOfResponsibility.Role
+DesignPatternCatalog.GangOfFour.ChainOfResponsibility.Role.Role() -> void
+DesignPatternCatalog.GangOfFour.Command
+DesignPatternCatalog.GangOfFour.Command.CommandAttribute
+DesignPatternCatalog.GangOfFour.Command.CommandAttribute.CommandAttribute() -> void
+DesignPatternCatalog.GangOfFour.Command.ConcreteCommandAttribute
+DesignPatternCatalog.GangOfFour.Command.ConcreteCommandAttribute.Command.get -> System.Type?
+DesignPatternCatalog.GangOfFour.Command.ConcreteCommandAttribute.Command.init -> void
+DesignPatternCatalog.GangOfFour.Command.ConcreteCommandAttribute.ConcreteCommandAttribute() -> void
+DesignPatternCatalog.GangOfFour.Command.ConcreteCommandAttribute.Receiver.get -> System.Type?
+DesignPatternCatalog.GangOfFour.Command.ConcreteCommandAttribute.Receiver.init -> void
+DesignPatternCatalog.GangOfFour.Command.ExecuteMethodAttribute
+DesignPatternCatalog.GangOfFour.Command.ExecuteMethodAttribute.ExecuteMethodAttribute() -> void
+DesignPatternCatalog.GangOfFour.Command.InvokerAttribute
+DesignPatternCatalog.GangOfFour.Command.InvokerAttribute.Command.get -> System.Type?
+DesignPatternCatalog.GangOfFour.Command.InvokerAttribute.Command.init -> void
+DesignPatternCatalog.GangOfFour.Command.InvokerAttribute.InvokerAttribute() -> void
+DesignPatternCatalog.GangOfFour.Command.ReceiverAttribute
+DesignPatternCatalog.GangOfFour.Command.ReceiverAttribute.ReceiverAttribute() -> void
+DesignPatternCatalog.GangOfFour.Command.Role
+DesignPatternCatalog.GangOfFour.Command.Role.Role() -> void
+DesignPatternCatalog.GangOfFour.Composite
+DesignPatternCatalog.GangOfFour.Composite.ComponentAttribute
+DesignPatternCatalog.GangOfFour.Composite.ComponentAttribute.ComponentAttribute() -> void
+DesignPatternCatalog.GangOfFour.Composite.CompositeAttribute
+DesignPatternCatalog.GangOfFour.Composite.CompositeAttribute.Component.get -> System.Type?
+DesignPatternCatalog.GangOfFour.Composite.CompositeAttribute.Component.init -> void
+DesignPatternCatalog.GangOfFour.Composite.CompositeAttribute.CompositeAttribute() -> void
+DesignPatternCatalog.GangOfFour.Composite.LeafAttribute
+DesignPatternCatalog.GangOfFour.Composite.LeafAttribute.Component.get -> System.Type?
+DesignPatternCatalog.GangOfFour.Composite.LeafAttribute.Component.init -> void
+DesignPatternCatalog.GangOfFour.Composite.LeafAttribute.LeafAttribute() -> void
+DesignPatternCatalog.GangOfFour.Composite.Role
+DesignPatternCatalog.GangOfFour.Composite.Role.Role() -> void
+DesignPatternCatalog.GangOfFour.Decorator
+DesignPatternCatalog.GangOfFour.Decorator.ComponentAttribute
+DesignPatternCatalog.GangOfFour.Decorator.ComponentAttribute.ComponentAttribute() -> void
+DesignPatternCatalog.GangOfFour.Decorator.ConcreteComponentAttribute
+DesignPatternCatalog.GangOfFour.Decorator.ConcreteComponentAttribute.Component.get -> System.Type?
+DesignPatternCatalog.GangOfFour.Decorator.ConcreteComponentAttribute.Component.init -> void
+DesignPatternCatalog.GangOfFour.Decorator.ConcreteComponentAttribute.ConcreteComponentAttribute() -> void
+DesignPatternCatalog.GangOfFour.Decorator.ConcreteDecoratorAttribute
+DesignPatternCatalog.GangOfFour.Decorator.ConcreteDecoratorAttribute.ConcreteDecoratorAttribute() -> void
+DesignPatternCatalog.GangOfFour.Decorator.ConcreteDecoratorAttribute.Decorator.get -> System.Type?
+DesignPatternCatalog.GangOfFour.Decorator.ConcreteDecoratorAttribute.Decorator.init -> void
+DesignPatternCatalog.GangOfFour.Decorator.DecoratorAttribute
+DesignPatternCatalog.GangOfFour.Decorator.DecoratorAttribute.Component.get -> System.Type?
+DesignPatternCatalog.GangOfFour.Decorator.DecoratorAttribute.Component.init -> void
+DesignPatternCatalog.GangOfFour.Decorator.DecoratorAttribute.DecoratorAttribute() -> void
+DesignPatternCatalog.GangOfFour.Decorator.Role
+DesignPatternCatalog.GangOfFour.Decorator.Role.Role() -> void
+DesignPatternCatalog.GangOfFour.Facade
+DesignPatternCatalog.GangOfFour.Facade.FacadeAttribute
+DesignPatternCatalog.GangOfFour.Facade.FacadeAttribute.FacadeAttribute() -> void
+DesignPatternCatalog.GangOfFour.Facade.Role
+DesignPatternCatalog.GangOfFour.Facade.Role.Role() -> void
+DesignPatternCatalog.GangOfFour.Facade.SubsystemAttribute
+DesignPatternCatalog.GangOfFour.Facade.SubsystemAttribute.SubsystemAttribute() -> void
+DesignPatternCatalog.GangOfFour.FactoryMethod
+DesignPatternCatalog.GangOfFour.FactoryMethod.ConcreteCreatorAttribute
+DesignPatternCatalog.GangOfFour.FactoryMethod.ConcreteCreatorAttribute.ConcreteCreatorAttribute() -> void
+DesignPatternCatalog.GangOfFour.FactoryMethod.ConcreteCreatorAttribute.ConcreteProduct.get -> System.Type?
+DesignPatternCatalog.GangOfFour.FactoryMethod.ConcreteCreatorAttribute.ConcreteProduct.init -> void
+DesignPatternCatalog.GangOfFour.FactoryMethod.ConcreteCreatorAttribute.Creator.get -> System.Type?
+DesignPatternCatalog.GangOfFour.FactoryMethod.ConcreteCreatorAttribute.Creator.init -> void
+DesignPatternCatalog.GangOfFour.FactoryMethod.ConcreteProductAttribute
+DesignPatternCatalog.GangOfFour.FactoryMethod.ConcreteProductAttribute.ConcreteProductAttribute() -> void
+DesignPatternCatalog.GangOfFour.FactoryMethod.ConcreteProductAttribute.Product.get -> System.Type?
+DesignPatternCatalog.GangOfFour.FactoryMethod.ConcreteProductAttribute.Product.init -> void
+DesignPatternCatalog.GangOfFour.FactoryMethod.CreatorAttribute
+DesignPatternCatalog.GangOfFour.FactoryMethod.CreatorAttribute.CreatorAttribute() -> void
+DesignPatternCatalog.GangOfFour.FactoryMethod.FactoryMethodAttribute
+DesignPatternCatalog.GangOfFour.FactoryMethod.FactoryMethodAttribute.FactoryMethodAttribute() -> void
+DesignPatternCatalog.GangOfFour.FactoryMethod.ProductAttribute
+DesignPatternCatalog.GangOfFour.FactoryMethod.ProductAttribute.ProductAttribute() -> void
+DesignPatternCatalog.GangOfFour.FactoryMethod.Role
+DesignPatternCatalog.GangOfFour.FactoryMethod.Role.Role() -> void
+DesignPatternCatalog.GangOfFour.Flyweight
+DesignPatternCatalog.GangOfFour.Flyweight.ConcreteFlyweightAttribute
+DesignPatternCatalog.GangOfFour.Flyweight.ConcreteFlyweightAttribute.ConcreteFlyweightAttribute() -> void
+DesignPatternCatalog.GangOfFour.Flyweight.ConcreteFlyweightAttribute.Flyweight.get -> System.Type?
+DesignPatternCatalog.GangOfFour.Flyweight.ConcreteFlyweightAttribute.Flyweight.init -> void
+DesignPatternCatalog.GangOfFour.Flyweight.FlyweightAttribute
+DesignPatternCatalog.GangOfFour.Flyweight.FlyweightAttribute.FlyweightAttribute() -> void
+DesignPatternCatalog.GangOfFour.Flyweight.FlyweightFactoryAttribute
+DesignPatternCatalog.GangOfFour.Flyweight.FlyweightFactoryAttribute.Flyweight.get -> System.Type?
+DesignPatternCatalog.GangOfFour.Flyweight.FlyweightFactoryAttribute.Flyweight.init -> void
+DesignPatternCatalog.GangOfFour.Flyweight.FlyweightFactoryAttribute.FlyweightFactoryAttribute() -> void
+DesignPatternCatalog.GangOfFour.Flyweight.Role
+DesignPatternCatalog.GangOfFour.Flyweight.Role.Role() -> void
+DesignPatternCatalog.GangOfFour.Flyweight.UnsharedConcreteFlyweightAttribute
+DesignPatternCatalog.GangOfFour.Flyweight.UnsharedConcreteFlyweightAttribute.Flyweight.get -> System.Type?
+DesignPatternCatalog.GangOfFour.Flyweight.UnsharedConcreteFlyweightAttribute.Flyweight.init -> void
+DesignPatternCatalog.GangOfFour.Flyweight.UnsharedConcreteFlyweightAttribute.UnsharedConcreteFlyweightAttribute() -> void
+DesignPatternCatalog.GangOfFour.Interpreter
+DesignPatternCatalog.GangOfFour.Interpreter.AbstractExpressionAttribute
+DesignPatternCatalog.GangOfFour.Interpreter.AbstractExpressionAttribute.AbstractExpressionAttribute() -> void
+DesignPatternCatalog.GangOfFour.Interpreter.ContextAttribute
+DesignPatternCatalog.GangOfFour.Interpreter.ContextAttribute.ContextAttribute() -> void
+DesignPatternCatalog.GangOfFour.Interpreter.NonterminalExpressionAttribute
+DesignPatternCatalog.GangOfFour.Interpreter.NonterminalExpressionAttribute.AbstractExpression.get -> System.Type?
+DesignPatternCatalog.GangOfFour.Interpreter.NonterminalExpressionAttribute.AbstractExpression.init -> void
+DesignPatternCatalog.GangOfFour.Interpreter.NonterminalExpressionAttribute.NonterminalExpressionAttribute() -> void
+DesignPatternCatalog.GangOfFour.Interpreter.Role
+DesignPatternCatalog.GangOfFour.Interpreter.Role.Role() -> void
+DesignPatternCatalog.GangOfFour.Interpreter.TerminalExpressionAttribute
+DesignPatternCatalog.GangOfFour.Interpreter.TerminalExpressionAttribute.AbstractExpression.get -> System.Type?
+DesignPatternCatalog.GangOfFour.Interpreter.TerminalExpressionAttribute.AbstractExpression.init -> void
+DesignPatternCatalog.GangOfFour.Interpreter.TerminalExpressionAttribute.TerminalExpressionAttribute() -> void
+DesignPatternCatalog.GangOfFour.Iterator
+DesignPatternCatalog.GangOfFour.Iterator.AggregateAttribute
+DesignPatternCatalog.GangOfFour.Iterator.AggregateAttribute.AggregateAttribute() -> void
+DesignPatternCatalog.GangOfFour.Iterator.ConcreteAggregateAttribute
+DesignPatternCatalog.GangOfFour.Iterator.ConcreteAggregateAttribute.Aggregate.get -> System.Type?
+DesignPatternCatalog.GangOfFour.Iterator.ConcreteAggregateAttribute.Aggregate.init -> void
+DesignPatternCatalog.GangOfFour.Iterator.ConcreteAggregateAttribute.ConcreteAggregateAttribute() -> void
+DesignPatternCatalog.GangOfFour.Iterator.ConcreteIteratorAttribute
+DesignPatternCatalog.GangOfFour.Iterator.ConcreteIteratorAttribute.ConcreteAggregate.get -> System.Type?
+DesignPatternCatalog.GangOfFour.Iterator.ConcreteIteratorAttribute.ConcreteAggregate.init -> void
+DesignPatternCatalog.GangOfFour.Iterator.ConcreteIteratorAttribute.ConcreteIteratorAttribute() -> void
+DesignPatternCatalog.GangOfFour.Iterator.ConcreteIteratorAttribute.Iterator.get -> System.Type?
+DesignPatternCatalog.GangOfFour.Iterator.ConcreteIteratorAttribute.Iterator.init -> void
+DesignPatternCatalog.GangOfFour.Iterator.IteratorAttribute
+DesignPatternCatalog.GangOfFour.Iterator.IteratorAttribute.IteratorAttribute() -> void
+DesignPatternCatalog.GangOfFour.Iterator.Role
+DesignPatternCatalog.GangOfFour.Iterator.Role.Role() -> void
+DesignPatternCatalog.GangOfFour.Mediator
+DesignPatternCatalog.GangOfFour.Mediator.ColleagueAttribute
+DesignPatternCatalog.GangOfFour.Mediator.ColleagueAttribute.ColleagueAttribute() -> void
+DesignPatternCatalog.GangOfFour.Mediator.ColleagueAttribute.Mediator.get -> System.Type?
+DesignPatternCatalog.GangOfFour.Mediator.ColleagueAttribute.Mediator.init -> void
+DesignPatternCatalog.GangOfFour.Mediator.ConcreteColleagueAttribute
+DesignPatternCatalog.GangOfFour.Mediator.ConcreteColleagueAttribute.Colleague.get -> System.Type?
+DesignPatternCatalog.GangOfFour.Mediator.ConcreteColleagueAttribute.Colleague.init -> void
+DesignPatternCatalog.GangOfFour.Mediator.ConcreteColleagueAttribute.ConcreteColleagueAttribute() -> void
+DesignPatternCatalog.GangOfFour.Mediator.ConcreteMediatorAttribute
+DesignPatternCatalog.GangOfFour.Mediator.ConcreteMediatorAttribute.ConcreteMediatorAttribute() -> void
+DesignPatternCatalog.GangOfFour.Mediator.ConcreteMediatorAttribute.Mediator.get -> System.Type?
+DesignPatternCatalog.GangOfFour.Mediator.ConcreteMediatorAttribute.Mediator.init -> void
+DesignPatternCatalog.GangOfFour.Mediator.MediatorAttribute
+DesignPatternCatalog.GangOfFour.Mediator.MediatorAttribute.MediatorAttribute() -> void
+DesignPatternCatalog.GangOfFour.Mediator.Role
+DesignPatternCatalog.GangOfFour.Mediator.Role.Role() -> void
+DesignPatternCatalog.GangOfFour.Memento
+DesignPatternCatalog.GangOfFour.Memento.CaretakerAttribute
+DesignPatternCatalog.GangOfFour.Memento.CaretakerAttribute.CaretakerAttribute() -> void
+DesignPatternCatalog.GangOfFour.Memento.CaretakerAttribute.Memento.get -> System.Type?
+DesignPatternCatalog.GangOfFour.Memento.CaretakerAttribute.Memento.init -> void
+DesignPatternCatalog.GangOfFour.Memento.MementoAttribute
+DesignPatternCatalog.GangOfFour.Memento.MementoAttribute.MementoAttribute() -> void
+DesignPatternCatalog.GangOfFour.Memento.OriginatorAttribute
+DesignPatternCatalog.GangOfFour.Memento.OriginatorAttribute.Memento.get -> System.Type?
+DesignPatternCatalog.GangOfFour.Memento.OriginatorAttribute.Memento.init -> void
+DesignPatternCatalog.GangOfFour.Memento.OriginatorAttribute.OriginatorAttribute() -> void
+DesignPatternCatalog.GangOfFour.Memento.Role
+DesignPatternCatalog.GangOfFour.Memento.Role.Role() -> void
+DesignPatternCatalog.GangOfFour.Observer
+DesignPatternCatalog.GangOfFour.Observer.ConcreteObserverAttribute
+DesignPatternCatalog.GangOfFour.Observer.ConcreteObserverAttribute.ConcreteObserverAttribute() -> void
+DesignPatternCatalog.GangOfFour.Observer.ConcreteObserverAttribute.ConcreteSubject.get -> System.Type?
+DesignPatternCatalog.GangOfFour.Observer.ConcreteObserverAttribute.ConcreteSubject.init -> void
+DesignPatternCatalog.GangOfFour.Observer.ConcreteObserverAttribute.Observer.get -> System.Type?
+DesignPatternCatalog.GangOfFour.Observer.ConcreteObserverAttribute.Observer.init -> void
+DesignPatternCatalog.GangOfFour.Observer.ConcreteSubjectAttribute
+DesignPatternCatalog.GangOfFour.Observer.ConcreteSubjectAttribute.ConcreteSubjectAttribute() -> void
+DesignPatternCatalog.GangOfFour.Observer.ConcreteSubjectAttribute.Subject.get -> System.Type?
+DesignPatternCatalog.GangOfFour.Observer.ConcreteSubjectAttribute.Subject.init -> void
+DesignPatternCatalog.GangOfFour.Observer.NotifyMethodAttribute
+DesignPatternCatalog.GangOfFour.Observer.NotifyMethodAttribute.NotifyMethodAttribute() -> void
+DesignPatternCatalog.GangOfFour.Observer.ObserverAttribute
+DesignPatternCatalog.GangOfFour.Observer.ObserverAttribute.ObserverAttribute() -> void
+DesignPatternCatalog.GangOfFour.Observer.Role
+DesignPatternCatalog.GangOfFour.Observer.Role.Role() -> void
+DesignPatternCatalog.GangOfFour.Observer.SubjectAttribute
+DesignPatternCatalog.GangOfFour.Observer.SubjectAttribute.Observer.get -> System.Type?
+DesignPatternCatalog.GangOfFour.Observer.SubjectAttribute.Observer.init -> void
+DesignPatternCatalog.GangOfFour.Observer.SubjectAttribute.SubjectAttribute() -> void
+DesignPatternCatalog.GangOfFour.Observer.UpdateMethodAttribute
+DesignPatternCatalog.GangOfFour.Observer.UpdateMethodAttribute.UpdateMethodAttribute() -> void
+DesignPatternCatalog.GangOfFour.Prototype
+DesignPatternCatalog.GangOfFour.Prototype.CloneMethodAttribute
+DesignPatternCatalog.GangOfFour.Prototype.CloneMethodAttribute.CloneMethodAttribute() -> void
+DesignPatternCatalog.GangOfFour.Prototype.ConcretePrototypeAttribute
+DesignPatternCatalog.GangOfFour.Prototype.ConcretePrototypeAttribute.ConcretePrototypeAttribute() -> void
+DesignPatternCatalog.GangOfFour.Prototype.ConcretePrototypeAttribute.Prototype.get -> System.Type?
+DesignPatternCatalog.GangOfFour.Prototype.ConcretePrototypeAttribute.Prototype.init -> void
+DesignPatternCatalog.GangOfFour.Prototype.PrototypeAttribute
+DesignPatternCatalog.GangOfFour.Prototype.PrototypeAttribute.PrototypeAttribute() -> void
+DesignPatternCatalog.GangOfFour.Prototype.Role
+DesignPatternCatalog.GangOfFour.Prototype.Role.Role() -> void
+DesignPatternCatalog.GangOfFour.Proxy
+DesignPatternCatalog.GangOfFour.Proxy.ProxyAttribute
+DesignPatternCatalog.GangOfFour.Proxy.ProxyAttribute.ProxyAttribute() -> void
+DesignPatternCatalog.GangOfFour.Proxy.ProxyAttribute.RealSubject.get -> System.Type?
+DesignPatternCatalog.GangOfFour.Proxy.ProxyAttribute.RealSubject.init -> void
+DesignPatternCatalog.GangOfFour.Proxy.ProxyAttribute.Subject.get -> System.Type?
+DesignPatternCatalog.GangOfFour.Proxy.ProxyAttribute.Subject.init -> void
+DesignPatternCatalog.GangOfFour.Proxy.RealSubjectAttribute
+DesignPatternCatalog.GangOfFour.Proxy.RealSubjectAttribute.RealSubjectAttribute() -> void
+DesignPatternCatalog.GangOfFour.Proxy.RealSubjectAttribute.Subject.get -> System.Type?
+DesignPatternCatalog.GangOfFour.Proxy.RealSubjectAttribute.Subject.init -> void
+DesignPatternCatalog.GangOfFour.Proxy.Role
+DesignPatternCatalog.GangOfFour.Proxy.Role.Role() -> void
+DesignPatternCatalog.GangOfFour.Proxy.SubjectAttribute
+DesignPatternCatalog.GangOfFour.Proxy.SubjectAttribute.SubjectAttribute() -> void
+DesignPatternCatalog.GangOfFour.SingletonAttribute
+DesignPatternCatalog.GangOfFour.SingletonAttribute.SingletonAttribute() -> void
+DesignPatternCatalog.GangOfFour.State
+DesignPatternCatalog.GangOfFour.State.ConcreteStateAttribute
+DesignPatternCatalog.GangOfFour.State.ConcreteStateAttribute.ConcreteStateAttribute() -> void
+DesignPatternCatalog.GangOfFour.State.ConcreteStateAttribute.State.get -> System.Type?
+DesignPatternCatalog.GangOfFour.State.ConcreteStateAttribute.State.init -> void
+DesignPatternCatalog.GangOfFour.State.ContextAttribute
+DesignPatternCatalog.GangOfFour.State.ContextAttribute.ContextAttribute() -> void
+DesignPatternCatalog.GangOfFour.State.ContextAttribute.State.get -> System.Type?
+DesignPatternCatalog.GangOfFour.State.ContextAttribute.State.init -> void
+DesignPatternCatalog.GangOfFour.State.Role
+DesignPatternCatalog.GangOfFour.State.Role.Role() -> void
+DesignPatternCatalog.GangOfFour.State.StateAttribute
+DesignPatternCatalog.GangOfFour.State.StateAttribute.StateAttribute() -> void
+DesignPatternCatalog.GangOfFour.Strategy
+DesignPatternCatalog.GangOfFour.Strategy.ConcreteStrategyAttribute
+DesignPatternCatalog.GangOfFour.Strategy.ConcreteStrategyAttribute.ConcreteStrategyAttribute() -> void
+DesignPatternCatalog.GangOfFour.Strategy.ConcreteStrategyAttribute.Strategy.get -> System.Type?
+DesignPatternCatalog.GangOfFour.Strategy.ConcreteStrategyAttribute.Strategy.init -> void
+DesignPatternCatalog.GangOfFour.Strategy.ContextAttribute
+DesignPatternCatalog.GangOfFour.Strategy.ContextAttribute.ContextAttribute() -> void
+DesignPatternCatalog.GangOfFour.Strategy.ContextAttribute.Strategy.get -> System.Type?
+DesignPatternCatalog.GangOfFour.Strategy.ContextAttribute.Strategy.init -> void
+DesignPatternCatalog.GangOfFour.Strategy.Role
+DesignPatternCatalog.GangOfFour.Strategy.Role.Role() -> void
+DesignPatternCatalog.GangOfFour.Strategy.StrategyAttribute
+DesignPatternCatalog.GangOfFour.Strategy.StrategyAttribute.StrategyAttribute() -> void
+DesignPatternCatalog.GangOfFour.TemplateMethod
+DesignPatternCatalog.GangOfFour.TemplateMethod.AbstractClassAttribute
+DesignPatternCatalog.GangOfFour.TemplateMethod.AbstractClassAttribute.AbstractClassAttribute() -> void
+DesignPatternCatalog.GangOfFour.TemplateMethod.ConcreteClassAttribute
+DesignPatternCatalog.GangOfFour.TemplateMethod.ConcreteClassAttribute.AbstractClass.get -> System.Type?
+DesignPatternCatalog.GangOfFour.TemplateMethod.ConcreteClassAttribute.AbstractClass.init -> void
+DesignPatternCatalog.GangOfFour.TemplateMethod.ConcreteClassAttribute.ConcreteClassAttribute() -> void
+DesignPatternCatalog.GangOfFour.TemplateMethod.HookOperationAttribute
+DesignPatternCatalog.GangOfFour.TemplateMethod.HookOperationAttribute.HookOperationAttribute() -> void
+DesignPatternCatalog.GangOfFour.TemplateMethod.PrimitiveOperationAttribute
+DesignPatternCatalog.GangOfFour.TemplateMethod.PrimitiveOperationAttribute.PrimitiveOperationAttribute() -> void
+DesignPatternCatalog.GangOfFour.TemplateMethod.Role
+DesignPatternCatalog.GangOfFour.TemplateMethod.Role.Role() -> void
+DesignPatternCatalog.GangOfFour.TemplateMethod.TemplateMethodAttribute
+DesignPatternCatalog.GangOfFour.TemplateMethod.TemplateMethodAttribute.TemplateMethodAttribute() -> void
+DesignPatternCatalog.GangOfFour.Visitor
+DesignPatternCatalog.GangOfFour.Visitor.AcceptMethodAttribute
+DesignPatternCatalog.GangOfFour.Visitor.AcceptMethodAttribute.AcceptMethodAttribute() -> void
+DesignPatternCatalog.GangOfFour.Visitor.ConcreteElementAttribute
+DesignPatternCatalog.GangOfFour.Visitor.ConcreteElementAttribute.ConcreteElementAttribute() -> void
+DesignPatternCatalog.GangOfFour.Visitor.ConcreteElementAttribute.Element.get -> System.Type?
+DesignPatternCatalog.GangOfFour.Visitor.ConcreteElementAttribute.Element.init -> void
+DesignPatternCatalog.GangOfFour.Visitor.ConcreteVisitorAttribute
+DesignPatternCatalog.GangOfFour.Visitor.ConcreteVisitorAttribute.ConcreteVisitorAttribute() -> void
+DesignPatternCatalog.GangOfFour.Visitor.ConcreteVisitorAttribute.Visitor.get -> System.Type?
+DesignPatternCatalog.GangOfFour.Visitor.ConcreteVisitorAttribute.Visitor.init -> void
+DesignPatternCatalog.GangOfFour.Visitor.ElementAttribute
+DesignPatternCatalog.GangOfFour.Visitor.ElementAttribute.ElementAttribute() -> void
+DesignPatternCatalog.GangOfFour.Visitor.ObjectStructureAttribute
+DesignPatternCatalog.GangOfFour.Visitor.ObjectStructureAttribute.Element.get -> System.Type?
+DesignPatternCatalog.GangOfFour.Visitor.ObjectStructureAttribute.Element.init -> void
+DesignPatternCatalog.GangOfFour.Visitor.ObjectStructureAttribute.ObjectStructureAttribute() -> void
+DesignPatternCatalog.GangOfFour.Visitor.Role
+DesignPatternCatalog.GangOfFour.Visitor.Role.Role() -> void
+DesignPatternCatalog.GangOfFour.Visitor.VisitMethodAttribute
+DesignPatternCatalog.GangOfFour.Visitor.VisitMethodAttribute.ConcreteElement.get -> System.Type?
+DesignPatternCatalog.GangOfFour.Visitor.VisitMethodAttribute.ConcreteElement.init -> void
+DesignPatternCatalog.GangOfFour.Visitor.VisitMethodAttribute.VisitMethodAttribute() -> void
+DesignPatternCatalog.GangOfFour.Visitor.VisitorAttribute
+DesignPatternCatalog.GangOfFour.Visitor.VisitorAttribute.VisitorAttribute() -> void

@@ -1,0 +1,3 @@
+#nullable enable
+DesignPatternCatalog.LivingDocumentationAttribute
+DesignPatternCatalog.LivingDocumentationAttribute.LivingDocumentationAttribute() -> void

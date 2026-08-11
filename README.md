@@ -1,4 +1,4 @@
-# living-documentation-attributes
+# design-pattern-catalog
 
 A vocabulary of .NET attributes that lets code state **which design pattern a type
 or a member participates in**.
@@ -63,21 +63,21 @@ link to its source and to a worked example.
 **One package per catalogue.** Take the vocabulary of the works you actually read:
 
 ```
-dotnet add package Reefact.LivingDocumentation.Attributes.GangOfFour
-dotnet add package Reefact.LivingDocumentation.Attributes.DomainDrivenDesign
+dotnet add package DesignPatternCatalog.GangOfFour
+dotnet add package DesignPatternCatalog.DomainDrivenDesign
 ```
 
 Or take all of them at once:
 
 ```
-dotnet add package Reefact.LivingDocumentation.Attributes
+dotnet add package DesignPatternCatalog
 ```
 
 Each catalogue package is named after its row in the table above, and each is
 **independent of the others**: nothing in one refers to a pattern of another, so a
 codebase that declares domain-driven design does not carry the Gang of Four. They
-share one small package, `…Attributes.Core`, which holds the base marker a reader
-needs to find every annotation whatever mix you installed.
+share one small package, `DesignPatternCatalog.Core`, which holds the base marker a
+reader needs to find every annotation whatever mix you installed.
 
 Every package targets `netstandard2.0` through `net8.0`, so it reaches .NET
 Framework 4.6.1 and everything after it, and none has a dependency beyond `Core`.
@@ -171,7 +171,7 @@ assertions they carry**, never by their names.
 Almost nothing this library decides is defended by the compiler, and the
 attributes are generated from a catalog, so a reader of the output cannot tell a
 decided trait from an incidental one. The reasoning is kept in the
-[ADR base](doc/handwritten/for-maintainers/adr/) — 37 records, English
+[ADR base](doc/handwritten/for-maintainers/adr/) — 38 records, English
 canonical with a French translation alongside — and that is where to look when a
 shape seems arbitrary.
 

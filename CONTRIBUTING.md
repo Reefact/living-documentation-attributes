@@ -7,9 +7,9 @@ covers the rest — how the repository is built, and how commits are written.
 ## Building
 
 ```
-dotnet build Reefact.LivingDocumentation.Attributes.sln
-dotnet test Reefact.LivingDocumentation.Attributes.sln
-dotnet run --project Reefact.LivingDocumentation.Attributes.Usage
+dotnet build DesignPatternCatalog.sln
+dotnet test DesignPatternCatalog.sln
+dotnet run --project DesignPatternCatalog.Usage
 ```
 
 The library multi-targets `netstandard2.0` through `net8.0`; a change that
@@ -57,7 +57,7 @@ change cannot merge until the same change updates the baseline.
 **Accepting an intended surface change.** Update the baseline in the same commit:
 
 ```
-dotnet format analyzers Reefact.LivingDocumentation.Attributes.<Catalog>/Reefact.LivingDocumentation.Attributes.<Catalog>.csproj \
+dotnet format analyzers DesignPatternCatalog.<Catalog>/DesignPatternCatalog.<Catalog>.csproj \
   --diagnostics RS0016 --severity warn
 ```
 

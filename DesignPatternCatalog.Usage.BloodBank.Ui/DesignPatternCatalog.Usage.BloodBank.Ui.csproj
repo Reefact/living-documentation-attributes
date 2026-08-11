@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <!-- The user interface reaches the model through the application layer, and holds no reference to
+       infrastructure: what persists a unit of blood is chosen where the application is composed, not here. -->
+  <ItemGroup>
+    <ProjectReference Include="..\DesignPatternCatalog.DomainDrivenDesign\DesignPatternCatalog.DomainDrivenDesign.csproj" />
+    <ProjectReference Include="..\DesignPatternCatalog.Usage.BloodBank.Application\DesignPatternCatalog.Usage.BloodBank.Application.csproj" />
+  </ItemGroup>
+
+</Project>

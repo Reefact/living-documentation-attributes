@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <!-- A component references the core and no sibling. That is the substitutability, stated as a reference. -->
+  <ItemGroup>
+    <ProjectReference Include="..\DesignPatternCatalog.DomainDrivenDesign\DesignPatternCatalog.DomainDrivenDesign.csproj" />
+    <ProjectReference Include="..\DesignPatternCatalog.Usage.Observatory.Instruments\DesignPatternCatalog.Usage.Observatory.Instruments.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,9 +1,9 @@
 <Project>
 
   <!--
-    Everything the packable projects share. There are eight of them — one per catalogued work, one holding
-    the base marker, and the meta-package — and the alternative was the same forty lines copied eight times,
-    which is the shape this repository removes everywhere else.
+    Everything the packable projects share. There are thirteen of them — one per catalogue, one holding
+    the base marker, and the meta-package — and the alternative was the same forty lines copied thirteen
+    times, which is the shape this repository removes everywhere else.
 
     What is NOT here is what must differ per package: PackageId, Description and PackageTags. A package that
     cannot say which work it carries is not worth splitting out.
@@ -33,11 +33,11 @@
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
 
     <!-- Links -->
-    <PackageProjectUrl>https://github.com/Reefact/living-documentation-attributes</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/Reefact/living-documentation-attributes.git</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Reefact/design-pattern-catalog</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Reefact/design-pattern-catalog.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
 
-    <!-- One README serves the repository and every package. A README per package would be eight files to
+    <!-- One README serves the repository and every package. A README per package would be thirteen files to
          keep in step, and a consumer who wants one catalogue still wants to know what the vocabulary is. -->
     <PackageReadmeFile>readme.md</PackageReadmeFile>
   </PropertyGroup>
