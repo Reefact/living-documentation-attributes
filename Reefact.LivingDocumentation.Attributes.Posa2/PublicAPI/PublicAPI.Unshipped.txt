@@ -13,3 +13,12 @@ Reefact.LivingDocumentation.Attributes.Posa2.StrategizedLocking.LockingStrategyA
 Reefact.LivingDocumentation.Attributes.Posa2.StrategizedLocking.LockingStrategyAttribute.LockingStrategyAttribute() -> void
 Reefact.LivingDocumentation.Attributes.Posa2.StrategizedLocking.Role
 Reefact.LivingDocumentation.Attributes.Posa2.StrategizedLocking.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.ThreadSafeInterface
+Reefact.LivingDocumentation.Attributes.Posa2.ThreadSafeInterface.ComponentAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.ThreadSafeInterface.ComponentAttribute.ComponentAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.ThreadSafeInterface.ImplementationMethodAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.ThreadSafeInterface.ImplementationMethodAttribute.ImplementationMethodAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.ThreadSafeInterface.InterfaceMethodAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.ThreadSafeInterface.InterfaceMethodAttribute.InterfaceMethodAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.ThreadSafeInterface.Role
+Reefact.LivingDocumentation.Attributes.Posa2.ThreadSafeInterface.Role.Role() -> void
