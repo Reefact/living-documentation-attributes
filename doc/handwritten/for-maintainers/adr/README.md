@@ -168,4 +168,4 @@ Related ADRs, sources, catalog entries, code.
 | [ADR-0033](0033-admit-microservices-patterns-as-a-catalogue.md) | Admit Microservices Patterns as a catalogue | Accepted |
 | [ADR-0034](0034-let-a-specialisation-name-the-role-it-narrows.md) | Let a specialisation name the role it narrows | Accepted |
 | [ADR-0035](0035-index-the-pattern-language-and-require-a-write-up.md) | Index the pattern language, and admit on a write-up rather than a book citation | Accepted |
-| [ADR-0036](0036-admit-posa2-as-a-catalogue.md) | Admit Pattern-Oriented Software Architecture Volume 2 as a catalogue | Proposed |
+| [ADR-0036](0036-admit-posa2-as-a-catalogue.md) | Admit Pattern-Oriented Software Architecture Volume 2 as a catalogue | Accepted |

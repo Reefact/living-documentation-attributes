@@ -2,8 +2,9 @@
 
 🌍 🇫🇷 Français (ce fichier) · 🇬🇧 [English](0036-admit-posa2-as-a-catalogue.md)
 
-**Statut :** Proposé
+**Statut :** Accepté
 **Proposé :** 2026-08-10
+**Accepté :** 2026-08-11
 **Décideurs :** Reefact
 
 ## Contexte
