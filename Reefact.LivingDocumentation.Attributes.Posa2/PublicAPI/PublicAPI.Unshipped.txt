@@ -1,4 +1,29 @@
 #nullable enable
+Reefact.LivingDocumentation.Attributes.Posa2.ActiveObject
+Reefact.LivingDocumentation.Attributes.Posa2.ActiveObject.ActivationQueueAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.ActiveObject.ActivationQueueAttribute.ActivationQueueAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.ActiveObject.ActivationQueueAttribute.Proxy.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.Posa2.ActiveObject.ActivationQueueAttribute.Proxy.init -> void
+Reefact.LivingDocumentation.Attributes.Posa2.ActiveObject.FutureAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.ActiveObject.FutureAttribute.FutureAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.ActiveObject.FutureAttribute.Proxy.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.Posa2.ActiveObject.FutureAttribute.Proxy.init -> void
+Reefact.LivingDocumentation.Attributes.Posa2.ActiveObject.MethodRequestAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.ActiveObject.MethodRequestAttribute.MethodRequestAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.ActiveObject.MethodRequestAttribute.Proxy.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.Posa2.ActiveObject.MethodRequestAttribute.Proxy.init -> void
+Reefact.LivingDocumentation.Attributes.Posa2.ActiveObject.ProxyAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.ActiveObject.ProxyAttribute.ProxyAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.ActiveObject.Role
+Reefact.LivingDocumentation.Attributes.Posa2.ActiveObject.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.ActiveObject.SchedulerAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.ActiveObject.SchedulerAttribute.Proxy.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.Posa2.ActiveObject.SchedulerAttribute.Proxy.init -> void
+Reefact.LivingDocumentation.Attributes.Posa2.ActiveObject.SchedulerAttribute.SchedulerAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.ActiveObject.ServantAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.ActiveObject.ServantAttribute.Proxy.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.Posa2.ActiveObject.ServantAttribute.Proxy.init -> void
+Reefact.LivingDocumentation.Attributes.Posa2.ActiveObject.ServantAttribute.ServantAttribute() -> void
 Reefact.LivingDocumentation.Attributes.Posa2.DoubleCheckedLockingOptimization
 Reefact.LivingDocumentation.Attributes.Posa2.DoubleCheckedLockingOptimization.FlagAttribute
 Reefact.LivingDocumentation.Attributes.Posa2.DoubleCheckedLockingOptimization.FlagAttribute.FlagAttribute() -> void

@@ -1,0 +1,84 @@
+{
+  "catalog": "Posa2",
+  "name": "ActiveObject",
+  "summary": "Decouples method invocation from method execution, so that a client's call returns at once and the work runs later in the object's own thread.",
+  "reference": {
+    "author": "Douglas Schmidt, Michael Stal, Hans Rohnert, Frank Buschmann",
+    "work": "Pattern-Oriented Software Architecture, Volume 2",
+    "year": 2000
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Proxy",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The interface clients call, in the client's own thread. Every call it takes returns immediately, having built a method request and queued it \u2014 so a caller who reasons about what has happened by the time the call returns is reasoning about nothing.",
+      "links": []
+    },
+    {
+      "name": "MethodRequest",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": true,
+      "summary": "Carries the context of one invocation from the proxy to the scheduler: the arguments, the servant to apply them to, somewhere to put the result, and the code to run. It also carries the guard that says whether it may run yet.",
+      "links": [
+        "Proxy"
+      ]
+    },
+    {
+      "name": "ActivationQueue",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": true,
+      "summary": "Holds the method requests that are pending. It is bounded, which is the part that matters: it is what decouples the calling thread from the executing one, and what a client blocks on once the object is further behind than the queue is long.",
+      "links": [
+        "Proxy"
+      ]
+    },
+    {
+      "name": "Scheduler",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": true,
+      "summary": "Runs in a thread of its own, decides which pending request may run next by evaluating its guard, and dispatches it on the servant. The order it chooses is the object's concurrency policy, and it is a decision rather than a queue discipline.",
+      "links": [
+        "Proxy"
+      ]
+    },
+    {
+      "name": "Servant",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "Defines the behaviour and state being modelled as an active object, and holds no synchronization at all \u2014 that is deliberate, and it is what lets the same servant be scheduled under a different policy without being rewritten.",
+      "links": [
+        "Proxy"
+      ]
+    },
+    {
+      "name": "Future",
+      "targets": [
+        "Interface",
+        "Class",
+        "Struct"
+      ],
+      "repeatable": true,
+      "summary": "Stands for a result that does not exist yet, and is returned the moment the call is made. A client that neither waits on it nor polls it has invoked a method whose failure it will never hear about.",
+      "links": [
+        "Proxy"
+      ]
+    }
+  ]
+}
