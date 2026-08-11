@@ -1,0 +1,56 @@
+{
+  "catalog": "Posa2",
+  "name": "ExtensionInterface",
+  "summary": "Lets one component export several interfaces, so that extending it neither bloats a single interface nor breaks the code of clients that do not want the extension.",
+  "reference": {
+    "author": "Douglas Schmidt, Michael Stal, Hans Rohnert, Frank Buschmann",
+    "work": "Pattern-Oriented Software Architecture, Volume 2",
+    "year": 2000
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Component",
+      "targets": [
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "Implements the interfaces, and is reached only through them. A client never holds this type, which is what lets the set of interfaces grow without any client being recompiled.",
+      "links": []
+    },
+    {
+      "name": "RootInterface",
+      "targets": [
+        "Interface"
+      ],
+      "repeatable": false,
+      "summary": "The interface every extension extends, and the one that answers the question *do you also do this?* A client's whole ability to discover what a component can do is this one operation.",
+      "links": [
+        "Component"
+      ]
+    },
+    {
+      "name": "ExtensionInterface",
+      "targets": [
+        "Interface"
+      ],
+      "repeatable": true,
+      "summary": "One coherent set of operations a component may export, extending the root. Adding another breaks nothing, which is the pattern's claim \u2014 and the cost is that a client cannot tell from the type system whether a component supports it, only by asking at run time.",
+      "links": [
+        "RootInterface"
+      ]
+    },
+    {
+      "name": "ComponentFactory",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": true,
+      "summary": "Creates components and hands back the root interface rather than the implementation. It is where a client's only reference to a concrete component would otherwise be.",
+      "links": [
+        "Component"
+      ]
+    }
+  ]
+}

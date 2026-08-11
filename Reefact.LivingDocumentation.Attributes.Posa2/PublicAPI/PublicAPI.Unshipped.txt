@@ -50,6 +50,23 @@ Reefact.LivingDocumentation.Attributes.Posa2.DoubleCheckedLockingOptimization.Mu
 Reefact.LivingDocumentation.Attributes.Posa2.DoubleCheckedLockingOptimization.MutexAttribute.MutexAttribute() -> void
 Reefact.LivingDocumentation.Attributes.Posa2.DoubleCheckedLockingOptimization.Role
 Reefact.LivingDocumentation.Attributes.Posa2.DoubleCheckedLockingOptimization.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.ExtensionInterface
+Reefact.LivingDocumentation.Attributes.Posa2.ExtensionInterface.ComponentAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.ExtensionInterface.ComponentAttribute.ComponentAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.ExtensionInterface.ComponentFactoryAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.ExtensionInterface.ComponentFactoryAttribute.Component.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.Posa2.ExtensionInterface.ComponentFactoryAttribute.Component.init -> void
+Reefact.LivingDocumentation.Attributes.Posa2.ExtensionInterface.ComponentFactoryAttribute.ComponentFactoryAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.ExtensionInterface.ExtensionInterfaceAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.ExtensionInterface.ExtensionInterfaceAttribute.ExtensionInterfaceAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.ExtensionInterface.ExtensionInterfaceAttribute.RootInterface.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.Posa2.ExtensionInterface.ExtensionInterfaceAttribute.RootInterface.init -> void
+Reefact.LivingDocumentation.Attributes.Posa2.ExtensionInterface.Role
+Reefact.LivingDocumentation.Attributes.Posa2.ExtensionInterface.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.ExtensionInterface.RootInterfaceAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.ExtensionInterface.RootInterfaceAttribute.Component.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.Posa2.ExtensionInterface.RootInterfaceAttribute.Component.init -> void
+Reefact.LivingDocumentation.Attributes.Posa2.ExtensionInterface.RootInterfaceAttribute.RootInterfaceAttribute() -> void
 Reefact.LivingDocumentation.Attributes.Posa2.HalfSyncHalfAsync
 Reefact.LivingDocumentation.Attributes.Posa2.HalfSyncHalfAsync.AsynchronousTaskLayerAttribute
 Reefact.LivingDocumentation.Attributes.Posa2.HalfSyncHalfAsync.AsynchronousTaskLayerAttribute.AsynchronousTaskLayerAttribute() -> void
