@@ -1,0 +1,47 @@
+{
+  "catalog": "Posa2",
+  "name": "ThreadSpecificStorage",
+  "summary": "Lets several threads use one logically global access point to fetch an object that is physically their own, without locking and without passing it through every call.",
+  "reference": {
+    "author": "Douglas Schmidt, Michael Stal, Hans Rohnert, Frank Buschmann",
+    "work": "Pattern-Oriented Software Architecture, Volume 2",
+    "year": 2000
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "TSObjectProxy",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The one access point every thread uses, which hides the key and the collection behind it and hands each caller its own object. It reads as global state and is not, which is the pattern's whole value and the reason a reader needs telling.",
+      "links": []
+    },
+    {
+      "name": "TSObject",
+      "targets": [
+        "Field",
+        "Property"
+      ],
+      "repeatable": false,
+      "summary": "One thread's own instance of the thread-specific object, reached only through the proxy. Nothing serializes access to it because nothing else can see it \u2014 so publishing a reference to it anywhere another thread can reach removes the only guarantee the pattern makes.",
+      "links": [
+        "TSObjectProxy"
+      ]
+    },
+    {
+      "name": "TSObjectCollection",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": true,
+      "summary": "The per-thread map from keys to that thread's objects, which the proxy uses and the caller never sees. On a platform whose runtime supplies thread-local storage this is the runtime's, and the role is for the codebases that keep their own.",
+      "links": [
+        "TSObjectProxy"
+      ]
+    }
+  ]
+}
