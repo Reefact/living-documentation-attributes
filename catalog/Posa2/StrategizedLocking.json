@@ -1,0 +1,34 @@
+{
+  "catalog": "Posa2",
+  "name": "StrategizedLocking",
+  "summary": "Strategizes a component's synchronization by making its lock a pluggable type, so one implementation serves every concurrency use-case.",
+  "reference": {
+    "author": "Douglas Schmidt, Michael Stal, Hans Rohnert, Frank Buschmann",
+    "work": "Pattern-Oriented Software Architecture, Volume 2",
+    "year": 2000
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Component",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "repeatable": false,
+      "links": [],
+      "summary": "The component whose synchronization is configured into it rather than written into it. There is one implementation of the component and that is the point: a fix applied here reaches every configuration, where a family of near-identical classes drifts apart."
+    },
+    {
+      "name": "LockingStrategy",
+      "targets": [
+        "Interface",
+        "Class",
+        "Struct"
+      ],
+      "repeatable": true,
+      "links": [],
+      "summary": "One member of the family of locking strategies a component can be configured with \u2014 a mutex, a readers-writer lock, or the null lock whose acquire and release do nothing and cost nothing in a single-threaded configuration. Every member answers the same acquire and release, which is the whole of what makes them interchangeable."
+    }
+  ]
+}
