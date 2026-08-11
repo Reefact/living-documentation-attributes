@@ -1,0 +1,22 @@
+{
+  "catalog": "DependencyInjection",
+  "name": "PropertyInjection",
+  "summary": "Exposes a settable property through which an optional dependency may be supplied, the class remaining usable when it is not.",
+  "reference": {
+    "author": "Steven van Deursen, Mark Seemann",
+    "work": "Dependency Injection Principles, Practices, and Patterns",
+    "year": 2019
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "PropertyInjection",
+      "targets": [
+        "Property"
+      ],
+      "repeatable": false,
+      "summary": "The property through which a caller may replace a dependency the class already has a good local default for. It asserts that the default exists and works: a property injection with no default is a required dependency that has forgotten to fail, and it fails later, on a null reference, far from here.",
+      "links": []
+    }
+  ]
+}
