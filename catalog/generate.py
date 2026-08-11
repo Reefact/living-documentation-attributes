@@ -31,6 +31,7 @@ CATALOG_LABEL = {
     "XUnitTestPatterns": "xUnit Test Patterns",
     "MicroservicesPatterns": "Microservices Patterns",
     "Posa2": "Pattern-Oriented Software Architecture, Volume 2",
+    "DependencyInjection": "Dependency Injection Principles, Practices, and Patterns",
     "Idioms": "no catalog of its own",
 }
 
