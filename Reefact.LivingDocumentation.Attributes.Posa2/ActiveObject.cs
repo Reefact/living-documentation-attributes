@@ -54,10 +54,10 @@ namespace Reefact.LivingDocumentation.Attributes.Posa2 {
         /// <summary>
         ///     Holds the method requests that are pending. It is bounded, which is the part that matters: it is what
         ///     decouples the calling thread from the executing one, and what a client blocks on once the object is
-        ///     further behind than the queue is long.
+        ///     further behind than the list is long.
         /// </summary>
         [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
-        public sealed class ActivationQueueAttribute : Role {
+        public sealed class ActivationListAttribute : Role {
 
             /// <summary>
             ///     The <see cref="ProxyAttribute" /> this role is bound to. Optional: it is only needed when the type

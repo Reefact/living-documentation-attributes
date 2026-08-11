@@ -34,7 +34,7 @@ namespace Reefact.LivingDocumentation.Attributes.Posa2 {
         ///     reason a reader needs telling.
         /// </summary>
         [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
-        public sealed class TSObjectProxyAttribute : Role { }
+        public sealed class ThreadSpecificObjectProxyAttribute : Role { }
 
         /// <summary>
         ///     One thread's own instance of the thread-specific object, reached only through the proxy. Nothing
@@ -42,29 +42,45 @@ namespace Reefact.LivingDocumentation.Attributes.Posa2 {
         ///     another thread can reach removes the only guarantee the pattern makes.
         /// </summary>
         [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property, AllowMultiple = false, Inherited = false)]
-        public sealed class TSObjectAttribute : Role {
+        public sealed class ThreadSpecificObjectAttribute : Role {
 
             /// <summary>
-            ///     The <see cref="TSObjectProxyAttribute" /> this role is bound to. Optional: it is only needed when
-            ///     the type hierarchy alone does not tell which occurrence of the pattern is meant.
+            ///     The <see cref="ThreadSpecificObjectProxyAttribute" /> this role is bound to. Optional: it is only
+            ///     needed when the type hierarchy alone does not tell which occurrence of the pattern is meant.
             /// </summary>
-            public Type? TSObjectProxy { get; init; }
+            public Type? ThreadSpecificObjectProxy { get; init; }
 
         }
 
         /// <summary>
-        ///     The per-thread map from keys to that thread's objects, which the proxy uses and the caller never sees.
-        ///     On a platform whose runtime supplies thread-local storage this is the runtime's, and the role is for the
+        ///     The per-thread set of that thread's objects, which the proxy uses and the caller never sees. On a
+        ///     platform whose runtime supplies thread-local storage this is the runtime's, and the role is for the
         ///     codebases that keep their own.
         /// </summary>
         [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
-        public sealed class TSObjectCollectionAttribute : Role {
+        public sealed class ThreadSpecificObjectSetAttribute : Role {
 
             /// <summary>
-            ///     The <see cref="TSObjectProxyAttribute" /> this role is bound to. Optional: it is only needed when
-            ///     the type hierarchy alone does not tell which occurrence of the pattern is meant.
+            ///     The <see cref="ThreadSpecificObjectProxyAttribute" /> this role is bound to. Optional: it is only
+            ///     needed when the type hierarchy alone does not tell which occurrence of the pattern is meant.
             /// </summary>
-            public Type? TSObjectProxy { get; init; }
+            public Type? ThreadSpecificObjectProxy { get; init; }
+
+        }
+
+        /// <summary>
+        ///     Mints the keys under which objects are filed, one key per kind of thread-specific object rather than one
+        ///     per thread. A key handed out twice for two different kinds of object is two callers reading each other's
+        ///     storage, and it is the one failure here that no thread boundary protects against.
+        /// </summary>
+        [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
+        public sealed class KeyFactoryAttribute : Role {
+
+            /// <summary>
+            ///     The <see cref="ThreadSpecificObjectProxyAttribute" /> this role is bound to. Optional: it is only
+            ///     needed when the type hierarchy alone does not tell which occurrence of the pattern is meant.
+            /// </summary>
+            public Type? ThreadSpecificObjectProxy { get; init; }
 
         }
 

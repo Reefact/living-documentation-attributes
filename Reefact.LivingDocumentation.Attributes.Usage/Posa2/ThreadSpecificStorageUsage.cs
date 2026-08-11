@@ -28,7 +28,7 @@ namespace Reefact.LivingDocumentation.Attributes.Usage.Posa2.ThreadSpecificStora
     ///     reason a reader needs telling: two positions reading this line get different answers, and that
     ///     is correct.
     /// </remarks>
-    [ThreadSpecificStorage.TSObjectProxy]
+    [ThreadSpecificStorage.ThreadSpecificObjectProxy]
     public static class CurrentCall {
 
         /// <remarks>
@@ -36,7 +36,7 @@ namespace Reefact.LivingDocumentation.Attributes.Usage.Posa2.ThreadSpecificStora
         ///     see it — so handing this value to a background task, where another thread can reach it,
         ///     removes the only guarantee the pattern makes and leaves code that looks unchanged.
         /// </remarks>
-        [ThreadSpecificStorage.TSObject(TSObjectProxy = typeof(CurrentCall))]
+        [ThreadSpecificStorage.ThreadSpecificObject(ThreadSpecificObjectProxy = typeof(CurrentCall))]
         private static readonly ThreadLocal<string?> Reference = new ThreadLocal<string?>();
 
         public static string? Get() {
@@ -50,7 +50,30 @@ namespace Reefact.LivingDocumentation.Attributes.Usage.Posa2.ThreadSpecificStora
     }
 
     /// <summary>
-    ///     The control room's own map from key to this position's value.
+    ///     Hands out the keys the room's own storage files things under.
+    /// </summary>
+    /// <remarks>
+    ///     One key per kind of thing held, not one per position — the thread is the other half of the
+    ///     address and it is supplied by whoever is asking. Handing the same key out for two kinds of
+    ///     thing is two callers reading each other's storage, and no thread boundary protects against it.
+    /// </remarks>
+    [ThreadSpecificStorage.KeyFactory(ThreadSpecificObjectProxy = typeof(CurrentCall))]
+    public sealed class ContextKeys {
+
+        private readonly HashSet<string> _issued = new HashSet<string>();
+
+        public string CreateKey(string kindOfThing) {
+            if (!_issued.Add(kindOfThing)) {
+                throw new InvalidOperationException($"a key for {kindOfThing} has already been issued");
+            }
+
+            return kindOfThing;
+        }
+
+    }
+
+    /// <summary>
+    ///     The control room's own set of what this position is holding.
     /// </summary>
     /// <remarks>
     ///     On this platform the runtime supplies thread-local storage, so a codebase applying the pattern
@@ -58,7 +81,7 @@ namespace Reefact.LivingDocumentation.Attributes.Usage.Posa2.ThreadSpecificStora
     ///     this room does keep one: the shift-handover tooling has to enumerate what every position is
     ///     holding, which the runtime's storage will not tell it.
     /// </remarks>
-    [ThreadSpecificStorage.TSObjectCollection(TSObjectProxy = typeof(CurrentCall))]
+    [ThreadSpecificStorage.ThreadSpecificObjectSet(ThreadSpecificObjectProxy = typeof(CurrentCall))]
     public sealed class PositionContext {
 
         private static readonly ThreadLocal<Dictionary<string, string>> Entries =

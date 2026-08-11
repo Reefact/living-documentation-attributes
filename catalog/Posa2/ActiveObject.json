@@ -32,13 +32,13 @@
       ]
     },
     {
-      "name": "ActivationQueue",
+      "name": "ActivationList",
       "targets": [
         "Interface",
         "Class"
       ],
       "repeatable": true,
-      "summary": "Holds the method requests that are pending. It is bounded, which is the part that matters: it is what decouples the calling thread from the executing one, and what a client blocks on once the object is further behind than the queue is long.",
+      "summary": "Holds the method requests that are pending. It is bounded, which is the part that matters: it is what decouples the calling thread from the executing one, and what a client blocks on once the object is further behind than the list is long.",
       "links": [
         "Proxy"
       ]
