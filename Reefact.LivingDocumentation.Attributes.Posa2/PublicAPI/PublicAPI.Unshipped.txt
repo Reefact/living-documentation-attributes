@@ -63,6 +63,27 @@ Reefact.LivingDocumentation.Attributes.Posa2.HalfSyncHalfAsync.SynchronousTaskLa
 Reefact.LivingDocumentation.Attributes.Posa2.HalfSyncHalfAsync.SynchronousTaskLayerAttribute.QueueingLayer.get -> System.Type?
 Reefact.LivingDocumentation.Attributes.Posa2.HalfSyncHalfAsync.SynchronousTaskLayerAttribute.QueueingLayer.init -> void
 Reefact.LivingDocumentation.Attributes.Posa2.HalfSyncHalfAsync.SynchronousTaskLayerAttribute.SynchronousTaskLayerAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.Interceptor
+Reefact.LivingDocumentation.Attributes.Posa2.Interceptor.ConcreteInterceptorAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.Interceptor.ConcreteInterceptorAttribute.ConcreteInterceptorAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.Interceptor.ConcreteInterceptorAttribute.Interceptor.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.Posa2.Interceptor.ConcreteInterceptorAttribute.Interceptor.init -> void
+Reefact.LivingDocumentation.Attributes.Posa2.Interceptor.ContextAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.Interceptor.ContextAttribute.ContextAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.Interceptor.ContextAttribute.Interceptor.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.Posa2.Interceptor.ContextAttribute.Interceptor.init -> void
+Reefact.LivingDocumentation.Attributes.Posa2.Interceptor.DispatcherAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.Interceptor.DispatcherAttribute.DispatcherAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.Interceptor.DispatcherAttribute.Interceptor.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.Posa2.Interceptor.DispatcherAttribute.Interceptor.init -> void
+Reefact.LivingDocumentation.Attributes.Posa2.Interceptor.FrameworkAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.Interceptor.FrameworkAttribute.FrameworkAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.Interceptor.FrameworkAttribute.Interceptor.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.Posa2.Interceptor.FrameworkAttribute.Interceptor.init -> void
+Reefact.LivingDocumentation.Attributes.Posa2.Interceptor.InterceptorAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.Interceptor.InterceptorAttribute.InterceptorAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.Interceptor.Role
+Reefact.LivingDocumentation.Attributes.Posa2.Interceptor.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.Posa2.LeaderFollowers
 Reefact.LivingDocumentation.Attributes.Posa2.LeaderFollowers.ConcreteEventHandlerAttribute
 Reefact.LivingDocumentation.Attributes.Posa2.LeaderFollowers.ConcreteEventHandlerAttribute.ConcreteEventHandlerAttribute() -> void
