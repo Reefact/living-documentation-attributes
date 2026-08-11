@@ -1,4 +1,13 @@
 #nullable enable
+Reefact.LivingDocumentation.Attributes.Posa2.DoubleCheckedLockingOptimization
+Reefact.LivingDocumentation.Attributes.Posa2.DoubleCheckedLockingOptimization.FlagAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.DoubleCheckedLockingOptimization.FlagAttribute.FlagAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.DoubleCheckedLockingOptimization.JustOnceCriticalSectionAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.DoubleCheckedLockingOptimization.JustOnceCriticalSectionAttribute.JustOnceCriticalSectionAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.DoubleCheckedLockingOptimization.MutexAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.DoubleCheckedLockingOptimization.MutexAttribute.MutexAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.DoubleCheckedLockingOptimization.Role
+Reefact.LivingDocumentation.Attributes.Posa2.DoubleCheckedLockingOptimization.Role.Role() -> void
 Reefact.LivingDocumentation.Attributes.Posa2.ScopedLocking
 Reefact.LivingDocumentation.Attributes.Posa2.ScopedLocking.GuardAttribute
 Reefact.LivingDocumentation.Attributes.Posa2.ScopedLocking.GuardAttribute.GuardAttribute() -> void
