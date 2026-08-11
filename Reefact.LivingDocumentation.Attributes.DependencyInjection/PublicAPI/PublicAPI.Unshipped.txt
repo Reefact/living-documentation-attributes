@@ -1,4 +1,6 @@
 #nullable enable
+Reefact.LivingDocumentation.Attributes.DependencyInjection.AmbientContextAttribute
+Reefact.LivingDocumentation.Attributes.DependencyInjection.AmbientContextAttribute.AmbientContextAttribute() -> void
 Reefact.LivingDocumentation.Attributes.DependencyInjection.CompositionRootAttribute
 Reefact.LivingDocumentation.Attributes.DependencyInjection.CompositionRootAttribute.CompositionRootAttribute() -> void
 Reefact.LivingDocumentation.Attributes.DependencyInjection.ConstructorInjectionAttribute
