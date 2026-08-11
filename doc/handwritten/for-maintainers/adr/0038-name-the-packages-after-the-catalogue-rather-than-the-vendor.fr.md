@@ -2,8 +2,9 @@
 
 🌍 🇫🇷 Français (ce fichier) · 🇬🇧 [English](0038-name-the-packages-after-the-catalogue-rather-than-the-vendor.md)
 
-**Statut :** Proposé
+**Statut :** Accepté
 **Proposé :** 2026-08-11
+**Accepté :** 2026-08-11
 **Décideurs :** Reefact
 
 ## Contexte
