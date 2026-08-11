@@ -118,7 +118,7 @@ exists to prevent, applied to catalogues rather than to decisions.
 | `XUnitTestPatterns` | 62 | 68 | **complete** — the other six are in the exclusion tables above |
 | `DomainDrivenDesign` | 23 | 45 + 2 | **complete** — with one open question about a possible twenty-fourth entry, below |
 | `MicroservicesPatterns` | 41 | 51 | **read whole** — 41 held, 11 excluded in the tables above, 1 in the held-back section, and around half the work will be excluded ([ADR-0033](../doc/handwritten/for-maintainers/adr/0033-admit-microservices-patterns-as-a-catalogue.md)) |
-| `Posa2` | 4 | 17 | **in progress** — chapter 4 of 4 chapters that hold patterns, admitted by [ADR-0036](../doc/handwritten/for-maintainers/adr/0036-admit-posa2-as-a-catalogue.md) |
+| `Posa2` | 9 | 17 | **in progress** — chapters 4 and 5 of the 4 chapters that hold patterns, admitted by [ADR-0036](../doc/handwritten/for-maintainers/adr/0036-admit-posa2-as-a-catalogue.md) |
 | `AnalysisPatterns` | 39 | — | **deliberately stopped**, and the only one that is |
 | `Idioms` | 2 | — | **never complete by construction** ([ADR-0013](../doc/handwritten/for-maintainers/adr/0013-shelve-a-pattern-without-a-body-of-work-under-idioms.md)) |
 
@@ -1074,6 +1074,58 @@ no compiler will mention it. **Double-Checked Locking Optimization** is the patt
 being wrong — its flag has to be read and written atomically, or the thread that skips the lock can
 be handed a reference published before the object behind it is built. Annotating it marks the
 places to re-read, which is worth more than naming them.
+
+### Chapter 5, Concurrency: five held, and a participant that is a state
+
+Nine of seventeen. **Five patterns, five held, nothing excluded** — so both chapters read whole, and
+what remains of POSA2 is chapters 2 and 3. No narrowing again, the seventh instalment running: the
+papers relate these five to each other on every page — an active object has its own thread where a
+monitor object does not, Leader/Followers is offered against Half-Sync/Half-Async — and none of it is
+a work saying *this pattern is a kind of that one*, which is all ADR-0030 admits.
+
+**Leaving a participant out has become the rule rather than a first.** Chapter 4 left out one, and
+said so as a novelty. Chapter 5 leaves out five, and they are worth listing because a reader counting
+the authors' participants against the roles will otherwise think entries are missing:
+
+| Pattern | Participant | Why no role holds it |
+|---|---|---|
+| `LeaderFollowers` | leader, follower, processing thread | The authors describe these as roles a thread **takes turns playing** — a thread is a follower, then the leader, then a processing thread, then a follower again, within one event. A state a thread passes through has no declaration, and annotating a class with it would fix at compile time the one thing the pattern makes vary at run time. |
+| `HalfSyncHalfAsync` | external I/O sources | Network interfaces, disk controllers, end-user terminals. Nothing in the codebase declares them. |
+| `ThreadSpecificStorage` | application threads | The same participant, and the same reason, as *Double-Checked Locking Optimization*'s in chapter 4. |
+
+That is [ADR-0011](../doc/handwritten/for-maintainers/adr/0011-leave-out-what-cannot-be-annotated.md)
+applied to roles, five times over, and the pattern in it is clear: **what these patterns leave
+unannotatable is always a thread.** Every one of the five omissions is a thread or a device, and every
+participant that survives is a class, a method or a field. A vocabulary of attributes can say what a
+type is for; it cannot say what a thread is currently doing.
+
+**One name is at risk, and it is the one to check first.** The paper calls Active Object's buffer of
+pending requests an **Activation Queue**; the printed chapter may call it an **Activation List**. The
+entry uses `ActivationQueue`, which is the name in the text that was read. Under the rule stated above
+the chapter wins, so if it says list, this role is misnamed and nothing else in the instalment is.
+
+**Two entries say something about the platform rather than about the pattern**, and both are in the
+samples rather than in the summaries:
+
+* A monitor object on .NET has **exactly one condition, and it is the lock** — `Monitor.Wait` and
+  `Monitor.PulseAll` operate on the lock object itself. So the sample annotates one field with both
+  `MonitorLock` and `MonitorCondition`, which is true rather than lazy. The pattern's own example needs
+  two conditions, not-empty and not-full; the way to have two here is two predicates re-tested after
+  every wake.
+* `TSObjectCollection` **will usually go unused**: the runtime supplies thread-local storage, so a
+  codebase applying the pattern normally keeps no collection of its own. The role is kept because a
+  codebase that does keep one — one that must enumerate what every thread is holding — has nothing
+  else to annotate, and the sample is written as that case. Striking it is the maintainer's to do.
+
+**Role names use the authors' own abbreviation.** `TSObjectProxy` rather than
+`ThreadSpecificObjectProxy`: the papers introduce *TS* themselves and use it throughout, and the full
+words stutter badly under a container already called `ThreadSpecificStorage`.
+
+**Links appear in this catalogue for the first time**, in three of the five entries. Active Object is
+why: six unrelated types make up one occurrence, and no type hierarchy says which proxy belongs with
+which servant, which is exactly the case
+[ADR-0008](../doc/handwritten/for-maintainers/adr/0008-bind-participants-with-typed-links.md) exists
+for. The anchor is the proxy, because that is the participant a reader recognises.
 
 ## Shape of the generated attribute
 
