@@ -1,0 +1,59 @@
+{
+  "catalog": "Posa2",
+  "name": "LeaderFollowers",
+  "summary": "Lets a pool of threads take turns waiting on a shared set of event sources, so that the thread which receives an event is the thread that processes it, with no handoff and no dedicated dispatcher.",
+  "reference": {
+    "author": "Douglas Schmidt, Michael Stal, Hans Rohnert, Frank Buschmann",
+    "work": "Pattern-Oriented Software Architecture, Volume 2",
+    "year": 2000
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "ThreadPool",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "The group of threads that take turns, and the synchronizer they queue on. Its protocol is the pattern: the leader promotes a follower before it starts processing, and a leader that processes first leaves the event sources unwatched for exactly as long as the work takes.",
+      "links": []
+    },
+    {
+      "name": "HandleSet",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": true,
+      "summary": "The collection of event sources the leader waits on, which returns when an operation on one of them can be started without blocking. What is in the set is what the pool can serve, and a source added to it without a handler is an event that wakes a thread and goes nowhere.",
+      "links": [
+        "ThreadPool"
+      ]
+    },
+    {
+      "name": "EventHandler",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": false,
+      "summary": "Declares the hook methods that process the events arriving on a source. It says nothing about which thread will call them, and that is the point: any thread in the pool may, so the implementation may hold no state belonging to one of them.",
+      "links": [
+        "ThreadPool"
+      ]
+    },
+    {
+      "name": "ConcreteEventHandler",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "repeatable": false,
+      "summary": "One application service, processing the events of its source in its own way, and running in whichever thread has just been demoted from leader. Its hook method is the work that keeps that thread out of the pool while it runs.",
+      "links": [
+        "EventHandler"
+      ]
+    }
+  ]
+}
