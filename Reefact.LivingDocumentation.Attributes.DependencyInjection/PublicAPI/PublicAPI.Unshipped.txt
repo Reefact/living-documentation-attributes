@@ -24,3 +24,5 @@ Reefact.LivingDocumentation.Attributes.DependencyInjection.ServiceLocator.Servic
 Reefact.LivingDocumentation.Attributes.DependencyInjection.ServiceLocator.ServiceLocatorAttribute.ServiceLocatorAttribute() -> void
 Reefact.LivingDocumentation.Attributes.DependencyInjection.SingletonLifestyleAttribute
 Reefact.LivingDocumentation.Attributes.DependencyInjection.SingletonLifestyleAttribute.SingletonLifestyleAttribute() -> void
+Reefact.LivingDocumentation.Attributes.DependencyInjection.TransientLifestyleAttribute
+Reefact.LivingDocumentation.Attributes.DependencyInjection.TransientLifestyleAttribute.TransientLifestyleAttribute() -> void

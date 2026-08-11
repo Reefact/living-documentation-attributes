@@ -1,0 +1,23 @@
+{
+  "catalog": "DependencyInjection",
+  "name": "TransientLifestyle",
+  "summary": "A new instance is created for every consumer that asks for one, and none is ever reused.",
+  "reference": {
+    "author": "Steven van Deursen, Mark Seemann",
+    "work": "Dependency Injection Principles, Practices, and Patterns",
+    "year": 2019
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "TransientLifestyle",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "repeatable": false,
+      "summary": "A class of which a fresh instance is made on each request. It may hold state freely, because nothing of it survives the consumer that received it \u2014 and if it is disposable, that is the difficulty: the container generally will not track it, so a disposal nobody arranged is a leak nothing reports.",
+      "links": []
+    }
+  ]
+}
