@@ -78,6 +78,7 @@ system into the code it documents.
 | Multiple service instances per host, Service instance per host, Service instance per VM, Service instance per Container, Serverless deployment, Service deployment platform | Microservices Patterns | how an artifact is **packaged and run**. One assembly can hold all six over its life without a line changing, so an annotation on it would distinguish nothing |
 | 3rd party registration | Microservices Patterns | a registrar **outside** the service — Registrator, Prana, Kubernetes. The pattern's stated benefit is that the service code does none of this, so its participant is by construction not in the codebase |
 | Log aggregation | Microservices Patterns | the centralized logging service. What is in the codebase is a logging call, which every codebase has whether or not anything aggregates |
+| Cyclic Dependencies | Dependency Injection | a **cycle**, which is a property of a graph rather than of a declaration. Annotating each participant would assert a relation the attribute does not carry, and would say of each class something that is only true of the set |
 
 **Nothing a tool could check.** A role licenses no verifiable assertion, so an
 attribute would name it without letting anything range over it — the criterion of
@@ -93,6 +94,21 @@ applied to whether a pattern belongs here at all.
 | Responsibility Layers | Domain-Driven Design | what the pattern asserts is an **order** — each layer depends only on those beneath it, and the layers are ranked by rate of change — and nothing in this vocabulary orders assemblies. Taking the five Evans names (Potential, Operations, Decision Support, Policy, Commitment) as fixed roles would supply one, but those are the layers he found in a shipping domain, offered as an illustration; the pattern is finding your own |
 | Log deployments and changes | Microservices Patterns | a practice of whoever operates the application — *log every deployment and every change to the environment*. No declaration participates, which is the ground that excludes Continuous Integration and Evolving Order |
 | Big Ball of Mud | Foote and Yoder, *Pattern Languages of Program Design 4*, 2000 | what it asserts about a participant is that it has no discernible structure, which is the absence of an assertion rather than one. Reached through Evans, who uses it to characterise a neighbouring context, and decided on the same criterion that admits Smart UI ([ADR-0023](../doc/handwritten/for-maintainers/adr/0023-admit-an-anti-pattern-on-the-same-terms-as-any-pattern.md)) |
+
+**Code smells are excluded as a category, and that is a decision rather than a criterion.**
+`ConstructorOverInjection` and `AbuseOfAbstractFactories` are annotatable — a constructor and a
+factory abstraction — and they do license assertions, so both would pass the two tests above. They are
+absent because
+[ADR-0037](../doc/handwritten/for-maintainers/adr/0037-admit-the-dependency-injection-catalogue.md)
+refuses the **kind**, on the ground that an anti-pattern annotation earns its place as a *baseline* —
+the count of what is known and accepted, held by a build at *no more than this* — and a baseline needs
+a number that does not move when the reviewer changes. A shape gives one; `ConstructorOverInjection`'s
+*too many* does not.
+
+`AbuseOfAbstractFactories` is the borderline case and it is worth naming as one: it is a shape rather
+than a quantity, so the argument does not really reach it. It goes out with the other two because the
+decision is about the kind — a rule the next contributor can apply without reopening the record — and
+that record's *Alternatives Considered* carries the one-line amendment that would let it back in.
 
 **Anti-patterns are not excluded as a category.** `SmartUi` is catalogued, because
 Evans names it, a class or an assembly holds it, and it licenses assertions — the
@@ -119,7 +135,7 @@ exists to prevent, applied to catalogues rather than to decisions.
 | `DomainDrivenDesign` | 23 | 45 + 2 | **complete** — with one open question about a possible twenty-fourth entry, below |
 | `MicroservicesPatterns` | 41 | 51 | **read whole** — 41 held, 11 excluded in the tables above, 1 in the held-back section, and around half the work will be excluded ([ADR-0033](../doc/handwritten/for-maintainers/adr/0033-admit-microservices-patterns-as-a-catalogue.md)) |
 | `Posa2` | 17 | 17 | **complete** — all four chapters that hold patterns, admitted by [ADR-0036](../doc/handwritten/for-maintainers/adr/0036-admit-posa2-as-a-catalogue.md) |
-| `DependencyInjection` | 4 | 14 | **in progress** — chapter 4 of the three catalogue sections, admitted by [ADR-0037](../doc/handwritten/for-maintainers/adr/0037-admit-the-dependency-injection-catalogue.md) |
+| `DependencyInjection` | 4 | 14 | **in progress** — chapter 4 of the three catalogue sections. Eleven when complete: [ADR-0037](../doc/handwritten/for-maintainers/adr/0037-admit-the-dependency-injection-catalogue.md) refuses chapter 6's three, one on ADR-0011 and two by decision |
 | `AnalysisPatterns` | 39 | — | **deliberately stopped**, and the only one that is |
 | `Idioms` | 2 | — | **never complete by construction** ([ADR-0013](../doc/handwritten/for-maintainers/adr/0013-shelve-a-pattern-without-a-body-of-work-under-idioms.md)) |
 
