@@ -1,0 +1,22 @@
+{
+  "catalog": "DependencyInjection",
+  "name": "ConstrainedConstruction",
+  "summary": "Requires every implementation of an abstraction to offer a particular constructor signature, so that something outside can create them all the same way.",
+  "reference": {
+    "author": "Steven van Deursen, Mark Seemann",
+    "work": "Dependency Injection Principles, Practices, and Patterns",
+    "year": 2019
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "ConstrainedConstruction",
+      "targets": [
+        "Constructor"
+      ],
+      "repeatable": false,
+      "summary": "A constructor whose signature is imposed from outside \u2014 by late binding, by a serializer, by a framework that instantiates the type \u2014 rather than chosen to declare what the class needs. Whatever the class does depend on arrives by some other route, so this constructor's emptiness is not evidence that there is nothing to supply.",
+      "links": []
+    }
+  ]
+}
