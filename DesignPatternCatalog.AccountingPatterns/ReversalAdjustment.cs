@@ -24,7 +24,7 @@ namespace DesignPatternCatalog.AccountingPatterns {
         /// <summary>
         ///     Role played by a type or a member in the ReversalAdjustment design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute { }
+        public abstract class Role : DesignPatternAttribute { }
 
         /// <summary>
         ///     The correction as a whole: for every entry to be adjusted, two new entries. Nothing is edited and

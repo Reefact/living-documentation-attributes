@@ -19,6 +19,6 @@ namespace DesignPatternCatalog.EnterpriseApplicationArchitecture {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Interface, AllowMultiple = false, Inherited = false)]
-    public sealed class SeparatedInterfaceAttribute : LivingDocumentationAttribute { }
+    public sealed class SeparatedInterfaceAttribute : DesignPatternAttribute { }
 
 }

@@ -25,7 +25,7 @@ namespace DesignPatternCatalog.Posa2 {
         /// <summary>
         ///     Role played by a type or a member in the Interceptor design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute { }
+        public abstract class Role : DesignPatternAttribute { }
 
         /// <summary>
         ///     Declares the event-handling hook the framework calls out through. Its implementations are not called by

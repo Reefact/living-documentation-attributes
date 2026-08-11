@@ -20,6 +20,6 @@ namespace DesignPatternCatalog.Idioms {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
-    public sealed class ObjectMotherAttribute : LivingDocumentationAttribute { }
+    public sealed class ObjectMotherAttribute : DesignPatternAttribute { }
 
 }

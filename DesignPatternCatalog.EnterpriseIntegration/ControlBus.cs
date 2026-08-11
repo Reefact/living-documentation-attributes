@@ -24,7 +24,7 @@ namespace DesignPatternCatalog.EnterpriseIntegration {
         /// <summary>
         ///     Role played by a type or a member in the ControlBus design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute { }
+        public abstract class Role : DesignPatternAttribute { }
 
         /// <summary>
         ///     The second messaging subsystem, the one that administers the first. It uses the same mechanism and

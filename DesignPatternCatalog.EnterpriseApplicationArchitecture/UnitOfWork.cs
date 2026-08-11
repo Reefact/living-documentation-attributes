@@ -19,6 +19,6 @@ namespace DesignPatternCatalog.EnterpriseApplicationArchitecture {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class, AllowMultiple = false, Inherited = true)]
-    public sealed class UnitOfWorkAttribute : LivingDocumentationAttribute { }
+    public sealed class UnitOfWorkAttribute : DesignPatternAttribute { }
 
 }

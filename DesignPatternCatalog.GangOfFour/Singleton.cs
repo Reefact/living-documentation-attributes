@@ -19,6 +19,6 @@ namespace DesignPatternCatalog.GangOfFour {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
-    public sealed class SingletonAttribute : LivingDocumentationAttribute { }
+    public sealed class SingletonAttribute : DesignPatternAttribute { }
 
 }

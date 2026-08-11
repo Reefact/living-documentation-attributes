@@ -90,7 +90,7 @@ baseline, so no baseline is rewritten; the identity climb is unchanged, because 
 attribute is neither abstract nor declared in the narrowing pattern, so the climb stops at the
 narrower attribute exactly as it does today
 ([ADR-0019](0019-stop-the-identity-climb-at-the-pattern-boundary.md)'s rule as restated on
-`LivingDocumentationAttribute`); and the convention test
+`DesignPatternAttribute`); and the convention test
 `A_role_is_sealed_unless_something_derives_from_it` was written to allow precisely this — it
 asserts sealed *unless* something derives, which is why it survives the change unedited.
 

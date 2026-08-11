@@ -24,7 +24,7 @@ namespace DesignPatternCatalog.EnterpriseIntegration {
         /// <summary>
         ///     Role played by a type or a member in the TestMessage design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute { }
+        public abstract class Role : DesignPatternAttribute { }
 
         /// <summary>
         ///     Produces the messages to be sent through the component under test, constant, from a file or random.

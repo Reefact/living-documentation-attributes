@@ -24,7 +24,7 @@ namespace DesignPatternCatalog.MicroservicesPatterns {
         /// <summary>
         ///     Role played by a type or a member in the ServerSidePageFragmentComposition design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute { }
+        public abstract class Role : DesignPatternAttribute { }
 
         /// <summary>
         ///     The participant generating one region of the page, owned by the team that owns the service behind it.

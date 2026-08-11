@@ -31,8 +31,8 @@ namespace DesignPatternCatalog.Tests {
         // assembly holding the base marker is not among them: it ships no pattern.
         private static readonly Type[] Catalogued = Repository.CatalogueAssemblies
                                                              .SelectMany(assembly => assembly.GetTypes())
-                                                             .Where(type => typeof(LivingDocumentationAttribute).IsAssignableFrom(type))
-                                                             .Where(type => type != typeof(LivingDocumentationAttribute))
+                                                             .Where(type => typeof(DesignPatternAttribute).IsAssignableFrom(type))
+                                                             .Where(type => type != typeof(DesignPatternAttribute))
                                                              .ToArray();
 
         private static readonly Type[] Roles = Catalogued.Where(type => !type.IsAbstract).ToArray();
@@ -93,7 +93,7 @@ namespace DesignPatternCatalog.Tests {
             // identity at all: a pattern spread over seven attributes
             // must not be counted as seven patterns.
             Type[] identities = container.GetNestedTypes()
-                                         .Where(type => typeof(LivingDocumentationAttribute).IsAssignableFrom(type))
+                                         .Where(type => typeof(DesignPatternAttribute).IsAssignableFrom(type))
                                          .Where(type => !type.IsAbstract)
                                          .Select(PatternInfo.IdentityOf)
                                          .Distinct()

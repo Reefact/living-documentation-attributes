@@ -19,6 +19,6 @@ namespace DesignPatternCatalog.DomainDrivenDesign {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
-    public sealed class OpenHostServiceAttribute : LivingDocumentationAttribute { }
+    public sealed class OpenHostServiceAttribute : DesignPatternAttribute { }
 
 }

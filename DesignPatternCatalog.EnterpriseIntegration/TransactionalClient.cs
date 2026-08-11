@@ -25,7 +25,7 @@ namespace DesignPatternCatalog.EnterpriseIntegration {
         /// <summary>
         ///     Role played by a type or a member in the TransactionalClient design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute { }
+        public abstract class Role : DesignPatternAttribute { }
 
         /// <summary>
         ///     A sender whose message is not really on the channel until it commits. That is the guarantee worth

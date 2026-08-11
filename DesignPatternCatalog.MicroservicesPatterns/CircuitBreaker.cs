@@ -20,6 +20,6 @@ namespace DesignPatternCatalog.MicroservicesPatterns {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = false, Inherited = false)]
-    public sealed class CircuitBreakerAttribute : LivingDocumentationAttribute { }
+    public sealed class CircuitBreakerAttribute : DesignPatternAttribute { }
 
 }

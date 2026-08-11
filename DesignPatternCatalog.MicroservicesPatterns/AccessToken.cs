@@ -19,6 +19,6 @@ namespace DesignPatternCatalog.MicroservicesPatterns {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class | AttributeTargets.Struct, AllowMultiple = false, Inherited = false)]
-    public sealed class AccessTokenAttribute : LivingDocumentationAttribute { }
+    public sealed class AccessTokenAttribute : DesignPatternAttribute { }
 
 }

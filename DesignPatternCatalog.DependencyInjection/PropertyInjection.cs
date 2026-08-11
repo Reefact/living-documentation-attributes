@@ -19,6 +19,6 @@ namespace DesignPatternCatalog.DependencyInjection {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = false, Inherited = false)]
-    public sealed class PropertyInjectionAttribute : LivingDocumentationAttribute { }
+    public sealed class PropertyInjectionAttribute : DesignPatternAttribute { }
 
 }

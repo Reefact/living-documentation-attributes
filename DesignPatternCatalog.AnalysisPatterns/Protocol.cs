@@ -19,6 +19,6 @@ namespace DesignPatternCatalog.AnalysisPatterns {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
-    public class ProtocolAttribute : LivingDocumentationAttribute { }
+    public class ProtocolAttribute : DesignPatternAttribute { }
 
 }

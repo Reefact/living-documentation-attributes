@@ -19,6 +19,6 @@ namespace DesignPatternCatalog.EnterpriseApplicationArchitecture {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
-    public sealed class SingleTableInheritanceAttribute : LivingDocumentationAttribute { }
+    public sealed class SingleTableInheritanceAttribute : DesignPatternAttribute { }
 
 }

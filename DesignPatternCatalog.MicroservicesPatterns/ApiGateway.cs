@@ -20,6 +20,6 @@ namespace DesignPatternCatalog.MicroservicesPatterns {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class | AttributeTargets.Assembly, AllowMultiple = false, Inherited = false)]
-    public class ApiGatewayAttribute : LivingDocumentationAttribute { }
+    public class ApiGatewayAttribute : DesignPatternAttribute { }
 
 }

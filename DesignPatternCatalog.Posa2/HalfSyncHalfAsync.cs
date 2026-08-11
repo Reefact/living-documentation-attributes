@@ -26,7 +26,7 @@ namespace DesignPatternCatalog.Posa2 {
         /// <summary>
         ///     Role played by a type or a member in the HalfSyncHalfAsync design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute { }
+        public abstract class Role : DesignPatternAttribute { }
 
         /// <summary>
         ///     Where the high-level work happens, in threads of its own that may block: it has a stack and registers,

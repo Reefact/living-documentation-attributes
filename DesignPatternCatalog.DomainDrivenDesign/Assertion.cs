@@ -20,6 +20,6 @@ namespace DesignPatternCatalog.DomainDrivenDesign {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Method | AttributeTargets.Class | AttributeTargets.Struct, AllowMultiple = false, Inherited = true)]
-    public sealed class AssertionAttribute : LivingDocumentationAttribute { }
+    public sealed class AssertionAttribute : DesignPatternAttribute { }
 
 }

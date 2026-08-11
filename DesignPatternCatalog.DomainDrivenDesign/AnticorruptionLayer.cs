@@ -24,7 +24,7 @@ namespace DesignPatternCatalog.DomainDrivenDesign {
         /// <summary>
         ///     Role played by a type or a member in the AnticorruptionLayer design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute { }
+        public abstract class Role : DesignPatternAttribute { }
 
         /// <summary>
         ///     A simplified face over the upstream system, written in terms of the UPSTREAM model. It exists to make

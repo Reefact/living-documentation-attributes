@@ -39,7 +39,7 @@ fausse et plausible.
 
 ## Décision
 
-`LivingDocumentationAttribute` ne déclare aucun membre, et les règles permettant
+`DesignPatternAttribute` ne déclare aucun membre, et les règles permettant
 de relire un pattern depuis un type d'attribut sont documentées plutôt
 qu'implémentées.
 

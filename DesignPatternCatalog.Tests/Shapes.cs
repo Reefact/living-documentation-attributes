@@ -36,7 +36,7 @@ namespace DesignPatternCatalog.Tests {
         /// <summary>A multi-role pattern: a container, one abstract role base, one attribute per role.</summary>
         internal static class Pattern {
 
-            public abstract class Role : LivingDocumentationAttribute { }
+            public abstract class Role : DesignPatternAttribute { }
 
             [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class, AllowMultiple = true, Inherited = false)]
             public class ComponentAttribute : Role { }
@@ -68,7 +68,7 @@ namespace DesignPatternCatalog.Tests {
 
         /// <summary>A single-role pattern: a flat attribute, with neither nesting nor argument.</summary>
         [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct, AllowMultiple = false, Inherited = true)]
-        public class FlatAttribute : LivingDocumentationAttribute { }
+        public class FlatAttribute : DesignPatternAttribute { }
 
         /// <summary>A narrower case of the single-role pattern.</summary>
         [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = true)]

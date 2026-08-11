@@ -19,6 +19,6 @@ namespace DesignPatternCatalog.XUnitTestPatterns {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class, AllowMultiple = false, Inherited = true)]
-    public sealed class TestSelectionAttribute : LivingDocumentationAttribute { }
+    public sealed class TestSelectionAttribute : DesignPatternAttribute { }
 
 }

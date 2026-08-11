@@ -24,7 +24,7 @@ namespace DesignPatternCatalog.AnalysisPatterns {
         /// <summary>
         ///     Role played by a type or a member in the ConversionRatio design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute { }
+        public abstract class Role : DesignPatternAttribute { }
 
         /// <summary>
         ///     The factor from one unit to another, held as data. Figure 3.3 gives it two distinct ends and a number,

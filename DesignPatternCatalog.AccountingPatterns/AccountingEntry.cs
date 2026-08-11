@@ -24,7 +24,7 @@ namespace DesignPatternCatalog.AccountingPatterns {
         /// <summary>
         ///     Role played by a type or a member in the AccountingEntry design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute { }
+        public abstract class Role : DesignPatternAttribute { }
 
         /// <summary>
         ///     One record of an amount, in the ledger sense. It records money coming in and money going out, and also

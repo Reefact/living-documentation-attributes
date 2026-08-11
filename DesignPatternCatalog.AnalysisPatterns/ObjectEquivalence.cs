@@ -25,7 +25,7 @@ namespace DesignPatternCatalog.AnalysisPatterns {
         /// <summary>
         ///     Role played by a type or a member in the ObjectEquivalence design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute { }
+        public abstract class Role : DesignPatternAttribute { }
 
         /// <summary>
         ///     The claim that two or more things are one. It is an object rather than a merge because the claim may be

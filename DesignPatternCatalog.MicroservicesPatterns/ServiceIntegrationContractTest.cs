@@ -25,7 +25,7 @@ namespace DesignPatternCatalog.MicroservicesPatterns {
         /// <summary>
         ///     Role played by a type or a member in the ServiceIntegrationContractTest design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute { }
+        public abstract class Role : DesignPatternAttribute { }
 
         /// <summary>
         ///     The suite, written by one team and run by another. That split is the whole pattern and the thing a test

@@ -12,7 +12,7 @@ namespace DesignPatternCatalog.Usage {
     ///     Walks this assembly and prints every annotation it carries.
     /// </summary>
     /// <remarks>
-    ///     The whole walk goes through <see cref="LivingDocumentationAttribute" /> only. Not a single concrete attribute
+    ///     The whole walk goes through <see cref="DesignPatternAttribute" /> only. Not a single concrete attribute
     ///     type is named here, which is what makes a consumer independent from the size of the catalog: adding patterns
     ///     never changes this code.
     /// </remarks>
@@ -58,17 +58,17 @@ namespace DesignPatternCatalog.Usage {
             // The assembly itself is a participant. A bounded context, a core domain and a shared kernel are
             // held by an assembly rather than by anything inside it, so a reader that walks only types and
             // members is blind to every strategic pattern there is.
-            foreach (LivingDocumentationAttribute attribute in Annotations(assembly)) {
+            foreach (DesignPatternAttribute attribute in Annotations(assembly)) {
                 annotations.Add(new Annotation(assembly, null, null, attribute));
             }
 
             foreach (Type type in assembly.GetTypes().Where(IsSample).OrderBy(type => type.FullName)) {
-                foreach (LivingDocumentationAttribute attribute in Annotations(type)) {
+                foreach (DesignPatternAttribute attribute in Annotations(type)) {
                     annotations.Add(new Annotation(assembly, type, null, attribute));
                 }
 
                 foreach (MemberInfo member in type.GetMembers(DeclaredMembers)) {
-                    foreach (LivingDocumentationAttribute attribute in Annotations(member)) {
+                    foreach (DesignPatternAttribute attribute in Annotations(member)) {
                         annotations.Add(new Annotation(assembly, type, member, attribute));
                     }
                 }
@@ -77,12 +77,12 @@ namespace DesignPatternCatalog.Usage {
             return annotations.ToArray();
         }
 
-        private static IEnumerable<LivingDocumentationAttribute> Annotations(MemberInfo target) {
-            return target.GetCustomAttributes(false).OfType<LivingDocumentationAttribute>();
+        private static IEnumerable<DesignPatternAttribute> Annotations(MemberInfo target) {
+            return target.GetCustomAttributes(false).OfType<DesignPatternAttribute>();
         }
 
-        private static IEnumerable<LivingDocumentationAttribute> Annotations(Assembly target) {
-            return target.GetCustomAttributes(false).OfType<LivingDocumentationAttribute>();
+        private static IEnumerable<DesignPatternAttribute> Annotations(Assembly target) {
+            return target.GetCustomAttributes(false).OfType<DesignPatternAttribute>();
         }
 
         private static void PrintInventory(IEnumerable<Annotation> annotations) {
@@ -124,7 +124,7 @@ namespace DesignPatternCatalog.Usage {
 
         #region Nested types declarations
 
-        private sealed record Annotation(Assembly Assembly, Type? Owner, MemberInfo? Member, LivingDocumentationAttribute Attribute) {
+        private sealed record Annotation(Assembly Assembly, Type? Owner, MemberInfo? Member, DesignPatternAttribute Attribute) {
 
             public string Describe() {
                 string target = Owner is null   ? $"{Assembly.GetName().Name} (assembly)"
@@ -141,7 +141,7 @@ namespace DesignPatternCatalog.Usage {
                 // true should the base ever gain one.
                 foreach (PropertyInfo property in Attribute.GetType().GetProperties()) {
                     if (property.PropertyType != typeof(Type)) { continue; }
-                    if (property.DeclaringType == typeof(LivingDocumentationAttribute)) { continue; }
+                    if (property.DeclaringType == typeof(DesignPatternAttribute)) { continue; }
                     if (property.GetValue(Attribute) is not Type linked) { continue; }
 
                     yield return $"{property.Name} = {linked.Name}";

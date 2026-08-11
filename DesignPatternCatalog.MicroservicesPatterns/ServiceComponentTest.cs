@@ -25,7 +25,7 @@ namespace DesignPatternCatalog.MicroservicesPatterns {
         /// <summary>
         ///     Role played by a type or a member in the ServiceComponentTest design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute { }
+        public abstract class Role : DesignPatternAttribute { }
 
         /// <summary>
         ///     The suite that exercises the service and nothing beyond it. Fast, cheap and reliable, and it can be

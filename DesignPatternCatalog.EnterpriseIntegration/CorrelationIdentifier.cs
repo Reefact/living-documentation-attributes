@@ -24,7 +24,7 @@ namespace DesignPatternCatalog.EnterpriseIntegration {
         /// <summary>
         ///     Role played by a type or a member in the CorrelationIdentifier design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute { }
+        public abstract class Role : DesignPatternAttribute { }
 
         /// <summary>
         ///     The property identifying a request uniquely. It is what a reply will quote, so it must be unique for as

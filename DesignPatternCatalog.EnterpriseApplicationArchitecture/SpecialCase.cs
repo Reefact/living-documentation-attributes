@@ -19,6 +19,6 @@ namespace DesignPatternCatalog.EnterpriseApplicationArchitecture {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct, AllowMultiple = false, Inherited = true)]
-    public sealed class SpecialCaseAttribute : LivingDocumentationAttribute { }
+    public sealed class SpecialCaseAttribute : DesignPatternAttribute { }
 
 }

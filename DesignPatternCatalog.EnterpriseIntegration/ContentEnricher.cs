@@ -24,7 +24,7 @@ namespace DesignPatternCatalog.EnterpriseIntegration {
         /// <summary>
         ///     Role played by a type or a member in the ContentEnricher design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute { }
+        public abstract class Role : DesignPatternAttribute { }
 
         /// <summary>
         ///     The participant that augments a message with data the sender did not have. It uses what the message

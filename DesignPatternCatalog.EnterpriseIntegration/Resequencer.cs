@@ -19,6 +19,6 @@ namespace DesignPatternCatalog.EnterpriseIntegration {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
-    public sealed class ResequencerAttribute : LivingDocumentationAttribute { }
+    public sealed class ResequencerAttribute : DesignPatternAttribute { }
 
 }

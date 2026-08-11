@@ -19,6 +19,6 @@ namespace DesignPatternCatalog.XUnitTestPatterns {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = false, Inherited = false)]
-    public sealed class MinimalFixtureAttribute : LivingDocumentationAttribute { }
+    public sealed class MinimalFixtureAttribute : DesignPatternAttribute { }
 
 }

@@ -25,7 +25,7 @@ namespace DesignPatternCatalog.MicroservicesPatterns {
         /// <summary>
         ///     Role played by a type or a member in the Saga design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute { }
+        public abstract class Role : DesignPatternAttribute { }
 
         /// <summary>
         ///     The whole sequence, standing in for a transaction that cannot span services. It has no rollback of its

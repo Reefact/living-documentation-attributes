@@ -24,7 +24,7 @@ namespace DesignPatternCatalog.MicroservicesPatterns {
         /// <summary>
         ///     Role played by a type or a member in the IdempotentConsumer design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute { }
+        public abstract class Role : DesignPatternAttribute { }
 
         /// <summary>
         ///     The handler for which processing a message once and processing it three times have the same outcome. At-

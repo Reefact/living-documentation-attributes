@@ -19,6 +19,6 @@ namespace DesignPatternCatalog.EnterpriseIntegration {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
-    public sealed class EventDrivenConsumerAttribute : LivingDocumentationAttribute { }
+    public sealed class EventDrivenConsumerAttribute : DesignPatternAttribute { }
 
 }

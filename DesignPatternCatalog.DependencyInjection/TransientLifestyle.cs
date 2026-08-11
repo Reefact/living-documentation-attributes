@@ -19,6 +19,6 @@ namespace DesignPatternCatalog.DependencyInjection {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct, AllowMultiple = false, Inherited = false)]
-    public sealed class TransientLifestyleAttribute : LivingDocumentationAttribute { }
+    public sealed class TransientLifestyleAttribute : DesignPatternAttribute { }
 
 }

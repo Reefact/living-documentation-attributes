@@ -24,7 +24,7 @@ namespace DesignPatternCatalog.EnterpriseApplicationArchitecture {
         /// <summary>
         ///     Role played by a type or a member in the OptimisticOfflineLock design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute { }
+        public abstract class Role : DesignPatternAttribute { }
 
         /// <summary>
         ///     A record whose update is refused if it changed since it was read. It suits a system where conflicts are

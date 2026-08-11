@@ -20,6 +20,6 @@ namespace DesignPatternCatalog.EnterpriseIntegration {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class | AttributeTargets.Struct | AttributeTargets.Assembly, AllowMultiple = false, Inherited = false)]
-    public sealed class CanonicalDataModelAttribute : LivingDocumentationAttribute { }
+    public sealed class CanonicalDataModelAttribute : DesignPatternAttribute { }
 
 }

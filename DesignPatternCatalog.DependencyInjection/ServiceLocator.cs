@@ -24,7 +24,7 @@ namespace DesignPatternCatalog.DependencyInjection {
         /// <summary>
         ///     Role played by a type or a member in the ServiceLocator design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute { }
+        public abstract class Role : DesignPatternAttribute { }
 
         /// <summary>
         ///     The registry a consumer asks. It is not the participant that carries the cost, and a codebase has one of

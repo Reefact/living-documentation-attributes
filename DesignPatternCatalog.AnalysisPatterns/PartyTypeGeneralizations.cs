@@ -25,7 +25,7 @@ namespace DesignPatternCatalog.AnalysisPatterns {
         /// <summary>
         ///     Role played by a type or a member in the PartyTypeGeneralizations design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute { }
+        public abstract class Role : DesignPatternAttribute { }
 
         /// <summary>
         ///     The kind of party, and itself an object that generalises. Putting the generalization here rather than in

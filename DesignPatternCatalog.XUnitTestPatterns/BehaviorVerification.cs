@@ -19,6 +19,6 @@ namespace DesignPatternCatalog.XUnitTestPatterns {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Method | AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
-    public sealed class BehaviorVerificationAttribute : LivingDocumentationAttribute { }
+    public sealed class BehaviorVerificationAttribute : DesignPatternAttribute { }
 
 }

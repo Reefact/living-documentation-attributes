@@ -19,6 +19,6 @@ namespace DesignPatternCatalog.AnalysisPatterns {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = true)]
-    public sealed class OperatingScopeAttribute : LivingDocumentationAttribute { }
+    public sealed class OperatingScopeAttribute : DesignPatternAttribute { }
 
 }

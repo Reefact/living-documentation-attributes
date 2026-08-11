@@ -20,6 +20,6 @@ namespace DesignPatternCatalog.EnterpriseApplicationArchitecture {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct, AllowMultiple = false, Inherited = true)]
-    public sealed class MoneyAttribute : LivingDocumentationAttribute { }
+    public sealed class MoneyAttribute : DesignPatternAttribute { }
 
 }

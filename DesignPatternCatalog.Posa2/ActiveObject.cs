@@ -25,7 +25,7 @@ namespace DesignPatternCatalog.Posa2 {
         /// <summary>
         ///     Role played by a type or a member in the ActiveObject design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute { }
+        public abstract class Role : DesignPatternAttribute { }
 
         /// <summary>
         ///     The interface clients call, in the client's own thread. Every call it takes returns immediately, having

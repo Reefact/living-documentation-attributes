@@ -24,7 +24,7 @@ namespace DesignPatternCatalog.AnalysisPatterns {
         /// <summary>
         ///     Role played by a type or a member in the CompletedAndAbandonedActions design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute { }
+        public abstract class Role : DesignPatternAttribute { }
 
         /// <summary>
         ///     An action given up on, whether or not it was ever started. Abandonment cuts across the proposed and

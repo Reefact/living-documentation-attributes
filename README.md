@@ -118,7 +118,7 @@ Two conventions are worth knowing, because nothing enforces them:
 The library publishes no reader, on purpose: a consumer already holds the
 attribute's type, and everything about a pattern is carried by the shape of its
 declaration rather than stored a second time. Four rules turn one into the other,
-and they are documented on `LivingDocumentationAttribute` so they travel with the
+and they are documented on `DesignPatternAttribute` so they travel with the
 package:
 
 | | |
@@ -171,7 +171,7 @@ assertions they carry**, never by their names.
 Almost nothing this library decides is defended by the compiler, and the
 attributes are generated from a catalog, so a reader of the output cannot tell a
 decided trait from an incidental one. The reasoning is kept in the
-[ADR base](doc/handwritten/for-maintainers/adr/) — 38 records, English
+[ADR base](doc/handwritten/for-maintainers/adr/) — 39 records, English
 canonical with a French translation alongside — and that is where to look when a
 shape seems arbitrary.
 

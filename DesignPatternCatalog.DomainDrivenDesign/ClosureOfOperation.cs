@@ -19,6 +19,6 @@ namespace DesignPatternCatalog.DomainDrivenDesign {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Method, AllowMultiple = false, Inherited = true)]
-    public sealed class ClosureOfOperationAttribute : LivingDocumentationAttribute { }
+    public sealed class ClosureOfOperationAttribute : DesignPatternAttribute { }
 
 }

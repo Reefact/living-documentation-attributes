@@ -24,7 +24,7 @@ namespace DesignPatternCatalog.EnterpriseApplicationArchitecture {
         /// <summary>
         ///     Role played by a type or a member in the ModelViewController design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute { }
+        public abstract class Role : DesignPatternAttribute { }
 
         /// <summary>
         ///     What the presentation is about, and the only one of the three that knows nothing of the other two. A

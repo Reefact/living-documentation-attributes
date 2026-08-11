@@ -24,7 +24,7 @@ namespace DesignPatternCatalog.AnalysisPatterns {
         /// <summary>
         ///     Role played by a type or a member in the EnterpriseSegment design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute { }
+        public abstract class Role : DesignPatternAttribute { }
 
         /// <summary>
         ///     The slice itself, holding at most one element per dimension. It is a value — two segments naming the

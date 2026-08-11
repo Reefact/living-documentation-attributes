@@ -35,8 +35,8 @@ Le générateur refuse le cas plutôt que de l'émettre, pour les deux relations
 generated yet*. L'ADR-0005 n'avait anticipé cela que pour une déclinaison.
 
 Deux documents livrés avec la bibliothèque contredisaient la décision acceptée. La
-règle d'identité publiée sur `LivingDocumentationAttribute` disait *le type
-immédiatement sous `LivingDocumentationAttribute`* — soit l'alternative que
+règle d'identité publiée sur `DesignPatternAttribute` disait *le type
+immédiatement sous `DesignPatternAttribute`* — soit l'alternative que
 l'ADR-0005 a envisagée puis rejetée, et qui donne la mauvaise réponse pour la
 seule relation que porte le catalogue. `DeclensionAttribute` illustrait une
 déclinaison par les objets-valeurs de Fowler et d'Evans, dont

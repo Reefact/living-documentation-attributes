@@ -92,7 +92,7 @@ d'API publique, donc aucune baseline n'est réécrite ; la remontée d'identité
 parce qu'un attribut de rôle n'est ni abstrait ni déclaré dans le pattern restreignant, si bien
 que la remontée s'arrête sur l'attribut le plus étroit exactement comme aujourd'hui (la règle de
 [l'ADR-0019](0019-stop-the-identity-climb-at-the-pattern-boundary.md), telle que reformulée sur
-`LivingDocumentationAttribute`) ; et le test de convention
+`DesignPatternAttribute`) ; et le test de convention
 `A_role_is_sealed_unless_something_derives_from_it` a été écrit pour permettre précisément ce
 cas — il exige *sealed* **sauf** si quelque chose dérive, ce qui explique qu'il survive sans
 retouche.

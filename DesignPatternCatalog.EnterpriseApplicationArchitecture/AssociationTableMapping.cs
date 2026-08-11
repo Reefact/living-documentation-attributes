@@ -19,6 +19,6 @@ namespace DesignPatternCatalog.EnterpriseApplicationArchitecture {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field, AllowMultiple = false, Inherited = false)]
-    public sealed class AssociationTableMappingAttribute : LivingDocumentationAttribute { }
+    public sealed class AssociationTableMappingAttribute : DesignPatternAttribute { }
 
 }

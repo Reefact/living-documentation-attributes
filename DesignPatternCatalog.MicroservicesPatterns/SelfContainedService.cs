@@ -20,6 +20,6 @@ namespace DesignPatternCatalog.MicroservicesPatterns {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class | AttributeTargets.Assembly, AllowMultiple = false, Inherited = false)]
-    public sealed class SelfContainedServiceAttribute : LivingDocumentationAttribute { }
+    public sealed class SelfContainedServiceAttribute : DesignPatternAttribute { }
 
 }

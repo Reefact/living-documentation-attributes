@@ -19,6 +19,6 @@ namespace DesignPatternCatalog.XUnitTestPatterns {
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Method, AllowMultiple = false, Inherited = false)]
-    public sealed class DeltaAssertionAttribute : LivingDocumentationAttribute { }
+    public sealed class DeltaAssertionAttribute : DesignPatternAttribute { }
 
 }

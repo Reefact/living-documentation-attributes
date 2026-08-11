@@ -24,7 +24,7 @@ namespace DesignPatternCatalog.GangOfFour {
         /// <summary>
         ///     Role played by a type or a member in the Visitor design pattern.
         /// </summary>
-        public abstract class Role : LivingDocumentationAttribute { }
+        public abstract class Role : DesignPatternAttribute { }
 
         /// <summary>
         ///     Declares one visit operation per concrete element of the structure.
