@@ -89,7 +89,7 @@ namespace Reefact.LivingDocumentation.Attributes.Usage.Posa2.ActiveObjectSample 
     ///     from the register's, and what an operator waits on once the register is further behind than
     ///     the backlog is long.
     /// </remarks>
-    [ActiveObject.ActivationQueue(Proxy = typeof(IDispatchDesk))]
+    [ActiveObject.ActivationList(Proxy = typeof(IDispatchDesk))]
     public sealed class DispatchBacklog {
 
         private readonly object                _gate     = new object();

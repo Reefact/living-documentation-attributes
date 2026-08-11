@@ -10,7 +10,7 @@
   "inherited": false,
   "roles": [
     {
-      "name": "TSObjectProxy",
+      "name": "ThreadSpecificObjectProxy",
       "targets": [
         "Interface",
         "Class"
@@ -20,7 +20,7 @@
       "links": []
     },
     {
-      "name": "TSObject",
+      "name": "ThreadSpecificObject",
       "targets": [
         "Field",
         "Property"
@@ -28,19 +28,31 @@
       "repeatable": false,
       "summary": "One thread's own instance of the thread-specific object, reached only through the proxy. Nothing serializes access to it because nothing else can see it \u2014 so publishing a reference to it anywhere another thread can reach removes the only guarantee the pattern makes.",
       "links": [
-        "TSObjectProxy"
+        "ThreadSpecificObjectProxy"
       ]
     },
     {
-      "name": "TSObjectCollection",
+      "name": "ThreadSpecificObjectSet",
       "targets": [
         "Interface",
         "Class"
       ],
       "repeatable": true,
-      "summary": "The per-thread map from keys to that thread's objects, which the proxy uses and the caller never sees. On a platform whose runtime supplies thread-local storage this is the runtime's, and the role is for the codebases that keep their own.",
+      "summary": "The per-thread set of that thread's objects, which the proxy uses and the caller never sees. On a platform whose runtime supplies thread-local storage this is the runtime's, and the role is for the codebases that keep their own.",
       "links": [
-        "TSObjectProxy"
+        "ThreadSpecificObjectProxy"
+      ]
+    },
+    {
+      "name": "KeyFactory",
+      "targets": [
+        "Interface",
+        "Class"
+      ],
+      "repeatable": true,
+      "summary": "Mints the keys under which objects are filed, one key per kind of thread-specific object rather than one per thread. A key handed out twice for two different kinds of object is two callers reading each other's storage, and it is the one failure here that no thread boundary protects against.",
+      "links": [
+        "ThreadSpecificObjectProxy"
       ]
     }
   ]

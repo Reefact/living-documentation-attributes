@@ -1099,10 +1099,26 @@ unannotatable is always a thread.** Every one of the five omissions is a thread 
 participant that survives is a class, a method or a field. A vocabulary of attributes can say what a
 type is for; it cannot say what a thread is currently doing.
 
-**One name is at risk, and it is the one to check first.** The paper calls Active Object's buffer of
-pending requests an **Activation Queue**; the printed chapter may call it an **Activation List**. The
-entry uses `ActivationQueue`, which is the name in the text that was read. Under the rule stated above
-the chapter wins, so if it says list, this role is misnamed and nothing else in the instalment is.
+**The name that was flagged as at risk was wrong, and so was another one.** The instalment that added
+these five said Active Object's buffer might be called an *Activation List* by the book rather than the
+*Activation Queue* of the paper, and that the chapter would win. A source settled it: the POSA2 tutorial
+Schmidt publishes alongside the book says *"an activation list maintains pending"* and *"the scheduler
+enqueues the method request into the activation list"*, and never says queue. The role is now
+`ActivationList`.
+
+The same source shows `ThreadSpecificStorage` was wrong in a way nothing had flagged. Its structure
+diagram labels the participants **Thread-Specific Object**, **Thread-Specific Object Proxy** and
+**Thread-Specific Object Set** — spelled out, and a *set* rather than the paper's *collection*. So the
+three roles are renamed, the paragraph that justified the `TS` abbreviation as the authors' own is
+withdrawn, and a fourth participant the diagram carries and the paper's list does not — the **Key
+Factory** — is added.
+
+Two things follow, and the second matters more than the first. **The flag worked**: writing down which
+name was uncertain is what made it findable, and it took one source to close. **The rule needs the
+better source, not the reachable one**: three of nine entries in these two chapters were built on
+pre-publication papers where the book had renamed something, and only one of the three had been
+suspected. Later chapters are checked against the tutorial before the entry is written rather than
+after.
 
 **Two entries say something about the platform rather than about the pattern**, and both are in the
 samples rather than in the summaries:
@@ -1112,14 +1128,11 @@ samples rather than in the summaries:
   `MonitorLock` and `MonitorCondition`, which is true rather than lazy. The pattern's own example needs
   two conditions, not-empty and not-full; the way to have two here is two predicates re-tested after
   every wake.
-* `TSObjectCollection` **will usually go unused**: the runtime supplies thread-local storage, so a
-  codebase applying the pattern normally keeps no collection of its own. The role is kept because a
-  codebase that does keep one — one that must enumerate what every thread is holding — has nothing
-  else to annotate, and the sample is written as that case. Striking it is the maintainer's to do.
-
-**Role names use the authors' own abbreviation.** `TSObjectProxy` rather than
-`ThreadSpecificObjectProxy`: the papers introduce *TS* themselves and use it throughout, and the full
-words stutter badly under a container already called `ThreadSpecificStorage`.
+* `ThreadSpecificObjectSet` and `KeyFactory` **will usually go unused**: the runtime supplies
+  thread-local storage, so a codebase applying the pattern normally keeps neither a set nor a key
+  factory of its own. Both roles are kept because the book's structure diagram carries them and a
+  codebase that does keep them — one that must enumerate what every thread is holding — has nothing else
+  to annotate. The sample is written as that case. Striking them is the maintainer's to do.
 
 **Links appear in this catalogue for the first time**, in three of the five entries. Active Object is
 why: six unrelated types make up one occurrence, and no type hierarchy says which proxy belongs with
