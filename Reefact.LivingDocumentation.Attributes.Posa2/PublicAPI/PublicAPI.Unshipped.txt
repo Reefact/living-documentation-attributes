@@ -33,6 +33,19 @@ Reefact.LivingDocumentation.Attributes.Posa2.DoubleCheckedLockingOptimization.Mu
 Reefact.LivingDocumentation.Attributes.Posa2.DoubleCheckedLockingOptimization.MutexAttribute.MutexAttribute() -> void
 Reefact.LivingDocumentation.Attributes.Posa2.DoubleCheckedLockingOptimization.Role
 Reefact.LivingDocumentation.Attributes.Posa2.DoubleCheckedLockingOptimization.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.HalfSyncHalfAsync
+Reefact.LivingDocumentation.Attributes.Posa2.HalfSyncHalfAsync.AsynchronousTaskLayerAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.HalfSyncHalfAsync.AsynchronousTaskLayerAttribute.AsynchronousTaskLayerAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.HalfSyncHalfAsync.AsynchronousTaskLayerAttribute.QueueingLayer.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.Posa2.HalfSyncHalfAsync.AsynchronousTaskLayerAttribute.QueueingLayer.init -> void
+Reefact.LivingDocumentation.Attributes.Posa2.HalfSyncHalfAsync.QueueingLayerAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.HalfSyncHalfAsync.QueueingLayerAttribute.QueueingLayerAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.HalfSyncHalfAsync.Role
+Reefact.LivingDocumentation.Attributes.Posa2.HalfSyncHalfAsync.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.HalfSyncHalfAsync.SynchronousTaskLayerAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.HalfSyncHalfAsync.SynchronousTaskLayerAttribute.QueueingLayer.get -> System.Type?
+Reefact.LivingDocumentation.Attributes.Posa2.HalfSyncHalfAsync.SynchronousTaskLayerAttribute.QueueingLayer.init -> void
+Reefact.LivingDocumentation.Attributes.Posa2.HalfSyncHalfAsync.SynchronousTaskLayerAttribute.SynchronousTaskLayerAttribute() -> void
 Reefact.LivingDocumentation.Attributes.Posa2.MonitorObject
 Reefact.LivingDocumentation.Attributes.Posa2.MonitorObject.MonitorConditionAttribute
 Reefact.LivingDocumentation.Attributes.Posa2.MonitorObject.MonitorConditionAttribute.MonitorConditionAttribute() -> void
