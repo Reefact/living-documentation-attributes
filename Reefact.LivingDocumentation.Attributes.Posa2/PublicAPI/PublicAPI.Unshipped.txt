@@ -6,3 +6,10 @@ Reefact.LivingDocumentation.Attributes.Posa2.ScopedLocking.LockAttribute
 Reefact.LivingDocumentation.Attributes.Posa2.ScopedLocking.LockAttribute.LockAttribute() -> void
 Reefact.LivingDocumentation.Attributes.Posa2.ScopedLocking.Role
 Reefact.LivingDocumentation.Attributes.Posa2.ScopedLocking.Role.Role() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.StrategizedLocking
+Reefact.LivingDocumentation.Attributes.Posa2.StrategizedLocking.ComponentAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.StrategizedLocking.ComponentAttribute.ComponentAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.StrategizedLocking.LockingStrategyAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.StrategizedLocking.LockingStrategyAttribute.LockingStrategyAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.StrategizedLocking.Role
+Reefact.LivingDocumentation.Attributes.Posa2.StrategizedLocking.Role.Role() -> void
