@@ -1,0 +1,5 @@
+#nullable enable
+DesignPatternCatalog.Idioms.NullObjectAttribute
+DesignPatternCatalog.Idioms.NullObjectAttribute.NullObjectAttribute() -> void
+DesignPatternCatalog.Idioms.ObjectMotherAttribute
+DesignPatternCatalog.Idioms.ObjectMotherAttribute.ObjectMotherAttribute() -> void

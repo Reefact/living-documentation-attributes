@@ -1,4 +1,4 @@
-# living-documentation-attributes — guide for Claude Code
+# design-pattern-catalog — guide for Claude Code
 
 A vocabulary of attributes that let code state which design pattern a type or a
 member participates in. The attributes carry no behaviour, so almost nothing this
@@ -23,7 +23,7 @@ incidental one. If it is not in the ADR base, it is lost.
 
 ## Never hand-edit a generated attribute
 
-Everything under `Reefact.LivingDocumentation.Attributes.<Catalog>/` is generated
+Everything under `DesignPatternCatalog.<Catalog>/` is generated
 from `catalog/<Catalog>/<Pattern>.json`, and so is
 `doc/generated/catalog-index.md`. One project per catalogued work, each shipped as
 its own package. Edit the catalog, then:
@@ -37,8 +37,8 @@ Regenerating an unchanged catalog must leave the working tree clean.
 ## Build & run
 
 ```
-dotnet build Reefact.LivingDocumentation.Attributes.sln
-dotnet run --project Reefact.LivingDocumentation.Attributes.Usage
+dotnet build DesignPatternCatalog.sln
+dotnet run --project DesignPatternCatalog.Usage
 ```
 
 The library multi-targets `netstandard2.0` through `net8.0`; a change that

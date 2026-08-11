@@ -85,7 +85,7 @@ it, rather than rediscovering them:
    catalog must leave the working tree clean — if it does not, a generated file
    was edited by hand.
 3. Add or update the sample in
-   `Reefact.LivingDocumentation.Attributes.Usage/<Catalog>/<Pattern>Usage.cs`.
+   `DesignPatternCatalog.Usage/<Catalog>/<Pattern>Usage.cs`.
 4. Build the solution, run `dotnet test`, and run the sample project. The tests
    assert what a generated attribute must look like; the inventory is the check
    that the catalog reads back.

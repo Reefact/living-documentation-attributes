@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DesignPatternCatalog.GangOfFour\DesignPatternCatalog.GangOfFour.csproj" />
+    <ProjectReference Include="..\DesignPatternCatalog.DomainDrivenDesign\DesignPatternCatalog.DomainDrivenDesign.csproj" />
+    <ProjectReference Include="..\DesignPatternCatalog.EnterpriseApplicationArchitecture\DesignPatternCatalog.EnterpriseApplicationArchitecture.csproj" />
+    <ProjectReference Include="..\DesignPatternCatalog.EnterpriseIntegration\DesignPatternCatalog.EnterpriseIntegration.csproj" />
+    <ProjectReference Include="..\DesignPatternCatalog.AnalysisPatterns\DesignPatternCatalog.AnalysisPatterns.csproj" />
+    <ProjectReference Include="..\DesignPatternCatalog.AccountingPatterns\DesignPatternCatalog.AccountingPatterns.csproj" />
+    <ProjectReference Include="..\DesignPatternCatalog.Idioms\DesignPatternCatalog.Idioms.csproj" />
+    <ProjectReference Include="..\DesignPatternCatalog.XUnitTestPatterns\DesignPatternCatalog.XUnitTestPatterns.csproj" />
+    <ProjectReference Include="..\DesignPatternCatalog.MicroservicesPatterns\DesignPatternCatalog.MicroservicesPatterns.csproj" />
+    <ProjectReference Include="..\DesignPatternCatalog.Posa2\DesignPatternCatalog.Posa2.csproj" />
+    <ProjectReference Include="..\DesignPatternCatalog.DependencyInjection\DesignPatternCatalog.DependencyInjection.csproj" />
+    <ProjectReference Include="..\DesignPatternCatalog.Usage.TrainOperations\DesignPatternCatalog.Usage.TrainOperations.csproj" />
+    <ProjectReference Include="..\DesignPatternCatalog.Usage.Invoicing\DesignPatternCatalog.Usage.Invoicing.csproj" />
+    <ProjectReference Include="..\DesignPatternCatalog.Usage.RailNetwork\DesignPatternCatalog.Usage.RailNetwork.csproj" />
+    <ProjectReference Include="..\DesignPatternCatalog.Usage.TrainOperations.Contracts\DesignPatternCatalog.Usage.TrainOperations.Contracts.csproj" />
+    <ProjectReference Include="..\DesignPatternCatalog.Usage.ParkingPermits\DesignPatternCatalog.Usage.ParkingPermits.csproj" />
+    <ProjectReference Include="..\DesignPatternCatalog.Usage.BloodBank.Domain\DesignPatternCatalog.Usage.BloodBank.Domain.csproj" />
+    <ProjectReference Include="..\DesignPatternCatalog.Usage.BloodBank.Application\DesignPatternCatalog.Usage.BloodBank.Application.csproj" />
+    <ProjectReference Include="..\DesignPatternCatalog.Usage.BloodBank.Infrastructure\DesignPatternCatalog.Usage.BloodBank.Infrastructure.csproj" />
+    <ProjectReference Include="..\DesignPatternCatalog.Usage.BloodBank.Ui\DesignPatternCatalog.Usage.BloodBank.Ui.csproj" />
+    <ProjectReference Include="..\DesignPatternCatalog.Usage.Observatory.Instruments\DesignPatternCatalog.Usage.Observatory.Instruments.csproj" />
+    <ProjectReference Include="..\DesignPatternCatalog.Usage.Observatory.Spectrograph\DesignPatternCatalog.Usage.Observatory.Spectrograph.csproj" />
+    <ProjectReference Include="..\DesignPatternCatalog.Usage.Observatory.WideFieldCamera\DesignPatternCatalog.Usage.Observatory.WideFieldCamera.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/Reefact/living-documentation-attributes/catalog/pattern.schema.json",
+  "$id": "https://github.com/Reefact/design-pattern-catalog/catalog/pattern.schema.json",
   "title": "Pattern catalog entry",
   "description": "One design pattern and the roles its participants can hold. A pattern whose single role carries the pattern's own name is emitted as a flat attribute; every other pattern is emitted as a static container holding one attribute per role.",
   "type": "object",

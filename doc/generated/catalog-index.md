@@ -354,7 +354,7 @@
 
 ## Accounting Patterns
 
-`Reefact.LivingDocumentation.Attributes.AccountingPatterns` — 9 patterns, 29 roles.
+`DesignPatternCatalog.AccountingPatterns` — 9 patterns, 29 roles.
 
 ### Account (Accounting Patterns)
 
@@ -374,7 +374,7 @@ Gathers the entries of one classification and answers for them, so that a value'
 
 **Balance** — What the entries add up to, over all time or over a stated range. It is derived from the entries rather than stored beside them, so it cannot disagree with them.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.AccountingPatterns/Account.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AccountingPatterns/AccountUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.AccountingPatterns/Account.cs) · [Sample](../../DesignPatternCatalog.Usage/AccountingPatterns/AccountUsage.cs)
 
 ### AccountingEntry (Accounting Patterns)
 
@@ -397,7 +397,7 @@ Records one amount and what it is for, so that money is classified by the entrie
 
 **Descriptor** — What kind of entry this is — the project, the cost type, the classification the entry carries. It is what an account later gathers entries by.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.AccountingPatterns/AccountingEntry.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AccountingPatterns/AccountingEntryUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.AccountingPatterns/AccountingEntry.cs) · [Sample](../../DesignPatternCatalog.Usage/AccountingPatterns/AccountingEntryUsage.cs)
 
 ### AccountingTransaction (Accounting Patterns)
 
@@ -420,7 +420,7 @@ Binds the entries of one movement so that they sum to zero, so that money is con
 
 **MultiLegged** — A transaction of any number of entries that still sum to zero, which is what a movement split across several accounts needs — a charge, the tax on it, and what is owed, in one balanced whole.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.AccountingPatterns/AccountingTransaction.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AccountingPatterns/AccountingTransactionUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.AccountingPatterns/AccountingTransaction.cs) · [Sample](../../DesignPatternCatalog.Usage/AccountingPatterns/AccountingTransactionUsage.cs)
 
 ### DifferenceAdjustment (Accounting Patterns)
 
@@ -440,7 +440,7 @@ Corrects a booked entry with a single entry carrying the difference, so that a c
 
 **AdjustedEvent** — The event being corrected. It matters more here than under a reversal, because the difference alone does not say what it was a difference from.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.AccountingPatterns/DifferenceAdjustment.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AccountingPatterns/DifferenceAdjustmentUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.AccountingPatterns/DifferenceAdjustment.cs) · [Sample](../../DesignPatternCatalog.Usage/AccountingPatterns/DifferenceAdjustmentUsage.cs)
 
 ### Event (Accounting Patterns)
 
@@ -463,7 +463,7 @@ Records that something happened which the business reacts to, and forbids changi
 
 **WhenNoticed** — When the system learned of it. It differs from when the event occurred, and holding the two apart is what lets a correction be dated honestly instead of overwriting history.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.AccountingPatterns/Event.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AccountingPatterns/EventUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.AccountingPatterns/Event.cs) · [Sample](../../DesignPatternCatalog.Usage/AccountingPatterns/EventUsage.cs)
 
 ### PostingRule (Accounting Patterns)
 
@@ -483,7 +483,7 @@ Holds the decision about which accounting entries an event leads to, so that the
 
 **Process** — The operation that takes an event and yields entries. Naming it as a role is what lets a reader find where an event becomes money.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.AccountingPatterns/PostingRule.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AccountingPatterns/PostingRuleUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.AccountingPatterns/PostingRule.cs) · [Sample](../../DesignPatternCatalog.Usage/AccountingPatterns/PostingRuleUsage.cs)
 
 ### ReplacementAdjustment (Accounting Patterns)
 
@@ -503,7 +503,7 @@ Corrects a booked entry by removing it and processing the corrected event afresh
 
 **AdjustedEvent** — The event being corrected, and the way back to the entries to remove. Without it the old entries cannot be found, which is what makes this strategy depend on the link rather than merely record it.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.AccountingPatterns/ReplacementAdjustment.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AccountingPatterns/ReplacementAdjustmentUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.AccountingPatterns/ReplacementAdjustment.cs) · [Sample](../../DesignPatternCatalog.Usage/AccountingPatterns/ReplacementAdjustmentUsage.cs)
 
 ### ReversalAdjustment (Accounting Patterns)
 
@@ -526,7 +526,7 @@ Corrects a booked entry by reversing it and posting what it should have been, so
 
 **AdjustedEvent** — The event being corrected, named by the event that corrects it. The link is what lets the correction be explained rather than merely observed.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.AccountingPatterns/ReversalAdjustment.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AccountingPatterns/ReversalAdjustmentUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.AccountingPatterns/ReversalAdjustment.cs) · [Sample](../../DesignPatternCatalog.Usage/AccountingPatterns/ReversalAdjustmentUsage.cs)
 
 ### SecondaryPostingRule (Accounting Patterns)
 
@@ -542,12 +542,12 @@ A narrower case of **PostingRule**: every participant here is one of those too.
 
 **SecondaryPostingRule** — A posting rule reached from another rule rather than from an event of its own — a tax that applies to usage and to service charges alike. It may be given the original event, or a second event may be created and processed in the ordinary way; the second costs an extra event and buys the ability to adjust the tax without adjusting what it was charged on.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.AccountingPatterns/SecondaryPostingRule.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AccountingPatterns/SecondaryPostingRuleUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.AccountingPatterns/SecondaryPostingRule.cs) · [Sample](../../DesignPatternCatalog.Usage/AccountingPatterns/SecondaryPostingRuleUsage.cs)
 
 
 ## Analysis Patterns
 
-`Reefact.LivingDocumentation.Attributes.AnalysisPatterns` — 39 patterns, 114 roles.
+`DesignPatternCatalog.AnalysisPatterns` — 39 patterns, 114 roles.
 
 ### Accountability (Analysis Patterns)
 
@@ -570,7 +570,7 @@ Reifies a responsibility of one party towards another as an object carrying its 
 
 **Responsible** — The party that holds the responsibility. It is a party and not a person on purpose — the point of the pattern is that a department can be answerable for something, and that whoever currently staffs it is a separate question.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.AnalysisPatterns/Accountability.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AnalysisPatterns/AccountabilityUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.AnalysisPatterns/Accountability.cs) · [Sample](../../DesignPatternCatalog.Usage/AnalysisPatterns/AccountabilityUsage.cs)
 
 ### ActiveObservation (Analysis Patterns)
 
@@ -590,7 +590,7 @@ Distinguishes what is believed from what is proposed and from what is expected, 
 
 **Projection** — An observation expected of a future time — a due date, a projected weight. It shares the shape of the others and none of their standing: a projection that has quietly become the basis of a billing run is a forecast being invoiced.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.AnalysisPatterns/ActiveObservation.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AnalysisPatterns/ActiveObservationUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.AnalysisPatterns/ActiveObservation.cs) · [Sample](../../DesignPatternCatalog.Usage/AnalysisPatterns/ActiveObservationUsage.cs)
 
 ### AssociatedObservation (Analysis Patterns)
 
@@ -610,7 +610,7 @@ Derives an observation from others by a stated function while keeping what it wa
 
 **Evidence** — The observations it was derived from, retained rather than consumed. Keeping them is the pattern's second claim and the harder one to hold: it is always tempting to store only the result, and a stored result whose inputs are gone cannot be rechecked when one of them turns out to have been rejected.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.AnalysisPatterns/AssociatedObservation.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AnalysisPatterns/AssociatedObservationUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.AnalysisPatterns/AssociatedObservation.cs) · [Sample](../../DesignPatternCatalog.Usage/AnalysisPatterns/AssociatedObservationUsage.cs)
 
 ### CompletedAndAbandonedActions (Analysis Patterns)
 
@@ -627,7 +627,7 @@ Treats abandonment and completion as two independent facts about an action, so t
 
 **CompletedAction** — An implemented action that ran to its end. Only an implemented action can be completed, which is why completion is not a second dimension but a narrowing of one — and why nothing needs to say that a proposal cannot be complete.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.AnalysisPatterns/CompletedAndAbandonedActions.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AnalysisPatterns/CompletedAndAbandonedActionsUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.AnalysisPatterns/CompletedAndAbandonedActions.cs) · [Sample](../../DesignPatternCatalog.Usage/AnalysisPatterns/CompletedAndAbandonedActionsUsage.cs)
 
 ### CompoundUnits (Analysis Patterns)
 
@@ -650,7 +650,7 @@ Builds a unit out of other units raised to powers, so that a rate, an area or a 
 
 **UnitReference** — One unit and the power it is raised to. The power is what makes the model reason rather than concatenate: metres to the power of two is an area and metres to the power of minus one is a reciprocal, and a name like "m2" says neither to anything.
 
-Held by a subtype: yes · [Source](../../Reefact.LivingDocumentation.Attributes.AnalysisPatterns/CompoundUnits.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AnalysisPatterns/CompoundUnitsUsage.cs)
+Held by a subtype: yes · [Source](../../DesignPatternCatalog.AnalysisPatterns/CompoundUnits.cs) · [Sample](../../DesignPatternCatalog.Usage/AnalysisPatterns/CompoundUnitsUsage.cs)
 
 ### ConversionRatio (Analysis Patterns)
 
@@ -670,7 +670,7 @@ Reifies the factor between two units as an object, so that converting a quantity
 
 **To** — The unit converted into, and never the same as the one converted out of.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.AnalysisPatterns/ConversionRatio.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AnalysisPatterns/ConversionRatioUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.AnalysisPatterns/ConversionRatio.cs) · [Sample](../../DesignPatternCatalog.Usage/AnalysisPatterns/ConversionRatioUsage.cs)
 
 ### DirectionalAccountabilityType (Analysis Patterns)
 
@@ -686,7 +686,7 @@ A narrower case of **Accountability**: every participant here is one of those to
 
 **DirectionalAccountabilityType** — The kind of accountability that carries two sets of party types, one admissible at each end. It is the looser of the two ways of constraining direction: it says who may stand where without ordering them, which is what suits a responsibility that is genuinely not a ladder — an auditor answerable to a committee, where no level is being skipped. The role is held by the type object for the same reason as its siblings: the sets describe every accountability of the kind, including those not yet created.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.AnalysisPatterns/DirectionalAccountabilityType.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AnalysisPatterns/DirectionalAccountabilityTypeUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.AnalysisPatterns/DirectionalAccountabilityType.cs) · [Sample](../../DesignPatternCatalog.Usage/AnalysisPatterns/DirectionalAccountabilityTypeUsage.cs)
 
 ### DualTimeRecord (Analysis Patterns)
 
@@ -706,7 +706,7 @@ Keeps when something was true apart from when it was recorded, so that a questio
 
 **RecordingTime** — When the system came to know it. This is the one an audit means, and the one that makes a retrospective correction visible instead of silent: without it, amending a result rewrites what the organisation is deemed to have known.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.AnalysisPatterns/DualTimeRecord.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AnalysisPatterns/DualTimeRecordUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.AnalysisPatterns/DualTimeRecord.cs) · [Sample](../../DesignPatternCatalog.Usage/AnalysisPatterns/DualTimeRecordUsage.cs)
 
 ### EnterpriseSegment (Analysis Patterns)
 
@@ -732,7 +732,7 @@ Identifies a slice of the enterprise by naming one element of each of several di
 
 **Elements** — The dimension elements the segment names, keyed by dimension. The key is the assertion: a segment may not name two elements of one axis, which is what makes it a coordinate rather than a bag of labels.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.AnalysisPatterns/EnterpriseSegment.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AnalysisPatterns/EnterpriseSegmentUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.AnalysisPatterns/EnterpriseSegment.cs) · [Sample](../../DesignPatternCatalog.Usage/AnalysisPatterns/EnterpriseSegmentUsage.cs)
 
 ### HierarchicAccountability (Analysis Patterns)
 
@@ -748,7 +748,7 @@ A narrower case of **Accountability**: every participant here is one of those to
 
 **HierarchicAccountability** — The kind of accountability that carries the constraint — the role is held by the type object rather than by the accountability, because what is being asserted is true of every accountability of that kind rather than of one of them. The constraint is that a party may be responsible to only one accountability of this type; the hierarchy is what that produces, and the reason a chart drawn from these can be laid out at all.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.AnalysisPatterns/HierarchicAccountability.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AnalysisPatterns/HierarchicAccountabilityUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.AnalysisPatterns/HierarchicAccountability.cs) · [Sample](../../DesignPatternCatalog.Usage/AnalysisPatterns/HierarchicAccountabilityUsage.cs)
 
 ### IdentificationScheme (Analysis Patterns)
 
@@ -765,7 +765,7 @@ Makes an identifier belong to a scheme, so that a thing known by several numbers
 
 **Identifier** — One identifier of one thing, within one scheme. Uniqueness is scoped to the scheme rather than to the type, which is the assertion a rule can check and the one everybody gets wrong first: two schemes may perfectly well issue the same string, so a lookup that ignores the scheme finds the wrong thing rather than nothing.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.AnalysisPatterns/IdentificationScheme.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AnalysisPatterns/IdentificationSchemeUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.AnalysisPatterns/IdentificationScheme.cs) · [Sample](../../DesignPatternCatalog.Usage/AnalysisPatterns/IdentificationSchemeUsage.cs)
 
 ### KnowledgeLevel (Analysis Patterns)
 
@@ -782,7 +782,7 @@ Splits a model into the objects that record what happened and the objects that s
 
 **Operational** — What actually happened, and the level a user works in all day. Each operational object names its knowledge-level counterpart, and the direction of that reference is the assertion a rule can check: it runs one way only, and a reference the other way is how the two levels quietly become one.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.AnalysisPatterns/KnowledgeLevel.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AnalysisPatterns/KnowledgeLevelUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.AnalysisPatterns/KnowledgeLevel.cs) · [Sample](../../DesignPatternCatalog.Usage/AnalysisPatterns/KnowledgeLevelUsage.cs)
 
 ### LeveledAccountabilityType (Analysis Patterns)
 
@@ -798,7 +798,7 @@ A narrower case of **Accountability**: every participant here is one of those to
 
 **LeveledAccountabilityType** — The kind of accountability whose rule is a list of party types in order: a party may be responsible only to a party whose type is the next one along. It is the sharper of the two ways of constraining direction — it forbids skipping a level as well as reversing one, which is what a chain of command or a delegated-authority ladder means and what naming the admissible pairs alone does not say. The role is held by the type object, because a list of levels is a statement about every accountability of the kind rather than about one of them.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.AnalysisPatterns/LeveledAccountabilityType.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AnalysisPatterns/LeveledAccountabilityTypeUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.AnalysisPatterns/LeveledAccountabilityType.cs) · [Sample](../../DesignPatternCatalog.Usage/AnalysisPatterns/LeveledAccountabilityTypeUsage.cs)
 
 ### Measurement (Analysis Patterns)
 
@@ -818,7 +818,7 @@ Records that a phenomenon of a stated kind had a quantity, so that what may be m
 
 **Subject** — What or who was measured. It is a party rather than a person in the general case, because an organization has measurable properties too and the pattern loses nothing by admitting them.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.AnalysisPatterns/Measurement.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AnalysisPatterns/MeasurementUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.AnalysisPatterns/Measurement.cs) · [Sample](../../DesignPatternCatalog.Usage/AnalysisPatterns/MeasurementUsage.cs)
 
 ### MeasurementProtocol (Analysis Patterns)
 
@@ -858,7 +858,7 @@ A narrower case of **Protocol**: every participant here is one of those too.
 
 **Sources** — The measurements a calculated measurement was computed from, kept rather than discarded once the arithmetic is done. Keeping them is what makes a figure re-explainable instead of a number whose provenance is lost.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.AnalysisPatterns/MeasurementProtocol.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AnalysisPatterns/MeasurementProtocolUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.AnalysisPatterns/MeasurementProtocol.cs) · [Sample](../../DesignPatternCatalog.Usage/AnalysisPatterns/MeasurementProtocolUsage.cs)
 
 ### Name (Analysis Patterns)
 
@@ -872,7 +872,7 @@ Marks a member as a name rather than an identifier, so that nothing keys on some
 
 **Name** — What a thing is called. Figures 5.1 and 5.2 are the whole pattern: a name may be absent, and there may be several. Neither is true of an identifier, and marking the difference is worth doing because the mistake is invisible — a name used as a key works perfectly until the day two things share one or one thing is renamed, and by then everything that joined on it is wrong.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.AnalysisPatterns/Name.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AnalysisPatterns/NameUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.AnalysisPatterns/Name.cs) · [Sample](../../DesignPatternCatalog.Usage/AnalysisPatterns/NameUsage.cs)
 
 ### ObjectEquivalence (Analysis Patterns)
 
@@ -889,7 +889,7 @@ Records that two things are believed to be the same, and who believes it, so tha
 
 **Asserter** — The parties that hold the claim, one at least. This is the part of figure 5.7 that surprises, and the part worth annotating: an equivalence with no author is indistinguishable from a fact, so a system that drops the asserter cannot tell a curated identification from an automated guess, and cannot report that two catalogues disagree.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.AnalysisPatterns/ObjectEquivalence.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AnalysisPatterns/ObjectEquivalenceUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.AnalysisPatterns/ObjectEquivalence.cs) · [Sample](../../DesignPatternCatalog.Usage/AnalysisPatterns/ObjectEquivalenceUsage.cs)
 
 ### ObjectMerge (Analysis Patterns)
 
@@ -909,7 +909,7 @@ Keeps a record that turned out to be a duplicate and points it at the one now in
 
 **ObjectEssence** — The thing itself, holding its several appearances. Figure 5.6 is the other shape the section gives, and it suits a model that never knew which record was primary: instead of one record absorbing another, both remain appearances of one essence. A model uses this or the active-superseded pair, not both.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.AnalysisPatterns/ObjectMerge.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AnalysisPatterns/ObjectMergeUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.AnalysisPatterns/ObjectMerge.cs) · [Sample](../../DesignPatternCatalog.Usage/AnalysisPatterns/ObjectMergeUsage.cs)
 
 ### Observation (Analysis Patterns)
 
@@ -929,7 +929,7 @@ Generalises a measurement to anything that can be observed, so that a fact recor
 
 **Phenomenon** — One admissible value of a phenomenon type, at the knowledge level. Figure 3.9 hangs it under the type, which is what makes a category observation checkable at all: a value outside the phenomena its type admits is refusable rather than merely unusual.
 
-Held by a subtype: yes · [Source](../../Reefact.LivingDocumentation.Attributes.AnalysisPatterns/Observation.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AnalysisPatterns/ObservationUsage.cs)
+Held by a subtype: yes · [Source](../../DesignPatternCatalog.AnalysisPatterns/Observation.cs) · [Sample](../../DesignPatternCatalog.Usage/AnalysisPatterns/ObservationUsage.cs)
 
 ### OperatingScope (Analysis Patterns)
 
@@ -943,7 +943,7 @@ States what a responsibility covers rather than merely that it exists, by hangin
 
 **OperatingScope** — One clause of what a responsibility covers, belonging to exactly one accountability. It is a separate object rather than a field because the clauses are not known in advance and do not arrive together: a scope is added, narrowed or withdrawn while the responsibility itself continues unchanged. The kinds are subtypes, each naming what it is a scope of, so a clause about a territory and a clause about a resource are told apart by their type rather than by a label nothing ranges over.
 
-Held by a subtype: yes · [Source](../../Reefact.LivingDocumentation.Attributes.AnalysisPatterns/OperatingScope.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AnalysisPatterns/OperatingScopeUsage.cs)
+Held by a subtype: yes · [Source](../../DesignPatternCatalog.AnalysisPatterns/OperatingScope.cs) · [Sample](../../DesignPatternCatalog.Usage/AnalysisPatterns/OperatingScopeUsage.cs)
 
 ### OrganizationHierarchies (Analysis Patterns)
 
@@ -960,7 +960,7 @@ Models an organization chart as one tree of organizations, with the admissible n
 
 **Parent** — The organization directly above, absent at the root. Single-valued, and that is the assertion: the whole pattern is the claim that one parent is enough. A model that lets it become a collection has stopped being this pattern without saying so, and every traversal written against the single parent still compiles.
 
-Held by a subtype: yes · [Source](../../Reefact.LivingDocumentation.Attributes.AnalysisPatterns/OrganizationHierarchies.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AnalysisPatterns/OrganizationHierarchiesUsage.cs)
+Held by a subtype: yes · [Source](../../DesignPatternCatalog.AnalysisPatterns/OrganizationHierarchies.cs) · [Sample](../../DesignPatternCatalog.Usage/AnalysisPatterns/OrganizationHierarchiesUsage.cs)
 
 ### OrganizationStructure (Analysis Patterns)
 
@@ -985,7 +985,7 @@ A narrower case of **Accountability**: every participant here is one of those to
 
 **Subsidiary** — The organization below. It is a whole organization rather than a division type, because the pattern's reach depends on the same organization being able to sit under different parents in different structures.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.AnalysisPatterns/OrganizationStructure.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AnalysisPatterns/OrganizationStructureUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.AnalysisPatterns/OrganizationStructure.cs) · [Sample](../../DesignPatternCatalog.Usage/AnalysisPatterns/OrganizationStructureUsage.cs)
 
 ### OutcomeAndStartFunctions (Analysis Patterns)
 
@@ -1011,7 +1011,7 @@ Puts at the knowledge level what an action is expected to produce and what sets 
 
 **Arguments** — The observation concepts a knowledge function ranges over. Named on the function rather than assumed by its caller, so a function says for itself what it needs.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.AnalysisPatterns/OutcomeAndStartFunctions.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AnalysisPatterns/OutcomeAndStartFunctionsUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.AnalysisPatterns/OutcomeAndStartFunctions.cs) · [Sample](../../DesignPatternCatalog.Usage/AnalysisPatterns/OutcomeAndStartFunctionsUsage.cs)
 
 ### Party (Analysis Patterns)
 
@@ -1025,7 +1025,7 @@ Makes person and organization subtypes of one supertype, so that everything a sy
 
 **Party** — Whoever the system deals with, person or organization indifferently. The role is held by the supertype rather than by its subtypes, because the whole content of the pattern is that an address, a phone number and a responsibility attach here: a model that hangs them on person and on organization separately has two of everything, and they drift.
 
-Held by a subtype: yes · [Source](../../Reefact.LivingDocumentation.Attributes.AnalysisPatterns/Party.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AnalysisPatterns/PartyUsage.cs)
+Held by a subtype: yes · [Source](../../DesignPatternCatalog.AnalysisPatterns/Party.cs) · [Sample](../../DesignPatternCatalog.Usage/AnalysisPatterns/PartyUsage.cs)
 
 ### PartyTypeGeneralizations (Analysis Patterns)
 
@@ -1045,7 +1045,7 @@ Lets the kinds of party generalise one another at the knowledge level, so that a
 
 **AllTypes** — The derived closure: this kind and every kind above it. It is the member a rule about parties must range over, and mistaking it for the immediate kind is the failure the pattern exists to prevent — the check still passes for parties registered under the exact kind, so it looks correct until the day a narrower kind is configured and a party that should qualify silently does not.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.AnalysisPatterns/PartyTypeGeneralizations.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AnalysisPatterns/PartyTypeGeneralizationsUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.AnalysisPatterns/PartyTypeGeneralizations.cs) · [Sample](../../DesignPatternCatalog.Usage/AnalysisPatterns/PartyTypeGeneralizationsUsage.cs)
 
 ### PhenomenonWithRange (Analysis Patterns)
 
@@ -1065,7 +1065,7 @@ Defines a category by the range of quantities it covers, so that a measured amou
 
 **Range** — The range a ranged phenomenon covers, on the phenomenon rather than in the function, so that adding a band is configuration and the function is unchanged.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.AnalysisPatterns/PhenomenonWithRange.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AnalysisPatterns/PhenomenonWithRangeUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.AnalysisPatterns/PhenomenonWithRange.cs) · [Sample](../../DesignPatternCatalog.Usage/AnalysisPatterns/PhenomenonWithRangeUsage.cs)
 
 ### Plan (Analysis Patterns)
 
@@ -1091,7 +1091,7 @@ Makes a plan an action built from references to other actions, so that a plan ca
 
 **Components** — The references this plan is made of. Reached through references rather than directly, which is what keeps one proposed action shared between plans instead of copied into each.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.AnalysisPatterns/Plan.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AnalysisPatterns/PlanUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.AnalysisPatterns/Plan.cs) · [Sample](../../DesignPatternCatalog.Usage/AnalysisPatterns/PlanUsage.cs)
 
 ### PlanProtocol (Analysis Patterns)
 
@@ -1114,7 +1114,7 @@ Puts the standard procedure at the knowledge level, so that a plan is an instanc
 
 **Steps** — The references making up the protocol, in order. The components a protocol reaches are derived from its steps' referred protocols rather than listed a second time.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.AnalysisPatterns/PlanProtocol.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AnalysisPatterns/PlanProtocolUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.AnalysisPatterns/PlanProtocol.cs) · [Sample](../../DesignPatternCatalog.Usage/AnalysisPatterns/PlanProtocolUsage.cs)
 
 ### Post (Analysis Patterns)
 
@@ -1130,7 +1130,7 @@ A narrower case of **Party**: every participant here is one of those too.
 
 **Post** — A position the organization deals with as it deals with a person or an organization — the third kind of party, and the whole of the pattern. Because it is a party, every responsibility a party can hold attaches to it with no new machinery, and a handover changes who occupies it without touching one of them. A responsibility recorded against the person instead disappears the day they change job, and nothing reports that it has.
 
-Held by a subtype: yes · [Source](../../Reefact.LivingDocumentation.Attributes.AnalysisPatterns/Post.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AnalysisPatterns/PostUsage.cs)
+Held by a subtype: yes · [Source](../../DesignPatternCatalog.AnalysisPatterns/Post.cs) · [Sample](../../DesignPatternCatalog.Usage/AnalysisPatterns/PostUsage.cs)
 
 ### ProcessOfObservation (Analysis Patterns)
 
@@ -1147,7 +1147,7 @@ Lets one observation stand as evidence for another, so that a conclusion and the
 
 **Evidence** — The observations the assessment rests on. Marking it makes the question "why does the record say this" answerable from the model, and it is the member that decides what happens when one of them is rejected — an assessment whose evidence has been withdrawn is not automatically wrong, but it can no longer be left unexamined.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.AnalysisPatterns/ProcessOfObservation.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AnalysisPatterns/ProcessOfObservationUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.AnalysisPatterns/ProcessOfObservation.cs) · [Sample](../../DesignPatternCatalog.Usage/AnalysisPatterns/ProcessOfObservationUsage.cs)
 
 ### ProposedAndImplementedAction (Analysis Patterns)
 
@@ -1173,7 +1173,7 @@ Keeps what was planned and what happened as two linked objects rather than one o
 
 **Performers** — The parties who carry the action out. Several, because work is done by people and organisations together, and naming them on the action is what lets a workload be asked of a party.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.AnalysisPatterns/ProposedAndImplementedAction.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AnalysisPatterns/ProposedAndImplementedActionUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.AnalysisPatterns/ProposedAndImplementedAction.cs) · [Sample](../../DesignPatternCatalog.Usage/AnalysisPatterns/ProposedAndImplementedActionUsage.cs)
 
 ### Protocol (Analysis Patterns)
 
@@ -1187,7 +1187,7 @@ Records the method by which an observation was made, so that two results of the 
 
 **Protocol** — How the observation was obtained — which assay, which instrument, which procedure. Figure 3.10 hangs it off the phenomenon type at the knowledge level, and what it buys is comparability: two glucose readings taken by different methods have different reference ranges, so a trend line drawn through both is a clinical error that no arithmetic detects. Marking it says the comparison must ask.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.AnalysisPatterns/Protocol.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AnalysisPatterns/ProtocolUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.AnalysisPatterns/Protocol.cs) · [Sample](../../DesignPatternCatalog.Usage/AnalysisPatterns/ProtocolUsage.cs)
 
 ### Quantity (Analysis Patterns)
 
@@ -1207,7 +1207,7 @@ Makes an amount and its unit one value with arithmetic of its own, so that a num
 
 **Unit** — What the amount is measured in. Its presence is what makes the quantity self-describing, and what lets a conversion be asked for rather than assumed.
 
-Held by a subtype: yes · [Source](../../Reefact.LivingDocumentation.Attributes.AnalysisPatterns/Quantity.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AnalysisPatterns/QuantityUsage.cs)
+Held by a subtype: yes · [Source](../../DesignPatternCatalog.AnalysisPatterns/Quantity.cs) · [Sample](../../DesignPatternCatalog.Usage/AnalysisPatterns/QuantityUsage.cs)
 
 ### Range (Analysis Patterns)
 
@@ -1221,7 +1221,7 @@ Makes an interval one object carrying its own comparisons, so that a pair of loo
 
 **Range** — The interval itself, holding its two bounds and whether each is inclusive, and answering whether it includes a value, overlaps another range or abuts one. The operations belong to it rather than to whatever holds the bounds, which is what stops one comparison using an inclusive bound where another used an exclusive one; an open end is a null bound or a special case for the extreme, and either way a caller does not test for it.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.AnalysisPatterns/Range.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AnalysisPatterns/RangeUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.AnalysisPatterns/Range.cs) · [Sample](../../DesignPatternCatalog.Usage/AnalysisPatterns/RangeUsage.cs)
 
 ### RejectedObservation (Analysis Patterns)
 
@@ -1235,7 +1235,7 @@ Marks an observation as no longer believed instead of deleting it, so that what 
 
 **RejectedObservation** — An observation withdrawn after the fact — a mislabelled sample, a transcription error. Figure 3.12 makes it a «dynamic» subtype, which is the whole content: rejection is a state an observation enters, not a kind of thing it was created as. Deleting instead would be the obvious move and the wrong one, because a decision was taken on the strength of it and the record has to be able to say so.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.AnalysisPatterns/RejectedObservation.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AnalysisPatterns/RejectedObservationUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.AnalysisPatterns/RejectedObservation.cs) · [Sample](../../DesignPatternCatalog.Usage/AnalysisPatterns/RejectedObservationUsage.cs)
 
 ### ResourceAllocation (Analysis Patterns)
 
@@ -1264,7 +1264,7 @@ Records what an action needs as an allocation of a resource type and a quantity,
 
 **Uses** — The allocations an implemented action actually drew. Held apart from what was booked, because the difference between them is the figure anybody planning again wants.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.AnalysisPatterns/ResourceAllocation.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AnalysisPatterns/ResourceAllocationUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.AnalysisPatterns/ResourceAllocation.cs) · [Sample](../../DesignPatternCatalog.Usage/AnalysisPatterns/ResourceAllocationUsage.cs)
 
 ### StatusType (Analysis Patterns)
 
@@ -1293,7 +1293,7 @@ Makes planned and actual a type object an observation names, so that a plan's fi
 
 **Status** — The status type an observation names. One reference, on the observation rather than on its subtype, is what makes planned and actual interchangeable to everything that reads observations.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.AnalysisPatterns/StatusType.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AnalysisPatterns/StatusTypeUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.AnalysisPatterns/StatusType.cs) · [Sample](../../DesignPatternCatalog.Usage/AnalysisPatterns/StatusTypeUsage.cs)
 
 ### SubtypingObservationConcepts (Analysis Patterns)
 
@@ -1310,7 +1310,7 @@ Lets the concepts an observation is stated in terms of generalise one another as
 
 **Supertypes** — The broader concepts this one falls under, plural. Figure 3.10 marks it {dag}, and that is the assertion worth checking, because it differs from the party-type case in both directions: a concept may have several supertypes — a viral pneumonia is both an infection and a lung disease — and no cycle is permitted. A traversal written for a tree terminates here by luck and reports one of the two parents.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.AnalysisPatterns/SubtypingObservationConcepts.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AnalysisPatterns/SubtypingObservationConceptsUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.AnalysisPatterns/SubtypingObservationConcepts.cs) · [Sample](../../DesignPatternCatalog.Usage/AnalysisPatterns/SubtypingObservationConceptsUsage.cs)
 
 ### Suspension (Analysis Patterns)
 
@@ -1330,12 +1330,12 @@ Records a pause as an interval of its own, so that an action stopped and restart
 
 **Suspended** — Whether the action is suspended now, derived from its suspensions rather than stored beside them. Storing it is what lets an action be marked suspended with no suspension to show for it.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.AnalysisPatterns/Suspension.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/AnalysisPatterns/SuspensionUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.AnalysisPatterns/Suspension.cs) · [Sample](../../DesignPatternCatalog.Usage/AnalysisPatterns/SuspensionUsage.cs)
 
 
 ## Dependency Injection Principles, Practices, and Patterns
 
-`Reefact.LivingDocumentation.Attributes.DependencyInjection` — 11 patterns, 12 roles.
+`DesignPatternCatalog.DependencyInjection` — 11 patterns, 12 roles.
 
 ### AmbientContext (Dependency Injection Principles, Practices, and Patterns)
 
@@ -1349,7 +1349,7 @@ Exposes a dependency through a static access point that any code may reach, so t
 
 **AmbientContext** — The static access point through which the dependency is reached. Whatever depends on it says so nowhere: two consumers of the same context are indistinguishable from two that need nothing, and replacing it for one test replaces it for whatever else runs beside that test.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.DependencyInjection/AmbientContext.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/DependencyInjection/AmbientContextUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.DependencyInjection/AmbientContext.cs) · [Sample](../../DesignPatternCatalog.Usage/DependencyInjection/AmbientContextUsage.cs)
 
 ### CompositionRoot (Dependency Injection Principles, Practices, and Patterns)
 
@@ -1363,7 +1363,7 @@ Assembles the application's object graph in one location as close as possible to
 
 **CompositionRoot** — The one place where the application's modules are put together, and the only place a DI container may be referenced — every other module holds no reference to it. An application has one of these however large it grows; a library has none, because composing is the application's decision and not its dependencies'.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.DependencyInjection/CompositionRoot.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/DependencyInjection/CompositionRootUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.DependencyInjection/CompositionRoot.cs) · [Sample](../../DesignPatternCatalog.Usage/DependencyInjection/CompositionRootUsage.cs)
 
 ### ConstrainedConstruction (Dependency Injection Principles, Practices, and Patterns)
 
@@ -1377,7 +1377,7 @@ Requires every implementation of an abstraction to offer a particular constructo
 
 **ConstrainedConstruction** — A constructor whose signature is imposed from outside — by late binding, by a serializer, by a framework that instantiates the type — rather than chosen to declare what the class needs. Whatever the class does depend on arrives by some other route, so this constructor's emptiness is not evidence that there is nothing to supply.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.DependencyInjection/ConstrainedConstruction.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/DependencyInjection/ConstrainedConstructionUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.DependencyInjection/ConstrainedConstruction.cs) · [Sample](../../DesignPatternCatalog.Usage/DependencyInjection/ConstrainedConstructionUsage.cs)
 
 ### ConstructorInjection (Dependency Injection Principles, Practices, and Patterns)
 
@@ -1391,7 +1391,7 @@ Declares the dependencies a class requires by taking them as constructor paramet
 
 **ConstructorInjection** — The constructor through which a class receives what it cannot work without. What it asserts is *required*: a dependency that may legitimately be absent does not belong here, and one added here is a new demand on every composition root that builds the type.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.DependencyInjection/ConstructorInjection.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/DependencyInjection/ConstructorInjectionUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.DependencyInjection/ConstructorInjection.cs) · [Sample](../../DesignPatternCatalog.Usage/DependencyInjection/ConstructorInjectionUsage.cs)
 
 ### ControlFreak (Dependency Injection Principles, Practices, and Patterns)
 
@@ -1405,7 +1405,7 @@ A class that creates the dependencies it uses, so that nothing outside it can ch
 
 **ControlFreak** — The class that decides for itself what it depends on — by constructing it, by asking a factory for it, or by offering a second constructor that fills in the first's parameters. Whichever of the three, the choice is sealed inside: a caller cannot replace it, and a test cannot either, which is usually how it is noticed.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.DependencyInjection/ControlFreak.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/DependencyInjection/ControlFreakUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.DependencyInjection/ControlFreak.cs) · [Sample](../../DesignPatternCatalog.Usage/DependencyInjection/ControlFreakUsage.cs)
 
 ### MethodInjection (Dependency Injection Principles, Practices, and Patterns)
 
@@ -1419,7 +1419,7 @@ Supplies a dependency as a parameter of the method that uses it, so that it may 
 
 **MethodInjection** — The method that is handed its dependency by the caller rather than by construction. It asserts that the dependency belongs to the invocation and not to the instance — so holding on to what arrives here, in a field or a cache, is the one way to get this wrong while the code still compiles.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.DependencyInjection/MethodInjection.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/DependencyInjection/MethodInjectionUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.DependencyInjection/MethodInjection.cs) · [Sample](../../DesignPatternCatalog.Usage/DependencyInjection/MethodInjectionUsage.cs)
 
 ### PropertyInjection (Dependency Injection Principles, Practices, and Patterns)
 
@@ -1433,7 +1433,7 @@ Exposes a settable property through which an optional dependency may be supplied
 
 **PropertyInjection** — The property through which a caller may replace a dependency the class already has a good local default for. It asserts that the default exists and works: a property injection with no default is a required dependency that has forgotten to fail, and it fails later, on a null reference, far from here.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.DependencyInjection/PropertyInjection.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/DependencyInjection/PropertyInjectionUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.DependencyInjection/PropertyInjection.cs) · [Sample](../../DesignPatternCatalog.Usage/DependencyInjection/PropertyInjectionUsage.cs)
 
 ### ScopedLifestyle (Dependency Injection Principles, Practices, and Patterns)
 
@@ -1447,7 +1447,7 @@ One instance serves a well-defined scope — a web request, a unit of work — a
 
 **ScopedLifestyle** — A class of which one instance exists per scope and is shared by everything inside it. So it need not be safe against the whole application, only against whatever runs concurrently within one scope; and reaching it from outside a scope, or holding it beyond the end of one, is the failure the lifestyle cannot prevent on its own.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.DependencyInjection/ScopedLifestyle.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/DependencyInjection/ScopedLifestyleUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.DependencyInjection/ScopedLifestyle.cs) · [Sample](../../DesignPatternCatalog.Usage/DependencyInjection/ScopedLifestyleUsage.cs)
 
 ### ServiceLocator (Dependency Injection Principles, Practices, and Patterns)
 
@@ -1464,7 +1464,7 @@ Supplies a dependency by having the consumer ask a registry for it at the moment
 
 **Consumer** — A class that resolves what it needs instead of receiving it, and therefore does not state its preconditions in its contract. Nothing about its constructor says what must be registered for it to work, so a missing registration is a failure at run time and adding a dependency to it is a breaking change that breaks no build.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.DependencyInjection/ServiceLocator.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/DependencyInjection/ServiceLocatorUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.DependencyInjection/ServiceLocator.cs) · [Sample](../../DesignPatternCatalog.Usage/DependencyInjection/ServiceLocatorUsage.cs)
 
 ### SingletonLifestyle (Dependency Injection Principles, Practices, and Patterns)
 
@@ -1478,7 +1478,7 @@ One instance serves every consumer for the lifetime of the application, created 
 
 **SingletonLifestyle** — A class of which exactly one instance exists. Two things follow and neither is visible in it: it is used concurrently, so it must be thread-safe and hold nothing belonging to one caller; and everything it depends on outlives every consumer, so a shorter-lived dependency reaching it is held long past the life it was given.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.DependencyInjection/SingletonLifestyle.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/DependencyInjection/SingletonLifestyleUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.DependencyInjection/SingletonLifestyle.cs) · [Sample](../../DesignPatternCatalog.Usage/DependencyInjection/SingletonLifestyleUsage.cs)
 
 ### TransientLifestyle (Dependency Injection Principles, Practices, and Patterns)
 
@@ -1492,12 +1492,12 @@ A new instance is created for every consumer that asks for one, and none is ever
 
 **TransientLifestyle** — A class of which a fresh instance is made on each request. It may hold state freely, because nothing of it survives the consumer that received it — and if it is disposable, that is the difficulty: the container generally will not track it, so a disposal nobody arranged is a leak nothing reports.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.DependencyInjection/TransientLifestyle.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/DependencyInjection/TransientLifestyleUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.DependencyInjection/TransientLifestyle.cs) · [Sample](../../DesignPatternCatalog.Usage/DependencyInjection/TransientLifestyleUsage.cs)
 
 
 ## Domain-Driven Design
 
-`Reefact.LivingDocumentation.Attributes.DomainDrivenDesign` — 23 patterns, 30 roles.
+`DesignPatternCatalog.DomainDrivenDesign` — 23 patterns, 30 roles.
 
 ### Aggregate (Domain-Driven Design)
 
@@ -1514,7 +1514,7 @@ A cluster of entities and value objects treated as one unit for the purpose of d
 
 **Member** — A participant living inside the boundary, reachable only through the root and never referenced by anything outside it.
 
-Held by a subtype: yes · [Source](../../Reefact.LivingDocumentation.Attributes.DomainDrivenDesign/Aggregate.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/DomainDrivenDesign/AggregateUsage.cs)
+Held by a subtype: yes · [Source](../../DesignPatternCatalog.DomainDrivenDesign/Aggregate.cs) · [Sample](../../DesignPatternCatalog.Usage/DomainDrivenDesign/AggregateUsage.cs)
 
 ### AnticorruptionLayer (Domain-Driven Design)
 
@@ -1534,7 +1534,7 @@ An isolating layer through which a downstream context talks to an upstream one, 
 
 **Translator** — Converts between the two models, in both directions. It is the only place that knows both, which is what keeps the corruption to a single reviewable file rather than spread through the downstream model.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.DomainDrivenDesign/AnticorruptionLayer.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage.TrainOperations/AnticorruptionLayerUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.DomainDrivenDesign/AnticorruptionLayer.cs) · [Sample](../../DesignPatternCatalog.Usage.TrainOperations/AnticorruptionLayerUsage.cs)
 
 ### Assertion (Domain-Driven Design)
 
@@ -1548,7 +1548,7 @@ A post-condition of an operation or an invariant of a type, stated explicitly so
 
 **Assertion** — An operation whose post-condition is stated, or a type whose invariant is stated and checked rather than assumed.
 
-Held by a subtype: yes · [Source](../../Reefact.LivingDocumentation.Attributes.DomainDrivenDesign/Assertion.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/DomainDrivenDesign/AssertionUsage.cs)
+Held by a subtype: yes · [Source](../../DesignPatternCatalog.DomainDrivenDesign/Assertion.cs) · [Sample](../../DesignPatternCatalog.Usage/DomainDrivenDesign/AssertionUsage.cs)
 
 ### BoundedContext (Domain-Driven Design)
 
@@ -1562,7 +1562,7 @@ Delimits where one model applies. Inside it every term has exactly one meaning; 
 
 **BoundedContext** — The boundary of one model. Everything the assembly declares belongs to that model, and a term used here means what this model says it means — which is why a second model in the same assembly is not a boundary but a collision.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.DomainDrivenDesign/BoundedContext.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage.TrainOperations/BoundedContextUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.DomainDrivenDesign/BoundedContext.cs) · [Sample](../../DesignPatternCatalog.Usage.TrainOperations/BoundedContextUsage.cs)
 
 ### ClosureOfOperation (Domain-Driven Design)
 
@@ -1576,7 +1576,7 @@ An operation whose argument and return type are the type it is defined on, so th
 
 **ClosureOfOperation** — A method that takes and returns the type it is declared on, so that its results can be fed back into it without leaving the abstraction.
 
-Held by a subtype: yes · [Source](../../Reefact.LivingDocumentation.Attributes.DomainDrivenDesign/ClosureOfOperation.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/DomainDrivenDesign/ClosureOfOperationUsage.cs)
+Held by a subtype: yes · [Source](../../DesignPatternCatalog.DomainDrivenDesign/ClosureOfOperation.cs) · [Sample](../../DesignPatternCatalog.Usage/DomainDrivenDesign/ClosureOfOperationUsage.cs)
 
 ### CohesiveMechanism (Domain-Driven Design)
 
@@ -1590,7 +1590,7 @@ Separates a self-contained piece of machinery — an algorithm, a formalism, a s
 
 **CohesiveMechanism** — Machinery factored out of the model and exposed by an interface that speaks of what it computes rather than of how. What is left behind is the point: a model that asks for the shortest route stays a model, where one that carries the search alongside its concepts no longer reads as either.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.DomainDrivenDesign/CohesiveMechanism.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/DomainDrivenDesign/CohesiveMechanismUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.DomainDrivenDesign/CohesiveMechanism.cs) · [Sample](../../DesignPatternCatalog.Usage/DomainDrivenDesign/CohesiveMechanismUsage.cs)
 
 ### CoreDomain (Domain-Driven Design)
 
@@ -1604,7 +1604,7 @@ The part of the model that makes the product worth writing: what the organisatio
 
 **CoreDomain** — Where the distinctive part of the model lives. It earns the best people and the most modelling effort, and it is the part that must not be allowed to depend on what merely supports it.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.DomainDrivenDesign/CoreDomain.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage.TrainOperations/CoreDomainUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.DomainDrivenDesign/CoreDomain.cs) · [Sample](../../DesignPatternCatalog.Usage.TrainOperations/CoreDomainUsage.cs)
 
 ### DomainEvent (Domain-Driven Design)
 
@@ -1618,7 +1618,7 @@ States that something meaningful to the domain has happened. It is named in the 
 
 **DomainEvent** — States, in the past tense, that something meaningful to the domain has happened.
 
-Held by a subtype: yes · [Source](../../Reefact.LivingDocumentation.Attributes.DomainDrivenDesign/DomainEvent.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/DomainDrivenDesign/DomainEventUsage.cs)
+Held by a subtype: yes · [Source](../../DesignPatternCatalog.DomainDrivenDesign/DomainEvent.cs) · [Sample](../../DesignPatternCatalog.Usage/DomainDrivenDesign/DomainEventUsage.cs)
 
 ### Entity (Domain-Driven Design)
 
@@ -1632,7 +1632,7 @@ An object of the domain defined by a thread of continuity and identity, rather t
 
 **Entity** — An object of the domain defined by its identity rather than by its attributes.
 
-Held by a subtype: yes · [Source](../../Reefact.LivingDocumentation.Attributes.DomainDrivenDesign/Entity.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/DomainDrivenDesign/EntityUsage.cs)
+Held by a subtype: yes · [Source](../../DesignPatternCatalog.DomainDrivenDesign/Entity.cs) · [Sample](../../DesignPatternCatalog.Usage/DomainDrivenDesign/EntityUsage.cs)
 
 ### Factory (Domain-Driven Design)
 
@@ -1646,7 +1646,7 @@ Encapsulates the creation of a complex object or of a whole aggregate, so that t
 
 **Factory** — Encapsulates the creation of a complex object or of a whole aggregate.
 
-Held by a subtype: yes · [Source](../../Reefact.LivingDocumentation.Attributes.DomainDrivenDesign/Factory.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/DomainDrivenDesign/FactoryUsage.cs)
+Held by a subtype: yes · [Source](../../DesignPatternCatalog.DomainDrivenDesign/Factory.cs) · [Sample](../../DesignPatternCatalog.Usage/DomainDrivenDesign/FactoryUsage.cs)
 
 ### GenericSubdomain (Domain-Driven Design)
 
@@ -1660,7 +1660,7 @@ A cohesive part of the model that is necessary and in no way distinctive — eve
 
 **GenericSubdomain** — A part of the model that could be bought, outsourced or replaced by a published solution without weakening what the organisation is good at. Saying so is what keeps modelling effort away from it.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.DomainDrivenDesign/GenericSubdomain.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage.Invoicing/GenericSubdomainUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.DomainDrivenDesign/GenericSubdomain.cs) · [Sample](../../DesignPatternCatalog.Usage.Invoicing/GenericSubdomainUsage.cs)
 
 ### LayeredArchitecture (Domain-Driven Design)
 
@@ -1683,7 +1683,7 @@ Partitions a system so that the model is isolated from the user interface, the a
 
 **Infrastructure** — The technical means the layers above stand on — persistence, messaging, drawing on a screen. It implements what they declare rather than being called into their vocabulary, which is the inversion that keeps the model free of a database.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.DomainDrivenDesign/LayeredArchitecture.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage.BloodBank.Domain/LayeredArchitectureUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.DomainDrivenDesign/LayeredArchitecture.cs) · [Sample](../../DesignPatternCatalog.Usage.BloodBank.Domain/LayeredArchitectureUsage.cs)
 
 ### OpenHostService (Domain-Driven Design)
 
@@ -1697,7 +1697,7 @@ A protocol offering the services of a subsystem to any number of consumers, rath
 
 **OpenHostService** — The protocol a subsystem offers to all comers. It is designed once for many consumers, which is what distinguishes it from an integration built for one — and enhanced for a particular consumer only through an extension that does not disturb the others.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.DomainDrivenDesign/OpenHostService.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage.TrainOperations/OpenHostServiceUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.DomainDrivenDesign/OpenHostService.cs) · [Sample](../../DesignPatternCatalog.Usage.TrainOperations/OpenHostServiceUsage.cs)
 
 ### PluggableComponentFramework (Domain-Driven Design)
 
@@ -1714,7 +1714,7 @@ Distils a core of abstract interfaces that several teams share, and lets diverse
 
 **Component** — One interchangeable implementation of the abstract core. It may reference the core and nothing of any sibling — a component that reaches into another is no longer substitutable, and that is the one property the whole arrangement is bought for.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.DomainDrivenDesign/PluggableComponentFramework.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage.Observatory.Instruments/PluggableComponentFrameworkUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.DomainDrivenDesign/PluggableComponentFramework.cs) · [Sample](../../DesignPatternCatalog.Usage.Observatory.Instruments/PluggableComponentFrameworkUsage.cs)
 
 ### PublishedLanguage (Domain-Driven Design)
 
@@ -1728,7 +1728,7 @@ A well-documented shared language, used as the medium of translation between con
 
 **PublishedLanguage** — The published vocabulary two or more contexts translate through. It is a contract with the outside, not a model of the domain: it changes on the schedule of its consumers, and the contexts that speak it keep their own models behind it.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.DomainDrivenDesign/PublishedLanguage.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage.TrainOperations.Contracts/PublishedLanguageUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.DomainDrivenDesign/PublishedLanguage.cs) · [Sample](../../DesignPatternCatalog.Usage.TrainOperations.Contracts/PublishedLanguageUsage.cs)
 
 ### Repository (Domain-Driven Design)
 
@@ -1742,7 +1742,7 @@ Gives access to aggregates as though they were an in-memory collection, and hide
 
 **Repository** — Gives collection-like access to aggregates, and hides the storage mechanism.
 
-Held by a subtype: yes · [Source](../../Reefact.LivingDocumentation.Attributes.DomainDrivenDesign/Repository.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/DomainDrivenDesign/RepositoryUsage.cs)
+Held by a subtype: yes · [Source](../../DesignPatternCatalog.DomainDrivenDesign/Repository.cs) · [Sample](../../DesignPatternCatalog.Usage/DomainDrivenDesign/RepositoryUsage.cs)
 
 ### Service (Domain-Driven Design)
 
@@ -1756,7 +1756,7 @@ An operation of the domain that does not naturally belong to an entity or to a v
 
 **Service** — A stateless operation of the domain that belongs to no entity nor value object.
 
-Held by a subtype: yes · [Source](../../Reefact.LivingDocumentation.Attributes.DomainDrivenDesign/Service.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/DomainDrivenDesign/ServiceUsage.cs)
+Held by a subtype: yes · [Source](../../DesignPatternCatalog.DomainDrivenDesign/Service.cs) · [Sample](../../DesignPatternCatalog.Usage/DomainDrivenDesign/ServiceUsage.cs)
 
 ### SharedKernel (Domain-Driven Design)
 
@@ -1770,7 +1770,7 @@ A subset of the model that two teams agree to share, and to change only by agree
 
 **SharedKernel** — The shared subset itself. A change to anything here affects every context that depends on it, so it is kept small on purpose and altered only with the consent of the teams that share it.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.DomainDrivenDesign/SharedKernel.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage.RailNetwork/SharedKernelUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.DomainDrivenDesign/SharedKernel.cs) · [Sample](../../DesignPatternCatalog.Usage.RailNetwork/SharedKernelUsage.cs)
 
 ### SideEffectFreeFunction (Domain-Driven Design)
 
@@ -1784,7 +1784,7 @@ An operation that computes and returns a result while leaving the state of the s
 
 **SideEffectFreeFunction** — A method that returns a result and modifies no observable state, neither of its own object nor of anything it reaches.
 
-Held by a subtype: yes · [Source](../../Reefact.LivingDocumentation.Attributes.DomainDrivenDesign/SideEffectFreeFunction.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/DomainDrivenDesign/SideEffectFreeFunctionUsage.cs)
+Held by a subtype: yes · [Source](../../DesignPatternCatalog.DomainDrivenDesign/SideEffectFreeFunction.cs) · [Sample](../../DesignPatternCatalog.Usage/DomainDrivenDesign/SideEffectFreeFunctionUsage.cs)
 
 ### SmartUi (Domain-Driven Design)
 
@@ -1798,7 +1798,7 @@ Puts the business rules into the user interface itself, one screen at a time, an
 
 **SmartUi** — Code where the rules live with the screen on purpose, because the application is small, short-lived or too simple to repay a model. Declaring it is what makes it a decision with a scope rather than a lapse: every rule about a layered architecture stops here, and the day this code stops being small the annotation is what has to be removed first.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.DomainDrivenDesign/SmartUi.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/DomainDrivenDesign/SmartUiUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.DomainDrivenDesign/SmartUi.cs) · [Sample](../../DesignPatternCatalog.Usage/DomainDrivenDesign/SmartUiUsage.cs)
 
 ### Specification (Domain-Driven Design)
 
@@ -1812,7 +1812,7 @@ States a predicate of the domain as an explicit object, so that a business rule 
 
 **Specification** — States a business predicate as an explicit, combinable object.
 
-Held by a subtype: yes · [Source](../../Reefact.LivingDocumentation.Attributes.DomainDrivenDesign/Specification.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/DomainDrivenDesign/SpecificationUsage.cs)
+Held by a subtype: yes · [Source](../../DesignPatternCatalog.DomainDrivenDesign/Specification.cs) · [Sample](../../DesignPatternCatalog.Usage/DomainDrivenDesign/SpecificationUsage.cs)
 
 ### StandaloneClass (Domain-Driven Design)
 
@@ -1826,7 +1826,7 @@ A type that can be understood, tested and reasoned about entirely on its own, be
 
 **StandaloneClass** — A type declaring no dependency on another module, so that reading it requires holding nothing else in mind.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.DomainDrivenDesign/StandaloneClass.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/DomainDrivenDesign/StandaloneClassUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.DomainDrivenDesign/StandaloneClass.cs) · [Sample](../../DesignPatternCatalog.Usage/DomainDrivenDesign/StandaloneClassUsage.cs)
 
 ### ValueObject (Domain-Driven Design)
 
@@ -1840,12 +1840,12 @@ An object of the domain described only by its values. It carries no identity, it
 
 **ValueObject** — An immutable object of the domain, without identity, defined only by its values.
 
-Held by a subtype: yes · [Source](../../Reefact.LivingDocumentation.Attributes.DomainDrivenDesign/ValueObject.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/DomainDrivenDesign/ValueObjectUsage.cs)
+Held by a subtype: yes · [Source](../../DesignPatternCatalog.DomainDrivenDesign/ValueObject.cs) · [Sample](../../DesignPatternCatalog.Usage/DomainDrivenDesign/ValueObjectUsage.cs)
 
 
 ## Patterns of Enterprise Application Architecture
 
-`Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture` — 51 patterns, 55 roles.
+`DesignPatternCatalog.EnterpriseApplicationArchitecture` — 51 patterns, 55 roles.
 
 ### ActiveRecord (Patterns of Enterprise Application Architecture)
 
@@ -1859,7 +1859,7 @@ An object that carries a row of data, the access to that row, and the domain log
 
 **ActiveRecord** — A domain object that knows how to persist itself. It suits a model whose shape follows the database's; it stops suiting one the moment the two diverge, which is the trade the pattern is chosen for rather than a flaw in it.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/ActiveRecord.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/ActiveRecordUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/ActiveRecord.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/ActiveRecordUsage.cs)
 
 ### ApplicationController (Patterns of Enterprise Application Architecture)
 
@@ -1873,7 +1873,7 @@ An object holding the flow of an application — which screen comes next, and wh
 
 **ApplicationController** — Where the order of a process lives, taken out of the individual pages. It earns its place where the flow is the difficult part — a wizard, a claim, an application with states — and it is dead weight where each page simply follows a link.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/ApplicationController.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/ApplicationControllerUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/ApplicationController.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/ApplicationControllerUsage.cs)
 
 ### AssociationTableMapping (Patterns of Enterprise Application Architecture)
 
@@ -1887,7 +1887,7 @@ A many-to-many association, carried in the database as a table of its own.
 
 **AssociationTableMapping** — A collection whose association lives in a link table rather than in either object's own. It is the only mapping where the association has an existence separate from both ends, which is what makes it the natural home for anything the link itself carries — a date, a role, an order.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/AssociationTableMapping.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/AssociationTableMappingUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/AssociationTableMapping.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/AssociationTableMappingUsage.cs)
 
 ### ClassTableInheritance (Patterns of Enterprise Application Architecture)
 
@@ -1901,7 +1901,7 @@ A hierarchy of classes mapped to one table per class, joined on the key.
 
 **ClassTableInheritance** — The root of a hierarchy stored as one table per class, each holding only its own fields and joined to its parent. It is the mapping that keeps the schema honest — no nullable column that exists for another subclass — and it pays for that with a join per level on every read.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/ClassTableInheritance.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/ClassTableInheritanceUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/ClassTableInheritance.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/ClassTableInheritanceUsage.cs)
 
 ### ClientSessionState (Patterns of Enterprise Application Architecture)
 
@@ -1915,7 +1915,7 @@ Session state kept on the client and returned with each request.
 
 **ClientSessionState** — State the server keeps nowhere. It makes a server cluster trivial — any node can serve any request — and it puts two problems in their place: everything held this way travels on every request, and none of it can be trusted without being signed or re-checked.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/ClientSessionState.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/ClientSessionStateUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/ClientSessionState.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/ClientSessionStateUsage.cs)
 
 ### CoarseGrainedLock (Patterns of Enterprise Application Architecture)
 
@@ -1929,7 +1929,7 @@ One lock covering a group of objects that change together, so that they are lock
 
 **CoarseGrainedLock** — The object whose lock stands for a whole group — usually the root of one. It exists because locking members individually is both slower and wrong: a set of objects with one invariant between them must be taken as one, or the invariant can be broken between two locks.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/CoarseGrainedLock.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/CoarseGrainedLockUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/CoarseGrainedLock.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/CoarseGrainedLockUsage.cs)
 
 ### ConcreteTableInheritance (Patterns of Enterprise Application Architecture)
 
@@ -1943,7 +1943,7 @@ A hierarchy of classes mapped to one table per concrete class, each holding the 
 
 **ConcreteTableInheritance** — The root of a hierarchy stored as one table per concrete class, each carrying inherited fields as well as its own. No joins and no nulls, at the price of the root's fields being duplicated across tables — and of a query across the hierarchy having to touch every one of them.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/ConcreteTableInheritance.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/ConcreteTableInheritanceUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/ConcreteTableInheritance.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/ConcreteTableInheritanceUsage.cs)
 
 ### DataMapper (Patterns of Enterprise Application Architecture)
 
@@ -1959,7 +1959,7 @@ A narrower case of **Mapper**: every participant here is one of those too.
 
 **DataMapper** — The layer that maps a domain model to a schema neither has to resemble. The domain objects hold no persistence code and no reference to it, which is the whole point and the reason it costs more than an active record.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/DataMapper.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/DataMapperUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/DataMapper.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/DataMapperUsage.cs)
 
 ### DataTransferObject (Patterns of Enterprise Application Architecture)
 
@@ -1973,7 +1973,7 @@ An object that carries data across a boundary in one call, to avoid paying for m
 
 **DataTransferObject** — A shape that exists for a call, not for a model: no behaviour, no invariants, and fields chosen by what one remote consumer needs in one round trip. Serialising a domain object instead is the mistake it exists to prevent, because the model then cannot change without breaking a consumer.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/DataTransferObject.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/DataTransferObjectUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/DataTransferObject.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/DataTransferObjectUsage.cs)
 
 ### DatabaseSessionState (Patterns of Enterprise Application Architecture)
 
@@ -1987,7 +1987,7 @@ Session state kept in the database, so that any process can serve any request.
 
 **DatabaseSessionState** — Session state stored where every node can read it. It removes the affinity that server session state imposes, at the price of a read and a write per request — and of session data that now needs the same care as the rest of the schema, including a way to be cleaned up.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/DatabaseSessionState.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/DatabaseSessionStateUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/DatabaseSessionState.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/DatabaseSessionStateUsage.cs)
 
 ### DependentMapping (Patterns of Enterprise Application Architecture)
 
@@ -2001,7 +2001,7 @@ A class whose persistence is handled entirely by another class, because it never
 
 **DependentMapping** — A class with no mapper of its own: its owner loads and saves it. It suits what has no independent life — a line on an order, a note on a record — and the rule that keeps it honest is that nothing outside the owner may hold a reference to one, because nothing else can guarantee its state.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/DependentMapping.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/DependentMappingUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/DependentMapping.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/DependentMappingUsage.cs)
 
 ### DomainModel (Patterns of Enterprise Application Architecture)
 
@@ -2015,7 +2015,7 @@ An object model of the domain carrying both behaviour and data, rather than proc
 
 **DomainModel** — An assembly whose objects hold the rules as well as the data. Declaring it says what the code is NOT: not a set of transaction scripts, not a table module — so a class here that turns out to be a bag of properties acted on from elsewhere is a defect against a stated intent rather than a matter of taste.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/DomainModel.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage.ParkingPermits/DomainModelUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/DomainModel.cs) · [Sample](../../DesignPatternCatalog.Usage.ParkingPermits/DomainModelUsage.cs)
 
 ### EmbeddedValue (Patterns of Enterprise Application Architecture)
 
@@ -2029,7 +2029,7 @@ A value object mapped into the columns of the object that owns it, rather than i
 
 **EmbeddedValue** — A value whose fields become columns on the owner's row. It is what makes a rich value affordable — a money, a date range, an address stop being three loose columns without costing a join — and it is available exactly while nothing needs to query or share the value on its own.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/EmbeddedValue.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/EmbeddedValueUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/EmbeddedValue.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/EmbeddedValueUsage.cs)
 
 ### ForeignKeyMapping (Patterns of Enterprise Application Architecture)
 
@@ -2043,7 +2043,7 @@ An association between objects, carried in the database as a foreign key.
 
 **ForeignKeyMapping** — A reference from one object to another that the mapper stores as a key column. Annotating it says where an association crosses into the schema, which is what makes the update order visible: the referenced row must exist first, and a cycle between two of these is a mapping that cannot be written in any order.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/ForeignKeyMapping.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/ForeignKeyMappingUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/ForeignKeyMapping.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/ForeignKeyMappingUsage.cs)
 
 ### FrontController (Patterns of Enterprise Application Architecture)
 
@@ -2060,7 +2060,7 @@ One handler for every request, which then dispatches to the command that serves 
 
 **Command** — What one request actually does, chosen by the handler. It is created per request rather than looked up on a shared object, which is what keeps a front controller free of the state a page controller can afford.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/FrontController.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/FrontControllerUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/FrontController.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/FrontControllerUsage.cs)
 
 ### Gateway (Patterns of Enterprise Application Architecture)
 
@@ -2074,7 +2074,7 @@ An object that encapsulates access to an external system or resource, in terms o
 
 **Gateway** — The face an external resource is reached through. Its interface is designed for the code that calls it rather than for the system behind it, so that the awkwardness of a protocol, a file format or a wire API stops at this type.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/Gateway.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/GatewayUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/Gateway.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/GatewayUsage.cs)
 
 ### IdentityField (Patterns of Enterprise Application Architecture)
 
@@ -2088,7 +2088,7 @@ The database key, carried on the object, so that an object in memory and a row i
 
 **IdentityField** — The field or property holding the row's key. It is the one piece of the database that a domain object legitimately carries, and saying which member it is matters: it must not be treated as part of the model's meaning — two objects are not equal because a mapper has not yet assigned one of them a key.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/IdentityField.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/IdentityFieldUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/IdentityField.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/IdentityFieldUsage.cs)
 
 ### IdentityMap (Patterns of Enterprise Application Architecture)
 
@@ -2102,7 +2102,7 @@ A map of the objects already loaded in a session, so that one row never becomes 
 
 **IdentityMap** — The registry consulted before any load. Its purpose is correctness before performance: two objects for one row means two sets of changes, and the second write silently discards the first.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/IdentityMap.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/IdentityMapUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/IdentityMap.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/IdentityMapUsage.cs)
 
 ### ImplicitLock (Patterns of Enterprise Application Architecture)
 
@@ -2116,7 +2116,7 @@ The locking is done by the framework, so that no piece of application code can f
 
 **ImplicitLock** — Where the acquisition of a lock is taken out of application code and put into a layer everything passes through. The reasoning is that one forgotten lock is enough to lose data, and reviewing every path forever is not a control — the same argument any repository makes for centralising a rule that must never be skipped.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/ImplicitLock.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/ImplicitLockUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/ImplicitLock.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/ImplicitLockUsage.cs)
 
 ### InheritanceMappers (Patterns of Enterprise Application Architecture)
 
@@ -2130,7 +2130,7 @@ A structure that organises the mappers of a hierarchy, so that each class's mapp
 
 **InheritanceMappers** — The mapper hierarchy that mirrors the class hierarchy, with the shared mapping on a base mapper and each subclass's on its own. It is what stops one of the three inheritance mappings from becoming a single procedure with a switch over the discriminator.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/InheritanceMappers.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/InheritanceMappersUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/InheritanceMappers.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/InheritanceMappersUsage.cs)
 
 ### LayerSupertype (Patterns of Enterprise Application Architecture)
 
@@ -2144,7 +2144,7 @@ A type that is the supertype of every type in one layer, holding what they all s
 
 **LayerSupertype** — The common parent of a layer. It exists to hold what is genuinely shared — an identity field, an equality rule, an event list — and it earns its place only while that is a short list: a layer supertype that grows behaviour becomes the place where anything with no home is put.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/LayerSupertype.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/LayerSupertypeUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/LayerSupertype.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/LayerSupertypeUsage.cs)
 
 ### LazyLoad (Patterns of Enterprise Application Architecture)
 
@@ -2158,7 +2158,7 @@ An object that does not hold all its data yet, but knows how to fetch the rest w
 
 **LazyLoad** — A participant that defers part of its own loading until something asks for it. The cost it trades away is a load nobody needed; the cost it can introduce is worse and is the reason to annotate it — a lazy load inside a loop is the ripple effect that turns one query into a thousand, and it is invisible at the call site.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/LazyLoad.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/LazyLoadUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/LazyLoad.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/LazyLoadUsage.cs)
 
 ### Mapper (Patterns of Enterprise Application Architecture)
 
@@ -2172,7 +2172,7 @@ An object that sets up communication between two independent things, so that nei
 
 **Mapper** — The go-between. What makes it the pattern is the direction of ignorance: neither side depends on the mapper, and neither knows the other exists — which is what separates it from a gateway, whose caller knows it perfectly well.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/Mapper.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/MapperUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/Mapper.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/MapperUsage.cs)
 
 ### MetadataMapping (Patterns of Enterprise Application Architecture)
 
@@ -2186,7 +2186,7 @@ The mapping between objects and tables held as data, rather than written as code
 
 **MetadataMapping** — The mapping expressed as metadata a mapper reads — a file, attributes, a table — instead of hand-written per class. It removes a great deal of repetitive code and moves the cost: a mapping error is no longer a compilation failure, and what was explicit becomes something a reader must go and look up.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/MetadataMapping.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/MetadataMappingUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/MetadataMapping.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/MetadataMappingUsage.cs)
 
 ### ModelViewController (Patterns of Enterprise Application Architecture)
 
@@ -2206,7 +2206,7 @@ Splits presentation into three: what is true, how it is shown, and what a reques
 
 **Controller** — What a request does. It interprets the input, asks the model to change, and chooses the view — and holds no domain rule of its own, because a rule that lives here cannot be reached by anything that is not a request.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/ModelViewController.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/ModelViewControllerUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/ModelViewController.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/ModelViewControllerUsage.cs)
 
 ### Money (Patterns of Enterprise Application Architecture)
 
@@ -2220,7 +2220,7 @@ Makes an amount and its currency one value with arithmetic of its own, so that a
 
 **Money** — The money value itself, holding an amount and the currency it is in, and refusing arithmetic that would mix two currencies. What it adds over a plain decimal is allocation: dividing a sum between several parties without losing or inventing a cent, which no rounding of a bare number does correctly.
 
-Held by a subtype: yes · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/Money.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/MoneyUsage.cs)
+Held by a subtype: yes · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/Money.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/MoneyUsage.cs)
 
 ### OptimisticOfflineLock (Patterns of Enterprise Application Architecture)
 
@@ -2237,7 +2237,7 @@ A conflict between two long transactions is detected at commit, by checking that
 
 **VersionField** — The member the check is made against — a version, a timestamp, a hash. Naming it matters because everything rests on it: an update that forgets to include it in its WHERE clause silently turns the whole pattern off, and nothing fails.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/OptimisticOfflineLock.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/OptimisticOfflineLockUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/OptimisticOfflineLock.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/OptimisticOfflineLockUsage.cs)
 
 ### PageController (Patterns of Enterprise Application Architecture)
 
@@ -2251,7 +2251,7 @@ One object per page or action, handling the requests that page receives.
 
 **PageController** — The controller for one page. It suits a site whose pages differ more than they share: each is independent, and a new page adds a class rather than a branch. The cost arrives as duplication — authentication, navigation and layout decisions repeat per page until something is extracted.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/PageController.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/PageControllerUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/PageController.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/PageControllerUsage.cs)
 
 ### PessimisticOfflineLock (Patterns of Enterprise Application Architecture)
 
@@ -2265,7 +2265,7 @@ A conflict between two long transactions is prevented, by letting only one of th
 
 **PessimisticOfflineLock** — A lock taken before the work begins and held across requests. It suits a system where a conflict is expensive to discover late, and it brings the problems a database transaction was hiding: a lock held by a user who went home, and therefore a timeout, an owner and a way to break it.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/PessimisticOfflineLock.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/PessimisticOfflineLockUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/PessimisticOfflineLock.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/PessimisticOfflineLockUsage.cs)
 
 ### Plugin (Patterns of Enterprise Application Architecture)
 
@@ -2279,7 +2279,7 @@ A point at which an implementation is chosen by configuration rather than by com
 
 **Plugin** — The contract a swappable implementation satisfies, chosen at configuration time. It is worth the indirection where the choice genuinely varies between deployments — a device driver, a storage backend — and not where a single implementation has been given an interface out of habit.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/Plugin.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/PluginUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/Plugin.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/PluginUsage.cs)
 
 ### QueryObject (Patterns of Enterprise Application Architecture)
 
@@ -2293,7 +2293,7 @@ An object that represents a query, so that criteria can be built, passed and com
 
 **QueryObject** — A query as a value. Because it is an object rather than a string, it can be built up in steps, handed across a boundary and combined with another — and it lets a repository take criteria without exposing a query language to its callers.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/QueryObject.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/QueryObjectUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/QueryObject.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/QueryObjectUsage.cs)
 
 ### RecordSet (Patterns of Enterprise Application Architecture)
 
@@ -2307,7 +2307,7 @@ An in-memory representation of tabular data, as rows and columns rather than as 
 
 **RecordSet** — Tabular data carried as tabular data. It earns its place where the code, the tools and the platform all already speak rows and columns — a report, a grid, an import — and it is the wrong shape the moment behaviour needs to attach to a row rather than to the set.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/RecordSet.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/RecordSetUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/RecordSet.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/RecordSetUsage.cs)
 
 ### Registry (Patterns of Enterprise Application Architecture)
 
@@ -2321,7 +2321,7 @@ A well-known object that other objects use to find common objects and services.
 
 **Registry** — The agreed place to look something up when passing it in is impractical. It is global by nature, which is the whole of its cost: what it holds must be scoped deliberately — per process, per request, per thread — and a registry whose scope is left unstated is where a test starts depending on the test that ran before it.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/Registry.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/RegistryUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/Registry.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/RegistryUsage.cs)
 
 ### RemoteFacade (Patterns of Enterprise Application Architecture)
 
@@ -2335,7 +2335,7 @@ A coarse-grained face over fine-grained objects, so that a remote caller pays fo
 
 **RemoteFacade** — A facade that exists because of the WIRE, not because of complexity. Its methods are shaped by round trips: each one does what a caller would otherwise have done in six calls, and it holds no logic of its own — the moment it decides something, the rule has moved out of the model and onto the boundary.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/RemoteFacade.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/RemoteFacadeUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/RemoteFacade.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/RemoteFacadeUsage.cs)
 
 ### Repository (Patterns of Enterprise Application Architecture)
 
@@ -2349,7 +2349,7 @@ A collection-like interface onto domain objects, behind which the mapping to sto
 
 **Repository** — What client code asks for objects. It reads as an in-memory collection — add, remove, and queries phrased in the domain's own language — so that no caller is written in terms of storage. Criteria are passed as objects rather than as a query language, which is what keeps the illusion intact.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/Repository.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/RepositoryUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/Repository.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/RepositoryUsage.cs)
 
 ### RowDataGateway (Patterns of Enterprise Application Architecture)
 
@@ -2365,7 +2365,7 @@ A narrower case of **Gateway**: every participant here is one of those too.
 
 **RowDataGateway** — One instance per row, with a field per column and no domain logic at all. Any behaviour beyond loading and saving belongs elsewhere — the moment business rules appear on it, it has become an active record instead.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/RowDataGateway.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/RowDataGatewayUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/RowDataGateway.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/RowDataGatewayUsage.cs)
 
 ### SeparatedInterface (Patterns of Enterprise Application Architecture)
 
@@ -2379,7 +2379,7 @@ An interface declared apart from its implementation, so that a client depends on
 
 **SeparatedInterface** — An interface deliberately placed away from what implements it — in the package of its CLIENT, or in one of its own. The dependency then points from the implementation to the interface rather than from the client to the implementation, which is exactly the inversion that lets a layer be compiled, tested and replaced without the thing below it.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/SeparatedInterface.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/SeparatedInterfaceUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/SeparatedInterface.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/SeparatedInterfaceUsage.cs)
 
 ### SerializedLob (Patterns of Enterprise Application Architecture)
 
@@ -2393,7 +2393,7 @@ A graph of objects saved into a single field as one serialised value.
 
 **SerializedLob** — A type stored whole, in one column, rather than mapped. It suits a structure the database never has to query into and whose shape changes often. The cost is deferred rather than avoided: nothing can query inside it, and the day the format changes every stored value must still be readable.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/SerializedLob.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/SerializedLobUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/SerializedLob.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/SerializedLobUsage.cs)
 
 ### ServerSessionState (Patterns of Enterprise Application Architecture)
 
@@ -2407,7 +2407,7 @@ Session state kept on the server, keyed by a token the client returns.
 
 **ServerSessionState** — State held between requests by the server. It is the simplest to write and the one that constrains deployment: state in one process means a request must reach that process, or the state must be moved somewhere every process can see — which is the next pattern.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/ServerSessionState.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/ServerSessionStateUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/ServerSessionState.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/ServerSessionStateUsage.cs)
 
 ### ServiceLayer (Patterns of Enterprise Application Architecture)
 
@@ -2421,7 +2421,7 @@ A layer of services defining an application's boundary and the set of operations
 
 **ServiceLayer** — The boundary an application is called through. Each operation is one use case, and the layer carries the orchestration — transactions, security, calls to other systems — that no single domain object owns. What it must not carry is domain logic: a service layer that starts deciding things has hollowed out the model behind it.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/ServiceLayer.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/ServiceLayerUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/ServiceLayer.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/ServiceLayerUsage.cs)
 
 ### ServiceStub (Patterns of Enterprise Application Architecture)
 
@@ -2435,7 +2435,7 @@ A stand-in for a service that is slow, costly or unavailable, so that tests can 
 
 **ServiceStub** — A working replacement for a real service, written to be predictable rather than faithful. It differs from a mock in what it is for: it is not there to assert how it was called, it is there so the thing under test can run at all — which is why it usually implements the same separated interface the real one does.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/ServiceStub.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/ServiceStubUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/ServiceStub.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/ServiceStubUsage.cs)
 
 ### SingleTableInheritance (Patterns of Enterprise Application Architecture)
 
@@ -2449,7 +2449,7 @@ A hierarchy of classes mapped to one table holding the columns of all of them.
 
 **SingleTableInheritance** — The root of a hierarchy stored in a single table, with a discriminator and a column per field of every subclass. Simple and fast — no joins, no scattered rows — at the price of columns that are null for most rows, and a table that grows every time a subclass gains a field.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/SingleTableInheritance.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/SingleTableInheritanceUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/SingleTableInheritance.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/SingleTableInheritanceUsage.cs)
 
 ### SpecialCase (Patterns of Enterprise Application Architecture)
 
@@ -2463,7 +2463,7 @@ A subclass that stands for a particular case, and behaves so that callers need n
 
 **SpecialCase** — A case given a type of its own — an unknown customer, a missing rate, a job with no operator — so that the condition is handled by the type system instead of by a test at every call site. What makes it the pattern rather than a subclass is that callers do not distinguish it: it answers the same protocol, with answers appropriate to its case.
 
-Held by a subtype: yes · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/SpecialCase.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/SpecialCaseUsage.cs)
+Held by a subtype: yes · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/SpecialCase.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/SpecialCaseUsage.cs)
 
 ### TableDataGateway (Patterns of Enterprise Application Architecture)
 
@@ -2479,7 +2479,7 @@ A narrower case of **Gateway**: every participant here is one of those too.
 
 **TableDataGateway** — The single home of every statement touching one table. It is stateless and instance-free of the rows it returns: find, insert, update and delete take and return plain data, which is what distinguishes it from a gateway that wraps a single row.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/TableDataGateway.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/TableDataGatewayUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/TableDataGateway.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/TableDataGatewayUsage.cs)
 
 ### TableModule (Patterns of Enterprise Application Architecture)
 
@@ -2493,7 +2493,7 @@ One instance that carries the business logic for all the rows of one table.
 
 **TableModule** — A single object per table, holding the rules for every row rather than one object per row. It sits between a transaction script and a domain model: the logic has somewhere to live and is organised by table, which suits a codebase built around a record set the platform already gives it.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/TableModule.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/TableModuleUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/TableModule.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/TableModuleUsage.cs)
 
 ### TemplateView (Patterns of Enterprise Application Architecture)
 
@@ -2507,7 +2507,7 @@ A page written as its own markup with the dynamic parts marked in it.
 
 **TemplateView** — A view that is written as the page it produces, so a designer can read it. The discipline it needs is stated in its own risk: logic in a template is logic nothing can test, which is why the pattern comes with the rule that a template calls a helper rather than deciding anything itself.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/TemplateView.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/TemplateViewUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/TemplateView.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/TemplateViewUsage.cs)
 
 ### TransactionScript (Patterns of Enterprise Application Architecture)
 
@@ -2521,7 +2521,7 @@ One procedure that handles one request from the presentation, from start to fini
 
 **TransactionScript** — A single procedure carrying the whole of one business transaction — validate, compute, persist, return. It is chosen when the logic is simple and stays simple: it scales badly with complexity, because two scripts that share a rule share it by copying, and that is the trade rather than an oversight.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/TransactionScript.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/TransactionScriptUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/TransactionScript.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/TransactionScriptUsage.cs)
 
 ### TransformView (Patterns of Enterprise Application Architecture)
 
@@ -2535,7 +2535,7 @@ A view that walks the data and transforms each element into the output.
 
 **TransformView** — A view written as a transformation, element by element, rather than as the page. Harder to picture than a template and easier to test and to compose — and the natural choice when one model must be rendered into several formats.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/TransformView.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/TransformViewUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/TransformView.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/TransformViewUsage.cs)
 
 ### TwoStepView (Patterns of Enterprise Application Architecture)
 
@@ -2549,7 +2549,7 @@ A rendering in two stages: the data becomes a logical page, and the logical page
 
 **TwoStepView** — A view that produces an intermediate, presentation-neutral structure before any markup exists. The whole of its value is the second step being written once: a global change to the look is one change, not one per screen — and the price is a layer that must express everything every screen needs.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/TwoStepView.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/TwoStepViewUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/TwoStepView.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/TwoStepViewUsage.cs)
 
 ### UnitOfWork (Patterns of Enterprise Application Architecture)
 
@@ -2563,7 +2563,7 @@ Keeps track of everything done during a business transaction that affects the st
 
 **UnitOfWork** — Tracks the changes made during a business transaction, and coordinates writing them out.
 
-Held by a subtype: yes · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/UnitOfWork.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/UnitOfWorkUsage.cs)
+Held by a subtype: yes · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/UnitOfWork.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/UnitOfWorkUsage.cs)
 
 ### ValueObject (Patterns of Enterprise Application Architecture)
 
@@ -2577,12 +2577,12 @@ A small object, such as an amount of money or a date range, whose equality is no
 
 **ValueObject** — An object without identity, compared by the values it holds rather than by which instance it is.
 
-Held by a subtype: yes · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseApplicationArchitecture/ValueObject.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseApplicationArchitecture/ValueObjectUsage.cs)
+Held by a subtype: yes · [Source](../../DesignPatternCatalog.EnterpriseApplicationArchitecture/ValueObject.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseApplicationArchitecture/ValueObjectUsage.cs)
 
 
 ## Enterprise Integration Patterns
 
-`Reefact.LivingDocumentation.Attributes.EnterpriseIntegration` — 65 patterns, 98 roles.
+`DesignPatternCatalog.EnterpriseIntegration` — 65 patterns, 98 roles.
 
 ### Aggregator (Enterprise Integration Patterns)
 
@@ -2605,7 +2605,7 @@ Collects related messages and emits one message when the set is complete, so tha
 
 **AggregationStrategy** — How the collected messages become one. Held apart from the completeness condition because when to emit and what to emit are different questions, and conflating them is how an aggregator becomes unreadable.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/Aggregator.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/AggregatorUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/Aggregator.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/AggregatorUsage.cs)
 
 ### CanonicalDataModel (Enterprise Integration Patterns)
 
@@ -2619,7 +2619,7 @@ A message format belonging to no application, which every application translates
 
 **CanonicalDataModel** — The format that is nobody's. Annotating it is what makes the indirection countable: six applications translating to each other need thirty translators and twelve through a canonical model, and a type that has quietly acquired one application's vocabulary is the way that saving is lost.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/CanonicalDataModel.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/CanonicalDataModelUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/CanonicalDataModel.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/CanonicalDataModelUsage.cs)
 
 ### ChannelAdapter (Enterprise Integration Patterns)
 
@@ -2633,7 +2633,7 @@ Connects an application to the messaging system from outside it, so that an appl
 
 **ChannelAdapter** — The participant that reads or writes an application's own interface on one side and a channel on the other. It is what lets a system be integrated without being modified, which is often the only option there is.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/ChannelAdapter.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/ChannelAdapterUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/ChannelAdapter.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/ChannelAdapterUsage.cs)
 
 ### ChannelPurger (Enterprise Integration Patterns)
 
@@ -2647,7 +2647,7 @@ Removes left-over messages from a channel, so that what persisted from an earlie
 
 **ChannelPurger** — The participant that empties a channel, or removes the messages matching some criterion. It exists because persistence outlives a test: a stale reply consumed as though it answered the request just sent is a bug that reproduces perfectly and explains nothing, and something that deletes messages on purpose is worth finding before it is pointed at production.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/ChannelPurger.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/ChannelPurgerUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/ChannelPurger.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/ChannelPurgerUsage.cs)
 
 ### ClaimCheck (Enterprise Integration Patterns)
 
@@ -2667,7 +2667,7 @@ Stores a message's bulk in a persistent store and puts a key on the message in i
 
 **DataStore** — Where the data waits. It is named because it is the pattern's cost: what was one message becomes a message and a stored record whose lifetime nothing on the message states, so somebody has to decide when it is safe to delete.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/ClaimCheck.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/ClaimCheckUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/ClaimCheck.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/ClaimCheckUsage.cs)
 
 ### CommandMessage (Enterprise Integration Patterns)
 
@@ -2683,7 +2683,7 @@ A narrower case of **Message**: every participant here is one of those too.
 
 **CommandMessage** — A message whose content is an imperative — cancel this booking, print this document. It expects one handler and, usually, a reply saying what happened; naming it as a command is what tells a reader that ignoring it is a defect rather than a choice.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/CommandMessage.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/CommandMessageUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/CommandMessage.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/CommandMessageUsage.cs)
 
 ### CompetingConsumers (Enterprise Integration Patterns)
 
@@ -2697,7 +2697,7 @@ Puts several consumers on one point-to-point channel so that messages are proces
 
 **CompetingConsumers** — A consumer that competes with its fellows for each message the channel delivers; which of them wins is the messaging system's business and not the application's. It works only on a point-to-point channel — several consumers on a publish-subscribe channel each get their own copy, which is the opposite of what this pattern is for.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/CompetingConsumers.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/CompetingConsumersUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/CompetingConsumers.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/CompetingConsumersUsage.cs)
 
 ### ComposedMessageProcessor (Enterprise Integration Patterns)
 
@@ -2711,7 +2711,7 @@ Splits a message, routes each element to the processing it needs, and reassemble
 
 **ComposedMessageProcessor** — The participant that assembles a splitter, a router and an aggregator into one addressable step. It is a composite of three patterns rather than a fourth mechanism, and naming it is what stops the three being reinvented at every call site.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/ComposedMessageProcessor.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/ComposedMessageProcessorUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/ComposedMessageProcessor.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/ComposedMessageProcessorUsage.cs)
 
 ### ContentBasedRouter (Enterprise Integration Patterns)
 
@@ -2725,7 +2725,7 @@ Sends a message to one destination chosen by examining the message itself, so th
 
 **ContentBasedRouter** — The participant that inspects a message and forwards it, unchanged, to exactly one destination. It centralises knowledge of the destinations, which is the trade: one participant knows them all so that no sender knows any.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/ContentBasedRouter.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/ContentBasedRouterUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/ContentBasedRouter.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/ContentBasedRouterUsage.cs)
 
 ### ContentEnricher (Enterprise Integration Patterns)
 
@@ -2742,7 +2742,7 @@ Reaches an external source to add to a message what its sender could not supply,
 
 **Resource** — The external source the enrichment is drawn from — a database, a directory, a service, the clock. It is named because it is the difference from a plain message translator: an enricher has a dependency outside the message, so it can be slow, be down, or answer differently tomorrow, and that is worth seeing in the code.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/ContentEnricher.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/ContentEnricherUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/ContentEnricher.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/ContentEnricherUsage.cs)
 
 ### ContentFilter (Enterprise Integration Patterns)
 
@@ -2756,7 +2756,7 @@ Removes from a message the items a receiver has no use for, so that a large or d
 
 **ContentFilter** — The participant that strips a message down to the items that matter, and often flattens its structure while doing so. It is the opposite of a content enricher and not to be confused with a message filter, which drops whole messages and leaves the ones it keeps untouched.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/ContentFilter.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/ContentFilterUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/ContentFilter.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/ContentFilterUsage.cs)
 
 ### ControlBus (Enterprise Integration Patterns)
 
@@ -2773,7 +2773,7 @@ Carries the management of a messaging system over the messaging system itself, o
 
 **ManagedComponent** — A component connected to both flows: the application's and the control bus's. Annotating it is what says which parts of a system can be told to reconfigure, asked how they are, or heard from at all — an absence here is a component nobody can administer, which is the state most of them start in.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/ControlBus.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/ControlBusUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/ControlBus.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/ControlBusUsage.cs)
 
 ### CorrelationIdentifier (Enterprise Integration Patterns)
 
@@ -2790,7 +2790,7 @@ Makes a reply name the request it answers, so that a requestor sending many can 
 
 **Correlation** — The property on the reply that quotes the request's identifier. This is the assertion the pattern exists for: an answer that does not carry it cannot be matched to anything, and a requestor holding several open requests has no way to guess.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/CorrelationIdentifier.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/CorrelationIdentifierUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/CorrelationIdentifier.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/CorrelationIdentifierUsage.cs)
 
 ### DatatypeChannel (Enterprise Integration Patterns)
 
@@ -2804,7 +2804,7 @@ Carries messages of one type only, so that a receiver knows what it is reading w
 
 **DatatypeChannel** — A channel restricted to one kind of message. It trades channels for certainty: more channels to manage, and no receiver that has to ask what it just got.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/DatatypeChannel.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/DatatypeChannelUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/DatatypeChannel.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/DatatypeChannelUsage.cs)
 
 ### DeadLetterChannel (Enterprise Integration Patterns)
 
@@ -2818,7 +2818,7 @@ Gives the messaging system somewhere to put a message it cannot deliver, so that
 
 **DeadLetterChannel** — The channel the messaging system moves an undeliverable message to. The assertion worth checking is that nothing is lost quietly: a channel with no dead letter channel behind it drops messages and says nothing.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/DeadLetterChannel.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/DeadLetterChannelUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/DeadLetterChannel.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/DeadLetterChannelUsage.cs)
 
 ### Detour (Enterprise Integration Patterns)
 
@@ -2832,7 +2832,7 @@ Sends messages through extra steps or straight to their destination depending on
 
 **Detour** — The router with two outputs and a state told to it from outside: one output is the ordinary destination, the other the way round through steps that inspect or modify. Unlike a wire tap it can change what arrives, which is why it is worth knowing where one is before reading a message that looks wrong.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/Detour.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/DetourUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/Detour.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/DetourUsage.cs)
 
 ### DocumentMessage (Enterprise Integration Patterns)
 
@@ -2848,7 +2848,7 @@ A narrower case of **Message**: every participant here is one of those too.
 
 **DocumentMessage** — A message that transfers a thing rather than an order. The sender is indifferent to what happens next, which is the difference from a command and the reason a document can be sent to a receiver that does something the sender never imagined.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/DocumentMessage.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/DocumentMessageUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/DocumentMessage.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/DocumentMessageUsage.cs)
 
 ### DurableSubscriber (Enterprise Integration Patterns)
 
@@ -2862,7 +2862,7 @@ Has the messaging system keep the messages published while it was disconnected, 
 
 **DurableSubscriber** — A subscriber whose subscription outlives its connection. Nothing about it differs while it is connected, which is exactly why the intent has to be declared rather than read off the code: the whole pattern is a behaviour visible only during an absence.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/DurableSubscriber.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/DurableSubscriberUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/DurableSubscriber.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/DurableSubscriberUsage.cs)
 
 ### DynamicRouter (Enterprise Integration Patterns)
 
@@ -2882,7 +2882,7 @@ Lets the destinations tell the router how to reach them, so that adding one is a
 
 **RoutingTable** — What the router learned from the control channel. Held as state rather than configuration, which is what makes it answerable at run time and what makes it something to rebuild after a restart.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/DynamicRouter.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/DynamicRouterUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/DynamicRouter.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/DynamicRouterUsage.cs)
 
 ### EnvelopeWrapper (Enterprise Integration Patterns)
 
@@ -2902,7 +2902,7 @@ Wraps application data in an envelope the messaging infrastructure understands a
 
 **Unwrapper** — The participant that takes application data back out at the destination. It is named separately from the wrapper because the two live in different applications and are written by different people, and an envelope opened by nobody is a message the receiver will reject as malformed.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/EnvelopeWrapper.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/EnvelopeWrapperUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/EnvelopeWrapper.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/EnvelopeWrapperUsage.cs)
 
 ### EventDrivenConsumer (Enterprise Integration Patterns)
 
@@ -2916,7 +2916,7 @@ Is handed each message as it arrives, so that an application consumes as fast as
 
 **EventDrivenConsumer** — The consumer the messaging system invokes when a message arrives — the asynchronous receiver. It sits dormant with no running thread, and it does not choose its own pace, so nothing in it limits how many messages it may be processing at once.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/EventDrivenConsumer.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/EventDrivenConsumerUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/EventDrivenConsumer.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/EventDrivenConsumerUsage.cs)
 
 ### EventMessage (Enterprise Integration Patterns)
 
@@ -2932,7 +2932,7 @@ A narrower case of **Message**: every participant here is one of those too.
 
 **EventMessage** — A message naming a fact in the past tense. It carries no instruction and expects no reply, so a subscriber added tomorrow costs the publisher nothing — which is what makes it the message of a publish-subscribe channel rather than of a queue.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/EventMessage.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/EventMessageUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/EventMessage.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/EventMessageUsage.cs)
 
 ### FileTransfer (Enterprise Integration Patterns)
 
@@ -2946,7 +2946,7 @@ Integrates applications by having one produce a file the other consumes, so that
 
 **FileTransfer** — The participant that produces or consumes the shared file. What it buys is that the two applications need share no technology at all; what it costs is timeliness, since the receiver learns nothing until a file is written and found.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/FileTransfer.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/FileTransferUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/FileTransfer.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/FileTransferUsage.cs)
 
 ### FormatIndicator (Enterprise Integration Patterns)
 
@@ -2960,7 +2960,7 @@ Says which version or format a message is in, so that a receiver can accept more
 
 **FormatIndicator** — The property naming the message's format. It is the cheapest thing to add before the first version ships and the most expensive to add afterwards, since a message without one can only be read by guessing.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/FormatIndicator.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/FormatIndicatorUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/FormatIndicator.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/FormatIndicatorUsage.cs)
 
 ### GuaranteedDelivery (Enterprise Integration Patterns)
 
@@ -2974,7 +2974,7 @@ Makes the messaging system persist a message until it is delivered, so that a cr
 
 **GuaranteedDelivery** — The channel that persists what it carries. It is a property of the channel rather than of a message, and it costs throughput for durability — which is why it is declared rather than assumed.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/GuaranteedDelivery.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/GuaranteedDeliveryUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/GuaranteedDelivery.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/GuaranteedDeliveryUsage.cs)
 
 ### IdempotentReceiver (Enterprise Integration Patterns)
 
@@ -2988,7 +2988,7 @@ Can receive the same message twice without doing it twice, so that a sender is f
 
 **IdempotentReceiver** — A receiver for which handling a message once and handling it three times have the same effect — reached either by discarding duplicates or by giving the message semantics that survive repetition. It is an assertion about behaviour that no signature carries, and the only thing that makes a resend safe.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/IdempotentReceiver.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/IdempotentReceiverUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/IdempotentReceiver.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/IdempotentReceiverUsage.cs)
 
 ### InvalidMessageChannel (Enterprise Integration Patterns)
 
@@ -3002,7 +3002,7 @@ Gives a receiver somewhere to put a message it cannot process, so that bad data 
 
 **InvalidMessageChannel** — The channel a receiver moves a message to when the message makes no sense to it. The distinction from a dead letter channel is who decides: here the receiver read the message and rejected it.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/InvalidMessageChannel.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/InvalidMessageChannelUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/InvalidMessageChannel.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/InvalidMessageChannelUsage.cs)
 
 ### Message (Enterprise Integration Patterns)
 
@@ -3022,7 +3022,7 @@ Wraps data in a packet the channel can carry, so that what is sent is a thing in
 
 **Body** — What the application sent. The messaging system carries it without looking at it, which is what lets one channel serve payloads it knows nothing about.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/Message.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/MessageUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/Message.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/MessageUsage.cs)
 
 ### MessageBroker (Enterprise Integration Patterns)
 
@@ -3036,7 +3036,7 @@ Puts the routing of a whole system in one hub, so that each application has one 
 
 **MessageBroker** — The hub every application sends to and receives from, and the only participant that knows the topology. It replaces the arithmetic of point-to-point integrations with a single dependency, and becomes the thing whose failure stops everything — which is the trade to state rather than discover.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/MessageBroker.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/MessageBrokerUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/MessageBroker.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/MessageBrokerUsage.cs)
 
 ### MessageBus (Enterprise Integration Patterns)
 
@@ -3050,7 +3050,7 @@ Gives applications a shared messaging infrastructure and a common command set, s
 
 **MessageBus** — The participant that provides the shared infrastructure and the agreed vocabulary. What makes it more than a channel is the second half: without a common command set, a bus is only a way of moving strings.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/MessageBus.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/MessageBusUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/MessageBus.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/MessageBusUsage.cs)
 
 ### MessageChannel (Enterprise Integration Patterns)
 
@@ -3064,7 +3064,7 @@ Names the logical path a message travels, so that a sender addresses a channel r
 
 **MessageChannel** — The channel itself, where a codebase gives it a type rather than a configured name. What it asserts is that the sender chooses a channel and not a recipient — which is what makes a receiver replaceable without the sender changing.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/MessageChannel.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/MessageChannelUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/MessageChannel.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/MessageChannelUsage.cs)
 
 ### MessageDispatcher (Enterprise Integration Patterns)
 
@@ -3081,7 +3081,7 @@ Puts one consumer on the channel and hands each message to a performer, so that 
 
 **Performer** — The worker the dispatcher hands a message to, often on a thread of its own. It may be created per message or drawn from a pool, and the dispatcher may pick a specialised one by looking at the message — none of which the channel knows about.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/MessageDispatcher.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/MessageDispatcherUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/MessageDispatcher.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/MessageDispatcherUsage.cs)
 
 ### MessageEndpoint (Enterprise Integration Patterns)
 
@@ -3095,7 +3095,7 @@ Encapsulates how an application attaches to a channel, so that the application's
 
 **MessageEndpoint** — The participant that connects application code to a channel. It is the seam the messaging library lives behind, which is what lets the application be tested without a broker and the broker be changed without the application.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/MessageEndpoint.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/MessageEndpointUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/MessageEndpoint.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/MessageEndpointUsage.cs)
 
 ### MessageExpiration (Enterprise Integration Patterns)
 
@@ -3109,7 +3109,7 @@ Says when a message stops being worth acting on, so that a stale instruction is 
 
 **MessageExpiration** — The property after which the message should not be processed. It exists because a message queued through an outage may arrive after it has become wrong, and a receiver has no other way to know that acting on it is worse than dropping it.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/MessageExpiration.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/MessageExpirationUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/MessageExpiration.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/MessageExpirationUsage.cs)
 
 ### MessageFilter (Enterprise Integration Patterns)
 
@@ -3123,7 +3123,7 @@ Discards the messages a component is not interested in, so that a receiver is sp
 
 **MessageFilter** — A router with one output and the option of none: what matches passes, what does not is dropped. The distinction from a selective consumer is where it sits — a filter is in the channel and drops for everyone, a selective consumer chooses for itself.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/MessageFilter.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/MessageFilterUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/MessageFilter.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/MessageFilterUsage.cs)
 
 ### MessageHistory (Enterprise Integration Patterns)
 
@@ -3137,7 +3137,7 @@ Carries on the message the list of components it has passed through, so that a s
 
 **MessageHistory** — The header property every component appends itself to, the originator included. It belongs to the header rather than the body because it is control information about the journey and not application data — and it is the price of loose coupling paid back: the message says where it has been because nothing else in the system can.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/MessageHistory.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/MessageHistoryUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/MessageHistory.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/MessageHistoryUsage.cs)
 
 ### MessageRouter (Enterprise Integration Patterns)
 
@@ -3151,7 +3151,7 @@ Decides where a message goes next, so that the steps of a process need not know 
 
 **MessageRouter** — The participant that consumes a message and sends it on unchanged. It asserts that it does not modify the message: a router that alters what it forwards is a translator wearing the wrong name, and a rule can be written against that.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/MessageRouter.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/MessageRouterUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/MessageRouter.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/MessageRouterUsage.cs)
 
 ### MessageSequence (Enterprise Integration Patterns)
 
@@ -3171,7 +3171,7 @@ Marks each message of a set with its place and the set's extent, so that an arbi
 
 **Size** — The property saying how many there are, or marking the last one. It is what lets a receiver know the set is complete rather than merely quiet — the same question an aggregator's completeness condition asks.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/MessageSequence.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/MessageSequenceUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/MessageSequence.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/MessageSequenceUsage.cs)
 
 ### MessageStore (Enterprise Integration Patterns)
 
@@ -3185,7 +3185,7 @@ Collects information about every message in one place, so that a transient and l
 
 **MessageStore** — Where a duplicate of each message, or a few fields of it, is kept for later analysis. It is fed and forgotten so the main flow is not slowed, at the cost of traffic — which is why what it keeps is a decision rather than an oversight, and worth being able to find.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/MessageStore.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/MessageStoreUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/MessageStore.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/MessageStoreUsage.cs)
 
 ### MessageTranslator (Enterprise Integration Patterns)
 
@@ -3199,7 +3199,7 @@ Converts a message from one data format to another, so that applications with di
 
 **MessageTranslator** — The participant that changes a message's format and not its route. It is the counterpart of a router, and keeping the two apart is what lets a pipeline be reasoned about: one step changes where, the other changes what.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/MessageTranslator.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/MessageTranslatorUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/MessageTranslator.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/MessageTranslatorUsage.cs)
 
 ### Messaging (Enterprise Integration Patterns)
 
@@ -3213,7 +3213,7 @@ Integrates applications by sending packets of data over channels, so that the se
 
 **Messaging** — The participant that sends or receives messages rather than calling or sharing. It is the style the rest of this catalogue elaborates: everything else here presupposes that integration happens by message.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/Messaging.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/MessagingUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/Messaging.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/MessagingUsage.cs)
 
 ### MessagingBridge (Enterprise Integration Patterns)
 
@@ -3227,7 +3227,7 @@ Connects two messaging systems so that a message available on one is available o
 
 **MessagingBridge** — The participant that consumes from one messaging system and publishes to another. It exists because two systems are rarely replaced at once, and it is the seam that lets one be retired gradually.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/MessagingBridge.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/MessagingBridgeUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/MessagingBridge.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/MessagingBridgeUsage.cs)
 
 ### MessagingGateway (Enterprise Integration Patterns)
 
@@ -3241,7 +3241,7 @@ Wraps the messaging calls behind methods stated in the domain's own words, so th
 
 **MessagingGateway** — The class that turns a business call into a message and back. Its methods take domain arguments rather than message properties, which is what lets the rest of the application be tested, read and changed without a broker in sight — and what makes the messaging system replaceable by editing one class.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/MessagingGateway.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/MessagingGatewayUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/MessagingGateway.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/MessagingGatewayUsage.cs)
 
 ### MessagingMapper (Enterprise Integration Patterns)
 
@@ -3255,7 +3255,7 @@ Holds the conversion between domain objects and messages in a class of its own, 
 
 **MessagingMapper** — The class that reads domain objects into a message and builds or updates them from one. It knows both sides and neither side knows it — the layers do not even know it exists, which is what keeps a message format from leaking references and inheritance the receiving application may not have.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/MessagingMapper.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/MessagingMapperUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/MessagingMapper.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/MessagingMapperUsage.cs)
 
 ### Normalizer (Enterprise Integration Patterns)
 
@@ -3269,7 +3269,7 @@ Routes each incoming format through a translator of its own so that messages mea
 
 **Normalizer** — The participant that turns many equivalent formats into one. Like a composed message processor it is an assembly rather than a mechanism — a message router picking the format, a message translator per format — so its parts wear those patterns' own annotations and this one names the whole.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/Normalizer.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/NormalizerUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/Normalizer.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/NormalizerUsage.cs)
 
 ### PipesAndFilters (Enterprise Integration Patterns)
 
@@ -3289,7 +3289,7 @@ Divides a larger processing task into a sequence of independent steps joined by 
 
 **Pipeline** — The assembled sequence. It is the only participant that knows the order, so the order is stated in one place rather than implied by who calls whom.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/PipesAndFilters.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/PipesAndFiltersUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/PipesAndFilters.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/PipesAndFiltersUsage.cs)
 
 ### PointToPointChannel (Enterprise Integration Patterns)
 
@@ -3303,7 +3303,7 @@ Delivers each message to exactly one receiver, so that competing consumers can s
 
 **PointToPointChannel** — A channel whose message is consumed once, however many receivers listen. That is the assertion, and it is the one a consumer relies on to scale by adding another instance.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/PointToPointChannel.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/PointToPointChannelUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/PointToPointChannel.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/PointToPointChannelUsage.cs)
 
 ### PollingConsumer (Enterprise Integration Patterns)
 
@@ -3317,7 +3317,7 @@ Consumes a message only when it asks for one, so that the application decides wh
 
 **PollingConsumer** — The consumer that explicitly asks for a message and blocks until it gets one — the synchronous receiver. Its thread is its own, so the number of messages in flight is something the application can count, which is the trade against an event-driven consumer.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/PollingConsumer.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/PollingConsumerUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/PollingConsumer.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/PollingConsumerUsage.cs)
 
 ### ProcessManager (Enterprise Integration Patterns)
 
@@ -3337,7 +3337,7 @@ Keeps the state of a multi-step process in one participant, so that a sequence w
 
 **ProcessTemplate** — The definition the instances follow. It exists so that changing how a process runs is configuration rather than a class, which is the same knowledge-level move a posting rule makes for money.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/ProcessManager.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/ProcessManagerUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/ProcessManager.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/ProcessManagerUsage.cs)
 
 ### PublishSubscribeChannel (Enterprise Integration Patterns)
 
@@ -3351,7 +3351,7 @@ Delivers a copy of each message to every subscriber, so that an event reaches al
 
 **PublishSubscribeChannel** — A channel that copies its message to each subscriber. A sender adds no code when a subscriber is added, which is the property that makes it the channel for events rather than for commands.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/PublishSubscribeChannel.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/PublishSubscribeChannelUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/PublishSubscribeChannel.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/PublishSubscribeChannelUsage.cs)
 
 ### RecipientList (Enterprise Integration Patterns)
 
@@ -3368,7 +3368,7 @@ Sends a message to a set of destinations the sender computes, so that who receiv
 
 **Recipients** — The destinations computed for this message. Exposing them is what makes the routing decision auditable rather than a side effect nobody can inspect after the fact.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/RecipientList.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/RecipientListUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/RecipientList.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/RecipientListUsage.cs)
 
 ### RemoteProcedureInvocation (Enterprise Integration Patterns)
 
@@ -3382,7 +3382,7 @@ Integrates applications by letting one call a procedure the other exposes, so th
 
 **RemoteProcedureInvocation** — The participant that exposes or calls the remote procedure. The caller gets an immediate answer, and pays for it with a coupling in time: the callee must be up, and the caller waits.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/RemoteProcedureInvocation.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/RemoteProcedureInvocationUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/RemoteProcedureInvocation.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/RemoteProcedureInvocationUsage.cs)
 
 ### RequestReply (Enterprise Integration Patterns)
 
@@ -3405,7 +3405,7 @@ Pairs a request with a reply over two channels, so that a message can get an ans
 
 **Replier** — The participant that consumes the request and sends the reply. It learns where to answer from the message rather than from configuration, which is what lets one replier serve requestors it was never told about.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/RequestReply.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/RequestReplyUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/RequestReply.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/RequestReplyUsage.cs)
 
 ### Resequencer (Enterprise Integration Patterns)
 
@@ -3419,7 +3419,7 @@ Puts a stream of related messages back into order, so that a receiver that depen
 
 **Resequencer** — The stateful participant that buffers what arrives early and releases in order. It changes neither the messages nor their destination, which is what makes it a router rather than a translator, and it needs a sequence to work from.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/Resequencer.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/ResequencerUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/Resequencer.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/ResequencerUsage.cs)
 
 ### ReturnAddress (Enterprise Integration Patterns)
 
@@ -3433,7 +3433,7 @@ Puts the reply channel on the request, so that a replier answers where the reque
 
 **ReturnAddress** — The property naming the channel the reply belongs on. Carrying it on the message is what lets one replier serve many requestors, each getting its answer on its own channel — and what makes a reply that goes nowhere a defect in the message rather than in the replier.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/ReturnAddress.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/ReturnAddressUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/ReturnAddress.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/ReturnAddressUsage.cs)
 
 ### RoutingSlip (Enterprise Integration Patterns)
 
@@ -3450,7 +3450,7 @@ Attaches the itinerary to the message, so that a sequence of steps can vary per 
 
 **Itinerary** — The ordered list of steps carried on the message, and the position within it. It is on the message rather than in a store, which is what makes the sequence self-describing and a failure mid-route diagnosable from the message alone.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/RoutingSlip.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/RoutingSlipUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/RoutingSlip.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/RoutingSlipUsage.cs)
 
 ### ScatterGather (Enterprise Integration Patterns)
 
@@ -3464,7 +3464,7 @@ Sends a message to several recipients and assembles their replies, so that the b
 
 **ScatterGather** — The participant that broadcasts a request and aggregates the replies. It differs from a composed message processor in what is distributed: there, the parts of one message; here, the whole message to several parties who each answer.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/ScatterGather.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/ScatterGatherUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/ScatterGather.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/ScatterGatherUsage.cs)
 
 ### SelectiveConsumer (Enterprise Integration Patterns)
 
@@ -3484,7 +3484,7 @@ Lets a consumer take only the messages matching its criteria, so that one channe
 
 **SelectiveConsumer** — The consumer that receives only what matches its criteria. Note where it sits: it chooses for itself and leaves the rest, whereas a message filter sits in the channel and drops for everyone. On a point-to-point channel several of these are competing consumers that are also selective.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/SelectiveConsumer.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/SelectiveConsumerUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/SelectiveConsumer.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/SelectiveConsumerUsage.cs)
 
 ### ServiceActivator (Enterprise Integration Patterns)
 
@@ -3501,7 +3501,7 @@ Connects a channel to a service the application already has, so that the same se
 
 **Service** — What is being made available. Naming it is what makes the pattern's claim checkable: a service that has acquired a message type in its signature, or a reply channel in its parameters, is no longer invocable by anything but the activator.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/ServiceActivator.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/ServiceActivatorUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/ServiceActivator.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/ServiceActivatorUsage.cs)
 
 ### SharedDatabase (Enterprise Integration Patterns)
 
@@ -3515,7 +3515,7 @@ Integrates applications by having them read and write one schema, so that there 
 
 **SharedDatabase** — The participant that reads or writes the shared schema. Consistency comes free because there is one copy; what it costs is that the schema becomes a contract between applications that must agree on it, and a change to it is a change to all of them.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/SharedDatabase.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/SharedDatabaseUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/SharedDatabase.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/SharedDatabaseUsage.cs)
 
 ### SmartProxy (Enterprise Integration Patterns)
 
@@ -3529,7 +3529,7 @@ Substitutes its own address for the requestor's return address, keeps the origin
 
 **SmartProxy** — The participant that stands between a requestor and a request-reply service, remembering where each answer really belongs. A pair of wire taps cannot do this because there is no fixed output channel to tap — and remembering means it holds state per outstanding request, so an answer that never comes is a leak rather than a silence.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/SmartProxy.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/SmartProxyUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/SmartProxy.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/SmartProxyUsage.cs)
 
 ### Splitter (Enterprise Integration Patterns)
 
@@ -3543,7 +3543,7 @@ Breaks a message carrying several elements into one message per element, so that
 
 **Splitter** — The participant that consumes one message and emits many. The assertion is the arithmetic: nothing is dropped and nothing invented, so a consignment of forty containers yields forty messages and a rule can check the count.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/Splitter.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/SplitterUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/Splitter.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/SplitterUsage.cs)
 
 ### TestMessage (Enterprise Integration Patterns)
 
@@ -3566,7 +3566,7 @@ Feeds known data through a live component and checks what comes out, so that a c
 
 **TestDataVerifier** — Compares what came out against what was expected and raises the discrepancy. It may need the original test data to do so, which is the one coupling inside this pattern and the reason the generator is worth pointing at rather than merely having.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/TestMessage.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/TestMessageUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/TestMessage.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/TestMessageUsage.cs)
 
 ### TransactionalClient (Enterprise Integration Patterns)
 
@@ -3583,7 +3583,7 @@ Makes a client's session with the messaging system transactional, so that the cl
 
 **Receiver** — A receiver whose message is not really off the channel until it commits. The mirror guarantee, and a different one: a crash mid-processing returns the message rather than losing it, at the price of the receiver having to tolerate seeing it twice.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/TransactionalClient.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/TransactionalClientUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/TransactionalClient.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/TransactionalClientUsage.cs)
 
 ### WireTap (Enterprise Integration Patterns)
 
@@ -3599,12 +3599,12 @@ A narrower case of **RecipientList**: every participant here is one of those too
 
 **WireTap** — A fixed recipient list with two outputs, forwarding the message unmodified to both. Keeping the analysis in whatever consumes the second channel is what lets one be inserted anywhere without risk to the first: it can be added to a running system, and it cannot change what the destination receives.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.EnterpriseIntegration/WireTap.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/EnterpriseIntegration/WireTapUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.EnterpriseIntegration/WireTap.cs) · [Sample](../../DesignPatternCatalog.Usage/EnterpriseIntegration/WireTapUsage.cs)
 
 
 ## Gang of Four
 
-`Reefact.LivingDocumentation.Attributes.GangOfFour` — 23 patterns, 86 roles.
+`DesignPatternCatalog.GangOfFour` — 23 patterns, 86 roles.
 
 ### AbstractFactory (Gang of Four)
 
@@ -3627,7 +3627,7 @@ Provides an interface for creating families of related or dependent objects with
 
 **ConcreteProduct** — Implements one abstract product, and is created by exactly one concrete factory.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.GangOfFour/AbstractFactory.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/GangOfFour/AbstractFactoryUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.GangOfFour/AbstractFactory.cs) · [Sample](../../DesignPatternCatalog.Usage/GangOfFour/AbstractFactoryUsage.cs)
 
 ### Adapter (Gang of Four)
 
@@ -3647,7 +3647,7 @@ Converts the interface of a type into the interface a client expects, letting ty
 
 **Adaptee** — Holds the behaviour worth reusing, but exposes it through an incompatible interface.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.GangOfFour/Adapter.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/GangOfFour/AdapterUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.GangOfFour/Adapter.cs) · [Sample](../../DesignPatternCatalog.Usage/GangOfFour/AdapterUsage.cs)
 
 ### Bridge (Gang of Four)
 
@@ -3670,7 +3670,7 @@ Decouples an abstraction from its implementation so that the two can vary indepe
 
 **ConcreteImplementor** — Provides one concrete implementation of the primitive operations.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.GangOfFour/Bridge.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/GangOfFour/BridgeUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.GangOfFour/Bridge.cs) · [Sample](../../DesignPatternCatalog.Usage/GangOfFour/BridgeUsage.cs)
 
 ### Builder (Gang of Four)
 
@@ -3693,7 +3693,7 @@ Separates the construction of a complex object from its representation, so that 
 
 **Product** — The complex object under construction.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.GangOfFour/Builder.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/GangOfFour/BuilderUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.GangOfFour/Builder.cs) · [Sample](../../DesignPatternCatalog.Usage/GangOfFour/BuilderUsage.cs)
 
 ### ChainOfResponsibility (Gang of Four)
 
@@ -3710,7 +3710,7 @@ Avoids coupling the sender of a request to its receiver by giving several object
 
 **ConcreteHandler** — Handles the requests it is responsible for, and forwards the others to its successor.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.GangOfFour/ChainOfResponsibility.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/GangOfFour/ChainOfResponsibilityUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.GangOfFour/ChainOfResponsibility.cs) · [Sample](../../DesignPatternCatalog.Usage/GangOfFour/ChainOfResponsibilityUsage.cs)
 
 ### Command (Gang of Four)
 
@@ -3736,7 +3736,7 @@ Encapsulates a request as an object, letting callers be parameterized with diffe
 
 **ExecuteMethod** — The operation that carries out the request.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.GangOfFour/Command.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/GangOfFour/CommandUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.GangOfFour/Command.cs) · [Sample](../../DesignPatternCatalog.Usage/GangOfFour/CommandUsage.cs)
 
 ### Composite (Gang of Four)
 
@@ -3756,7 +3756,7 @@ Composes objects into tree structures to represent part-whole hierarchies, and l
 
 **Composite** — An element that holds other components and delegates the work to them.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.GangOfFour/Composite.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/GangOfFour/CompositeUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.GangOfFour/Composite.cs) · [Sample](../../DesignPatternCatalog.Usage/GangOfFour/CompositeUsage.cs)
 
 ### Decorator (Gang of Four)
 
@@ -3779,7 +3779,7 @@ Attaches additional responsibilities to an object dynamically, as a flexible alt
 
 **ConcreteDecorator** — Adds one responsibility around the component it wraps.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.GangOfFour/Decorator.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/GangOfFour/DecoratorUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.GangOfFour/Decorator.cs) · [Sample](../../DesignPatternCatalog.Usage/GangOfFour/DecoratorUsage.cs)
 
 ### Facade (Gang of Four)
 
@@ -3796,7 +3796,7 @@ Provides a single, higher level interface to a set of interfaces in a subsystem,
 
 **Subsystem** — Does the real work, and knows nothing about the facade.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.GangOfFour/Facade.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/GangOfFour/FacadeUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.GangOfFour/Facade.cs) · [Sample](../../DesignPatternCatalog.Usage/GangOfFour/FacadeUsage.cs)
 
 ### FactoryMethod (Gang of Four)
 
@@ -3822,7 +3822,7 @@ Defines an interface for creating an object, but lets subclasses decide which cl
 
 **FactoryMethod** — The operation that creates the product, and which subclasses override.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.GangOfFour/FactoryMethod.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/GangOfFour/FactoryMethodUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.GangOfFour/FactoryMethod.cs) · [Sample](../../DesignPatternCatalog.Usage/GangOfFour/FactoryMethodUsage.cs)
 
 ### Flyweight (Gang of Four)
 
@@ -3845,7 +3845,7 @@ Uses sharing to support large numbers of fine grained objects efficiently, by se
 
 **FlyweightFactory** — Creates and manages flyweights, and guarantees that shared ones are reused.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.GangOfFour/Flyweight.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/GangOfFour/FlyweightUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.GangOfFour/Flyweight.cs) · [Sample](../../DesignPatternCatalog.Usage/GangOfFour/FlyweightUsage.cs)
 
 ### Interpreter (Gang of Four)
 
@@ -3868,7 +3868,7 @@ Given a language, defines a representation for its grammar together with an inte
 
 **Context** — Carries the information global to the interpretation.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.GangOfFour/Interpreter.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/GangOfFour/InterpreterUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.GangOfFour/Interpreter.cs) · [Sample](../../DesignPatternCatalog.Usage/GangOfFour/InterpreterUsage.cs)
 
 ### Iterator (Gang of Four)
 
@@ -3891,7 +3891,7 @@ Provides a way to access the elements of an aggregate object sequentially, witho
 
 **ConcreteAggregate** — Returns an iterator suited to its own representation.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.GangOfFour/Iterator.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/GangOfFour/IteratorUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.GangOfFour/Iterator.cs) · [Sample](../../DesignPatternCatalog.Usage/GangOfFour/IteratorUsage.cs)
 
 ### Mediator (Gang of Four)
 
@@ -3914,7 +3914,7 @@ Defines an object that encapsulates how a set of objects interact, keeping them 
 
 **ConcreteColleague** — One participant of the interaction.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.GangOfFour/Mediator.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/GangOfFour/MediatorUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.GangOfFour/Mediator.cs) · [Sample](../../DesignPatternCatalog.Usage/GangOfFour/MediatorUsage.cs)
 
 ### Memento (Gang of Four)
 
@@ -3934,7 +3934,7 @@ Captures and externalizes an object's internal state, without violating encapsul
 
 **Caretaker** — Keeps mementos safe, and never inspects or alters their content.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.GangOfFour/Memento.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/GangOfFour/MementoUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.GangOfFour/Memento.cs) · [Sample](../../DesignPatternCatalog.Usage/GangOfFour/MementoUsage.cs)
 
 ### Observer (Gang of Four)
 
@@ -3963,7 +3963,7 @@ Defines a one to many dependency between objects, so that when one object change
 
 **UpdateMethod** — The operation invoked on an observer when the subject has changed.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.GangOfFour/Observer.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/GangOfFour/ObserverUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.GangOfFour/Observer.cs) · [Sample](../../DesignPatternCatalog.Usage/GangOfFour/ObserverUsage.cs)
 
 ### Prototype (Gang of Four)
 
@@ -3983,7 +3983,7 @@ Specifies the kinds of objects to create using a prototypical instance, and crea
 
 **CloneMethod** — The operation that returns a copy of the prototype.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.GangOfFour/Prototype.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/GangOfFour/PrototypeUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.GangOfFour/Prototype.cs) · [Sample](../../DesignPatternCatalog.Usage/GangOfFour/PrototypeUsage.cs)
 
 ### Proxy (Gang of Four)
 
@@ -4003,7 +4003,7 @@ Provides a surrogate or placeholder for another object in order to control acces
 
 **Proxy** — Controls access to the real subject, and may be responsible for creating it.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.GangOfFour/Proxy.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/GangOfFour/ProxyUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.GangOfFour/Proxy.cs) · [Sample](../../DesignPatternCatalog.Usage/GangOfFour/ProxyUsage.cs)
 
 ### Singleton (Gang of Four)
 
@@ -4017,7 +4017,7 @@ Ensures a type has only one instance, and provides a global point of access to i
 
 **Singleton** — Ensures a type has only one instance, and provides a global point of access to it.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.GangOfFour/Singleton.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/GangOfFour/SingletonUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.GangOfFour/Singleton.cs) · [Sample](../../DesignPatternCatalog.Usage/GangOfFour/SingletonUsage.cs)
 
 ### State (Gang of Four)
 
@@ -4037,7 +4037,7 @@ Lets an object alter its behaviour when its internal state changes, so that it a
 
 **ConcreteState** — Implements the behaviour associated with one state of the context.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.GangOfFour/State.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/GangOfFour/StateUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.GangOfFour/State.cs) · [Sample](../../DesignPatternCatalog.Usage/GangOfFour/StateUsage.cs)
 
 ### Strategy (Gang of Four)
 
@@ -4057,7 +4057,7 @@ Defines a family of interchangeable algorithms, encapsulates each one, and lets 
 
 **ConcreteStrategy** — Implements one algorithm behind the strategy interface.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.GangOfFour/Strategy.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/GangOfFour/StrategyUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.GangOfFour/Strategy.cs) · [Sample](../../DesignPatternCatalog.Usage/GangOfFour/StrategyUsage.cs)
 
 ### TemplateMethod (Gang of Four)
 
@@ -4083,7 +4083,7 @@ Defines the skeleton of an algorithm in an operation, deferring some steps to su
 
 **HookOperation** — A step the algorithm defers, and which subclasses may override, but need not.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.GangOfFour/TemplateMethod.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/GangOfFour/TemplateMethodUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.GangOfFour/TemplateMethod.cs) · [Sample](../../DesignPatternCatalog.Usage/GangOfFour/TemplateMethodUsage.cs)
 
 ### Visitor (Gang of Four)
 
@@ -4115,12 +4115,12 @@ Represents an operation to be performed on the elements of an object structure, 
 
 **AcceptMethod** — The entry point of the double dispatch: it calls back the matching visit operation.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.GangOfFour/Visitor.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/GangOfFour/VisitorUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.GangOfFour/Visitor.cs) · [Sample](../../DesignPatternCatalog.Usage/GangOfFour/VisitorUsage.cs)
 
 
 ## no catalog of its own
 
-`Reefact.LivingDocumentation.Attributes.Idioms` — 2 patterns, 2 roles.
+`DesignPatternCatalog.Idioms` — 2 patterns, 2 roles.
 
 ### NullObject (no catalog of its own)
 
@@ -4134,7 +4134,7 @@ A special case whose behaviour is to do nothing, so that the absence of a collab
 
 **NullObject** — The do-nothing member of a protocol. It is a special case narrowed to one behaviour — neutral: its queries answer the identity of whatever the caller does with them, and its commands are accepted and ignored. A special case that answers something meaningful, such as an unknown customer with a default rate, is not one of these.
 
-Held by a subtype: yes · [Source](../../Reefact.LivingDocumentation.Attributes.Idioms/NullObject.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/Idioms/NullObjectUsage.cs)
+Held by a subtype: yes · [Source](../../DesignPatternCatalog.Idioms/NullObject.cs) · [Sample](../../DesignPatternCatalog.Usage/Idioms/NullObjectUsage.cs)
 
 ### ObjectMother (no catalog of its own)
 
@@ -4148,12 +4148,12 @@ A class that builds fully formed objects for tests, so that a test states what m
 
 **ObjectMother** — The source of test objects. Each of its methods returns an object already valid and already meaningful — a lapsed subscription, an overdrawn account — named for the SITUATION rather than for the shape, which is what keeps the intent of a test in the test rather than in twenty lines of construction.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.Idioms/ObjectMother.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/Idioms/ObjectMotherUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.Idioms/ObjectMother.cs) · [Sample](../../DesignPatternCatalog.Usage/Idioms/ObjectMotherUsage.cs)
 
 
 ## Microservices Patterns
 
-`Reefact.LivingDocumentation.Attributes.MicroservicesPatterns` — 41 patterns, 68 roles.
+`DesignPatternCatalog.MicroservicesPatterns` — 41 patterns, 68 roles.
 
 ### AccessToken (Microservices Patterns)
 
@@ -4167,7 +4167,7 @@ Has the API gateway authenticate a request and pass a token that identifies the 
 
 **AccessToken** — The token carrying identity across service boundaries. Everything downstream trusts it, which makes its validation the whole security boundary — and makes a service that reads a claim without verifying the signature a hole nothing else can see.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.MicroservicesPatterns/AccessToken.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/MicroservicesPatterns/AccessTokenUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.MicroservicesPatterns/AccessToken.cs) · [Sample](../../DesignPatternCatalog.Usage/MicroservicesPatterns/AccessTokenUsage.cs)
 
 ### AntiCorruptionLayer (Microservices Patterns)
 
@@ -4181,7 +4181,7 @@ Translates between a legacy monolith's domain model and a new service's, so that
 
 **AntiCorruptionLayer** — The translator between the two models, and the only participant allowed to know both. It is written to be deleted: when the monolith goes, so does this, and a codebase that cannot list its layers cannot tell how much of the migration is still owed.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.MicroservicesPatterns/AntiCorruptionLayer.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/MicroservicesPatterns/AntiCorruptionLayerUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.MicroservicesPatterns/AntiCorruptionLayer.cs) · [Sample](../../DesignPatternCatalog.Usage/MicroservicesPatterns/AntiCorruptionLayerUsage.cs)
 
 ### ApiComposition (Microservices Patterns)
 
@@ -4198,7 +4198,7 @@ Answers a query that spans services by invoking each service owning part of the 
 
 **Provider** — A service owning part of the answer, invoked for its share of it. It is queried on the read path of an operation it knows nothing about, so its latency is the composer's latency.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.MicroservicesPatterns/ApiComposition.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/MicroservicesPatterns/ApiCompositionUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.MicroservicesPatterns/ApiComposition.cs) · [Sample](../../DesignPatternCatalog.Usage/MicroservicesPatterns/ApiCompositionUsage.cs)
 
 ### ApiGateway (Microservices Patterns)
 
@@ -4212,7 +4212,7 @@ Gives every client one entry point, routing some requests to a single service an
 
 **ApiGateway** — The single entry point. It hides the partitioning, the locations and sometimes the protocols, which is why every one of those becomes free to change — and why this participant has a reason to know about every service there is, and turns into the monolith it replaced if nobody watches.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.MicroservicesPatterns/ApiGateway.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/MicroservicesPatterns/ApiGatewayUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.MicroservicesPatterns/ApiGateway.cs) · [Sample](../../DesignPatternCatalog.Usage/MicroservicesPatterns/ApiGatewayUsage.cs)
 
 ### ApplicationMetrics (Microservices Patterns)
 
@@ -4226,7 +4226,7 @@ Instruments a service so that each operation reports statistics to a metrics ser
 
 **ApplicationMetrics** — The instrumented participant. Annotating it answers the question a dashboard cannot: which operations are measured — and therefore which silence means healthy and which silence means nobody is looking.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.MicroservicesPatterns/ApplicationMetrics.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/MicroservicesPatterns/ApplicationMetricsUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.MicroservicesPatterns/ApplicationMetrics.cs) · [Sample](../../DesignPatternCatalog.Usage/MicroservicesPatterns/ApplicationMetricsUsage.cs)
 
 ### AuditLogging (Microservices Patterns)
 
@@ -4240,7 +4240,7 @@ Records what users did, in a database, so that the question of who changed what 
 
 **AuditLogging** — The participant that records user activity. Its records are evidence rather than diagnostics, which is the distinction nothing in a logging call shows — and the reason a retention policy written for logs is the wrong policy for these.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.MicroservicesPatterns/AuditLogging.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/MicroservicesPatterns/AuditLoggingUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.MicroservicesPatterns/AuditLogging.cs) · [Sample](../../DesignPatternCatalog.Usage/MicroservicesPatterns/AuditLoggingUsage.cs)
 
 ### BackendForFrontend (Microservices Patterns)
 
@@ -4256,7 +4256,7 @@ A narrower case of **ApiGateway**: every participant here is one of those too.
 
 **BackendForFrontend** — A gateway serving one kind of client and no other. What it buys is that its API answers to one team's needs rather than to the average of everybody's; what it costs is that the fan-out logic several of them share is now written several times, or extracted into something nobody owns.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.MicroservicesPatterns/BackendForFrontend.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/MicroservicesPatterns/BackendForFrontendUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.MicroservicesPatterns/BackendForFrontend.cs) · [Sample](../../DesignPatternCatalog.Usage/MicroservicesPatterns/BackendForFrontendUsage.cs)
 
 ### CircuitBreaker (Microservices Patterns)
 
@@ -4270,7 +4270,7 @@ Invokes a remote service through a proxy that counts failures and, past a thresh
 
 **CircuitBreaker** — The proxy that trips. Once open it fails every call at once for a timeout, then lets a few through to see whether the service has recovered — so this participant returns errors the remote service never sent, and a caller written as though it did not is the bug the pattern brings with it.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.MicroservicesPatterns/CircuitBreaker.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/MicroservicesPatterns/CircuitBreakerUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.MicroservicesPatterns/CircuitBreaker.cs) · [Sample](../../DesignPatternCatalog.Usage/MicroservicesPatterns/CircuitBreakerUsage.cs)
 
 ### ClientSideServiceDiscovery (Microservices Patterns)
 
@@ -4284,7 +4284,7 @@ Has the caller ask a service registry where the instances of a service are, and 
 
 **ClientSideServiceDiscovery** — The participant that resolves locations and picks an instance. It holds the load balancing, the retry and the staleness — it may pick an instance the registry has not yet noticed is gone — and none of that is visible in the call it eventually makes.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.MicroservicesPatterns/ClientSideServiceDiscovery.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/MicroservicesPatterns/ClientSideServiceDiscoveryUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.MicroservicesPatterns/ClientSideServiceDiscovery.cs) · [Sample](../../DesignPatternCatalog.Usage/MicroservicesPatterns/ClientSideServiceDiscoveryUsage.cs)
 
 ### ClientSideUiComposition (Microservices Patterns)
 
@@ -4301,7 +4301,7 @@ Builds one screen from UI components rendered by several service-specific front 
 
 **PageSkeleton** — The skeleton the components are placed into. It decides layout and nothing else, and it is the participant that must keep working when a component does not arrive.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.MicroservicesPatterns/ClientSideUiComposition.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/MicroservicesPatterns/ClientSideUiCompositionUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.MicroservicesPatterns/ClientSideUiComposition.cs) · [Sample](../../DesignPatternCatalog.Usage/MicroservicesPatterns/ClientSideUiCompositionUsage.cs)
 
 ### CommandSideReplica (Microservices Patterns)
 
@@ -4321,7 +4321,7 @@ Lets a service implementing a command read another service's data from a local r
 
 **ReplicaDatabase** — The read-only copy the command service keeps up to date by subscribing to the provider's events. It has exactly one writer, and nothing reading it may assume it is current.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.MicroservicesPatterns/CommandSideReplica.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/MicroservicesPatterns/CommandSideReplicaUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.MicroservicesPatterns/CommandSideReplica.cs) · [Sample](../../DesignPatternCatalog.Usage/MicroservicesPatterns/CommandSideReplicaUsage.cs)
 
 ### Cqrs (Microservices Patterns)
 
@@ -4344,7 +4344,7 @@ Command Query Responsibility Segregation: keeps the model that changes data apar
 
 **ViewUpdater** — Subscribes to the events the command side publishes and brings the view up to date. It is the view's only writer, and a second one is the defect this role exists to make visible.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.MicroservicesPatterns/Cqrs.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/MicroservicesPatterns/CqrsUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.MicroservicesPatterns/Cqrs.cs) · [Sample](../../DesignPatternCatalog.Usage/MicroservicesPatterns/CqrsUsage.cs)
 
 ### DatabasePerService (Microservices Patterns)
 
@@ -4361,7 +4361,7 @@ Keeps each service's persistent data private to it and reachable only through it
 
 **PrivateDatabase** — The tables, schema or server one service owns. Nothing in the code enforces the privacy — a connection string is a connection string — so the barrier is a grant, a reviewer, or this annotation.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.MicroservicesPatterns/DatabasePerService.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/MicroservicesPatterns/DatabasePerServiceUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.MicroservicesPatterns/DatabasePerService.cs) · [Sample](../../DesignPatternCatalog.Usage/MicroservicesPatterns/DatabasePerServiceUsage.cs)
 
 ### DecomposeByBusinessCapability (Microservices Patterns)
 
@@ -4375,7 +4375,7 @@ Draws a service around one business capability — something the business does i
 
 **DecomposeByBusinessCapability** — The service drawn around one capability — order management, inventory management — rather than around a layer, an entity or a team's convenience. The claim is checkable by review and by nothing else: a requirement that touches a second capability should not touch this service.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.MicroservicesPatterns/DecomposeByBusinessCapability.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/MicroservicesPatterns/DecomposeByBusinessCapabilityUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.MicroservicesPatterns/DecomposeByBusinessCapability.cs) · [Sample](../../DesignPatternCatalog.Usage/MicroservicesPatterns/DecomposeByBusinessCapabilityUsage.cs)
 
 ### DecomposeBySubdomain (Microservices Patterns)
 
@@ -4389,7 +4389,7 @@ Draws a service around one subdomain of the business as domain-driven design ide
 
 **DecomposeBySubdomain** — The service drawn around one subdomain, which the work classifies after Evans as core, supporting or generic. It usually lands on the same boundary a business capability would, and it is not the same claim: this one says the boundary follows the model, so a change to the model of a second subdomain should not reach here.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.MicroservicesPatterns/DecomposeBySubdomain.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/MicroservicesPatterns/DecomposeBySubdomainUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.MicroservicesPatterns/DecomposeBySubdomain.cs) · [Sample](../../DesignPatternCatalog.Usage/MicroservicesPatterns/DecomposeBySubdomainUsage.cs)
 
 ### DistributedTracing (Microservices Patterns)
 
@@ -4403,7 +4403,7 @@ Gives each external request an identifier, passes it to every service that handl
 
 **DistributedTracing** — The participant that assigns or propagates the request identifier. It is load-bearing and invisible: one participant that forgets to pass the identifier on does not fail, it silently ends the trace, and the gap looks like a service that was never called.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.MicroservicesPatterns/DistributedTracing.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/MicroservicesPatterns/DistributedTracingUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.MicroservicesPatterns/DistributedTracing.cs) · [Sample](../../DesignPatternCatalog.Usage/MicroservicesPatterns/DistributedTracingUsage.cs)
 
 ### DomainEvent (Microservices Patterns)
 
@@ -4417,7 +4417,7 @@ Has an aggregate emit an event whenever it is created or changed, and the servic
 
 **DomainEvent** — States, in the past tense, that a service's data changed, and is published so that services which do not own that data can act on it. Named for the domain rather than for its consumers, because the service that publishes it does not know who is listening and must not.
 
-Held by a subtype: yes · [Source](../../Reefact.LivingDocumentation.Attributes.MicroservicesPatterns/DomainEvent.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/MicroservicesPatterns/DomainEventUsage.cs)
+Held by a subtype: yes · [Source](../../DesignPatternCatalog.MicroservicesPatterns/DomainEvent.cs) · [Sample](../../DesignPatternCatalog.Usage/MicroservicesPatterns/DomainEventUsage.cs)
 
 ### DomainSpecificProtocol (Microservices Patterns)
 
@@ -4431,7 +4431,7 @@ Has services collaborate over a protocol belonging to their domain — mail, med
 
 **DomainSpecificProtocol** — The participant that speaks a protocol of its own domain — SMTP, IMAP, RTMP. Saying so says that none of the discovery, circuit-breaking and broker machinery the other two styles bring governs this conversation, which is otherwise learned by reading it.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.MicroservicesPatterns/DomainSpecificProtocol.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/MicroservicesPatterns/DomainSpecificProtocolUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.MicroservicesPatterns/DomainSpecificProtocol.cs) · [Sample](../../DesignPatternCatalog.Usage/MicroservicesPatterns/DomainSpecificProtocolUsage.cs)
 
 ### EventSourcing (Microservices Patterns)
 
@@ -4454,7 +4454,7 @@ Persists an entity as the sequence of events that changed it rather than as its 
 
 **Snapshot** — A saved copy of an entity's state, so that replay starts from it rather than from the beginning. It restates what the events already say, and it is wrong from the moment one of them is applied differently.
 
-Held by a subtype: yes · [Source](../../Reefact.LivingDocumentation.Attributes.MicroservicesPatterns/EventSourcing.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/MicroservicesPatterns/EventSourcingUsage.cs)
+Held by a subtype: yes · [Source](../../DesignPatternCatalog.MicroservicesPatterns/EventSourcing.cs) · [Sample](../../DesignPatternCatalog.Usage/MicroservicesPatterns/EventSourcingUsage.cs)
 
 ### ExceptionTracking (Microservices Patterns)
 
@@ -4468,7 +4468,7 @@ Reports every exception to a service that de-duplicates, tracks and notifies, so
 
 **ExceptionTracking** — The participant that reports exceptions onward. It says what a catch block does not: this fault reaches a human. A swallowed exception and a reported one are one line apart and read almost identically.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.MicroservicesPatterns/ExceptionTracking.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/MicroservicesPatterns/ExceptionTrackingUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.MicroservicesPatterns/ExceptionTracking.cs) · [Sample](../../DesignPatternCatalog.Usage/MicroservicesPatterns/ExceptionTrackingUsage.cs)
 
 ### ExternalizedConfiguration (Microservices Patterns)
 
@@ -4482,7 +4482,7 @@ Keeps every environment-dependent value — credentials, endpoints, limits — o
 
 **ExternalizedConfiguration** — The participant holding what was read from outside. The claim is that nothing here is compiled in, which is what lets the same artifact be promoted rather than rebuilt — and a single hard-coded fallback quietly ends that without failing anything.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.MicroservicesPatterns/ExternalizedConfiguration.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/MicroservicesPatterns/ExternalizedConfigurationUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.MicroservicesPatterns/ExternalizedConfiguration.cs) · [Sample](../../DesignPatternCatalog.Usage/MicroservicesPatterns/ExternalizedConfigurationUsage.cs)
 
 ### HealthCheckApi (Microservices Patterns)
 
@@ -4496,7 +4496,7 @@ Gives a service an endpoint that says whether this instance can handle requests,
 
 **HealthCheckApi** — The endpoint and what it decides to check. Its verdict takes an instance out of rotation, so what it does not check is what will keep receiving traffic while broken — and a handler that returns healthy unconditionally is indistinguishable from one that works.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.MicroservicesPatterns/HealthCheckApi.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/MicroservicesPatterns/HealthCheckApiUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.MicroservicesPatterns/HealthCheckApi.cs) · [Sample](../../DesignPatternCatalog.Usage/MicroservicesPatterns/HealthCheckApiUsage.cs)
 
 ### IdempotentConsumer (Microservices Patterns)
 
@@ -4513,7 +4513,7 @@ Lets a consumer be invoked repeatedly with one message and produce the outcome i
 
 **ProcessedMessages** — Where the identifiers of handled messages are recorded, so that a duplicate is detected and discarded — a table of its own, or the identifier carried on the business entity the consumer updates. The primary key is what does the work, and no C# type expresses it.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.MicroservicesPatterns/IdempotentConsumer.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/MicroservicesPatterns/IdempotentConsumerUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.MicroservicesPatterns/IdempotentConsumer.cs) · [Sample](../../DesignPatternCatalog.Usage/MicroservicesPatterns/IdempotentConsumerUsage.cs)
 
 ### Messaging (Microservices Patterns)
 
@@ -4527,7 +4527,7 @@ Has services collaborate by exchanging messages over channels rather than by cal
 
 **Messaging** — The participant that sends or receives messages rather than calling. What it buys is that the other end may be down; what it costs is a broker that may not be, and a reply that is a second message rather than a return value.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.MicroservicesPatterns/Messaging.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/MicroservicesPatterns/MessagingUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.MicroservicesPatterns/Messaging.cs) · [Sample](../../DesignPatternCatalog.Usage/MicroservicesPatterns/MessagingUsage.cs)
 
 ### MicroserviceChassis (Microservices Patterns)
 
@@ -4541,7 +4541,7 @@ Gathers the cross-cutting concerns every service needs — configuration, loggin
 
 **MicroserviceChassis** — The framework the services are built on. What makes it a chassis is that it holds no business logic at all, and that is the claim worth keeping true: every domain decision that leaks in here is a decision every service now shares whether it wanted to or not.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.MicroservicesPatterns/MicroserviceChassis.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/MicroservicesPatterns/MicroserviceChassisUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.MicroservicesPatterns/MicroserviceChassis.cs) · [Sample](../../DesignPatternCatalog.Usage/MicroservicesPatterns/MicroserviceChassisUsage.cs)
 
 ### PollingPublisher (Microservices Patterns)
 
@@ -4557,7 +4557,7 @@ A narrower case of **TransactionalOutbox**: every participant here is one of tho
 
 **PollingPublisher** — Reads the outbox on a timer and publishes what it finds. Working against any SQL database is its whole argument; what it costs is latency the rest of the system inherits, and an order that is tricky to guarantee once more than one instance is polling.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.MicroservicesPatterns/PollingPublisher.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/MicroservicesPatterns/PollingPublisherUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.MicroservicesPatterns/PollingPublisher.cs) · [Sample](../../DesignPatternCatalog.Usage/MicroservicesPatterns/PollingPublisherUsage.cs)
 
 ### RemoteProcedureInvocation (Microservices Patterns)
 
@@ -4574,7 +4574,7 @@ Has services collaborate by request and reply over a network protocol, so that a
 
 **Client** — The participant that calls it. It cannot answer while the service cannot, and it has to find the service before it can call it at all — which is why this is the role a circuit breaker and a discovery mechanism attach to.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.MicroservicesPatterns/RemoteProcedureInvocation.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/MicroservicesPatterns/RemoteProcedureInvocationUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.MicroservicesPatterns/RemoteProcedureInvocation.cs) · [Sample](../../DesignPatternCatalog.Usage/MicroservicesPatterns/RemoteProcedureInvocationUsage.cs)
 
 ### Saga (Microservices Patterns)
 
@@ -4600,7 +4600,7 @@ Maintains consistency across services without a distributed transaction, by runn
 
 **CompensatingTransaction** — Undoes what a local transaction did, semantically rather than by rollback — a refund rather than an unpayment. A step without one is a step the saga cannot back out of, and counting the two annotations on a participant is the only way to notice.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.MicroservicesPatterns/Saga.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/MicroservicesPatterns/SagaUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.MicroservicesPatterns/Saga.cs) · [Sample](../../DesignPatternCatalog.Usage/MicroservicesPatterns/SagaUsage.cs)
 
 ### SelfContainedService (Microservices Patterns)
 
@@ -4614,7 +4614,7 @@ Designs a service so that it answers a synchronous request without waiting on an
 
 **SelfContainedService** — The service that makes no synchronous call while handling a request, so that its availability is its own rather than the product of everything it would have called. What it pays is a reply that cannot say whether the work succeeded, and a caller that has to come back and ask.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.MicroservicesPatterns/SelfContainedService.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/MicroservicesPatterns/SelfContainedServiceUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.MicroservicesPatterns/SelfContainedService.cs) · [Sample](../../DesignPatternCatalog.Usage/MicroservicesPatterns/SelfContainedServiceUsage.cs)
 
 ### SelfRegistration (Microservices Patterns)
 
@@ -4628,7 +4628,7 @@ Has each service instance register itself with the registry on startup, renew wh
 
 **SelfRegistration** — The instance that puts itself in the registry and takes itself out. It knows its own state, which is the argument for it; what it cannot do is unregister after it has crashed, so the registry stays wrong until a lease expires.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.MicroservicesPatterns/SelfRegistration.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/MicroservicesPatterns/SelfRegistrationUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.MicroservicesPatterns/SelfRegistration.cs) · [Sample](../../DesignPatternCatalog.Usage/MicroservicesPatterns/SelfRegistrationUsage.cs)
 
 ### ServerSidePageFragmentComposition (Microservices Patterns)
 
@@ -4645,7 +4645,7 @@ Builds one page from HTML fragments generated by several service-specific web ap
 
 **PageTemplate** — The template that assembles the fragments into a page. It is where a broken or slow fragment becomes a broken or slow page, and it is owned by a team that owns none of them.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.MicroservicesPatterns/ServerSidePageFragmentComposition.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/MicroservicesPatterns/ServerSidePageFragmentCompositionUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.MicroservicesPatterns/ServerSidePageFragmentComposition.cs) · [Sample](../../DesignPatternCatalog.Usage/MicroservicesPatterns/ServerSidePageFragmentCompositionUsage.cs)
 
 ### ServerSideServiceDiscovery (Microservices Patterns)
 
@@ -4659,7 +4659,7 @@ Has the caller send its request to a router at a well known address, and the rou
 
 **ServerSideServiceDiscovery** — The router that resolves on the caller's behalf. Most codebases do not own this participant — it is a load balancer — and the annotation is for the case where they do: the resolving, the balancing and the staleness are then this code's problem rather than the platform's.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.MicroservicesPatterns/ServerSideServiceDiscovery.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/MicroservicesPatterns/ServerSideServiceDiscoveryUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.MicroservicesPatterns/ServerSideServiceDiscovery.cs) · [Sample](../../DesignPatternCatalog.Usage/MicroservicesPatterns/ServerSideServiceDiscoveryUsage.cs)
 
 ### ServiceComponentTest (Microservices Patterns)
 
@@ -4676,7 +4676,7 @@ Tests one service on its own, standing in for every service it invokes, so that 
 
 **ServiceUnderTest** — The one service actually running. Everything it invokes is replaced, so this role marks the boundary of what the suite has really tested — and everything outside it is a claim resting on a double somebody has to keep honest.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.MicroservicesPatterns/ServiceComponentTest.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/MicroservicesPatterns/ServiceComponentTestUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.MicroservicesPatterns/ServiceComponentTest.cs) · [Sample](../../DesignPatternCatalog.Usage/MicroservicesPatterns/ServiceComponentTestUsage.cs)
 
 ### ServiceIntegrationContractTest (Microservices Patterns)
 
@@ -4696,7 +4696,7 @@ Has the developers of a consuming service write the suite that verifies the prov
 
 **Consumer** — The service whose developers wrote the suite and whose expectations it encodes. The work leaves an open question against this role: nothing checks that what they wrote down is what they actually require.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.MicroservicesPatterns/ServiceIntegrationContractTest.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/MicroservicesPatterns/ServiceIntegrationContractTestUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.MicroservicesPatterns/ServiceIntegrationContractTest.cs) · [Sample](../../DesignPatternCatalog.Usage/MicroservicesPatterns/ServiceIntegrationContractTestUsage.cs)
 
 ### ServicePerTeam (Microservices Patterns)
 
@@ -4710,7 +4710,7 @@ Gives each team sole responsibility for changing its own service, and ideally on
 
 **ServicePerTeam** — The service exactly one team may change. It is the rare claim in this catalogue that something outside the code can check — a `CODEOWNERS` file, or a year of history — and the rare one a codebase cannot break on its own: it is broken by a reorganisation nobody thought to tell the code about.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.MicroservicesPatterns/ServicePerTeam.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/MicroservicesPatterns/ServicePerTeamUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.MicroservicesPatterns/ServicePerTeam.cs) · [Sample](../../DesignPatternCatalog.Usage/MicroservicesPatterns/ServicePerTeamUsage.cs)
 
 ### ServiceRegistry (Microservices Patterns)
 
@@ -4724,7 +4724,7 @@ Holds where every instance of every service is, written on startup and erased on
 
 **ServiceRegistry** — The database of locations. Everything that discovers depends on it, so it is the participant whose own availability bounds the application's — and it is wrong, briefly, every time an instance dies without saying so.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.MicroservicesPatterns/ServiceRegistry.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/MicroservicesPatterns/ServiceRegistryUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.MicroservicesPatterns/ServiceRegistry.cs) · [Sample](../../DesignPatternCatalog.Usage/MicroservicesPatterns/ServiceRegistryUsage.cs)
 
 ### ServiceTemplate (Microservices Patterns)
 
@@ -4738,7 +4738,7 @@ A runnable skeleton service, complete with the build and the cross-cutting conce
 
 **ServiceTemplate** — The codebase that exists to be copied and never deployed. Copies diverge from it the moment they are taken, which is the pattern's cost and the reason to know which participant is the original.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.MicroservicesPatterns/ServiceTemplate.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/MicroservicesPatterns/ServiceTemplateUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.MicroservicesPatterns/ServiceTemplate.cs) · [Sample](../../DesignPatternCatalog.Usage/MicroservicesPatterns/ServiceTemplateUsage.cs)
 
 ### SharedDatabase (Microservices Patterns)
 
@@ -4752,7 +4752,7 @@ Lets several services read and write one database, so that a transaction spannin
 
 **SharedDatabase** — The service that reads or writes data another service owns. It buys ACID across the whole application and pays for it twice over: a schema change must be coordinated with every other service, and a long transaction in one of them blocks the rest.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.MicroservicesPatterns/SharedDatabase.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/MicroservicesPatterns/SharedDatabaseUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.MicroservicesPatterns/SharedDatabase.cs) · [Sample](../../DesignPatternCatalog.Usage/MicroservicesPatterns/SharedDatabaseUsage.cs)
 
 ### StranglerApplication (Microservices Patterns)
 
@@ -4775,7 +4775,7 @@ Migrates a monolith by growing a new application around it, service by service, 
 
 **NewService** — A service implementing something the monolith never did. The work singles these out because they show the business a return before any extraction is finished — and because, unlike an extracted service, they leave nothing behind to remove.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.MicroservicesPatterns/StranglerApplication.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/MicroservicesPatterns/StranglerApplicationUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.MicroservicesPatterns/StranglerApplication.cs) · [Sample](../../DesignPatternCatalog.Usage/MicroservicesPatterns/StranglerApplicationUsage.cs)
 
 ### TransactionLogTailing (Microservices Patterns)
 
@@ -4791,7 +4791,7 @@ A narrower case of **TransactionalOutbox**: every participant here is one of tho
 
 **TransactionLogTailing** — Reads the log the database already writes — the MySQL binlog, the Postgres write-ahead log, a DynamoDB stream — and publishes each message committed to the outbox. Accurate by construction and tied to one database engine by the same construction, so it is the participant a migration discovers late.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.MicroservicesPatterns/TransactionLogTailing.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/MicroservicesPatterns/TransactionLogTailingUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.MicroservicesPatterns/TransactionLogTailing.cs) · [Sample](../../DesignPatternCatalog.Usage/MicroservicesPatterns/TransactionLogTailingUsage.cs)
 
 ### TransactionalOutbox (Microservices Patterns)
 
@@ -4814,12 +4814,12 @@ Makes updating the data and sending the message one local transaction, by writin
 
 **MessageRelay** — Moves what the outbox holds to the broker once the transaction has committed. It can publish the same message twice — it may crash between publishing and recording that it did — so every consumer downstream of it has to be idempotent whether its author knew that or not.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.MicroservicesPatterns/TransactionalOutbox.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/MicroservicesPatterns/TransactionalOutboxUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.MicroservicesPatterns/TransactionalOutbox.cs) · [Sample](../../DesignPatternCatalog.Usage/MicroservicesPatterns/TransactionalOutboxUsage.cs)
 
 
 ## Pattern-Oriented Software Architecture, Volume 2
 
-`Reefact.LivingDocumentation.Attributes.Posa2` — 17 patterns, 63 roles.
+`DesignPatternCatalog.Posa2` — 17 patterns, 63 roles.
 
 ### AcceptorConnector (Pattern-Oriented Software Architecture, Volume 2)
 
@@ -4842,7 +4842,7 @@ Decouples connecting and initializing cooperating peer services in a networked s
 
 **TransportEndpoint** — The handle a service handler exchanges data through once it is connected, or the passive one an acceptor listens on. Which of the two it is decides everything about its lifetime, and nothing in its type says which.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.Posa2/AcceptorConnector.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/Posa2/AcceptorConnectorUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.Posa2/AcceptorConnector.cs) · [Sample](../../DesignPatternCatalog.Usage/Posa2/AcceptorConnectorUsage.cs)
 
 ### ActiveObject (Pattern-Oriented Software Architecture, Volume 2)
 
@@ -4871,7 +4871,7 @@ Decouples method invocation from method execution, so that a client's call retur
 
 **Future** — Stands for a result that does not exist yet, and is returned the moment the call is made. A client that neither waits on it nor polls it has invoked a method whose failure it will never hear about.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.Posa2/ActiveObject.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/Posa2/ActiveObjectUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.Posa2/ActiveObject.cs) · [Sample](../../DesignPatternCatalog.Usage/Posa2/ActiveObjectUsage.cs)
 
 ### AsynchronousCompletionToken (Pattern-Oriented Software Architecture, Volume 2)
 
@@ -4891,7 +4891,7 @@ Lets an application demultiplex the responses of the asynchronous operations it 
 
 **Service** — Performs the operation and returns the token unchanged with the completion. It may hold many at once and must interpret none of them — reading one is the coupling this pattern exists to avoid, and it is invisible from the client's side.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.Posa2/AsynchronousCompletionToken.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/Posa2/AsynchronousCompletionTokenUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.Posa2/AsynchronousCompletionToken.cs) · [Sample](../../DesignPatternCatalog.Usage/Posa2/AsynchronousCompletionTokenUsage.cs)
 
 ### ComponentConfigurator (Pattern-Oriented Software Architecture, Volume 2)
 
@@ -4914,7 +4914,7 @@ Lets an application link and unlink its component implementations at run time, w
 
 **ComponentConfigurator** — Links and unlinks implementations while the application runs, and records them in the repository. It is the one participant with the power to change what the application is made of after it has started.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.Posa2/ComponentConfigurator.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/Posa2/ComponentConfiguratorUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.Posa2/ComponentConfigurator.cs) · [Sample](../../DesignPatternCatalog.Usage/Posa2/ComponentConfiguratorUsage.cs)
 
 ### DoubleCheckedLockingOptimization (Pattern-Oriented Software Architecture, Volume 2)
 
@@ -4934,7 +4934,7 @@ Reduces contention where a critical section must run exactly once, by testing a 
 
 **Flag** — Says whether the critical section has already run, and is read twice: once before the lock as the optimisation, and once inside it as the correctness. Unless it is written and read atomically, the thread that skips the lock can reach a value that is published but not yet built — which is why this pattern is famous for being wrong in a way testing does not find.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.Posa2/DoubleCheckedLockingOptimization.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/Posa2/DoubleCheckedLockingOptimizationUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.Posa2/DoubleCheckedLockingOptimization.cs) · [Sample](../../DesignPatternCatalog.Usage/Posa2/DoubleCheckedLockingOptimizationUsage.cs)
 
 ### ExtensionInterface (Pattern-Oriented Software Architecture, Volume 2)
 
@@ -4957,7 +4957,7 @@ Lets one component export several interfaces, so that extending it neither bloat
 
 **ComponentFactory** — Creates components and hands back the root interface rather than the implementation. It is where a client's only reference to a concrete component would otherwise be.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.Posa2/ExtensionInterface.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/Posa2/ExtensionInterfaceUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.Posa2/ExtensionInterface.cs) · [Sample](../../DesignPatternCatalog.Usage/Posa2/ExtensionInterfaceUsage.cs)
 
 ### HalfSyncHalfAsync (Pattern-Oriented Software Architecture, Volume 2)
 
@@ -4977,7 +4977,7 @@ Decomposes concurrent processing into a synchronous layer and an asynchronous on
 
 **QueueingLayer** — The buffering and notification point between the two layers, in both directions. It is the only place they meet, which is what makes the decomposition real rather than a diagram: a direct call across it puts one layer's blocking into the other's thread.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.Posa2/HalfSyncHalfAsync.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/Posa2/HalfSyncHalfAsyncUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.Posa2/HalfSyncHalfAsync.cs) · [Sample](../../DesignPatternCatalog.Usage/Posa2/HalfSyncHalfAsyncUsage.cs)
 
 ### Interceptor (Pattern-Oriented Software Architecture, Volume 2)
 
@@ -5003,7 +5003,7 @@ Lets services be added to a framework transparently, and triggered automatically
 
 **Framework** — The thing being intercepted: it accepts interceptors, keeps them, and calls out to them at the points it has chosen to open. Those points are an interface as real as any method signature, and are the part of a framework that cannot be changed quietly.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.Posa2/Interceptor.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/Posa2/InterceptorUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.Posa2/Interceptor.cs) · [Sample](../../DesignPatternCatalog.Usage/Posa2/InterceptorUsage.cs)
 
 ### LeaderFollowers (Pattern-Oriented Software Architecture, Volume 2)
 
@@ -5026,7 +5026,7 @@ Lets a pool of threads take turns waiting on a shared set of event sources, so t
 
 **ConcreteEventHandler** — One application service, processing the events of its source in its own way, and running in whichever thread has just been demoted from leader. Its hook method is the work that keeps that thread out of the pool while it runs.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.Posa2/LeaderFollowers.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/Posa2/LeaderFollowersUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.Posa2/LeaderFollowers.cs) · [Sample](../../DesignPatternCatalog.Usage/Posa2/LeaderFollowersUsage.cs)
 
 ### MonitorObject (Pattern-Oriented Software Architecture, Volume 2)
 
@@ -5049,7 +5049,7 @@ Serializes concurrent method calls on an object so that only one runs at a time,
 
 **MonitorCondition** — What a synchronized method waits on when it cannot make progress, which releases the monitor lock and suspends the caller until another method notifies it. A condition nothing ever notifies is a caller that never returns, and no compiler pairs the two.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.Posa2/MonitorObject.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/Posa2/MonitorObjectUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.Posa2/MonitorObject.cs) · [Sample](../../DesignPatternCatalog.Usage/Posa2/MonitorObjectUsage.cs)
 
 ### Proactor (Pattern-Oriented Software Architecture, Volume 2)
 
@@ -5075,7 +5075,7 @@ Lets an event-driven application demultiplex and dispatch the completions of asy
 
 **ProactiveInitiator** — Whatever starts an asynchronous operation and registers the handler for its completion. It is the participant a stack trace will not show, because by the time the handler runs this one has returned.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.Posa2/Proactor.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/Posa2/ProactorUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.Posa2/Proactor.cs) · [Sample](../../DesignPatternCatalog.Usage/Posa2/ProactorUsage.cs)
 
 ### Reactor (Pattern-Oriented Software Architecture, Volume 2)
 
@@ -5101,7 +5101,7 @@ Lets an event-driven application demultiplex and dispatch service requests that 
 
 **ConcreteEventHandler** — Implements the hook for one kind of service. It runs on the reactor's thread: the time it takes is time the reactor is not dispatching, so a blocking call here stops the whole application rather than one request.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.Posa2/Reactor.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/Posa2/ReactorUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.Posa2/Reactor.cs) · [Sample](../../DesignPatternCatalog.Usage/Posa2/ReactorUsage.cs)
 
 ### ScopedLocking (Pattern-Oriented Software Architecture, Volume 2)
 
@@ -5118,7 +5118,7 @@ Ensures that a lock is acquired when control enters a scope and released automat
 
 **Lock** — The lock the guard manages. Annotating it claims that this lock is taken through the guard and never directly, so a bare acquire anywhere else in the type is the breach rather than a matter of style.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.Posa2/ScopedLocking.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/Posa2/ScopedLockingUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.Posa2/ScopedLocking.cs) · [Sample](../../DesignPatternCatalog.Usage/Posa2/ScopedLockingUsage.cs)
 
 ### StrategizedLocking (Pattern-Oriented Software Architecture, Volume 2)
 
@@ -5135,7 +5135,7 @@ Strategizes a component's synchronization by making its lock a pluggable type, s
 
 **LockingStrategy** — One member of the family of locking strategies a component can be configured with — a mutex, a readers-writer lock, or the null lock whose acquire and release do nothing and cost nothing in a single-threaded configuration. Every member answers the same acquire and release, which is the whole of what makes them interchangeable.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.Posa2/StrategizedLocking.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/Posa2/StrategizedLockingUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.Posa2/StrategizedLocking.cs) · [Sample](../../DesignPatternCatalog.Usage/Posa2/StrategizedLockingUsage.cs)
 
 ### ThreadSafeInterface (Pattern-Oriented Software Architecture, Volume 2)
 
@@ -5155,7 +5155,7 @@ Ensures that intra-component method calls avoid self-deadlock and incur no unnec
 
 **ImplementationMethod** — A method that performs the work and trusts that it was called with the lock already held: it never acquires or releases the lock, and it never calls an interface method. One call back to an interface method from here self-deadlocks on a non-recursive lock, and nothing in the type system says so.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.Posa2/ThreadSafeInterface.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/Posa2/ThreadSafeInterfaceUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.Posa2/ThreadSafeInterface.cs) · [Sample](../../DesignPatternCatalog.Usage/Posa2/ThreadSafeInterfaceUsage.cs)
 
 ### ThreadSpecificStorage (Pattern-Oriented Software Architecture, Volume 2)
 
@@ -5178,7 +5178,7 @@ Lets several threads use one logically global access point to fetch an object th
 
 **KeyFactory** — Mints the keys under which objects are filed, one key per kind of thread-specific object rather than one per thread. A key handed out twice for two different kinds of object is two callers reading each other's storage, and it is the one failure here that no thread boundary protects against.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.Posa2/ThreadSpecificStorage.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/Posa2/ThreadSpecificStorageUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.Posa2/ThreadSpecificStorage.cs) · [Sample](../../DesignPatternCatalog.Usage/Posa2/ThreadSpecificStorageUsage.cs)
 
 ### WrapperFacade (Pattern-Oriented Software Architecture, Volume 2)
 
@@ -5195,12 +5195,12 @@ Encapsulates the functions and data of an existing non-object-oriented API withi
 
 **Functions** — One of the existing low-level functions being wrapped, declared as the platform exposes it. Annotating the declaration says it is meant to be called from the facade and nowhere else: a call from elsewhere is the leak the facade exists to prevent, and it compiles.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.Posa2/WrapperFacade.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/Posa2/WrapperFacadeUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.Posa2/WrapperFacade.cs) · [Sample](../../DesignPatternCatalog.Usage/Posa2/WrapperFacadeUsage.cs)
 
 
 ## xUnit Test Patterns
 
-`Reefact.LivingDocumentation.Attributes.XUnitTestPatterns` — 62 patterns, 62 roles.
+`DesignPatternCatalog.XUnitTestPatterns` — 62 patterns, 62 roles.
 
 ### AssertionMethod (xUnit Test Patterns)
 
@@ -5214,7 +5214,7 @@ Compares what happened with what was expected and fails the test when they diffe
 
 **AssertionMethod** — The method a test calls to state its expectation. What it must do is fail the test rather than return a verdict — an assertion whose result the caller has to check is one a caller can forget to check, which is how a test starts passing for the wrong reason.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/AssertionMethod.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/AssertionMethodUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/AssertionMethod.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/AssertionMethodUsage.cs)
 
 ### AutomatedTeardown (xUnit Test Patterns)
 
@@ -5228,7 +5228,7 @@ Records what the test created and removes it afterwards without the test saying 
 
 **AutomatedTeardown** — The participant that tracks allocations and undoes them. It removes the commonest cause of tests that pass alone and fail together, and it moves the risk: what it does not know how to track is now cleaned up by nobody, silently, which is worth being able to find.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/AutomatedTeardown.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/AutomatedTeardownUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/AutomatedTeardown.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/AutomatedTeardownUsage.cs)
 
 ### BackDoorManipulation (xUnit Test Patterns)
 
@@ -5242,7 +5242,7 @@ Sets up or inspects state by going around the system under test, so that a fixtu
 
 **BackDoorManipulation** — The participant that reaches past the SUT — straight into the database, the file, the queue. It is often the only practical way to arrange a state, and it is always a second definition of the data's shape: when the SUT's own writing changes, the back door keeps working and keeps being wrong.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/BackDoorManipulation.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/BackDoorManipulationUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/BackDoorManipulation.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/BackDoorManipulationUsage.cs)
 
 ### BehaviorVerification (xUnit Test Patterns)
 
@@ -5256,7 +5256,7 @@ Verifies by checking the calls the system under test made to something else, so 
 
 **BehaviorVerification** — A test that checks what the system did rather than what it holds. It is the only way to verify an indirect output — a message sent, a notification raised — and it is bought with coupling to the collaboration: a refactoring that changes how the work is delegated breaks it even when the outcome is unchanged.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/BehaviorVerification.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/BehaviorVerificationUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/BehaviorVerification.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/BehaviorVerificationUsage.cs)
 
 ### ChainedTests (xUnit Test Patterns)
 
@@ -5270,7 +5270,7 @@ Lets each test leave behind the state the next one needs, so that a long sequenc
 
 **ChainedTests** — Tests that depend on the ones before them. The book offers it as a last resort and it is worth annotating for exactly that reason: it is the arrangement that breaks when a runner changes order, parallelises, or runs one test alone — three things nobody announces — and nothing else in the code admits it was chosen.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/ChainedTests.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/ChainedTestsUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/ChainedTests.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/ChainedTestsUsage.cs)
 
 ### ConfigurableTestDouble (xUnit Test Patterns)
 
@@ -5286,7 +5286,7 @@ A narrower case of **TestDouble**: every participant here is one of those too.
 
 **ConfigurableTestDouble** — A double configured at run time rather than written per case. It exists to remove duplication between near-identical doubles, and its cost is stated in its shape: a double with enough knobs becomes a small framework that itself wants testing.
 
-Held by a subtype: yes · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/ConfigurableTestDouble.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/ConfigurableTestDoubleUsage.cs)
+Held by a subtype: yes · [Source](../../DesignPatternCatalog.XUnitTestPatterns/ConfigurableTestDouble.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/ConfigurableTestDoubleUsage.cs)
 
 ### CreationMethod (xUnit Test Patterns)
 
@@ -5300,7 +5300,7 @@ Returns an object ready for a test to use, so that the test names the situation 
 
 **CreationMethod** — A method that builds a valid object for a test, named for the situation rather than for the constructor it hides. Its assertion is that what comes back is usable as-is — a creation method returning something a test must finish configuring has become a constructor with a nicer name.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/CreationMethod.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/CreationMethodUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/CreationMethod.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/CreationMethodUsage.cs)
 
 ### CustomAssertion (xUnit Test Patterns)
 
@@ -5314,7 +5314,7 @@ States a domain expectation in one call, so that a test says what should be true
 
 **CustomAssertion** — An assertion written for this codebase, named in its own words. It shortens tests and, more importantly, it makes the failure message say something: a comparison of two positions can report which of bay, row and tier moved, where a string comparison reports two strings.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/CustomAssertion.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/CustomAssertionUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/CustomAssertion.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/CustomAssertionUsage.cs)
 
 ### DataDrivenTest (xUnit Test Patterns)
 
@@ -5328,7 +5328,7 @@ Takes both its data and its expected results from outside the code, so that case
 
 **DataDrivenTest** — A test whose cases live in a file or a table. Distinct from a parameterized test, which takes arguments a programmer wrote: here the point is that somebody who is not a programmer adds a row — and the cost is that a failure has to be traced back to a row rather than to a line.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/DataDrivenTest.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/DataDrivenTestUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/DataDrivenTest.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/DataDrivenTestUsage.cs)
 
 ### DatabaseSandbox (xUnit Test Patterns)
 
@@ -5342,7 +5342,7 @@ Gives each developer and each run a database of its own, so that tests touching 
 
 **DatabaseSandbox** — The participant that hands a test its own schema, its own instance, or its own slice of one. It is what makes database tests runnable in parallel and on a laptop at the same time as on the build — and its absence is not a defect anybody sees until two runs collide, which is why saying it is present is worth a line.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/DatabaseSandbox.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/DatabaseSandboxUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/DatabaseSandbox.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/DatabaseSandboxUsage.cs)
 
 ### DelegatedSetup (xUnit Test Patterns)
 
@@ -5356,7 +5356,7 @@ Builds the fixture by calling methods written for the purpose, so that a test st
 
 **DelegatedSetup** — A test whose setup lives in methods it calls rather than in its own body. It is the middle answer between writing everything in the test and letting the framework do it unseen: the reader can follow the call if they want to and does not have to.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/DelegatedSetup.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/DelegatedSetupUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/DelegatedSetup.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/DelegatedSetupUsage.cs)
 
 ### DeltaAssertion (xUnit Test Patterns)
 
@@ -5370,7 +5370,7 @@ Asserts the difference the exercise made rather than the absolute value afterwar
 
 **DeltaAssertion** — An assertion about a change: one more row than before, two euros more than before. It is what makes a test safe against a shared or prebuilt fixture whose exact contents nobody guarantees — and it is weaker on purpose, since a delta of one says nothing about what the one was.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/DeltaAssertion.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/DeltaAssertionUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/DeltaAssertion.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/DeltaAssertionUsage.cs)
 
 ### DependencyInjection (xUnit Test Patterns)
 
@@ -5384,7 +5384,7 @@ Has its collaborators handed to it from outside, so that a test can give it some
 
 **DependencyInjection** — A participant that never obtains its own collaborators. It is the most common answer to testability and the one that leaves the fewest traces: a class built this way looks like any other, and the fact that it was designed to be substitutable is exactly what nothing in it says.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/DependencyInjection.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/DependencyInjectionUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/DependencyInjection.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/DependencyInjectionUsage.cs)
 
 ### DependencyLookup (xUnit Test Patterns)
 
@@ -5398,7 +5398,7 @@ Asks a registry for its collaborators, so that a test can substitute what the re
 
 **DependencyLookup** — The other answer: the participant fetches, and the test changes what it fetches. It keeps constructors simple and moves the substitution to a place no signature mentions — so a test that fails because somebody forgot to reset the registry fails a long way from the cause.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/DependencyLookup.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/DependencyLookupUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/DependencyLookup.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/DependencyLookupUsage.cs)
 
 ### DerivedValue (xUnit Test Patterns)
 
@@ -5412,7 +5412,7 @@ Computes a value from another rather than writing it out, so that the relationsh
 
 **DerivedValue** — A member that derives one value from another — the expected total from the order, the check digit from the number. It states the relationship, which is what a hard-coded expectation hides: two numbers that agree tell a reader nothing about why they agree, and neither does a failure.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/DerivedValue.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/DerivedValueUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/DerivedValue.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/DerivedValueUsage.cs)
 
 ### DummyObject (xUnit Test Patterns)
 
@@ -5428,7 +5428,7 @@ A narrower case of **TestDouble**: every participant here is one of those too.
 
 **DummyObject** — The emptiest of the doubles: passed around, never called. Annotating it says the emptiness is the point — nothing should ever invoke it, so the day something does, a test is exercising a path nobody meant to describe.
 
-Held by a subtype: yes · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/DummyObject.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/DummyObjectUsage.cs)
+Held by a subtype: yes · [Source](../../DesignPatternCatalog.XUnitTestPatterns/DummyObject.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/DummyObjectUsage.cs)
 
 ### FakeObject (xUnit Test Patterns)
 
@@ -5444,7 +5444,7 @@ A narrower case of **TestDouble**: every participant here is one of those too.
 
 **FakeObject** — A double that actually works — an in-memory store standing in for a database. It is the only kind with behaviour of its own, which is why it is the only one that can have bugs, and why a fake that has drifted from the thing it replaces makes every test that uses it lie.
 
-Held by a subtype: yes · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/FakeObject.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/FakeObjectUsage.cs)
+Held by a subtype: yes · [Source](../../DesignPatternCatalog.XUnitTestPatterns/FakeObject.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/FakeObjectUsage.cs)
 
 ### FreshFixture (xUnit Test Patterns)
 
@@ -5458,7 +5458,7 @@ Is built anew for each test, so that no test can be affected by what another one
 
 **FreshFixture** — A fixture with a lifetime of one test. It is the only arrangement in which a test that passes alone passes in a suite, and it is bought with the time it takes to build — which is the whole of the argument against it.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/FreshFixture.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/FreshFixtureUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/FreshFixture.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/FreshFixtureUsage.cs)
 
 ### GarbageCollectedTeardown (xUnit Test Patterns)
 
@@ -5472,7 +5472,7 @@ Leaves the fixture to the runtime, so that a test that allocated nothing outside
 
 **GarbageCollectedTeardown** — A fixture with nothing to clean up, said on purpose. The annotation is a claim rather than a shrug: everything this creates is reclaimed by the runtime, so no file, no socket, no row and no temporary directory is left behind — and the day one appears, the claim is the thing that was broken.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/GarbageCollectedTeardown.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/GarbageCollectedTeardownUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/GarbageCollectedTeardown.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/GarbageCollectedTeardownUsage.cs)
 
 ### GeneratedValue (xUnit Test Patterns)
 
@@ -5486,7 +5486,7 @@ Produces a value at run time, so that a test needing something unique or unimpor
 
 **GeneratedValue** — A member that makes a fresh value on demand. It removes collisions between runs and buys them back as irreproducibility: a failure that depends on what was generated cannot be re-run unless what was generated is reported, which is the discipline this annotation exists to make askable.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/GeneratedValue.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/GeneratedValueUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/GeneratedValue.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/GeneratedValueUsage.cs)
 
 ### HardCodedTestDouble (xUnit Test Patterns)
 
@@ -5502,7 +5502,7 @@ A narrower case of **TestDouble**: every participant here is one of those too.
 
 **HardCodedTestDouble** — A double built by hand for one job, with no way to tell it anything. The right choice while there is one job; the wrong one by the fifth near-copy, which is the point at which the book sends a reader to the configurable kind.
 
-Held by a subtype: yes · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/HardCodedTestDouble.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/HardCodedTestDoubleUsage.cs)
+Held by a subtype: yes · [Source](../../DesignPatternCatalog.XUnitTestPatterns/HardCodedTestDouble.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/HardCodedTestDoubleUsage.cs)
 
 ### HumbleObject (xUnit Test Patterns)
 
@@ -5516,7 +5516,7 @@ Reduces the part that cannot be tested to a shell thin enough not to need testin
 
 **HumbleObject** — The thin remainder — the view, the handler, the job that only a running framework can exercise. What makes it humble is that it holds no decision, and that is precisely the claim to keep true: every line that creeps back into it is a line no test can reach, and nothing else in the code will say so.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/HumbleObject.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/HumbleObjectUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/HumbleObject.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/HumbleObjectUsage.cs)
 
 ### ImplicitSetup (xUnit Test Patterns)
 
@@ -5530,7 +5530,7 @@ Puts the fixture in a method the framework calls before every test, so that ever
 
 **ImplicitSetup** — The setUp the framework runs. It removes the repetition and takes the setup out of the reader's line of sight, which is the trade: a test that fails now has a cause that is not in the test — and nothing in the test says where to look.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/ImplicitSetup.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/ImplicitSetupUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/ImplicitSetup.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/ImplicitSetupUsage.cs)
 
 ### ImplicitTeardown (xUnit Test Patterns)
 
@@ -5544,7 +5544,7 @@ Puts the cleaning up in a method the framework calls after every test, so that i
 
 **ImplicitTeardown** — The tearDown the framework runs. Running after a failure is the property that matters: a test that cleans up at the end of its own body leaves the fixture behind precisely on the runs where somebody is about to investigate it.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/ImplicitTeardown.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/ImplicitTeardownUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/ImplicitTeardown.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/ImplicitTeardownUsage.cs)
 
 ### LayerTest (xUnit Test Patterns)
 
@@ -5558,7 +5558,7 @@ Exercises one layer of the system on its own, so that a failure names the layer 
 
 **LayerTest** — A test scoped to a layer rather than to a class or a feature. Annotating it is what makes a claimed architecture checkable from the test side: a layer test that has quietly started reaching two layers is a test whose failure no longer localises anything.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/LayerTest.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/LayerTestUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/LayerTest.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/LayerTestUsage.cs)
 
 ### LazySetup (xUnit Test Patterns)
 
@@ -5572,7 +5572,7 @@ Builds the fixture the first time a test asks for it, so that a costly setup is 
 
 **LazySetup** — An accessor that builds what is missing and returns what exists. It buys the cost of an unused fixture and pays in a lifetime nobody stated: what it builds outlives the test that triggered it, so the first test in a run and the same test alone are not running against the same thing.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/LazySetup.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/LazySetupUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/LazySetup.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/LazySetupUsage.cs)
 
 ### MinimalFixture (xUnit Test Patterns)
 
@@ -5586,7 +5586,7 @@ Sets up only what the test actually needs, so that what is present is what matte
 
 **MinimalFixture** — A fixture with nothing in it the test does not use. It is what makes a test readable — everything present is there for a reason — and its failure mode is quiet: a fixture that has grown one field per new test stops telling a reader anything about any of them.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/MinimalFixture.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/MinimalFixtureUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/MinimalFixture.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/MinimalFixtureUsage.cs)
 
 ### MockObject (xUnit Test Patterns)
 
@@ -5602,7 +5602,7 @@ A narrower case of **TestDouble**: every participant here is one of those too.
 
 **MockObject** — A double that is told beforehand what it should be asked, and that judges. That is what separates it from a spy: the expectation is set before the exercise and checked by the double, so a test using one can pass its assertions and still fail on a call nobody wrote down.
 
-Held by a subtype: yes · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/MockObject.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/MockObjectUsage.cs)
+Held by a subtype: yes · [Source](../../DesignPatternCatalog.XUnitTestPatterns/MockObject.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/MockObjectUsage.cs)
 
 ### NamedTestSuite (xUnit Test Patterns)
 
@@ -5616,7 +5616,7 @@ Collects a chosen subset of the tests under a name, so that a set worth running 
 
 **NamedTestSuite** — The suite that names a subset — the smoke tests, the slow ones, the ones touching the database. It exists because the useful groupings are rarely the ones the directory layout produces, and a suite nobody can name is a suite nobody runs deliberately.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/NamedTestSuite.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/NamedTestSuiteUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/NamedTestSuite.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/NamedTestSuiteUsage.cs)
 
 ### ParameterizedTest (xUnit Test Patterns)
 
@@ -5630,7 +5630,7 @@ Takes the values that differ as arguments, so that several test conditions share
 
 **ParameterizedTest** — A test method whose data comes from outside it. The trade is stated by the pattern itself: one body to maintain, at the price that a failure names a row rather than a case — so the arguments have to identify themselves, or the report says nothing.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/ParameterizedTest.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/ParameterizedTestUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/ParameterizedTest.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/ParameterizedTestUsage.cs)
 
 ### PrebuiltFixture (xUnit Test Patterns)
 
@@ -5644,7 +5644,7 @@ Uses a fixture that already existed before the test run began, so that building 
 
 **PrebuiltFixture** — A fixture nothing in the test suite creates — a seeded database, a directory of files, a environment somebody set up. It makes the suite fast and makes it depend on something no version of the code describes, so a test that fails on a fresh machine and passes on yours is the ordinary failure here.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/PrebuiltFixture.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/PrebuiltFixtureUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/PrebuiltFixture.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/PrebuiltFixtureUsage.cs)
 
 ### RecordedTest (xUnit Test Patterns)
 
@@ -5658,7 +5658,7 @@ Is produced by recording what somebody did to the system, so that a test exists 
 
 **RecordedTest** — A test captured rather than written. It is the cheapest test to obtain and the most expensive to keep: nothing in it says what it is about, so when it goes red the only way to learn what changed is to re-record it — which is why knowing a test is one matters more than for any other kind.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/RecordedTest.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/RecordedTestUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/RecordedTest.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/RecordedTestUsage.cs)
 
 ### ScriptedTest (xUnit Test Patterns)
 
@@ -5672,7 +5672,7 @@ Is written by hand as code, so that what it verifies is stated rather than captu
 
 **ScriptedTest** — The counterpart of a recorded test, and the default this catalogue's other entries assume. It costs someone's time and it earns a test that says what it is about, survives a refactoring and can be read by the person who did not write it.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/ScriptedTest.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/ScriptedTestUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/ScriptedTest.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/ScriptedTestUsage.cs)
 
 ### SetupDecorator (xUnit Test Patterns)
 
@@ -5686,7 +5686,7 @@ Wraps a suite so that something is set up before it runs and torn down after, so
 
 **SetupDecorator** — A wrapper around a suite rather than a method inside a class. It is what lets an environment be arranged for a set of tests chosen at run time, and it is the piece a reader will not find by looking in the test — because it is not there.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/SetupDecorator.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/SetupDecoratorUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/SetupDecorator.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/SetupDecoratorUsage.cs)
 
 ### SharedFixture (xUnit Test Patterns)
 
@@ -5700,7 +5700,7 @@ Is built once and used by many tests, so that an expensive starting state is pai
 
 **SharedFixture** — A fixture that outlives a test, and therefore the one that makes tests depend on each other whether anybody intended it or not. The assertion it licenses is the one worth checking: no test mutates it — and nothing in the code says so unless this is annotated.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/SharedFixture.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/SharedFixtureUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/SharedFixture.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/SharedFixtureUsage.cs)
 
 ### StandardFixture (xUnit Test Patterns)
 
@@ -5714,7 +5714,7 @@ Sets up the same well-known starting state for many tests, so that one design is
 
 **StandardFixture** — The opposite trade to a minimal fixture: one fixture everyone knows, at the price that most tests use a fraction of it. Worth stating rather than drifting into, because the two are indistinguishable in code and answer opposite questions about what a reader should assume.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/StandardFixture.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/StandardFixtureUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/StandardFixture.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/StandardFixtureUsage.cs)
 
 ### StateVerification (xUnit Test Patterns)
 
@@ -5728,7 +5728,7 @@ Verifies by looking at what the system under test holds afterwards, so that a te
 
 **StateVerification** — A test that checks the state left behind. It couples to what the system is rather than to how it works, so a refactoring that changes the calls and keeps the outcome leaves it passing — which is the whole argument for it, and the reason it cannot catch an effect that leaves no trace.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/StateVerification.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/StateVerificationUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/StateVerification.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/StateVerificationUsage.cs)
 
 ### StoredProcedureTest (xUnit Test Patterns)
 
@@ -5742,7 +5742,7 @@ Tests logic that lives in the database rather than in the application, so that w
 
 **StoredProcedureTest** — A test whose system under test is a stored procedure. Annotating it says the coverage exists somewhere a code-coverage tool will never look: logic in the database is invisible to every measurement the application makes of itself, so an unannotated procedure and an untested one are indistinguishable.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/StoredProcedureTest.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/StoredProcedureTestUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/StoredProcedureTest.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/StoredProcedureTestUsage.cs)
 
 ### SuiteFixtureSetup (xUnit Test Patterns)
 
@@ -5756,7 +5756,7 @@ Runs once before the tests of a suite and once after them, so that an expensive 
 
 **SuiteFixtureSetup** — The framework's one-time hook. It is where a shared fixture is legitimately built, and it is the point at which every test in the suite becomes able to affect every other — which is why what it builds should be the part no test modifies.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/SuiteFixtureSetup.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/SuiteFixtureSetupUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/SuiteFixtureSetup.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/SuiteFixtureSetupUsage.cs)
 
 ### TableTruncationTeardown (xUnit Test Patterns)
 
@@ -5770,7 +5770,7 @@ Empties the tables the tests filled, so that a run starts from a state nothing l
 
 **TableTruncationTeardown** — The blunt teardown: it removes everything rather than tracking what was added. It is fast and it is total, which is the trade — it will empty a table a colleague's fixture was relying on just as happily, so what it truncates is a decision worth reading rather than inferring.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/TableTruncationTeardown.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/TableTruncationTeardownUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/TableTruncationTeardown.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/TableTruncationTeardownUsage.cs)
 
 ### TestAutomationFramework (xUnit Test Patterns)
 
@@ -5784,7 +5784,7 @@ Provides the mechanisms tests are written against, so that a test states its int
 
 **TestAutomationFramework** — The framework a team wrote, or the one it wraps. Annotating it draws the line a codebase most often loses: what belongs to the harness and what belongs to a test — because a helper that has drifted into the framework is one nobody dares change, and a framework rule that has drifted into a test is one nobody finds.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/TestAutomationFramework.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/TestAutomationFrameworkUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/TestAutomationFramework.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/TestAutomationFrameworkUsage.cs)
 
 ### TestDiscovery (xUnit Test Patterns)
 
@@ -5798,7 +5798,7 @@ Finds the tests without being told where they are, so that writing a test is eno
 
 **TestDiscovery** — The participant that builds the suite by looking rather than by being given a list. Its assertion is the one that matters most in practice: a test that exists is a test that runs, so a discovery rule with a gap in it produces a green build for a test nobody has executed in months.
 
-Held by a subtype: yes · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/TestDiscovery.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/TestDiscoveryUsage.cs)
+Held by a subtype: yes · [Source](../../DesignPatternCatalog.XUnitTestPatterns/TestDiscovery.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/TestDiscoveryUsage.cs)
 
 ### TestDouble (xUnit Test Patterns)
 
@@ -5812,7 +5812,7 @@ Replaces a component the system under test depends on with a test-specific equiv
 
 **TestDouble** — The stand-in for a depended-on component. It is the umbrella the five kinds below narrow: what makes something a test double is that the system under test cannot tell it from the real thing, and the test can. Annotating it is what separates a deliberate stand-in from a class that merely happens to be simple.
 
-Held by a subtype: yes · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/TestDouble.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/TestDoubleUsage.cs)
+Held by a subtype: yes · [Source](../../DesignPatternCatalog.XUnitTestPatterns/TestDouble.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/TestDoubleUsage.cs)
 
 ### TestEnumeration (xUnit Test Patterns)
 
@@ -5826,7 +5826,7 @@ Builds the suite from an explicit list, so that exactly the intended tests run a
 
 **TestEnumeration** — The counterpart of discovery: the tests are named, in one place, by hand. It costs an edit per test and buys certainty about what runs — and the failure it exists against is the opposite one, a test written and never added, which is why annotating the list is what lets a rule compare it to what exists.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/TestEnumeration.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/TestEnumerationUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/TestEnumeration.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/TestEnumerationUsage.cs)
 
 ### TestHelper (xUnit Test Patterns)
 
@@ -5840,7 +5840,7 @@ Holds test utility methods in a class of its own, so that several testcase class
 
 **TestHelper** — Reuse between testcase classes by delegation. Chosen over a superclass when the tests sharing the code have nothing else in common — and the annotation is what makes the choice between the two legible, since nothing else in the code says which was decided and which was inherited from whoever wrote the first test.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/TestHelper.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/TestHelperUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/TestHelper.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/TestHelperUsage.cs)
 
 ### TestHook (xUnit Test Patterns)
 
@@ -5854,7 +5854,7 @@ Puts something in production code that exists only for a test, so that behaviour
 
 **TestHook** — A member the production path never uses. The book offers it as a last resort, and the reason to annotate it is the same as the reason to hesitate: it is code shipped to production for the benefit of a test, and a codebase that cannot list its test hooks has no way to know how much of that it carries.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/TestHook.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/TestHookUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/TestHook.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/TestHookUsage.cs)
 
 ### TestMethod (xUnit Test Patterns)
 
@@ -5868,7 +5868,7 @@ Holds one test, so that a single expectation about the system has a name, a body
 
 **TestMethod** — The method the framework runs and reports on. One test condition per method is what makes a red bar say something: a method verifying four things reports one failure and hides three, and no framework can tell the difference.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/TestMethod.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/TestMethodUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/TestMethod.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/TestMethodUsage.cs)
 
 ### TestRunner (xUnit Test Patterns)
 
@@ -5882,7 +5882,7 @@ Runs the tests and reports what happened, so that running them is one action rat
 
 **TestRunner** — The participant that turns a suite into a result. Most codebases use the one their framework ships and annotate nothing; the role earns its place where a team wrote its own — a runner for a device, a harness for a legacy system — because then it is the piece nobody else understands.
 
-Held by a subtype: yes · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/TestRunner.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/TestRunnerUsage.cs)
+Held by a subtype: yes · [Source](../../DesignPatternCatalog.XUnitTestPatterns/TestRunner.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/TestRunnerUsage.cs)
 
 ### TestSelection (xUnit Test Patterns)
 
@@ -5896,7 +5896,7 @@ Chooses at run time which of the available tests to run, so that a subset can be
 
 **TestSelection** — The filter applied to what discovery or enumeration produced — by category, by name, by whatever the team decided. It is worth naming because a selection that excludes more than anybody realises is indistinguishable, from the report, from a suite that passed.
 
-Held by a subtype: yes · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/TestSelection.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/TestSelectionUsage.cs)
+Held by a subtype: yes · [Source](../../DesignPatternCatalog.XUnitTestPatterns/TestSelection.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/TestSelectionUsage.cs)
 
 ### TestSpecificSubclass (xUnit Test Patterns)
 
@@ -5910,7 +5910,7 @@ Adds to a subclass of the system under test the methods a test needs to reach it
 
 **TestSpecificSubclass** — A subclass of the system under test, written for the test. Note what it is not: it does not stand in for a depended-on component, so it is not a test double — it opens up the thing being tested rather than replacing something around it. That distinction is the one a reader most often gets wrong.
 
-Held by a subtype: yes · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/TestSpecificSubclass.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/TestSpecificSubclassUsage.cs)
+Held by a subtype: yes · [Source](../../DesignPatternCatalog.XUnitTestPatterns/TestSpecificSubclass.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/TestSpecificSubclassUsage.cs)
 
 ### TestSpy (xUnit Test Patterns)
 
@@ -5926,7 +5926,7 @@ A narrower case of **TestDouble**: every participant here is one of those too.
 
 **TestSpy** — A stub that also records how it was called, so the test asks its questions afterwards. That ordering is the assertion: the spy records and never judges, and the verification lives in the test where a reader looks for it.
 
-Held by a subtype: yes · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/TestSpy.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/TestSpyUsage.cs)
+Held by a subtype: yes · [Source](../../DesignPatternCatalog.XUnitTestPatterns/TestSpy.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/TestSpyUsage.cs)
 
 ### TestStub (xUnit Test Patterns)
 
@@ -5942,7 +5942,7 @@ A narrower case of **TestDouble**: every participant here is one of those too.
 
 **TestStub** — A double that answers with what the test decided it should answer. Its whole direction is inward — it supplies inputs and it is not consulted afterwards, so a stub that has grown assertions is a mock wearing the wrong name, which is the confusion this catalogue exists to end.
 
-Held by a subtype: yes · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/TestStub.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/TestStubUsage.cs)
+Held by a subtype: yes · [Source](../../DesignPatternCatalog.XUnitTestPatterns/TestStub.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/TestStubUsage.cs)
 
 ### TestSuiteObject (xUnit Test Patterns)
 
@@ -5956,7 +5956,7 @@ Holds a collection of tests as an object, so that a set of tests is run, nested 
 
 **TestSuiteObject** — The composite of test cases, and often of other suites. Annotating it is what separates a real suite from a class that merely happens to hold a list of names: a suite can be nested, and a suite that has quietly become a flat list has lost the property its callers rely on.
 
-Held by a subtype: yes · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/TestSuiteObject.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/TestSuiteObjectUsage.cs)
+Held by a subtype: yes · [Source](../../DesignPatternCatalog.XUnitTestPatterns/TestSuiteObject.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/TestSuiteObjectUsage.cs)
 
 ### TestUtilityMethod (xUnit Test Patterns)
 
@@ -5970,7 +5970,7 @@ Holds a step several tests share, so that each test states what it is about rath
 
 **TestUtilityMethod** — A method extracted from tests, not from production code. Annotating it separates it from the test methods around it: it is called by tests and asserts nothing on its own behalf, so a utility that has grown its own assertions has quietly become a test that never runs.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/TestUtilityMethod.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/TestUtilityMethodUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/TestUtilityMethod.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/TestUtilityMethodUsage.cs)
 
 ### TestcaseClass (xUnit Test Patterns)
 
@@ -5984,7 +5984,7 @@ Groups test methods into a class the framework can find and run, so that tests h
 
 **TestcaseClass** — The class the test methods belong to. It is what a runner discovers, what a fixture is set up for, and what the three organisations of chapter 24 are three different answers about — so a codebase that annotates its testcase classes can then be asked which of the three each one follows.
 
-Held by a subtype: yes · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/TestcaseClass.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/TestcaseClassUsage.cs)
+Held by a subtype: yes · [Source](../../DesignPatternCatalog.XUnitTestPatterns/TestcaseClass.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/TestcaseClassUsage.cs)
 
 ### TestcaseClassPerClass (xUnit Test Patterns)
 
@@ -6000,7 +6000,7 @@ A narrower case of **TestcaseClass**: every participant here is one of those too
 
 **TestcaseClassPerClass** — The organisation that follows the code. It is the easiest to find and the least likely to say anything: a class with six responsibilities gets one testcase class with six unrelated fixtures, which is the pressure this choice hides.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/TestcaseClassPerClass.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/TestcaseClassPerClassUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/TestcaseClassPerClass.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/TestcaseClassPerClassUsage.cs)
 
 ### TestcaseClassPerFeature (xUnit Test Patterns)
 
@@ -6016,7 +6016,7 @@ A narrower case of **TestcaseClass**: every participant here is one of those too
 
 **TestcaseClassPerFeature** — The organisation that follows behaviour rather than structure. It survives a refactoring that moves a feature between classes, and it costs the direct correspondence a reader uses to find the tests of a class.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/TestcaseClassPerFeature.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/TestcaseClassPerFeatureUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/TestcaseClassPerFeature.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/TestcaseClassPerFeatureUsage.cs)
 
 ### TestcaseClassPerFixture (xUnit Test Patterns)
 
@@ -6032,7 +6032,7 @@ A narrower case of **TestcaseClass**: every participant here is one of those too
 
 **TestcaseClassPerFixture** — The organisation that follows the fixture. Every test in the class shares one starting state, which is what lets the setup be read once rather than re-read per test — and what makes a test that needs something slightly different a signal to split the class rather than to widen the setup.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/TestcaseClassPerFixture.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/TestcaseClassPerFixtureUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/TestcaseClassPerFixture.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/TestcaseClassPerFixtureUsage.cs)
 
 ### TestcaseObject (xUnit Test Patterns)
 
@@ -6046,7 +6046,7 @@ Represents one test as an object, so that a test can be passed around, held in a
 
 **TestcaseObject** — One test, reified — the command object a suite holds. It is what lets a suite be built at run time rather than written out, and it is why a test can be counted, filtered and re-run without the framework parsing anything.
 
-Held by a subtype: yes · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/TestcaseObject.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/TestcaseObjectUsage.cs)
+Held by a subtype: yes · [Source](../../DesignPatternCatalog.XUnitTestPatterns/TestcaseObject.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/TestcaseObjectUsage.cs)
 
 ### TestcaseSuperclass (xUnit Test Patterns)
 
@@ -6060,7 +6060,7 @@ Holds in a superclass what several testcase classes have in common, so that shar
 
 **TestcaseSuperclass** — Reuse between testcase classes by inheritance. It is the counterpart of a test helper and the more expensive of the two: it spends the single base class a testcase class has, and it hides in a parent the setup a reader is looking for in the test.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/TestcaseSuperclass.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/TestcaseSuperclassUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/TestcaseSuperclass.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/TestcaseSuperclassUsage.cs)
 
 ### TransactionRollbackTeardown (xUnit Test Patterns)
 
@@ -6074,7 +6074,7 @@ Wraps the test in a transaction and rolls it back, so that nothing the test wrot
 
 **TransactionRollbackTeardown** — The teardown that undoes by never committing. It is the cleanest of the database teardowns and the one with a hidden constraint: the system under test must not commit on its own, so it cannot test anything whose behaviour depends on a commit — a rule nothing enforces and a failure that looks like flakiness.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/TransactionRollbackTeardown.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/TransactionRollbackTeardownUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/TransactionRollbackTeardown.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/TransactionRollbackTeardownUsage.cs)
 
 ### UnfinishedTestAssertion (xUnit Test Patterns)
 
@@ -6088,4 +6088,4 @@ Fails on purpose to say the test is not written yet, so that a missing test is a
 
 **UnfinishedTestAssertion** — A test that exists to be missing. It turns a gap into something the build reports, which is the only form in which a gap gets fixed — and it is the one annotation here whose value is that somebody comes back and removes it.
 
-Held by a subtype: no · [Source](../../Reefact.LivingDocumentation.Attributes.XUnitTestPatterns/UnfinishedTestAssertion.cs) · [Sample](../../Reefact.LivingDocumentation.Attributes.Usage/XUnitTestPatterns/UnfinishedTestAssertionUsage.cs)
+Held by a subtype: no · [Source](../../DesignPatternCatalog.XUnitTestPatterns/UnfinishedTestAssertion.cs) · [Sample](../../DesignPatternCatalog.Usage/XUnitTestPatterns/UnfinishedTestAssertionUsage.cs)

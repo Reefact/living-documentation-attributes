@@ -1,3 +1,0 @@
-#nullable enable
-Reefact.LivingDocumentation.Attributes.LivingDocumentationAttribute
-Reefact.LivingDocumentation.Attributes.LivingDocumentationAttribute.LivingDocumentationAttribute() -> void

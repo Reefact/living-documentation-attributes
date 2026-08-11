@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DesignPatternCatalog.DomainDrivenDesign\DesignPatternCatalog.DomainDrivenDesign.csproj" />
+    <ProjectReference Include="..\DesignPatternCatalog.Usage.RailNetwork\DesignPatternCatalog.Usage.RailNetwork.csproj" />
+    <ProjectReference Include="..\DesignPatternCatalog.Usage.TrainOperations.Contracts\DesignPatternCatalog.Usage.TrainOperations.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

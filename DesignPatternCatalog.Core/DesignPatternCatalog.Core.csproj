@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\build\Packaging.props" />
+  <Import Project="..\build\PublicSurface.props" />
+  <Import Project="..\build\Shims.props" />
+
+  <PropertyGroup>
+    <PackageId>DesignPatternCatalog.Core</PackageId>
+
+    <Description>
+      The base marker every pattern attribute of the living-documentation vocabulary derives from, and the
+      four reading rules that turn one of those attributes back into a catalogue, a pattern and a role. Every
+      catalogue package references this one, so a consumer's reader needs a single type to find every
+      annotation in a codebase whatever mix of catalogues it installed. It ships no pattern of its own.
+    </Description>
+
+    <PackageTags>design-patterns;living-documentation;architecture;attributes;annotations;documentation;archunit</PackageTags>
+  </PropertyGroup>
+
+
+</Project>
