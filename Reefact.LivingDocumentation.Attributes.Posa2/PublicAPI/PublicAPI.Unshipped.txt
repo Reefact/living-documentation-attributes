@@ -1,1 +1,8 @@
 #nullable enable
+Reefact.LivingDocumentation.Attributes.Posa2.ScopedLocking
+Reefact.LivingDocumentation.Attributes.Posa2.ScopedLocking.GuardAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.ScopedLocking.GuardAttribute.GuardAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.ScopedLocking.LockAttribute
+Reefact.LivingDocumentation.Attributes.Posa2.ScopedLocking.LockAttribute.LockAttribute() -> void
+Reefact.LivingDocumentation.Attributes.Posa2.ScopedLocking.Role
+Reefact.LivingDocumentation.Attributes.Posa2.ScopedLocking.Role.Role() -> void

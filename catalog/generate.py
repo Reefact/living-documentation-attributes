@@ -30,6 +30,7 @@ CATALOG_LABEL = {
     "EnterpriseIntegration": "Enterprise Integration Patterns",
     "XUnitTestPatterns": "xUnit Test Patterns",
     "MicroservicesPatterns": "Microservices Patterns",
+    "Posa2": "Pattern-Oriented Software Architecture, Volume 2",
     "Idioms": "no catalog of its own",
 }
 

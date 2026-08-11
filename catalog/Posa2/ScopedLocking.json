@@ -1,0 +1,33 @@
+{
+  "catalog": "Posa2",
+  "name": "ScopedLocking",
+  "summary": "Ensures that a lock is acquired when control enters a scope and released automatically when control leaves it, by whatever path.",
+  "reference": {
+    "author": "Douglas Schmidt, Michael Stal, Hans Rohnert, Frank Buschmann",
+    "work": "Pattern-Oriented Software Architecture, Volume 2",
+    "year": 2000
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "Guard",
+      "targets": [
+        "Class",
+        "Struct"
+      ],
+      "repeatable": false,
+      "links": [],
+      "summary": "The class whose construction acquires the lock and whose disposal releases it. Every way out of the scope releases it \u2014 a return, a thrown exception, a branch added next year by somebody who never read this class \u2014 which is the one thing an explicit release on each path cannot promise."
+    },
+    {
+      "name": "Lock",
+      "targets": [
+        "Field",
+        "Property"
+      ],
+      "repeatable": false,
+      "links": [],
+      "summary": "The lock the guard manages. Annotating it claims that this lock is taken through the guard and never directly, so a bare acquire anywhere else in the type is the breach rather than a matter of style."
+    }
+  ]
+}
