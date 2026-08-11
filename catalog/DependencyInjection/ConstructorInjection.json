@@ -1,0 +1,22 @@
+{
+  "catalog": "DependencyInjection",
+  "name": "ConstructorInjection",
+  "summary": "Declares the dependencies a class requires by taking them as constructor parameters, so that an instance cannot exist without them.",
+  "reference": {
+    "author": "Steven van Deursen, Mark Seemann",
+    "work": "Dependency Injection Principles, Practices, and Patterns",
+    "year": 2019
+  },
+  "inherited": false,
+  "roles": [
+    {
+      "name": "ConstructorInjection",
+      "targets": [
+        "Constructor"
+      ],
+      "repeatable": false,
+      "summary": "The constructor through which a class receives what it cannot work without. What it asserts is *required*: a dependency that may legitimately be absent does not belong here, and one added here is a new demand on every composition root that builds the type.",
+      "links": []
+    }
+  ]
+}
