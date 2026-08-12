@@ -61,9 +61,10 @@ link to its source and to a worked example.
 **[Learn the patterns](doc/handwritten/for-users/)** — a separate, hand-written guide
 that answers what the index cannot: what a pattern is for, when to reach for it,
 **when not to**, and what it costs, with the worked example read line by line. It is
-bilingual and it arrives one catalogue at a time — the Gang of Four's
-[creational patterns](doc/handwritten/for-users/gang-of-four/README-en.md) are the
-first five.
+bilingual and it arrives one catalogue at a time. The
+[Gang of Four](doc/handwritten/for-users/gang-of-four/README-en.md) is complete, all
+twenty-three; [Domain-Driven Design](doc/handwritten/for-users/domain-driven-design/README-en.md)
+is under way.
 
 ## Installing
 
