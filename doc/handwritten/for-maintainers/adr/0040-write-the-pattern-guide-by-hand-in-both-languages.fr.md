@@ -2,8 +2,9 @@
 
 🌍 🇫🇷 Français (ce fichier) · 🇬🇧 [English](0040-write-the-pattern-guide-by-hand-in-both-languages.md)
 
-**Statut :** Proposé
+**Statut :** Accepté
 **Proposé :** 2026-08-12
+**Accepté :** 2026-08-12
 **Décideurs :** Reefact
 
 ## Contexte
