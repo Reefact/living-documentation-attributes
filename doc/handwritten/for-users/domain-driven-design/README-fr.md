@@ -3,10 +3,15 @@
 🌍 🇫🇷 Français (ce fichier) · 🇬🇧 [English](README-en.md)
 
 *Domain-Driven Design: Tackling Complexity in the Heart of Software* — Eric Evans, Addison-Wesley, 2003.
-Vingt-trois patrons catalogués ; ceux que le livre nomme et auxquels C# offre quelque chose à quoi
-s'attacher ([la liste des omissions
+Vingt-trois patrons catalogués, et les vingt-trois traités ici : ceux que le livre nomme et auxquels C#
+offre quelque chose à quoi s'attacher ([la liste des omissions
 délibérées](../../../../catalog/README.md#patterns-deliberately-left-out) dit lesquels manquent et
-pourquoi).
+pourquoi), plus un qu'Evans a nommé plus tard.
+
+Celui-là est [Domain Event](DomainEvent-fr.md), et sa page le dit à l'endroit où sa source a sa place. Il
+n'est pas dans le livre de 2003 ; Evans le nomme dans la *Domain-Driven Design Reference* de 2015, et ce
+catalogue le détient pour une raison que consigne
+l'[ADR-0041](../../for-maintainers/adr/0041-hold-a-pattern-named-in-an-authors-later-reference-edition.fr.md).
 
 Ce guide n'est pas l'index du catalogue.
 L'[index](../../../generated/catalog-index.md#domain-driven-design) donne l'annotation à taper, ce à quoi
@@ -29,6 +34,7 @@ Ce sont les pièces dont un modèle est fait, et les deux patrons qui décident 
 | [Aggregate](Aggregate-fr.md) | Une frontière avec un objet qui en a la charge, pour qu'un invariant traversant plusieurs objets puisse réellement être imposé. |
 | [Factory](Factory-fr.md) | La création comme acte à part entière, pour que ce qui en sort n'ait jamais été à moitié construit. |
 | [Repository](Repository-fr.md) | L'illusion d'une collection, pour que le modèle demande des agrégats sans apprendre où ils sont rangés. |
+| [Domain Event](DomainEvent-fr.md) | Une affirmation que quelque chose s'est produit — au passé, immuable, et portant le moment où c'est arrivé. |
 
 ## Refactorer vers une compréhension plus profonde
 
@@ -67,14 +73,6 @@ c'est la plus petite chose qu'offre C# capable de faire une affirmation sur tout
 | [Generic Subdomain](GenericSubdomain-fr.md) | Nécessaire et non distinctive — la part qu'on pourrait acheter, et que les meilleurs devraient laisser tranquille. |
 | [Cohesive Mechanism](CohesiveMechanism-fr.md) | Un solveur sorti de derrière les concepts, pour qu'une conduite reste une conduite. |
 | [Pluggable Component Framework](PluggableComponentFramework-fr.md) | Un noyau gelé que plusieurs équipes implémentent, pour qu'un composant bâti en 2031 tourne sous une application de 2011. |
-
-## En attente
-
-**Domain Event** est catalogué et n'a pas de page. Le catalogue le crédite à *Domain-Driven Design*, 2003,
-et le patron n'apparaît pas sous ce nom dans le livre de 2003 — Evans le nomme dans le *Domain-Driven
-Design Reference* de 2015, et Martin Fowler avait publié un *Domain Event* sur son site en 2005. Une page
-ici devrait énoncer une source, et ce guide n'en énonce pas une dont il ne peut pas répondre. La page
-attend le catalogue, et non l'inverse.
 
 ## Comment une page est organisée
 

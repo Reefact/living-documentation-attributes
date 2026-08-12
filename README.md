@@ -63,9 +63,8 @@ that answers what the index cannot: what a pattern is for, when to reach for it,
 **when not to**, and what it costs, with the worked example read line by line. It is
 bilingual and it arrives one catalogue at a time. The
 [Gang of Four](doc/handwritten/for-users/gang-of-four/README-en.md) is complete, all
-twenty-three, and [Domain-Driven Design](doc/handwritten/for-users/domain-driven-design/README-en.md)
-has twenty-two of its twenty-three — the last one held, for a reason its README
-gives.
+twenty-three, and so is
+[Domain-Driven Design](doc/handwritten/for-users/domain-driven-design/README-en.md).
 
 ## Installing
 
@@ -180,7 +179,7 @@ assertions they carry**, never by their names.
 Almost nothing this library decides is defended by the compiler, and the
 attributes are generated from a catalog, so a reader of the output cannot tell a
 decided trait from an incidental one. The reasoning is kept in the
-[ADR base](doc/handwritten/for-maintainers/adr/) — 40 records, English
+[ADR base](doc/handwritten/for-maintainers/adr/) — 41 records, English
 canonical with a French translation alongside — and that is where to look when a
 shape seems arbitrary.
 

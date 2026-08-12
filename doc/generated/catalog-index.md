@@ -1610,7 +1610,7 @@ Held by a subtype: no · [Source](../../DesignPatternCatalog.DomainDrivenDesign/
 
 States that something meaningful to the domain has happened. It is named in the past tense, and it is immutable once raised.
 
-*Eric Evans, Domain-Driven Design, 2003.*
+*Eric Evans, Domain-Driven Design Reference, 2015.*
 
 | Role | Annotation | Applies to | Repeatable | Links |
 |---|---|---|---|---|
