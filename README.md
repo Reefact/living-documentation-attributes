@@ -58,6 +58,13 @@ claim it.
 annotation to type for each of its roles, what each role may be applied to, and a
 link to its source and to a worked example.
 
+**[Learn the patterns](doc/handwritten/for-users/)** — a separate, hand-written guide
+that answers what the index cannot: what a pattern is for, when to reach for it,
+**when not to**, and what it costs, with the worked example read line by line. It is
+bilingual and it arrives one catalogue at a time — the Gang of Four's
+[creational patterns](doc/handwritten/for-users/gang-of-four/README-en.md) are the
+first five.
+
 ## Installing
 
 **One package per catalogue.** Take the vocabulary of the works you actually read:
@@ -171,7 +178,7 @@ assertions they carry**, never by their names.
 Almost nothing this library decides is defended by the compiler, and the
 attributes are generated from a catalog, so a reader of the output cannot tell a
 decided trait from an incidental one. The reasoning is kept in the
-[ADR base](doc/handwritten/for-maintainers/adr/) — 39 records, English
+[ADR base](doc/handwritten/for-maintainers/adr/) — 40 records, English
 canonical with a French translation alongside — and that is where to look when a
 shape seems arbitrary.
 
