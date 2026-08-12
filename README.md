@@ -69,6 +69,9 @@ and so is
 [Dependency Injection](doc/handwritten/for-users/dependency-injection/README-en.md),
 whose four anti-patterns are where the guide's rule about not inventing is tested
 hardest.
+[Enterprise Integration Patterns](doc/handwritten/for-users/enterprise-integration/README-en.md)
+has started — the four integration styles and the six root patterns of sixty-five, which
+is the largest catalogue here and the one the guide will take longest to finish.
 
 ## Installing
 
