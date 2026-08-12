@@ -4,7 +4,7 @@
 
 *Enterprise Integration Patterns: Designing, Building, and Deploying Messaging Solutions* — Gregor
 Hohpe and Bobby Woolf, Addison-Wesley, 2003. Sixty-five patterns catalogued, and it is the largest
-catalogue here; **ten of them are written up so far**, and the six chapters still missing are named
+catalogue here; **nineteen of them are written up so far**, and the five chapters still missing are named
 below with what stands in for them until they exist.
 
 This guide is not the catalogue index. The
@@ -46,18 +46,32 @@ one of these. They are the shortest pages in the catalogue and the ones the othe
 
 ## Messaging Channels
 
-Not written yet. Point-to-Point Channel, Publish-Subscribe Channel, Datatype Channel, Invalid Message
-Channel, Dead Letter Channel, Guaranteed Delivery, Channel Adapter, Messaging Bridge, Message Bus — all
-nine are catalogued and annotated; only their guide pages are missing. Until they exist, the
-[index entries](../../../generated/catalog-index.md#enterprise-integration-patterns) and the samples
-under
-[`DesignPatternCatalog.Usage/EnterpriseIntegration`](../../../../DesignPatternCatalog.Usage/EnterpriseIntegration)
-are what there is.
+The chapter that turns [Message Channel](MessageChannel-en.md) into decisions. Nine patterns, and they
+answer four different questions about one channel — how many receivers, what may travel, what happens to
+what cannot be handled, and whether the channel survives its own host. Read the first two together and
+the middle two together; the pairs are where the distinctions live.
+
+| Pattern | What it is for |
+|---|---|
+| [Point-to-Point Channel](PointToPointChannel-en.md) | Each message to exactly one receiver, so that competing consumers share a load without handling anything twice. |
+| [Publish-Subscribe Channel](PublishSubscribeChannel-en.md) | A copy to every subscriber, so that an event reaches all interested parties and the sender learns of none of them. |
+| [Datatype Channel](DatatypeChannel-en.md) | One kind of message per channel, so that a receiver knows what it is reading without inspecting it. |
+| [Invalid Message Channel](InvalidMessageChannel-en.md) | Somewhere for a receiver to put what it read and rejected, so that bad data neither blocks the channel nor disappears. |
+| [Dead Letter Channel](DeadLetterChannel-en.md) | Somewhere for the messaging system to put what it could not deliver, so that a delivery failure is visible rather than silent. |
+| [Guaranteed Delivery](GuaranteedDelivery-en.md) | A channel that persists what it carries, so that a crash between sending and receiving loses nothing. |
+| [Channel Adapter](ChannelAdapter-en.md) | Reaching into an application from outside, so that one that knows nothing of messaging can still take part. |
+| [Messaging Bridge](MessagingBridge-en.md) | Two messaging systems joined, so that a migration can be done one application at a time. |
+| [Message Bus](MessageBus-en.md) | Shared infrastructure **and** an agreed command set, so that an application can be added or removed without the others being touched. |
 
 ## Message Construction
 
 Not written yet. Command Message, Document Message, Event Message, Request-Reply, Return Address,
-Correlation Identifier, Message Sequence, Message Expiration, Format Indicator — same as above.
+Correlation Identifier, Message Sequence, Message Expiration, Format Indicator — all nine are catalogued
+and annotated; only their guide pages are missing. Until they exist, the
+[index entries](../../../generated/catalog-index.md#enterprise-integration-patterns) and the samples
+under
+[`DesignPatternCatalog.Usage/EnterpriseIntegration`](../../../../DesignPatternCatalog.Usage/EnterpriseIntegration)
+are what there is.
 
 ## Message Routing
 
@@ -105,7 +119,7 @@ Every page follows the same order.
 ## What these pages do not do
 
 They do not invent. Where the book does not state something, the page says so rather than filling the
-section. Four consequences are worth naming for this catalogue in particular.
+section. Five consequences are worth naming for this catalogue in particular.
 
 **The four integration styles are alternatives, and the pages do not flatten them into one
 recommendation.** The book prefers messaging and says so, but it also gives File Transfer and Shared
@@ -126,3 +140,11 @@ lean more on explaining what is *missing* from a signature than on quoting what 
 [Pipes and Filters](PipesAndFilters-en.md) sample's pipeline calls its filters directly rather than
 through the pipes it declares. The book admits both arrangements, so the sample is not wrong — but a
 reader comparing the diagram to the code would notice, and the page names it first.
+
+**Several of these patterns are usually configuration rather than code, and the pages say so instead of
+pretending otherwise.** A dead letter channel is normally a broker setting; a channel is often a
+configured queue name with no type to annotate. Where that is so there is nothing for the annotation to
+attach to, which is the ordinary condition of every role rather than a gap in the entry — the ground
+[ADR-0029](../../for-maintainers/adr/0029-admit-enterprise-integration-patterns-as-a-catalogue.md)
+records for admitting the channels at all. The affected pages name it in *The roles*, where a reader
+deciding whether to annotate anything will be looking.
