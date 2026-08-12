@@ -2,39 +2,39 @@
 
 🌍 🇬🇧 English (this file) · 🇫🇷 [Français](FactoryMethod-fr.md)
 
-> Defines an interface for creating an object, but lets subclasses decide which class to instantiate,
-> deferring instantiation to them.
->
-> — Gamma, Helm, Johnson & Vlissides, *Design Patterns*, 1994
+## Intent
 
-## The problem
+Factory Method is a creational pattern that defines an interface for creating an object but lets
+subclasses decide which class to instantiate, deferring instantiation to them.
 
-A class knows **when** to create something, and in what order to use it, but not **what**.
+## Problem
 
-An export job knows the whole procedure: open a writer, push every row through it, close. That
-sequence is the job's business and it does not change. Which writer — CSV, XML, a fixed-width
-mainframe format — is not the job's business at all, and changes with every new export.
+A class sometimes knows when to create something, and in what order to use it, without knowing what.
 
-Written directly, the two get welded together:
+An export job knows the whole procedure: open a writer, push every row through it, close. That sequence
+is the job's business and does not change. Which writer — CSV, XML, a fixed-width mainframe format — is
+not the job's business at all, and changes with every new export.
+
+Written directly, the two are welded together:
 
 ```csharp
 public void Run(IEnumerable<string> rows) {
-    var writer = new CsvWriter();          // the one line that should not be here
+    var writer = new CsvWriter();          // the one line that does not belong here
     foreach (var row in rows) writer.Write(row);
 }
 ```
 
-Now the procedure cannot be reused without dragging CSV along, and a second format means either
+The procedure can no longer be reused without dragging CSV along, and a second format means either
 copying the loop or threading a `switch` through it.
 
-## The solution
+## Solution
 
-Pull that one line out into an operation of its own, declare it without a body, and let subclasses
-supply it.
+The pattern moves that one line into an operation of its own, declared without a body and supplied by
+subclasses.
 
 The base class keeps the procedure and calls the operation where the `new` used to be. Each subclass
-answers one question — *which product?* — and inherits everything else. Creation is **deferred** down
-the hierarchy while the algorithm stays up it.
+answers a single question — which product? — and inherits everything else. Creation is deferred down the
+hierarchy while the algorithm stays up it.
 
 ## Structure
 
@@ -60,8 +60,8 @@ classDiagram
     ExportJob ..> IExportWriter : uses
 ```
 
-Two parallel hierarchies, and one diagonal. The creator hierarchy on the left, the product hierarchy
-on the right, and each concrete creator points across at the concrete product it makes.
+Two parallel hierarchies and one diagonal: the creators on the left, the products on the right, and each
+concrete creator pointing across at the concrete product it makes.
 
 ## The roles
 
@@ -73,9 +73,9 @@ on the right, and each concrete creator points across at the concrete product it
 | Product | `[FactoryMethod.Product]` | interface, class | Declares the interface of the objects the factory method creates. |
 | ConcreteProduct | `[FactoryMethod.ConcreteProduct]` | class, struct | Implements the product interface. |
 
-Note that one of the five roles is a **method**, not a type. It is the only Creational pattern in this
-catalogue with a member-level role, and it is the pattern's centre — so the annotation goes on the
-method, not on the class that declares it.
+One of the five roles is a method rather than a type. It is the only creational pattern in this
+catalogue with a member-level role, and the annotation goes on the method, not on the class declaring
+it.
 
 ## The example
 
@@ -105,9 +105,8 @@ public abstract class ExportJob {
     }
 ```
 
-This is the whole point of the pattern in four lines. `Run` is complete, concrete, and inherited by
-everything — it knows the procedure. It calls `CreateWriter()` where a `new` would have been, and
-therefore knows nothing about CSV.
+`Run` is complete, concrete and inherited by every subclass: it holds the procedure. It calls
+`CreateWriter()` where a `new` would have been, and therefore knows nothing about CSV.
 
 ```csharp
     [FactoryMethod.FactoryMethod]
@@ -117,7 +116,7 @@ therefore knows nothing about CSV.
 ```
 
 The factory method itself. `abstract`, so every subclass must answer; `protected`, so the answer is an
-internal matter of the hierarchy rather than something callers can invoke.
+internal matter of the hierarchy rather than something callers invoke.
 
 ```csharp
 [FactoryMethod.ConcreteCreator(Creator = typeof(ExportJob), ConcreteProduct = typeof(CsvWriter))]
@@ -128,76 +127,77 @@ public sealed class CsvExportJob : ExportJob {
 }
 ```
 
-A whole export job in one line, because everything else was inherited. The annotation's two links
-record the diagonal the diagram shows: this creator, that product.
+A whole export job in one line, everything else being inherited. The annotation's two links record the
+diagonal the diagram shows: this creator, that product.
 
-**Worth noticing:** `Run` is itself a `TemplateMethod` — a fixed algorithm with one step left to
-subclasses. The book says the two normally travel together, and factory methods are usually called
-from template methods. The sample shows both, and only annotates one, because the catalogue holds a
-pattern where a work presents it, not everywhere a reader could spot it.
+`Run` is itself a `TemplateMethod` — a fixed algorithm with one step left to subclasses. The book says
+the two normally travel together, and that factory methods are usually called from template methods.
+The sample shows both and annotates one, because the catalogue holds a pattern where a work presents it
+rather than everywhere a reader could spot it.
 
-## When to use it
+## Applicability
 
-The book's own list:
+**Use Factory Method when a class cannot anticipate the class of objects it must create.**
 
-* a class **cannot anticipate** the class of objects it must create;
-* a class wants **its subclasses** to specify the objects it creates;
-* a class delegates work to one of several helper subclasses, and you want to keep the knowledge of
-  *which helper* in one place.
+**Use Factory Method when a class wants its subclasses to specify the objects it creates.**
 
-The common thread: the varying part is a single object, and the code that varies it is already
-a subclass for other reasons.
+**Use Factory Method when a class delegates work to one of several helper subclasses and the knowledge
+of which helper should live in one place.**
+
+The common thread: the varying part is a single object, and the code that varies it is already a
+subclass for other reasons.
 
 ## When not to use it
 
-* **When injection would do.** If all you need is to vary the created object, pass it in — a
-  constructor parameter of type `IExportWriter`, or a `Func<IExportWriter>` when a fresh one is needed
-  per call. **Subclassing to change one instantiation is a heavy lever**, and it forces every variation
-  to be a type. On .NET this is usually the better default; the `DependencyInjection` catalogue holds
-  it as `ConstructorInjection`.
-* **When the choice is data.** If the format arrives as a string from configuration, you want a lookup
-  — a dictionary of factories, a registry — not a subclass per value. Subclasses answer *which class*;
-  they answer it badly when the question is *which of fifty rows*.
-* **When the creator has no other reason to be a hierarchy.** A base class whose only abstract member
-  is the factory method is a hierarchy invented to host one line. That is the shape the previous two
-  bullets are really warning about.
-* **When you meant a static creation helper.** `Money.FromCents(500)`, `Task.FromResult(x)`,
-  `Uri.TryCreate(...)` are widely called "factory methods" and are **not this pattern**: no subclass,
-  no deferral, nothing overridden. They are a naming convention for constructors with better names.
-  Useful, unrelated, and a frequent source of confusion in code review.
+**Do not use Factory Method where injection would do.** To vary only the created object, pass it in — a
+constructor parameter of type `IExportWriter`, or a `Func<IExportWriter>` where a fresh one is needed per
+call. Subclassing to change one instantiation is a heavy lever, and it forces every variation to become
+a type. On .NET this is usually the better default, and the `DependencyInjection` catalogue holds it as
+`ConstructorInjection`.
 
-## What it costs
+**Do not use Factory Method when the choice is data.** A format arriving as a string from configuration
+calls for a lookup — a dictionary of factories, a registry — not a subclass per value. Subclasses answer
+*which class*; they answer badly when the question is *which of fifty rows*.
 
-**What you gain**
+**Do not use Factory Method when the creator has no other reason to be a hierarchy.** A base class whose
+only abstract member is the factory method is a hierarchy invented to host one line.
 
-* the procedure is written once and reused by every variant;
-* application-specific classes stay out of framework code — the book's central claim for it, and the
-  reason the pattern is everywhere in class libraries;
-* the knowledge of *which product* lives in exactly one method per variant.
+**Do not confuse the pattern with a static creation helper.** `Money.FromCents(500)`,
+`Task.FromResult(x)` and `Uri.TryCreate(…)` are widely called factory methods and are not this pattern:
+no subclass, no deferral, nothing overridden. They are a naming convention for constructors with better
+names — useful, unrelated, and a frequent source of confusion in review.
 
-**What you pay**
+## Advantages
 
-* **a subclass per product**, which the book states as the drawback: a client may have to subclass the
-  creator solely to create one particular product;
-* two hierarchies to keep in step, and the diagonal between them exists only in the code that
-  overrides;
-* one more indirection between reading the algorithm and knowing what it operates on.
+* The procedure is written once and reused by every variant.
+* Application-specific classes stay out of framework code, which is the book's central claim for the
+  pattern and the reason it is everywhere in class libraries.
+* The knowledge of which product to build lives in exactly one method per variant.
 
-## Patterns it is confused with
+## Drawbacks
 
-| | |
-|---|---|
-| **`AbstractFactory`** | Several products chosen together, by an object. Factory Method is one product chosen by a subclass. An Abstract Factory's operations are usually factory methods, so the two nest rather than compete. |
-| **`TemplateMethod`** | A fixed algorithm with steps left to subclasses. Factory Method is the special case where the deferred step is *creation* — and, as in the sample, is typically called from a template method. |
-| **`Prototype`** | Also varies what gets created, but by cloning a configured instance instead of subclassing the creator. Choose Prototype when subclassing the creator is the cost you are trying to avoid. |
-| **A static creation helper** | Not this pattern. See the last bullet above. |
+* A subclass per product, which the book states as the cost: a client may have to subclass the creator
+  solely to create one particular product.
+* Two hierarchies to keep in step, the diagonal between them existing only in the overriding code.
+* One more indirection between reading the algorithm and knowing what it operates on.
 
-## Where this comes from
+## Relations with other patterns
+
+**`AbstractFactory`** creates several products chosen together by an object, where Factory Method
+creates one chosen by a subclass. An Abstract Factory's operations are usually factory methods.
+
+**`TemplateMethod`** is a fixed algorithm with steps left to subclasses; Factory Method is the special
+case where the deferred step is creation, and as in the sample it is typically called from a template
+method.
+
+**`Prototype`** also varies what gets created, but by cloning a configured instance instead of
+subclassing the creator. It suits the case where the parallel hierarchy is the cost being avoided.
+
+## Source
 
 *Design Patterns: Elements of Reusable Object-Oriented Software*, Gamma, Helm, Johnson & Vlissides,
-Addison-Wesley, 1994 — the Creational patterns chapter.
+Addison-Wesley, 1994 — the creational patterns chapter.
 
-* [Index entry](../../../generated/catalog-index.md#factorymethod-gang-of-four) — the annotations, the
-  targets, the links.
+* [Index entry](../../../generated/catalog-index.md#factorymethod-gang-of-four)
 * [Generated attribute](../../../../DesignPatternCatalog.GangOfFour/FactoryMethod.cs)
 * [Sample](../../../../DesignPatternCatalog.Usage/GangOfFour/FactoryMethodUsage.cs)
