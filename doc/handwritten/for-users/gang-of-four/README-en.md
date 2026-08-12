@@ -42,8 +42,22 @@ to see of the arrangement.
 
 ## Behavioural patterns
 
-Not written yet. Chain of Responsibility, Command, Interpreter, Iterator, Mediator, Memento, Observer,
-State, Strategy, Template Method and Visitor — same as above.
+These concern how objects collaborate: who asks whom, what travels between them, and where a rule that
+changes ends up living.
+
+| Pattern | What it is for |
+|---|---|
+| [Chain of Responsibility](ChainOfResponsibility-en.md) | A request travelling along handlers until one takes it, the sender knowing only the first. |
+| [Command](Command-en.md) | A request turned into an object, so that it can be queued, logged, replayed and undone. |
+| [Interpreter](Interpreter-en.md) | A little language whose grammar is a class hierarchy, so that its sentences become data. |
+| [Iterator](Iterator-en.md) | Walking an aggregate without learning how it stores anything. |
+| [Mediator](Mediator-en.md) | Many-to-many connections replaced by one coordinator that holds the interaction. |
+| [Memento](Memento-en.md) | A sealed snapshot of an object's state, kept by something that cannot open it. |
+| [Observer](Observer-en.md) | One object changing and an unknown number of others hearing about it. |
+| [State](State-en.md) | Behaviour that changes with a status, gathered per status instead of tested per method. |
+| [Strategy](Strategy-en.md) | Interchangeable algorithms behind one question, chosen by the caller. |
+| [Template Method](TemplateMethod-en.md) | A sequence written once, with named blanks that subclasses fill. |
+| [Visitor](Visitor-en.md) | A new operation over a structure, added without reopening any of its types. |
 
 ## How a page is organised
 
