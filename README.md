@@ -63,8 +63,12 @@ that answers what the index cannot: what a pattern is for, when to reach for it,
 **when not to**, and what it costs, with the worked example read line by line. It is
 bilingual and it arrives one catalogue at a time. The
 [Gang of Four](doc/handwritten/for-users/gang-of-four/README-en.md) is complete, all
-twenty-three, and so is
-[Domain-Driven Design](doc/handwritten/for-users/domain-driven-design/README-en.md).
+twenty-three; so is
+[Domain-Driven Design](doc/handwritten/for-users/domain-driven-design/README-en.md);
+and so is
+[Dependency Injection](doc/handwritten/for-users/dependency-injection/README-en.md),
+whose four anti-patterns are where the guide's rule about not inventing is tested
+hardest.
 
 ## Installing
 
