@@ -4,8 +4,8 @@
 
 *Enterprise Integration Patterns: Designing, Building, and Deploying Messaging Solutions* — Gregor
 Hohpe et Bobby Woolf, Addison-Wesley, 2003. Soixante-cinq patrons catalogués, et c'est le plus grand
-catalogue d'ici ; **dix sont écrits à ce jour**, et les six chapitres qui manquent encore sont nommés
-ci-dessous avec ce qui en tient lieu jusqu'à leur existence.
+catalogue d'ici ; **dix-neuf sont écrits à ce jour**, et les cinq chapitres qui manquent encore sont
+nommés ci-dessous avec ce qui en tient lieu jusqu'à leur existence.
 
 Ce guide n'est pas l'index du catalogue.
 L'[index](../../../generated/catalog-index.md#enterprise-integration-patterns) donne l'annotation par
@@ -49,18 +49,33 @@ plus.
 
 ## Les canaux de messagerie
 
-Pas encore écrits. Point-to-Point Channel, Publish-Subscribe Channel, Datatype Channel, Invalid Message
-Channel, Dead Letter Channel, Guaranteed Delivery, Channel Adapter, Messaging Bridge, Message Bus — tous
-les neuf sont catalogués et annotés ; seules leurs pages de guide manquent. En attendant qu'elles
-existent, les [entrées d'index](../../../generated/catalog-index.md#enterprise-integration-patterns) et
-les exemples sous
-[`DesignPatternCatalog.Usage/EnterpriseIntegration`](../../../../DesignPatternCatalog.Usage/EnterpriseIntegration)
-sont ce qu'il y a.
+Le chapitre qui transforme [Message Channel](MessageChannel-fr.md) en décisions. Neuf patrons, et ils
+répondent à quatre questions différentes au sujet d'un même canal — combien de receveurs, ce qui peut
+voyager, ce qu'il advient de ce qui ne peut pas être traité, et si le canal survit à son propre hôte. Les
+deux premiers se lisent ensemble, et les deux du milieu aussi ; c'est dans les paires que vivent les
+distinctions.
+
+| Patron | À quoi il sert |
+|---|---|
+| [Point-to-Point Channel](PointToPointChannel-fr.md) | Chaque message à exactement un receveur, de sorte que des consommateurs concurrents se partagent une charge sans rien traiter deux fois. |
+| [Publish-Subscribe Channel](PublishSubscribeChannel-fr.md) | Une copie à chaque abonné, de sorte qu'un événement atteigne tous les intéressés et que l'émetteur n'en connaisse aucun. |
+| [Datatype Channel](DatatypeChannel-fr.md) | Une sorte de message par canal, de sorte qu'un receveur sache ce qu'il lit sans l'inspecter. |
+| [Invalid Message Channel](InvalidMessageChannel-fr.md) | Un endroit où un receveur met ce qu'il a lu et rejeté, de sorte qu'une donnée mauvaise ne bloque pas le canal et ne disparaisse pas. |
+| [Dead Letter Channel](DeadLetterChannel-fr.md) | Un endroit où le système de messagerie met ce qu'il n'a pas pu délivrer, de sorte qu'un échec de délivrance soit visible plutôt que silencieux. |
+| [Guaranteed Delivery](GuaranteedDelivery-fr.md) | Un canal qui fait persister ce qu'il porte, de sorte qu'une panne entre l'envoi et la réception ne perde rien. |
+| [Channel Adapter](ChannelAdapter-fr.md) | Tendre le bras dans une application depuis l'extérieur, de sorte qu'une application qui ne connaît rien à la messagerie puisse tout de même y prendre part. |
+| [Messaging Bridge](MessagingBridge-fr.md) | Deux systèmes de messagerie joints, de sorte qu'une migration puisse se faire une application à la fois. |
+| [Message Bus](MessageBus-fr.md) | Une infrastructure partagée **et** un jeu de commandes convenu, de sorte qu'une application puisse être ajoutée ou retirée sans que les autres soient touchées. |
 
 ## La construction des messages
 
 Pas encore écrits. Command Message, Document Message, Event Message, Request-Reply, Return Address,
-Correlation Identifier, Message Sequence, Message Expiration, Format Indicator — comme ci-dessus.
+Correlation Identifier, Message Sequence, Message Expiration, Format Indicator — tous les neuf sont
+catalogués et annotés ; seules leurs pages de guide manquent. En attendant qu'elles existent, les
+[entrées d'index](../../../generated/catalog-index.md#enterprise-integration-patterns) et les exemples
+sous
+[`DesignPatternCatalog.Usage/EnterpriseIntegration`](../../../../DesignPatternCatalog.Usage/EnterpriseIntegration)
+sont ce qu'il y a.
 
 ## Le routage des messages
 
@@ -108,7 +123,7 @@ Toutes les pages suivent le même ordre.
 ## Ce que ces pages ne font pas
 
 Elles n'inventent pas. Là où le livre n'énonce pas quelque chose, la page le dit plutôt que de remplir la
-section. Quatre conséquences méritent d'être nommées pour ce catalogue en particulier.
+section. Cinq conséquences méritent d'être nommées pour ce catalogue en particulier.
 
 **Les quatre styles d'intégration sont des alternatives, et les pages ne les aplatissent pas en une seule
 recommandation.** Le livre préfère la messagerie et le dit, mais il donne aussi à File Transfer et à
@@ -130,3 +145,12 @@ citation de ce qui y est.
 [Pipes and Filters](PipesAndFilters-fr.md) appelle ses filtres directement plutôt qu'à travers les tuyaux
 qu'il déclare. Le livre admet les deux agencements, l'exemple n'est donc pas faux — mais un lecteur qui
 compare le diagramme au code le remarquerait, et la page le nomme d'abord.
+
+**Plusieurs de ces patrons sont d'ordinaire de la configuration plutôt que du code, et les pages le disent
+au lieu de faire comme si.** Un canal de lettres mortes est normalement un réglage de courtier ; un canal
+est souvent un nom de file configuré, sans type à annoter. Là où c'est le cas, il n'y a rien à quoi
+l'annotation puisse s'attacher, ce qui est la condition ordinaire de tout rôle plutôt qu'un manque dans
+l'entrée — le motif que consigne
+l'[ADR-0029](../../for-maintainers/adr/0029-admit-enterprise-integration-patterns-as-a-catalogue.md) pour
+avoir admis les canaux. Les pages concernées le nomment dans *Les rôles*, là où regardera un lecteur qui
+se demande s'il faut annoter quoi que ce soit.
