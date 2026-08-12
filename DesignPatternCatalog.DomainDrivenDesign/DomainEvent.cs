@@ -15,7 +15,7 @@ namespace DesignPatternCatalog.DomainDrivenDesign {
     ///         This pattern has a single role, so there is nothing to choose: the attribute is applied on its own.
     ///     </para>
     ///     <para>
-    ///         Eric Evans, <i>Domain-Driven Design</i>, 2003.
+    ///         Eric Evans, <i>Domain-Driven Design Reference</i>, 2015.
     ///     </para>
     /// </remarks>
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct, AllowMultiple = false, Inherited = true)]

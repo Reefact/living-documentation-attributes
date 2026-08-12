@@ -4,8 +4,8 @@
   "summary": "States that something meaningful to the domain has happened. It is named in the past tense, and it is immutable once raised.",
   "reference": {
     "author": "Eric Evans",
-    "work": "Domain-Driven Design",
-    "year": 2003
+    "work": "Domain-Driven Design Reference",
+    "year": 2015
   },
   "inherited": true,
   "roles": [

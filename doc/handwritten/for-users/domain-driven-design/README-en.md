@@ -3,9 +3,16 @@
 🌍 🇬🇧 English (this file) · 🇫🇷 [Français](README-fr.md)
 
 *Domain-Driven Design: Tackling Complexity in the Heart of Software* — Eric Evans, Addison-Wesley, 2003.
-Twenty-three patterns catalogued; the ones the book names and that C# has somewhere to put
+Twenty-three patterns catalogued, and all twenty-three written up here: the ones the book names and that
+C# has somewhere to put
 ([the list of deliberate omissions](../../../../catalog/README.md#patterns-deliberately-left-out) says
-which are missing and why).
+which are missing and why), plus one Evans named later.
+
+That one is [Domain Event](DomainEvent-en.md), and its page says so where its source belongs. It is not
+in the 2003 book; Evans names it in the *Domain-Driven Design Reference* of 2015, and this catalogue
+holds it for a reason
+[ADR-0041](../../for-maintainers/adr/0041-hold-a-pattern-named-in-an-authors-later-reference-edition.md)
+records.
 
 This guide is not the catalogue index. The
 [index](../../../generated/catalog-index.md#domain-driven-design) gives the annotation to type, what each
@@ -28,6 +35,7 @@ These are the parts a model is made of, and the two patterns that decide whether
 | [Aggregate](Aggregate-en.md) | A boundary with one object in charge of it, so that an invariant spanning several can actually be enforced. |
 | [Factory](Factory-en.md) | Creation as an act in its own right, so that what comes out was never half built. |
 | [Repository](Repository-en.md) | The illusion of a collection, so that the model can ask for aggregates without learning where they are kept. |
+| [Domain Event](DomainEvent-en.md) | A statement that something happened — past tense, immutable, and carrying when it happened. |
 
 ## Refactoring toward deeper insight
 
@@ -66,14 +74,6 @@ in C# that can make one claim about all the code it holds.
 | [Generic Subdomain](GenericSubdomain-en.md) | Necessary and undistinctive — the part that could be bought, and that the best people should leave alone. |
 | [Cohesive Mechanism](CohesiveMechanism-en.md) | A solver taken out from behind the concepts, so that a pipe stays a pipe. |
 | [Pluggable Component Framework](PluggableComponentFramework-en.md) | A frozen core several teams implement, so that a component built in 2031 runs under an application from 2011. |
-
-## Held
-
-**Domain Event** is catalogued and has no page. The catalog credits it to *Domain-Driven Design*, 2003,
-and the pattern does not appear under that name in the 2003 book — Evans names it in the *Domain-Driven
-Design Reference* of 2015, and Martin Fowler had published a *Domain Event* on his site in 2005. A page
-here would have to state a source, and this guide does not state one it cannot stand behind. The page
-waits on the catalog rather than the other way round.
 
 ## How a page is organised
 
