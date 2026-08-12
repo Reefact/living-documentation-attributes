@@ -1,0 +1,83 @@
+# Domain-Driven Design — the pattern guide
+
+🌍 🇬🇧 English (this file) · 🇫🇷 [Français](README-fr.md)
+
+*Domain-Driven Design: Tackling Complexity in the Heart of Software* — Eric Evans, Addison-Wesley, 2003.
+Twenty-three patterns catalogued; the ones the book names and that C# has somewhere to put
+([the list of deliberate omissions](../../../../catalog/README.md#patterns-deliberately-left-out) says
+which are missing and why).
+
+This guide is not the catalogue index. The
+[index](../../../generated/catalog-index.md#domain-driven-design) gives the annotation to type, what each
+role applies to, and where the sample is; it is generated, complete, and consulted. These pages give what
+a pattern is for, when to reach for it, when not to, and what it costs. They are written by hand, they
+are read rather than consulted, and they arrive one catalogue at a time
+([ADR-0040](../../for-maintainers/adr/0040-write-the-pattern-guide-by-hand-in-both-languages.md)).
+
+## The building blocks of a model-driven design
+
+These are the parts a model is made of, and the two patterns that decide whether there is a model at all.
+
+| Pattern | What it is for |
+|---|---|
+| [Layered Architecture](LayeredArchitecture-en.md) | Isolating the model from the screen, the coordination and the plumbing, so that a rule can live in one place every caller reaches. |
+| [Smart UI](SmartUi-en.md) | The opposite, named by the book as the anti-pattern — and given the circumstances under which it is nonetheless right. |
+| [Entity](Entity-en.md) | An object the domain needs to point at: *this one*, whatever has changed about it since. |
+| [Value Object](ValueObject-en.md) | An object described only by its values, with no identity and nothing to track. |
+| [Service](Service-en.md) | An operation that is genuinely an operation, belonging to no entity and to no value object. |
+| [Aggregate](Aggregate-en.md) | A boundary with one object in charge of it, so that an invariant spanning several can actually be enforced. |
+| [Factory](Factory-en.md) | Creation as an act in its own right, so that what comes out was never half built. |
+| [Repository](Repository-en.md) | The illusion of a collection, so that the model can ask for aggregates without learning where they are kept. |
+
+## Refactoring toward deeper insight
+
+Not written yet. Specification, Assertion, Side-Effect-Free Function, Closure of Operation and Standalone
+Class — the patterns of chapters 9 and 10, which are about making a model supple once it exists.
+
+## Strategic design
+
+Not written yet. Bounded Context, Shared Kernel, Anticorruption Layer, Open Host Service, Published
+Language, Core Domain, Generic Subdomain, Cohesive Mechanism and Pluggable Component Framework — the
+patterns of parts IV, which apply to whole assemblies rather than to types.
+
+## Held
+
+**Domain Event** is catalogued and has no page. The catalog credits it to *Domain-Driven Design*, 2003,
+and the pattern does not appear under that name in the 2003 book — Evans names it in the *Domain-Driven
+Design Reference* of 2015, and Martin Fowler had published a *Domain Event* on his site in 2005. A page
+here would have to state a source, and this guide does not state one it cannot stand behind. The page
+waits on the catalog rather than the other way round.
+
+## How a page is organised
+
+Every page follows the same order.
+
+| | |
+|---|---|
+| **Intent** | one sentence |
+| **Problem** | the situation that makes the pattern worth considering, in code |
+| **Solution** | what the pattern does about it |
+| **Structure** | a diagram of the roles — a class diagram, or a diagram of assemblies where the roles apply to assemblies |
+| **The roles** | one line each, and the annotation that marks it |
+| **The example** | the sample from `DesignPatternCatalog.Usage`, in pieces |
+| **Applicability** | what the work itself states |
+| **When not to use it** | the cases where the pattern costs more than it earns |
+| **Advantages** and **Drawbacks** | two lists |
+| **Relations with other patterns** | the neighbours, and what separates them |
+| **Source** | the work, and links back to the index and the code |
+
+## What these pages do not do
+
+They do not invent. Where the book does not state something, the page says so rather than filling the
+section, and where a page reports a judgement the field formed after 2003 it says whose judgement it is —
+the aggregate boundary and contention, the anaemic domain model, the entity mistaken for a table.
+
+Two consequences are worth naming for this catalogue in particular.
+
+**Evans does not write an *Applicability* section.** The book argues in prose and ends each pattern with a
+*Therefore*. What appears here under *Applicability* is drawn from those, not from a list the book
+provides, and it is kept to what the book actually says.
+
+**The book states its own limits more often than most.** The *Smart UI* page is the clearest case: Evans
+names it the anti-pattern and then gives it a list of real advantages, and the page carries that list as
+his rather than converting it into a warning.
