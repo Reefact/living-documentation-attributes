@@ -44,9 +44,28 @@ promises, and how much a reader has to hold in mind before trusting either.
 
 ## Strategic design
 
-Not written yet. Bounded Context, Shared Kernel, Anticorruption Layer, Open Host Service, Published
-Language, Core Domain, Generic Subdomain, Cohesive Mechanism and Pluggable Component Framework — the
-patterns of parts IV, which apply to whole assemblies rather than to types.
+These apply above the type: where one model stops and another begins, how two models meet, and which of
+them is worth the effort. Most of them are annotated on an assembly, because that is the smallest thing
+in C# that can make one claim about all the code it holds.
+
+**Where a model stops, and how two models meet** — chapter 14.
+
+| Pattern | What it is for |
+|---|---|
+| [Bounded Context](BoundedContext-en.md) | The boundary of one model, inside which a word has one meaning and outside which it may mean something else. |
+| [Shared Kernel](SharedKernel-en.md) | The deliberate exception: a small subset two teams share and change only by agreement. |
+| [Anticorruption Layer](AnticorruptionLayer-en.md) | A wall with three jobs in it, so that an upstream model you cannot change never reaches yours. |
+| [Open Host Service](OpenHostService-en.md) | One protocol designed for all comers, instead of one integration negotiated per consumer. |
+| [Published Language](PublishedLanguage-en.md) | A documented vocabulary for exchange — not the internal model with a serialiser bolted on. |
+
+**Which part is worth the effort** — chapters 15 and 16.
+
+| Pattern | What it is for |
+|---|---|
+| [Core Domain](CoreDomain-en.md) | The part that makes the product worth writing, marked so that effort can be directed rather than distributed. |
+| [Generic Subdomain](GenericSubdomain-en.md) | Necessary and undistinctive — the part that could be bought, and that the best people should leave alone. |
+| [Cohesive Mechanism](CohesiveMechanism-en.md) | A solver taken out from behind the concepts, so that a pipe stays a pipe. |
+| [Pluggable Component Framework](PluggableComponentFramework-en.md) | A frozen core several teams implement, so that a component built in 2031 runs under an application from 2011. |
 
 ## Held
 
