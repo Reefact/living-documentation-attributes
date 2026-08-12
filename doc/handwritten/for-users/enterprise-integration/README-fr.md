@@ -4,7 +4,7 @@
 
 *Enterprise Integration Patterns: Designing, Building, and Deploying Messaging Solutions* — Gregor
 Hohpe et Bobby Woolf, Addison-Wesley, 2003. Soixante-cinq patrons catalogués, et c'est le plus grand
-catalogue d'ici ; **dix-neuf sont écrits à ce jour**, et les cinq chapitres qui manquent encore sont
+catalogue d'ici ; **vingt-huit sont écrits à ce jour**, et les quatre chapitres qui manquent encore sont
 nommés ci-dessous avec ce qui en tient lieu jusqu'à leur existence.
 
 Ce guide n'est pas l'index du catalogue.
@@ -69,19 +69,33 @@ distinctions.
 
 ## La construction des messages
 
-Pas encore écrits. Command Message, Document Message, Event Message, Request-Reply, Return Address,
-Correlation Identifier, Message Sequence, Message Expiration, Format Indicator — tous les neuf sont
-catalogués et annotés ; seules leurs pages de guide manquent. En attendant qu'elles existent, les
-[entrées d'index](../../../generated/catalog-index.md#enterprise-integration-patterns) et les exemples
-sous
-[`DesignPatternCatalog.Usage/EnterpriseIntegration`](../../../../DesignPatternCatalog.Usage/EnterpriseIntegration)
-sont ce qu'il y a.
+Ce qu'est un message, et ce qu'il porte outre sa charge utile. Les trois premiers sont une seule
+distinction — qui décide de ce qui arrive ensuite — et les seules restrictions de
+[Message](Message-fr.md) que le catalogue enregistre. Les trois suivants sont une seule conversation.
+Les trois derniers sont des propriétés qu'un message de n'importe quelle sorte peut porter.
+
+| Patron | À quoi il sert |
+|---|---|
+| [Command Message](CommandMessage-fr.md) | Une instruction, de sorte qu'invoquer une procédure dans une autre application soit un message plutôt qu'un appel. |
+| [Document Message](DocumentMessage-fr.md) | Des données sans instruction attachée, de sorte que le receveur décide quoi en faire. |
+| [Event Message](EventMessage-fr.md) | Un fait au passé, de sorte que l'émetteur soit dispensé de savoir qui s'y intéresse. |
+| [Request-Reply](RequestReply-fr.md) | Une question et une réponse en deux messages sur deux canaux, de sorte qu'aucun côté ne se bloque sur la disponibilité de l'autre. |
+| [Return Address](ReturnAddress-fr.md) | Le canal de réponse porté sur la requête, de sorte qu'un répondeur serve des demandeurs pour lesquels il n'a jamais été configuré. |
+| [Correlation Identifier](CorrelationIdentifier-fr.md) | Une réponse qui cite la requête à laquelle elle répond, de sorte qu'un demandeur qui en envoie plusieurs puisse dire laquelle est laquelle. |
+| [Message Sequence](MessageSequence-fr.md) | Quel ensemble, quelle place, combien — de sorte que des données trop grandes pour un message puissent être réassemblées. |
+| [Message Expiration](MessageExpiration-fr.md) | Quand un message cesse de valoir d'être obéi, de sorte qu'une instruction périmée soit écartée plutôt que suivie tardivement. |
+| [Format Indicator](FormatIndicator-fr.md) | Dans quelle forme est le message, de sorte que les consommateurs puissent être redéployés selon leurs propres calendriers. |
 
 ## Le routage des messages
 
 Pas encore écrits. Content-Based Router, Message Filter, Dynamic Router, Recipient List, Splitter,
 Aggregator, Resequencer, Composed Message Processor, Scatter-Gather, Routing Slip, Process Manager,
-Message Broker — douze, et [Message Router](MessageRouter-fr.md) est la racine qu'ils spécialisent.
+Message Broker — douze, et [Message Router](MessageRouter-fr.md) est la racine qu'ils spécialisent. Tous
+sont catalogués et annotés ; seules leurs pages de guide manquent. En attendant qu'elles existent, les
+[entrées d'index](../../../generated/catalog-index.md#enterprise-integration-patterns) et les exemples
+sous
+[`DesignPatternCatalog.Usage/EnterpriseIntegration`](../../../../DesignPatternCatalog.Usage/EnterpriseIntegration)
+sont ce qu'il y a.
 
 ## La transformation des messages
 

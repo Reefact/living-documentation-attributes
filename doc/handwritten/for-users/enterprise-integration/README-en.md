@@ -4,8 +4,8 @@
 
 *Enterprise Integration Patterns: Designing, Building, and Deploying Messaging Solutions* — Gregor
 Hohpe and Bobby Woolf, Addison-Wesley, 2003. Sixty-five patterns catalogued, and it is the largest
-catalogue here; **nineteen of them are written up so far**, and the five chapters still missing are named
-below with what stands in for them until they exist.
+catalogue here; **twenty-eight of them are written up so far**, and the four chapters still missing are
+named below with what stands in for them until they exist.
 
 This guide is not the catalogue index. The
 [index](../../../generated/catalog-index.md#enterprise-integration-patterns) gives the annotation to
@@ -65,19 +65,33 @@ the middle two together; the pairs are where the distinctions live.
 
 ## Message Construction
 
-Not written yet. Command Message, Document Message, Event Message, Request-Reply, Return Address,
-Correlation Identifier, Message Sequence, Message Expiration, Format Indicator — all nine are catalogued
-and annotated; only their guide pages are missing. Until they exist, the
-[index entries](../../../generated/catalog-index.md#enterprise-integration-patterns) and the samples
-under
-[`DesignPatternCatalog.Usage/EnterpriseIntegration`](../../../../DesignPatternCatalog.Usage/EnterpriseIntegration)
-are what there is.
+What a message is, and what it carries besides its payload. The first three are one distinction — who
+decides what happens next — and the catalogue's only recorded narrowings of
+[Message](Message-en.md). The next three are one conversation. The last three are properties a message
+of any kind may carry.
+
+| Pattern | What it is for |
+|---|---|
+| [Command Message](CommandMessage-en.md) | An instruction, so that invoking a procedure in another application is a message rather than a call. |
+| [Document Message](DocumentMessage-en.md) | Data with no instruction attached, so that the receiver decides what to do with it. |
+| [Event Message](EventMessage-en.md) | A fact in the past tense, so that the sender is relieved of knowing who cares. |
+| [Request-Reply](RequestReply-en.md) | A question and an answer as two messages on two channels, so that neither side blocks on the other's availability. |
+| [Return Address](ReturnAddress-en.md) | The reply channel carried on the request, so that one replier serves requestors it was never configured for. |
+| [Correlation Identifier](CorrelationIdentifier-en.md) | A reply that quotes the request it answers, so that a requestor sending many can tell which is which. |
+| [Message Sequence](MessageSequence-en.md) | Which set, which place, how many — so that data too large for one message can be reassembled. |
+| [Message Expiration](MessageExpiration-en.md) | When a message stops being worth obeying, so that a stale instruction is discarded rather than acted on late. |
+| [Format Indicator](FormatIndicator-en.md) | Which shape the message is in, so that consumers can be redeployed on their own schedules. |
 
 ## Message Routing
 
 Not written yet. Content-Based Router, Message Filter, Dynamic Router, Recipient List, Splitter,
 Aggregator, Resequencer, Composed Message Processor, Scatter-Gather, Routing Slip, Process Manager,
-Message Broker — twelve, and [Message Router](MessageRouter-en.md) is the root they specialise.
+Message Broker — twelve, and [Message Router](MessageRouter-en.md) is the root they specialise. All are
+catalogued and annotated; only their guide pages are missing. Until they exist, the
+[index entries](../../../generated/catalog-index.md#enterprise-integration-patterns) and the samples
+under
+[`DesignPatternCatalog.Usage/EnterpriseIntegration`](../../../../DesignPatternCatalog.Usage/EnterpriseIntegration)
+are what there is.
 
 ## Message Transformation
 
