@@ -31,8 +31,16 @@ These are the parts a model is made of, and the two patterns that decide whether
 
 ## Refactoring toward deeper insight
 
-Not written yet. Specification, Assertion, Side-Effect-Free Function, Closure of Operation and Standalone
-Class — the patterns of chapters 9 and 10, which are about making a model supple once it exists.
+These are about making a model supple once it exists: what a rule is allowed to be, what an operation
+promises, and how much a reader has to hold in mind before trusting either.
+
+| Pattern | What it is for |
+|---|---|
+| [Specification](Specification-en.md) | A business rule as an object — named, combinable, and asked by everyone instead of reimplemented by each. |
+| [Assertion](Assertion-en.md) | The contract stated rather than inferred: what an operation promises, and what is true of a type at every instant. |
+| [Side-Effect-Free Function](SideEffectFreeFunction-en.md) | An operation that answers and changes nothing, so it can be tried, repeated and discarded freely. |
+| [Closure of Operation](ClosureOfOperation-en.md) | An operation that takes and returns its own type, so results feed back in and no dependency is introduced. |
+| [Standalone Class](StandaloneClass-en.md) | A type that depends on nothing, and can therefore be read in one sitting and tested with values alone. |
 
 ## Strategic design
 
