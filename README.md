@@ -70,9 +70,9 @@ and so is
 whose four anti-patterns are where the guide's rule about not inventing is tested
 hardest.
 [Enterprise Integration Patterns](doc/handwritten/for-users/enterprise-integration/README-en.md)
-is under way — the integration styles, the root patterns, the messaging channels and
-message construction, twenty-eight of sixty-five. It is the largest catalogue here and the
-one the guide will take longest to finish.
+is under way — the integration styles, the root patterns, the channels, message
+construction and the twelve routing patterns, forty of sixty-five. It is the largest
+catalogue here and the one the guide will take longest to finish.
 
 ## Installing
 

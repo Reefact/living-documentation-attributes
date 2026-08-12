@@ -4,8 +4,8 @@
 
 *Enterprise Integration Patterns: Designing, Building, and Deploying Messaging Solutions* — Gregor
 Hohpe and Bobby Woolf, Addison-Wesley, 2003. Sixty-five patterns catalogued, and it is the largest
-catalogue here; **twenty-eight of them are written up so far**, and the four chapters still missing are
-named below with what stands in for them until they exist.
+catalogue here; **forty of them are written up so far**, and the three chapters still missing are named
+below with what stands in for them until they exist.
 
 This guide is not the catalogue index. The
 [index](../../../generated/catalog-index.md#enterprise-integration-patterns) gives the annotation to
@@ -84,20 +84,34 @@ of any kind may carry.
 
 ## Message Routing
 
-Not written yet. Content-Based Router, Message Filter, Dynamic Router, Recipient List, Splitter,
-Aggregator, Resequencer, Composed Message Processor, Scatter-Gather, Routing Slip, Process Manager,
-Message Broker — twelve, and [Message Router](MessageRouter-en.md) is the root they specialise. All are
-catalogued and annotated; only their guide pages are missing. Until they exist, the
-[index entries](../../../generated/catalog-index.md#enterprise-integration-patterns) and the samples
-under
-[`DesignPatternCatalog.Usage/EnterpriseIntegration`](../../../../DesignPatternCatalog.Usage/EnterpriseIntegration)
-are what there is.
+The book's largest chapter, and the root [Message Router](MessageRouter-en.md) specialises twelve ways.
+The first four decide *where*; the middle three change *how many messages there are*; the next two are
+composites built from the others; the last three are what happens when a route becomes a process.
+
+| Pattern | What it is for |
+|---|---|
+| [Content-Based Router](ContentBasedRouter-en.md) | One destination chosen by examining the message, so that the sender knows neither the destinations nor the rule. |
+| [Message Filter](MessageFilter-en.md) | A router with one output and the option of none, so that a receiver is spared what it would only ignore. |
+| [Dynamic Router](DynamicRouter-en.md) | Destinations that announce themselves, so that adding one is a message rather than a deployment. |
+| [Recipient List](RecipientList-en.md) | A set of destinations computed per message, so that who receives it can depend on what it says. |
+| [Splitter](Splitter-en.md) | One message per element, so that each can be processed and routed on its own. |
+| [Aggregator](Aggregator-en.md) | Related messages held until the set is complete, then one emitted — the only stateful router. |
+| [Resequencer](Resequencer-en.md) | What arrived early buffered and released in order, so that sequence survives the transport. |
+| [Composed Message Processor](ComposedMessageProcessor-en.md) | Split, route each element, reassemble — one addressable step for a message of mixed elements. |
+| [Scatter-Gather](ScatterGather-en.md) | The whole message to several parties, and their replies assembled into the best answer. |
+| [Routing Slip](RoutingSlip-en.md) | The itinerary carried on the message, so that a varying sequence needs no central participant. |
+| [Process Manager](ProcessManager-en.md) | The state held in one participant, so that the next step can depend on what the replies said. |
+| [Message Broker](MessageBroker-en.md) | The whole system's routing in one hub — the arithmetic of point-to-point traded for a single dependency. |
 
 ## Message Transformation
 
 Not written yet. Envelope Wrapper, Content Enricher, Content Filter, Claim Check, Normalizer, Canonical
 Data Model — six, specialising [Message Translator](MessageTranslator-en.md) as the twelve above specialise
-the router.
+the router. All are catalogued and annotated; only their guide pages are missing. Until they exist, the
+[index entries](../../../generated/catalog-index.md#enterprise-integration-patterns) and the samples
+under
+[`DesignPatternCatalog.Usage/EnterpriseIntegration`](../../../../DesignPatternCatalog.Usage/EnterpriseIntegration)
+are what there is.
 
 ## Messaging Endpoints
 

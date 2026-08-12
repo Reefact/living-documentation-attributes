@@ -4,7 +4,7 @@
 
 *Enterprise Integration Patterns: Designing, Building, and Deploying Messaging Solutions* — Gregor
 Hohpe et Bobby Woolf, Addison-Wesley, 2003. Soixante-cinq patrons catalogués, et c'est le plus grand
-catalogue d'ici ; **vingt-huit sont écrits à ce jour**, et les quatre chapitres qui manquent encore sont
+catalogue d'ici ; **quarante sont écrits à ce jour**, et les trois chapitres qui manquent encore sont
 nommés ci-dessous avec ce qui en tient lieu jusqu'à leur existence.
 
 Ce guide n'est pas l'index du catalogue.
@@ -88,20 +88,36 @@ Les trois derniers sont des propriétés qu'un message de n'importe quelle sorte
 
 ## Le routage des messages
 
-Pas encore écrits. Content-Based Router, Message Filter, Dynamic Router, Recipient List, Splitter,
-Aggregator, Resequencer, Composed Message Processor, Scatter-Gather, Routing Slip, Process Manager,
-Message Broker — douze, et [Message Router](MessageRouter-fr.md) est la racine qu'ils spécialisent. Tous
-sont catalogués et annotés ; seules leurs pages de guide manquent. En attendant qu'elles existent, les
-[entrées d'index](../../../generated/catalog-index.md#enterprise-integration-patterns) et les exemples
-sous
-[`DesignPatternCatalog.Usage/EnterpriseIntegration`](../../../../DesignPatternCatalog.Usage/EnterpriseIntegration)
-sont ce qu'il y a.
+Le plus grand chapitre du livre, et la racine [Message Router](MessageRouter-fr.md) spécialisée de douze
+façons. Les quatre premiers décident *où* ; les trois du milieu changent *combien il y a de messages* ;
+les deux suivants sont des composites bâtis à partir des autres ; les trois derniers sont ce qui arrive
+quand une route devient un processus.
+
+| Patron | À quoi il sert |
+|---|---|
+| [Content-Based Router](ContentBasedRouter-fr.md) | Une destination choisie en examinant le message, de sorte que l'émetteur ne connaisse ni les destinations ni la règle. |
+| [Message Filter](MessageFilter-fr.md) | Un routeur à une sortie avec la possibilité d'aucune, de sorte qu'un receveur soit épargné de ce qu'il ne ferait qu'ignorer. |
+| [Dynamic Router](DynamicRouter-fr.md) | Des destinations qui s'annoncent, de sorte qu'en ajouter une soit un message plutôt qu'un déploiement. |
+| [Recipient List](RecipientList-fr.md) | Un ensemble de destinations calculé par message, de sorte que qui le reçoit dépende de ce qu'il dit. |
+| [Splitter](Splitter-fr.md) | Un message par élément, de sorte que chacun puisse être traité et routé pour lui-même. |
+| [Aggregator](Aggregator-fr.md) | Des messages apparentés retenus jusqu'à ce que l'ensemble soit complet, puis un seul émis — le seul routeur doté d'un état. |
+| [Resequencer](Resequencer-fr.md) | Ce qui arrive tôt tamponné et relâché dans l'ordre, de sorte que la séquence survive au transport. |
+| [Composed Message Processor](ComposedMessageProcessor-fr.md) | Diviser, router chaque élément, réassembler — une étape adressable pour un message d'éléments mêlés. |
+| [Scatter-Gather](ScatterGather-fr.md) | Le message entier à plusieurs parties, et leurs réponses assemblées en la meilleure. |
+| [Routing Slip](RoutingSlip-fr.md) | L'itinéraire porté sur le message, de sorte qu'une séquence variable n'ait besoin d'aucun participant central. |
+| [Process Manager](ProcessManager-fr.md) | L'état détenu par un participant, de sorte que l'étape suivante puisse dépendre de ce que les réponses ont dit. |
+| [Message Broker](MessageBroker-fr.md) | Le routage du système entier dans un pivot — l'arithmétique du point à point échangée contre une seule dépendance. |
 
 ## La transformation des messages
 
 Pas encore écrits. Envelope Wrapper, Content Enricher, Content Filter, Claim Check, Normalizer,
 Canonical Data Model — six, qui spécialisent [Message Translator](MessageTranslator-fr.md) comme les
-douze ci-dessus spécialisent le routeur.
+douze ci-dessus spécialisent le routeur. Tous sont catalogués et annotés ; seules leurs pages de guide
+manquent. En attendant qu'elles existent, les
+[entrées d'index](../../../generated/catalog-index.md#enterprise-integration-patterns) et les exemples
+sous
+[`DesignPatternCatalog.Usage/EnterpriseIntegration`](../../../../DesignPatternCatalog.Usage/EnterpriseIntegration)
+sont ce qu'il y a.
 
 ## Les points de terminaison
 
