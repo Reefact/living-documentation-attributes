@@ -2,41 +2,39 @@
 
 🌍 🇬🇧 English (this file) · 🇫🇷 [Français](AbstractFactory-fr.md)
 
-> Provides an interface for creating families of related or dependent objects without specifying their
-> concrete classes.
->
-> — Gamma, Helm, Johnson & Vlissides, *Design Patterns*, 1994
+## Intent
 
-## The problem
+Abstract Factory is a creational pattern that provides an interface for creating families of related or
+dependent objects without specifying their concrete classes.
 
-You are rendering a report, and a report has parts: a header, a body, later a footer and a table of
-contents. You render it to PDF, and also to HTML.
+## Problem
 
-The parts are not independent. A PDF header and an HTML body do not make a report — they make a
-corrupt file. The parts of one output format form a **family**, and members of two families must never
-be mixed.
+Consider a report renderer. A report has parts — a header, a body, later a footer and a table of
+contents — and it must be produced as PDF and as HTML.
 
-Now write it the obvious way:
+The parts are not independent. A PDF header and an HTML body do not make a report, they make a corrupt
+file. The parts of one output format form a family, and members of two families must never be mixed.
+
+Written the obvious way, nothing prevents the mismatch:
 
 ```csharp
 var header = new PdfHeader(title);
-var body    = new HtmlBody();     // compiles, ships, breaks
+var body   = new HtmlBody();     // compiles, ships, breaks
 ```
 
-Nothing stopped that. The constraint "these two go together" exists only in the head of whoever wrote
-the class, and it has to be re-remembered at every call site. Adding a third format means finding all
-of them.
+The constraint "these two belong together" exists only in the mind of whoever wrote the class, and it
+has to be recalled at every call site. Adding a third format means finding all of them.
 
-## The solution
+## Solution
 
-Give the family an object.
+The pattern gives the family an object.
 
-Declare one interface whose operations create each member — `CreateHeader`, `CreateBody` — and one
-implementation per family. A caller holds the interface, never the concrete classes, and asks it for
-parts. Whichever implementation it was handed decides the whole family at once, so a mismatch is no
-longer something to remember: it is something that cannot be expressed.
+One interface declares an operation per member of the family — `CreateHeader`, `CreateBody` — and one
+implementation exists per family. A caller holds the interface, never the concrete classes, and asks it
+for parts. Whichever implementation it was handed decides the entire family at once, so a mismatch
+stops being something to remember and becomes something that cannot be expressed.
 
-The choice of family is made **once**, where the factory is chosen, instead of at every `new`.
+The choice of family is made once, where the factory is chosen, instead of at every `new`.
 
 ## Structure
 
@@ -64,8 +62,8 @@ classDiagram
     PdfReportFactory ..> PdfBody : creates
 ```
 
-Read it as two columns. On the left the factory axis, on the right the product axis; each concrete
-factory reaches across to the concrete products of **its own** family and to no others.
+The diagram has two axes: the factory hierarchy on the left, the product hierarchies on the right. Each
+concrete factory reaches across to the concrete products of its own family and to no others.
 
 ## The roles
 
@@ -90,7 +88,7 @@ public interface IReportFactory {
 }
 ```
 
-One operation per kind of part. This interface is the contract of a *family*: whoever implements it
+One operation per kind of part. This interface is the contract of a family: whoever implements it
 undertakes to produce parts that belong together.
 
 ```csharp
@@ -101,7 +99,7 @@ public interface IReportHeader { }
 public interface IReportBody { }
 ```
 
-The two abstract products. The caller sees only these, which is what keeps it ignorant of PDF.
+The two abstract products. A caller sees only these, which is what keeps it ignorant of PDF.
 
 ```csharp
 [AbstractFactory.ConcreteFactory(AbstractFactory = typeof(IReportFactory))]
@@ -113,9 +111,9 @@ public sealed class PdfReportFactory : IReportFactory {
 }
 ```
 
-Here is the family, stated in one place. Note the annotation's argument: `AbstractFactory = typeof(IReportFactory)`
-binds this participant to *this* occurrence of the pattern. A codebase with a report factory and an
-invoice factory has two Abstract Factories, and the link is what tells them apart — the type hierarchy
+The family, stated in one place. The annotation's argument — `AbstractFactory = typeof(IReportFactory)`
+— binds this participant to this occurrence of the pattern. A codebase with a report factory and an
+invoice factory holds two Abstract Factories, and the link is what tells them apart; the type hierarchy
 alone would not.
 
 ```csharp
@@ -128,74 +126,81 @@ public sealed class PdfHeader : IReportHeader {
 }
 ```
 
-Each concrete product declares which abstract product it implements. The compiler knows it too, from
-`: IReportHeader` — the link is only needed where the hierarchy does not already say it, and is
-optional otherwise.
+Each concrete product declares which abstract product it implements. The compiler knows that too, from
+`: IReportHeader`, so the link is only needed where the hierarchy does not already say it.
 
-**One honest word about this sample.** It shows a single family, PDF. A single family is not yet a
-reason to use the pattern; the pattern earns its keep at the *second* one, when `HtmlReportFactory`
-arrives and not one line of calling code changes. Read the sample as the shape you would already have
-in place when that day comes.
+The sample carries a single family, PDF. One family is not yet a reason to apply the pattern; the
+pattern earns its place at the second, when `HtmlReportFactory` arrives and no calling code changes.
 
-## When to use it
+## Applicability
 
-The book's own list:
+**Use Abstract Factory when the system should be independent of how its products are created, composed
+and represented.**
 
-* the system should be independent of how its products are created, composed and represented;
-* it should be configured with **one of several families** of products;
-* a family of related products is designed to be used together, and **you need to enforce that**;
-* you publish a library of products and want to reveal their interfaces, not their implementations.
+**Use Abstract Factory when the system must be configured with one of several families of products.**
 
-The third is the discriminating one. If nothing goes wrong when parts of different families are mixed,
-you do not have this problem.
+**Use Abstract Factory when a family of related products is designed to be used together and that
+constraint has to be enforced.** This is the discriminating condition: if nothing goes wrong when parts
+of different families are mixed, the problem the pattern solves is absent.
+
+**Use Abstract Factory when publishing a library of products whose interfaces should be visible and
+whose implementations should not.**
 
 ## When not to use it
 
-* **There is only one family.** Then the interface, the concrete factory and the two abstract product
-  types buy nothing: nothing varies. Construct directly, or use a `FactoryMethod` for the one thing
-  that does vary. Add the abstraction when the second family appears, not in anticipation of it.
-* **What varies is one object, not a family.** One product with several implementations is
-  `FactoryMethod` or plain injection. Abstract Factory is for the *correlation* between several
-  products; without correlation it is ceremony.
-* **The family gains new kinds of member often.** This is the pattern's stated weakness, and it is
-  structural: adding `CreateFooter` means changing the abstract factory and **every** concrete factory
-  at once. Families that grow members frequently fight the pattern; families that gain new *variants*
-  suit it perfectly.
-* **A container already does it.** On .NET, registering a coherent set of implementations per
-  configuration achieves the same effect without the parallel hierarchy — the composition root becomes
-  the place where the family is chosen. Reach for Abstract Factory when the choice is made at run time
-  and repeatedly, rather than once at start-up.
+**Do not use Abstract Factory for a single family.** The interface, the concrete factory and the
+abstract product types buy nothing while nothing varies. Direct construction, or a `FactoryMethod` for
+the one thing that does vary, is enough. The abstraction belongs to the day the second family appears,
+not to the anticipation of it.
 
-## What it costs
+**Do not use Abstract Factory when what varies is one object rather than a family.** One product with
+several implementations is `FactoryMethod`, or plain injection. Abstract Factory serves the correlation
+between several products; without correlation it is ceremony.
 
-**What you gain**
+**Do not use Abstract Factory for a family that often gains new kinds of member.** This is the pattern's
+stated weakness and it is structural: adding `CreateFooter` changes the abstract factory and every
+concrete factory at once. Families that gain new variants suit the pattern; families that gain new
+members fight it.
 
-* concrete classes are isolated: callers name only interfaces, so swapping a family touches one line;
-* exchanging whole families is easy, because a family is a single object;
-* consistency among products is enforced by construction rather than by discipline.
+**Do not use Abstract Factory where a container already does the work.** On .NET, registering a coherent
+set of implementations per configuration produces the same effect without the parallel hierarchy, the
+composition root becoming the place where the family is chosen. The pattern is worth its cost when the
+choice is made repeatedly at run time rather than once at start-up.
 
-**What you pay**
+## Advantages
 
-* **supporting new kinds of product is hard** — the abstract factory's interface is a contract every
-  concrete factory must honour, so every addition ripples across all of them;
-* a class explosion: with *m* kinds of product and *n* families you carry `m + n + m×n` types;
-* one more level of indirection between a caller and the object it gets.
+* Concrete classes are isolated: callers name interfaces only, so changing family touches one line.
+* Whole families are exchanged at once, a family being a single object.
+* Consistency among products is enforced by construction rather than by discipline.
 
-## Patterns it is confused with
+## Drawbacks
 
-| | |
-|---|---|
-| **`FactoryMethod`** | One product, chosen by a subclass. Abstract Factory is several products chosen together by an object. An Abstract Factory is very often *implemented* with factory methods — one per creation operation. |
-| **`Builder`** | Also assembles something complicated, but step by step and returning the result at the end. Abstract Factory returns each part immediately. Builder is about the *construction sequence*; Abstract Factory is about the *family*. |
-| **`Prototype`** | A concrete factory can be built from prototypes — it clones a stored instance per product instead of `new`-ing one — which is a way to implement this pattern rather than an alternative to it. |
-| **`Singleton`** | A concrete factory usually needs to exist once, so the two are often seen together. Unrelated intents. |
+* Supporting a new kind of product is hard: the abstract factory's interface is a contract every
+  concrete factory honours, so each addition ripples through all of them.
+* The type count grows quickly — `m` kinds of product across `n` families means `m + n + m×n` types.
+* One more level of indirection sits between a caller and the object it receives.
 
-## Where this comes from
+## Relations with other patterns
+
+**`FactoryMethod`** creates one product, chosen by a subclass, where Abstract Factory creates several
+chosen together by an object. An Abstract Factory is very often implemented with factory methods, one
+per creation operation, so the two nest rather than compete.
+
+**`Builder`** also assembles something complicated, but step by step, returning the result at the end;
+Abstract Factory returns each part immediately. Builder is about the construction sequence, Abstract
+Factory about the family.
+
+**`Prototype`** can implement a concrete factory: it clones a stored instance per product instead of
+constructing one.
+
+**`Singleton`** often applies to a concrete factory, which usually needs to exist once. The intents are
+unrelated.
+
+## Source
 
 *Design Patterns: Elements of Reusable Object-Oriented Software*, Gamma, Helm, Johnson & Vlissides,
-Addison-Wesley, 1994 — the Creational patterns chapter.
+Addison-Wesley, 1994 — the creational patterns chapter.
 
-* [Index entry](../../../generated/catalog-index.md#abstractfactory-gang-of-four) — the annotations,
-  the targets, the links.
+* [Index entry](../../../generated/catalog-index.md#abstractfactory-gang-of-four)
 * [Generated attribute](../../../../DesignPatternCatalog.GangOfFour/AbstractFactory.cs)
 * [Sample](../../../../DesignPatternCatalog.Usage/GangOfFour/AbstractFactoryUsage.cs)

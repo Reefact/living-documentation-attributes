@@ -2,43 +2,41 @@
 
 🌍 🇫🇷 Français (ce fichier) · 🇬🇧 [English](AbstractFactory-en.md)
 
-> Fournit une interface pour créer des familles d'objets liés ou dépendants sans spécifier leurs
-> classes concrètes.
->
-> — Gamma, Helm, Johnson & Vlissides, *Design Patterns*, 1994
+## Intention
 
-## Le problème
+Abstract Factory est un patron de création qui fournit une interface pour créer des familles d'objets
+liés ou dépendants sans spécifier leurs classes concrètes.
 
-Tu produis un rapport, et un rapport a des parties : un en-tête, un corps, plus tard un pied de page
-et une table des matières. Tu le produis en PDF, et aussi en HTML.
+## Problème
 
-Les parties ne sont pas indépendantes. Un en-tête PDF et un corps HTML ne font pas un rapport — ils
-font un fichier corrompu. Les parties d'un format forment une **famille**, et les membres de deux
-familles ne doivent jamais se mélanger.
+Prenons un générateur de rapports. Un rapport a des parties — un en-tête, un corps, plus tard un pied de
+page et une table des matières — et il doit être produit en PDF comme en HTML.
 
-Écris-le maintenant de la façon évidente :
+Les parties ne sont pas indépendantes. Un en-tête PDF et un corps HTML ne font pas un rapport, ils font
+un fichier corrompu. Les parties d'un format forment une famille, et les membres de deux familles ne
+doivent jamais se mélanger.
+
+Écrite de la façon évidente, la construction n'empêche rien :
 
 ```csharp
 var header = new PdfHeader(title);
 var body   = new HtmlBody();     // compile, part en production, casse
 ```
 
-Rien ne l'a empêché. La contrainte « ces deux-là vont ensemble » n'existe que dans la tête de celui
-qui a écrit la classe, et il faut se la remémorer à chaque site d'appel. Ajouter un troisième format
-oblige à tous les retrouver.
+La contrainte « ces deux-là vont ensemble » n'existe que dans l'esprit de qui a écrit la classe, et il
+faut se la remémorer à chaque site d'appel. L'ajout d'un troisième format oblige à les retrouver tous.
 
-## La solution
+## Solution
 
-Donner un objet à la famille.
+Le patron donne un objet à la famille.
 
-Déclarer une interface dont les opérations créent chaque membre — `CreateHeader`, `CreateBody` — et
-une implémentation par famille. L'appelant tient l'interface, jamais les classes concrètes, et lui
-demande ses parties. L'implémentation qu'on lui a confiée décide de toute la famille d'un coup : un
-mélange n'est plus quelque chose dont il faut se souvenir, c'est quelque chose qui ne peut pas
-s'exprimer.
+Une interface déclare une opération par membre de la famille — `CreateHeader`, `CreateBody` — et il
+existe une implémentation par famille. L'appelant tient l'interface, jamais les classes concrètes, et lui
+demande ses parties. L'implémentation qui lui a été confiée décide de toute la famille d'un coup : un
+mélange cesse d'être une chose dont il faut se souvenir et devient une chose qui ne peut pas s'exprimer.
 
-Le choix de la famille se fait **une fois**, là où la fabrique est choisie, au lieu de se faire à
-chaque `new`.
+Le choix de la famille se fait une fois, là où la fabrique est choisie, au lieu de se refaire à chaque
+`new`.
 
 ## Structure
 
@@ -66,8 +64,8 @@ classDiagram
     PdfReportFactory ..> PdfBody : cree
 ```
 
-Lis-le en deux colonnes. À gauche l'axe des fabriques, à droite l'axe des produits ; chaque fabrique
-concrète traverse vers les produits concrets de **sa propre** famille et d'aucune autre.
+Le diagramme a deux axes : la hiérarchie des fabriques à gauche, celles des produits à droite. Chaque
+fabrique concrète traverse vers les produits concrets de sa propre famille et d'aucune autre.
 
 ## Les rôles
 
@@ -80,7 +78,7 @@ concrète traverse vers les produits concrets de **sa propre** famille et d'aucu
 
 ## L'exemple
 
-Tiré de [`AbstractFactoryUsage.cs`](../../../../DesignPatternCatalog.Usage/GangOfFour/AbstractFactoryUsage.cs).
+Extrait de [`AbstractFactoryUsage.cs`](../../../../DesignPatternCatalog.Usage/GangOfFour/AbstractFactoryUsage.cs).
 
 ```csharp
 [AbstractFactory.AbstractFactory]
@@ -92,7 +90,7 @@ public interface IReportFactory {
 }
 ```
 
-Une opération par type de partie. Cette interface est le contrat d'une *famille* : qui l'implémente
+Une opération par type de partie. Cette interface est le contrat d'une famille : qui l'implémente
 s'engage à produire des parties qui vont ensemble.
 
 ```csharp
@@ -103,7 +101,7 @@ public interface IReportHeader { }
 public interface IReportBody { }
 ```
 
-Les deux produits abstraits. L'appelant ne voit qu'eux, et c'est ce qui le maintient ignorant du PDF.
+Les deux produits abstraits. Un appelant ne voit qu'eux, ce qui le maintient ignorant du PDF.
 
 ```csharp
 [AbstractFactory.ConcreteFactory(AbstractFactory = typeof(IReportFactory))]
@@ -115,10 +113,10 @@ public sealed class PdfReportFactory : IReportFactory {
 }
 ```
 
-Voici la famille, énoncée en un seul endroit. Note l'argument de l'annotation :
-`AbstractFactory = typeof(IReportFactory)` rattache ce participant à *cette* occurrence du pattern. Une
-base de code qui a une fabrique de rapports et une fabrique de factures a deux Abstract Factory, et
-c'est le lien qui les distingue — la hiérarchie de types seule ne le dirait pas.
+La famille, énoncée en un seul endroit. L'argument de l'annotation —
+`AbstractFactory = typeof(IReportFactory)` — rattache ce participant à cette occurrence du patron. Une
+base de code qui possède une fabrique de rapports et une fabrique de factures tient deux Abstract
+Factory, et le lien est ce qui les distingue ; la hiérarchie de types seule ne le dirait pas.
 
 ```csharp
 [AbstractFactory.ConcreteProduct(AbstractProduct = typeof(IReportHeader))]
@@ -131,76 +129,83 @@ public sealed class PdfHeader : IReportHeader {
 ```
 
 Chaque produit concret déclare quel produit abstrait il implémente. Le compilateur le sait aussi, par
-`: IReportHeader` — le lien n'est nécessaire que là où la hiérarchie ne le dit pas déjà, et reste
-optionnel sinon.
+`: IReportHeader`, de sorte que le lien n'est nécessaire que là où la hiérarchie ne le dit pas déjà.
 
-**Un mot honnête sur cet exemple.** Il ne montre qu'une famille, PDF. Une seule famille n'est pas
-encore une raison d'employer le pattern ; le pattern gagne sa place à la *deuxième*, quand
-`HtmlReportFactory` arrive et que pas une ligne du code appelant ne change. Lis l'exemple comme la
-forme que tu aurais déjà en place le jour venu.
+L'exemple ne porte qu'une famille, PDF. Une famille n'est pas encore une raison d'appliquer le patron ;
+celui-ci gagne sa place à la deuxième, quand `HtmlReportFactory` arrive et qu'aucun code appelant ne
+change.
 
-## Quand l'utiliser
+## Possibilités d'application
 
-La liste du livre :
+**Utilisez Abstract Factory lorsque le système doit être indépendant de la façon dont ses produits sont
+créés, composés et représentés.**
 
-* le système doit être indépendant de la façon dont ses produits sont créés, composés et représentés ;
-* il doit être configurable avec **une famille parmi plusieurs** ;
-* une famille de produits liés est conçue pour être utilisée ensemble, et **il faut le faire
-  respecter** ;
-* tu publies une bibliothèque de produits et veux en révéler les interfaces, pas les implémentations.
+**Utilisez Abstract Factory lorsque le système doit être configurable avec une famille de produits parmi
+plusieurs.**
 
-Le troisième est le point discriminant. Si rien ne casse quand des parties de familles différentes se
-mélangent, tu n'as pas ce problème.
+**Utilisez Abstract Factory lorsqu'une famille de produits liés est conçue pour être utilisée ensemble et
+que cette contrainte doit être tenue.** C'est la condition discriminante : si rien ne casse quand des
+parties de familles différentes se mélangent, le problème que résout le patron est absent.
+
+**Utilisez Abstract Factory lorsque vous publiez une bibliothèque de produits dont les interfaces
+doivent être visibles et les implémentations non.**
 
 ## Quand ne pas l'utiliser
 
-* **Il n'y a qu'une famille.** Alors l'interface, la fabrique concrète et les deux types de produits
-  abstraits n'achètent rien : rien ne varie. Construis directement, ou emploie une `FactoryMethod`
-  pour la seule chose qui varie. Ajoute l'abstraction quand la deuxième famille apparaît, pas par
-  anticipation.
-* **Ce qui varie est un objet, pas une famille.** Un produit avec plusieurs implémentations relève de
-  `FactoryMethod` ou d'une simple injection. Abstract Factory sert la *corrélation* entre plusieurs
-  produits ; sans corrélation, c'est du cérémonial.
-* **La famille gagne souvent de nouveaux types de membres.** C'est la faiblesse annoncée du pattern, et
-  elle est structurelle : ajouter `CreateFooter` oblige à modifier la fabrique abstraite **et toutes**
-  les fabriques concrètes d'un coup. Les familles qui gagnent souvent des membres luttent contre le
-  pattern ; celles qui gagnent de nouvelles *variantes* lui conviennent parfaitement.
-* **Un conteneur le fait déjà.** Sur .NET, enregistrer un jeu cohérent d'implémentations par
-  configuration produit le même effet sans la hiérarchie parallèle — la racine de composition devient
-  l'endroit où la famille est choisie. Réserve Abstract Factory au cas où le choix se fait à
-  l'exécution et de façon répétée, plutôt qu'une fois au démarrage.
+**N'utilisez pas Abstract Factory pour une famille unique.** L'interface, la fabrique concrète et les
+types de produits abstraits n'achètent rien tant que rien ne varie. Une construction directe, ou une
+`FactoryMethod` pour la seule chose qui varie, suffit. L'abstraction appartient au jour où la deuxième
+famille apparaît, non à son anticipation.
 
-## Ce qu'il coûte
+**N'utilisez pas Abstract Factory quand ce qui varie est un objet et non une famille.** Un produit à
+plusieurs implémentations relève de `FactoryMethod` ou d'une simple injection. Abstract Factory sert la
+corrélation entre plusieurs produits ; sans corrélation, c'est du cérémonial.
 
-**Ce que tu gagnes**
+**N'utilisez pas Abstract Factory pour une famille qui gagne souvent de nouveaux types de membres.**
+C'est la faiblesse annoncée du patron, et elle est structurelle : ajouter `CreateFooter` modifie la
+fabrique abstraite et toutes les fabriques concrètes d'un coup. Les familles qui gagnent de nouvelles
+variantes lui conviennent ; celles qui gagnent de nouveaux membres luttent contre lui.
 
-* les classes concrètes sont isolées : les appelants ne nomment que des interfaces, donc changer de
-  famille touche une ligne ;
-* échanger des familles entières est facile, une famille étant un seul objet ;
-* la cohérence entre produits est tenue par construction plutôt que par discipline.
+**N'utilisez pas Abstract Factory là où un conteneur fait déjà le travail.** Sur .NET, enregistrer un jeu
+cohérent d'implémentations par configuration produit le même effet sans la hiérarchie parallèle, la
+racine de composition devenant l'endroit où la famille est choisie. Le patron mérite son coût quand le
+choix se fait de façon répétée à l'exécution plutôt qu'une fois au démarrage.
 
-**Ce que tu paies**
+## Avantages
 
-* **ajouter un type de produit est difficile** — l'interface de la fabrique abstraite est un contrat
-  que chaque fabrique concrète doit honorer, donc chaque ajout se propage à toutes ;
-* une explosion de classes : avec *m* types de produits et *n* familles, tu portes `m + n + m×n` types ;
-* un niveau d'indirection de plus entre un appelant et l'objet qu'il obtient.
+* Les classes concrètes sont isolées : les appelants ne nomment que des interfaces, donc changer de
+  famille touche une ligne.
+* Des familles entières s'échangent d'un coup, une famille étant un seul objet.
+* La cohérence entre produits est tenue par construction plutôt que par discipline.
 
-## Patterns qu'on confond avec lui
+## Inconvénients
 
-| | |
-|---|---|
-| **`FactoryMethod`** | Un produit, choisi par une sous-classe. Abstract Factory, c'est plusieurs produits choisis ensemble par un objet. Une Abstract Factory est très souvent *implémentée* avec des factory methods — une par opération de création. |
-| **`Builder`** | Assemble aussi quelque chose de compliqué, mais étape par étape, et rend le résultat à la fin. Abstract Factory rend chaque partie immédiatement. Builder porte sur la *séquence de construction* ; Abstract Factory sur la *famille*. |
-| **`Prototype`** | Une fabrique concrète peut être bâtie sur des prototypes — elle clone une instance stockée par produit au lieu d'en construire une — ce qui est une façon d'implémenter ce pattern plutôt qu'une alternative. |
-| **`Singleton`** | Une fabrique concrète n'a d'ordinaire besoin d'exister qu'une fois : on les rencontre souvent ensemble. Intentions sans rapport. |
+* Ajouter un type de produit est difficile : l'interface de la fabrique abstraite est un contrat que
+  chaque fabrique concrète honore, donc chaque ajout se propage à toutes.
+* Le nombre de types croît vite — `m` types de produits sur `n` familles donnent `m + n + m×n` types.
+* Un niveau d'indirection supplémentaire s'intercale entre un appelant et l'objet qu'il reçoit.
 
-## D'où cela vient
+## Liens avec les autres patrons
+
+**`FactoryMethod`** crée un produit choisi par une sous-classe, là où Abstract Factory en crée plusieurs
+choisis ensemble par un objet. Une Abstract Factory est très souvent implémentée avec des factory
+methods, une par opération de création : les deux s'emboîtent plutôt qu'ils ne rivalisent.
+
+**`Builder`** assemble aussi quelque chose de compliqué, mais étape par étape, en rendant le résultat à
+la fin ; Abstract Factory rend chaque partie immédiatement. Builder porte sur la séquence de
+construction, Abstract Factory sur la famille.
+
+**`Prototype`** peut implémenter une fabrique concrète : elle clone une instance stockée par produit au
+lieu d'en construire une.
+
+**`Singleton`** s'applique souvent à une fabrique concrète, qui n'a d'ordinaire besoin d'exister qu'une
+fois. Les intentions sont sans rapport.
+
+## Source
 
 *Design Patterns: Elements of Reusable Object-Oriented Software*, Gamma, Helm, Johnson & Vlissides,
-Addison-Wesley, 1994 — chapitre des patterns de création.
+Addison-Wesley, 1994 — chapitre des patrons de création.
 
-* [Entrée d'index](../../../generated/catalog-index.md#abstractfactory-gang-of-four) — les
-  annotations, les cibles, les liens.
+* [Entrée d'index](../../../generated/catalog-index.md#abstractfactory-gang-of-four)
 * [Attribut généré](../../../../DesignPatternCatalog.GangOfFour/AbstractFactory.cs)
 * [Exemple](../../../../DesignPatternCatalog.Usage/GangOfFour/AbstractFactoryUsage.cs)
