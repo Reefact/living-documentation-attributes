@@ -45,9 +45,28 @@ qu'une opération promet, et combien un lecteur doit tenir en tête avant de se 
 
 ## Conception stratégique
 
-Pas encore écrits. Bounded Context, Shared Kernel, Anticorruption Layer, Open Host Service, Published
-Language, Core Domain, Generic Subdomain, Cohesive Mechanism et Pluggable Component Framework — les
-patrons de la partie IV, qui s'appliquent à des assemblies entières plutôt qu'à des types.
+Ils s'appliquent au-dessus du type : où un modèle s'arrête et où un autre commence, comment deux modèles
+se rencontrent, et lequel des deux vaut l'effort. La plupart sont annotés sur une assembly, parce que
+c'est la plus petite chose qu'offre C# capable de faire une affirmation sur tout le code qu'elle contient.
+
+**Où un modèle s'arrête, et comment deux modèles se rencontrent** — chapitre 14.
+
+| Patron | À quoi il sert |
+|---|---|
+| [Bounded Context](BoundedContext-fr.md) | La frontière d'un modèle, à l'intérieur de laquelle un mot a un sens et hors de laquelle il peut en avoir un autre. |
+| [Shared Kernel](SharedKernel-fr.md) | L'exception délibérée : un petit sous-ensemble que deux équipes partagent et ne changent que d'un commun accord. |
+| [Anticorruption Layer](AnticorruptionLayer-fr.md) | Un mur à trois métiers, pour qu'un modèle amont qu'on ne peut pas changer n'atteigne jamais le vôtre. |
+| [Open Host Service](OpenHostService-fr.md) | Un protocole conçu pour tous les venants, au lieu d'une intégration négociée par consommateur. |
+| [Published Language](PublishedLanguage-fr.md) | Un vocabulaire documenté pour l'échange — non le modèle interne avec un sérialiseur boulonné dessus. |
+
+**Quelle part vaut l'effort** — chapitres 15 et 16.
+
+| Patron | À quoi il sert |
+|---|---|
+| [Core Domain](CoreDomain-fr.md) | La part qui rend le produit digne d'être écrit, marquée pour que l'effort soit dirigé plutôt que réparti. |
+| [Generic Subdomain](GenericSubdomain-fr.md) | Nécessaire et non distinctive — la part qu'on pourrait acheter, et que les meilleurs devraient laisser tranquille. |
+| [Cohesive Mechanism](CohesiveMechanism-fr.md) | Un solveur sorti de derrière les concepts, pour qu'une conduite reste une conduite. |
+| [Pluggable Component Framework](PluggableComponentFramework-fr.md) | Un noyau gelé que plusieurs équipes implémentent, pour qu'un composant bâti en 2031 tourne sous une application de 2011. |
 
 ## En attente
 
