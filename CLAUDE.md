@@ -34,6 +34,26 @@ python3 catalog/generate.py
 
 Regenerating an unchanged catalog must leave the working tree clean.
 
+## The pattern guide is hand-written, and nothing checks it
+
+`doc/handwritten/for-users/<catalog>/<Pattern>-en.md` and `-fr.md` teach a pattern —
+what it is for, when to reach for it, when not to, what it costs — and they are
+written by hand
+([ADR-0040](doc/handwritten/for-maintainers/adr/0040-write-the-pattern-guide-by-hand-in-both-languages.md)).
+The generator does not touch them and no test compares them to the catalog, so two
+rules have to be kept by hand:
+
+* **A change to a pattern obliges its pages.** Rename a role, rewrite its sample,
+  admit or exclude an entry — then update `<Pattern>-en.md` *and* `<Pattern>-fr.md`,
+  and the catalog's `README-*.md` if the list of pages changed. A page quoting a
+  role that no longer exists fails nothing and misleads everyone.
+* **Never fill a section the work does not support.** *When not to use it* is the
+  section most worth having and the one many works leave unsaid. Mark it empty and
+  say why. Where a page reports a judgement formed after the work was published,
+  say whose it is — the [Singleton](doc/handwritten/for-users/gang-of-four/Singleton-en.md)
+  page does, because the book lists benefits for it and no drawbacks. **The guide
+  may be incomplete; it may not be plausible.**
+
 ## Build & run
 
 ```
@@ -49,6 +69,15 @@ catalog change landed.
 
 ## Language
 
-Repository content is English. The ADR base is bilingual, English canonical, each
-ADR accompanied by `NNNN-title.fr.md`. Replying in French in the conversation is
-fine; writing French into the repository is not.
+Repository content is English — code, comments, the catalog, the generated index,
+`README.md`, `AGENTS.md`, `CONTRIBUTING.md`.
+
+**Two exceptions, and both are bilingual rather than French.**
+
+| | |
+|---|---|
+| The **ADR base** | English canonical, each record accompanied by `NNNN-title.fr.md`. The suffix says which text is the record. |
+| The **pattern guide** | `<Pattern>-en.md` beside `<Pattern>-fr.md`. Neither is canonical: a guide carries no authority to protect, so the two files are peers and the symmetric names say so. Write both, or write neither. |
+
+Anywhere else, French in the repository is a defect. Replying in French in the
+conversation is fine.
