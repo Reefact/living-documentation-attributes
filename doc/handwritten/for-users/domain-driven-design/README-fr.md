@@ -32,8 +32,16 @@ Ce sont les pièces dont un modèle est fait, et les deux patrons qui décident 
 
 ## Refactorer vers une compréhension plus profonde
 
-Pas encore écrits. Specification, Assertion, Side-Effect-Free Function, Closure of Operation et Standalone
-Class — les patrons des chapitres 9 et 10, qui traitent de rendre souple un modèle une fois qu'il existe.
+Ils traitent de rendre souple un modèle une fois qu'il existe : ce qu'une règle a le droit d'être, ce
+qu'une opération promet, et combien un lecteur doit tenir en tête avant de se fier à l'une ou à l'autre.
+
+| Patron | À quoi il sert |
+|---|---|
+| [Specification](Specification-fr.md) | Une règle métier devenue objet — nommée, combinable, et interrogée par tous au lieu d'être réimplémentée par chacun. |
+| [Assertion](Assertion-fr.md) | Le contrat énoncé plutôt que déduit : ce qu'une opération promet, et ce qui est vrai d'un type à chaque instant. |
+| [Side-Effect-Free Function](SideEffectFreeFunction-fr.md) | Une opération qui répond et ne change rien, donc qu'on peut essayer, répéter et jeter librement. |
+| [Closure of Operation](ClosureOfOperation-fr.md) | Une opération qui prend et rend son propre type, si bien que les résultats se réinjectent sans introduire de dépendance. |
+| [Standalone Class](StandaloneClass-fr.md) | Un type qui ne dépend de rien, et se lit donc d'une traite et se teste avec des valeurs seules. |
 
 ## Conception stratégique
 
