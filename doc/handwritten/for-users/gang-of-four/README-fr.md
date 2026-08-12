@@ -42,8 +42,22 @@ le droit de voir de la disposition.
 
 ## Patrons comportementaux
 
-Pas encore écrits. Chain of Responsibility, Command, Interpreter, Iterator, Mediator, Memento, Observer,
-State, Strategy, Template Method et Visitor — même remarque.
+Ils concernent la collaboration entre objets : qui demande à qui, ce qui circule entre eux, et où finit
+par vivre une règle qui change.
+
+| Patron | À quoi il sert |
+|---|---|
+| [Chain of Responsibility](ChainOfResponsibility-fr.md) | Une requête qui circule le long de gestionnaires jusqu'à ce que l'un la prenne, l'émetteur ne connaissant que le premier. |
+| [Command](Command-fr.md) | Une requête devenue objet, pour être mise en file, journalisée, rejouée et annulée. |
+| [Interpreter](Interpreter-fr.md) | Un petit langage dont la grammaire est une hiérarchie de classes, de sorte que ses phrases deviennent des données. |
+| [Iterator](Iterator-fr.md) | Parcourir un agrégat sans rien apprendre de la façon dont il range quoi que ce soit. |
+| [Mediator](Mediator-fr.md) | Des liaisons de plusieurs à plusieurs remplacées par un coordinateur qui porte l'interaction. |
+| [Memento](Memento-fr.md) | Un instantané scellé de l'état d'un objet, conservé par quelque chose qui ne peut pas l'ouvrir. |
+| [Observer](Observer-fr.md) | Un objet qui change et un nombre inconnu d'autres qui l'apprennent. |
+| [State](State-fr.md) | Un comportement qui varie avec un statut, rassemblé par statut au lieu d'être testé par méthode. |
+| [Strategy](Strategy-fr.md) | Des algorithmes interchangeables derrière une même question, choisis par l'appelant. |
+| [Template Method](TemplateMethod-fr.md) | Une séquence écrite une fois, avec des blancs nommés que les sous-classes remplissent. |
+| [Visitor](Visitor-fr.md) | Une opération nouvelle sur une structure, ajoutée sans rouvrir aucun de ses types. |
 
 ## Comment une page est organisée
 
