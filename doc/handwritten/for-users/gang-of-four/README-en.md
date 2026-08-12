@@ -27,11 +27,18 @@ much the calling code has to know.
 
 ## Structural patterns
 
-Not written yet. Adapter, Bridge, Composite, Decorator, Facade, Flyweight and Proxy are all catalogued
-and annotated; only their guide pages are missing. Until they exist, the
-[index entries](../../../generated/catalog-index.md#gang-of-four) and the samples under
-[`DesignPatternCatalog.Usage/GangOfFour`](../../../../DesignPatternCatalog.Usage/GangOfFour) are what
-there is.
+These concern how objects are put together: what wraps what, what holds what, and what a caller is allowed
+to see of the arrangement.
+
+| Pattern | What it is for |
+|---|---|
+| [Adapter](Adapter-en.md) | Making a type usable through the interface a client expects, by translating between the two. |
+| [Bridge](Bridge-en.md) | Two axes that vary separately — what a notification says, how it is delivered — kept apart instead of multiplied. |
+| [Composite](Composite-en.md) | A tree whose whole and whose parts answer the same questions, so the recursion lives in the structure rather than in every caller. |
+| [Decorator](Decorator-en.md) | Adding a responsibility around an object at run time, without touching it and without a class per combination. |
+| [Facade](Facade-en.md) | One entry point in front of several subsystems, holding the order of operations that every caller would otherwise remember. |
+| [Flyweight](Flyweight-en.md) | Forty thousand objects served by eleven, by separating what is shareable from what is not. |
+| [Proxy](Proxy-en.md) | A stand-in with the same interface, controlling access to the real object — deferring, checking, or reaching across a network. |
 
 ## Behavioural patterns
 

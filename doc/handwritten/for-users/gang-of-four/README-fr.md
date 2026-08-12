@@ -27,11 +27,18 @@ combien le code appelant doit en savoir.
 
 ## Patrons structurels
 
-Pas encore écrits. Adapter, Bridge, Composite, Decorator, Facade, Flyweight et Proxy sont tous catalogués
-et annotés ; seules leurs pages de guide manquent. En attendant, les
-[entrées d'index](../../../generated/catalog-index.md#gang-of-four) et les exemples sous
-[`DesignPatternCatalog.Usage/GangOfFour`](../../../../DesignPatternCatalog.Usage/GangOfFour)
-constituent ce qui existe.
+Ils concernent l'assemblage des objets : ce qui enveloppe quoi, ce qui détient quoi, et ce qu'un appelant a
+le droit de voir de la disposition.
+
+| Patron | À quoi il sert |
+|---|---|
+| [Adapter](Adapter-fr.md) | Rendre un type utilisable à travers l'interface qu'un client attend, en traduisant entre les deux. |
+| [Bridge](Bridge-fr.md) | Deux axes qui varient séparément — ce que dit une notification, comment elle est livrée — tenus à part au lieu d'être multipliés. |
+| [Composite](Composite-fr.md) | Un arbre dont le tout et les parties répondent aux mêmes questions, de sorte que la récursion vit dans la structure et non chez chaque appelant. |
+| [Decorator](Decorator-fr.md) | Ajouter une responsabilité autour d'un objet à l'exécution, sans y toucher et sans une classe par combinaison. |
+| [Facade](Facade-fr.md) | Un point d'entrée devant plusieurs sous-systèmes, portant l'ordre des opérations que chaque appelant devrait sinon mémoriser. |
+| [Flyweight](Flyweight-fr.md) | Quarante mille objets servis par onze, en séparant le partageable de ce qui ne l'est pas. |
+| [Proxy](Proxy-fr.md) | Un substitut de même interface, qui contrôle l'accès à l'objet réel — en différant, en vérifiant, ou en traversant un réseau. |
 
 ## Patrons comportementaux
 
